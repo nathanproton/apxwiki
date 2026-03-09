@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appomattox County School Board History — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Appomattox County School Board History</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Appomattox County School Board</div>
+  <table>
+    <tr><td>Jurisdiction</td><td>Appomattox County, Virginia</td></tr>
+    <tr><td>Governing body</td><td>Five elected members (one per district)</td></tr>
+    <tr><td>Time span</td><td>1870s&ndash;present</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Electoral Districts</td></tr>
+    <tr><td>Districts</td><td>Courthouse, Falling River, Piney Mountain, Appomattox River, Wreck Island</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key Dates</td></tr>
+    <tr><td>1969</td><td>New high school construction planned</td></tr>
+    <tr><td>1982</td><td>Aldridge Boone hired as superintendent</td></tr>
+    <tr><td>1995&ndash;1998</td><td>Middle school renovation ($5&nbsp;million)</td></tr>
+    <tr><td>2001&ndash;2002</td><td>New elementary school ($9.35&nbsp;million)</td></tr>
+    <tr><td>2009</td><td>Superintendent Boone bought out</td></tr>
+    <tr><td>2020</td><td>COVID-19 &ldquo;Raider Remote&rdquo; program</td></tr>
+    <tr><td>2022&ndash;2023</td><td>High school addition ($13&nbsp;million)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Current Leadership (2024)</td></tr>
+    <tr><td>Chairman</td><td>Bobby Waddell</td></tr>
+    <tr><td>Superintendent</td><td>Dr. Annette A. Bennett (2018&ndash;)</td></tr>
+    <tr><td>Enrollment</td><td>c.&nbsp;2,200 students</td></tr>
+    <tr><td>Schools</td><td>4 (Primary, Elementary, Middle, High)</td></tr>
+    <tr><td>Related topics</td><td><a href="appomattox_county_tax_history.html">Taxation</a></td></tr>
+  </table>
+</div>
+
+<p class="hatnote">This article covers the governance history of the elected School Board. For the school system as a whole, see the proposed article on <a href="Appomattox_County_Public_Schools.html" style="color:#ba0000;">Appomattox County Public Schools</a>.</p>
+
+<p>The <b>Appomattox County School Board</b> is the elected governing body responsible for public education in Appomattox County, Virginia. Composed of five members&mdash;one from each magisterial district&mdash;the board sets policy, approves the annual school budget for submission to the <a href="appomattox_county_tax_history.html">Board of Supervisors</a>, hires the division superintendent, and oversees a system of four schools serving approximately 2,200 students. Since at least the early twentieth century the board has navigated recurring tensions between the county&rsquo;s limited tax base and the demands of maintaining a competitive school division, a dynamic that has defined much of its modern history. Over 1,087 items in the local newspaper archive reference the board by name, making it one of the most extensively documented institutions in the county record.<sup><a href="#ref1">[1]</a></sup></p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#background">Background and structure</a></li>
+    <li><a href="#early_history">Early history through the 1990s</a>
+      <ol>
+        <li><a href="#school_construction_1960s">School construction and the 1969 high school</a></li>
+        <li><a href="#boone_first">The Aldridge Boone era (1982&ndash;1997)</a></li>
+        <li><a href="#middle_school_renovation">Middle school renovation (1995&ndash;1998)</a></li>
+      </ol>
+    </li>
+    <li><a href="#krug_era">The Walter Krug years (1997&ndash;2007)</a>
+      <ol>
+        <li><a href="#new_elementary">New elementary school (2001&ndash;2002)</a></li>
+        <li><a href="#budget_battles_2000s">Budget battles and teacher salary gaps</a></li>
+        <li><a href="#curriculum_controversies">Curriculum and policy debates</a></li>
+      </ol>
+    </li>
+    <li><a href="#boone_return">Aldridge Boone&rsquo;s return and departure (2007&ndash;2009)</a></li>
+    <li><a href="#grasty_era">The Dorinda Grasty era (2009&ndash;2018)</a>
+      <ol>
+        <li><a href="#austerity">Austerity and position cuts</a></li>
+        <li><a href="#grasty_policy">Policy and curriculum under Grasty</a></li>
+      </ol>
+    </li>
+    <li><a href="#bennett_era">The Annette Bennett era (2018&ndash;present)</a>
+      <ol>
+        <li><a href="#high_school_addition">High school renovation and addition</a></li>
+        <li><a href="#covid">COVID-19 and the Raider Remote program</a></li>
+        <li><a href="#post_covid">Post-pandemic recovery</a></li>
+      </ol>
+    </li>
+    <li><a href="#board_leadership">Board leadership and notable members</a></li>
+    <li><a href="#elections">Electoral history</a></li>
+    <li><a href="#bos_relationship">Relationship with the Board of Supervisors</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="background">Background and structure</h2>
+
+<p>Virginia law vests local school governance in elected school boards, a structure that dates to the post-Civil War Reconstruction era. In Appomattox County the School Board consists of five members, each elected to a four-year term from one of the county&rsquo;s magisterial districts: Courthouse, Falling River, Piney Mountain, Appomattox River, and Wreck Island.<sup><a href="#ref2">[2]</a></sup> The board appoints a division superintendent to manage the daily operations of the school system and submits an annual budget request to the Appomattox County Board of Supervisors, which controls the local funding allocation. This structural dependency on the Board of Supervisors for local appropriations has been a perennial source of tension, as the School Board frequently requests more than the supervisors are willing or able to provide.</p>
+
+<p>The school division operates four schools: Appomattox Primary School (pre-K through second grade), Appomattox Elementary School (third through fifth grade), Appomattox Middle School (sixth through eighth grade), and <a href="Appomattox_County_High_School.html" style="color:#ba0000;">Appomattox County High School</a> (ninth through twelfth grade). As of 2014 the division served an average of 2,215 students, a figure that has remained relatively stable over the past two decades.<sup><a href="#ref3">[3]</a></sup> The School Board offices were relocated to the Courtland Building on Court Street in 1991 after the previous tenant vacated the lease.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h2 id="early_history">Early history through the 1990s</h2>
+
+<h3 id="school_construction_1960s">School construction and the 1969 high school</h3>
+
+<p>The earliest School Board action documented in the local archive is the 1969 decision to construct a new Appomattox County High School. A study of educational needs had been completed, and by the time the newspaper reported on it, stage four of design development was already finished.<sup><a href="#ref5">[5]</a></sup> The completed high school was dedicated on October 6, 1974, with Division Superintendent Lloyd G. Walton delivering the dedication address and the school band performing a pre-program concert.<sup><a href="#ref6">[6]</a></sup> The building, which would serve the county for the next half-century, was featured in <i>Virginia Record</i> magazine, which detailed its enrollment, construction costs, and design credits.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>A $50,000 contract was awarded to Coleman-Adams Construction Company of Lynchburg in 1975 for remodeling Appomattox Middle School, including lowering ceilings and replacing lights.<sup><a href="#ref8">[8]</a></sup></p>
+
+<h3 id="boone_first">The Aldridge Boone era (1982&ndash;1997)</h3>
+
+<p>In May 1982 the School Board announced the hiring of <b>Aldridge Boone</b> as the new superintendent of Appomattox County Public Schools, succeeding Lloyd G. Walton, who retired and was later honored with a Distinguished Alumnus Award from Virginia Tech&rsquo;s College of Education.<sup><a href="#ref9">[9]</a></sup><sup><a href="#ref10">[10]</a></sup> Boone&rsquo;s first tenure lasted approximately fifteen years and encompassed the adoption of new state education standards, the review of a contagious disease policy in 1988, and a major change in class scheduling at the middle school prompted by new state requirements that same year.<sup><a href="#ref11">[11]</a></sup><sup><a href="#ref12">[12]</a></sup></p>
+
+<p>In June 1987 the Board of Supervisors appointed O.H. Tolley Jr. of Pamplin to the School Board, illustrating the earlier practice&mdash;common in Virginia before the shift to elected boards&mdash;of supervisors filling vacancies by appointment.<sup><a href="#ref13">[13]</a></sup></p>
+
+<h3 id="middle_school_renovation">Middle school renovation (1995&ndash;1998)</h3>
+
+<p>In late 1995 the School Board granted final approval for a $5&nbsp;million renovation and addition project at Appomattox Middle School, including upgrades to infrastructure and accessibility features.<sup><a href="#ref14">[14]</a></sup> The project grew modestly when the Board of Supervisors approved an additional $600,000 for the renovation in 1997.<sup><a href="#ref15">[15]</a></sup> The work proceeded on schedule, with officials anticipating interior completion within three weeks by May 1998.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>Around 1997, Superintendent Boone&rsquo;s first tenure ended. His successor, <b>Dr. Jack Thomas</b>, departed after a relatively brief period to accept the superintendency of Botetourt County schools, leaving the board to conduct a national search for a replacement.<sup><a href="#ref17">[17]</a></sup></p>
+
+<h2 id="krug_era">The Walter Krug years (1997&ndash;2007)</h2>
+
+<p><b>Dr. Walter Krug</b> was hired as division superintendent no later than the year 2000, when newspaper records first cite him in the role.<sup><a href="#ref18">[18]</a></sup> Krug would serve for approximately a decade, steering the division through a period of significant facility construction, mounting budget pressures, and new state and federal accountability mandates including the Standards of Learning (SOL) testing regime and the No Child Left Behind Act.</p>
+
+<h3 id="new_elementary">New elementary school (2001&ndash;2002)</h3>
+
+<p>The centerpiece of the Krug era was the construction of a new Appomattox Elementary School. The Board of Supervisors mandated the inclusion of a gymnasium in the bid packages in late 2000.<sup><a href="#ref19">[19]</a></sup> A ceremonial groundbreaking was held in 2001 for the $9.35&nbsp;million school on Lee-Grant Avenue.<sup><a href="#ref20">[20]</a></sup> In December 2002 the Board of Supervisors transferred the property deed following a letter from the superintendent.<sup><a href="#ref21">[21]</a></sup> Students moved into the new building in October 2002, initially attending the old school while construction finished.<sup><a href="#ref22">[22]</a></sup> Budget constraints meant the school opened without playground equipment, which had to be relocated from the former building.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p>Despite the tight budget, the building won statewide recognition at the Virginia School Boards Association convention for its architecture. Designed by VMDO Architects, it was praised for its openness, material selection, and use of interior glass. Principal Annette Bennett highlighted that it was built more inexpensively than comparable school buildings elsewhere in Virginia that year.<sup><a href="#ref24">[24]</a></sup><sup><a href="#ref25">[25]</a></sup> The closure of the old elementary school freed the Carver-Price School building, which had been used for educational purposes until 2002.<sup><a href="#ref26">[26]</a></sup></p>
+
+<h3 id="budget_battles_2000s">Budget battles and teacher salary gaps</h3>
+
+<p>Throughout the 2000s, annual budget deliberations between the School Board and the Board of Supervisors followed a recurring pattern: the superintendent would present a budget request, the supervisors would fund less than requested, and the resulting shortfall would force cuts to programs or positions. In December 2003 Krug presented six goals for the 2004&ndash;05 budget, including competitive salaries, meeting accreditation requirements, funding federal mandates, supporting technology upgrades, reducing costs, and improving facilities.<sup><a href="#ref27">[27]</a></sup> By February 2004 he was proposing solutions to a budget shortfall that included trimming staff, cutting benefits, and reducing extracurricular activities.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>Teacher salaries were a persistent sore point. A 2004 report revealed that Appomattox offered the lowest salaries in the region for experienced teachers and administrators, deterring applicants.<sup><a href="#ref29">[29]</a></sup> In November 2005 Krug presented comparative data against eight surrounding localities, showing Appomattox ranked near the bottom in starting salaries and in pay after twenty and twenty-five years of service.<sup><a href="#ref30">[30]</a></sup> School Board member Amy Martin warned in 2005 that the supervisors&rsquo; proposed funding represented a &ldquo;downward spiral,&rdquo; with $800,000 less than requested, leading to potential cuts in health insurance and salary increases.<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>The fiscal year 2006 budget was projected at $19.2&nbsp;million with a $500,000 shortfall. The final county appropriation met only the minimum requirement for full state-matching funds.<sup><a href="#ref32">[32]</a></sup></p>
+
+<h3 id="curriculum_controversies">Curriculum and policy debates</h3>
+
+<p>The Krug years saw several notable policy and curriculum controversies. In February 2004 a resident proposed that the School Board adopt a policy teaching creationism alongside evolution, and the following month another speaker urged the board to address perceived &ldquo;evolutionary bias&rdquo; in textbooks. Director of Instruction Janice Marston responded that textbook adoptions already sought supplemental materials presenting viewpoints fairly.<sup><a href="#ref33">[33]</a></sup><sup><a href="#ref34">[34]</a></sup> The creationism debate recurred through letters to the editor in subsequent years.<sup><a href="#ref35">[35]</a></sup></p>
+
+<p>In October 2005 Appomattox Middle School Principal Bob Kerns announced a committee to study the possibility of requiring student uniforms, with School Board member Todd Pickett suggesting the committee include students.<sup><a href="#ref36">[36]</a></sup> The board later adopted a uniform policy at the middle school, though Superintendent Krug described its purpose as maintaining decorum and reducing disruptions rather than imposing a rigid dress code.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>The board also adopted a &ldquo;Six Year Plan&rdquo; for 2003&ndash;2009, outlining goals that included implementing reading programs, planning school expansion, achieving full state accreditation, and meeting No Child Left Behind mandates.<sup><a href="#ref38">[38]</a></sup> Accreditation under federal guidelines proved challenging: by August 2004, Appomattox Elementary and Appomattox Primary had not achieved full accreditation due to low SOL scores among minority, poverty, and disabled student sub-groups.<sup><a href="#ref39">[39]</a></sup></p>
+
+<h2 id="boone_return">Aldridge Boone&rsquo;s return and departure (2007&ndash;2009)</h2>
+
+<p>Superintendent Krug announced his retirement in October 2006, with an effective date of June 30, 2007, concluding what he described as a ten-year career with the division. He subsequently accepted a position at the Central Virginia Community College Appomattox Center satellite campus.<sup><a href="#ref40">[40]</a></sup><sup><a href="#ref41">[41]</a></sup></p>
+
+<p>The School Board, chaired by Bobby Waddell, engaged the Virginia School Boards Association (VSBA) to assist with the superintendent search. A community survey received approximately 290 responses from parents, teachers, and school employees, providing preferences on experience, education, and residency. The board defined eleven key qualifications for the new superintendent, emphasizing instructional and curriculum experience, leadership qualities, effective communication, and local residency. The search was limited to candidates within Virginia to reduce costs.<sup><a href="#ref42">[42]</a></sup><sup><a href="#ref43">[43]</a></sup></p>
+
+<p>On April 27, 2007, the board announced <b>Dr. Aldridge Boone</b>&mdash;the same Aldridge Boone who had served as superintendent in the 1980s and 1990s&mdash;as the new superintendent, to assume the post on July 1 with a three-year contract at a starting salary of $98,500.<sup><a href="#ref44">[44]</a></sup> A reception was held at the Carver-Price Cultural Center to welcome him, with community organizations hosting the event.<sup><a href="#ref45">[45]</a></sup></p>
+
+<p>Boone&rsquo;s second tenure proved short and contentious. In November 2007, Assistant Superintendent Janice Marston unexpectedly announced her retirement.<sup><a href="#ref46">[46]</a></sup> By May 2009 the School Board had approved a new superintendent evaluation process that incorporated community input through interviews. Shortly after this 3&ndash;2 vote, Boone submitted a letter of resignation to board chair Rev. Wes Williams, effective June 2010.<sup><a href="#ref47">[47]</a></sup> The board moved more swiftly: on June 25, 2009, it unanimously agreed to buy out the final year of Boone&rsquo;s contract for approximately $100,000, citing &ldquo;differences in opinion and leadership styles.&rdquo; Boone&rsquo;s last day was June 25, 2009.<sup><a href="#ref48">[48]</a></sup><sup><a href="#ref49">[49]</a></sup></p>
+
+<h2 id="grasty_era">The Dorinda Grasty era (2009&ndash;2018)</h2>
+
+<p><b>Dr. Dorinda Grasty</b> was appointed to succeed Boone, taking the helm approximately two weeks after the buyout in the summer of 2009.<sup><a href="#ref50">[50]</a></sup> Grasty would serve nine years as superintendent, navigating the school division through the aftermath of the Great Recession, declining state funding, and mounting infrastructure needs.</p>
+
+<h3 id="austerity">Austerity and position cuts</h3>
+
+<p>The budget climate under Grasty was defined by contraction. In March 2011 she reported that some positions would be eliminated through attrition, while others would need to be refilled under significant budget uncertainty.<sup><a href="#ref51">[51]</a></sup> The teaching staff shrank from 188 in 2008 to 172 by the 2011&ndash;12 school year, and the division eliminated tuition reimbursement for teachers.<sup><a href="#ref52">[52]</a></sup> In 2010 the board eliminated the Adult Education Program entirely as part of budget cuts, though it was later reinstated.<sup><a href="#ref53">[53]</a></sup> The division faced a $521,000 shortfall that year&mdash;$400,000 of which could have triggered a loss of state matching funds.<sup><a href="#ref54">[54]</a></sup></p>
+
+<p>A 2015 teacher pay study presented to the board by the Appomattox County Education Association showed that teachers remained among the lowest paid in the region, with pay stagnant since 2009.<sup><a href="#ref55">[55]</a></sup> That same year, budget shortfalls of approximately $300,000 led to the elimination of six teaching positions through attrition.<sup><a href="#ref56">[56]</a></sup></p>
+
+<h3 id="grasty_policy">Policy and curriculum under Grasty</h3>
+
+<p>Despite financial constraints, the Grasty era saw continued policy development. In December 2009 the board approved a new course guide introducing standard technical and advanced technical diploma options and requiring a personal finance course for graduation.<sup><a href="#ref57">[57]</a></sup> The board reinstated an auto mechanics program at the high school in 2014 after it had been cut the previous year, responding to advocacy from the Career and Technical Advisory Council and School Board Vice Chairman Greg Smith.<sup><a href="#ref58">[58]</a></sup></p>
+
+<p>In 2015 the board approved an 82-minute block schedule at the middle school to increase instructional time for reading and math, a response to below-standard SOL performance in those subjects. The decision followed months of research, staff and parent feedback, and teacher training on longer class periods.<sup><a href="#ref59">[59]</a></sup> The board also approved the Gifted and Talented Program continuation for 2017&ndash;2022 and rejected a parent&rsquo;s request to ban <i>Of Mice and Men</i> from the high school curriculum, unanimously upholding a review committee&rsquo;s recommendation to retain the novel.<sup><a href="#ref60">[60]</a></sup><sup><a href="#ref61">[61]</a></sup></p>
+
+<p>In 2016 the board presented certificates to the Appomattox Raiders football team to celebrate their state championship victory.<sup><a href="#ref62">[62]</a></sup></p>
+
+<p>Grasty announced her retirement effective July 1, 2018, after thirty-two years in education and nine years as superintendent. A search for her successor, again conducted with VSBA assistance, reviewed forty candidates and included public surveys and a hearing. The board designated an earned doctorate as the sole required qualification.<sup><a href="#ref63">[63]</a></sup><sup><a href="#ref64">[64]</a></sup></p>
+
+<h2 id="bennett_era">The Annette Bennett era (2018&ndash;present)</h2>
+
+<p>In May 2018 the School Board appointed <b>Dr. Annette A. Bennett</b> as the new superintendent under a three-year contract, effective for the 2018&ndash;19 school year. Bennett, who had served the district since 1991&mdash;including as principal of Appomattox Elementary School when its award-winning building opened&mdash;started at a salary of $120,000. Board Chairman Bobby Waddell stated publicly that she was underpaid given her qualifications, noting that her predecessor had earned $140,106.<sup><a href="#ref65">[65]</a></sup><sup><a href="#ref66">[66]</a></sup> Bennett announced that her priorities would include implementing the state&rsquo;s &ldquo;Profile of a Virginia Graduate&rdquo; initiative and increasing parent and community engagement.<sup><a href="#ref67">[67]</a></sup></p>
+
+<h3 id="high_school_addition">High school renovation and addition</h3>
+
+<p>The most significant capital project of the Bennett era was a $13&nbsp;million addition and renovation of Appomattox County High School, jointly funded by the Board of Supervisors and School Board using low-interest loans and Coronavirus Aid, Relief, and Economic Security (CARES) Act funding.<sup><a href="#ref68">[68]</a></sup> In August 2022 Bennett led the School Board and visitors on a tour of the nearly completed project, highlighting safety improvements and new slip-resistant epoxy flooring.<sup><a href="#ref69">[69]</a></sup> Earlier discussions in 2018 had considered even more ambitious options, including a completely new high school building at a potential cost of $45&ndash;50&nbsp;million.<sup><a href="#ref70">[70]</a></sup></p>
+
+<h3 id="covid">COVID-19 and the Raider Remote program</h3>
+
+<p>The COVID-19 pandemic presented the School Board with its most disruptive challenge in decades. Governor Ralph Northam ordered all Virginia schools closed beginning March 13, 2020, initially for two weeks. By late March he extended the closure through the remainder of the academic year.<sup><a href="#ref71">[71]</a></sup><sup><a href="#ref72">[72]</a></sup> Appomattox County High School held a virtual graduation ceremony on May 27&ndash;28, 2020.<sup><a href="#ref73">[73]</a></sup></p>
+
+<p>In July 2020 the School Board presented four plans for the fall semester, ranging from full remote learning to a complete return to in-person classes, with hybrid models in between.<sup><a href="#ref74">[74]</a></sup> On August 13 the board unanimously voted to postpone the start of the school year due to rising COVID case counts. The division launched <b>Raider Remote</b>, a virtual learning program, beginning September 8, with in-person instruction commencing September 14. Approximately 612 students&mdash;26 percent of the student population&mdash;opted for the remote program.<sup><a href="#ref75">[75]</a></sup><sup><a href="#ref76">[76]</a></sup></p>
+
+<p>Connectivity proved a major hurdle. The school division partnered with local churches to offer parking-lot WiFi hotspots and reached out to businesses and civic organizations for additional access points.<sup><a href="#ref77">[77]</a></sup> When in-person classes began on September 14, the initial week went smoothly, with only minor adjustments to traffic patterns at the primary school.<sup><a href="#ref78">[78]</a></sup> In September 2020 Superintendent Bennett provided the Board of Supervisors with student enrollment data, staffing plans for remote learning and mental health support, and a list of community WiFi hotspot locations as part of a CARES Act information packet.<sup><a href="#ref79">[79]</a></sup></p>
+
+<p>The school division received $443,805 in federal CARES Act funds for the 2020&ndash;21 fiscal year, followed by an additional $387,660 from the Coronavirus Relief Fund. These supplemental appropriations required Board of Supervisors approval.<sup><a href="#ref80">[80]</a></sup></p>
+
+<h3 id="post_covid">Post-pandemic recovery</h3>
+
+<p>By December 2020 students in the Raider Remote program were reported to be performing well overall, with Assistant Principal Bethany Hunter identifying daily commitment, scheduling, and teacher communication as key success factors.<sup><a href="#ref81">[81]</a></sup> The transition back to normalcy was gradual. In March 2021 staff explored increasing classroom desk capacity under a new three-foot social distancing mandate, and Superintendent Bennett anticipated record summer school attendance as students struggled with the effects of extended virtual learning.<sup><a href="#ref82">[82]</a></sup><sup><a href="#ref83">[83]</a></sup></p>
+
+<p>By 2022 the board was addressing increased student absenteeism, tardiness, and mental health challenges exacerbated by the pandemic. SOL testing results showed that while accreditation was maintained, further improvements were needed following the pandemic downturn.<sup><a href="#ref84">[84]</a></sup><sup><a href="#ref85">[85]</a></sup> In 2023 the board approved a new HVAC training program for the high school and received a briefing on the &ldquo;All In Tutoring&rdquo; program focused on learning acceleration and reconnecting lost learning with current classroom content.<sup><a href="#ref86">[86]</a></sup><sup><a href="#ref87">[87]</a></sup></p>
+
+<h2 id="board_leadership">Board leadership and notable members</h2>
+
+<p>The longest-serving and most prominent School Board member in the modern era has been <b>Bobby Waddell</b>, who was appointed to an interim seat representing the Falling River District in June 2005 after Marcie Jones resigned to become headmistress of the new Appomattox Christian Academy.<sup><a href="#ref88">[88]</a></sup> Waddell was unanimously elected board chairman in January 2006, succeeding Amy Martin, and has served in a leadership capacity continuously since.<sup><a href="#ref89">[89]</a></sup> In November 2024 he was honored as the VSBA Regional Member of the Year for his outstanding boardsmanship and commitment to student achievement.<sup><a href="#ref90">[90]</a></sup></p>
+
+<p>Other notable board members in the twenty-first century include <b>Amy Martin</b> (Piney Mountain District), who chaired the board before Waddell and was a vocal advocate for increased school funding; <b>Todd Pickett</b> (Appomattox River District), elected in 2003 when he defeated Lynn Doss by a margin of 504 to 451; <b>Stacy Garrett</b>, elected board chair in a 3&ndash;2 vote in January 2011; <b>Greg Smith</b> (Courthouse District), who advocated for restoring cut programs and increasing school funding; and <b>Rev. James &ldquo;Wes&rdquo; Williams</b>, who was elected chairman in 2018.<sup><a href="#ref91">[91]</a></sup><sup><a href="#ref92">[92]</a></sup><sup><a href="#ref93">[93]</a></sup><sup><a href="#ref94">[94]</a></sup><sup><a href="#ref95">[95]</a></sup></p>
+
+<p><b>Cliff Rhodenizer</b> served two terms representing the Wreck Island District from 2000 to 2008.<sup><a href="#ref96">[96]</a></sup> Eddie Gunter served twelve years on the School Board before moving to the Board of Supervisors in 2006, stating that his school board experience motivated the transition because he believed he could better facilitate school projects from that position.<sup><a href="#ref97">[97]</a></sup></p>
+
+<h2 id="elections">Electoral history</h2>
+
+<p>School Board seats are elected by district on a four-year cycle coinciding with Virginia&rsquo;s general elections. Many races in Appomattox County go uncontested, a pattern that holds for School Board seats as well as Board of Supervisors positions. Contested races include the 2003 election, where two newcomers&mdash;Todd Pickett and Marcie Jones&mdash;won their respective seats.<sup><a href="#ref98">[98]</a></sup></p>
+
+<table class="wikitable">
+  <tr><th>Year</th><th>District</th><th>Winner</th><th>Notes</th></tr>
+  <tr><td>1999</td><td>Wreck Island</td><td>Cliff Rhodenizer</td><td>Elected to first term<sup><a href="#ref96">[96]</a></sup></td></tr>
+  <tr><td>2003</td><td>Appomattox River</td><td>Todd Pickett</td><td>Defeated Lynn Doss, 504&ndash;451<sup><a href="#ref98">[98]</a></sup></td></tr>
+  <tr><td>2003</td><td>Falling River</td><td>Marcie Jones</td><td>Defeated Darlene Reed, 614&ndash;320<sup><a href="#ref98">[98]</a></sup></td></tr>
+  <tr><td>2005</td><td>Courthouse</td><td>R.W. &ldquo;Bobby&rdquo; Mitchell</td><td>Unopposed<sup><a href="#ref99">[99]</a></sup></td></tr>
+  <tr><td>2005</td><td>Piney Mountain</td><td>Amy Martin</td><td>Unopposed<sup><a href="#ref99">[99]</a></sup></td></tr>
+  <tr><td>2005</td><td>Falling River (special)</td><td>Bobby Waddell</td><td>Interim appointment; elected in special election<sup><a href="#ref88">[88]</a></sup></td></tr>
+  <tr><td>2011</td><td>Courthouse (special)</td><td>Greg Smith</td><td>Sole candidate, filling remainder of term<sup><a href="#ref100">[100]</a></sup></td></tr>
+  <tr><td>2015</td><td>Appomattox River</td><td>Wendy Hageman Smith</td><td>Uncontested, 348 votes<sup><a href="#ref101">[101]</a></sup></td></tr>
+  <tr><td>2015</td><td>Falling River</td><td>Bobby Waddell</td><td>Reelected uncontested, 401 votes<sup><a href="#ref101">[101]</a></sup></td></tr>
+  <tr><td>2015</td><td>Wreck Island</td><td>Cynthia L. Hall</td><td>Elected with 69 votes<sup><a href="#ref102">[102]</a></sup></td></tr>
+</table>
+
+<h2 id="bos_relationship">Relationship with the Board of Supervisors</h2>
+
+<p>The financial relationship between the School Board and the <a href="appomattox_county_tax_history.html">Board of Supervisors</a> has been the single most consequential dynamic in the School Board&rsquo;s modern history. The Board of Supervisors controls local revenue through property tax rates and decides how much of that revenue to appropriate to the school division. Joint meetings between the two boards to discuss the school budget have been a regular occurrence, often marked by frank disagreements over the adequacy of funding.</p>
+
+<p>In 2005 the School Board received $800,000 less than requested, meeting only the minimum threshold for state matching funds.<sup><a href="#ref32">[32]</a></sup> In 2010 the shortfall was $521,000, risking the loss of an additional $400,000 in state funds.<sup><a href="#ref54">[54]</a></sup> Board member Greg Smith appeared before the supervisors in 2014 to urge increased funding, arguing that education quality was essential for attracting businesses and directly affected staffing, salaries, and class sizes.<sup><a href="#ref103">[103]</a></sup> In 2015, board member Al Jones III argued that the supervisors&rsquo; lack of funding disproportionately harmed at-risk students.<sup><a href="#ref104">[104]</a></sup></p>
+
+<p>The relationship has not been solely adversarial. The two boards jointly funded the $13&nbsp;million high school addition in the early 2020s, and the supervisors approved multiple supplemental appropriations of federal COVID relief funds.<sup><a href="#ref68">[68]</a></sup> Monthly financial reports from the school division to the Board of Supervisors, documented in the county government archive from 2016 onward, reflect a formal accountability structure.<sup><a href="#ref105">[105]</a></sup></p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>1969</td><td>School Board approves construction of new high school</td></tr>
+  <tr><td>Oct 1974</td><td>Appomattox County High School dedicated; Superintendent Walton presides</td></tr>
+  <tr><td>May 1982</td><td>Aldridge Boone hired as superintendent (first tenure)</td></tr>
+  <tr><td>Jun 1987</td><td>O.H. Tolley Jr. appointed to School Board by Board of Supervisors</td></tr>
+  <tr><td>Jan 1988</td><td>Board reviews contagious disease policy; adopts new class schedules</td></tr>
+  <tr><td>1991</td><td>School Board offices relocated to Courtland Building on Court Street</td></tr>
+  <tr><td>Dec 1995</td><td>Board approves $5&nbsp;million middle school renovation</td></tr>
+  <tr><td>Apr 1996</td><td>Fauber and Associates hired for elementary school study ($3.7M)</td></tr>
+  <tr><td>c.&nbsp;1997</td><td>Superintendent Jack Thomas departs for Botetourt County; Walter Krug hired</td></tr>
+  <tr><td>May 1998</td><td>Middle school renovation nears completion</td></tr>
+  <tr><td>2001</td><td>Groundbreaking for new Appomattox Elementary School ($9.35M)</td></tr>
+  <tr><td>Oct 2002</td><td>Students move into new elementary school</td></tr>
+  <tr><td>Dec 2003</td><td>Elementary school wins VSBA architectural award; Six-Year Plan adopted</td></tr>
+  <tr><td>Nov 2003</td><td>Todd Pickett and Marcie Jones elected to School Board</td></tr>
+  <tr><td>Mar 2005</td><td>Marcie Jones resigns; Bobby Waddell appointed interim</td></tr>
+  <tr><td>Jan 2006</td><td>Bobby Waddell elected board chairman</td></tr>
+  <tr><td>Oct 2006</td><td>Superintendent Krug announces retirement</td></tr>
+  <tr><td>Apr 2007</td><td>Aldridge Boone named superintendent (second tenure), $98,500 salary</td></tr>
+  <tr><td>May 2009</td><td>Board approves new evaluation process; Boone submits resignation</td></tr>
+  <tr><td>Jun 2009</td><td>Board buys out Boone&rsquo;s contract for ~$100,000; Dorinda Grasty appointed</td></tr>
+  <tr><td>Jan 2011</td><td>Stacy Garrett elected board chair</td></tr>
+  <tr><td>2014</td><td>Auto mechanics program reinstated after budget-cut elimination</td></tr>
+  <tr><td>2015</td><td>82-minute block schedule adopted at middle school</td></tr>
+  <tr><td>Dec 2016</td><td>Board honors Raiders football state champions</td></tr>
+  <tr><td>Feb 2018</td><td>Grasty announces retirement; superintendent search begins</td></tr>
+  <tr><td>May 2018</td><td>Dr. Annette A. Bennett appointed superintendent ($120,000 salary)</td></tr>
+  <tr><td>Mar 2018</td><td>Board unanimously rejects ban on <i>Of Mice and Men</i></td></tr>
+  <tr><td>Mar 2020</td><td>Virginia schools closed due to COVID-19 pandemic</td></tr>
+  <tr><td>Sep 2020</td><td>&ldquo;Raider Remote&rdquo; virtual program launches; in-person classes resume Sep 14</td></tr>
+  <tr><td>Aug 2022</td><td>Board tours nearly completed high school renovation</td></tr>
+  <tr><td>Mar 2023</td><td>$13M high school addition completed (CARES-funded)</td></tr>
+  <tr><td>Nov 2023</td><td>HVAC training program approved for high school</td></tr>
+  <tr><td>Nov 2024</td><td>Bobby Waddell named VSBA Regional Member of the Year</td></tr>
+</table>
+
+<h2 id="see_also">See also</h2>
+<ul>
+  <li><a href="appomattox_county_tax_history.html">Taxation in Appomattox County, Virginia</a></li>
+  <li><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce History</a></li>
+  <li><a href="Samuel_E_Carter.html">Samuel E. &ldquo;Sammy&rdquo; Carter</a> (longtime BOS member involved in school budget decisions)</li>
+</ul>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">Subject tag &ldquo;Appomattox County School Board,&rdquo; 1,087 occurrences in responses.db item_subjects table.</li>
+    <li id="ref2">&ldquo;Appomattox County School Board Elections Include Write-in Seat,&rdquo; <i>Times-Virginian</i>, November 2, 2011, via responses.db.</li>
+    <li id="ref3">&ldquo;School Division Cites Increased Student Enrollment and Operational Costs,&rdquo; <i>Times-Virginian</i>, March 5, 2014, via responses.db.</li>
+    <li id="ref4">&ldquo;Appomattox County School Board offices to relocate,&rdquo; <i>Times-Virginian</i>, c.&nbsp;1991, via responses.db.</li>
+    <li id="ref5">&ldquo;Appomattox School Board plans new high school construction,&rdquo; <i>Times-Virginian</i>, c.&nbsp;1969, via responses.db.</li>
+    <li id="ref6">&ldquo;Appomattox County High School Dedication Service Held,&rdquo; <i>Times-Virginian</i>, October 6, 1974, via responses.db.</li>
+    <li id="ref7">&ldquo;Appomattox County High School Featured in State Publication,&rdquo; <i>Times-Virginian</i>, c.&nbsp;1975, via responses.db.</li>
+    <li id="ref8">&ldquo;Contract awarded for Appomattox Middle School remodeling,&rdquo; <i>Times-Virginian</i>, c.&nbsp;1975, via responses.db.</li>
+    <li id="ref9">&ldquo;Aldridge Boone hired as new superintendent of Appomattox County Public Schools,&rdquo; <i>Times-Virginian</i>, May 2, 1982, via responses.db.</li>
+    <li id="ref10">&ldquo;Lloyd G. Walton receives Distinguished Alumnus Award,&rdquo; <i>Times-Virginian</i>, November 15, 1991, via responses.db.</li>
+    <li id="ref11">&ldquo;Appomattox County School Board reviews disease policy,&rdquo; <i>Times-Virginian</i>, c.&nbsp;January 1988, via responses.db.</li>
+    <li id="ref12">&ldquo;Appomattox County School Board adopts new class schedules,&rdquo; <i>Times-Virginian</i>, January 26, 1988, via responses.db.</li>
+    <li id="ref13">&ldquo;O.H. Tolley Jr. appointed to Appomattox County School Board,&rdquo; <i>Times-Virginian</i>, June 12, 1987, via responses.db.</li>
+    <li id="ref14">&ldquo;Appomattox Middle School renovation plans finalized,&rdquo; <i>Times-Virginian</i>, c.&nbsp;December 1995, via responses.db.</li>
+    <li id="ref15">&ldquo;Appomattox County Supervisors increase middle school renovation funds,&rdquo; <i>Times-Virginian</i>, c.&nbsp;1997, via responses.db.</li>
+    <li id="ref16">&ldquo;Appomattox Middle School renovations on schedule,&rdquo; <i>Times-Virginian</i>, May 27, 1998, via responses.db.</li>
+    <li id="ref17">&ldquo;Appomattox School Superintendent Takes New Job,&rdquo; <i>Times-Virginian</i>, c.&nbsp;1997, via responses.db.</li>
+    <li id="ref18">&ldquo;Appomattox Elementary School timber sale profits to general fund,&rdquo; <i>Times-Virginian</i>, c.&nbsp;2000, via responses.db. (First reference to Superintendent Walter Krug.)</li>
+    <li id="ref19">&ldquo;New elementary school to include gymnasium,&rdquo; <i>Times-Virginian</i>, c.&nbsp;December 2000, via responses.db.</li>
+    <li id="ref20">&ldquo;Groundbreaking for new elementary school in Appomattox County,&rdquo; <i>Times-Virginian</i>, c.&nbsp;2001, via responses.db.</li>
+    <li id="ref21">&ldquo;Appomattox Supervisors transfer land for new elementary school,&rdquo; <i>Times-Virginian</i>, December 9, 2002, via responses.db.</li>
+    <li id="ref22">&ldquo;New Appomattox Elementary School (AES) to Open,&rdquo; <i>Times-Virginian</i>, May 16, 2002, via responses.db.</li>
+    <li id="ref23">&ldquo;Appomattox Elementary School opened without playground,&rdquo; <i>Times-Virginian</i>, December 23, 2003, via responses.db.</li>
+    <li id="ref24">&ldquo;Appomattox Elementary School Wins Architectural Award,&rdquo; <i>Times-Virginian</i>, December 10, 2003, via responses.db.</li>
+    <li id="ref25">&ldquo;Appomattox Elementary School Built Under Budget,&rdquo; <i>Times-Virginian</i>, December 10, 2003, via responses.db.</li>
+    <li id="ref26">&ldquo;Carver-Price School Building Closed,&rdquo; <i>Times-Virginian</i>, c.&nbsp;2002, via responses.db.</li>
+    <li id="ref27">&ldquo;Appomattox School Superintendent Discusses 2004-05 Budget Goals,&rdquo; <i>Times-Virginian</i>, December 17, 2003, via responses.db.</li>
+    <li id="ref28">&ldquo;Appomattox County Schools Proposes Budget Solutions,&rdquo; <i>Times-Virginian</i>, February 5, 2004, via responses.db.</li>
+    <li id="ref29">&ldquo;Appomattox Schools Face Challenges in Attracting and Retaining Staff,&rdquo; <i>Times-Virginian</i>, April 7, 2004, via responses.db.</li>
+    <li id="ref30">&ldquo;Report Shows Appomattox Teachers&rsquo; Salaries Rank Low,&rdquo; <i>Times-Virginian</i>, November 22, 2005, via responses.db.</li>
+    <li id="ref31">&ldquo;School Board Member Martin Expresses Concerns Over School Budget Funding,&rdquo; <i>Times-Virginian</i>, May 18, 2005, via responses.db.</li>
+    <li id="ref32">&ldquo;Appomattox County School Boards discuss $19.2 million budget with $0.5 million shortfall,&rdquo; <i>Times-Virginian</i>, March 16, 2006, via responses.db.</li>
+    <li id="ref33">&ldquo;Proposal to Teach Evolution and Creationism Side-by-Side in Appomattox Schools,&rdquo; <i>Times-Virginian</i>, February 18, 2004, via responses.db.</li>
+    <li id="ref34">&ldquo;Resident urges Appomattox School Board to address &lsquo;evolutionary bias,&rsquo;&rdquo; <i>Times-Virginian</i>, March 3, 2004, via responses.db.</li>
+    <li id="ref35">&ldquo;Request to include creationism in Appomattox schools curriculum&rdquo; (letter to the editor), <i>Times-Virginian</i>, July 7, 2005, via responses.db.</li>
+    <li id="ref36">&ldquo;Appomattox Middle School Forms Committee for Student Uniforms,&rdquo; <i>Times-Virginian</i>, October 5, 2005, via responses.db.</li>
+    <li id="ref37">&ldquo;Appomattox Middle School uniform policy aims to maintain decorum and reduce disruptions,&rdquo; <i>Times-Virginian</i>, November 30, 2005, via responses.db.</li>
+    <li id="ref38">&ldquo;Appomattox School Board Adopts &lsquo;Six Year Plan&rsquo; 2003-09,&rdquo; <i>Times-Virginian</i>, December 17, 2003, via responses.db.</li>
+    <li id="ref39">&ldquo;Appomattox Schools Face Accreditation Challenges,&rdquo; <i>Times-Virginian</i>, August 25, 2004, via responses.db.</li>
+    <li id="ref40">&ldquo;Current Superintendent Walter Krug to Retire June 30, 2007,&rdquo; <i>Times-Virginian</i>, January 3, 2007, via responses.db.</li>
+    <li id="ref41">&ldquo;Superintendent Walter Krug Resigns to Accept New Position,&rdquo; <i>Times-Virginian</i>, June 20, 2007, via responses.db.</li>
+    <li id="ref42">&ldquo;Superintendent search survey results released,&rdquo; <i>Times-Virginian</i>, February 7, 2007, via responses.db.</li>
+    <li id="ref43">&ldquo;Appomattox School Board defines superintendent qualifications,&rdquo; <i>Times-Virginian</i>, February 7, 2007, via responses.db.</li>
+    <li id="ref44">&ldquo;Aldridge Boone to Assume Superintendent Post July 1 with Three-Year Contract,&rdquo; <i>Times-Virginian</i>, May 2, 2007, via responses.db.</li>
+    <li id="ref45">&ldquo;Reception held to welcome new Superintendent Dr. Aldridge Boone,&rdquo; <i>Times-Virginian</i>, August 8, 2007, via responses.db.</li>
+    <li id="ref46">&ldquo;Assistant Superintendent Retirement Announcement,&rdquo; <i>Times-Virginian</i>, November 14, 2007, via responses.db.</li>
+    <li id="ref47">&ldquo;Appomattox School Board approves new evaluation process for Superintendent,&rdquo; <i>Times-Virginian</i>, May 28, 2009, via responses.db.</li>
+    <li id="ref48">&ldquo;Appomattox School Board buys out Superintendent Boone&rsquo;s contract,&rdquo; <i>Times-Virginian</i>, June 25, 2009, via responses.db.</li>
+    <li id="ref49">&ldquo;Appomattox County Schools buyout former Superintendent Boone&rsquo;s contract,&rdquo; <i>Times-Virginian</i>, July 8, 2009, via responses.db.</li>
+    <li id="ref50">&ldquo;Appomattox County Schools buyout former Superintendent Boone&rsquo;s contract,&rdquo; <i>Times-Virginian</i>, July 8, 2009. (&ldquo;Two weeks prior to Dorinda Grasty&rsquo;s appointment&hellip;&rdquo;)</li>
+    <li id="ref51">&ldquo;Appomattox school division may eliminate positions,&rdquo; <i>Times-Virginian</i>, March 2, 2011, via responses.db.</li>
+    <li id="ref52">&ldquo;Appomattox County schools superintendent details budget challenges,&rdquo; <i>Times-Virginian</i>, March 28, 2012, via responses.db.</li>
+    <li id="ref53">&ldquo;Appomattox County School Board Eliminated Adult Education Program,&rdquo; <i>Times-Virginian</i>, August 18, 2010, via responses.db.</li>
+    <li id="ref54">&ldquo;Appomattox School Board Faces Funding Shortfall and Loss of State Matching Funds,&rdquo; <i>Times-Virginian</i>, May 5, 2010, via responses.db.</li>
+    <li id="ref55">&ldquo;Appomattox County teacher pay study presented,&rdquo; <i>Times-Virginian</i>, February 4, 2015, via responses.db.</li>
+    <li id="ref56">&ldquo;Appomattox County Schools to lose six teaching positions,&rdquo; <i>Times-Virginian</i>, June 3, 2015, via responses.db.</li>
+    <li id="ref57">&ldquo;Appomattox School Board Approves New Course Guide and Graduation Requirements,&rdquo; <i>Times-Virginian</i>, December 23, 2009, via responses.db.</li>
+    <li id="ref58">&ldquo;Appomattox School Board reinstates auto mechanics teacher job,&rdquo; <i>Times-Virginian</i>, May 28, 2014, via responses.db.</li>
+    <li id="ref59">&ldquo;Appomattox School Board seeks feedback before schedule vote,&rdquo; <i>Times-Virginian</i>, February 25, 2015, via responses.db.</li>
+    <li id="ref60">&ldquo;Appomattox County School Board Approves Gifted and Talented Program Continuation,&rdquo; <i>Times-Virginian</i>, December 7, 2017, via responses.db.</li>
+    <li id="ref61">&ldquo;School board rejects plea to ban &lsquo;Of Mice and Men,&rsquo;&rdquo; <i>Times-Virginian</i>, March 12, 2018, via responses.db.</li>
+    <li id="ref62">&ldquo;Appomattox County School Board honors Raiders,&rdquo; <i>Times-Virginian</i>, December 21, 2016, via responses.db.</li>
+    <li id="ref63">&ldquo;Superintendent Dorinda Grasty announces retirement,&rdquo; <i>Times-Virginian</i>, February 14, 2018, via responses.db.</li>
+    <li id="ref64">&ldquo;Appomattox School Board Requires Doctorate for Superintendent,&rdquo; <i>Times-Virginian</i>, March 2, 2018, via responses.db.</li>
+    <li id="ref65">&ldquo;Appomattox County Public Schools Appoints Dr. Annette A. Bennett as New Superintendent,&rdquo; <i>Times-Virginian</i>, May 10, 2018, via responses.db.</li>
+    <li id="ref66">&ldquo;Annette Bennett Appointed Appomattox County Schools Superintendent,&rdquo; <i>Times-Virginian</i>, July 14, 2018, via responses.db.</li>
+    <li id="ref67">&ldquo;Dr. Bennett to Focus on Profile of a Virginia Graduate and Community Engagement,&rdquo; <i>Times-Virginian</i>, May 10, 2018, via responses.db.</li>
+    <li id="ref68">&ldquo;Appomattox County High School addition funded by county boards and CARES Act,&rdquo; <i>Times-Virginian</i>, March 24, 2023, via responses.db.</li>
+    <li id="ref69">&ldquo;Appomattox County School Board Tours High School Renovation,&rdquo; <i>Times-Virginian</i>, August 18, 2022, via responses.db.</li>
+    <li id="ref70">&ldquo;Appomattox County School Board considers high school upgrades or new building,&rdquo; <i>Times-Virginian</i>, May 18, 2018, via responses.db.</li>
+    <li id="ref71">&ldquo;Virginia Schools Closed for Two Weeks,&rdquo; <i>Times-Virginian</i>, March 19, 2020, via responses.db.</li>
+    <li id="ref72">&ldquo;Virginia Schools Closed for Academic Year Amid COVID-19,&rdquo; <i>Times-Virginian</i>, March 23, 2020, via responses.db.</li>
+    <li id="ref73">&ldquo;Appomattox County High School to hold virtual graduation,&rdquo; <i>Times-Virginian</i>, May 15, 2020, via responses.db.</li>
+    <li id="ref74">&ldquo;Appomattox School Board Reveals Four Reopening Plans,&rdquo; <i>Times-Virginian</i>, July 2, 2020, via responses.db.</li>
+    <li id="ref75">&ldquo;Appomattox County School Board delays start of school year,&rdquo; <i>Times-Virginian</i>, August 13, 2020, via responses.db.</li>
+    <li id="ref76">&ldquo;Appomattox County schools prepare virtual learning content,&rdquo; <i>Times-Virginian</i>, August 13, 2020, via responses.db.</li>
+    <li id="ref77">&ldquo;Appomattox Schools Seek WiFi Hotspots for Students,&rdquo; <i>Times-Virginian</i>, September 18, 2020, via responses.db.</li>
+    <li id="ref78">&ldquo;Appomattox County Public Schools begin in-person classes,&rdquo; <i>Times-Virginian</i>, September 23, 2020, via responses.db.</li>
+    <li id="ref79">Annette Bennett, Appomattox County Public Schools, email to Susan M. Adams regarding CARES information, September 15, 2020, via county-board-eda-planning-commission-2010-2020.db.</li>
+    <li id="ref80">Supplemental appropriation requests: CARES Act ($443,805), August 13, 2020; Coronavirus Relief Fund ($387,660), October 16, 2020, via county-board-eda-planning-commission-2010-2020.db.</li>
+    <li id="ref81">&ldquo;Appomattox County Public Schools Online Students Performing Well,&rdquo; <i>Times-Virginian</i>, December 7, 2020, via responses.db.</li>
+    <li id="ref82">&ldquo;Appomattox County School Board reviews classroom capacity,&rdquo; <i>Times-Virginian</i>, March 31, 2021, via responses.db.</li>
+    <li id="ref83">&ldquo;Appomattox County School Board Discusses Summer School,&rdquo; <i>Times-Virginian</i>, April 7, 2021, via responses.db.</li>
+    <li id="ref84">&ldquo;Appomattox County School Board discusses student absenteeism and mental health,&rdquo; <i>Times-Virginian</i>, April 14, 2022, via responses.db.</li>
+    <li id="ref85">&ldquo;ACPS Presents SOL Results and Future Plans,&rdquo; <i>Times-Virginian</i>, November 21, 2022, via responses.db.</li>
+    <li id="ref86">&ldquo;Appomattox County School Board Approves HVAC Training Program,&rdquo; <i>Times-Virginian</i>, November 21, 2023, via responses.db.</li>
+    <li id="ref87">&ldquo;Appomattox County School Board briefed on tutoring program,&rdquo; <i>Times-Virginian</i>, December 14, 2023, via responses.db.</li>
+    <li id="ref88">&ldquo;Bobby Waddell appointed interim School Board member,&rdquo; <i>Times-Virginian</i>, June 1, 2006, via responses.db.</li>
+    <li id="ref89">&ldquo;Bobby Waddell elected Appomattox County School Board chairman,&rdquo; <i>Times-Virginian</i>, c.&nbsp;January 2006, via responses.db.</li>
+    <li id="ref90">&ldquo;Bobby Waddell named VSBA Regional Member of the Year,&rdquo; <i>Times-Virginian</i>, November 20, 2024, via responses.db.</li>
+    <li id="ref91">&ldquo;Appomattox County School Board Election Results,&rdquo; <i>Times-Virginian</i>, November 12, 2003, via responses.db. (Pickett elected.)</li>
+    <li id="ref92">&ldquo;Appomattox School Board elects new chair,&rdquo; <i>Times-Virginian</i>, January 18, 2011, via responses.db. (Garrett elected chair.)</li>
+    <li id="ref93">&ldquo;School Board member advocates for increased school funding,&rdquo; <i>Times-Virginian</i>, April 2, 2014, via responses.db. (Greg Smith.)</li>
+    <li id="ref94">&ldquo;Rev. James &lsquo;Wes&rsquo; Williams elected school board chair,&rdquo; <i>Times-Virginian</i>, February 2, 2018, via responses.db.</li>
+    <li id="ref95">&ldquo;School Board Member Martin Expresses Concerns Over School Budget Funding,&rdquo; <i>Times-Virginian</i>, May 18, 2005, via responses.db. (Amy Martin.)</li>
+    <li id="ref96">&ldquo;Clifford Rhodenizer Served on Appomattox County School Board,&rdquo; <i>Times-Virginian</i>, March 23, 2020, via responses.db.</li>
+    <li id="ref97">&ldquo;Gunter expresses desire to make school projects happen,&rdquo; <i>Times-Virginian</i>, April 12, 2006, via responses.db.</li>
+    <li id="ref98">&ldquo;Appomattox County School Board Election Results,&rdquo; <i>Times-Virginian</i>, November 12, 2003, via responses.db.</li>
+    <li id="ref99">&ldquo;Mitchell to run unopposed for school board&rdquo; and &ldquo;Martin to run unopposed for school board,&rdquo; <i>Times-Virginian</i>, June 29, 2005, via responses.db.</li>
+    <li id="ref100">&ldquo;Appomattox County School Board Elections Include Write-in Seat,&rdquo; <i>Times-Virginian</i>, November 2, 2011, via responses.db.</li>
+    <li id="ref101">&ldquo;Bobby Waddell elected to Appomattox County School Board&rdquo; and &ldquo;Wendy Hageman Smith elected to School Board,&rdquo; <i>Times-Virginian</i>, November 4, 2015, via responses.db.</li>
+    <li id="ref102">&ldquo;Cynthia L. Hall elected to Appomattox School Board,&rdquo; <i>Times-Virginian</i>, November 11, 2015, via responses.db.</li>
+    <li id="ref103">&ldquo;School Board member advocates for increased school funding,&rdquo; <i>Times-Virginian</i>, April 2, 2014, via responses.db.</li>
+    <li id="ref104">&ldquo;Appomattox School Board Member links funding to at-risk students,&rdquo; <i>Times-Virginian</i>, April 29, 2015, via responses.db.</li>
+    <li id="ref105">Monthly financial reports, Appomattox County Public Schools to Board of Supervisors, August 2016&ndash;August 2020, via county-board-eda-planning-commission-2010-2020.db (20 classified School Board documents).</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

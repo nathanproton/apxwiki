@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan A. Simpson — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Nathan A. Simpson</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Nathan Archer Simpson</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Courthouse District Supervisor</td></tr>
+    <tr><td>In office</td><td>January&nbsp;1, 2026&ndash;present</td></tr>
+    <tr><td>Preceded by</td><td><a href="Samuel_E_Carter.html">Samuel E. &ldquo;Sammy&rdquo; Carter</a></td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Appomattox Town Council</td></tr>
+    <tr><td>In office</td><td>2020&ndash;2025</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Economic Development Authority</td></tr>
+    <tr><td>In office</td><td>2019&ndash;2020</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Full name</td><td>Nathan Archer Simpson</td></tr>
+    <tr><td>Born</td><td>c.&nbsp;2000&ndash;2001<br>Appomattox, Virginia</td></tr>
+    <tr><td>Education</td><td>Appomattox County High School</td></tr>
+    <tr><td>Business</td><td>Colonial Systems LLC (founder)</td></tr>
+    <tr><td>Residence</td><td>Town of Appomattox, Virginia</td></tr>
+  </table>
+</div>
+
+<p><b>Nathan Archer Simpson</b> (born c.&nbsp;2000&ndash;2001) is an American entrepreneur, technology professional, and politician who represents the Courthouse District on the <b>Appomattox County Board of Supervisors</b>. He took office on January&nbsp;1, 2026, succeeding longtime supervisor <a href="Samuel_E_Carter.html">Samuel E. &ldquo;Sammy&rdquo; Carter</a>, who had held the seat since 1998. Simpson previously served on the <b>Appomattox Town Council</b> from 2020 to 2025 and on the <b>Appomattox County Economic Development Authority</b> (EDA) from 2019 to 2020. He is the founder of Colonial Systems LLC, a media production company that was awarded a $2.1&nbsp;million contract with the United States Marine Corps Special Operations Command in 2020.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Simpson first gained public attention as a freshman at Appomattox County High School in 2014, when his design was selected as the school&rsquo;s new athletic logo.<sup><a href="#ref2">[2]</a></sup> During his time on Town Council, he championed initiatives including town-wide Wi-Fi access, train depot renovation, food truck policies, and competitive staff salaries.<sup><a href="#ref3">[3]</a></sup><sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup></p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_life">Early life and education</a>
+      <ol>
+        <li><a href="#achs_logo">ACHS logo design</a></li>
+        <li><a href="#skillsusa">SkillsUSA and Model United Nations</a></li>
+      </ol>
+    </li>
+    <li><a href="#career">Career</a>
+      <ol>
+        <li><a href="#town_it">Town of Appomattox IT work</a></li>
+        <li><a href="#colonial_systems">Colonial Systems LLC</a></li>
+      </ol>
+    </li>
+    <li><a href="#eda">Economic Development Authority (2019&ndash;2020)</a></li>
+    <li><a href="#town_council">Appomattox Town Council (2020&ndash;2025)</a>
+      <ol>
+        <li><a href="#wifi">Wi-Fi and internet access</a></li>
+        <li><a href="#train_depot">Train depot renovation</a></li>
+        <li><a href="#food_trucks">Food truck policy</a></li>
+        <li><a href="#skateboard">Skateboard ordinance</a></li>
+        <li><a href="#tourism">Tourism website</a></li>
+        <li><a href="#salaries">Staff salary advocacy</a></li>
+        <li><a href="#censure">2024 censure and rescission</a></li>
+      </ol>
+    </li>
+    <li><a href="#board_of_supervisors">Board of Supervisors (2026&ndash;present)</a></li>
+    <li><a href="#electoral_history">Electoral history</a></li>
+    <li><a href="#other_service">Other public service</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="early_life">Early life and education</h2>
+
+<p>Nathan Archer Simpson grew up in Appomattox, Virginia. He attended <b>Appomattox County High School</b>, where he was active in academic competitions, entrepreneurship programs, and extracurricular activities. Records indicate he was a freshman during the 2013&ndash;2014 school year.<sup><a href="#ref2">[2]</a></sup></p>
+
+<h3 id="achs_logo">ACHS logo design</h3>
+
+<p>In early 2014, Appomattox County High School launched a contest for a new athletic logo after the school received a cease-and-desist letter from the Collegiate Licensing Corporation on behalf of the University of Arizona, which objected to the school&rsquo;s &ldquo;Block&nbsp;A&rdquo; design as too similar to its own trademarked logo. Athletic Director Chris Dodge solicited submissions from students, parents, staff, alumni, and community members, receiving over forty proposals by the April&nbsp;25 deadline.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>Simpson, then a freshman, submitted the winning design. In July 2014, the Appomattox County School Board voted 4&ndash;1 to adopt his logo, with board member Greg Smith dissenting.<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref7">[7]</a></sup> The new design was phased in across sports apparel, athletic uniforms, scoreboards, and other school property over the following years.</p>
+
+<h3 id="skillsusa">SkillsUSA and Model United Nations</h3>
+
+<p>Simpson was a member of the Appomattox County High School SkillsUSA Entrepreneurship Team, which won the Virginia state championship in the entrepreneurship category for three consecutive years. In 2018, Simpson, alongside teammates Liam Bennett and Bryce Gunter, captured the team&rsquo;s third consecutive state gold medal under the guidance of adviser Jason Clark. The team qualified for the SkillsUSA National Conference in Louisville, Kentucky, held June&nbsp;24&ndash;29, 2018. The Appomattox Entrepreneurship Team had also placed at the national competition in each of the previous two years.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>In November 2017, Simpson received the Best Delegation award at a Model United Nations event held at Hampden-Sydney College, where he represented the United States.<sup><a href="#ref9">[9]</a></sup></p>
+
+<h2 id="career">Career</h2>
+
+<h3 id="town_it">Town of Appomattox IT work</h3>
+
+<p>In June 2017, while still a high school student, Simpson was hired as a part-time Information Technology employee for the Town of Appomattox. Interim Town Manager Clarence Monday announced the hiring at a Town Council meeting.<sup><a href="#ref10">[10]</a></sup> In that role, Simpson worked on a variety of technology projects for the town, including upgrades to the town&rsquo;s website and meeting livestream equipment. Town Council members thanked Simpson on multiple occasions for his work on these projects.<sup><a href="#ref11">[11]</a></sup> He also rebuilt the Appomattox Tourism website, HistoricAppomattox.com, launching the updated version in January 2018.<sup><a href="#ref12">[12]</a></sup></p>
+
+<h3 id="colonial_systems">Colonial Systems LLC</h3>
+
+<p>Simpson founded <b>Colonial Systems LLC</b>, a media production company. In February 2020, the <i>Times-Virginian</i> reported that the company had been awarded a $2.1&nbsp;million, five-year contract by the United States Marine Corps Special Operations Command (MARSOC) to produce videography and photography for military recruitment advertisements shown in movie theaters. Simpson was nineteen years old at the time of the contract award.<sup><a href="#ref1">[1]</a></sup></p>
+
+<h2 id="eda">Economic Development Authority (2019&ndash;2020)</h2>
+
+<p>On February&nbsp;28, 2019, the Appomattox County Board of Supervisors appointed Simpson to fill a vacancy on the <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox County Economic Development Authority</a> for a four-year term set to expire in December 2022.<sup><a href="#ref13">[13]</a></sup> Simpson served on the EDA until 2020, when his election to the Appomattox Town Council created a vacancy. The Board of Supervisors appointed Patrick Richardson to fill Simpson&rsquo;s unexpired EDA term on August&nbsp;27, 2020.<sup><a href="#ref14">[14]</a></sup></p>
+
+<h2 id="town_council">Appomattox Town Council (2020&ndash;2025)</h2>
+
+<p>Simpson was elected to the Appomattox Town Council on May&nbsp;19, 2020, as one of six candidates who won seats. The other members elected that cycle were Timothy W. Garrett, Jonathan D. Garrett, Mary Lou Spiggle, Paul D. Harvey, and Claudia G. Puckette.<sup><a href="#ref15">[15]</a></sup> Upon taking office, Mayor Richard Conner appointed Simpson to the <b>Physical Development Committee</b> alongside Timothy Garrett and Mary Lou Spiggle.<sup><a href="#ref16">[16]</a></sup> Simpson also agreed to fill an unexpired term on the Town of Appomattox <b>Planning Commission</b>, serving until June&nbsp;30, 2022.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>During his five years on Council, Simpson became known for championing technology and economic development initiatives, frequently proposing new programs and raising issues related to town infrastructure and quality of life.</p>
+
+<h3 id="wifi">Wi-Fi and internet access</h3>
+
+<p>At the September&nbsp;29, 2020 workshop meeting, Simpson initiated a discussion on establishing a town-wide Wi-Fi coverage system. He noted that internet access had become essential for both working adults and students, particularly during the COVID-19 pandemic, and asked whether staff or fellow council members knew where previous efforts to develop municipal Wi-Fi had stalled. Fellow council member Paul Harvey suggested inviting B2X Online to present a proposal, as the company had recently pitched an internet plan to the Appomattox County Board of Supervisors.<sup><a href="#ref3">[3]</a></sup></p>
+
+<h3 id="train_depot">Train depot renovation</h3>
+
+<p>Simpson was a persistent advocate for the renovation of the historic Appomattox train depot on Main Street, a project that had languished for years. In October 2020, he placed the train depot renovation on the council agenda and expressed concern about the building&rsquo;s condition. He stated he had been following the issue and wanted to start a conversation about cost estimates and a path forward.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>The issue resurfaced at an April 2021 workshop meeting, where Simpson joined veteran council members Mary Lou Spiggle and Claudia Puckette in calling for concrete action. Spiggle noted that citizens had commented on the building&rsquo;s deteriorating exterior, and at a May 2021 meeting Simpson expressed support for forming an exploratory committee.<sup><a href="#ref18">[18]</a></sup><sup><a href="#ref19">[19]</a></sup> The council later issued a request for proposals for engineering and project management services for the depot renovation, and by 2024 the project had advanced to the construction advertisement stage, with the Appomattox County Chamber of Commerce requesting space in the renovated building.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h3 id="food_trucks">Food truck policy</h3>
+
+<p>In March 2021, Simpson proposed that the council develop short-term and long-term policies for food trucks operating in the town. He specifically advocated for a pilot food truck park program and supported local entrepreneur Alan Briceland, owner of Iceland&rsquo;s ice cream and dessert truck, in his plans to expand operations on his own property. Simpson told Briceland at the meeting that the town needed more entrepreneurs, and the council reached a consensus to allow Briceland to move forward with his plans.<sup><a href="#ref5">[5]</a></sup></p>
+
+<h3 id="skateboard">Skateboard ordinance</h3>
+
+<p>In September 2020, the Town Council reviewed a longstanding ordinance that prohibited skateboarding, scooters, roller skating, and bicycling in certain areas of the town. After citizens&mdash;both youth and adults&mdash;spoke against the ban at the August meeting, the council voted to revise the ordinance by lowering the penalty for violations rather than eliminating the ban entirely. Simpson was the lone dissenting vote, opposing the revision.<sup><a href="#ref21">[21]</a></sup></p>
+
+<h3 id="tourism">Tourism website</h3>
+
+<p>At a January 2023 workshop meeting, Simpson disclosed that he had rebuilt the Appomattox Tourism website, HistoricAppomattox.com, in 2017&ndash;2018 when he was employed as the town&rsquo;s IT technician. Noting that the site had not been updated since its January 2018 launch, Simpson proposed issuing a Request for Proposal to solicit local bids for a website refresh, stating that a local developer familiar with the town&rsquo;s tourist attractions would add value.<sup><a href="#ref12">[12]</a></sup></p>
+
+<h3 id="salaries">Staff salary advocacy</h3>
+
+<p>In November 2021, Simpson publicly advocated for reviewing and adjusting the salaries of all town employees to be competitive with other municipalities. His remarks came after the council approved a salary increase for the Town Manager, and Simpson expressed hope that the raise would set a precedent for compensation reviews across the town&rsquo;s workforce.<sup><a href="#ref22">[22]</a></sup></p>
+
+<h3 id="censure">2024 censure and rescission</h3>
+
+<p>On March&nbsp;11, 2024, the Appomattox Town Council voted to censure Simpson for alleged &ldquo;disorderly behavior and misconduct&rdquo; following an incident in the Town Hall parking lot after the February&nbsp;27 council meeting.<sup><a href="#ref23">[23]</a></sup> Council members Claudia Puckette and Mary Lou Spiggle reported that after the February meeting, Simpson shouted at them and moved toward them in what they described as a threatening manner, causing them to fear for their personal safety.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>The incident followed a disagreement over the potential appointment of Simpson&rsquo;s wife to the Economic Development Authority. During a break at the February&nbsp;27 meeting, Puckette and Spiggle had approached Simpson&rsquo;s wife to explain that she was not selected for the EDA position due to concerns about a perceived conflict of interest. Simpson&rsquo;s wife subsequently reported the conversation to Simpson in their vehicle.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>Simpson was not present at the March&nbsp;11 meeting when the censure was adopted and stated he was not notified beforehand or given an opportunity to present his account of events. A special meeting was called for March&nbsp;19 to discuss the censure.<sup><a href="#ref25">[25]</a></sup> At a special session on March&nbsp;20, 2024, the council voted to rescind the censure, with five members voting in favor and one abstaining. Simpson and council member Jane Allen presented a resolution arguing that the censure had violated Robert&rsquo;s Rules of Order, specifically Rule&nbsp;61.22, which requires that charges be formally preferred and a trial held before the assembly takes disciplinary action.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>Simpson admitted at the March&nbsp;20 meeting that he had shouted at Puckette and Spiggle from across the parking lot but denied running toward them, raising his arms, or approaching them in a threatening way. The rescission resolution included an addendum, recommended by Puckette, requiring all council members to complete a training course on professional conduct. Simpson agreed to the addendum, and Mayor Richard Conner urged the council to move forward.<sup><a href="#ref24">[24]</a></sup></p>
+
+<h2 id="board_of_supervisors">Board of Supervisors (2026&ndash;present)</h2>
+
+<p>In 2025, Simpson was elected to represent the Courthouse District on the Appomattox County Board of Supervisors, succeeding <a href="Samuel_E_Carter.html">Samuel E. &ldquo;Sammy&rdquo; Carter</a>, who had held the seat since 1998. Simpson took office on January&nbsp;1, 2026.<sup><a href="#ref26">[26]</a></sup></p>
+
+<h2 id="electoral_history">Electoral history</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th><th>Office</th><th>District / Jurisdiction</th><th>Result</th><th>Notes</th>
+  </tr>
+  <tr>
+    <td>2020</td>
+    <td>Town Council</td>
+    <td>Town of Appomattox</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Elected as one of six council members on May&nbsp;19, 2020<sup><a href="#ref15">[15]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2025</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse District</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Succeeded Sammy Carter<sup><a href="#ref26">[26]</a></sup></td>
+  </tr>
+</table>
+
+<h2 id="other_service">Other public service</h2>
+
+<p>In addition to his elected and appointed positions, Simpson served on the Town of Appomattox Physical Development Committee (appointed 2020) and filled an unexpired term on the Town of Appomattox Planning Commission (2020&ndash;2022).<sup><a href="#ref16">[16]</a></sup><sup><a href="#ref17">[17]</a></sup></p>
+
+<p>Simpson purchased a home in the North Avenue Subdivision in the Town of Appomattox in January 2022.<sup><a href="#ref27">[27]</a></sup></p>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">&ldquo;Business owned by 19-year-old awarded $2.1 million contract,&rdquo; <i>Times-Virginian</i>, February&nbsp;5, 2020. (via times-virginian-2004-2024.db)</li>
+    <li id="ref2">&ldquo;ACHS Approves New Sports Logo After Dispute,&rdquo; <i>Times-Virginian</i>, year-in-review 2014. (via responses.db, urn:coll:appomattox-county-year-in-review-2014)</li>
+    <li id="ref3">&ldquo;Appomattox Town Council discusses internet,&rdquo; <i>Times-Virginian</i>, October&nbsp;8, 2020. (via times-virginian-2004-2024.db)</li>
+    <li id="ref4">&ldquo;Train depot renovations revisited by Appomattox Town Council,&rdquo; <i>Times-Virginian</i>, October&nbsp;9, 2020. (via times-virginian-2004-2024.db)</li>
+    <li id="ref5">&ldquo;Iceland&rsquo;s picnic table request reconsidered,&rdquo; <i>Times-Virginian</i>, March&nbsp;24, 2021. (via times-virginian-2004-2024.db)</li>
+    <li id="ref6">&ldquo;Contest under way to design new ACHS logo after University of Arizona flap,&rdquo; <i>Times-Virginian</i>, April&nbsp;2, 2014. (via times-virginian-2004-2024.db)</li>
+    <li id="ref7">&ldquo;Appomattox County School Board selects new logo design,&rdquo; <i>Times-Virginian</i>, July&nbsp;2, 2014. (via responses.db, urn:coll:appomattox-county-high-school-logo-2014)</li>
+    <li id="ref8">&ldquo;Appomattox County High School SkillsUSA Team 3-Peat for State Title,&rdquo; <i>Times-Virginian</i>, May&nbsp;12, 2018. (via times-virginian-2004-2024.db)</li>
+    <li id="ref9">&ldquo;Nathan Simpson Awarded Best Delegation at Model UN,&rdquo; <i>Times-Virginian</i>, November&nbsp;18, 2017. (via responses.db, urn:coll:model-united-nations-2017)</li>
+    <li id="ref10">&ldquo;Appomattox hires part-time IT employee, finalizing Treasurer search,&rdquo; <i>Times-Virginian</i>, June&nbsp;15, 2017. (via responses.db, urn:coll:appomattox-town-council-2017)</li>
+    <li id="ref11">Town of Appomattox Council Minutes, various meetings 2017&ndash;2019. (via county_town_gov_meeting_minutes.db, book&nbsp;5)</li>
+    <li id="ref12">&ldquo;Appomattox council discusses tourism website and eyesore,&rdquo; <i>Times-Virginian</i>, February&nbsp;9, 2023. (via times-virginian-2004-2024.db)</li>
+    <li id="ref13">&ldquo;Nathan Simpson appointed to Economic Development Authority,&rdquo; <i>Times-Virginian</i>, February&nbsp;28, 2019. (via responses.db, urn:coll:appomattox-county-board-of-supervisors-2019)</li>
+    <li id="ref14">&ldquo;Appomattox County Board Appoints Patrick Richardson to EDA,&rdquo; <i>Times-Virginian</i>, August&nbsp;27, 2020. (via responses.db, urn:coll:appomattox-county-appointments-2020)</li>
+    <li id="ref15">&ldquo;Appomattox council members elected,&rdquo; <i>Times-Virginian</i>, May&nbsp;19, 2020. (via responses.db, urn:coll:election-results-2020)</li>
+    <li id="ref16">&ldquo;Physical Development Committee appointments made,&rdquo; <i>Times-Virginian</i>, July&nbsp;20, 2020. (via responses.db, urn:coll:appomattox-mayoral-appointments-2020)</li>
+    <li id="ref17">Town of Appomattox Council Minutes, 2020&ndash;2021. Simpson agreed to fill unexpired Planning Commission term until June&nbsp;30, 2022. (via county_town_gov_meeting_minutes.db)</li>
+    <li id="ref18">&ldquo;Train depot revisted,&rdquo; <i>Times-Virginian</i>, April&nbsp;28, 2021. (via times-virginian-2004-2024.db)</li>
+    <li id="ref19">&ldquo;Train depot resurfaces,&rdquo; <i>Times-Virginian</i>, May&nbsp;31, 2021. (via times-virginian-2004-2024.db)</li>
+    <li id="ref20">Town of Appomattox Council Minutes, 2023&ndash;2024. Train depot RFP for engineering services; Chamber of Commerce space request. (via county_town_gov_meeting_minutes.db)</li>
+    <li id="ref21">&ldquo;Skateboard ordinance adjusted,&rdquo; <i>Times-Virginian</i>, September&nbsp;17, 2020. (via times-virginian-2004-2024.db)</li>
+    <li id="ref22">&ldquo;Appomattox Councilmember Advocates for Staff Salary Reviews,&rdquo; <i>Times-Virginian</i>, November&nbsp;19, 2021. (via responses.db, urn:coll:appomattox-town-business-2021)</li>
+    <li id="ref23">&ldquo;(UPDATED) Appomattox Town Council censures member at Monday&rsquo;s meeting,&rdquo; <i>Times-Virginian</i>, March&nbsp;11, 2024. (via times-virginian-2004-2024.db)</li>
+    <li id="ref24">&ldquo;Appomattox Town Council votes to rescind censure of Simpson; council must complete training on professionalism,&rdquo; <i>Times-Virginian</i>, March&nbsp;20, 2024. (via times-virginian-2004-2024.db)</li>
+    <li id="ref25">&ldquo;Appomattox Town Council to discuss appeal and apology for censure,&rdquo; <i>Times-Virginian</i>, March&nbsp;15, 2024. (via responses.db, urn:coll:appomattox-town-council-2024)</li>
+    <li id="ref26">Nathan A. Simpson elected to Appomattox County Board of Supervisors, Courthouse District, 2025. (User-provided; no database coverage of the 2025 election is available in the newspaper archive, which ends in 2024.)</li>
+    <li id="ref27">&ldquo;Tyrock Construction LLC transfers property to Nathan Archer Simpson,&rdquo; <i>Times-Virginian</i>, January&nbsp;25, 2022. Property transfer record, 0.163 acres, North Avenue Subdivision. (via responses.db, urn:coll:land-transfers-2022)</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

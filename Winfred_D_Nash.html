@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winfred D. Nash</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+<h1>Winfred D. Nash</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<div class="toc">
+<div class="toctitle">Contents</div>
+<ol>
+<li><a href="#early_life_and_education">Early life and education</a></li>
+<li><a href="#career_at_babcock_wilcox_bwxt">Career at Babcock & Wilcox / BWXT</a></li>
+<li><a href="#public_service">Public service</a></li>
+<li><a href="#awards_and_honors">Awards and honors</a></li>
+<li><a href="#business_investments">Business investments</a></li>
+<li><a href="#community_involvement">Community involvement</a></li>
+<li><a href="#personal_life">Personal life</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+</div>
+<p><b>Winfred D. Nash</b> (born c. 1944–1945) is an American nuclear industry executive and civic leader from <a href="https://en.wikipedia.org/wiki/Appomattox_County,_Virginia">Appomattox County, Virginia</a>. He served as President of the Nuclear Operations Division of <a href="https://en.wikipedia.org/wiki/BWX_Technologies">BWX Technologies</a> (BWXT) from 2006 until his retirement in 2011, overseeing consolidated operations across manufacturing facilities in Virginia, Ohio, and Indiana. A lifelong resident of Appomattox County, Nash has been a prominent figure in local economic development, education, and community affairs, serving as a charter member of the Appomattox Industrial Development Authority (now the Economic Development Authority) and as chairman of the Appomattox County School Board.</p>
+<div class="infobox"><table><tr><td></td><td></td></tr><tr><td><b>Born</b></td><td>c. 1944–1945, Appomattox County, Virginia, U.S.</td></tr><tr><td><b>Education</b></td><td>B.S. Electrical Engineering Technology, <a href="https://en.wikipedia.org/wiki/Old_Dominion_University">Old Dominion University</a> (1976); MBA, <a href="https://en.wikipedia.org/wiki/Duke_University">Duke University</a> Fuqua School of Business (1990)</td></tr><tr><td><b>Occupation</b></td><td>Nuclear industry executive</td></tr><tr><td><b>Employer</b></td><td><a href="https://en.wikipedia.org/wiki/BWX_Technologies">BWX Technologies</a> (1966–2011)</td></tr><tr><td><b>Title</b></td><td>President, Nuclear Operations Division (2006–2011)</td></tr><tr><td><b>Spouse</b></td><td>Pat Nash</td></tr><tr><td><b>Children</b></td><td>Wendy Nash Vlissides, Will Nash</td></tr></table></div>
+<h2 id="early_life_and_education">Early life and education</h2>
+<p>Nash was born and raised in Appomattox County, Virginia. He graduated from Appomattox County High School in 1962.<sup>[1]</sup> He earned a Bachelor of Science degree in Electrical Engineering Technology from <a href="https://en.wikipedia.org/wiki/Old_Dominion_University">Old Dominion University</a> in 1976, and later received a Master of Business Administration from <a href="https://en.wikipedia.org/wiki/Duke_University">Duke University</a>'s Fuqua School of Business in 1990.<sup>[1]</sup> He also completed Advanced Executive Management training at <a href="https://en.wikipedia.org/wiki/Northeastern_University">Northeastern University</a>.<sup>[1]</sup></p>
+<p>Nash has said that he chose engineering as a career because of his interest in automated control systems. "I was always interested in how things work," he told the <i>Times-Virginian</i> in 2007.<sup>[1]</sup></p>
+<h2 id="career_at_babcock_wilcox_bwxt">Career at Babcock & Wilcox / BWXT</h2>
+<h3>Early career (1966–2006)</h3>
+<p>Nash began his career in 1966 as an inspector in the Ultrasonic Inspection area of Quality Control within the Nuclear Operations Division of <a href="https://en.wikipedia.org/wiki/Babcock_%26_Wilcox">Babcock & Wilcox</a> (B&W) in Lynchburg, Virginia.<sup>[1]</sup> He subsequently advanced to supervisory positions and later held senior management roles within the company as it was reorganized under <a href="https://en.wikipedia.org/wiki/BWX_Technologies">BWX Technologies</a> (BWXT), a subsidiary of the former B&W enterprise.<sup>[1]</sup></p>
+<h3>President of Nuclear Operations Division (2006–2011)</h3>
+<p>In July 2006, Nash was named President of the BWXT Nuclear Operations Division, a newly consolidated entity encompassing three BWXT-owned manufacturing facilities in Virginia, Ohio, and Indiana.<sup>[1]</sup><sup>[2]</sup> The consolidation brought together the company's nuclear fuel fabrication and naval reactor component operations under a single leadership structure.</p>
+<p>During Nash's tenure as president, the division experienced significant growth. At the time of his retirement, Nash stated that "our business has nearly doubled due to organic growth and vertical integration achieved through strategic acquisitions."<sup>[3]</sup> The division's portfolio included manufacturing nuclear reactor components for the <a href="https://en.wikipedia.org/wiki/United_States_Navy">United States Navy</a>, including work under an $807 million contract for naval nuclear reactor fuel and components.<sup>[4]</sup> Nash also initiated the Lean Six Sigma quality improvement program at B&W Nuclear Operations Group during this period.<sup>[3]</sup></p>
+<h3>Retirement</h3>
+<p>Nash retired from BWXT on April 1, 2011, at approximately age 66. He was succeeded as president by Peyton S. Baker.<sup>[3]</sup> During his 45-year career with the company, Nash rose from an entry-level inspection position to lead one of the nation's primary nuclear operations divisions.</p>
+<h2 id="public_service">Public service</h2>
+<h3>Appomattox County School Board</h3>
+<p>In June 1988, Nash was appointed to a four-year term on the Appomattox County School Board, representing the Southside District.<sup>[5]</sup> He went on to serve on the board for eight years, including a term as chairman.<sup>[1]</sup> Reflecting on his motivation to join the board, Nash said: "I have always been pro-educational. I had two children in school."<sup>[1]</sup></p>
+<h3>Industrial Development Authority / Economic Development Authority</h3>
+<p>Nash is a charter member of the Appomattox Industrial Development Authority (IDA), which was later reorganized as the Economic Development Authority (EDA) of Appomattox County.<sup>[1]</sup> His membership on the authority spans more than two decades of documented service.</p>
+<p>As early as April 2005, Nash was listed as a member of the IDA alongside Chairman Bill Slagle, Wayne Lewis, Walter Hancock, Cecil Wooldridge, Buddy Conner, and Laurie Harris.<sup>[6]</sup> The IDA oversaw the Appomattox Center for Business and Commerce (commonly known as the industrial park), a 485-acre county-owned industrial park on State Route 26.<sup>[6]</sup></p>
+<p>In June 2006, Nash was present when the IDA formally endorsed a proposal to construct a waterline from Campbell County to Appomattox, a project the authority called essential for the county's economic future and water security.<sup>[7]</sup></p>
+<p>Nash was reappointed to the EDA by the Appomattox County Board of Supervisors in December 2010 for a term expiring December 31, 2014,<sup>[8]</sup> and again in January 2015 for a term expiring December 31, 2018.<sup>[9]</sup></p>
+<p>Meeting minutes from 2016 document Nash's active participation in EDA proceedings. At the July 25, 2016, meeting, Nash voted to approve payment of bills including invoices related to the Appomattox Inn and Suites.<sup>[10]</sup> At an August 2016 meeting, Nash voted in favor of authorizing Phase I utilities engineering for the industrial park at a cost of up to $30,000, as well as $15,000 in costs to provide water and sewer service to the DRT project.<sup>[10]</sup> He also joined the unanimous consensus approving a resolution of gratitude to departing Director of Economic Development Jeff Taylor.<sup>[10]</sup> At the September 20, 2016, meeting—where Vice-Chairman Searcy was absent—Nash motioned to nominate Garet Bosiger as temporary chairman.<sup>[10]</sup> Nash also made motions for the authority to enter closed sessions under Virginia Code §2.2-3711 A.3 and A.5 at multiple EDA meetings throughout 2016–2018, dealing with matters related to prospective business negotiations and real property acquisition.<sup>[10]</sup><sup>[11]</sup></p>
+<p>At the January 2018 annual organizational meeting, Nash seconded the nomination of Gary Tanner as Vice-Chairman of the EDA.<sup>[11]</sup></p>
+<h3>Central Virginia Community College Advisory Board</h3>
+<p>Nash served on the Advisory Board of <a href="https://en.wikipedia.org/wiki/Central_Virginia_Community_College">Central Virginia Community College</a> (CVCC) in Lynchburg, Virginia. He resigned from the board effective December 1, 2018, and was replaced by Jeffrey Garrett, who was appointed by the Appomattox County Board of Supervisors to fill Nash's unexpired term through June 30, 2022.<sup>[12]</sup></p>
+<h2 id="awards_and_honors">Awards and honors</h2>
+<p>In 2007, Nash was named a recipient of the <a href="https://en.wikipedia.org/wiki/Virginia_Community_College_System">Virginia Community College System</a> (VCCS) Chancellor's Award for Leadership in Philanthropy, recognizing his contributions to Central Virginia Community College.<sup>[1]</sup><sup>[2]</sup> He was one of 23 recipients honored as "outstanding benefactors" of Virginia's community colleges at a luncheon at the Jefferson Hotel in Richmond on April 25, 2007.<sup>[1]</sup></p>
+<p>VCCS Chancellor Dr. Glenn DuBois praised the honorees, stating: "These leaders know the secret to a better tomorrow. By their work with the VCCS, they're improving their communities, the commonwealth and the nation."<sup>[1]</sup></p>
+<p>Nash expressed gratitude for the recognition: "I was very pleased. The company that I work for is pro-education, supporting our young people and bringing technology to the industry to be competitive for the future."<sup>[1]</sup></p>
+<h2 id="business_investments">Business investments</h2>
+<h3>COJANA LLC and the Appomattox Inn and Suites</h3>
+<p>Nash is one of four investors in COJANA LLC, a private investment group that developed the Appomattox Inn and Suites, the first new-build hotel in the Appomattox area in more than two decades. The other COJANA partners are Bill Jamerson, Phillip Jamerson, and Buddy Conner.<sup>[13]</sup></p>
+<p>Originally envisioned as a Cobblestone-branded hotel, the project was developed independently with financing from Farmers Bank of Appomattox.<sup>[13]</sup> Ground was broken on Old Courthouse Road in March 2015, and the 56-room, three-story hotel—featuring a 150-seat conference center, fitness center, outdoor swimming pool, and Cannons Café—officially opened on March 1, 2016, under the professional management of Marshall Hotels & Resorts.<sup>[13]</sup><sup>[14]</sup></p>
+<p>Willie Craft, then-chairman of the Appomattox County Board of Supervisors, praised the COJANA investors at the groundbreaking: "We applaud the partners of COJANA who have stepped up to the plate to make this a reality. … These efforts will provide a great opportunity for our citizens and visitors, and will contribute a much-needed boost to our local economy."<sup>[13]</sup></p>
+<p>The hotel opened some rooms early in late February 2016 for volunteers and victims of the EF-3 tornado that struck Appomattox County.<sup>[14]</sup></p>
+<h2 id="community_involvement">Community involvement</h2>
+<h3>Central Baptist Church</h3>
+<p>Nash is an active member of Central Baptist Church in the Chap community of Appomattox County.<sup>[1]</sup> When the historic church—formed in 1893—was destroyed by an EF-3 tornado on February 24, 2016, Nash served on the Building Committee alongside Raymond Mullins, Nelson Mann, Arthur Miller, and Billy Moore.<sup>[15]</sup></p>
+<p>Nash was subsequently voted as Project Manager for the church rebuilding effort. He worked closely with Jamerson-Lewis Construction on the design of the new building, which is similar in style to the original structure with the addition of partition walls forming classrooms in the fellowship hall.<sup>[16]</sup> At the dedication ceremony on January 28, 2018, Nash addressed the packed sanctuary of over 120 people, recounting the devastation: "Structural pieces of the church were scattered around the yard. It's humbling to see something you've been associated with your entire life destroyed by a tornado within a matter of seconds."<sup>[16]</sup></p>
+<h3>Aviation</h3>
+<p>Nash is a member of the Airplane Owner's and Pilot's Association (AOPA) and a lifetime member of the National Aviation Hall of Fame Board of Nominations.<sup>[1]</sup></p>
+<h3>Solar energy advocacy</h3>
+<p>In 2024 and 2025, Nash became publicly active in opposing utility-scale solar energy farms in Appomattox County. At an Appomattox County Planning Commission public hearing, Nash, of 2546 Central Church Road, spoke in favor of removing utility-scale solar farms from the A-1 agricultural zoning district and in favor of increased buffer and setback requirements.<sup>[17]</sup></p>
+<p>Nash also appeared before the Planning Commission in a separate session to present concerns regarding the environmental impact of solar panels, surety and liability issues, and the financial impact on future residents of Appomattox County. He discussed the need to address Energy Storage Systems (battery storage) and was joined by Terry Jamerson, who raised concerns about per- and polyfluoroalkyl substances (PFAS) associated with solar panel manufacturing.<sup>[17]</sup></p>
+<p>In January 2024, Nash also presented on solar panel environmental concerns at a public meeting in Fluvanna County, Virginia.<sup>[18]</sup></p>
+<h2 id="personal_life">Personal life</h2>
+<p>Nash resides in Appomattox County, Virginia, at 2546 Central Church Road. He is married to Pat Nash, who is a survivor of both lung cancer (diagnosed December 1999, stage three) and breast cancer (diagnosed January 2007).<sup>[19]</sup> Pat Nash took early retirement from BWXT in 2001 during her cancer treatment and underwent surgery at <a href="https://en.wikipedia.org/wiki/Duke_University_Hospital">Duke University Medical Center</a>.<sup>[19]</sup> Nash himself is a prostate cancer survivor.<sup>[19]</sup></p>
+<p>The couple has two children: daughter Wendy Nash Vlissides and son Will Nash.<sup>[1]</sup><sup>[20]</sup> Their grandson Todd Nash was appointed to the Appomattox County Economic Development Authority in January 2020 for a term running through December 2020.<sup>[21]</sup></p>
+<p>Nash's mother, Myrna Guill Nash (1925–2007), was a member of Central Baptist Church and the County Line Homemaker's Club. His brother, Twyman D. Nash, and sisters Brenda N. Layne and Yvonne N. Carson also reside in the Appomattox area.<sup>[20]</sup></p>
+<h2 id="references">References</h2>
+<h2 id="references">References</h2>
+<div class="reflist">
+<ol>
+<li>"Nash receives award." <i>Times-Virginian</i> (Appomattox, VA), May 23, 2007. Article ID: 22acfbab-074b-5238-a708-b8311590d85a.</li>
+<li>"Nash named." <i>Times-Virginian</i> (Appomattox, VA), April 18, 2007. Article ID: b221b662-9e3f-553c-a7ba-a214ac822256. (Reprinted in "Looking Back" column, April 18, 2012.)</li>
+<li>BWXT Nuclear Operations Division leadership transition announcement, March 2011. As reported in Bloomberg company profile and trade press.</li>
+<li>BWX Technologies Inc. SEC filings and contract announcements, c. 2007–2010.</li>
+<li>"Winfred Nash named to board." <i>Times-Virginian</i> (Appomattox, VA), June 26, 1988. (Referenced in "Looking Back" column, June 26, 2018. Article ID: 2018-0516.)</li>
+<li>"IDA says concrete plant might still locate in industrial park." <i>Times-Virginian</i> (Appomattox, VA), April 27, 2005. Article ID: 53b84245-b0b0-59ad-a3c0-c811b7b322a2.</li>
+<li>"IDA endorses waterline." <i>Times-Virginian</i> (Appomattox, VA), June 21, 2006. Article ID: 3955f7d7-316a-5c15-8ae8-2b1c6685c472.</li>
+<li>Appomattox County Board of Supervisors meeting minutes, December 2010. BOS Minute Book, Volume 23 (corpus 20100104-20120507).</li>
+<li>Appomattox County Board of Supervisors meeting minutes, January 2015. BOS Minute Book, Volume 24 (corpus 20120521-20151207).</li>
+<li>Economic Development Authority of Appomattox County meeting minutes, May–September 2016. EDA Minute Book (corpus: apco_eda_minutes_20162025).</li>
+<li>Economic Development Authority of Appomattox County meeting minutes, January 2018. EDA Minute Book (corpus: apco_eda_minutes_20162025).</li>
+<li>"County OKs appointments." <i>Times-Virginian</i> (Appomattox, VA), December 26, 2018. Article ID: 2018-0052.</li>
+<li>"Appomattox Inn and Suites breaks ground in town." <i>Times-Virginian</i> (Appomattox, VA), March 25, 2015. Article ID: 2015-0089.</li>
+<li>"New Appomattox hotel hosts ribbon-cutting." <i>Times-Virginian</i> (Appomattox, VA), March 23, 2016. Article ID: 2016-0236.</li>
+<li>"Tornado-ravaged Central Baptist Church begins long process of rebuilding." <i>Times-Virginian</i> (Appomattox, VA), April 20, 2016. Article ID: 2016-0072.</li>
+<li>"Central Baptist Church dedication held." <i>Times-Virginian</i> (Appomattox, VA), February 6, 2018. Article ID: 2018-0324.</li>
+<li>Appomattox County Planning Commission meeting minutes, 2024–2025. Planning Commission Minute Book (corpus: apco_planning_commission_minutes_20162025), plates 403–407.</li>
+<li>Fluvanna County Board of Supervisors public meeting, January 2024. Web-published presentation materials.</li>
+<li>"Nash fights battle with cancer." <i>Times-Virginian</i> (Appomattox, VA), May 30, 2007. Article ID: 8ff20ad6-171d-51d5-9bcb-0784ff007428.</li>
+<li>"Myrna Guill Nash" (obituary). <i>Times-Virginian</i> (Appomattox, VA), November 14, 2007. Article ID: 26b024e1-1d79-5adb-ab77-69ae41fbdeeb.</li>
+<li>"Todd Nash appointed to Appomattox EDA." <i>Times-Virginian</i> (Appomattox, VA), January 27, 2020. Article from responses.db, source: runs/2020/2020-0775/article-apxt.html.</li>
+</ol>
+</div>
+</div>
+<div id="apxwiki-nav-bottom" style="border-bottom:none;border-top:1px solid #a7d7f9;margin-top:30px;">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-links">
+      <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Business &amp; Commerce</a>
+      <span class="nav-sep">|</span>
+      <a href="appomattox_solid_waste_history.html">Solid Waste</a>
+      <span class="nav-sep">|</span>
+      <a href="appomattox_county_tax_history.html">Taxation</a>
+      <span class="nav-sep">|</span>
+      <a href="Appomattox_Water_System_History.html">Water System</a>
+      <span class="nav-sep">|</span>
+      <a href="Winfred_D_Nash.html" class="current">Winfred D. Nash</a>
+      <span class="nav-sep">|</span>
+      <a href="Appomattox_County_School_Board_History.html">School Board</a>
+      <span class="nav-sep">|</span>
+      <a href="Samuel_E_Carter.html">Samuel E. Carter</a>
+      <span class="nav-sep">|</span>
+      <a href="Nathan_A_Simpson.html">Nathan A. Simpson</a>
+      <span class="nav-sep">|</span>
+      <a href="Paul_Harvey.html">Paul D. Harvey</a>
+    </div>
+    <div class="nav-prevnext">
+      <a href="Appomattox_Water_System_History.html">&larr; Water System</a>
+    </div>
+  </div>
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

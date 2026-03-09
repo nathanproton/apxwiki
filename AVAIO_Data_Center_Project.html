@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVAIO Data Center Project (2024) — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>AVAIO Data Center Project (2024)</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<div class="infobox">
+  <div class="infobox-title">AVAIO Data Center Project</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Project details</td></tr>
+    <tr><td>Official name</td><td>Appomattox Data Hub</td></tr>
+    <tr><td>Developer</td><td>AVAIO Digital Partners</td></tr>
+    <tr><td>Parent company</td><td>AVAIO Capital</td></tr>
+    <tr><td>Headquarters</td><td>Stamford, Connecticut</td></tr>
+    <tr><td>Managing partner</td><td>Mark McComiskey</td></tr>
+    <tr><td>Type</td><td>Hyperscale data center campus</td></tr>
+    <tr><td>Announced</td><td>December&nbsp;10,&nbsp;2024</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Site and investment</td></tr>
+    <tr><td>Location</td><td><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a></td></tr>
+    <tr><td>Acreage</td><td>452 acres</td></tr>
+    <tr><td>Purchase price</td><td>$4.5&nbsp;million (c.&nbsp;$10,000/acre)</td></tr>
+    <tr><td>Total investment</td><td>$3&nbsp;billion</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Infrastructure</td></tr>
+    <tr><td>Power capacity</td><td>300&nbsp;MW</td></tr>
+    <tr><td>Power suppliers</td><td>CVEC; Dominion Energy</td></tr>
+    <tr><td>Fiber</td><td>Major long-haul fiber lines on site</td></tr>
+    <tr><td>Green power</td><td>Substantial onsite generation planned</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Economic impact</td></tr>
+    <tr><td>Est.&nbsp;tax revenue</td><td>c.&nbsp;$17&nbsp;million/year</td></tr>
+    <tr><td>Construction jobs</td><td>c.&nbsp;1,500 (peak)</td></tr>
+    <tr><td>Permanent jobs</td><td>200&ndash;250</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Timeline</td></tr>
+    <tr><td>EDA negotiations</td><td>c.&nbsp;2023&ndash;2024</td></tr>
+    <tr><td>Agreement signed</td><td>December&nbsp;2024</td></tr>
+    <tr><td>Construction start</td><td>Fall 2025 (planned)</td></tr>
+    <tr><td>Completion target</td><td>c.&nbsp;2027</td></tr>
+    <tr><td>Data center tax levy</td><td>$1.00 per $100 at 80% of initial cost</td></tr>
+  </table>
+</div>
+
+<div class="hatnote">For the broader history of the industrial park where this project is located, see <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a>.</div>
+
+<p>The <b>AVAIO Data Center Project</b>, officially designated the <b>Appomattox Data Hub</b>, is a planned $3&nbsp;billion hyperscale data center campus to be built on 452&nbsp;acres in the <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a> industrial park in Appomattox County, Virginia. The project was announced on December&nbsp;10, 2024, when <b>AVAIO Digital Partners</b>, a Stamford, Connecticut&ndash;based data center developer, disclosed that it had signed a purchase agreement with the Appomattox County Economic Development Authority (EDA) for the site.<sup><a href="#ref1">[1]</a></sup> The agreement followed nearly two years of negotiations between the EDA and AVAIO Digital, during which the company confirmed 300&nbsp;megawatts of electrical power from the Central Virginia Electric Cooperative (CVEC) and Dominion Energy.<sup><a href="#ref2">[2]</a></sup> If completed as proposed, the project would represent the single largest capital investment in Appomattox County history and the most significant economic development event since the county purchased land for the industrial park in the late 1990s.</p>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#background">Background</a>
+      <ol>
+        <li><a href="#industrial_park_site">The industrial park site</a></li>
+        <li><a href="#enabling_infrastructure">Enabling infrastructure</a></li>
+        <li><a href="#early_data_center_interest">Early data center interest</a></li>
+      </ol>
+    </li>
+    <li><a href="#avaio_digital">AVAIO Digital Partners</a></li>
+    <li><a href="#negotiations">Negotiations (2023&ndash;2024)</a></li>
+    <li><a href="#announcement">Public announcement</a></li>
+    <li><a href="#project_details">Project details</a>
+      <ol>
+        <li><a href="#site_and_power">Site, power, and fiber</a></li>
+        <li><a href="#green_power">Green power and sustainability</a></li>
+        <li><a href="#construction_timeline">Construction timeline</a></li>
+      </ol>
+    </li>
+    <li><a href="#economic_impact">Economic impact</a>
+      <ol>
+        <li><a href="#tax_revenue">Tax revenue</a></li>
+        <li><a href="#employment">Employment</a></li>
+      </ol>
+    </li>
+    <li><a href="#reactions">Reactions</a></li>
+    <li><a href="#broader_context">Broader context</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<h2 id="background">Background</h2>
+
+<h3 id="industrial_park_site">The industrial park site</h3>
+
+<p>The data center site occupies the majority of the <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a>, a county-owned industrial park situated along Virginia Route&nbsp;26, north of the Town of Appomattox. The county originally purchased approximately 550&nbsp;acres in the late 1990s to create the park, which was developed over the next two decades with roads, utilities, and infrastructure intended to attract industrial tenants.<sup><a href="#ref3">[3]</a></sup> Despite these investments and periodic interest from manufacturers and other prospects, the 452-acre parcel that would become the AVAIO site remained vacant for roughly a quarter of a century.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h3 id="enabling_infrastructure">Enabling infrastructure</h3>
+
+<p>Several infrastructure developments over the preceding decades made the site attractive for data center use. The construction of the U.S.&nbsp;460 waterline, completed in stages from 2009 onward, brought public water service to the industrial park and the surrounding area.<sup><a href="#ref5">[5]</a></sup> The Mid-Atlantic Broadband Cooperative's Regional Backbone Initiative, presented to local officials in 2005, built a 700-mile fiber-optic network connecting towns, counties, and industrial parks across Southside and Central Virginia, placing major long-haul fiber lines directly atop the industrial park site.<sup><a href="#ref6">[6]</a></sup> The presence of three-phase power from both CVEC and Dominion Energy, combined with the fiber and water infrastructure, gave the site a suite of utilities that few rural Virginia properties could match.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>A 2008 rewrite of the Appomattox County zoning ordinance also proved consequential. County Planner Johnnie Roark presented the revised ordinance to the Board of Supervisors, which split the former single Industrial District into three zones: Low Intensity Industrial (I-1) covering research and development, warehousing, and data centers; High Intensity Industrial (I-2) for manufacturing; and Planned Industrial Park (I-3) for light-to-medium industrial uses in a campus-like setting.<sup><a href="#ref8">[8]</a></sup> The industrial park's zoning under this framework meant that data centers were a by-right permitted use, requiring no conditional use permit, public hearing, or Board of Supervisors vote&mdash;a regulatory feature that AVAIO Digital would later cite as a key advantage.<sup><a href="#ref2">[2]</a></sup> In 2016, the EDA applied for a Virginia Business Ready Sites Program (VBRSP) grant to fund a site characterization assessment for Lot&nbsp;13 in the park, further documenting the site's readiness for development.<sup><a href="#ref9">[9]</a></sup></p>
+
+<h3 id="early_data_center_interest">Early data center interest</h3>
+
+<p>Interest in the site for data center use predated AVAIO's involvement by more than a decade. In August 2012, Appomattox County Economic Development Director Jeff Taylor reported that clients and consultants were visiting the industrial park to explore possible locations for data centers and light manufacturing facilities.<sup><a href="#ref10">[10]</a></sup> None of these early inquiries resulted in a commitment, but they demonstrated that the site's combination of fiber connectivity, power availability, and zoning was already drawing attention from the data center industry.</p>
+
+<h2 id="avaio_digital">AVAIO Digital Partners</h2>
+
+<p><b>AVAIO Digital Partners</b> is a data center development company managed by <b>AVAIO Capital</b>, a private infrastructure investment firm founded in 2016 by Mark McComiskey and Anthony Gordon as the private infrastructure investment arm of AECOM, one of the world's largest engineering companies. AVAIO Capital was spun out as an independent, partner-owned business in 2019.<sup><a href="#ref11">[11]</a></sup> AVAIO Digital pursues build-to-suit development and construction of sustainable hyperscale data centers in the Americas and Europe, and its senior team has experience developing, building, and financing more than 700&nbsp;MW of data center capacity and over seven gigawatts of power and energy projects worldwide.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>The company is funded by a $375&nbsp;million equity commitment from a large investment manager. As of late 2024, AVAIO Digital had secured more than 1.2&nbsp;gigawatts of power from utilities at campuses in Northern California, Virginia, Arkansas, and Mississippi, and was planning to build out this capacity with approximately 600&nbsp;MW available by 2027. The Appomattox project is one of three AVAIO developments in Virginia; the other two are located in Caroline County.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref13">[13]</a></sup></p>
+
+<h2 id="negotiations">Negotiations (2023&ndash;2024)</h2>
+
+<p>The EDA began working with AVAIO Digital in approximately early 2023, and negotiations continued for nearly two years before the public announcement.<sup><a href="#ref2">[2]</a></sup> EDA Chairman Garet Bosiger, a longtime Appomattox County civic figure who had served on the Region&nbsp;2000 Economic Development Council and previously been a supervisor in manufacturing at the Thomasville Furniture plant, led the EDA's efforts.<sup><a href="#ref14">[14]</a></sup><sup><a href="#ref15">[15]</a></sup> According to Cardinal News, local tech entrepreneur Nathan Simpson facilitated introductions between the EDA and AVAIO Digital.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>Bosiger later described the contrast between Appomattox County's regulatory environment and what AVAIO was accustomed to in other jurisdictions. Because the industrial park was already zoned to permit data centers by right, the project required no rezoning, no conditional use permit, and no public hearing before the Board of Supervisors.<sup><a href="#ref2">[2]</a></sup> Bosiger told the <i>Times-Virginian</i> that AVAIO representatives were consistently surprised at how cooperative the county was compared to states like California, where multiple agencies had to approve every step of a project.<sup><a href="#ref2">[2]</a></sup></p>
+
+<h2 id="announcement">Public announcement</h2>
+
+<p>AVAIO Digital publicly announced the agreement on December&nbsp;10, 2024, through a press release issued from its Stamford, Connecticut headquarters. The release confirmed that the company had signed a purchase agreement with the EDA for 452&nbsp;acres in the industrial park at a price of approximately $4.5&nbsp;million, or roughly $10,000 per acre.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref4">[4]</a></sup> Virginia Governor Glenn Youngkin endorsed the project in the same release, describing it as an example of expanding the state's data center industry beyond its traditional hubs in Northern Virginia.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>The <i>Times-Virginian</i> ran the company's press release in full on December&nbsp;10 and followed up with a more detailed local story on December&nbsp;18 that included an interview with Bosiger.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup> The project was also included in the newspaper's year-end review of positive stories from 2024.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h2 id="project_details">Project details</h2>
+
+<h3 id="site_and_power">Site, power, and fiber</h3>
+
+<p>The 452-acre campus sits atop major long-haul fiber-optic lines with direct links to major data hubs, a legacy of the Mid-Atlantic Broadband Cooperative's infrastructure investments in the mid-2000s.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref6">[6]</a></sup> AVAIO Digital confirmed 300&nbsp;MW of electrical power from two suppliers: the Central Virginia Electric Cooperative (CVEC) and Dominion Energy. The site was described as cleared and ready for rapid construction at the time of the announcement.<sup><a href="#ref1">[1]</a></sup></p>
+
+<h3 id="green_power">Green power and sustainability</h3>
+
+<p>AVAIO Digital emphasized that the Appomattox Data Hub would include substantial onsite green power generation, consistent with the company's broader focus on sustainable data center infrastructure. The press release described AVAIO Digital's focus on green power generation, sustainable practices, and innovative design as positioning the company as a leader in next-generation data center infrastructure.<sup><a href="#ref1">[1]</a></sup> Specific details about the type or capacity of onsite renewable energy generation had not been disclosed as of the announcement date.</p>
+
+<h3 id="construction_timeline">Construction timeline</h3>
+
+<p>According to reports at the time of the announcement, construction was expected to begin in fall 2025, with completion targeted approximately two years later, placing the initial operational date around 2027.<sup><a href="#ref4">[4]</a></sup> This timeline aligned with AVAIO Digital's broader corporate target of having nearly 600&nbsp;MW of capacity built out by 2027 across its portfolio of projects.<sup><a href="#ref1">[1]</a></sup> A June 2025 Appomattox County Board of Supervisors meeting included a note from the County Administrator that the EDA had met with an AVAIO team member about the progress of data center construction, suggesting the project was advancing.<sup><a href="#ref17">[17]</a></sup></p>
+
+<h2 id="economic_impact">Economic impact</h2>
+
+<h3 id="tax_revenue">Tax revenue</h3>
+
+<p>EDA Chairman Bosiger publicly estimated that the data center would generate approximately $17&nbsp;million per year in tax revenue for Appomattox County, based on figures from a Virginia Joint Legislative Audit and Review Commission (JLARC) study of data center economics.<sup><a href="#ref18">[18]</a></sup> The Appomattox County Board of Supervisors had established a specific data center personal property tax levy of $1.00 per $100 of assessed value at 80&nbsp;percent of initial cost, a rate substantially lower than the county's general personal property tax rate of $3.35 per $100&mdash;a differential that is standard across Virginia localities seeking to attract data center investment.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>If realized, $17&nbsp;million in annual tax revenue would represent a transformative increase for the county. For context, the entire Appomattox County consolidated budget (county, schools, and social services) typically hovered around $50&ndash;60&nbsp;million annually in recent years. Bosiger indicated the revenue would go toward schools, infrastructure improvements, and potentially lowering residential tax rates.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h3 id="employment">Employment</h3>
+
+<p>Bosiger estimated that the data center would employ between 200 and 250 permanent workers in positions he characterized as well-paying. He cited the JLARC study as showing that a typical data center employs approximately 1,500 workers during peak construction phases.<sup><a href="#ref4">[4]</a></sup><sup><a href="#ref18">[18]</a></sup> The JLARC study also indicated that a 250,000-square-foot data center might employ about 50 full-time workers, though the Appomattox campus&mdash;at 452&nbsp;acres&mdash;was expected to be considerably larger than a single-building facility.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="reactions">Reactions</h2>
+
+<p>Governor Youngkin framed the project as part of Virginia's strategy to disperse data center development beyond the heavily concentrated Northern Virginia corridor. He stated that the Appomattox project exemplified the state's approach of expanding its data center industry to bring high-tech jobs and investment to communities across the Commonwealth.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Bosiger, who had helped start up the Thomasville Furniture plant in Appomattox in 1974 and had witnessed its 2011 closure and the ensuing economic void, placed the AVAIO announcement in the context of the county's long search for a major employer to replace manufacturing. He told the <i>Times-Virginian</i> that he believed the deal was transformative precisely because the nature of the economy had changed since the manufacturing era. He noted that data centers were the newest and most rapidly growing sector of the technology economy, and that Virginia was becoming a global hub for data center investment due to the Youngkin administration's promotion of the industry and the state's favorable tax and regulatory climate.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>The project was notable as the second major data center announcement in rural Southside Virginia, following Pittsylvania County's approval of a facility in Ringgold.<sup><a href="#ref4">[4]</a></sup> Together, the two projects signaled a potential shift in Virginia's data center geography away from its historic concentration in Loudoun County and the Northern Virginia corridor.</p>
+
+<h2 id="broader_context">Broader context</h2>
+
+<p>The Appomattox Data Hub is part of a broader national expansion of data center infrastructure driven by increasing demand for cloud computing and artificial intelligence workloads. AVAIO Digital holds a portfolio of hyperscale projects across the United States and Western Europe, with campuses in Northern California, Virginia, Arkansas, Mississippi, and Madrid, Spain. The company reported total land holdings of approximately 1,600&nbsp;acres across its campuses and a pipeline totaling 3.7&nbsp;gigawatts of power capacity as of early 2026.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>For Appomattox County&mdash;a rural locality of approximately 16,000 residents whose economy had historically depended on agriculture, furniture manufacturing, and small-scale industry&mdash;the $3&nbsp;billion investment represented an order-of-magnitude change in the county's economic trajectory. The county had never fully recovered economically after the closure of the Thomasville Furniture factory in 2011, which had been the largest private employer in the industrial park.<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref4">[4]</a></sup> The AVAIO project promised to repurpose the long-vacant industrial park acreage for a use that would have been difficult to imagine when the county first purchased the land in the late 1990s.</p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>Late 1990s</td><td>Appomattox County purchases c.&nbsp;550 acres for the industrial park</td></tr>
+  <tr><td>2005</td><td>Mid-Atlantic Broadband Cooperative presents Regional Backbone Initiative; fiber-optic lines are routed through the industrial park</td></tr>
+  <tr><td>c.&nbsp;2008</td><td>County zoning ordinance rewrite creates I-1 (Low Intensity Industrial) zone permitting data centers by right</td></tr>
+  <tr><td>Aug 2012</td><td>Economic Development Director Jeff Taylor reports data center&ndash;related visits to the industrial park</td></tr>
+  <tr><td>Sep 2016</td><td>EDA applies for VBRSP site characterization grant for Lot&nbsp;13</td></tr>
+  <tr><td>c.&nbsp;Early 2023</td><td>EDA begins negotiations with AVAIO Digital Partners</td></tr>
+  <tr><td>Dec 10, 2024</td><td>AVAIO Digital publicly announces $3&nbsp;billion data center agreement</td></tr>
+  <tr><td>Dec 18, 2024</td><td><i>Times-Virginian</i> publishes detailed local coverage with EDA Chairman Bosiger interview</td></tr>
+  <tr><td>Apr 30, 2025</td><td>Board of Supervisors adopts FY2025 tax levy including data center personal property tax rate</td></tr>
+  <tr><td>Jun 2025</td><td>County Administrator reports EDA meeting with AVAIO team member on construction progress</td></tr>
+  <tr><td>Fall 2025</td><td>Construction expected to begin</td></tr>
+  <tr><td>c.&nbsp;2027</td><td>Targeted completion and initial operations</td></tr>
+</table>
+
+<h2 id="see_also">See also</h2>
+
+<p><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a> &mdash; full history of the industrial park and the EDA</p>
+<p><a href="appomattox_county_tax_history.html">Taxation in Appomattox County, Virginia</a> &mdash; history of county tax rates, including the data center levy</p>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"AVAIO Digital to build $3 billion data center campus on 452 acres in Appomattox County," <i>Times-Virginian</i>, December&nbsp;10, 2024 (AVAIO Digital press release). Via times-virginian-2004-2024.db, article&nbsp;2024-0177.</li>
+    <li id="ref2">"Appomattox EDA chairman discusses industrial park data center agreement," <i>Times-Virginian</i>, December&nbsp;18, 2024. Via times-virginian-2004-2024.db.</li>
+    <li id="ref3">"Appomattox County strikes deal for data center," <i>Cardinal News</i>, December&nbsp;11, 2024.</li>
+    <li id="ref4">Ibid. (Cardinal News, details on land price, 25-year vacancy, Nathan Simpson introduction, and employment estimates).</li>
+    <li id="ref5">For the waterline history, see <a href="Appomattox_Water_System_History.html">Town of Appomattox Water System</a> (ApxWiki).</li>
+    <li id="ref6">"Regional Backbone Initiative presented to local officials," responses.db item, July&nbsp;26, 2005. Mid-Atlantic Broadband Cooperative's 700-mile fiber initiative connecting industrial parks.</li>
+    <li id="ref7">"Appomattox Industrial Park infrastructure key to attracting XNG," responses.db item, October&nbsp;16, 2015. Infrastructure cited: 460 waterline, sewer, three-phase power, and fiber optics.</li>
+    <li id="ref8">Board of Supervisors minutes, Book&nbsp;22, Plate&nbsp;579 (corpus 20070604&ndash;20091221). Johnnie Roark presents revised zoning ordinance with I-1 (data centers), I-2, and I-3 industrial zones. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref9">EDA application for Virginia Business Ready Sites Program (VBRSP) site characterization grant, September&nbsp;1, 2016. Via county-board-eda-planning-commission-2010-2020.db.</li>
+    <li id="ref10">"Numerous inquiries being made for closed Thomasville building," <i>Times-Virginian</i>, August&nbsp;15, 2012. Jeff Taylor reports data center and light manufacturing visits to industrial park. Via times-virginian-2004-2024.db.</li>
+    <li id="ref11">AVAIO Capital company background. AVAIO Capital was founded in 2016 by Mark McComiskey and Anthony Gordon as the infrastructure investment arm of AECOM; spun out as independent firm in 2019. Via avaiodigital.com and industry sources.</li>
+    <li id="ref12">AVAIO Digital Partners company overview, avaiodigital.com (accessed March 2026). Senior team: 700+ MW data center experience; 7+ GW power/energy projects; campuses in California, Virginia, Arkansas, Mississippi, and Spain.</li>
+    <li id="ref13">"Developer plans $3B data center in Appomattox County," <i>Virginia Business</i>, December 2024.</li>
+    <li id="ref14">"Appointments Made to County Committees," responses.db item, February&nbsp;22, 2012. Garet Bosiger appointed to Region 2000 Economic Development Council.</li>
+    <li id="ref15">"EDA chairman discusses two-year process for AVAIO Digital agreement," responses.db item, December&nbsp;18, 2024. Bosiger's reference to his experience starting up Thomasville Furniture in 1974.</li>
+    <li id="ref16">"2024 'Good News' Year in Review," <i>Times-Virginian</i>, December&nbsp;31, 2024. Via times-virginian-2004-2024.db.</li>
+    <li id="ref17">Board of Supervisors minutes, Book&nbsp;26, Plate&nbsp;824 (corpus 20190916&ndash;20251007). County Administrator's report notes EDA meeting with AVAIO team member on data center construction progress. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref18">"New $3 billion data center in Appomattox County to boost local economy," WSET-TV (ABC&nbsp;13), December 2024. Bosiger estimates $17&nbsp;million/year tax revenue; cites JLARC data center employment study.</li>
+    <li id="ref19">Board of Supervisors minutes, Book&nbsp;26, Plate&nbsp;810 (corpus 20190916&ndash;20251007). FY2025 Tax Levy Resolution adopted April&nbsp;30, 2025: data center tax levy of $1.00 per $100 at 80% of initial cost. Via county_town_gov_meeting_minutes.db.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

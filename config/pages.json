@@ -1,0 +1,991 @@
+{
+  "_comment": "ApxWiki page registry. Each entry tracks a published article or stub.",
+  "pages": [
+    {
+      "filename": "Appomattox_Center_for_Business_and_Commerce_History.html",
+      "title": "Appomattox Center for Business and Commerce",
+      "description": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 50906
+    },
+    {
+      "filename": "Appomattox_County_Courthouse_History.html",
+      "title": "Appomattox County Courthouse",
+      "description": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 41026
+    },
+    {
+      "filename": "Appomattox_County_High_School.html",
+      "title": "Appomattox County High School",
+      "description": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.",
+      "type": "organization",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 70443
+    },
+    {
+      "filename": "Appomattox_County_School_Board_History.html",
+      "title": "Appomattox County School Board History",
+      "description": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 61684
+    },
+    {
+      "filename": "Appomattox_Volunteer_Fire_Department.html",
+      "title": "Appomattox Volunteer Fire Department",
+      "description": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.",
+      "type": "organization",
+      "status": "published",
+      "date_created": "2026-03-04",
+      "content_length": 29665,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Appomattox_Water_System_History.html",
+      "title": "Town of Appomattox Water System",
+      "description": "History of the town water system from wells to the county pipeline, 1990–2024.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 80138
+    },
+    {
+      "filename": "appomattox_county_tax_history.html",
+      "title": "Taxation in Appomattox County, Virginia",
+      "description": "History of real estate and personal property taxes, reassessments, and related relief programs.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 89229
+    },
+    {
+      "filename": "appomattox_solid_waste_history.html",
+      "title": "Solid Waste Management in Appomattox County, Virginia",
+      "description": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 79179
+    },
+    {
+      "filename": "Nathan_A_Simpson.html",
+      "title": "Nathan A. Simpson",
+      "description": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 30654
+    },
+    {
+      "filename": "Paul_Harvey.html",
+      "title": "Paul D. Harvey",
+      "description": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 36284
+    },
+    {
+      "filename": "Samuel_E_Carter.html",
+      "title": "Samuel E. \"Sammy\" Carter",
+      "description": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 35281
+    },
+    {
+      "filename": "Winfred_D_Nash.html",
+      "title": "Winfred D. Nash",
+      "description": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-02-24",
+      "content_length": 27307
+    },
+    {
+      "filename": "William_E_Jamerson.html",
+      "title": "W.E. \"Bill\" Jamerson",
+      "description": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-03-07",
+      "content_length": 35165,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Appomattox_Walmart.html",
+      "title": "Appomattox Walmart",
+      "description": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.",
+      "type": "notable-event",
+      "status": "published",
+      "date_created": "2026-03-07",
+      "content_length": 55140,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Historic_Appomattox_Railroad_Festival.html",
+      "title": "Historic Appomattox Railroad Festival",
+      "description": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.",
+      "type": "notable-event",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 50005,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "AVAIO_Data_Center_Project.html",
+      "title": "AVAIO Data Center Project (2024)",
+      "description": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.",
+      "type": "notable-event",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 33662,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Mary_Lou_Spiggle.html",
+      "title": "Mary Lou Spiggle",
+      "description": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 37239,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Alfred_L_Jones_III.html",
+      "title": "Alfred \"Al\" Jones III",
+      "description": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 38469,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "CVCC_Appomattox_Center.html",
+      "title": "CVCC Appomattox Center",
+      "description": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.",
+      "type": "organization",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 52507,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html",
+      "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)",
+      "description": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.",
+      "type": "notable-event",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 48789,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html",
+      "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)",
+      "description": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 53109,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "First draft — research drawn from the <i>Times-Virginian</i> archive (2004–2018), Appomattox Town Council meeting minutes (2002–2012), and responses.db. Consolidation project details post-2018 are incomplete."
+        }
+      ]
+    }
+  ],
+  "stubs": [
+    {
+      "filename": "Gary_Tanner.html",
+      "title": "Gary Tanner",
+      "description": "Appomattox County Board of Supervisors member and longtime local government figure.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "John_Wilson.html",
+      "title": "John Wilson",
+      "description": "Board of Supervisors member and recurring elections candidate.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Tom_Conrad.html",
+      "title": "Tom Conrad",
+      "description": "County government official with sustained coverage in local-government, education, transportation, and elections records.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "David_Garrett.html",
+      "title": "David Garrett",
+      "description": "Board of Supervisors member involved in utilities, transportation, and environmental issues.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Willie_Craft.html",
+      "title": "Willie Craft",
+      "description": "Local government official and elections candidate.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Aileen_Ferguson.html",
+      "title": "Aileen Ferguson",
+      "description": "County official prominently featured in local-government, utilities, education, transportation, and business records.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Dorinda_Grasty.html",
+      "title": "Dorinda Grasty",
+      "description": "County administrator or educator with appearances in local-government, education, transportation, utilities, and events records.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Annette_Bennett.html",
+      "title": "Annette Bennett",
+      "description": "Education and local-government figure connected to Appomattox County Public Schools and community events.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Richard_Conner.html",
+      "title": "Richard C. Conner",
+      "description": "Mayor of the Town of Appomattox, re-elected in November 2024.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Robert_G_Mitchell.html",
+      "title": "Robert G. \"Bob\" Mitchell",
+      "description": "Mayor of Pamplin City from 2000 to 2014; died January 6, 2021.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Earle_Patterson_Robinson.html",
+      "title": "Earle Patterson Robinson",
+      "description": "Former member of Appomattox Town Council and vice mayor; died February 2018.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Don_Jimison.html",
+      "title": "Don Franklin Jimison",
+      "description": "Basketball coach, teacher, and school principal in Appomattox County; died January 2017.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Kenny_Scott.html",
+      "title": "Kenny Scott",
+      "description": "ACHS coach and athletics figure; influential in Appomattox Raiders programs.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Christopher_Bryan_Speight.html",
+      "title": "Christopher Bryan Speight",
+      "description": "Appomattox native convicted of a mass shooting on January 19, 2010, killing eight people.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "2010_Appomattox_Mass_Shooting.html",
+      "title": "2010 Appomattox Mass Shooting",
+      "description": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "2016_Appomattox_Tornado.html",
+      "title": "2016 Appomattox County Tornado",
+      "description": "Tornado that struck Appomattox County on February 24, 2016.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_Civil_War_Sesquicentennial.html",
+      "title": "Appomattox Civil War Sesquicentennial (2015)",
+      "description": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "AVAIO_Data_Center_Project.html",
+      "title": "AVAIO Data Center Project (2024)",
+      "description": "A proposed $3 billion data center development by AVAIO Digital Infrastructure announced in late 2024.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_Walmart.html",
+      "title": "Appomattox Walmart",
+      "description": "The arrival of Walmart in Appomattox, generating sustained community debate.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Wilbuns_Supermarket_Closure.html",
+      "title": "Wilbun's Supermarket Closure (2010)",
+      "description": "The closure of Wilbun's Supermarket, a longstanding local grocery institution.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "2008_Appomattox_Pipeline_Incident.html",
+      "title": "2008 Appomattox Pipeline Incident",
+      "description": "A pipeline-related incident in fall 2008 that generated significant local reporting.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "High_Bridge_Trail_State_Park.html",
+      "title": "High Bridge Trail State Park",
+      "description": "The conversion of a former rail corridor into a multi-use trail through Appomattox, Prince Edward, and Farmville.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Historic_Appomattox_Railroad_Festival.html",
+      "title": "Historic Appomattox Railroad Festival",
+      "description": "Annual festival celebrating the county's railroad heritage.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Pamplin_Sewer_Project.html",
+      "title": "Pamplin City Sewer Project (2010)",
+      "description": "Infrastructure project to bring public sewer service to Pamplin City.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_County_Broadband_History.html",
+      "title": "Broadband and Internet Infrastructure in Appomattox County",
+      "description": "History of efforts to expand high-speed internet access in Appomattox County.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Route_460_Appomattox_History.html",
+      "title": "U.S. Route 460 and Appomattox County",
+      "description": "History of the Route 460 corridor's role in shaping commerce, infrastructure, and development.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Appomattox_County_Jail_History.html",
+      "title": "Appomattox County Jail and Criminal Justice System",
+      "description": "History of the county jail, regional jail proposals, law enforcement operations, and criminal justice policy.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Appomattox_County_Zoning_History.html",
+      "title": "Zoning and Land Use in Appomattox County",
+      "description": "History of zoning ordinances, land use planning, and development regulations.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Appomattox_County_Parks_and_Recreation.html",
+      "title": "Parks and Recreation in Appomattox County",
+      "description": "History of county and town recreational facilities, parks programs, sports leagues, and open-space initiatives.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Appomattox_County_Budget_History.html",
+      "title": "Appomattox County Budget History",
+      "description": "A chronological overview of annual budget cycles, revenue sources, tax rate decisions, and major expenditures.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Town_of_Pamplin.html",
+      "title": "Town of Pamplin",
+      "description": "History of Pamplin City, a distinct incorporated community in western Appomattox County.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Main_Street_Appomattox.html",
+      "title": "Main Street Appomattox — Downtown Revitalization",
+      "description": "History of downtown revitalization efforts along Main Street in the Town of Appomattox.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Animal_Welfare_Appomattox.html",
+      "title": "Animal Welfare in Appomattox County",
+      "description": "History of the county animal shelter, AWAG, the AWAG Shuttle program, and animal control policy.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Appomattox_County_Confederate_History.html",
+      "title": "Confederate Monuments and Heritage in Appomattox County",
+      "description": "History of Confederate monuments, heritage debates, and Civil War memory in county politics.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "Appomattox_County_Elections_History.html",
+      "title": "Appomattox County Elections History",
+      "description": "Overview of local election cycles for Board of Supervisors, Town Council, School Board, and constitutional offices.",
+      "type": "government-topic-history",
+      "category": "government"
+    },
+    {
+      "filename": "J_Robert_Jamerson_Memorial_Library.html",
+      "title": "J. Robert Jamerson Memorial Library",
+      "description": "The Appomattox County public library system's main branch.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_County_Rescue_Squad.html",
+      "title": "Appomattox County Rescue Squad",
+      "description": "The county volunteer EMS organization providing emergency medical services.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_County_Sheriff_Department.html",
+      "title": "Appomattox County Sheriff's Office",
+      "description": "History of the county's elected sheriff office, leadership, and notable cases.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_County_Chamber_of_Commerce.html",
+      "title": "Appomattox County Chamber of Commerce",
+      "description": "History of the county Chamber of Commerce and its role in promoting local business and tourism.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Court_House_National_Historical_Park.html",
+      "title": "Appomattox Court House National Historical Park",
+      "description": "The National Park Service site commemorating the April 9, 1865 Confederate surrender.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Christian_Academy.html",
+      "title": "Appomattox Christian Academy",
+      "description": "Private Christian school in Appomattox County.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Cornerstone_Christian_Academy.html",
+      "title": "Cornerstone Christian Academy",
+      "description": "Private classical Christian school in Appomattox County.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Youth_Sports.html",
+      "title": "Appomattox Youth Sports",
+      "description": "The county's primary youth recreational league organization.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Carver_Price_Legacy_Museum.html",
+      "title": "Carver-Price Legacy Museum",
+      "description": "Museum preserving the history and contributions of the African-American community.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "BWXT_Appomattox.html",
+      "title": "BWX Technologies (BWXT) in Appomattox County",
+      "description": "History of the BWXT nuclear components manufacturing presence in Appomattox County.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Holiday_Lake_4H_Center.html",
+      "title": "Holiday Lake 4-H Educational Center",
+      "description": "The Virginia 4-H youth camp and educational center located in Appomattox County.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Region_2000_Service_Authority.html",
+      "title": "Region 2000 Services Authority",
+      "description": "The regional solid waste and environmental services authority serving Appomattox and surrounding counties.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_County_Public_Schools.html",
+      "title": "Appomattox County Public Schools",
+      "description": "The full public school system, encompassing the elementary, middle, and high school campuses.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Courthouse_Theatre.html",
+      "title": "Appomattox Courthouse Theatre",
+      "description": "The county's community theater organization.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "CVCC_Appomattox_Center.html",
+      "title": "CVCC Appomattox Center",
+      "description": "Central Virginia Community College's local satellite campus.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Concord_Volunteer_Fire_Department.html",
+      "title": "Concord Volunteer Fire Department",
+      "description": "Volunteer fire department serving the Concord community in Appomattox County.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Gleaning_for_the_World.html",
+      "title": "Gleaning for the World",
+      "description": "Appomattox-based nonprofit humanitarian organization.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Museum_of_the_Confederacy_Appomattox.html",
+      "title": "Museum of the Confederacy — Appomattox",
+      "description": "The Appomattox branch of the Museum of the Confederacy (now the American Civil War Museum).",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Community_Center.html",
+      "title": "Appomattox Community Center",
+      "description": "Multi-use community facility serving as a hub for county events, recreation programs, and government functions.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Robert_E_Lee_Soil_Water_Conservation.html",
+      "title": "Robert E. Lee Soil and Water Conservation District",
+      "description": "The local conservation district serving Appomattox County with agricultural and environmental programs.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Watkins_M_Abbitt_Jr.html",
+      "title": "Watkins M. Abbitt Jr.",
+      "description": "Appomattox attorney, state legislator, and civic leader for whom Watkins M. Abbitt Memorial Park in the Town of Appomattox is named.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Tom_Perriello.html",
+      "title": "Tom Perriello",
+      "description": "U.S. Representative for Virginia's 5th Congressional District (2009–2011), whose town hall meetings and Affordable Care Act vote generated sustained local coverage in Appomattox County.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Bill_Gillespie.html",
+      "title": "Bill Gillespie",
+      "description": "Town Manager of Appomattox who oversaw major infrastructure projects including the Wastewater Improvement Project groundbreaking and U.S. 460 waterline coordination.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Matt_Fariss.html",
+      "title": "Matt Fariss",
+      "description": "Virginia House of Delegates member representing the Appomattox area, later charged with hit-and-run and firearm violations; prolific constituent communicator during the COVID-19 pandemic.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Doug_Smith.html",
+      "title": "Doug Smith",
+      "description": "Longtime Appomattox County High School football head coach who built the Raiders into a perennial playoff contender and delivered state championship seasons.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Darrel_Puckett.html",
+      "title": "Darrel Puckett",
+      "description": "Appomattox County Commonwealth's Attorney responsible for prosecuting major criminal cases including drug offenses and homicides across numerous court terms.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Ronnie_Spiggle.html",
+      "title": "Ronnie Spiggle",
+      "description": "Appomattox community leader, longtime Railroad Festival supporter, and husband of Town Council member Mary Lou Spiggle; member of the Appomattox High School Class of 1964.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Joe_Caruso.html",
+      "title": "Joe Caruso",
+      "description": "Appomattox County High School baseball head coach for 23 years, whose program won multiple district and regional titles; succeeded by Jamie Terry in 2024.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Annie_Terry.html",
+      "title": "Annie Terry",
+      "description": "ACHS girls basketball player turned coach who later led Heritage High School's girls basketball program after a decorated playing career at Appomattox.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Gary_Ferguson.html",
+      "title": "Gary Ferguson",
+      "description": "Appomattox County High School softball coach with extensive tenure in the ACHS athletics program; also served as girls basketball coach before being dismissed from that role.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Brantley_Shields.html",
+      "title": "Brantley Shields",
+      "description": "Appomattox County High School boys basketball head coach who led the Raiders program before resigning; among the most-covered ACHS coaches in the Times-Virginian.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Les_Fleet.html",
+      "title": "Les Fleet",
+      "description": "Appomattox County government attorney and official involved in social services administration and county legal matters, including the dissolution of the local social services board.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Anne_Dixon.html",
+      "title": "Anne Dixon",
+      "description": "Appomattox tourism advocate and civic organizer who served on the local tourism committee and helped form the Appomattox 1865 Foundation in support of the National Historical Park.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Geoffrey_Hubler.html",
+      "title": "Rev. Dr. Geoffrey Hubler",
+      "description": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from its early years until his retirement; ordained minister and educator.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Walter_Krug.html",
+      "title": "Walter Krug",
+      "description": "Appomattox County Public Schools superintendent who succeeded Shirley Eye and oversaw significant curricular and administrative changes in the school division.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Raschad_Kelso.html",
+      "title": "Raschad Kelso",
+      "description": "Appomattox County High School boys basketball head coach who guided the Raiders program through a period of rebuilding and improved competitive standing.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "Bobby_Waddell.html",
+      "title": "Bobby Waddell",
+      "description": "Appomattox County School Board member representing the Piney Mountain District; recognized as Virginia School Boards Association Regional Member of the Year.",
+      "type": "biography",
+      "category": "biographies"
+    },
+    {
+      "filename": "American_Legion_Post_104.html",
+      "title": "American Legion Post 104",
+      "description": "The Appomattox County post of the American Legion, one of the most frequently mentioned civic organizations in local records; hosts annual Veterans Day ceremonies, Memorial Day observances, and community fundraisers.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Lions_Club.html",
+      "title": "Appomattox Lions Club",
+      "description": "The local chapter of Lions Clubs International, known for community vision screenings, holiday fundraisers, and longstanding civic service in Appomattox County.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Falling_River_Frogs.html",
+      "title": "Falling River Frogs Swim Team",
+      "description": "Appomattox County's competitive youth swimming club, fielding relay and individual swimmers in regional competitions and cultivating aquatics participation across the county.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_FFA.html",
+      "title": "Appomattox FFA Chapter",
+      "description": "The Future Farmers of America chapter at Appomattox County High School, active in agricultural education, community service, and state and national FFA competitions including employment skills and small engine events.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_1865_Foundation.html",
+      "title": "Appomattox 1865 Foundation",
+      "description": "Nonprofit organization formed to support Appomattox Court House National Historical Park through fundraising, programming, and preservation advocacy, including a Civil War-era Santa event and educational initiatives.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_County_Historical_Society.html",
+      "title": "Appomattox County Historical Society",
+      "description": "Organization dedicated to preserving and promoting local history, including the Clover Hill Village site, educational programs for schools, and stewardship of county heritage collections.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_County_Ministerial_Association.html",
+      "title": "Appomattox County Ministerial Association",
+      "description": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Liberty_Baptist_Church.html",
+      "title": "Liberty Baptist Church",
+      "description": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Memorial_United_Methodist_Church.html",
+      "title": "Memorial United Methodist Church",
+      "description": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Good_Samaritan_Clothing_Exchange.html",
+      "title": "Good Samaritan Clothing Exchange",
+      "description": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Spout_Spring_Ruritan_Club.html",
+      "title": "Spout Spring Ruritan Club",
+      "description": "Rural civic organization serving the Spout Spring community of Appomattox County, active in local fundraising, community events, and neighborhood improvement since the mid-twentieth century.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Moose_Lodge.html",
+      "title": "Appomattox Moose Lodge",
+      "description": "The local chapter of Moyal Order of Moose, a fraternal and charitable organization serving Appomattox County members through community events, fundraisers, and social programming.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Falling_River_Country_Club.html",
+      "title": "Falling River Country Club",
+      "description": "Private golf and recreational club in Appomattox County, venue for ACHS golf matches, district tournaments, and community events; among the most-mentioned recreational facilities in local coverage.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Middle_School.html",
+      "title": "Appomattox Middle School",
+      "description": "The county's public middle school serving grades 6–8, co-located on the school campus and home to Raiders athletics at the junior high level, honor choirs, STEM programs, and spelling bee competition.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Primary_School.html",
+      "title": "Appomattox Primary School",
+      "description": "Public elementary school serving Appomattox County's youngest students, with longstanding partnerships with community organizations including Pizza Hut literacy programs and Awana ministry.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Appomattox_Elementary_School.html",
+      "title": "Appomattox Elementary School",
+      "description": "Appomattox County public elementary school offering extracurricular clubs, community reading programs, and an England sister-school partnership project; distinct from Appomattox Primary School.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Virginia_MetalFab_Stallworks.html",
+      "title": "Virginia MetalFab / Stallworks",
+      "description": "Industrial fabrication company that relocated into the former Thomasville Furniture building in Appomattox in 2022, bringing new manufacturing jobs to a long-dormant industrial site; celebrated its opening with Governor Glenn Youngkin in attendance.",
+      "type": "organization",
+      "category": "organizations"
+    },
+    {
+      "filename": "Thomasville_Furniture_Plant_Closure.html",
+      "title": "Thomasville Furniture Plant Closure (2010–2011)",
+      "description": "The phased shutdown of Appomattox's largest manufacturing employer, Thomasville Furniture Industries, beginning with major layoffs in 2006–2009 and culminating in final closure and plant auction in 2011 — eliminating hundreds of jobs and leaving a major industrial site vacant for over a decade.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "ACHS_Football_Championship_2015.html",
+      "title": "2015 ACHS State Football Championship",
+      "description": "Appomattox County High School Raiders' first Virginia 2A state football championship, won in December 2015 under Head Coach Doug Smith, capping an undefeated season and triggering a community-wide celebration.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "ACHS_Football_Championship_2017.html",
+      "title": "2017 ACHS State Football Championship",
+      "description": "The Raiders' second Virginia 2A state football championship in three seasons, won in December 2017 under Head Coach Doug Smith, cementing Appomattox as a dominant small-school football program.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Joel_Sweeney_Banjo_Festival_2019.html",
+      "title": "Joel Sweeney and the Banjo Festival (2019)",
+      "description": "A 2019 event at Appomattox Court House National Historical Park celebrating the legacy of Appomattox-born banjo innovator Joel Walker Sweeney, including dedication of a historical marker and performances by African American banjoists honoring the instrument's roots.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_COVID19_Response.html",
+      "title": "Appomattox County COVID-19 Response (2020–2022)",
+      "description": "The county and town government response to the COVID-19 pandemic, encompassing school closures, virtual learning, board of supervisors emergency actions, vaccination rollout at the fairgrounds, and the protracted school reopening debate.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "ACHS_Baseball_Championship_2011.html",
+      "title": "2011 ACHS Baseball State Championship",
+      "description": "Appomattox County High School Raiders baseball team's Region B championship season in 2011, under the coaching of Joe Caruso — one of the program's signature achievements during his 23-year tenure.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "ACHS_Baseball_Softball_Championship_2022.html",
+      "title": "2022 ACHS Baseball and Softball State Championships",
+      "description": "In 2022, both the Raiders baseball and Lady Raiders softball teams captured VHSL Class 2 state championships in the same season — a historic double that marked the high point of Appomattox County athletics.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "ACHS_Volleyball_Championship_2023.html",
+      "title": "2023 ACHS Volleyball State Championship",
+      "description": "The Appomattox County High School Lady Raiders volleyball team's historic VHSL Class 2 state championship victory in fall 2023, the program's first state title in volleyball.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html",
+      "title": "Appomattox Town–County Boundary Line Dispute (2012)",
+      "description": "A contentious 2012 negotiation between the Town of Appomattox and Appomattox County over a proposed boundary line adjustment and sewer service extension, generating multiple public hearings and unresolved tensions over annexation and tax revenue.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "10th_District_Special_Election_2025.html",
+      "title": "10th District Special Election (2025)",
+      "description": "Special election held in January 2025 to fill the vacant 10th District seat in the Virginia House of Delegates, with significant local implications for Appomattox County representation.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_NHP_Sewer_Project_2021.html",
+      "title": "Appomattox Court House National Historical Park Sewer Project (2021)",
+      "description": "A federally funded infrastructure project in 2021 to replace the aging sewer system at Appomattox Court House National Historical Park, preserving the historic site's underground infrastructure while minimizing disturbance to the Civil War battlefield.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_Wastewater_Plant_History.html",
+      "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)",
+      "description": "A fifteen-year saga in which the Town of Appomattox sued engineering firms over a defective SBR wastewater plant, battled state regulators over copper and zinc discharge violations, and ultimately completed a $6 million improvement project — among the most legally and regulatorily complex local government stories of the era.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_Relay_for_Life.html",
+      "title": "Appomattox County Relay for Life",
+      "description": "The annual American Cancer Society fundraising walk held in Appomattox County since the early 2000s, raising hundreds of thousands of dollars over two decades through team fundraising, the annual Cook-Off, luminaria ceremonies, and community sponsorship.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_Opioid_Crisis.html",
+      "title": "Appomattox County Opioid and Drug Crisis",
+      "description": "The wave of heroin, opioid, and methamphetamine cases prosecuted in Appomattox County Circuit Court from the mid-2010s onward, including drug-related deaths, sheriff's office enforcement actions, and community response efforts.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "Appomattox_County_2020_Election.html",
+      "title": "Appomattox County 2020 General Election",
+      "description": "The November 2020 presidential and state general election in Appomattox County, documenting local voting results, early voting patterns, poll worker challenges during the COVID-19 pandemic, and community reaction to national outcomes.",
+      "type": "notable-event",
+      "category": "events"
+    },
+    {
+      "filename": "ACHS_Football_Championship_2020.html",
+      "title": "2020 ACHS State Football Championship",
+      "description": "The Appomattox Raiders' third state football title, won during the pandemic-shortened 2020 season, adding to the program's growing dynasty status under Head Coach Doug Smith.",
+      "type": "notable-event",
+      "category": "events"
+    }
+  ]
+}

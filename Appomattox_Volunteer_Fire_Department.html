@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appomattox Volunteer Fire Department — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Appomattox Volunteer Fire Department</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Appomattox Volunteer Fire Department (AVFD)</div>
+  <table>
+    <tr>
+      <td>Type</td>
+      <td>Volunteer fire department</td>
+    </tr>
+    <tr>
+      <td>Jurisdiction</td>
+      <td>Town of Appomattox &amp; Appomattox County, Virginia</td>
+    </tr>
+    <tr>
+      <td>Established</td>
+      <td>1950s (exact date not documented)</td>
+    </tr>
+    <tr>
+      <td>Current Fire Chief</td>
+      <td>Timothy P. Garrett (as of 2004–present)</td>
+    </tr>
+    <tr>
+      <td>Headquarters</td>
+      <td>Business Route 460 East, Town of Appomattox</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="infobox-subheader">Firehouse</td>
+    </tr>
+    <tr>
+      <td>Old location</td>
+      <td>Under Town Office Building, Linden Street</td>
+    </tr>
+    <tr>
+      <td>New building</td>
+      <td>Opened October 2005</td>
+    </tr>
+    <tr>
+      <td>Building size</td>
+      <td>8,400 square feet</td>
+    </tr>
+    <tr>
+      <td>Total cost</td>
+      <td>$490,000</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="infobox-subheader">Support Organizations</td>
+    </tr>
+    <tr>
+      <td>Auxiliary</td>
+      <td>Formed in 2005</td>
+    </tr>
+    <tr>
+      <td>Associated body</td>
+      <td>Appomattox Volunteer Rescue Squad</td>
+    </tr>
+  </table>
+</div>
+
+<!-- LEAD PARAGRAPH -->
+<p>The <b>Appomattox Volunteer Fire Department</b> (AVFD) is the primary fire suppression and emergency response organization serving the Town of Appomattox and surrounding areas of Appomattox County, Virginia. Established as a volunteer organization in the mid-twentieth century, the AVFD has been a cornerstone of community safety and civic engagement for decades. The department operates from its modern firehouse, completed in October 2005, and maintains a staff of dedicated volunteer firefighters supported by an auxiliary organization. Since its founding, the AVFD has served the community through emergency response, fire prevention education, and public engagement initiatives.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#history">History</a>
+      <ol>
+        <li><a href="#early_history">Early history (1950s–2000)</a></li>
+        <li><a href="#new_firehouse_construction">New firehouse construction (2003–2005)</a></li>
+        <li><a href="#modern_era">Modern era (2005–present)</a></li>
+      </ol>
+    </li>
+    <li><a href="#organization">Organization and governance</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#facilities_and_equipment">Facilities and equipment</a></li>
+    <li><a href="#operations_and_services">Operations and services</a></li>
+    <li><a href="#auxiliary">Auxiliary and community support</a></li>
+    <li><a href="#major_accomplishments">Major accomplishments and achievements</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<h2 id="history">History</h2>
+
+<h3 id="early_history">Early history (1950s–2000)</h3>
+
+<p>Records of the Appomattox Volunteer Fire Department's founding are limited, but the organization was well-established by the 1950s, operating from a firehouse located beneath the Appomattox Town Office Building on Linden Street.<sup><a href="#ref1">[1]</a></sup> The department's early operations reflected the volunteer tradition characteristic of rural Virginia fire services, with community members donating their time to provide fire suppression and rescue services.</p>
+
+<p>Throughout the latter half of the twentieth century, the AVFD maintained its commitment to serving both the Town of Appomattox and surrounding county areas. By the early 2000s, the organization had become one of the most recognizable civic institutions in the region, participating regularly in community events including the Christmas parade and engaging in public education initiatives at local schools.<sup><a href="#ref2">[2]</a></sup> The department operated a fleet of fire apparatus and rescue vehicles, and by 2003–2004, was led by Fire Chief Timothy P. Garrett, a figure who would become synonymous with the department's expansion and modernization.</p>
+
+<h3 id="new_firehouse_construction">New firehouse construction (2003–2005)</h3>
+
+<p>In 2003, the Board of Supervisors and Town Council recognized that the aging firehouse—a cramped facility beneath the town office building—could not meet the department's growing operational needs. Ground was broken on September 3, 2003, for a new, purpose-built firehouse that would provide adequate space for apparatus storage, crew facilities, training, and administration.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Fire Chief Timmy Garrett spearheaded the construction effort, working with a fundraising committee comprised of prominent community members including John Caldwell, Ronnie Spiggle, Watkins Abbitt, Del Chambers, James Cheatham, Greg Heath, Phillip Jamerson, Anne Miller, and Bill Slagle. The total project cost was approximately $490,000.<sup><a href="#ref4">[4]</a></sup> The County Board of Supervisors contributed $150,000, and the Town of Appomattox allocated $90,000, covering roughly half of the construction budget. The remaining funds were raised through community donations, golf tournaments, yard sales, bake sales, grants from the Walter J. Payne Foundation ($10,000), and other fundraising activities.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>By February 2005, the new firehouse was approaching 75 percent completion of its first phase. Fire Chief Garrett reported that the department was short approximately $140,000 to fully complete the project but noted that firefighters had significantly reduced costs through volunteer labor on construction tasks including partition walls, sheetrock installation, and portions of the plumbing and electrical work.<sup><a href="#ref6">[6]</a></sup> The 8,400-square-foot facility was sited on Business Route 460 East in the Town of Appomattox, adjacent to the Appomattox Volunteer Rescue Squad building, whose leadership graciously donated the land for the new firehouse.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>An open house and ribbon-cutting ceremony were scheduled for October 2, 2005, featuring remarks from U.S. Congressman Virgil Goode (R-5th), Appomattox Mayor Ronnie Spiggle, and Board of Supervisors Chairman Samuel Carter.<sup><a href="#ref8">[8]</a></sup> More than 200 people attended the grand opening on October 5, 2005, celebrating the completion of the new facility, which was approximately twice the size of the old firehouse.<sup><a href="#ref9">[9]</a></sup> Fire Chief Garrett expressed his gratitude for community support and acknowledged the sacrifices of firefighters who had worked nights and weekends to assist in construction efforts.<sup><a href="#ref10">[10]</a></sup></p>
+
+<h3 id="modern_era">Modern era (2005–present)</h3>
+
+<p>Following the opening of the new firehouse in 2005, the Appomattox Volunteer Fire Department entered a period of enhanced capability and expanded community engagement. The organization formed its first-ever auxiliary in 2005, comprised of spouses, family members, and friends of firefighters, to support fundraising and community awareness initiatives.<sup><a href="#ref11">[11]</a></sup> Under Auxiliary President Jane Vaughan's early leadership, the group undertook significant fundraising efforts to acquire new equipment and enhance fire department capabilities.</p>
+
+<p>In 2007, the AVFD Auxiliary successfully raised funds to purchase a thermal imaging camera—a piece of equipment that would enable firefighters to locate victims in smoke-filled structures by detecting body heat.<sup><a href="#ref12">[12]</a></sup> This acquisition represented a meaningful upgrade to the department's rescue capabilities and demonstrated the community's commitment to firefighter safety and effectiveness. The department continued to host annual golf tournaments, yard sales, and other fundraisers to maintain equipment and fund operations.</p>
+
+<p>In the 2020s, the AVFD has remained actively engaged in emergency response across its service area. In 2023, the Appomattox Town Council approved funding for a new breathing air compressor to support the department's respiratory protection systems.<sup><a href="#ref13">[13]</a></sup> The department continues to grow, and in 2024, it was announced that the AVFD planned to replace an aging ladder truck to maintain its rescue capabilities.<sup><a href="#ref14">[14]</a></sup></p>
+
+<h2 id="organization">Organization and governance</h2>
+
+<p>The Appomattox Volunteer Fire Department operates as a volunteer organization providing fire suppression, rescue, and emergency medical services to the Town of Appomattox and surrounding unincorporated areas of Appomattox County. The department is accountable to the Board of Supervisors and the Town Council, which provide annual appropriations and approve policy matters affecting fire service operations. The organization operates in close coordination with the Appomattox Volunteer Rescue Squad, sharing facilities and coordinating emergency response.</p>
+
+<p>Like most volunteer fire departments in rural Virginia, the AVFD relies on a cadre of dedicated community members who commit their time and training to public safety. Volunteers participate in regular training, maintain equipment certification, and respond to emergency calls during both day and night hours. The department has historically maintained adequate staffing to provide rapid response times; in one notable 2004 incident, the AVFD responded to a structure fire within 12 minutes of receiving the call, deploying 14 firefighters, two engines, and a ladder truck.<sup><a href="#ref15">[15]</a></sup></p>
+
+<h2 id="leadership">Leadership</h2>
+
+<p>Timothy P. Garrett has served as Fire Chief of the Appomattox Volunteer Fire Department since at least 2004, when he was already overseeing the initial phases of the new firehouse project. Garrett has been a visible and respected leader in the community, regularly representing the fire department at public events and working collaboratively with county and town officials to advance fire service capabilities.</p>
+
+<table class="wikitable">
+  <tr>
+    <th>Position</th>
+    <th>Name</th>
+    <th>Served</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Fire Chief</td>
+    <td>Timothy P. "Timmy" Garrett</td>
+    <td>2004–present</td>
+    <td>Led firehouse construction project; oversaw department modernization</td>
+  </tr>
+  <tr>
+    <td>Auxiliary President</td>
+    <td>Jane Vaughan</td>
+    <td>2005–c.&nbsp;2006</td>
+    <td>Organized early auxiliary fundraising efforts</td>
+  </tr>
+</table>
+
+<h2 id="facilities_and_equipment">Facilities and equipment</h2>
+
+<h3>Firehouse</h3>
+
+<p>The AVFD operates from a modern 8,400-square-foot firehouse located on Business Route 460 East in the Town of Appomattox, completed in October 2005. The facility replaced the department's original cramped quarters beneath the Appomattox Town Office Building on Linden Street, which had become inadequate for growing operational needs. The new firehouse features apparatus bays, administrative offices, meeting areas, gear lockers, and crew facilities. The structure was funded through a combination of county and town appropriations, community donations, and fundraising efforts totaling approximately $490,000.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h3>Equipment and apparatus</h3>
+
+<p>The AVFD maintains a fleet of fire suppression and rescue equipment. By 2003–2004, the department operated with at least two fire engines and a ladder truck.<sup><a href="#ref17">[17]</a></sup> The department has historically maintained modern fire apparatus through a combination of capital purchases and equipment donations from the community. Equipment acquisitions have included vehicles, hoses, nozzles, and specialized rescue tools. Notable equipment additions include the thermal imaging camera purchased by the auxiliary in 2007.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="operations_and_services">Operations and services</h2>
+
+<p>The Appomattox Volunteer Fire Department provides comprehensive emergency services including structure fire suppression, vehicle extrication, rescue operations, and coordination with emergency medical services. The department responds to calls throughout the Town of Appomattox and surrounding areas, maintaining rapid response times that have historically averaged approximately 12 minutes from dispatch to arrival.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>In addition to emergency response, the AVFD conducts public fire prevention education, including fire drills at local schools and information sessions at community facilities. The department participates in public events including the annual Appomattox Christmas Parade and maintains community relationships through outreach and education initiatives.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h2 id="auxiliary">Auxiliary and community support</h2>
+
+<p>The Appomattox Volunteer Fire Department Auxiliary was established in 2005, representing the first formal organization of spouses, family members, and friends to support fire department operations and fundraising. Under President Jane Vaughan's leadership, the auxiliary held its first meeting on April 19, 2005, and immediately undertook fundraising initiatives to support the department's capital needs. The auxiliary has organized benefit suppers, yard sales, bake sales, and other community events to raise funds for equipment and operational support.</p>
+
+<p>Notable auxiliary accomplishments include raising funds for a thermal imaging camera in 2007, purchasing equipment that would enhance firefighter safety and victim rescue capabilities.<sup><a href="#ref21">[21]</a></sup> The auxiliary has also participated in community awareness campaigns, including annual September 11 memorials honoring first responders and national service members. Through consistent fundraising efforts, the auxiliary has demonstrated strong community support for fire department operations and has helped bridge funding gaps between volunteer service provision and operational costs.</p>
+
+<h2 id="major_accomplishments">Major accomplishments and achievements</h2>
+
+<ul>
+  <li><b>New firehouse construction (2003–2005):</b> Completion of a modern 8,400-square-foot facility with a total project cost of $490,000, funded through a combination of government appropriations, community donations, and charitable grants. The new firehouse has doubled the operational capacity of the previous facility located beneath the town office building.</li>
+  <li><b>Auxiliary formation (2005):</b> Establishment of the first formal auxiliary organization to support fundraising, community engagement, and equipment acquisition.</li>
+  <li><b>Thermal imaging camera acquisition (2007):</b> Through auxiliary fundraising efforts, the department acquired a thermal imaging camera that enables firefighters to locate victims in smoke-filled structures, significantly enhancing rescue capabilities.</li>
+  <li><b>Sustained community engagement:</b> Annual participation in community events including Christmas parades, fire prevention education at local schools, and firefighter training exercises in collaboration with county educational institutions.</li>
+  <li><b>Equipment modernization (2020s):</b> Recent capital improvements including new breathing air compressor systems and plans to replace aging ladder trucks, demonstrating ongoing commitment to firefighter safety and operational readiness.</li>
+</ul>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr>
+    <th>Date</th>
+    <th>Event</th>
+  </tr>
+  <tr>
+    <td>1950s</td>
+    <td>Appomattox Volunteer Fire Department established; operates from firehouse beneath Town Office Building on Linden Street</td>
+  </tr>
+  <tr>
+    <td>2002–2003</td>
+    <td>Board of Supervisors and Town Council determine that new firehouse is needed to replace aging facility</td>
+  </tr>
+  <tr>
+    <td>Sep 3, 2003</td>
+    <td>Ground broken on new firehouse on Business Route 460 East</td>
+  </tr>
+  <tr>
+    <td>Aug 18, 2004</td>
+    <td>AVFD announces second annual golf tournament fundraiser for new building fund</td>
+  </tr>
+  <tr>
+    <td>Sep 29, 2004</td>
+    <td>Walter J. Payne Foundation awards $10,000 grant to AVFD for new firehouse construction</td>
+  </tr>
+  <tr>
+    <td>Feb 9, 2005</td>
+    <td>New firehouse nearing 75% completion; Fire Chief Garrett reports $140,000 still needed</td>
+  </tr>
+  <tr>
+    <td>Apr 19, 2005</td>
+    <td>AVFD Auxiliary holds its first meeting</td>
+  </tr>
+  <tr>
+    <td>Oct 2, 2005</td>
+    <td>Open house and ribbon-cutting ceremony for new firehouse; U.S. Congressman Virgil Goode attends</td>
+  </tr>
+  <tr>
+    <td>Oct 5, 2005</td>
+    <td>Grand opening celebration draws more than 200 people; new 8,400-sq-ft facility opens to public tours</td>
+  </tr>
+  <tr>
+    <td>2006</td>
+    <td>AVFD Auxiliary conducts major fundraising efforts including yard sales and benefit dinners</td>
+  </tr>
+  <tr>
+    <td>Dec 19, 2007</td>
+    <td>AVFD Auxiliary presents thermal imaging camera to fire department</td>
+  </tr>
+  <tr>
+    <td>2010s–2020s</td>
+    <td>Continued community engagement, annual fundraising golf tournaments, and emergency response operations</td>
+  </tr>
+  <tr>
+    <td>Apr 12, 2023</td>
+    <td>Appomattox Town Council approves funding for new breathing air compressor for AVFD</td>
+  </tr>
+  <tr>
+    <td>Dec 18, 2024</td>
+    <td>AVFD announces plans to replace aging ladder truck</td>
+  </tr>
+</table>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"County home sustains heavy fire damage," <i>Times-Virginian</i>, February 5, 2004; "Hundreds attend Open House for new AVFD firehouse," <i>Times-Virginian</i>, October 5, 2005 (via responses.db)</li>
+    <li id="ref2">"AVFD to host golf tourney," <i>Times-Virginian</i>, August 18, 2004; "Christmas Parade set for Dec. 5 at 4 p.m.," <i>Times-Virginian</i>, December 1, 2004 (via responses.db)</li>
+    <li id="ref3">"Hundreds attend Open House for new AVFD firehouse," <i>Times-Virginian</i>, October 5, 2005 (via responses.db)</li>
+    <li id="ref4">"Firehouse slates Open House for Oct. 2 at 3 p.m.," <i>Times-Virginian</i>, September 28, 2005 (via responses.db)</li>
+    <li id="ref5">"Walter J. Payne Foundation presents $80,000 in grants to local groups," <i>Times-Virginian</i>, September 29, 2004; "AVFD to host golf tourney," <i>Times-Virginian</i>, August 18, 2004 (via responses.db)</li>
+    <li id="ref6">"New firehouse nears completions; more funds needed," <i>Times-Virginian</i>, February 9, 2005 (via responses.db)</li>
+    <li id="ref7">"Firehouse slates Open House for Oct. 2 at 3 p.m.," <i>Times-Virginian</i>, September 28, 2005 (via responses.db)</li>
+    <li id="ref8">"Firehouse slates Open House for Oct. 2 at 3 p.m.," <i>Times-Virginian</i>, September 28, 2005 (via responses.db)</li>
+    <li id="ref9">"Hundreds attend Open House for new AVFD firehouse," <i>Times-Virginian</i>, October 5, 2005 (via responses.db)</li>
+    <li id="ref10">"Hundreds attend Open House for new AVFD firehouse," <i>Times-Virginian</i>, October 5, 2005 (via responses.db)</li>
+    <li id="ref11">"Auxiliary forms for fire department," <i>Times-Virginian</i>, August 24, 2005; "AVFD auxiliary thanks supporters," <i>Times-Virginian</i>, September 21, 2005 (via responses.db)</li>
+    <li id="ref12">"Thermal imaging camera donated to fire department," <i>Times-Virginian</i>, December 19, 2007; "AVFD Ladies says thanks," <i>Times-Virginian</i>, October 12, 2006 (via responses.db)</li>
+    <li id="ref13">"Appomattox Town Council funds new breathing air compressor for AVFD," April 12, 2023 (via responses.db)</li>
+    <li id="ref14">"Appomattox Volunteer Fire Department plans to replace aging ladder truck," December 18, 2024 (via responses.db)</li>
+    <li id="ref15">"County home sustains heavy fire damage," <i>Times-Virginian</i>, February 5, 2004 (via responses.db)</li>
+    <li id="ref16">"Firehouse slates Open House for Oct. 2 at 3 p.m.," <i>Times-Virginian</i>, September 28, 2005; "Hundreds attend Open House for new AVFD firehouse," <i>Times-Virginian</i>, October 5, 2005 (via responses.db)</li>
+    <li id="ref17">"County home sustains heavy fire damage," <i>Times-Virginian</i>, February 5, 2004 (via responses.db)</li>
+    <li id="ref18">"Thermal imaging camera donated to fire department," <i>Times-Virginian</i>, December 19, 2007 (via responses.db)</li>
+    <li id="ref19">"County home sustains heavy fire damage," <i>Times-Virginian</i>, February 5, 2004 (via responses.db)</li>
+    <li id="ref20">"Christmas Parade set for Dec. 5 at 4 p.m.," <i>Times-Virginian</i>, December 1, 2004; "False fire alarm allows AES to sharpen evacuation skills," <i>Times-Virginian</i>, February 18, 2004 (via responses.db)</li>
+    <li id="ref21">"Thermal imaging camera donated to fire department," <i>Times-Virginian</i>, December 19, 2007 (via responses.db)</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

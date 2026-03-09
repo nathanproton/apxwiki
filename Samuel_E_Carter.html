@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel E. "Sammy" Carter — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Samuel E. "Sammy" Carter</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<div class="infobox">
+  <div class="infobox-title">Samuel E. "Sammy" Carter</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Chairman of the Appomattox County<br>Board of Supervisors</td></tr>
+    <tr><td>In office</td><td>2002&ndash;2007 (Chairman)<br>2020&ndash;present (Chairman)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Member, Appomattox County<br>Board of Supervisors</td></tr>
+    <tr><td>In office</td><td>1998&ndash;present</td></tr>
+    <tr><td>District</td><td>Courthouse</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Member, Appomattox Town Council</td></tr>
+    <tr><td>In office</td><td>c.&nbsp;1978&ndash;1997</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Full name</td><td>Samuel E. Carter</td></tr>
+    <tr><td>Education</td><td>Appomattox High School (Class of 1966)</td></tr>
+    <tr><td>Military service</td><td>U.S. Marine Corps (1967&ndash;1969)</td></tr>
+    <tr><td>Employer</td><td>Framatome Technologies, Lynchburg</td></tr>
+    <tr><td>Spouse</td><td>Gloria Carter</td></tr>
+    <tr><td>Residence</td><td>Appomattox, Virginia</td></tr>
+  </table>
+</div>
+
+<p class="hatnote">This article is about the Appomattox County, Virginia public official. For other persons named Carter in local records, see disambiguation notes in the references.</p>
+
+<p><b>Samuel E. "Sammy" Carter</b> (born c.&nbsp;1948) is an American politician, community leader, and public servant who has served in Appomattox County, Virginia local government for over four decades. He has represented the Courthouse District on the <b>Appomattox County Board of Supervisors</b> since 1998 and has served multiple terms as chairman of the board. Prior to his service on the Board of Supervisors, Carter served approximately 18 years on the <b>Appomattox Town Council</b> (c.&nbsp;1978&ndash;1997) and was a member of the <b>Appomattox County Planning Commission</b>.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Carter is also widely known in the community as the longtime public address announcer for Appomattox County High School football, earning the nickname "The Voice of the Raiders" over a career spanning more than 25 years at Bragg Stadium.<sup><a href="#ref2">[2]</a></sup> A 1966 graduate of Appomattox High School, Carter quarterbacked the undefeated 1965 Raiders football team and was inducted into the Appomattox Scholastic Sports Hall of Fame in 2003.<sup><a href="#ref3">[3]</a></sup></p>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_life">Early life and education</a></li>
+    <li><a href="#military">Military service</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#town_council">Appomattox Town Council (c.&nbsp;1978&ndash;1997)</a></li>
+    <li><a href="#planning_commission">Planning Commission</a></li>
+    <li><a href="#bos">Board of Supervisors (1998&ndash;present)</a>
+      <ol>
+        <li><a href="#bos_early">Early tenure and chairmanship (1998&ndash;2007)</a></li>
+        <li><a href="#bos_middle">Continued service (2008&ndash;2019)</a></li>
+        <li><a href="#bos_recent">Return to chairmanship (2020&ndash;present)</a></li>
+      </ol>
+    </li>
+    <li><a href="#elections">Electoral history</a></li>
+    <li><a href="#major_issues">Major policy issues</a>
+      <ol>
+        <li><a href="#waterline">U.S. 460 waterline project</a></li>
+        <li><a href="#emergency">Emergency services</a></li>
+        <li><a href="#library">Library board controversy (2023)</a></li>
+      </ol>
+    </li>
+    <li><a href="#other_service">Other public and community service</a></li>
+    <li><a href="#athletics">Athletics and sports involvement</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="early_life">Early life and education</h2>
+
+<p>Samuel E. Carter was born circa 1948 and grew up in the Appomattox, Virginia area. He graduated from <b>Appomattox High School</b> in the Class of 1966. During his high school years, Carter was a standout athlete, serving as the starting quarterback of the Raiders football team. In 1965, he quarterbacked the squad to an undefeated season, a milestone in the school's athletic history.<sup><a href="#ref3">[3]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="military">Military service</h2>
+
+<p>Following his graduation from high school, Carter enlisted in the <b>United States Marine Corps</b>, serving from 1967 to 1969. His military service has been cited in public forums; in a 2004 letter to the editor responding to criticism of the Board of Supervisors, Carter highlighted the military service records of several board members, including his own, as evidence of the board's patriotism and dedication to public service.<sup><a href="#ref4">[4]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="career">Career</h2>
+
+<p>Carter was employed by <b>Framatome Technologies</b> (later Framatome ANP, now Framatome Inc.) in Lynchburg, Virginia, a nuclear energy and advanced manufacturing firm. This is consistent with his long residency in the Appomattox area while working in the nearby Lynchburg industrial corridor.<sup><a href="#ref3">[3]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="town_council">Appomattox Town Council (c.&nbsp;1978&ndash;1997)</h2>
+
+<p>Carter began his career in local government as a member of the <b>Appomattox Town Council</b>. Town Council meeting minutes first record him as a member in September 1978, and earlier minutes from that year list him as "Councilman-Elect S. E. Carter," placing his initial election around mid-1978.<sup><a href="#ref5">[5]</a></sup> A legal case styled <i>Samuel E. Carter versus the Town of Appomattox, Board of Zoning Appeals</i> appears in earlier 1978 minutes, suggesting Carter was an active citizen engaged in local zoning matters even before joining the council.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>During his tenure on the Town Council, Carter was an active participant who served on multiple standing committees. He chaired the <b>Sewer Committee</b> and served on the <b>Water Committee</b> and <b>Property Committee</b>, dealing with issues including utility rates, infrastructure improvements, water system expansions, and municipal property management.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>Carter served approximately 18 years on the Town Council. In 1997, upon his election to the Appomattox County Board of Supervisors, Carter resigned from the council. He nominated <b>Joyce Bennett</b> to fill his unexpired term, and the appointment was approved unanimously by the remaining council members.<sup><a href="#ref7">[7]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="planning_commission">Planning Commission</h2>
+
+<p>Carter also served as a member of the <b>Appomattox County Planning Commission</b> during the mid-1990s, concurrent with his Town Council service. He is recorded as present at joint public hearings of the Board of Supervisors and Planning Commission in 1996 and 1997, reviewing zoning petitions, conditional use applications, and comprehensive plan matters.<sup><a href="#ref8">[8]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="bos">Board of Supervisors (1998&ndash;present)</h2>
+
+<h3 id="bos_early">Early tenure and chairmanship (1998&ndash;2007)</h3>
+
+<p>Carter was elected to the <b>Appomattox County Board of Supervisors</b> representing the <b>Courthouse District</b> in 1997, taking office in January 1998. He succeeded <b>Gus Paulette</b>, who was honored at a county reception as Carter was welcomed to the board.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>Carter rose to the chairmanship in 2002 and was subsequently re-elected chairman for <b>six consecutive years</b> (2002&ndash;2007). In January 2004, after three newly elected supervisors joined the board, Supervisor Tom Conrad nominated Carter for chairman, citing his experience as essential for conducting smooth meetings. Carter was elected unanimously and told his colleagues: "We are one team, one unit and I know we will move forward in the county."<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>In January 2007, Carter was selected as chairman for the fifth consecutive year by a 4&ndash;0 vote, with fellow supervisors praising his leadership.<sup><a href="#ref11">[11]</a></sup> In January 2008, Carter stepped down as chairman and was succeeded by <b>William H. "Willie" Craft</b>, who was elected the new chairman after Carter had held the position for six years.<sup><a href="#ref12">[12]</a></sup></p>
+
+<h3 id="bos_middle">Continued service (2008&ndash;2019)</h3>
+
+<p>After yielding the chairmanship, Carter continued to serve as the Courthouse District supervisor through multiple terms. He was re-elected in November 2009, defeating challenger <b>Peter A. Zdgiebloski</b>, a member of the Appomattox County Planning Commission, by a margin of 551 votes to 222.<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>During this period, Carter remained an active and sometimes contrarian voice on the board. In 2009, he proposed that supervisors forgo their own compensation in order to fund the hiring of an Economic Development Director, a position other board members opposed due to budgetary concerns.<sup><a href="#ref14">[14]</a></sup> In 2010, he was publicly recognized as the only board member who supported teacher pay raises, drawing a letter of commendation from a community member.<sup><a href="#ref15">[15]</a></sup> In 2011, Carter proposed that the Board of Supervisors take a voluntary pay cut for months with fewer meetings, citing a desire for fiscal responsibility.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>Carter also served in a dual role as the county's <b>Director of Emergency Services</b>, a position referenced in connection with his official declaration of a county-wide burn ban in March 2006.<sup><a href="#ref17">[17]</a></sup></p>
+
+<h3 id="bos_recent">Return to chairmanship (2020&ndash;present)</h3>
+
+<p>In January 2020, as new supervisors <b>John Hinkle</b> and <b>Trevor Hipps</b> took their seats, Carter was re-elected as chairman of the Board of Supervisors, with <b>Bill Hogan</b> elected vice-chairman.<sup><a href="#ref18">[18]</a></sup> Carter was re-elected as chairman again in January 2021 on a unanimous vote, nominated by Supervisor <b>Watkins Abbitt</b> and seconded by Supervisor Hipps.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>In November 2021, Carter won re-election to his seat, defeating challenger <b>A. R. Evans Jr.</b> in a contested Courthouse District race.<sup><a href="#ref20">[20]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="elections">Electoral history</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th>
+    <th>Office</th>
+    <th>District</th>
+    <th>Result</th>
+    <th>Opponent(s)</th>
+    <th>Vote</th>
+  </tr>
+  <tr>
+    <td>c.&nbsp;1978</td>
+    <td>Appomattox Town Council</td>
+    <td>At-large</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>&mdash;</td>
+    <td>Details unavailable</td>
+  </tr>
+  <tr>
+    <td>1997</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Gus Paulette (incumbent, did not seek re-election)</td>
+    <td>Details unavailable</td>
+  </tr>
+  <tr>
+    <td>2001</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>&mdash;</td>
+    <td>Details unavailable</td>
+  </tr>
+  <tr>
+    <td>2005</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>John Wilson</td>
+    <td>510&ndash;290<sup><a href="#ref21">[21]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2006</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>John Wilson</td>
+    <td>Not reported in detail<sup><a href="#ref22">[22]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2009</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Peter A. Zdgiebloski</td>
+    <td>551&ndash;222<sup><a href="#ref13">[13]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2021</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>A. R. Evans Jr.</td>
+    <td>Won; final count pending at press time<sup><a href="#ref20">[20]</a></sup></td>
+  </tr>
+</table>
+
+<p class="note"><b>Note:</b> Appomattox County Board of Supervisors elections are held on a four-year cycle. Carter has never lost a general election for the Courthouse District seat.</p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="major_issues">Major policy issues</h2>
+
+<h3 id="waterline">U.S. 460 waterline project</h3>
+
+<p>One of the defining issues of Carter's tenure as chairman was the long-debated effort to bring a public water supply to Appomattox County via a waterline along U.S. Route 460. In October 2003, Carter chaired the board's unanimous vote to pursue the waterline from Lynchburg, estimated at $16.4 million, calling it "the cheapest way, the best way and the only way for Appomattox." He was appointed to lead the joint committee overseeing the project's details.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p>The waterline became a contentious public issue. Critics, including members of the Citizens Forum led by Tim Matlack, challenged Carter at open forums, questioning whether the project served the interests of county residents who relied on private wells. In September 2006, Matlack directly asked Carter: "Since you are a politician, do you work for the community, or do you work for yourself?" Carter fielded the criticism while maintaining support for the project.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>Multiple letters to the editor both supported and attacked Carter's position on the waterline throughout 2004&ndash;2006. Critics argued the project would primarily benefit developers along the Route 460 corridor and saddle taxpayers with costs. Supporters viewed it as essential infrastructure for the county's economic future. Carter defended the board's approach, noting that the decision was based on engineering recommendations and the need for a reliable water supply.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>In 2006, Carter appointed a negotiating committee to explore a waterline connection to Concord in Campbell County, expressing a sense of urgency for gathering cost and feasibility data.<sup><a href="#ref26">[26]</a></sup></p>
+
+<h3 id="emergency">Emergency services</h3>
+
+<p>Carter was closely involved with efforts to address persistent problems with the Appomattox County Volunteer Rescue Squad's ability to respond to daytime emergency calls. In 2006, he co-chaired a joint committee of county, town, and rescue squad officials tasked with finding solutions. Carter praised the volunteers' dedication while acknowledging that citizens had raised legitimate concerns about response times. He supported the squad's move toward hiring paid daytime staff.<sup><a href="#ref27">[27]</a></sup></p>
+
+<p>In 2007, Carter publicly praised the rescue squad's new paid responder plan as a positive step toward improving emergency services in the county.<sup><a href="#ref28">[28]</a></sup></p>
+
+<h3 id="library">Library board controversy (2023)</h3>
+
+<p>In June 2023, the Board of Supervisors voted 3&ndash;2 to remove the three existing members of the J. Robert Jamerson Memorial Library Board of Trustees following public outcry over LGBTQ-themed children's books and graphic novels with sexual imagery in the library's collection. Following the vote, Chairman Carter and Vice-Chairman William Hogan indicated they would reappoint two of the removed members who had taken steps to address the community's concerns regarding the materials, provided those members agreed to serve again.<sup><a href="#ref29">[29]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="other_service">Other public and community service</h2>
+
+<p>In addition to his elected positions, Carter has served on several boards and participated in numerous community activities:</p>
+
+<ul>
+  <li><b>Appomattox County Social Services Board</b> &mdash; Carter served as a longtime member of the Board of Directors, serving alongside Willie Craft, Martha Watkins, and Nelson Mann at various times. In this role, he was involved in matters including the Toys for Tots program and support for driver education aid programs.<sup><a href="#ref30">[30]</a></sup></li>
+  <li><b>Region 2000 Regional Commission</b> &mdash; Carter served as an officer of the regional planning body alongside Mayor Ronald Spiggle and County Administrator Aileen Ferguson during 2005&ndash;2006.<sup><a href="#ref31">[31]</a></sup></li>
+  <li><b>Toys for Tots</b> &mdash; Carter has been a longtime volunteer with the U.S. Marine Corps' Toys for Tots program in Appomattox County, continuing his connection to the Marines. He has worked alongside fellow board members and community volunteers to distribute toys to county families during the holiday season.<sup><a href="#ref32">[32]</a></sup></li>
+  <li><b>Relay for Life</b> &mdash; Carter and his wife Gloria have supported the Appomattox Relay for Life event. In 2021, they served as Luminaria Readers at the annual cancer fundraiser.<sup><a href="#ref33">[33]</a></sup></li>
+  <li><b>Christmas Parade announcer</b> &mdash; Carter has served as the public address announcer for the annual Appomattox Christmas Parade.<sup><a href="#ref34">[34]</a></sup></li>
+  <li><b>Experience the Holidays</b> &mdash; In 2018, Chairman Carter, along with Director of Parks, Recreation &amp; Tourism Anne Dixon, announced parade units at the community's Experience the Holidays event.<sup><a href="#ref35">[35]</a></sup></li>
+</ul>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="athletics">Athletics and sports involvement</h2>
+
+<p>Carter has been deeply involved in Appomattox County athletics for over three decades:</p>
+
+<ul>
+  <li><b>"Voice of the Raiders"</b> &mdash; Beginning around 1979, Carter served as the public address announcer at Appomattox County High School varsity and junior varsity football games at Bragg Stadium. In December 2001, he was honored with a plaque from the ACHS Athletic Booster Club for 22 years of service as "The Voice of the Raiders."<sup><a href="#ref2">[2]</a></sup> He continued in the role for years afterward, and was still introducing Sports Hall of Fame inductees at Bragg Stadium in 2017.<sup><a href="#ref36">[36]</a></sup></li>
+  <li><b>Youth sports coaching</b> &mdash; Carter played a significant role in the <b>Appomattox Youth Association</b> from 1980 to 1983, coaching baseball and football for seven years total.<sup><a href="#ref3">[3]</a></sup></li>
+  <li><b>Sports Hall of Fame inductee (2003)</b> &mdash; Carter was inducted into the Appomattox Scholastic Sports Hall of Fame in 2003 as part of its fifth induction class, alongside Paul Johnson and Bobby Layne. His induction recognized his undefeated 1965 football season as quarterback, his 18 years of Town Council service, his chairmanship of the Board of Supervisors, his youth coaching, and his long service as the stadium's public address announcer.<sup><a href="#ref3">[3]</a></sup></li>
+</ul>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="references">References</h2>
+
+<div class="note">All references are drawn from the <i>Times-Virginian</i> newspaper archive (2003&ndash;2024), Appomattox County Board of Supervisors minute books (1992&ndash;2025), Town of Appomattox Council minute books (1950&ndash;2025), and the Appomattox County responses database of AI-classified newspaper items.</div>
+
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Sammy Carter's Football and Civic Leadership," <i>Times-Virginian</i>, October 29, 2003. Describes Carter's 18 years on Town Council and chairmanship of BOS. Also: multiple BOS and Town Council meeting minutes, 1978&ndash;2024.</li>
+    <li id="ref2">"Sammy Carter honored for 22 years as 'Voice of the Raiders,'" <i>Times-Virginian</i>, December 7, 2001 (via responses.db).</li>
+    <li id="ref3">"Johnson, Layne, Carter to be inducted in Appomattox sports hall of fame," <i>Times-Virginian</i>, October 29, 2003. Provides detailed biographical information including graduation year, Marine Corps service, employment at Framatome, youth coaching, and Voice of the Raiders tenure.</li>
+    <li id="ref4">"Appomattox Supervisors Defend Patriotism Amid Water Study Debate," <i>Times-Virginian</i>, July 7, 2004 (via responses.db).</li>
+    <li id="ref5">Town of Appomattox Council Minutes, Book 1, Plates 911&ndash;1090 (Corpus: 1950&ndash;1985). Carter first recorded as member September 11, 1978; active on Water, Sewer, and Property committees through multiple years.</li>
+    <li id="ref6">Town of Appomattox Council Minutes, Book 1, Plate 864. References "Samuel E. Carter versus the Town of Appomattox, Board of Zoning Appeals."</li>
+    <li id="ref7">"Looking Back," <i>Times-Virginian</i>, December 17, 2017. Notes that "Twenty years ago" (1997), Councilman Sammy Carter nominated Joyce Bennett to fill his unexpired term.</li>
+    <li id="ref8">Appomattox County Board of Supervisors Minutes, Book 18, Plates 147, 157, 196, 262 (Corpus: 1995&ndash;1999). Carter listed as Planning Commission member at joint public hearings in 1996&ndash;1997.</li>
+    <li id="ref9">"Gus Paulette Honored, Sammy Carter Welcomed by Board of Supervisors," responses.db, dated 1997.</li>
+    <li id="ref10">"Carter elected chairman; Craft elected vice-chairman," <i>Times-Virginian</i>, January 7, 2004.</li>
+    <li id="ref11">"Sammy Carter selected chairman of Appomattox County Board of Supervisors," <i>Times-Virginian</i>, January 10, 2007 (via responses.db).</li>
+    <li id="ref12">"William H. Craft elected new chairman of Appomattox County Board of Supervisors," <i>Times-Virginian</i>, January 10, 2008 (via responses.db).</li>
+    <li id="ref13">"Samuel Carter retains Courthouse supervisor seat," <i>Times-Virginian</i>, November 4, 2009 (via responses.db). Vote: 551&ndash;222 over Peter A. Zdgiebloski.</li>
+    <li id="ref14">"Appomattox Supervisors debate hiring Economic Development Director," <i>Times-Virginian</i>, May 27, 2009 (via responses.db).</li>
+    <li id="ref15">"Call to support teachers," <i>Times-Virginian</i>, October 5, 2010 (via responses.db).</li>
+    <li id="ref16">"Supervisor Carter proposes pay cut for Board of Supervisors," <i>Times-Virginian</i>, December 6, 2011 (via responses.db).</li>
+    <li id="ref17">"Burn ban passed for Appomattox County," <i>Times-Virginian</i>, March 23, 2006. Carter declared burn ban in his capacity as Director of Emergency Services.</li>
+    <li id="ref18">"New board members are welcomed; citizen speech limits discussed," <i>Times-Virginian</i>, January 10, 2020.</li>
+    <li id="ref19">"Samuel Carter elected Chairman of Appomattox Board of Supervisors," <i>Times-Virginian</i>, January 7, 2021 (via responses.db).</li>
+    <li id="ref20">"Appomattox Co. election features Courthouse District showdown," <i>Times-Virginian</i>, November 1, 2021; "Samuel Carter retains Courthouse District Supervisor seat," <i>Times-Virginian</i>, November 3, 2021 (via responses.db).</li>
+    <li id="ref21">"Samuel Carter re-elected to Appomattox County Board of Supervisors," <i>Times-Virginian</i>, November 9, 2005 (via responses.db). Vote: 510&ndash;290 over John Wilson.</li>
+    <li id="ref22">"Sammy Carter re-elected Supervisor; defeats John Wilson," <i>Times-Virginian</i>, November 8, 2006 (via responses.db).</li>
+    <li id="ref23">"Supervisors endorse U.S. 460 water pipeline," <i>Times-Virginian</i>, October 8, 2003.</li>
+    <li id="ref24">"Citizens question Supervisor Carter on waterline at forum," <i>Times-Virginian</i>, September 6, 2006 (via responses.db).</li>
+    <li id="ref25">Multiple letters to the editor, <i>Times-Virginian</i>, July&ndash;August 2004 and July 2005.</li>
+    <li id="ref26">"County committee appointed to explore waterline details," <i>Times-Virginian</i>, August 10, 2006 (via responses.db).</li>
+    <li id="ref27">"Rescue Squad prez says paid unit is needed," <i>Times-Virginian</i>, April 5, 2006.</li>
+    <li id="ref28">"Supervisor Carter praises rescue squad's new paid responder plan," <i>Times-Virginian</i>, March 14, 2007.</li>
+    <li id="ref29">"(Updated) Board of Supervisors votes to remove library board members," <i>Times-Virginian</i>, June 21, 2023; "Appomattox Library Board members reappointed after vote," responses.db, June 21, 2023.</li>
+    <li id="ref30">"Social Services Board unanimously supports driver education aid," <i>Times-Virginian</i>, December 10, 2003 (via responses.db); "Mann retires after 10 years on Social Services Board," <i>Times-Virginian</i>, January 27, 2016.</li>
+    <li id="ref31">"Region 2000 officers elected," <i>Times-Virginian</i>, July 27, 2006 (via responses.db).</li>
+    <li id="ref32">"Marines deliver Toys for Tots to Appomattox," <i>Times-Virginian</i>, October 4, 2017.</li>
+    <li id="ref33">"Gloria and Sammy Carter Served as Luminaria Readers at Relay for Life," <i>Times-Virginian</i>, September 28, 2021 (via responses.db).</li>
+    <li id="ref34">"Appomattox Christmas Parade: Announcer, Judges, and Line-up Crew Thanked," <i>Times-Virginian</i>, December 6, 2006 (via responses.db).</li>
+    <li id="ref35">"Board Chairman and Parks Director Announce Parade," <i>Times-Virginian</i>, December 7, 2018 (via responses.db).</li>
+    <li id="ref36">"ACHS hall of fame inducts seven new members," <i>Times-Virginian</i>, October 4, 2017. Notes "P.A. announcer Sam Carter introduced the seven inductees."</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

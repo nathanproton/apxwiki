@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alfred "Al" Jones III — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation (injected by build) ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Alfred "Al" Jones III</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Alfred "Al" Jones III</div>
+  <table>
+    <tr>
+      <td colspan="2" class="infobox-subheader">Piney Mountain District Supervisor</td>
+    </tr>
+    <tr>
+      <td>In office</td>
+      <td>January 1, 2022&nbsp;&ndash; present</td>
+    </tr>
+    <tr>
+      <td>Preceded by</td>
+      <td>Watkins M. Abbitt Jr.</td>
+    </tr>
+    <tr>
+      <td>Vice-Chairman</td>
+      <td>2024&ndash;present</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="infobox-subheader">Piney Mountain District School Board Member</td>
+    </tr>
+    <tr>
+      <td>In office</td>
+      <td>January 1, 2014&nbsp;&ndash; April 29, 2021</td>
+    </tr>
+    <tr>
+      <td>Succeeded by</td>
+      <td>Bobby K. Waddell (interim)</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="infobox-subheader">Personal details</td>
+    </tr>
+    <tr>
+      <td>Full name</td>
+      <td>Alfred L. Jones III</td>
+    </tr>
+    <tr>
+      <td>Born</td>
+      <td>c.&nbsp;1957, Appomattox County, Virginia</td>
+    </tr>
+    <tr>
+      <td>Spouse</td>
+      <td>Judy Faye Davis Jones (d. December 17, 2020)</td>
+    </tr>
+    <tr>
+      <td>Occupation</td>
+      <td>Minister; retired teacher; local historian</td>
+    </tr>
+    <tr>
+      <td>Religion</td>
+      <td>Christian (Evangelical/Independent)</td>
+    </tr>
+    <tr>
+      <td>District</td>
+      <td>Piney Mountain District, Appomattox County</td>
+    </tr>
+  </table>
+</div>
+
+<p><b>Alfred L. "Al" Jones III</b> (born c.&nbsp;1957) is an American minister, educator, local historian, and public official who has represented the Piney Mountain District on the Appomattox County Board of Supervisors since January 2022. Before his election to the Board of Supervisors, Jones served seven years on the <a href="Appomattox_County_School_Board_History.html">Appomattox County School Board</a> (2014&ndash;2021) as the Piney Mountain District's elected representative. A lifelong resident of Appomattox County, Jones is also the founder and senior pastor of Jesus Center Ministries in Appomattox and spent his professional career teaching social studies at <a href="Appomattox_County_High_School.html">Appomattox County High School</a>. He is widely known as a local historian of African American Civil War history, a body of research he has presented at the American Civil War Museum in Appomattox and shared through guided county tours.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_life">Early life and background</a></li>
+    <li><a href="#ministry_and_teaching">Ministry and teaching career</a>
+      <ol>
+        <li><a href="#jesus_center">Jesus Center Ministries</a></li>
+        <li><a href="#mission_empowerment">Mission Empowerment Group</a></li>
+        <li><a href="#teaching_career">Teaching career</a></li>
+      </ol>
+    </li>
+    <li><a href="#school_board">Appomattox County School Board (2014&ndash;2021)</a>
+      <ol>
+        <li><a href="#sb_service">Service and positions</a></li>
+        <li><a href="#sb_budget">Budget and funding advocacy</a></li>
+        <li><a href="#sb_resignation">Resignation</a></li>
+      </ol>
+    </li>
+    <li><a href="#board_of_supervisors">Appomattox County Board of Supervisors (2022&ndash;present)</a>
+      <ol>
+        <li><a href="#bos_election">Election and early tenure</a></li>
+        <li><a href="#bos_library">Library board controversy</a></li>
+        <li><a href="#bos_transparency">Transparency and governance</a></li>
+        <li><a href="#bos_vice_chair">Vice-chairmanship</a></li>
+      </ol>
+    </li>
+    <li><a href="#historical_research">African American history research and public education</a></li>
+    <li><a href="#community_service">Other community service</a></li>
+    <li><a href="#personal_life">Personal life</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="early_life">Early life and background</h2>
+
+<p>Alfred L. Jones III was born c.&nbsp;1957 in Appomattox County, Virginia, where he has lived throughout his life. Little has been reported in the public record about his early years or formal education, but by 2004 he was working simultaneously as a social studies teacher at <a href="Appomattox_County_High_School.html">Appomattox County High School</a> and as the senior pastor and founder of Jesus Center Ministries in Appomattox.<sup><a href="#ref1">[1]</a></sup> In a 2019 interview, he described himself as "a minister and retired social studies teacher."<sup><a href="#ref2">[2]</a></sup></p>
+
+<h2 id="ministry_and_teaching">Ministry and teaching career</h2>
+
+<h3 id="jesus_center">Jesus Center Ministries</h3>
+
+<p>Jones founded <b>Jesus Center Ministries</b> in Appomattox, an independent evangelical congregation of which he served as senior pastor for more than four decades. In 2022 he noted from the Board of Supervisors floor that he had "pastored for 40 years" in the community — a statement consistent with the ministry having been established in the early 1980s.<sup><a href="#ref3">[3]</a></sup> The church held a 62-acre site in Appomattox and operated buses for youth transportation, though Jones reported in 2004 that the vehicles "seem to stay in the shop more than on the road."<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Jones officiated at funerals, delivered revival sermons at other congregations, and was a guest speaker at churches throughout the region. In July 2014 he served as evangelist for Beautiful Zion Baptist Church's annual revival week, and in subsequent years was a guest at New Beginnings Ministry and Mt. Lyle Baptist Church revivals.<sup><a href="#ref4">[4]</a></sup> By 2022, press accounts described him as a "retired minister," though he continued to be referred to by the title "Reverend" in official Board of Supervisors proceedings.<sup><a href="#ref5">[5]</a></sup></p>
+
+<h3 id="mission_empowerment">Mission Empowerment Group</h3>
+
+<p>In 1990, Jones established the <b>Mission Empowerment Group</b> &mdash; also known as the First Youth Christian Church &mdash; as a community outreach arm of Jesus Center Ministries focused on at-risk youth and families in Appomattox and the surrounding region.<sup><a href="#ref1">[1]</a></sup> Jones described its mission as offering "Christian-based community service such as after-school programs, summer Christian day camps, and enrichment programs for youth," with the overarching goal of helping young people "come to know Jesus Christ" and "build strong families."<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>The Mission Empowerment Group ran a summer swimming program serving 60 to 80 children annually, offered Friday night basketball programs in the spring, and hosted youth classes on Christian values, education, alcohol and drug avoidance, and AIDS prevention.<sup><a href="#ref1">[1]</a></sup> Jones hoped to expand the program across the region, including into Lynchburg, Amherst, Buckingham, Nelson, Charlotte, and Campbell Counties, and aimed eventually to recruit "a thousand people in the region" as volunteers and supporters.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>A 1996 account published in the <i>Times-Virginian</i>'s "Looking Back" column described the Mission Empowerment Group as a "community service organization" and noted it had operated a House of Refuge, a halfway house for men in addiction recovery.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h3 id="teaching_career">Teaching career</h3>
+
+<p>Jones worked as a Social Studies teacher at <a href="Appomattox_County_High_School.html">Appomattox County High School</a>. The 2004 <i>Times-Virginian</i> profile describes him as holding this position concurrently with his pastoral duties, noting that he devoted considerable personal time beyond school hours to the Mission Empowerment Group.<sup><a href="#ref1">[1]</a></sup> By the time Jones began his public career in local government, he was widely referred to as a "retired" teacher, suggesting his departure from the classroom occurred sometime in the late 2000s or early 2010s.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>During his tenure on both the School Board and the Board of Supervisors, Jones frequently invoked his decades of educational experience. When a colleague questioned whether his prior School Board service would make him biased toward the school division, Jones responded from the supervisors' floor: "I have worked in this community for over 40 years helping the youth of this County. I have been heavily vested in helping the youth even before I was on the School Board."<sup><a href="#ref7">[7]</a></sup></p>
+
+<h2 id="school_board">Appomattox County School Board (2014&ndash;2021)</h2>
+
+<h3 id="sb_service">Service and positions</h3>
+
+<p>Jones was elected to represent the Piney Mountain District on the <b>Appomattox County School Board</b>, taking office on January 1, 2014.<sup><a href="#ref8">[8]</a></sup> He served with colleagues including Chairman Bobby Waddell, Vice-Chairman Greg Smith, and members Wyatt Torrence, Wes Williams, and Cindy Hall, under the superintendency of Dorinda Grasty and later Dr. Annette Bennett.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>In January 2015, Jones was appointed as the School Board's representative to the Appomattox County Educational Foundation Scholarship Committee, a position to which he was re-appointed in 2016 and again in 2019 when he was listed as "Rev. Al Jones III, representing the Piney Mountain District."<sup><a href="#ref10">[10]</a></sup> He also served on the joint School Board&ndash;Board of Supervisors committees that periodically reviewed school funding requests and capital improvement priorities.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>In February 2018, Appomattox County Public Schools publicly recognized Jones along with fellow board members for their "dedication and leadership" to the school division.<sup><a href="#ref9">[9]</a></sup></p>
+
+<h3 id="sb_budget">Budget and funding advocacy</h3>
+
+<p>During his time on the School Board, Jones was an active voice on questions of school finance and teacher compensation. In November 2014 he spoke in favor of teacher pay increases at a board meeting, encouraging community members to attend Board of Supervisors meetings to rally support for school funding.<sup><a href="#ref12">[12]</a></sup> The following year, Jones and fellow board member Wyatt Torrence expressed concern that demonstrating financial efficiency might paradoxically lead the Board of Supervisors to reduce future funding allocations, emphasizing "the need for continued county support and better communication between the School Board and Board of Supervisors."<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>In July 2014, when the School Board considered matching the Board of Supervisors' 20-percent pay reduction, Jones voted against cutting School Board compensation &mdash; not out of self-interest, he explained, but because such a reduction "sends the wrong message" about the value of public service. "I think it would have been better if we were included in this decision," said fellow board member Wes Williams, a sentiment Jones shared.<sup><a href="#ref14">[14]</a></sup> The board ultimately voted unanimously to reduce compensation when full attendance allowed a clear majority, with Jones joining the unanimous vote despite his earlier reservations.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>In April 2015, Jones argued at a joint board meeting that reduced county funding for the schools disproportionately harmed at-risk students, and he publicly supported an efficiency study funded by the Board of Supervisors as a path toward more equitable resource allocation.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h3 id="sb_resignation">Resignation</h3>
+
+<p>On April 29, 2021, Jones submitted his resignation from the Appomattox County School Board at that evening's regular monthly business meeting, effective immediately. His current term had been set to expire on December 31, 2021. Jones cited two factors: the strain of the COVID-19 pandemic and the death of his wife, Judy Faye Davis Jones, on December 17, 2020, after her battle with cancer; they had been married for 40 years.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>The School Board appointed Bobby Waddell &mdash; who had previously served 15 years as the Falling Creek District representative and resigned from that seat in November 2020 after relocating outside the district &mdash; as the interim Piney Mountain representative.<sup><a href="#ref17">[17]</a></sup> A special election was subsequently scheduled to fill the Piney Mountain School Board seat coinciding with the regular November 2021 elections.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="board_of_supervisors">Appomattox County Board of Supervisors (2022&ndash;present)</h2>
+
+<h3 id="bos_election">Election and early tenure</h3>
+
+<p>Jones ran for the Piney Mountain District seat on the Appomattox County Board of Supervisors in the November 2021 general election, running unopposed. The seat had been held for a single term by Watkins M. Abbitt Jr., who chose not to seek re-election following his own single term in office (Abbitt had himself served 26 years in the Virginia House of Delegates before his supervisor term).<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>Jones took office on January 1, 2022. At the January 3, 2022 organizational meeting of the Board of Supervisors, he was sworn in alongside his colleagues and the board voted to elect William Hogan as Vice-Chairman for the 2022 term.<sup><a href="#ref20">[20]</a></sup> At that same organizational meeting, Jones had previously been appointed &mdash; effective January 1, 2022 &mdash; to the Board's 2021 Redistricting Committee, a body tasked with reviewing and recommending district boundary adjustments following the 2020 Census.<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>He joined a board composed of Chairman Samuel E. Carter (Courthouse District), William H. Hogan (Appomattox River District), John F. Hinkle (Falling River District), and Trevor L. Hipps (Wreck Island District), with County Administrator Susan M. Adams and County Attorney Tom Lacheney serving the board.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h3 id="bos_library">Library board controversy (2023)</h3>
+
+<p>In June 2023, Jones voted with a 3&ndash;2 majority of the Board of Supervisors to remove the three remaining members of the J. Robert Jamerson Memorial Library Board of Trustees. The motion followed public comment from citizens objecting to LGBTQ-themed children's books and graphic novels in the Young Adult section of the library. County Attorney Tom Lacheney advised that removal could proceed under state law on grounds of misconduct or neglect of duty.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>At the July 2023 board meeting, Jones attempted to reverse part of that decision. He made a motion to reinstate Joetricia Humbles, the Piney Mountain District appointee who had been removed and not reinstated, a move that would have required displacing the newly appointed replacement. While no second was made on the motion, Jones used the occasion to explain his changed position. He acknowledged that his vote the previous month had been "poor governance," taken too hastily without adequate investigation. Upon further research, he said, he had found a Virginia state code exemption that permits public libraries to distribute materials that would otherwise be restricted under general obscenity statutes.<sup><a href="#ref23">[23]</a></sup></p>
+
+<blockquote>"I believe both he and the Appomattox County Board of Supervisors acted hastily in voting for the library board's removal in June without having further investigation and discussion before taking a final vote at a later date."<sup><a href="#ref23">[23]</a></sup></blockquote>
+
+<p>Jones was careful to note that his personal moral conviction remained unchanged &mdash; that explicit materials should not be accessible to minors in a public library &mdash; but that Virginia law as written did not support the board's removal action. The board subsequently directed County Attorney Lacheney to draft a resolution expanding the library board, creating room for Humbles to potentially be reinstated without removing an existing member. In September 2023, Jones nominated Madeline Abbitt to represent the Piney Mountain District on the library board after Nancy Jo Billings resigned due to work schedule conflicts; the nomination was approved 3&ndash;2.<sup><a href="#ref24">[24]</a></sup></p>
+
+<h3 id="bos_transparency">Transparency and governance (2024)</h3>
+
+<p>In February 2024, following the dismissal of Bobby Wingfield, Appomattox County's long-serving director of public safety, Jones spoke extensively at the regular board meeting criticizing the process by which the personnel decision had been made. Six citizens had already voiced opposition in public comment. Jones, serving as Vice-Chairman, called for greater procedural transparency, demanding that significant decisions be preceded by full board deliberation rather than being presented for an on-the-spot vote.</p>
+
+<blockquote>"I felt like the decision had already been made, and as a board member no one contacted me, nobody had a conversation with me. I want to know how we're going to operate&hellip;I don't want to come to a board meeting, and out of nowhere I find out that a long-term employee is gonna be terminated, and that decision has to be made on the night of the meeting."<sup><a href="#ref25">[25]</a></sup></blockquote>
+
+<p>Jones also defended County Administrator Susan Adams, who had been publicly blamed for the Wingfield dismissal. He argued that it was "unfair for Miss Adams to take the fall" for a decision that rested with the board, and he called for roll call votes on personnel matters "so that the public ought to know what people's positions are."<sup><a href="#ref25">[25]</a></sup> Addressing Chairman John Hinkle, he invoked the "Appomattox way" of inclusive local governance: "I don't know much about politics, I pastored for 40 years but I believe in this community."<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>Earlier in 2024, Jones was one of two supervisors &mdash; along with Samuel Carter &mdash; to vote in favor of continued county funding for the American Civil War Museum at Appomattox, when three colleagues voted to cut the museum's $15,000 annual allocation from the fiscal year 2025 budget. Bill Jamerson, chairman of the ACWM fundraising committee, subsequently appeared before the board to ask for reconsideration.<sup><a href="#ref26">[26]</a></sup></p>
+
+<h3 id="bos_vice_chair">Vice-chairmanship</h3>
+
+<p>At the January 2, 2024 organizational meeting of the Board of Supervisors, Jones was elected Vice-Chairman for the 2024&ndash;2025 period by unanimous vote of the full board.<sup><a href="#ref27">[27]</a></sup> In this capacity he presided over meetings in the chairman's absence, conducted roll call votes, and was formally addressed as "Rev. Jones" in official minutes. He remained in the vice-chair role as of the board's regular scheduled meetings through mid-2024.<sup><a href="#ref28">[28]</a></sup></p>
+
+<h2 id="historical_research">African American history research and public education</h2>
+
+<p>Alongside his ministerial and governmental roles, Jones has pursued an extensive program of original historical research focused on African Americans in Appomattox County before, during, and after the Civil War. He described himself to the <i>Times-Virginian</i> in 2019 as a "minister and retired social studies teacher" who was actively researching and writing a book about "the stories of African American men, women, and children during the Civil War and emancipation period."<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>In December 2015 he presented a talk titled "The Civil War Amendments" &mdash; covering the 13th, 14th, and 15th Amendments &mdash; at the Museum of the Confederacy&ndash;Appomattox.<sup><a href="#ref29">[29]</a></sup> In February 2018 he spoke to students at Appomattox Middle School for Black History Month, discussing slavery, the Civil War, and stories from local African American history, including Pink McKinney, a freed slave who returned to Appomattox with his former owner, and Millie Craig, a woman who saved her owner's baby during the Battle of Appomattox Court House.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>In early 2021, Jones designed and curated an exhibit of portraits and biographical accounts of African Americans who held roles "in both the background and foreground of American history from 1865 to the civil rights era," which was displayed at the American Civil War Museum in Appomattox. Press accounts described him as the founder of the <b>Appomattox Black Civil War Legacy Museum</b>.<sup><a href="#ref31">[31]</a></sup> In April 2021, he participated as a panelist in a virtual discussion titled "Legacies of Appomattox," co-hosted by the National Historical Park and the American Civil War Museum, alongside historian Patrick Schroeder and exhibits curator Chris Graham.<sup><a href="#ref32">[32]</a></sup></p>
+
+<p>Jones also worked to secure placement of a portrait of Honorable James William D. Bland &mdash; a notable African American figure in local history &mdash; in the Appomattox County Courthouse, and planned to feature Bland's story in his forthcoming book.<sup><a href="#ref33">[33]</a></sup></p>
+
+<p>By 2024, Jones had developed a guided tour program titled <b>"Appomattox Tours in Black-White-Blue &amp; Gray,"</b> through which he shared his research on African American Civil War history with visitors and community members. The tours covered "the history, genealogy, and impact of former slaves and their ancestors in Appomattox county just before, during and after the Civil War."<sup><a href="#ref34">[34]</a></sup> A fellow supervisor described Jones in a 2024 column as "a man who loves history" and noted that "our county is the better for it because Rev. Jones loves to share what he finds."<sup><a href="#ref34">[34]</a></sup></p>
+
+<p>In April 2023, Jones presented a talk titled "Neither Slave, Nor Free: Voices of the Almost Emancipated of Appomattox" at the American Civil War Museum's annual Commemoration of the Surrender &amp; Freedom Day events.<sup><a href="#ref35">[35]</a></sup></p>
+
+<h2 id="community_service">Other community service</h2>
+
+<p>Jones officiated at memorial services and other events across the county, including community vigils and public ceremonies. In October 2022, he offered prayers at the annual Domestic Violence Awareness Month candlelight vigil at Courtland Park in Appomattox, co-officiated with Appomattox County Sheriff's Office Deputy Josh Davis.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>Jones participated in the first Juneteenth celebration held in Appomattox, which took place at Abbitt Park on Main Street in June 2020. The event, organized by Appomattox for Equality, also featured Dr. Cameron Webb, a candidate for Virginia's 5th Congressional District seat, and author Ken Woodley.<sup><a href="#ref36">[36]</a></sup></p>
+
+<h2 id="personal_life">Personal life</h2>
+
+<p>Jones was married to Judy Faye Davis Jones for 40 years. She died on December 17, 2020, after a battle with cancer. Jones cited her death as one of two primary reasons for his resignation from the Appomattox County School Board in April 2021, the other being the strains of the COVID-19 pandemic.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>Jones has lived in the Piney Mountain District of Appomattox County throughout his adult life. He has been an active community presence for decades, balancing pastoral leadership, classroom teaching, historical research, and elected public service simultaneously.</p>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Mission Empowerment to spend summer helping at-risk kids," <i>Times-Virginian</i>, July 21, 2004.</li>
+    <li id="ref2">"Reverend Jones researching African American Civil War stories," <i>Times-Virginian</i>, January 11, 2019; via responses.db.</li>
+    <li id="ref3">Appomattox County Board of Supervisors meeting minutes, February 7, 2022; BOS minutes book 26, plate 291, corpus 20190916-20251007.</li>
+    <li id="ref4">"Beautiful Zion Baptist Church Annual Revival," <i>Times-Virginian</i>, July 16, 2014; "Beautiful Zion Church to Host Annual Revival Week," July 23, 2014; "Beautiful Zion Baptist Church to Host Annual Revival," July 30, 2014; via responses.db.</li>
+    <li id="ref5">"Domestic violence victims honored at Appomattox vigil," <i>Times-Virginian</i>, November 3, 2022.</li>
+    <li id="ref6">"Looking Back," <i>Times-Virginian</i>, March 9, 2021 (referencing 25-year-old archive from c. 1996).</li>
+    <li id="ref7">Appomattox County Board of Supervisors regular meeting minutes, February 7, 2022; BOS minutes book 26, plate 291, corpus 20190916-20251007.</li>
+    <li id="ref8">"Rev. Al Jones resigns from Appomattox County School Board," <i>Times-Virginian</i>, April 29, 2021.</li>
+    <li id="ref9">"Appomattox County Public Schools Thanks School Board Members," <i>Times-Virginian</i>, February 11, 2018; via responses.db.</li>
+    <li id="ref10">"Alfred Jones Appointed to Scholarship Committee," <i>Times-Virginian</i>, January 14, 2015; "Alfred Jones III Appointed to Appomattox County Educational Foundation Scholarship Committee," January 16, 2016; "Scholarship Committee Representative Re-appointed," January 18, 2019; via responses.db.</li>
+    <li id="ref11">Appomattox County Board of Supervisors joint meeting with School Board minutes, February 11, 2021 and April 12, 2021; BOS minutes book 26, plates 149 and 172, corpus 20190916-20251007.</li>
+    <li id="ref12">"Al Jones supports teacher pay increases and community involvement," <i>Times-Virginian</i>, November 19, 2014; via responses.db.</li>
+    <li id="ref13">"Concerns Raised About School Budget and Funding," <i>Times-Virginian</i>, November 18, 2015; via responses.db.</li>
+    <li id="ref14">"School Board split on vote to cut own pay," <i>Times-Virginian</i>, July 30, 2014.</li>
+    <li id="ref15">"Reluctant School Board votes itself paycut," <i>Times-Virginian</i>, August 20, 2014.</li>
+    <li id="ref16">"Appomattox School Board Member links funding to at-risk students," <i>Times-Virginian</i>, April 29, 2015; via responses.db.</li>
+    <li id="ref17">"Bobby Waddell back on Appomattox County School Board," <i>Times-Virginian</i>, May 28, 2021.</li>
+    <li id="ref18">"Alfred Jones III Resigned from Appomattox County School Board in April," <i>Times-Virginian</i>, May 28, 2021; "Special election planned for Piney Mountain School Board seat," <i>Times-Virginian</i>, June 17, 2021; via responses.db.</li>
+    <li id="ref19">"Appomattox Co. election features Courthouse District showdown," <i>Times-Virginian</i>, November 1, 2021; "Piney Mountain District Supervisor Race Uncontested," via responses.db, November 1, 2021.</li>
+    <li id="ref20">Appomattox County Board of Supervisors organizational meeting minutes, January 3, 2022; BOS minutes book 26, plates 275&ndash;276, corpus 20190916-20251007.</li>
+    <li id="ref21">Appomattox County Board of Supervisors meeting minutes, November 15, 2021 (redistricting committee appointment); BOS minutes book 26, plate 265, corpus 20190916-20251007.</li>
+    <li id="ref22">"(Updated) Board of Supervisors votes to remove library board members over concerns of explicit material and LGBTQ children's books," <i>Times-Virginian</i>, June 21, 2023.</li>
+    <li id="ref23">"Appomattox library board removal revisited at county supervisors meeting; expansion of library board possible," <i>Times-Virginian</i>, July 18, 2023.</li>
+    <li id="ref24">"Abbitt appointed to Appomattox library board," <i>Times-Virginian</i>, September 29, 2023.</li>
+    <li id="ref25">"Additional notes on Feb. 20 BOS meeting: Jones asks for clarification, defends county administrator," <i>Times-Virginian</i>, February 28, 2024.</li>
+    <li id="ref26">"Supervisors asked to reconsider denial of Civil War Museum funding," <i>Times-Virginian</i>, April 3, 2024.</li>
+    <li id="ref27">Appomattox County Board of Supervisors organizational meeting minutes, January 2, 2024; BOS minutes book 26, plate 755, corpus 20190916-20251007.</li>
+    <li id="ref28">Appomattox County Board of Supervisors regular scheduled meeting minutes, May 20, 2024; BOS minutes book 26, plates 654&ndash;661, corpus 20190916-20251007.</li>
+    <li id="ref29">"Civil War Amendments Talk at Museum of the Confederacy-Appomattox," <i>Times-Virginian</i>, December 9, 2015; via responses.db.</li>
+    <li id="ref30">"Rev. Alfred Jones III addresses AMS students for Black History Month," <i>Times-Virginian</i>, March 2, 2018; "Reverend Jones shares local Civil War era stories," March 2, 2018; via responses.db.</li>
+    <li id="ref31">"From Civil War to Civil Rights: Local historian showcases African American exhibit," <i>Times-Virginian</i>, March 31, 2021.</li>
+    <li id="ref32">"156th Surrender Anniversary updates McLean House and park open, other events virtual," <i>Times-Virginian</i>, April 1, 2021.</li>
+    <li id="ref33">"Reverend Jones seeks portrait for Appomattox County Courthouse," <i>Times-Virginian</i>, January 11, 2019; via responses.db.</li>
+    <li id="ref34">"Appomattox Insights: Appomattox Tours in Black-White-Blue &amp; Gray," <i>Times-Virginian</i>, July 12, 2024; "Rev. Al Jones Develops Appomattox Tours in Black-White-Blue &amp; Gray," via responses.db, July 12, 2024.</li>
+    <li id="ref35">"Appomattox ACWM Surrender Commemoration held over weekend," <i>Times-Virginian</i>, April 10, 2023.</li>
+    <li id="ref36">"Appomattox Holds First Juneteenth Celebration," <i>Times-Virginian</i>, June 19, 2020; "Appomattox for Equality hosted Juneteenth celebration," September 17, 2020; via responses.db.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul D. Harvey — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Paul D. Harvey</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Dr. Paul Douglas Harvey, DDS</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Mayor of Appomattox</td></tr>
+    <tr><td>In office</td><td>2008&ndash;2020</td></tr>
+    <tr><td>Preceded by</td><td>John Wilson</td></tr>
+    <tr><td>Succeeded by</td><td>Richard C. Conner</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Appomattox Town Council</td></tr>
+    <tr><td>In office</td><td>2020</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Full name</td><td>Paul Douglas Harvey</td></tr>
+    <tr><td>Born</td><td>c.&nbsp;1952</td></tr>
+    <tr><td>Died</td><td>October&nbsp;19, 2020 (aged&nbsp;68)<br>Appomattox, Virginia</td></tr>
+    <tr><td>Profession</td><td>Dentist (DDS)</td></tr>
+    <tr><td>Practice</td><td>Appomattox Family Dentistry</td></tr>
+    <tr><td>Residence</td><td>168 First Street, Appomattox</td></tr>
+  </table>
+</div>
+
+<!-- LEAD PARAGRAPH -->
+<p><b>Paul Douglas Harvey</b>, DDS (c.&nbsp;1952&nbsp;&ndash; October&nbsp;19, 2020) was an American dentist and politician who served as <b>Mayor of the Town of Appomattox</b>, Virginia, for twelve consecutive years from 2008 to 2020. He was the longest-serving Appomattox mayor of the modern era. A champion of the controversial <a href="Appomattox_Water_System_History.html">U.S. 460 waterline project</a> and the creator of <b>Courtland Festival Park</b>, Harvey reshaped the town&rsquo;s infrastructure and civic life during a period of significant change. He was elected to the Town Council in May 2020 after choosing not to seek a fifth term as mayor, but died five months later at the age of 68.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup></p>
+
+<p>Harvey&rsquo;s death prompted an outpouring of community tributes, including resolutions from the Appomattox County Board of Supervisors and the Virginia House of Delegates, a celebration of life attended by approximately two hundred people at Courtland Festival Park, a park bench dedication, and the naming of an annual memorial golf tournament in his honor.<sup><a href="#ref3">[3]</a></sup><sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup></p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_life">Early life and dental career</a></li>
+    <li><a href="#mayoral_tenure">Mayoral tenure (2008&ndash;2020)</a>
+      <ol>
+        <li><a href="#election_2008">2008 election</a></li>
+        <li><a href="#waterline">The waterline campaign</a></li>
+        <li><a href="#election_2010">2010 re-election</a></li>
+        <li><a href="#later_terms">Later terms (2012&ndash;2020)</a></li>
+        <li><a href="#courtland_park">Courtland Festival Park</a></li>
+        <li><a href="#tornado">2016 tornado response</a></li>
+        <li><a href="#other_initiatives">Other initiatives</a></li>
+      </ol>
+    </li>
+    <li><a href="#town_council">Town Council (2020)</a></li>
+    <li><a href="#electoral_history">Electoral history</a></li>
+    <li><a href="#community_service">Community and charitable service</a></li>
+    <li><a href="#death_and_legacy">Death and legacy</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="early_life">Early life and dental career</h2>
+
+<p>Paul Douglas Harvey earned his Doctor of Dental Surgery (DDS) degree and established a dental practice, Paul Harvey DDS, initially in Midlothian, Virginia. He relocated the practice to the Town of Appomattox in 2000, where it operated as <b>Appomattox Family Dentistry</b>. Harvey became a registered voter in Appomattox the same year and resided at 168 First Street.<sup><a href="#ref6">[6]</a></sup><sup><a href="#ref7">[7]</a></sup></p>
+
+<p>In addition to his private practice, Harvey volunteered annually at the Bland Ministry Center Dental Clinic through the Appomattox Baptist Association, providing free dental services to underserved patients in Bland County. The association publicly thanked him on multiple occasions for his donated expertise.<sup><a href="#ref8">[8]</a></sup><sup><a href="#ref9">[9]</a></sup></p>
+
+<p>Following Harvey&rsquo;s death in October 2020, Dr. Donald Murry Jr., a semi-retired dentist from Midlothian, arrived the next day to help maintain the practice and care for Harvey&rsquo;s patients. Murry&rsquo;s sons, Dr. Donald Murry III and Dr. Ken Murry, along with associate Dr. Todd Kuhn, subsequently joined the practice.<sup><a href="#ref10">[10]</a></sup></p>
+
+<h2 id="mayoral_tenure">Mayoral tenure (2008&ndash;2020)</h2>
+
+<h3 id="election_2008">2008 election</h3>
+
+<p>Harvey entered the 2008 mayoral race against incumbent mayor <b>John Wilson</b>. The campaign focused heavily on whether the Town of Appomattox should cooperate with Appomattox County on a proposed waterline from Concord, with Harvey supporting the project and Wilson opposing it. During the campaign, Harvey&rsquo;s residency in Appomattox became a point of contention; opponents alleged he only spent limited time in the town. Supporters, including the county voter registrar, publicly affirmed that Harvey resided and worked full-time in Appomattox.<sup><a href="#ref7">[7]</a></sup><sup><a href="#ref11">[11]</a></sup></p>
+
+<p>Harvey won on May 6, 2008, defeating Wilson by a margin of thirteen votes, 202 to 189. The Clerk of the Appomattox Circuit Court, Barbara Williams, swore him in as mayor.<sup><a href="#ref12">[12]</a></sup><sup><a href="#ref13">[13]</a></sup> The narrow outcome was widely interpreted as a mandate on the waterline question.</p>
+
+<h3 id="waterline">The waterline campaign</h3>
+
+<p>The <a href="Appomattox_Water_System_History.html">waterline issue</a> dominated Harvey&rsquo;s first two terms. The Town of Appomattox relied on wells that produced corrosive water with elevated copper and zinc levels, leading to consent orders from the Virginia Department of Environmental Quality (DEQ). Harvey consistently argued that connecting to a county waterline sourced from the Otter River would solve these quality problems, reduce monthly water bills, attract businesses, and support long-term growth.<sup><a href="#ref14">[14]</a></sup><sup><a href="#ref15">[15]</a></sup></p>
+
+<p>The issue divided the Town Council. Council members John &ldquo;Plicky&rdquo; Williams, Bryan Baine, Karl &ldquo;Toots&rdquo; Carter, and Jennifer Jamerson-Scruggs were skeptical of the project, while Norman H. &ldquo;Jimmy&rdquo; Mayberry and Lewis McDearmon aligned with Harvey in support.<sup><a href="#ref16">[16]</a></sup> Harvey publicly criticized the Council&rsquo;s tone in letters to the County Board of Supervisors, stating that the town should pursue a partnership or, failing that, become a customer of the county water system.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>Harvey signed a consent order with the DEQ on behalf of the Town to address elevated zinc levels at the SBR wastewater treatment plant and repeatedly submitted proposals to the County detailing the Town&rsquo;s desired terms for participation in the waterline project.<sup><a href="#ref18">[18]</a></sup><sup><a href="#ref19">[19]</a></sup> He also advocated for extending the waterline down Police Tower Road, citing cheaper bidding prices and future development potential, though the County repeatedly rejected the proposal.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h3 id="election_2010">2010 re-election</h3>
+
+<p>Harvey faced John Wilson again in the May 2010 mayoral race. The campaign was once more a referendum on the waterline, with a coordinated slate of pro-waterline council candidates endorsed alongside Harvey by Virginia Delegate Watkins M. Abbitt. Numerous letters to the editor urged support for Harvey, praised his leadership style, and defended his residency and work ethic against continued attacks.<sup><a href="#ref21">[21]</a></sup><sup><a href="#ref22">[22]</a></sup></p>
+
+<p>Harvey won decisively, defeating Wilson by a margin of nearly two to one, 279 to 156.<sup><a href="#ref23">[23]</a></sup> All six pro-waterline council candidates also won their seats. Shortly after the new council was seated, the body voted to cooperate with Appomattox County on a $5.6&nbsp;million waterline agreement, and Harvey was authorized to execute a water purchase contract with the County Board of Supervisors.<sup><a href="#ref24">[24]</a></sup><sup><a href="#ref25">[25]</a></sup></p>
+
+<h3 id="later_terms">Later terms (2012&ndash;2020)</h3>
+
+<p>Harvey ran unopposed in both 2012 and 2016, receiving 132 and 55 votes respectively.<sup><a href="#ref26">[26]</a></sup><sup><a href="#ref27">[27]</a></sup> With the waterline question resolved, his later terms focused on sewer infrastructure, boundary line adjustments with the county, economic development, and community programming. He pushed for a sewer system upgrade estimated at $2.3&nbsp;million, funded in part through proposed boundary adjustments that would expand the town&rsquo;s revenue base along the U.S. 460 corridor.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>Harvey also presided over the town&rsquo;s first vision process meeting, where approximately twenty-five citizens participated in a facilitated discussion about the town&rsquo;s direction through 2025.<sup><a href="#ref29">[29]</a></sup> He reported reducing town spending by twenty-three percent through cuts to legal and engineering fees and greater reliance on town staff for projects.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>In January 2020, Harvey announced that he would not seek a fifth term as mayor but planned to run for a Town Council seat instead, stating he wished to continue serving the town in a different capacity after twelve years in the mayor&rsquo;s office.<sup><a href="#ref31">[31]</a></sup></p>
+
+<h3 id="courtland_park">Courtland Festival Park</h3>
+
+<p><b>Courtland Festival Park</b> became Harvey&rsquo;s signature accomplishment and most visible legacy. He described the park as a personal &ldquo;pet project&rdquo; and oversaw its development during his tenure as mayor. The park, located near Court Street and Highland Avenue, hosted community events, concerts, and festivals, including the annual <b>Historic Appomattox Railroad Festival</b>. Harvey served on the Courtland Park Foundation board alongside County Administrator Susan Adams and organized annual events featuring vendors, music, and stage performances.<sup><a href="#ref32">[32]</a></sup><sup><a href="#ref33">[33]</a></sup></p>
+
+<p>Harvey also served as president of the Railroad Festival Board of Directors after the resignation of Tony Clifton, guiding the annual festival through organizational challenges.<sup><a href="#ref34">[34]</a></sup> After his death, the park became the site of his celebration of life service, a dedicated memorial bench, and annual stew fundraisers and golf tournaments held in his memory.<sup><a href="#ref3">[3]</a></sup><sup><a href="#ref5">[5]</a></sup></p>
+
+<h3 id="tornado">2016 tornado response</h3>
+
+<p>On February&nbsp;24, 2016, an EF-3 tornado struck Appomattox County, causing significant damage to homes and property across the area. Harvey was singled out by the Appomattox County Board of Supervisors for providing calm and strong leadership during the aftermath, spending days without rest while representing the town and its citizens. The Board presented a resolution honoring both Harvey and Gene Stewart, the Regional Coordinator of the Virginia Department of Emergency Management, for their leadership during the disaster.<sup><a href="#ref35">[35]</a></sup></p>
+
+<h3 id="other_initiatives">Other initiatives</h3>
+
+<p>Throughout his twelve years as mayor, Harvey was involved in a wide range of civic issues. He supported the arrival of Walmart, viewing it as an asset that would increase the local tax base and provide convenient access for elderly and retired citizens.<sup><a href="#ref36">[36]</a></sup> He opposed a proposed 380-foot Sweet Briar College radio tower on Tower Hill Road, describing it as an eyesore near the Appomattox Station Battlefield and the Museum of the Confederacy.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>Harvey endorsed a landscaping ordinance for businesses, advocated for cooperation with the county on an animal control officer, proclaimed February&nbsp;22 as &ldquo;Invest in Kids Day&rdquo; in support of early childhood programs, led the town&rsquo;s first Arbor Day celebration as a Tree City, and explored the creation of a joint Economic Development Authority with Appomattox County.<sup><a href="#ref38">[38]</a></sup><sup><a href="#ref39">[39]</a></sup><sup><a href="#ref40">[40]</a></sup> He also championed the train depot&rsquo;s revitalization, describing it as a potential focal point for downtown that could enhance its historic value, a cause later taken up by council member <a href="Nathan_A_Simpson.html">Nathan A. Simpson</a>.<sup><a href="#ref41">[41]</a></sup></p>
+
+<p>In June 2020, Harvey commended a Black Lives Matter event held at the Appomattox Courthouse, describing it as well-conducted and peaceful, and praised both the organizers and the sheriff&rsquo;s department for ensuring the event&rsquo;s orderly nature.<sup><a href="#ref42">[42]</a></sup></p>
+
+<h2 id="town_council">Town Council (2020)</h2>
+
+<p>Harvey was elected to the Appomattox Town Council on May&nbsp;19, 2020, alongside five other candidates. Mayor Richard Conner appointed him to the <b>Finance Committee</b> and the <b>Planning Commission</b>. Council member Timothy Garrett presented Harvey with a plaque in appreciation for his twelve years of service as mayor.<sup><a href="#ref43">[43]</a></sup><sup><a href="#ref44">[44]</a></sup><sup><a href="#ref45">[45]</a></sup></p>
+
+<p>During his brief time on Council, Harvey suggested inviting B2X Online to present a town-wide internet solution, building on the company&rsquo;s recent pitch to the County Board of Supervisors. He also participated in discussions about the skateboard ordinance alongside fellow new council member <a href="Nathan_A_Simpson.html">Nathan Simpson</a>.<sup><a href="#ref46">[46]</a></sup></p>
+
+<p>Harvey died on October&nbsp;19, 2020, approximately five months after taking his council seat. James J. Boyce Sr. was subsequently appointed to fill the vacancy.<sup><a href="#ref47">[47]</a></sup></p>
+
+<h2 id="electoral_history">Electoral history</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th><th>Office</th><th>Result</th><th>Opponent</th><th>Vote</th>
+  </tr>
+  <tr>
+    <td>2008</td>
+    <td>Mayor</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>John Wilson (incumbent)</td>
+    <td>202&ndash;189</td>
+  </tr>
+  <tr>
+    <td>2010</td>
+    <td>Mayor</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>John Wilson</td>
+    <td>279&ndash;156</td>
+  </tr>
+  <tr>
+    <td>2012</td>
+    <td>Mayor</td>
+    <td style="color:green;font-weight:bold;">Won (unopposed)</td>
+    <td>&mdash;</td>
+    <td>132</td>
+  </tr>
+  <tr>
+    <td>2016</td>
+    <td>Mayor</td>
+    <td style="color:green;font-weight:bold;">Won (unopposed)</td>
+    <td>&mdash;</td>
+    <td>55</td>
+  </tr>
+  <tr>
+    <td>2020</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>(multi-seat; elected as one of six)<sup><a href="#ref43">[43]</a></sup></td>
+    <td>&mdash;</td>
+  </tr>
+</table>
+
+<h2 id="community_service">Community and charitable service</h2>
+
+<p>Harvey was active in community organizations throughout his time in Appomattox. He served on the <b>Courtland Park Foundation</b> board, led the <b>Historic Appomattox Railroad Festival Board of Directors</b> as president, and participated in multiple charitable events. He organized an annual Brunswick stew fundraiser at his dental office to benefit Brothers In Arms, a nonprofit assisting first responders, with family members helping at each event.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>Harvey volunteered annually with the Appomattox Baptist Association on dental mission trips to Bland County, providing free dental care to underserved communities.<sup><a href="#ref8">[8]</a></sup> He also donated to the American Legion Auxiliary&rsquo;s &ldquo;Boxes for the Military&rdquo; program and participated in the annual Tour of Homes event, where his office displayed a Dickens Village collection during the Christmas season.<sup><a href="#ref49">[49]</a></sup><sup><a href="#ref50">[50]</a></sup></p>
+
+<h2 id="death_and_legacy">Death and legacy</h2>
+
+<p>Harvey died on October&nbsp;19, 2020, at the age of sixty-eight. His passing came during the COVID-19 pandemic, which shaped the memorial events that followed.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>A celebration of life service was held on October&nbsp;22, 2020, at Courtland Festival Park&mdash;the park Harvey had championed as his signature mayoral project. Approximately two hundred people attended, with tributes from family and friends, music, and prayer. Attendees were asked to bring lawn chairs, wear masks, and practice social distancing.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>At the October&nbsp;10, 2020 meeting of the Appomattox County Board of Supervisors, Supervisor Watkins Abbitt suggested a moment of honor for Harvey. The Board subsequently passed a formal resolution honoring his service, and Delegate Matt Fariss presented a resolution from the Virginia House of Delegates on behalf of the General Assembly.<sup><a href="#ref4">[4]</a></sup><sup><a href="#ref51">[51]</a></sup> Mayor Richard Conner formally recognized Harvey&rsquo;s contributions at a Town Council meeting, describing him as a gentleman whose goals the council would strive to continue achieving.<sup><a href="#ref52">[52]</a></sup></p>
+
+<p>Harvey&rsquo;s legacy continued through multiple memorial events in the following years. The 2021 Historic Appomattox Railroad Festival was dedicated to his memory, with a ceremony honoring his contributions to the town and a park bench dedicated at the corner of Court Street and Highland Avenue.<sup><a href="#ref5">[5]</a></sup><sup><a href="#ref53">[53]</a></sup> The inaugural <b>Paul Harvey Open</b> golf tournament was held at Falling River Country Club on October&nbsp;23, 2021, raising $10,500 for the Courtland Festival Park Foundation. The tournament became an annual event, with proceeds supporting both park maintenance and a scholarship at Appomattox County High School.<sup><a href="#ref54">[54]</a></sup><sup><a href="#ref55">[55]</a></sup> The Harvey family also continued his tradition of stew fundraisers at Courtland Park, selling out over two hundred quarts at a single event.<sup><a href="#ref56">[56]</a></sup></p>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">&ldquo;Appomattox Mayor Dr. Paul Harvey passes away,&rdquo; <i>Times-Virginian</i>, October&nbsp;19, 2020. (via responses.db)</li>
+    <li id="ref2">&ldquo;Dr. Paul Harvey Served 12 Years as Mayor of Appomattox,&rdquo; <i>Times-Virginian</i>, October 2020. (via responses.db)</li>
+    <li id="ref3">&ldquo;Celebration of Life Service for Dr. Paul Douglas Harvey Held,&rdquo; <i>Times-Virginian</i>, October 2020. Approximately 200 attendees at Courtland Festival Park. (via responses.db)</li>
+    <li id="ref4">&ldquo;Tribute paid to late Town Council member Harvey,&rdquo; <i>Times-Virginian</i>, October&nbsp;10, 2020. Supervisor Abbitt moment of honor. (via responses.db)</li>
+    <li id="ref5">&ldquo;Appomattox Historic Railroad Festival Dedicated to Dr. Paul Harvey,&rdquo; <i>Times-Virginian</i>, October 2021. Park bench dedication ceremony. (via responses.db)</li>
+    <li id="ref6">&ldquo;Paul Harvey DDS Practice Moved to Appomattox in 2000,&rdquo; <i>Times-Virginian</i>, October 2020. Obituary detail. (via responses.db)</li>
+    <li id="ref7">&ldquo;Paul Harvey&rsquo;s Residence Affirmed,&rdquo; <i>Times-Virginian</i>, 2008. Nina Beasley affirmed residency at 168 First Street since 2000. (via responses.db)</li>
+    <li id="ref8">&ldquo;Dr. Paul Harvey provided free dental services on mission trip,&rdquo; <i>Times-Virginian</i>, c.&nbsp;2010. Appomattox Baptist Association, Bland County. (via responses.db)</li>
+    <li id="ref9">&ldquo;Appreciation for Dr. Paul Harvey&rsquo;s Expertise in Bland County,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref10">&ldquo;Dr. Donald Murry Jr. Assists Appomattox Family Dentistry After Dr. Harvey&rsquo;s Death,&rdquo; <i>Times-Virginian</i>, October 2020. (via responses.db)</li>
+    <li id="ref11">&ldquo;Allegations of Mayor Harvey&rsquo;s absence refuted,&rdquo; <i>Times-Virginian</i>, 2008&ndash;2010 campaign period. (via responses.db)</li>
+    <li id="ref12">&ldquo;Paul Harvey elected Mayor of Appomattox,&rdquo; <i>Times-Virginian</i>, May 2008. Won 202&ndash;189. (via responses.db)</li>
+    <li id="ref13">&ldquo;Paul Harvey sworn in as new Mayor of Appomattox,&rdquo; <i>Times-Virginian</i>, 2008. (via responses.db)</li>
+    <li id="ref14">&ldquo;Mayor Paul Harvey supports waterline project,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref15">&ldquo;Mayor Harvey expresses long-term water concerns,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref16">Council positions on waterline: Williams, Baine, Carter, and Jamerson-Scruggs skeptical; Mayberry and McDearmon supportive. <i>Times-Virginian</i>, c.&nbsp;2009. (via responses.db)</li>
+    <li id="ref17">&ldquo;Mayor Harvey criticizes Council tone in waterline letters,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref18">&ldquo;Mayor Harvey on DEQ consent order for high copper levels,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref19">&ldquo;Appomattox Mayor Harvey sends waterline proposal to County,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref20">County rejects Police Tower Road waterline extension. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref21">&ldquo;Del. Abbitt endorses Mayor Harvey and five Town Council candidates,&rdquo; <i>Times-Virginian</i>, 2010. (via responses.db)</li>
+    <li id="ref22">Multiple letters to the editor defending Harvey&rsquo;s character, residency, and leadership, <i>Times-Virginian</i>, 2008&ndash;2010. (via responses.db)</li>
+    <li id="ref23">&ldquo;Paul Harvey wins Appomattox mayoral race, defeats John Wilson,&rdquo; <i>Times-Virginian</i>, May 2010. Vote: 279&ndash;156. (via responses.db)</li>
+    <li id="ref24">Waterline supporters swept May 2010 elections. <i>Times-Virginian</i>. Council subsequently voted to cooperate on $5.6M waterline agreement. (via responses.db)</li>
+    <li id="ref25">Town Council authorized Mayor Harvey to execute water purchase contract with County Board. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref26">&ldquo;Appomattox Mayor Paul Harvey Re-elected,&rdquo; <i>Times-Virginian</i>, 2012. Unopposed, 132 votes. (via responses.db)</li>
+    <li id="ref27">&ldquo;Paul Harvey re-elected Appomattox Mayor,&rdquo; <i>Times-Virginian</i>, 2016. Unopposed, 55 votes. (via responses.db)</li>
+    <li id="ref28">Harvey letter detailing $2.3M sewer system upgrade and boundary line adjustment proposal. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref29">Town of Appomattox first vision process meeting, ~25 citizens. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref30">Harvey reported 23% spending reduction. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref31">&ldquo;Dr. Paul Harvey will not run for re-election as mayor,&rdquo; <i>Times-Virginian</i>, January 2020. Plans to seek council seat. (via responses.db)</li>
+    <li id="ref32">&ldquo;Community event planned for Courtland Park,&rdquo; <i>Times-Virginian</i>. Events with vendors, music, and stage performances. (via responses.db)</li>
+    <li id="ref33">&ldquo;Courtland Park Foundation plans for next summer&rsquo;s events,&rdquo; <i>Times-Virginian</i>. Harvey and County Administrator Adams on foundation board. (via responses.db)</li>
+    <li id="ref34">&ldquo;Paul Harvey Appointed President of Railroad Festival Board,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref35">&ldquo;Appomattox Mayor Paul Harvey recognized for tornado aftermath leadership,&rdquo; <i>Times-Virginian</i>, 2016. EF-3 tornado on February&nbsp;24. BOS resolution honoring Harvey and Gene Stewart. (via responses.db)</li>
+    <li id="ref36">&ldquo;Mayor Harvey views Wal-Mart as an asset,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref37">&ldquo;Town concerns about radio tower location expressed by Mayor Harvey,&rdquo; <i>Times-Virginian</i>. Sweet Briar College 380-foot tower opposition. (via responses.db)</li>
+    <li id="ref38">&ldquo;Mayor Harvey supports landscaping ordinance,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref39">Harvey proclaimed February&nbsp;22 as &ldquo;Invest in Kids Day.&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref40">Harvey explored joint EDA with Appomattox County. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref41">&ldquo;Mayor Paul Harvey Affirms Train Depot Renovation as Pet Project,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref42">Harvey commended Black Lives Matter event at Appomattox Courthouse. <i>Times-Virginian</i>, June 2020. (via responses.db)</li>
+    <li id="ref43">&ldquo;Paul Harvey Honored for Mayoral Service,&rdquo; <i>Times-Virginian</i>, 2020. Plaque from Councilman Timothy Garrett. (via responses.db)</li>
+    <li id="ref44">&ldquo;Paul Harvey appointed to Planning Commission,&rdquo; <i>Times-Virginian</i>, 2020. Mayor Conner appointment. (via responses.db)</li>
+    <li id="ref45">Conner assigned Harvey to Finance Committee. <i>Times-Virginian</i>, 2020. (via responses.db)</li>
+    <li id="ref46">&ldquo;B2X Online Proposed for Appomattox Town-Wide Internet Solution,&rdquo; <i>Times-Virginian</i>, 2020. Harvey suggested inviting B2X Online. (via responses.db)</li>
+    <li id="ref47">James Boyce Sr. appointed to fill Harvey&rsquo;s vacant council seat. <i>Times-Virginian</i>, November&ndash;December 2020. (via responses.db)</li>
+    <li id="ref48">Brunswick Stew fundraiser at Harvey&rsquo;s office to benefit Brothers In Arms. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref49">American Legion Auxiliary donors list corrected to include Dr. Paul Harvey. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref50">3rd Annual Tour of Homes included Dr. Paul Harvey&rsquo;s Office with Dickens Village display. <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref51">&ldquo;Virginia Delegate Honors Late Dr. Paul Harvey,&rdquo; <i>Times-Virginian</i>. Del. Matt Fariss presented House of Delegates resolution. (via responses.db)</li>
+    <li id="ref52">&ldquo;Appomattox Mayor Conner Honors Former Mayor Dr. Paul Harvey,&rdquo; <i>Times-Virginian</i>. (via responses.db)</li>
+    <li id="ref53">&ldquo;Park bench memorializing Dr. Paul Harvey dedicated at Railroad Festival,&rdquo; <i>Times-Virginian</i>, October 2021. Corner of Court Street and Highland Avenue. (via responses.db)</li>
+    <li id="ref54">&ldquo;Appomattox Family Dentistry holds golf fundraiser for Courtland Festival Park Foundation,&rdquo; <i>Times-Virginian</i>, October 2021. Inaugural Paul Harvey Open, $10,500 raised. (via responses.db)</li>
+    <li id="ref55">&ldquo;Second Annual Paul Harvey Open golf event scheduled for Oct. 22,&rdquo; <i>Times-Virginian</i>, 2022. Proceeds benefit park and ACHS scholarship. (via responses.db)</li>
+    <li id="ref56">&ldquo;Harvey Stew Fundraiser Held at Courtland Park,&rdquo; <i>Times-Virginian</i>. Over 200 quarts sold. Honors Harvey and his father Cliff Harvey. (via responses.db)</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

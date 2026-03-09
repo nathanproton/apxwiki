@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appomattox County High School — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Appomattox County High School</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Appomattox County High School</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">General Information</td></tr>
+    <tr><td>Type</td><td>Public high school (9&ndash;12)</td></tr>
+    <tr><td>Established</td><td>c.&nbsp;1970 (current building dedicated 1974)</td></tr>
+    <tr><td>School district</td><td>Appomattox County Public Schools</td></tr>
+    <tr><td>Mascot</td><td>Raiders</td></tr>
+    <tr><td>Colors</td><td>Red and white</td></tr>
+    <tr><td>Conference</td><td>Dogwood District / Seminole District (VHSL)</td></tr>
+    <tr><td>Classification</td><td>VHSL Group A / Group AA</td></tr>
+    <tr><td>Location</td><td>Appomattox, Virginia</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Athletics</td></tr>
+    <tr><td>Stadium</td><td>Bragg Stadium</td></tr>
+    <tr><td>State titles</td><td>Softball (1987), Boys Track (2006)</td></tr>
+    <tr><td>Sports offered</td><td>Football, basketball, baseball, softball, soccer, volleyball, track &amp; field, cross country, golf, tennis, wrestling, swimming, cheerleading</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key Leadership</td></tr>
+    <tr><td>Notable principals</td><td>Mike Wills, Greg Wheeler, Michael Kelly, Michael Myers, Martha Eagle</td></tr>
+    <tr><td>Governing body</td><td><a href="Appomattox_County_School_Board_History.html">Appomattox County School Board</a></td></tr>
+  </table>
+</div>
+
+<p class="hatnote">For the governing body of Appomattox County schools, see <a href="Appomattox_County_School_Board_History.html">Appomattox County School Board History</a>.</p>
+
+<p><b>Appomattox County High School</b> (commonly abbreviated <b>ACHS</b>) is the sole public high school serving Appomattox County, Virginia. Home of the <b>Raiders</b>, the school has served as the academic and athletic center of the county since the early 1970s, when the current building was constructed to consolidate the previously segregated high schools of the county. Dedicated on October&nbsp;6, 1974, with Division Superintendent Lloyd&nbsp;G. Walton delivering the dedication address, the school has educated generations of Appomattox County residents.<sup><a href="#ref1">[1]</a></sup> With over 3,400 items referencing the school in local newspaper archives between 2003 and 2024, ACHS is the single most documented institution in the county&rsquo;s public record, a reflection of the outsized role it plays in community life, particularly through its extensive athletic programs.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#history">History</a>
+      <ol>
+        <li><a href="#origins_and_dedication">Origins and dedication</a></li>
+        <li><a href="#growth_and_development">Growth and development (1975&ndash;2003)</a></li>
+        <li><a href="#district_realignment">District realignment and the Seminole era</a></li>
+      </ol>
+    </li>
+    <li><a href="#academics_and_programs">Academics and programs</a>
+      <ol>
+        <li><a href="#accreditation">Accreditation and SOLs</a></li>
+        <li><a href="#career_and_technical">Career and technical education</a></li>
+        <li><a href="#drama_and_fine_arts">Drama and fine arts</a></li>
+        <li><a href="#ffa">FFA and agriculture</a></li>
+      </ol>
+    </li>
+    <li><a href="#athletics_overview">Athletics overview</a>
+      <ol>
+        <li><a href="#softball">Softball</a></li>
+        <li><a href="#track_and_field">Track and field</a></li>
+        <li><a href="#football">Football</a></li>
+        <li><a href="#basketball">Basketball</a></li>
+        <li><a href="#baseball">Baseball</a></li>
+        <li><a href="#soccer">Soccer</a></li>
+        <li><a href="#volleyball">Volleyball</a></li>
+        <li><a href="#golf">Golf</a></li>
+        <li><a href="#wrestling">Wrestling</a></li>
+        <li><a href="#other_sports">Other sports</a></li>
+      </ol>
+    </li>
+    <li><a href="#coaching">Notable coaches</a></li>
+    <li><a href="#leadership">School leadership</a></li>
+    <li><a href="#notable_teachers">Notable teachers and staff</a></li>
+    <li><a href="#facilities">Facilities</a></li>
+    <li><a href="#controversies">Controversies and challenges</a>
+      <ol>
+        <li><a href="#wheeler_removal">Wheeler removal (2008)</a></li>
+        <li><a href="#book_challenge">Book challenge (2008)</a></li>
+        <li><a href="#gang_concerns">Gang affiliation concerns</a></li>
+        <li><a href="#budget_cuts">Budget cuts and class sizes</a></li>
+      </ol>
+    </li>
+    <li><a href="#covid">COVID-19 pandemic response</a></li>
+    <li><a href="#community_role">Community role</a></li>
+    <li><a href="#memorial_garden">Memorial Garden</a></li>
+    <li><a href="#notable_alumni">Notable alumni and athletes</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ============================== -->
+<!-- HISTORY -->
+<!-- ============================== -->
+<h2 id="history">History</h2>
+
+<h3 id="origins_and_dedication">Origins and dedication</h3>
+
+<p>Appomattox County High School was built in the early 1970s as part of Virginia&rsquo;s school consolidation effort, replacing the previously segregated Appomattox High School and Carver-Price High School. The new facility was designed to serve all high school students in the county under a single roof. The formal dedication ceremony took place on Sunday, October&nbsp;6, 1974, and featured a pre-program concert by the school band and a dedication message delivered by Division Superintendent Lloyd&nbsp;G. Walton.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>The school adopted the &ldquo;Raiders&rdquo; as its mascot, with red and white as school colors. <b>Bragg Stadium</b>, the outdoor athletic facility on campus, was named for <b>Gordon Bragg</b>, a longtime coach whose contributions to Appomattox athletics were widely recognized. The 1966 football team under Coach Bragg completed an undefeated season, and <b>Irie Mays</b>, a player on that team, remains the only athlete in school history to have had his jersey number retired, having set a state record for points scored in his senior season.<sup><a href="#ref2">[2]</a></sup></p>
+
+<h3 id="growth_and_development">Growth and development (1975&ndash;2003)</h3>
+
+<p>Through the late 1970s and 1980s, ACHS established itself as a competitive school in the Virginia High School League (VHSL), initially classified as Group AA. The school fielded teams in football, basketball, baseball, softball, track and field, tennis, golf, and other sports. In 1987, the Raiderettes softball team captured the Group AA State Championship with a 23&ndash;3 record, marking the school&rsquo;s first state title in any sport.<sup><a href="#ref3">[3]</a></sup> That same decade saw <b>Mary Tolley</b> build the softball program into a perennial contender over a career that would span thirty years and produce a 360&ndash;219 record.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>The track and field program also rose to prominence, with the girls&rsquo; team winning the Group AA indoor state title in 1996<sup><a href="#ref5">[5]</a></sup> and producing several individual state champions. <b>Howard Clabough</b> served as Athletic Director during a formative period for the school&rsquo;s sports programs before his retirement; he was later inducted into the Wall of Fame at Varina High School, where he had previously coached for fifteen years.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>The school&rsquo;s drama program became a regional powerhouse under the direction of <b>Wes Williams</b>. By 2003, ACHS had won the Dogwood District theatre competition for seven consecutive years, with students earning All-District and All-Region honors. In 2003 the team placed third at the state competition.<sup><a href="#ref7">[7]</a></sup></p>
+
+<h3 id="district_realignment">District realignment and the Seminole era</h3>
+
+<p>For much of its history, ACHS competed in the Dogwood District alongside schools such as Altavista, Chatham, Gretna, Nelson, Prince Edward, William Campbell, and Buckingham. In 2005, VHSL redistricting moved many ACHS teams into the Seminole District, bringing new rivalries and tougher competition in certain sports.<sup><a href="#ref8">[8]</a></sup> The school was reclassified from Group AA to Group A during subsequent VHSL alignment cycles. Despite the changes, Appomattox teams continued to compete for district, regional, and state honors across multiple sports.</p>
+
+<!-- ============================== -->
+<!-- ACADEMICS AND PROGRAMS -->
+<!-- ============================== -->
+<h2 id="academics_and_programs">Academics and programs</h2>
+
+<h3 id="accreditation">Accreditation and SOLs</h3>
+
+<p>ACHS has navigated the Virginia Standards of Learning (SOL) era with mixed results. Under Principal Michael Wills, the school achieved Adequate Yearly Progress (AYP) accreditation in consecutive years beginning in 2004, a point of pride for the administration.<sup><a href="#ref9">[9]</a></sup> However, the school missed AYP in the 2009&ndash;2010 school year, prompting incoming Principal Michael Myers to make full accreditation his top priority.<sup><a href="#ref10">[10]</a></sup> The school subsequently implemented dropout prevention strategies including a mentorship program and a freshman academy; Principal Michael Kelly reported a dropout rate of twelve students in 2009.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>In December 2004, the <a href="Appomattox_County_School_Board_History.html">School Board</a> approved six new elective courses for the 2005&ndash;06 school year, including one history/social studies class and five career preparation courses, without requiring additional staff.<sup><a href="#ref12">[12]</a></sup></p>
+
+<h3 id="career_and_technical">Career and technical education</h3>
+
+<p>ACHS has offered career and technical education (CTE) programs encompassing culinary arts, horticulture, auto mechanics, and business. In 2007, horticulture teacher Lindsay Tomlinson supervised ACHS students who provided hands-on horticulture lessons to middle school special education students.<sup><a href="#ref13">[13]</a></sup> The auto mechanics program made local news in 2009 when a gas line on a 1985 Oldsmobile Cutlass ignited during class; junior Kyle Primm used a fire extinguisher to subdue the blaze before it caused significant damage, while teacher Albion Stout extinguished flames on a student&rsquo;s hands.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>The school has maintained partnerships with Central Virginia Community College through the Career Coach program. <b>Betty Jo Smith</b>, the CVCC Career Coach assigned to ACHS, was appointed to the State Professional Development Team for Career Coaches in 2007.<sup><a href="#ref15">[15]</a></sup> Students have also participated in dual enrollment and College Focus classes, with visits to institutions such as Lynchburg College documented as early as 2005.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h3 id="drama_and_fine_arts">Drama and fine arts</h3>
+
+<p>The ACHS drama program under director Wes Williams was one of the school&rsquo;s most consistently successful programs. The team won the Dogwood District theatre competition for at least seven consecutive years through 2003, with their production of <i>Medea</i> earning top honors that year.<sup><a href="#ref7">[7]</a></sup> The school board formally recognized the drama team and Williams at their December 2003 meeting, where students Amber Blanks (All-District and All-Region) and Caitlin Haught (All-Region) were individually honored.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>The community theatre tradition extended beyond competitive drama. In 2004, the Clover Hill Theatre Group staged an ambitious production of the musical <i>Cabaret</i> in the ACHS auditorium, featuring seventeen ACHS students alongside community members and Lynchburg College students.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>The school&rsquo;s marching band has been a visible presence at football games and community events, with over twenty subject-tag references in the local newspaper archive. The competition cheerleading squad achieved particular distinction in 2010, winning the Regional competition at Strasburg High School &mdash; a first in school history &mdash; and finishing third at the state competition at the VCU Siegel Center.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h3 id="ffa">FFA and agriculture</h3>
+
+<p>ACHS has maintained an active FFA chapter with nearly fifty references in the county newspaper archives. Agriculture teacher <b>Dennis W. Torrence</b> was named Virginia&rsquo;s Outstanding Young Member by the NVATA in 1971.<sup><a href="#ref19">[19]</a></sup> More recently, agriculture teacher <b>Edward McCann, Jr.</b> received the Teachers Turn the Key Award at the National Association of Agricultural Educators convention in Las Vegas in December 2010, the only Virginia teacher selected for the honor that year.<sup><a href="#ref20">[20]</a></sup></p>
+
+<!-- ============================== -->
+<!-- ATHLETICS OVERVIEW -->
+<!-- ============================== -->
+<h2 id="athletics_overview">Athletics overview</h2>
+
+<p>Athletics have dominated ACHS&rsquo;s public profile throughout its history. Of the approximately 7,000 items in the county newspaper database that reference the school, roughly 4,700 &mdash; or two-thirds &mdash; are classified as sports coverage. The school has fielded teams in at least thirteen sports: football, basketball, baseball, softball, soccer (boys and girls), volleyball, track and field, cross country, golf, tennis, wrestling, swimming, and competitive cheerleading. Basketball receives the most individual coverage (approximately 850 items), followed by soccer (657), football (623), softball (521), and volleyball (453).<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>The school has won two VHSL state championships: the 1987 softball title and the 2006 boys outdoor track and field title. ACHS teams have also reached state tournament competition in basketball, baseball, golf, wrestling, and cheerleading at various points over the decades.</p>
+
+<h3 id="softball">Softball</h3>
+
+<p>Softball is the sport that gave ACHS its first state championship. The 1987 Raiderettes, coached by Mary Tolley, won the Group AA State Championship with a 23&ndash;3 record after defeating Tunstall and Buckingham in the Region III tournament to earn their state berth.<sup><a href="#ref3">[3]</a></sup> Tolley coached the program for thirty seasons, compiling a career record of 360&ndash;219 before stepping down in 2004.<sup><a href="#ref4">[4]</a></sup> In her final years, the team continued to contend: in 2002, ace pitcher Alexa Fraley threw a five-inning no-hitter to cap an undefeated 12&ndash;0 Dogwood District season.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>After Tolley&rsquo;s retirement, the program continued to thrive under subsequent coaches. In 2004, the Raiderettes won the Dogwood District Softball Tournament Championship with a 7&ndash;1 victory over Altavista behind Becca Almond&rsquo;s four-hit pitching.<sup><a href="#ref23">[23]</a></sup> The 2010 team, led by pitcher Jessica McCormick, won both the Dogwood District and Region B Tournament championships &mdash; McCormick threw a one-hitter against Gretna in the district final and a two-hitter with seven strikeouts in the regional final &mdash; before falling 5&ndash;0 to Nandua in the state quarterfinals.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>The softball tradition extended to summer ball. The Appomattox Dixie Debs (ages 16&ndash;18), composed largely of ACHS players, won the state championship in 2006 by sweeping Halifax County in a doubleheader final (5&ndash;2 and 4&ndash;0), ending three years of losses to Halifax in the finals, and advanced to the Dixie World Series in Louisiana.<sup><a href="#ref25">[25]</a></sup> The softball field was named after <b>Louise Martin</b>, a former teacher and coach, in a 2001 ceremony.<sup><a href="#ref26">[26]</a></sup></p>
+
+<h3 id="track_and_field">Track and field</h3>
+
+<p>The track and field program at ACHS has been among the school&rsquo;s most successful, with over 400 items in the newspaper archive and multiple state-level achievements across both indoor and outdoor seasons.</p>
+
+<p>The boys&rsquo; program reached its zenith in 2006 when it won the Group AA outdoor state championship, clinching the title in the one-mile relay. It was the first outdoor state championship in ACHS boys&rsquo; track history.<sup><a href="#ref27">[27]</a></sup> That same year, the 4x200 meter relay team of Michael Chambers, Spencer Croner, Rashard Megginson, and Raschad Kelso won the indoor state championship with a time of 1:32.67, and the boys&rsquo; team narrowly missed the overall indoor title by half a point.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>The boys continued to dominate in subsequent years. They won back-to-back Dogwood District outdoor championships in 2008 and 2009,<sup><a href="#ref29">[29]</a></sup> the Region B outdoor championship in 2008,<sup><a href="#ref30">[30]</a></sup> and the Group A State Invitational indoor title in both 2008 and 2009.<sup><a href="#ref31">[31]</a></sup> The 2009 boys finished third at the outdoor state meet, and the 4x200 and 4x400 relay teams both won state invitational titles that indoor season.<sup><a href="#ref32">[32]</a></sup></p>
+
+<p>The girls&rsquo; program also produced notable results. The 1996 girls&rsquo; team won the Group AA indoor state title.<sup><a href="#ref5">[5]</a></sup> In 2009, the girls&rsquo; 4x400 relay team of Jessica Robertson, Megan Campbell, Mia Morse, and Ariel Wade won the state title with a school-record time of 4:09.38.<sup><a href="#ref33">[33]</a></sup> The 2010 girls&rsquo; 4x100 relay achieved the state&rsquo;s top time for 1-A schools.<sup><a href="#ref34">[34]</a></sup></p>
+
+<p>Key athletes in the program included <b>Raschad Kelso</b>, who won the 200 and 400 meters at the 2005 Region III meet and set school records,<sup><a href="#ref35">[35]</a></sup> <b>Dalton Bennett</b>, who won an individual indoor state title in 2009,<sup><a href="#ref32">[32]</a></sup> and <b>Kenny Scott</b>, who won the 100 meters at the 2008 Region B championship.<sup><a href="#ref30">[30]</a></sup></p>
+
+<h3 id="football">Football</h3>
+
+<p>Football at ACHS carries deep community significance, with games at Bragg Stadium serving as weekly social events each fall. The program has experienced cycles of success and struggle over the decades.</p>
+
+<p><b>Larry Kidd</b> coached the Raiders for nine seasons through 2003, compiling a 45&ndash;47 record with three winning seasons, three losing seasons, and three 5&ndash;5 campaigns. He guided the team to the Region III playoffs in 1996 and 1999. Kidd resigned following a 3&ndash;7 season in 2003.<sup><a href="#ref36">[36]</a></sup></p>
+
+<p><b>Lance Carter</b>, who had served as Kidd&rsquo;s offensive coordinator since 2000, was hired as head coach in April 2004. Carter also continued as head track coach.<sup><a href="#ref37">[37]</a></sup> His first season was difficult &mdash; the Raiders finished 1&ndash;9 &mdash; but the program suffered from injuries and a lack of depth rather than a lack of effort, with fans praising the remaining players&rsquo; perseverance through a season marked by player defections due to discipline measures.<sup><a href="#ref38">[38]</a></sup></p>
+
+<p><b>Ben Martin</b> was hired as head football coach in 2009, bringing experience from state championship programs. That fall, the Raiders won their first Dogwood District championship in ten years with a thrilling 28&ndash;26 overtime victory over Dan River.<sup><a href="#ref39">[39]</a></sup> They followed up with a 42&ndash;28 victory over Clarke County in the Region B semifinals &mdash; the school&rsquo;s first regional football win since 1987 &mdash; before falling to Gretna 29&ndash;13 in the Region B championship. A critical 4th-and-goal failure from the one-yard line in the fourth quarter, trailing 15&ndash;13, proved to be the turning point.<sup><a href="#ref40">[40]</a></sup></p>
+
+<h3 id="basketball">Basketball</h3>
+
+<p>Basketball generates more individual newspaper coverage than any other sport at ACHS, with approximately 850 items in the database. Both the boys&rsquo; and girls&rsquo; programs have had periods of sustained excellence.</p>
+
+<p>The girls&rsquo; program under Coach <b>Gary Ferguson</b> was a consistent contender in the Dogwood District. The 2003&ndash;04 Raiderettes finished 14&ndash;2 in the regular season (12&ndash;2 in the Dogwood) and were ranked No. 14 in the state Group AA poll, with their only losses coming against Altavista.<sup><a href="#ref41">[41]</a></sup> Ferguson&rsquo;s teams were known for balanced scoring and defensive tenacity.</p>
+
+<p>The boys&rsquo; program under Coach <b>Doug Marshall</b> struggled in the early 2000s, going 4&ndash;15 in 2003&ndash;04, before a sustained rebuilding effort took hold.<sup><a href="#ref42">[42]</a></sup> Under Coach <b>Brantley Shields</b>, the program rose dramatically. By the 2007&ndash;08 season, the Raiders qualified for the Group A State Basketball Tournament after upsetting two-time defending state champion Clarke County 59&ndash;50 in a Region B semifinal, with <b>Kenny Scott</b> and <b>Michael St. John</b> leading the scoring. They fell to King William 61&ndash;58 in the state quarterfinals.<sup><a href="#ref43">[43]</a></sup></p>
+
+<p>In 2008&ndash;09, the Raiders won thirteen consecutive games, climbing to No. 3 in the state Group A poll with an 18&ndash;2 record.<sup><a href="#ref44">[44]</a></sup> The 2009&ndash;10 team was declared regular-season Dogwood District champions due to snow cancellations, with Shields acknowledging five years of rebuilding that began with low expectations.<sup><a href="#ref45">[45]</a></sup> They reached the Region B semifinals before falling to Dan River 63&ndash;62 in double overtime, finishing 18&ndash;4.<sup><a href="#ref46">[46]</a></sup></p>
+
+<h3 id="baseball">Baseball</h3>
+
+<p>The baseball program under Coach <b>Joe Caruso</b> experienced a sustained resurgence in the mid-2000s. Caruso, who began his fourth season as head coach in 2004, made reaching the regional tournament an annual expectation.<sup><a href="#ref47">[47]</a></sup></p>
+
+<p>The 2006 season was a breakthrough: the Raiders reached the Group AA State Tournament for the first time since 1985, qualifying after defeating Allegheny in the Region III semifinals. Though they fell to Tunstall 4&ndash;3 in the state tournament, finishing 19&ndash;10, Caruso highlighted that the team had surpassed all expectations and was the only squad from the district to reach the state tournament.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>In 2008, the Raiders captured the Dogwood District regular-season championship by defeating Nelson 6&ndash;4, their first regular-season district title in baseball since 2000. Caruso was proud of the accomplishment and the team reached the Region B tournament before falling to Strausburg, finishing 14&ndash;9.<sup><a href="#ref49">[49]</a></sup></p>
+
+<h3 id="soccer">Soccer</h3>
+
+<p>Soccer at ACHS encompasses both boys&rsquo; and girls&rsquo; programs and generates the second-highest volume of coverage in the newspaper archive (657 items combined). The girls&rsquo; program achieved particular early success: in 2005, the team won its first-ever Dogwood District Tournament championship by defeating Nelson County 3&ndash;1, with goals from Dorothy Charte, Allyson Taylor, and Erin Loy. <b>Katherine Paulette</b> was named Dogwood District Player of the Year and <b>Brian Robinson</b> Coach of the Year.<sup><a href="#ref50">[50]</a></sup> The girls repeated as district champions in 2009.<sup><a href="#ref51">[51]</a></sup></p>
+
+<p>The boys&rsquo; program also fielded competitive teams. The youth development pipeline was strong: the Appomattox U15 boys&rsquo; soccer team completed an undefeated 7&ndash;0&ndash;1 season in 2007, and the U15 team went undefeated again in fall 2008, outscoring opponents 43&ndash;5.<sup><a href="#ref52">[52]</a></sup></p>
+
+<h3 id="volleyball">Volleyball</h3>
+
+<p>Volleyball at ACHS has been marked by consistent competitiveness and strong coaching. Under Coach <b>Mark Drinkard</b>, the team achieved nine consecutive regional appearances through 2007.<sup><a href="#ref53">[53]</a></sup> In 2004, senior <b>Samantha Fraley</b> approached the state assist record of 1,584, and the team consistently reached the Dogwood District Tournament championship, with Altavista serving as the primary rival throughout the 2000s.<sup><a href="#ref54">[54]</a></sup></p>
+
+<p>The team won the Liberty High School Invitational in 2007, defeating Spotswood in the championship match. <b>Shakia Pennix</b> was named tournament MVP with 27 kills, 19 digs, and 4 aces, while <b>Kendall Lawson</b> contributed 72 assists and <b>Annie Terry</b> had 37 kills.<sup><a href="#ref55">[55]</a></sup></p>
+
+<h3 id="golf">Golf</h3>
+
+<p>The ACHS golf program under Coach <b>Doug Marshall</b> became a state-level contender in the late 2000s. The team won the Dogwood District championship in 2004 and 2007, with John Lawson tying for medalist in 2004 at Falling River Country Club.<sup><a href="#ref56">[56]</a></sup> The Raiders qualified for the Group A State Tournament in three consecutive years (2007&ndash;2009), finishing fifth in 2007, fourth in 2008 at Bristol&rsquo;s Clear Creek Golf Club, and fourth again in 2009 at The Independence Club in Richmond.<sup><a href="#ref57">[57]</a></sup> Marshall noted it was the first time in his twenty-five-year coaching career that he had taken teams to the state tournament in back-to-back years.<sup><a href="#ref58">[58]</a></sup></p>
+
+<p>A memorable highlight came during the 2007 state tournament when golfers <b>Josh Bradshaw</b> and <b>Patrick Franklin</b> both recorded holes-in-one on the second day of competition &mdash; a rare occurrence for teammates in the same event.<sup><a href="#ref59">[59]</a></sup></p>
+
+<h3 id="wrestling">Wrestling</h3>
+
+<p>The ACHS wrestling program underwent a dramatic transformation in the late 2000s under Coach <b>Chris Conkwright</b>. The team expanded from five wrestlers to twenty-five over two seasons, improving from a struggling program to one with a 7&ndash;4 dual meet record by 2008. That year, three wrestlers qualified for the Group A State Wrestling Tournament &mdash; the first state qualifiers from the program in twelve years.<sup><a href="#ref60">[60]</a></sup></p>
+
+<p>By the 2008&ndash;09 season, the program achieved a record twenty-five dual wins, its first team tournament championship, and its first individual all-state honors in ten years. Four wrestlers &mdash; Tanner Conkwright (112&nbsp;lbs), Erik Muddiman (119&nbsp;lbs), Joey Reel (125&nbsp;lbs), and Nick Muddiman (140&nbsp;lbs) &mdash; qualified for the state tournament.<sup><a href="#ref61">[61]</a></sup> Sophomore Tanner Conkwright achieved a 21&ndash;0 record with five pins through mid-season in 2010.<sup><a href="#ref62">[62]</a></sup></p>
+
+<h3 id="other_sports">Other sports: tennis, swimming, cross country, and cheerleading</h3>
+
+<p>The ACHS girls&rsquo; tennis team won the Dogwood District championship in 2004, defeating Prince Edward 5&ndash;3 to qualify for regionals.<sup><a href="#ref63">[63]</a></sup> In 1988, senior Teresa Burger won the Region 3 tennis championship and qualified for the state AA tournament.<sup><a href="#ref64">[64]</a></sup></p>
+
+<p>The swimming program, cross country teams, and competitive cheerleading squad have all contributed to the school&rsquo;s athletic breadth. The competition cheerleading squad&rsquo;s 2010 season &mdash; winning regionals and placing third at the state competition &mdash; represented a historic high point for that program.<sup><a href="#ref18">[18]</a></sup></p>
+
+<!-- ============================== -->
+<!-- NOTABLE COACHES -->
+<!-- ============================== -->
+<h2 id="coaching">Notable coaches</h2>
+
+<table class="wikitable">
+  <tr><th>Name</th><th>Sport(s)</th><th>Approximate tenure</th><th>Notable achievements</th></tr>
+  <tr><td>Gordon Bragg</td><td>Football</td><td>1960s</td><td>Coached undefeated 1966 team; Bragg Stadium named in his honor</td></tr>
+  <tr><td>Mary Tolley</td><td>Softball, Physical Ed.</td><td>c.&nbsp;1974&ndash;2004</td><td>360&ndash;219 record; 1987 Group AA State Championship; 30 seasons</td></tr>
+  <tr><td>Larry Kidd</td><td>Football</td><td>c.&nbsp;1995&ndash;2003</td><td>45&ndash;47 record; Region III playoffs 1996, 1999</td></tr>
+  <tr><td>Lance Carter</td><td>Football, Track</td><td>2004&ndash;c.&nbsp;2008</td><td>Track: Group AA state championship 2006; football: rebuilding era</td></tr>
+  <tr><td>Ben Martin</td><td>Football</td><td>2009&ndash;</td><td>District championship and Region B championship game in first season</td></tr>
+  <tr><td>Gary Ferguson</td><td>Girls basketball, Softball</td><td>c.&nbsp;2000s</td><td>Multiple district contending teams; consistent Dogwood finalist</td></tr>
+  <tr><td>Doug Marshall</td><td>Boys basketball, Golf</td><td>c.&nbsp;2003&ndash;</td><td>Golf: 3 consecutive state tournament appearances; basketball: rebuilding era</td></tr>
+  <tr><td>Brantley Shields</td><td>Boys basketball</td><td>c.&nbsp;2005&ndash;2010</td><td>State tournament qualifier 2008; District champions 2010; rebuilt program from 4&ndash;15 to 18&ndash;4</td></tr>
+  <tr><td>Joe Caruso</td><td>Baseball</td><td>c.&nbsp;2001&ndash;2010+</td><td>State tournament 2006 (first since 1985); District championships 2005, 2008</td></tr>
+  <tr><td>Mark Drinkard</td><td>Volleyball</td><td>c.&nbsp;2004&ndash;</td><td>Nine consecutive regional appearances through 2007</td></tr>
+  <tr><td>Brian Robinson</td><td>Girls soccer</td><td>c.&nbsp;2005&ndash;</td><td>Dogwood District Coach of the Year 2005; first district title</td></tr>
+  <tr><td>Kevin Walker</td><td>Track &amp; field</td><td>c.&nbsp;2007&ndash;2009</td><td>Boys Dogwood District Coach of the Year 2008; State Invitational titles</td></tr>
+  <tr><td>Chris Conkwright</td><td>Wrestling</td><td>c.&nbsp;2007&ndash;</td><td>Grew program from 5 to 25 wrestlers; record 25 dual wins; first team tournament championship</td></tr>
+</table>
+
+<!-- ============================== -->
+<!-- SCHOOL LEADERSHIP -->
+<!-- ============================== -->
+<h2 id="leadership">School leadership</h2>
+
+<p>ACHS has been served by a succession of principals whose tenures have shaped the school&rsquo;s academic direction, discipline culture, and community relationships.</p>
+
+<table class="wikitable">
+  <tr><th>Name</th><th>Title</th><th>Approximate dates</th><th>Notes</th></tr>
+  <tr><td>Michael Wills</td><td>Principal</td><td>c.&nbsp;1999&ndash;2006</td><td>Seven-year tenure; achieved AYP accreditation; departed for Louisa County High School<sup><a href="#ref65">[65]</a></sup></td></tr>
+  <tr><td>Greg Wheeler</td><td>Principal</td><td>2006&ndash;2008</td><td>Promoted from Appomattox Middle School principal; removed and reassigned in Oct. 2008<sup><a href="#ref66">[66]</a></sup></td></tr>
+  <tr><td>David Read</td><td>Interim Principal</td><td>Oct. 2008</td><td>Served briefly after Wheeler&rsquo;s removal<sup><a href="#ref67">[67]</a></sup></td></tr>
+  <tr><td>Michael Kelly</td><td>Interim Principal / Principal</td><td>Nov. 2008&ndash;2010</td><td>Longtime educator; implemented dropout prevention strategies<sup><a href="#ref11">[11]</a></sup></td></tr>
+  <tr><td>Michael Myers</td><td>Principal</td><td>2010&ndash;2011</td><td>Previously principal at Northumberland HS; focused on accreditation and AYP<sup><a href="#ref10">[10]</a></sup></td></tr>
+  <tr><td>Martha Eagle</td><td>Principal</td><td>2011&ndash;</td><td>Transferred from Appomattox Middle School principal role<sup><a href="#ref68">[68]</a></sup></td></tr>
+</table>
+
+<p>Assistant principals who served the school included <b>Bob Kerns</b> (five years, departed 2006 to become AMS interim principal), <b>Francis &ldquo;Poldi&rdquo; Moreno</b> (2006&ndash;2008, then transferred to AMS), <b>Jeff Garrett</b> (2008&ndash;), and <b>Brad Harper</b> (arrived 2011, previously at William Campbell for seven years).<sup><a href="#ref69">[69]</a></sup></p>
+
+<!-- ============================== -->
+<!-- NOTABLE TEACHERS -->
+<!-- ============================== -->
+<h2 id="notable_teachers">Notable teachers and staff</h2>
+
+<p>Several ACHS teachers received state or national recognition for their work:</p>
+
+<ul>
+  <li><b>Dennis W. Torrence</b> &mdash; Agriculture teacher; named Virginia&rsquo;s Outstanding Young Member by NVATA in 1971.<sup><a href="#ref19">[19]</a></sup></li>
+  <li><b>Mary G. Turner</b> &mdash; Science/math teacher; selected for the UVA Physics Teachers Institute in 1987.<sup><a href="#ref70">[70]</a></sup></li>
+  <li><b>Nancy Jones</b> &mdash; Biology teacher; received Piedmont Area Library Council Award in 1988.<sup><a href="#ref71">[71]</a></sup></li>
+  <li><b>John A. Hudson</b> &mdash; Chemistry, science, and math teacher for 30 years at ACHS; retired in 1990 after a 41-year teaching career.<sup><a href="#ref72">[72]</a></sup></li>
+  <li><b>Marcie S. Jones</b> &mdash; Work and Family Studies teacher; received national recognition from FHA in 1997.<sup><a href="#ref73">[73]</a></sup></li>
+  <li><b>Martha Eagle</b> &mdash; Marketing teacher; named one of Virginia&rsquo;s outstanding marketing teachers by the Virginia Association of Marketing Educators in 1997.<sup><a href="#ref74">[74]</a></sup></li>
+  <li><b>Clara Jo Elder</b> &mdash; Science teacher; named Educator of the Year in 2007 for developing a nuclear science technology program at ACHS.<sup><a href="#ref75">[75]</a></sup></li>
+  <li><b>Edward McCann, Jr.</b> &mdash; Agriculture teacher; national Teachers Turn the Key Award in 2010.<sup><a href="#ref20">[20]</a></sup></li>
+  <li><b>Tim Peterson</b> &mdash; Earth Science teacher; received Air Force Association grant for his &ldquo;Get High on Rockets&rdquo; model rocketry program in 2004.<sup><a href="#ref76">[76]</a></sup></li>
+  <li><b>Harriet Pierce James</b> &mdash; Guidance counselor at ACHS until retirement in 1987; had a distinguished 41-year career in education beginning at Carver-Price School in 1946.<sup><a href="#ref77">[77]</a></sup></li>
+</ul>
+
+<p>The school also honored long-serving teachers at retirement, including <b>Edwina Covington</b> (1967&ndash;2004) and <b>Betty Hancock</b> (1975&ndash;2004, 29 of her 32 years at Appomattox), who were recognized at a School Board meeting and a reception held in their honor in 2004.<sup><a href="#ref78">[78]</a></sup></p>
+
+<!-- ============================== -->
+<!-- FACILITIES -->
+<!-- ============================== -->
+<h2 id="facilities">Facilities</h2>
+
+<p>The ACHS campus includes the main academic building (dedicated 1974), <b>Bragg Stadium</b> (the football and track facility), gymnasium, softball field (named for Louise Martin), baseball diamond, soccer fields, tennis courts, and an auditorium that serves both school and community events.</p>
+
+<p>Tennis court repairs became a recurring concern. In 2004, the School Board voted to contribute $4,381.90 from maintenance funds toward repairing the four tennis courts, supplementing $12,418.10 already raised privately by the schools&rsquo; Actions Committee through fundraisers and donations.<sup><a href="#ref79">[79]</a></sup></p>
+
+<p>The auditorium has served as a venue for drama productions, musical performances, community meetings, and public events including the annual Relay for Life kickoff. The gymnasium hosts basketball, volleyball, wrestling, and the annual youth basketball tournament.<sup><a href="#ref17">[17]</a></sup></p>
+
+<!-- ============================== -->
+<!-- CONTROVERSIES -->
+<!-- ============================== -->
+<h2 id="controversies">Controversies and challenges</h2>
+
+<h3 id="wheeler_removal">Wheeler removal (2008)</h3>
+
+<p>In October 2008, Principal Greg Wheeler was unexpectedly removed from his position and placed on paid administrative leave. No official reason was provided for his removal. Less than a week later, Wheeler was reassigned to a teaching position at the prep academy at Appomattox Middle School.<sup><a href="#ref66">[66]</a></sup> The School Board&rsquo;s special meeting prior to the reassignment was reportedly held without public notification, drawing criticism. David Read served briefly as interim principal before Michael Kelly was appointed to the role on November&nbsp;5, 2008.<sup><a href="#ref67">[67]</a></sup> The circumstances surrounding Wheeler&rsquo;s removal were never publicly explained.</p>
+
+<h3 id="book_challenge">Book challenge (2008)</h3>
+
+<p>In January 2008, a school-appointed committee recommended rejecting a parent&rsquo;s petition to remove John Steinbeck&rsquo;s <i>Of Mice and Men</i> from the ACHS library. The committee determined that the book should remain available to students.<sup><a href="#ref80">[80]</a></sup></p>
+
+<h3 id="gang_concerns">Gang affiliation concerns</h3>
+
+<p>In October 2007, Principal Greg Wheeler noted that the administration had been concerned about students affiliating with gangs over the previous two years, though he indicated that the current year had been quieter.<sup><a href="#ref81">[81]</a></sup></p>
+
+<h3 id="budget_cuts">Budget cuts and class sizes</h3>
+
+<p>The 2010 budget cycle brought significant austerity to ACHS. Staff and program cuts led to increased class sizes and reduced course offerings at both the middle school and high school levels.<sup><a href="#ref82">[82]</a></sup></p>
+
+<!-- ============================== -->
+<!-- COVID-19 -->
+<!-- ============================== -->
+<h2 id="covid">COVID-19 pandemic response</h2>
+
+<p>The COVID-19 pandemic significantly disrupted ACHS operations beginning in spring 2020. The school transitioned to virtual learning, and athletic seasons were canceled or abbreviated. The 2020&ndash;21 school year saw a phased return to in-person instruction, with athletic competitions subject to masking and social distancing protocols.</p>
+
+<p>In August 2021, Appomattox County Public Schools initially maintained a voluntary mask policy before reversing course to require masks indoors for all students, staff, and visitors after consulting legal counsel and reviewing updated CDC guidance and Governor Northam&rsquo;s directives related to Senate Bill 1303.<sup><a href="#ref83">[83]</a></sup> ACHS volleyball matches against Amherst scheduled for August 26, 2021, were among the first events postponed due to Amherst&rsquo;s quarantine under COVID protocols.<sup><a href="#ref84">[84]</a></sup></p>
+
+<p>The school system received $3,878,287.40 in federal COVID-19 relief funds through the ESSER Fund III (American Rescue Plan) to aid safe reopening and address learning loss, with expenditures required by September 2024.<sup><a href="#ref85">[85]</a></sup> The district also hired additional counselors, reading and math specialists, a STEM teacher, and family engagement personnel, and adopted Positive Behavioral Interventions and Supports (PBIS) to help students recover.<sup><a href="#ref86">[86]</a></sup></p>
+
+<!-- ============================== -->
+<!-- COMMUNITY ROLE -->
+<!-- ============================== -->
+<h2 id="community_role">Community role</h2>
+
+<p>ACHS serves as a community hub that extends well beyond its educational mission. The school regularly hosts public events including the American Cancer Society&rsquo;s Relay for Life (held annually at the school since at least 2004),<sup><a href="#ref87">[87]</a></sup> youth basketball leagues and tournaments in the gymnasium, wrestling invitationals, community volleyball leagues, and the Transition Fair for students with disabilities (organized since at least 2005).<sup><a href="#ref88">[88]</a></sup></p>
+
+<p>The school cafeteria serves as the venue for the annual Appomattox County Public Schools staff welcome breakfast each August,<sup><a href="#ref89">[89]</a></sup> and the campus has hosted professional development sessions for educators across the school division. The ACHS Athletic Booster Club, referenced in nearly fifty newspaper items, has been a driving force in fundraising for athletic programs and equipment.</p>
+
+<!-- ============================== -->
+<!-- MEMORIAL GARDEN -->
+<!-- ============================== -->
+<h2 id="memorial_garden">Memorial Garden</h2>
+
+<p>In 2010, a <b>Memorial Garden</b> was dedicated on the ACHS campus, an initiative that involved contributions from ACPS staff and ACHS students. The concept, design, research, donation collection, and dedication ceremony drew participation from multiple school organizations including the band, Culinary Arts department, Digital Input Technologies, SCA, and FFA. The Memorial Garden collection in the newspaper archive contains ten items documenting the project.<sup><a href="#ref90">[90]</a></sup></p>
+
+<!-- ============================== -->
+<!-- NOTABLE ALUMNI -->
+<!-- ============================== -->
+<h2 id="notable_alumni">Notable alumni and athletes</h2>
+
+<table class="wikitable">
+  <tr><th>Name</th><th>Sport / Field</th><th>Era</th><th>Achievement</th></tr>
+  <tr><td>Irie Mays</td><td>Football</td><td>1960s</td><td>Only player to have jersey number retired; state scoring record; member of undefeated 1966 team<sup><a href="#ref2">[2]</a></sup></td></tr>
+  <tr><td>Teresa Burger</td><td>Tennis</td><td>1988</td><td>Region 3 champion; state AA tournament qualifier<sup><a href="#ref64">[64]</a></sup></td></tr>
+  <tr><td>Alexa Fraley</td><td>Softball</td><td>2002</td><td>Pitched no-hitter in undefeated Dogwood District season<sup><a href="#ref22">[22]</a></sup></td></tr>
+  <tr><td>Becca Almond</td><td>Softball</td><td>2004&ndash;06</td><td>District tournament championship pitcher; multiple seasons as ace<sup><a href="#ref23">[23]</a></sup></td></tr>
+  <tr><td>Raschad Kelso</td><td>Track, Football</td><td>2004&ndash;06</td><td>200m and 400m region champion; member of 4x200 state championship relay<sup><a href="#ref28">[28]</a></sup></td></tr>
+  <tr><td>Samantha Fraley</td><td>Volleyball</td><td>2004</td><td>Approached state assist record (1,584)<sup><a href="#ref54">[54]</a></sup></td></tr>
+  <tr><td>Justin Franklin</td><td>Baseball</td><td>2005</td><td>Three home runs and six RBI in Dogwood District championship game<sup><a href="#ref91">[91]</a></sup></td></tr>
+  <tr><td>Michael St. John</td><td>Basketball</td><td>2006&ndash;08</td><td>26-point games; key scorer in state tournament qualifying run<sup><a href="#ref43">[43]</a></sup></td></tr>
+  <tr><td>Kenny Scott</td><td>Basketball, Track</td><td>2007&ndash;08</td><td>Region B 100m champion; led upset of Clarke County in basketball<sup><a href="#ref43">[43]</a></sup></td></tr>
+  <tr><td>Jessica McCormick</td><td>Softball</td><td>2010</td><td>District and Regional championship pitcher; one-hitter and two-hitter in finals<sup><a href="#ref24">[24]</a></sup></td></tr>
+  <tr><td>Tanner Conkwright</td><td>Wrestling</td><td>2009&ndash;10</td><td>21&ndash;0 record; state tournament qualifier; all-state honors<sup><a href="#ref62">[62]</a></sup></td></tr>
+</table>
+
+<!-- ============================== -->
+<!-- SEE ALSO -->
+<!-- ============================== -->
+<h2 id="see_also">See also</h2>
+<ul>
+  <li><a href="Appomattox_County_School_Board_History.html">Appomattox County School Board History</a></li>
+  <li><a class="redlink" href="Appomattox_Middle_School.html">Appomattox Middle School</a> (stub)</li>
+  <li><a class="redlink" href="Bragg_Stadium.html">Bragg Stadium</a> (stub)</li>
+</ul>
+
+<!-- ============================== -->
+<!-- REFERENCES -->
+<!-- ============================== -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">&ldquo;Appomattox County High School Dedication Service Held,&rdquo; <i>Times-Virginian</i>, October 6, 1974. Via responses.db.</li>
+    <li id="ref2">&ldquo;Irie Mays&rsquo; Number Retired by Appomattox County High School,&rdquo; <i>Times-Virginian</i>, November 17, 2004. Via responses.db.</li>
+    <li id="ref3">&ldquo;1987 ACHS softball team wins Group AA State Championship,&rdquo; <i>Times-Virginian</i>, 1987. Via responses.db. Also: &ldquo;Appomattox County High School Raiderettes headed for state softball championship,&rdquo; 1987.</li>
+    <li id="ref4">&ldquo;Mary Libby Tolley retires as ACHS softball coach,&rdquo; <i>Times-Virginian</i>, August 4, 2004. Tolley compiled a 360&ndash;219 record over 30 years.</li>
+    <li id="ref5">&ldquo;Appomattox girls track team wins state title,&rdquo; <i>Times-Virginian</i>, 1996. Via responses.db.</li>
+    <li id="ref6">&ldquo;Howard Clabough Honored at Varina High School Wall of Fame,&rdquo; <i>Times-Virginian</i>, September 29, 2004. Via responses.db.</li>
+    <li id="ref7">&ldquo;ACHS wins district theater event for seventh straight year,&rdquo; <i>Times-Virginian</i>, November 12, 2003. Also: &ldquo;School board recognizes ACHS Drama Team,&rdquo; December 17, 2003.</li>
+    <li id="ref8">&ldquo;Appomattox Raiders Baseball Team Moves to Seminole District,&rdquo; <i>Times-Virginian</i>, March 15, 2006. Via responses.db.</li>
+    <li id="ref9">&ldquo;Appomattox County High School aims for continued AYP accreditation,&rdquo; <i>Times-Virginian</i>, September 8, 2004. Principal Michael Wills quoted.</li>
+    <li id="ref10">&ldquo;Myers Sets Goals for First Year as ACHS Principal,&rdquo; <i>Times-Virginian</i>, August 18, 2010. Via responses.db.</li>
+    <li id="ref11">&ldquo;Appomattox County High School Principal Reports on Dropout Prevention Measures,&rdquo; <i>Times-Virginian</i>, December 2, 2009. Principal Michael Kelly presented strategies to School Board.</li>
+    <li id="ref12">&ldquo;Six New Electives Added to Appomattox County High School Curriculum,&rdquo; <i>Times-Virginian</i>, December 29, 2004. Via responses.db.</li>
+    <li id="ref13">&ldquo;AMS students receive horticulture lessons from ACHS students,&rdquo; <i>Times-Virginian</i>, March 7, 2007. Via responses.db.</li>
+    <li id="ref14">&ldquo;Kyle Primm douses fire in auto mechanics class,&rdquo; <i>Times-Virginian</i>, April 1, 2009. Via responses.db.</li>
+    <li id="ref15">&ldquo;Betty Jo Smith Appointed to State Professional Development Team for Career Coaches,&rdquo; <i>Times-Virginian</i>, May 16, 2007. Via responses.db.</li>
+    <li id="ref16">&ldquo;College Focus Students Visit Lynchburg College,&rdquo; <i>Times-Virginian</i>, November 4, 2011. Via responses.db.</li>
+    <li id="ref17">&ldquo;&lsquo;Cabaret&rsquo; to be performed at ACHS,&rdquo; <i>Times-Virginian</i>, May 5, 2004.</li>
+    <li id="ref18">&ldquo;ACHS Cheerleaders Win Regionals at Strasburg High School,&rdquo; and &ldquo;ACHS Cheerleaders Place 3rd at State Competition,&rdquo; <i>Times-Virginian</i>, March 31, 2010. Via responses.db.</li>
+    <li id="ref19">&ldquo;Dennis W. Torrence named Virginia&rsquo;s outstanding agricultural teacher,&rdquo; <i>Times-Virginian</i>, 1971. Via responses.db.</li>
+    <li id="ref20">&ldquo;Edward McCann receives national Teacher of the Year award,&rdquo; <i>Times-Virginian</i>, December 15, 2010. Also: August 11, 2010 (initial announcement). Via responses.db.</li>
+    <li id="ref21">Database analysis of responses.db: ACHS-related items by sport keyword. Football: 623; basketball: 850; baseball: 398; softball: 521; soccer: 657; track: 424; volleyball: 453; cross country: 196; wrestling: 197; tennis: 253; golf: 338; swim: 111; cheer: 45.</li>
+    <li id="ref22">&ldquo;ACHS Raiderettes Achieve Undefeated Season and No-Hitter,&rdquo; <i>Times-Virginian</i>, May 23, 2002. Via responses.db.</li>
+    <li id="ref23">&ldquo;Appomattox Raiderettes win Dogwood District Softball Tournament Championship,&rdquo; <i>Times-Virginian</i>, June 2, 2004.</li>
+    <li id="ref24">&ldquo;Appomattox Raiders win Dogwood District Tournament Championship,&rdquo; June 2, 2010; &ldquo;Appomattox wins Region B Tournament Championship over Gretna,&rdquo; June 9, 2010; &ldquo;ACHS softball team falls in state quarterfinal to Nandua,&rdquo; June 9, 2010. <i>Times-Virginian</i>. Via responses.db.</li>
+    <li id="ref25">&ldquo;Appomattox Dixie Debs win state championship,&rdquo; <i>Times-Virginian</i>, July 25, 2006. Via responses.db.</li>
+    <li id="ref26">&ldquo;Softball Field Named After Louise Martin,&rdquo; <i>Times-Virginian</i>, April 5, 2001. Via responses.db.</li>
+    <li id="ref27">&ldquo;Appomattox Boys Track Team Wins Group AA State Championship,&rdquo; and &ldquo;ACHS Boys Track Team Wins First Outdoor State Championship,&rdquo; <i>Times-Virginian</i>, June 7, 2006. Via responses.db.</li>
+    <li id="ref28">&ldquo;Appomattox 4X200 Relay Team Wins State Championship,&rdquo; and &ldquo;Appomattox Boys Indoor Track Team Finishes Second at Group AA State Championship,&rdquo; <i>Times-Virginian</i>, March 8, 2006. Via responses.db.</li>
+    <li id="ref29">&ldquo;Appomattox Boys Track Wins Dogwood District Championship,&rdquo; <i>Times-Virginian</i>, May 21, 2008; &ldquo;Appomattox County High School boys repeat as district track champions,&rdquo; May 20, 2009. Via responses.db.</li>
+    <li id="ref30">&ldquo;Appomattox County High School Boys Track Wins Region B Championship,&rdquo; <i>Times-Virginian</i>, June 4, 2008. 78 points. Via responses.db.</li>
+    <li id="ref31">&ldquo;Appomattox County High School Boys Indoor Track Team Wins State Invitational,&rdquo; <i>Times-Virginian</i>, February 21, 2008 (126.5 pts); &ldquo;Appomattox Boys Track Team Wins Group A State Invitational,&rdquo; February 25, 2009. Via responses.db.</li>
+    <li id="ref32">&ldquo;Appomattox Boys Track Team Wins Group A State Invitational,&rdquo; February 25, 2009; &ldquo;Appomattox Boys 4x200 Relay Team Wins State Title&rdquo; and &ldquo;4x400 Relay Team Wins State Title,&rdquo; same date. <i>Times-Virginian</i>. Via responses.db.</li>
+    <li id="ref33">&ldquo;Appomattox Girls 4x400 Relay Wins State Title,&rdquo; <i>Times-Virginian</i>, June 3, 2009. Time: 4:09.38 (school record). Via responses.db.</li>
+    <li id="ref34">&ldquo;ACHS girls 4x100 relay ranked first in state,&rdquo; <i>Times-Virginian</i>, April 28, 2010. Team: Campbell, Wade, Robertson, Villarreal. Via responses.db.</li>
+    <li id="ref35">&ldquo;ACHS Boys Track Team Finishes Second in Region III Championship,&rdquo; <i>Times-Virginian</i>, June 2, 2005. Raschad Kelso won 200 and 400 meters; Devin Almond won pole vault (school record). Via responses.db.</li>
+    <li id="ref36">&ldquo;Larry Kidd resigns as ACHS football coach after nine years,&rdquo; <i>Times-Virginian</i>, April 1, 2004.</li>
+    <li id="ref37">&ldquo;ACHS hires Lance Carter to be new head football coach,&rdquo; <i>Times-Virginian</i>, April 28, 2004.</li>
+    <li id="ref38">&ldquo;Raiders football team shows perseverance despite losses,&rdquo; <i>Times-Virginian</i>, December 1, 2004. Letter to the editor praising team.</li>
+    <li id="ref39">&ldquo;Appomattox Raiders win district championship by defeating Dan River,&rdquo; <i>Times-Virginian</i>, November 11, 2009. Score: 28&ndash;26 OT. Via responses.db.</li>
+    <li id="ref40">&ldquo;Appomattox Raiders win regional football game,&rdquo; November 25, 2009 (42&ndash;28 vs. Clarke County); &ldquo;Appomattox Raiders lose Region B Championship game to Gretna,&rdquo; November 2009. <i>Times-Virginian</i>. Via responses.db.</li>
+    <li id="ref41">&ldquo;ACHS girls head into tournament with momentum,&rdquo; <i>Times-Virginian</i>, February 18, 2004. Record: 14&ndash;2, ranked No. 14 in state Group AA poll.</li>
+    <li id="ref42">&ldquo;Raiders basketball team falls to Buckingham, Nelson,&rdquo; <i>Times-Virginian</i>, February 18, 2004. Season record: 4&ndash;15.</li>
+    <li id="ref43">&ldquo;Appomattox Raiders upset Clarke County in semifinal win,&rdquo; and &ldquo;Appomattox Raiders eliminated in state quarterfinals,&rdquo; <i>Times-Virginian</i>, March 5 and March 12, 2008. Via responses.db.</li>
+    <li id="ref44">&ldquo;Appomattox Raiders Achieve 13th Consecutive Win and State Ranking,&rdquo; <i>Times-Virginian</i>, February 11, 2009. 18&ndash;2 record, ranked 3rd in state. Via responses.db.</li>
+    <li id="ref45">&ldquo;ACHS Raiders&rsquo; journey to championship recognized,&rdquo; <i>Times-Virginian</i>, February 10, 2010. Shields acknowledged five years of rebuilding. Via responses.db.</li>
+    <li id="ref46">&ldquo;Appomattox loses to Dan River in Region B basketball tournament semifinals,&rdquo; <i>Times-Virginian</i>, March 3, 2010. Score: 63&ndash;62 in double overtime. Via responses.db.</li>
+    <li id="ref47">&ldquo;Raiders hope pitchers live up to billing,&rdquo; <i>Times-Virginian</i>, March 17, 2004. Caruso: &ldquo;Anything short of a regional berth would be a disappointment.&rdquo;</li>
+    <li id="ref48">&ldquo;Appomattox Raiders Baseball Team Advances to State Tournament,&rdquo; and &ldquo;Tunstall defeats Appomattox Raiders in state tournament,&rdquo; <i>Times-Virginian</i>, June&ndash;July 2006. First state appearance since 1985. Via responses.db.</li>
+    <li id="ref49">&ldquo;Appomattox Raiders win Dogwood District baseball championship,&rdquo; <i>Times-Virginian</i>, May 21, 2008. First regular-season title since 2000. Via responses.db.</li>
+    <li id="ref50">&ldquo;ACHS Girls Soccer Team Claims First-Ever District Title&rdquo; and &ldquo;ACHS Girls Soccer Team Earns Post-Season Honors,&rdquo; <i>Times-Virginian</i>, May 26, 2005. Via responses.db.</li>
+    <li id="ref51">&ldquo;Appomattox Raiders Girls Soccer repeats as Dogwood District Champions,&rdquo; <i>Times-Virginian</i>, June 3, 2009. Via responses.db.</li>
+    <li id="ref52">&ldquo;Appomattox Boys U15 soccer team defeats Forest 1-0,&rdquo; November 14, 2007 (7&ndash;0&ndash;1 season); &ldquo;Appomattox U15 Boys Soccer Team Completes Undefeated Fall Season,&rdquo; November 11, 2008 (outscored opponents 43&ndash;5). <i>Times-Virginian</i>. Via responses.db.</li>
+    <li id="ref53">&ldquo;Appomattox Raiders volleyball team advances to regionals,&rdquo; <i>Times-Virginian</i>, November 7, 2007. Ninth consecutive regional appearance. Via responses.db.</li>
+    <li id="ref54">&ldquo;ACHS Varsity Volleyball Team Nears State Assist Record,&rdquo; <i>Times-Virginian</i>, September 29, 2004. Fraley approaching 1,584 state record. Via responses.db.</li>
+    <li id="ref55">&ldquo;Appomattox Volleyball wins Liberty High School Invitational,&rdquo; <i>Times-Virginian</i>, September 12, 2007. Via responses.db.</li>
+    <li id="ref56">&ldquo;Appomattox Raiders Golf Team Wins Dogwood District Championship,&rdquo; <i>Times-Virginian</i>, September 29, 2004 (Lawson, 74); &ldquo;Appomattox Raiders secure regular season Dogwood District Championship,&rdquo; September 26, 2007. Via responses.db.</li>
+    <li id="ref57">&ldquo;Appomattox Raiders golf team finishes fifth in state tournament,&rdquo; October 17, 2007; &ldquo;Appomattox Raiders Finish Fourth in Group A State Golf Tournament,&rdquo; October 22, 2008; &ldquo;Raiders Golf Team Secures 4th Place at State Tournament,&rdquo; October 28, 2009. <i>Times-Virginian</i>. Via responses.db.</li>
+    <li id="ref58">&ldquo;Appomattox Raiders Golf Team Advances to State Tournament,&rdquo; <i>Times-Virginian</i>, October 8, 2008. Marshall quoted on back-to-back state appearances. Via responses.db.</li>
+    <li id="ref59">&ldquo;Two Appomattox golfers record holes-in-one,&rdquo; <i>Times-Virginian</i>, October 17, 2007. Josh Bradshaw and Patrick Franklin. Via responses.db.</li>
+    <li id="ref60">&ldquo;Appomattox wrestling team grows and achieves winning record,&rdquo; and &ldquo;Three Appomattox County High School wrestlers advance to state tournament,&rdquo; <i>Times-Virginian</i>, March 5&ndash;12, 2008. Expanded from 5 to 25 wrestlers. Via responses.db.</li>
+    <li id="ref61">&ldquo;Appomattox Raiders wrestling team sets season records,&rdquo; and &ldquo;Four Appomattox Wrestlers Qualify for State Tournament,&rdquo; <i>Times-Virginian</i>, February&ndash;March 2009. 25 dual wins, first team tournament championship. Via responses.db.</li>
+    <li id="ref62">&ldquo;Tanner Conkwright Leads Raiders with 5 Pins,&rdquo; <i>Times-Virginian</i>, January 13, 2010. 21&ndash;0 season record. Via responses.db.</li>
+    <li id="ref63">&ldquo;Appomattox County High School girls tennis wins Dogwood championship,&rdquo; <i>Times-Virginian</i>, June 2, 2004. Defeated Prince Edward 5&ndash;3. Via responses.db.</li>
+    <li id="ref64">&ldquo;Appomattox tennis star advances to state tournament,&rdquo; <i>Times-Virginian</i>, May 27, 1988. Teresa Burger won Region 3 championship. Via responses.db.</li>
+    <li id="ref65">&ldquo;Appomattox High Principal Mike Wills departs for Louisa County,&rdquo; <i>Times-Virginian</i>, June 15, 2006. After seven years as ACHS principal.</li>
+    <li id="ref66">&ldquo;Appomattox County High School Principal Greg Wheeler Placed on Leave,&rdquo; October 8, 2008; &ldquo;Greg Wheeler Reassigned as Middle School Teacher,&rdquo; October 15, 2008; &ldquo;Greg Wheeler removed as ACHS Principal,&rdquo; December 31, 2008. <i>Times-Virginian</i>.</li>
+    <li id="ref67">&ldquo;Michael Kelly Named Interim Principal of Appomattox County High School,&rdquo; <i>Times-Virginian</i>, November 5, 2008. David Read served as interim after Wheeler&rsquo;s reassignment.</li>
+    <li id="ref68">&ldquo;Martha Eagle Moves to Appomattox County High School Principal Role,&rdquo; <i>Times-Virginian</i>, June 22, 2011. Replaced Mike Myers.</li>
+    <li id="ref69">&ldquo;Bob Kerns appointed interim principal at Appomattox Middle School,&rdquo; July 6, 2006; &ldquo;Francis Moreno Plans Doctoral Program in Education,&rdquo; August 30, 2006; &ldquo;Jeff Garrett to Serve as ACHS Assistant Principal,&rdquo; April 2, 2008; &ldquo;Brad Harper&rsquo;s Previous Experience at William Campbell,&rdquo; August 3, 2011. <i>Times-Virginian</i>. Via responses.db.</li>
+    <li id="ref70">&ldquo;Mary G. Turner selected for UVA Physics Teachers Institute,&rdquo; <i>Times-Virginian</i>, October 10, 1987. Via responses.db.</li>
+    <li id="ref71">&ldquo;Nancy Jones receives Piedmont Area Library Council Award,&rdquo; <i>Times-Virginian</i>, January 26, 1988. Via responses.db.</li>
+    <li id="ref72">&ldquo;John Hudson Retires After 41 Years of Teaching,&rdquo; <i>Times-Virginian</i>, June 30, 1990. 30 years at ACHS. Via responses.db.</li>
+    <li id="ref73">&ldquo;ACHS Teacher Marcie S. Jones Selected for National Recognition,&rdquo; <i>Times-Virginian</i>, May 16, 1997. Via responses.db.</li>
+    <li id="ref74">&ldquo;Appomattox County High School Teacher Named Outstanding,&rdquo; <i>Times-Virginian</i>, September 5, 1997. Martha Eagle. Via responses.db.</li>
+    <li id="ref75">&ldquo;Elder chosen as Educator of the Year,&rdquo; <i>Times-Virginian</i>, 2007. Nuclear science technology program. Via responses.db.</li>
+    <li id="ref76">&ldquo;Grant Awarded to ACHS Teacher for Rocketry Program,&rdquo; <i>Times-Virginian</i>, June 9, 2004. Tim Peterson, &ldquo;Get High on Rockets.&rdquo; Via responses.db.</li>
+    <li id="ref77">&ldquo;Harriet Pierce James&rsquo;s Educational Career,&rdquo; <i>Times-Virginian</i>, December 29, 2010. Began at Carver-Price School 1946; guidance counselor at ACHS until 1987 retirement. Via responses.db.</li>
+    <li id="ref78">&ldquo;Appomattox School Board Recognizes Retiring Teachers,&rdquo; and &ldquo;Reception held for retiring teachers,&rdquo; <i>Times-Virginian</i>, June 2, 2004. Covington (1967&ndash;2004) and Hancock (1975&ndash;2004).</li>
+    <li id="ref79">&ldquo;AES to add track, ACHS to upgrade tennis courts,&rdquo; <i>Times-Virginian</i>, April 21, 2004. $4,381.90 from School Board; $12,418.10 from Actions Committee.</li>
+    <li id="ref80">&ldquo;Committee recommends keeping &lsquo;Of Mice and Men&rsquo; in library,&rdquo; <i>Times-Virginian</i>, January 30, 2008.</li>
+    <li id="ref81">&ldquo;ACHS administration expresses concern over potential gang affiliation,&rdquo; <i>Times-Virginian</i>, October 9, 2007. Wheeler quoted.</li>
+    <li id="ref82">&ldquo;Class sizes to increase, course offerings reduced,&rdquo; <i>Times-Virginian</i>, May 18, 2010. Due to staff and program cuts. Via responses.db.</li>
+    <li id="ref83">&ldquo;Appomattox County Public Schools revises mask policy to mandatory indoor masking,&rdquo; <i>Times-Virginian</i>, August 9, 2021. SB 1303 cited. Via responses.db.</li>
+    <li id="ref84">&ldquo;Raiders Volleyball Games Canceled Due to COVID,&rdquo; <i>Times-Virginian</i>, August 26, 2021. Amherst quarantine. Via responses.db.</li>
+    <li id="ref85">&ldquo;Appomattox Schools Develop Plan for $3.8 Million COVID Relief Grant,&rdquo; <i>Times-Virginian</i>, September 8, 2021. ESSER Fund III: $3,878,287.40. Via responses.db.</li>
+    <li id="ref86">&ldquo;Appomattox County Public Schools hires staff and implements PBIS,&rdquo; <i>Times-Virginian</i>, August 16, 2021. Via responses.db.</li>
+    <li id="ref87">&ldquo;Relay for Life kicks off May 7&ndash;8 at ACHS,&rdquo; <i>Times-Virginian</i>, May 5, 2004.</li>
+    <li id="ref88">&ldquo;Appomattox County Public Schools Schedules Third Annual Transition Fair,&rdquo; <i>Times-Virginian</i>, September 11, 2007. Held at ACHS. Via responses.db.</li>
+    <li id="ref89">&ldquo;Appomattox Schools Staff Welcome Breakfast Held,&rdquo; <i>Times-Virginian</i>, August 25, 2004. Held at ACHS cafeteria. Via responses.db.</li>
+    <li id="ref90">&ldquo;ACPS Staff and Students Contributed to ACHS Memorial Garden,&rdquo; <i>Times-Virginian</i>, September 29, 2010. Via responses.db. Collection: urn:coll:achs-memorial-garden-2010 (10 items).</li>
+    <li id="ref91">&ldquo;Appomattox Raiders win Dogwood District Tournament Championship,&rdquo; <i>Times-Virginian</i>, June 2, 2005. Justin Franklin hit three home runs, six RBI vs. Chatham.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

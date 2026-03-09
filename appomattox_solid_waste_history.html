@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solid Waste Management in Appomattox County, Virginia — A History</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Solid Waste Management in Appomattox County, Virginia: A History of the County Landfill, Convenience Centers, the Region 2000 Service Authority, and the Transfer Station Debates</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<div class="hatnote">This article covers the history of publicly operated solid waste infrastructure in <strong>Appomattox County, Virginia</strong>, from the pre-regulatory era through the transition to regional disposal in 2008–2009, the creation of the manned Convenience Center network, and the contested transfer station proposals of 2004–2005 and 2018–2019. It is compiled from the <em>Times-Virginian</em> newspaper archive, Appomattox County Board of Supervisors minute books, and county government records, 1992–2024.</div>
+
+<div class="infobox">
+  <caption>Appomattox County — Solid Waste Key Facts</caption>
+  <table>
+    <tr><td>Landfill location</td><td>State Route 632, south of Town of Appomattox</td></tr>
+    <tr><td>Active landfill era</td><td>Pre-1992 through ~2009</td></tr>
+    <tr><td>Governing body</td><td>Board of Supervisors (5 members)</td></tr>
+    <tr><td>Regional authority joined</td><td>Region 2000 Service Authority (RSWA), 2008</td></tr>
+    <tr><td>RSWA member tipping fee</td><td>$25/ton (commercial: $35/ton)</td></tr>
+    <tr><td>Convenience Centers opened</td><td>July 2009 (7 sites)</td></tr>
+    <tr><td>Annual savings, regional switch</td><td>~$400,000–$460,000/year</td></tr>
+    <tr><td>Final cell closure contract</td><td>$556,395 (Shearin Construction, March 2009)</td></tr>
+    <tr><td>Gas remediation system</td><td>$615,000 (approved 2006)</td></tr>
+    <tr><td>County Waste CUP granted</td><td>February 19, 2019 (4–1 vote)</td></tr>
+    <tr><td>Excess revenue lawsuit</td><td>Campbell County v. RSWA, filed 2020</td></tr>
+    <tr><td>Current manager (as of 2024)</td><td>Carey McCleese</td></tr>
+    <tr><td>Current workforce</td><td>~25 employees, ~550 tons/month</td></tr>
+  </table>
+</div>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#background">Background: Solid Waste Before the Modern Era</a>
+      <ol>
+        <li><a href="#staff">The Landfill Operation and Its Staff</a></li>
+        <li><a href="#consultants">Engineering and Environmental Consultants</a></li>
+      </ol>
+    </li>
+    <li><a href="#regional1992">Exploring a Regional Landfill, 1992–1993</a></li>
+    <li><a href="#1990s">Operating the County Landfill: The 1990s</a>
+      <ol>
+        <li><a href="#subtitled">New Subtitle D Cell Construction</a></li>
+        <li><a href="#methane">Methane Gas: Detection, Monitoring, and Remediation</a></li>
+        <li><a href="#groundwater">Groundwater Monitoring and Financial Assurance</a></li>
+        <li><a href="#recycling1990s">Recycling, User Fees, and the Dumpster Network</a></li>
+      </ol>
+    </li>
+    <li><a href="#baler2004">The Baler, the Crunch, and the 2004 Decision</a>
+      <ol>
+        <li><a href="#baler">Installation of the Baler</a></li>
+        <li><a href="#crisis2004">The 2004 Crisis: A 12-Month Window</a></li>
+        <li><a href="#decision2004">The Decision: Keep the Landfill Open</a></li>
+      </ol>
+    </li>
+    <li><a href="#bfi">The BFI Commercial Transfer Station Proposal, 2004–2005</a></li>
+    <li><a href="#pivot">The Pivot to Regional Disposal, 2007–2009</a>
+      <ol>
+        <li><a href="#costcalculus">The Cost Calculus Changes</a></li>
+        <li><a href="#rockefeller">Alice Rockefeller and the Manned Site Proposal</a></li>
+        <li><a href="#rswa2007">The August 2007 Decision and RSWA Membership</a></li>
+        <li><a href="#hauling">Hauling Logistics</a></li>
+      </ol>
+    </li>
+    <li><a href="#closure">Closing the Landfill: Final Cell Closure, 2009</a></li>
+    <li><a href="#convenience">The Convenience Center Network</a>
+      <ol>
+        <li><a href="#opening2009">Opening: July 2009</a></li>
+        <li><a href="#hours">Hours, Staffing, and Separation Policy</a></li>
+        <li><a href="#business">The Business Exclusion Controversy</a></li>
+        <li><a href="#savings">Savings and Early Results</a></li>
+        <li><a href="#recycling2010s">Continued Recycling Program Development</a></li>
+        <li><a href="#ccstaff">Staffing and Community Recognition</a></li>
+      </ol>
+    </li>
+    <li><a href="#rswa">The Region 2000 Service Authority</a>
+      <ol>
+        <li><a href="#rswastructure">Origins and Structure</a></li>
+        <li><a href="#tipping">Financial Arrangements and Tipping Fees</a></li>
+        <li><a href="#lawsuit">The Excess Revenue Dispute and Lawsuit, 2020–2021</a></li>
+      </ol>
+    </li>
+    <li><a href="#countywaste">The County Waste Transfer Station Controversy, 2018–2019</a>
+      <ol>
+        <li><a href="#cwbackground">Background</a></li>
+        <li><a href="#cwplanning">Planning Commission Review</a></li>
+        <li><a href="#cwvote">The February 2019 Public Hearing and Board Vote</a></li>
+        <li><a href="#cwpost">Post-Permit Developments</a></li>
+      </ol>
+    </li>
+    <li><a href="#swmp">Solid Waste Management Planning</a></li>
+    <li><a href="#timeline">Chronological Summary</a></li>
+    <li><a href="#references">Primary Sources and Research Notes</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="overview">Overview</h2>
+
+<p>Appomattox County, Virginia, is a rural locality of approximately 14,000 residents in the central Piedmont, administered by a five-member elected Board of Supervisors. For the better part of a century, the county handled its solid waste through a municipally operated landfill on State Route 632, south of the Town of Appomattox—an arrangement that served adequately in the era before modern environmental regulation but grew increasingly costly and complex as federal standards tightened in the early 1990s.</p>
+
+<p>The period documented here, drawing primarily on the <em>Times-Virginian</em> newspaper archive (2003–2024), Board of Supervisors meeting minutes (1992–2025), and county government PDF records (2004–2023), traces the arc of a community institution: from its informal origins through the crucible of federal Subtitle D regulation, through a pivotal 2004 decision to keep the landfill open, and ultimately through the 2007–2009 transition to regional disposal under the Region 2000 Service Authority (RSWA), the creation of seven manned Convenience Centers, and two separate controversies over commercial solid waste transfer stations—one in 2004–2005 and one in 2018–2019.</p>
+
+<p>The history reflects the persistent tension in rural Virginia localities between the desire for local control of a basic municipal service, the relentless economics of environmental compliance and capital investment, and the potential savings—and loss of autonomy—attendant on regional cooperation.</p>
+
+<!-- ============================================================ -->
+<h2 id="background">Background: Solid Waste Disposal Before the Modern Era</h2>
+
+<p>Long before environmental regulation imposed standardized requirements, Appomattox County disposed of its solid waste in the manner typical of rural Virginia localities: an unlined municipal dump on State Route 632, south of the Town of Appomattox, supplemented by scattered unmanned dumpster sites in remote corners of the county. By the early 1990s, however, that informal era was drawing to a close under the weight of sweeping federal regulatory change.</p>
+
+<p>The 1991 promulgation by the United States Environmental Protection Agency of regulations pursuant to Subtitle D of the federal Resource Conservation and Recovery Act (RCRA) established, for the first time, stringent nationally uniform standards for the siting, design, operation, and closure of municipal solid waste landfills. These standards became effective on <strong>October 9, 1993</strong>. Among their most consequential provisions was the elimination of the existing exemption that had allowed local governments to demonstrate financial assurance for landfill closure through their general creditworthiness rather than hard-dollar escrow accounts or insurance. In December 1992, the Appomattox County Board of Supervisors formally adopted a resolution urging Congress to restore that exemption, arguing that the new financial assurance requirements would "impose upon local governments extreme, and unnecessary financial burdens." The resolution passed unanimously.<sup><a href="#ref1">1</a></sup></p>
+
+<p>The county's existing landfill cells—designated Cells A through G—were aging, and the regulatory requirements for their closure, environmental monitoring, and long-term post-closure care represented significant unfunded liabilities that would shape county budget discussions for the following two decades.</p>
+
+<h3 id="staff">The Landfill Operation and Its Staff</h3>
+
+<p>By July 1992—the earliest period documented in surviving Board of Supervisors minute books—the county's solid waste operation was managed by <strong>Charlie Peterson</strong>, serving as Solid Waste Administrator. Peterson was a regular presence at Board meetings throughout the 1990s and 2000s, presenting monthly reports on tonnage received, recycling volumes, brush collection, and operational needs. In July 1992, Peterson reported that the landfill was receiving an average of 36 tons per day; by September the figure had risen to 43 tons per day, with 49 tons of material recycled in August 1992 alone.<sup><a href="#ref2">2</a></sup></p>
+
+<p>Peterson's longtime subordinate, <strong>Tommy Gobble</strong>, was hired in approximately 1984 and would serve at the landfill for more than three decades. Board minutes from 1994 record multiple approvals for Gobble to attend training courses and sit for the Landfill Operator Certification Exam—an important credential as state requirements for qualified operators grew more stringent. Gobble was honored in 2014 with a certificate of appreciation for thirty years of service.<sup><a href="#ref3">3</a></sup></p>
+
+<p>In addition to full-time staff, the landfill during the early 1990s employed part-time workers drawn from programs including the Farm and Migrant Federal Jobs Program, and received periodic labor support from county inmates. The county also maintained a network of scattered unmanned dumpster sites across the county—at locations such as a site on the property of Hunter Jones (which closed in 1992), the Nash solid waste transfer site, and several others—to allow rural residents access without the full drive to Route 632.<sup><a href="#ref4">4</a></sup></p>
+
+<h3 id="consultants">Engineering and Environmental Consultants</h3>
+
+<p>The county retained two principal engineering firms whose names appear repeatedly across decades of solid waste decision-making. <strong>Hurt &amp; Proffitt, Inc.</strong>, of Lynchburg served as the county's primary landfill engineering consultant from at least the early 1990s through the 2000s; the firm's principal on the account was <strong>Earl Dickerson</strong>, who appeared before the Board repeatedly to present cost analyses, permitting advice, and technical reports. <strong>Draper Aden Associates</strong> also served the county on specific projects, with staff engineers <strong>Jeff Crate</strong>, <strong>Lyn Corey</strong>, and <strong>Lynn Klappich</strong> appearing in various capacities across different decades. <strong>Central Virginia Laboratories and Consultants, Inc.</strong>, held the contract for groundwater sampling and analysis from the mid-1990s through at least 2000.<sup><a href="#ref5">5</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="regional1992">Exploring a Regional Landfill, 1992–1993</h2>
+
+<p>Even before the Subtitle D regulations took full effect, Appomattox County supervisors were exploring the possibility of joining with neighboring counties to operate a shared regional landfill, hoping to spread the mounting capital and compliance costs across a broader tax base.</p>
+
+<p>In August 1992, the Board directed County Administrator <strong>Gordon Rice</strong> to contact Delegate Watkins Abbitt to arrange a meeting with the Boards of Supervisors of Nelson and Buckingham Counties to discuss their mutual interest in a regional landfill. Later that same month, the Board voted to formally participate in a feasibility study, at a cost not to exceed $1,500, contingent on Nelson and Buckingham Counties also agreeing to participate.<sup><a href="#ref6">6</a></sup></p>
+
+<p>The resulting engineering study was prepared by Draper Aden Associates. In late 1992, Jeff Crate of Draper Aden presented the Board with an executive summary of the regional landfill feasibility report, comparing three scenarios: each county operating separate landfills; the counties developing and operating a regional landfill together; or each county using a private landfill in Amelia County—specifically the Chamber's Inc. facility, a 1,000-plus-acre site with a capacity of 43 million cubic yards, whose first 12-acre cell was then under construction.<sup><a href="#ref7">7</a></sup></p>
+
+<p>Board Chairman <strong>W.E. Jamerson</strong> expressed a clear preference for a regional landfill sited at the existing Appomattox County facility, which he argued was already in operation and had land purchased and plans underway for modernization. He reasoned that the county could operate the regional facility and benefit from the expanded revenue stream. However, Nelson and Buckingham Counties declined to support an arrangement that would leave Appomattox County in control of the regional operation, and Charlotte County expressed no interest in participating. The regional landfill concept accordingly went dormant, and each county proceeded to manage its own solid waste infrastructure independently through the 1990s.<sup><a href="#ref8">8</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="1990s">Operating the County Landfill: The 1990s</h2>
+
+<h3 id="subtitled">New Subtitle D Cell Construction</h3>
+
+<p>With the regional option off the table, Appomattox County proceeded to modernize its landfill to comply with the new federal standards. The Board authorized Hurt &amp; Proffitt to proceed with design plans for a new Subtitle D-compliant cell—a process that required navigating an increasingly demanding DEQ permitting regime. The county bonded for the project, with approximately $400,000 in bond money designated for closing the old cells and $1,000,000 for opening the new five-acre cell.<sup><a href="#ref9">9</a></sup></p>
+
+<p>Engineering fees proved a persistent point of friction. By 1994, actual engineering expenditures had exceeded the ten-year development plan projections by approximately $62,400, a discrepancy Supervisor <strong>Frank Carwile</strong> publicly flagged at multiple Board meetings. While Dickerson attributed the overrun to regulatory requirements not anticipated in the original plan, the Board remained watchful of professional services costs for the remainder of the decade.<sup><a href="#ref10">10</a></sup></p>
+
+<h3 id="methane">Methane Gas: Detection, Monitoring, and Remediation</h3>
+
+<p>As the older cells aged, methane gas migration became an escalating problem. In June 1994, a DEQ inspection identified that the landfill lacked a proper gas monitoring system; the Board approved the purchase of a gas meter for $2,400 from the landfill bond account.<sup><a href="#ref11">11</a></sup></p>
+
+<p>By March 1998, groundwater monitoring wells had identified concerns north of closed Cells A, B, and C. At the same meeting, Hurt &amp; Proffitt's Earl Dickerson presented a proposed gas remediation plan, including options for passive venting trenches versus active venting wells. After extended discussion, the Board voted to authorize permit amendments for gas venting wells, additional groundwater monitoring wells, and amendments to the county's tire program. A key concern was the migration of methane gas toward property lines of neighboring landowners.<sup><a href="#ref12">12</a></sup></p>
+
+<p>In March 1999, the Board formally approved proceeding with the gas remediation plan. The gas problem re-emerged more urgently by 2006, when DEQ required installation of a formal Gas Extraction System at the now-closed older portions of the landfill. The Board was informed that the project would cost an estimated $465,000 for the system itself and $150,000 for engineering fees—a total of $615,000. At its October 2006 meeting, the Board voted 5-0 to place the Gas Extraction System out for public bid. Financing was secured through a <strong>$1.6 million loan from BB&amp;T at 4.07% interest</strong>, repayable over fifteen years; the loan covered both the gas remediation system and renovation of the county's satellite CVCC campus.<sup><a href="#ref13">13</a></sup></p>
+
+<h3 id="groundwater">Groundwater Monitoring and Financial Assurance</h3>
+
+<p>Throughout the 1990s, the county maintained a contract with Central Virginia Laboratories and Consultants, Inc., for quarterly groundwater sampling and analysis from a network of monitoring wells around the landfill. A 2001 DEQ submission under HB1205 gave the Appomattox landfill a final prioritization closure date of 2020, based on its "low" risk assessment score.<sup><a href="#ref14">14</a></sup></p>
+
+<p>Financial assurance for landfill closure and post-closure care was a recurring topic throughout the 1990s and 2000s. At various points, the county relied on the "financial test" method of demonstrating assurance—arguing that the county's overall financial strength was sufficient guarantee—rather than maintaining dedicated escrow funds. This approach was periodically challenged by changing state and federal guidance.<sup><a href="#ref15">15</a></sup></p>
+
+<h3 id="recycling1990s">Recycling, User Fees, and the County Dumpster Network</h3>
+
+<p>By the early 1990s, the county was already collecting and selling scrap metal—including air conditioners, refrigerators, and freezers—as a modest revenue source, and maintained a brush disposal program at the landfill site. The question of purchasing a wood chipper to handle yard waste was periodically debated.<sup><a href="#ref16">16</a></sup></p>
+
+<p>In 1993, the county received a request from a private hauler, <strong>Johnny Knight</strong>, for a flat-rate billing arrangement for dumpster containers rather than the per-ton rate established by ordinance. The Board declined to deviate from the ordinance for individual haulers. In October 1996, the Board held a public hearing on a proposal to amend the Solid Waste Ordinance to eliminate small user fees.<sup><a href="#ref17">17</a></sup></p>
+
+<p>The county maintained unmanned dumpster "drop-off" sites across its rural expanse—at Vera, Stonewall, Oakville, Spout Spring, Promise Land, Evergreen, and Hixburg—allowing residents to deposit household trash without traveling to Route 632. These sites were a persistent source of illegal dumping, litter, and overflow complaints, and their management was a recurring item in county budget discussions.<sup><a href="#ref18">18</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="baler2004">The Baler, the Crunch, and the 2004 Decision</h2>
+
+<h3 id="baler">Installation of the Baler and Extended Cell Life</h3>
+
+<p>A pivotal technological investment came in 1999, when the county installed a trash baler at the landfill. The machine compacted incoming solid waste into dense 3-by-5-foot bales weighing approximately 2,500 pounds each. By packing waste far more tightly than conventional compaction allowed, the baler dramatically extended the useful life of each landfill cell. Hurt &amp; Proffitt's Earl Dickerson later credited the baler with creating "new-cell avoidance"—deferring the expensive and time-consuming process of permitting, designing, and constructing additional capacity.<sup><a href="#ref19">19</a></sup></p>
+
+<p>The baler's economic impact was central to Appomattox County's solid waste strategy for the decade that followed. County officials could point to a per-ton disposal cost that remained competitive with alternatives precisely because the baler kept the existing cell viable longer than industry norms would otherwise have predicted.</p>
+
+<h3 id="crisis2004">The 2004 Crisis: A 12-Month Window</h3>
+
+<p>By the summer of 2004, the county faced a genuine operational emergency. Its only permitted landfill trench was expected to reach full capacity within approximately twelve months. The state permitting process for a new trench required up to a year to complete, and construction of the new trench would take an additional six months—leaving an estimated six-month gap during which the county would have no active landfill cell.</p>
+
+<p>County Administrator <strong>Aileen Ferguson</strong> told the Board in August 2004: "Time is of the essence." The Board commissioned a comprehensive disposal analysis from Hurt &amp; Proffitt, which was presented on <strong>August 16, 2004</strong>, by Earl Dickerson and colleague Jeff Grubbs.<sup><a href="#ref20">20</a></sup></p>
+
+<p>The report evaluated multiple scenarios, comparing costs per year:</p>
+
+<table class="wikitable">
+  <tr><th>Disposal Option</th><th>Estimated Annual Cost</th><th>Notes</th></tr>
+  <tr><td>Continue landfilling, new 4-acre cell</td><td>$780,000/year</td><td>9-year cell life; baler in continued use</td></tr>
+  <tr><td>Steel wheel compactor approach</td><td>$829,000/year</td><td>6-year life; higher capital cost</td></tr>
+  <tr><td>Contract to private collector</td><td>$773,000–$846,000/year</td><td>Range reflects contract options</td></tr>
+  <tr><td>Private cell operation contract</td><td>$793,000/year</td><td>County retains some control</td></tr>
+  <tr><td>Full private collection and disposal</td><td>$786,000–$858,000/year</td><td>Complete privatization</td></tr>
+</table>
+
+<p>The conclusion was clear: maintaining the county's own landfilling operation, utilizing the baler already in place, was the most cost-effective option. The Board scheduled a workshop for August 23, 2004, to deliberate.</p>
+
+<h3 id="decision2004">The Decision: Keep the Landfill Open</h3>
+
+<p>At the August 25, 2004 meeting, the Board voted unanimously to continue the county landfilling operation and to open a new trench. Board Chairman <strong>Sammy Carter</strong> declared it "almost a no-brainer" given the financial analysis. Supervisor <strong>Willie Craft</strong> endorsed the baler: "Baling is better, and since we already have one, we should stick with it." Supervisor <strong>Shawn Armbrust</strong> added: "It's more economical. Plus you've got to look at the risks involved when other counties control our [solid waste disposal]."<sup><a href="#ref21">21</a></sup></p>
+
+<p>To bridge the anticipated gap while a new cell was permitted and constructed, <strong>Prince Edward County</strong> agreed to accept Appomattox's solid waste at a rate of <strong>$45 per ton</strong>. This temporary arrangement would cover approximately six months of disposal needs.</p>
+
+<p>The four-acre new cell, once permitted and constructed, was expected to serve the county for nine years—though Dickerson noted that with the baler in continued use, "the longer you can stay in that four-acre cell, the cost keeps diving down."<sup><a href="#ref22">22</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="bfi">The BFI Commercial Transfer Station Proposal, 2004–2005</h2>
+
+<p>Concurrent with the county's own landfill deliberations, a private waste management firm sought to establish a commercial solid waste transfer station in Appomattox County.</p>
+
+<p>In the fall of 2004, <strong>BFI Transfer Systems</strong> (a subsidiary of Allied Waste, itself a major national waste management company) petitioned for a rezoning of approximately 12.15 acres along U.S. Route 460 in the Concord area, seeking to convert the parcel from agricultural use to industrial use and to obtain a conditional use permit for a solid waste transfer and recycling facility. The proposed station would have processed approximately 300 tons of solid waste per day, receiving waste from as many as 35 garbage trucks and dispatching it by 15 transfer trailers to permitted landfills in Brunswick and Henrico Counties. The service area was envisioned to cover Nelson, Appomattox, Campbell, Bedford, Buckingham, and Prince Edward Counties.<sup><a href="#ref23">23</a></sup></p>
+
+<p>The Appomattox County Planning Commission voted <strong>8-0</strong> on September 20, 2004 to recommend approval. The Board of Supervisors subsequently granted the rezoning and conditional use permit unanimously, with sixteen conditions attached to limit operational impacts—including requirements governing truck routes, hours of operation, and environmental controls.</p>
+
+<p>A public information meeting drew approximately 40 area residents in mid-2005. Concerns expressed by citizens—including noise, odor, litter, reduced property values, traffic hazards, and potential water contamination—foreshadowed nearly identical objections that would recur when a second transfer station proposal came before the county fifteen years later. Despite the permit approval, the <strong>BFI facility was never constructed</strong>, and the conditional use permit ultimately lapsed.<sup><a href="#ref24">24</a></sup></p>
+
+<p>Separately, in 2005, Delegate <strong>Watkins Abbitt</strong> raised the possibility that Allied Waste—BFI's parent—might be willing to provide waste disposal services to the county at a rate of $18 to $43 per ton, potentially far below the county's own per-ton cost at the time of approximately $68 per ton. Allied Waste reportedly offered to hire all existing county landfill employees and enter a 20-year service contract. These overtures were not accepted by the Board, which at that point still anticipated continuing its own landfilling operation.<sup><a href="#ref25">25</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="pivot">The Pivot to Regional Disposal, 2007–2009</h2>
+
+<h3 id="costcalculus">The Cost Calculus Changes</h3>
+
+<p>By 2007, the county's calculation had fundamentally shifted. The existing landfill trench was approaching the point at which a new six-acre replacement cell would need to be opened, a project with an estimated nine-year life expectancy. At the same time, the county was aware that a regional solution had become available: the <strong>Regional Solid Waste Authority (RSWA)</strong>, a joint entity comprising Bedford County, Campbell County, the City of Lynchburg, and Nelson County, operating the Concord Turnpike Regional Landfill in Campbell County and disposing of regional waste at the City of Lynchburg's permitted landfill.</p>
+
+<p>County Administrator Aileen Ferguson and Landfill Supervisor <strong>Alice Rockefeller</strong> retained Draper Aden Associates, with <strong>Lynn Klappich</strong> as lead engineer, to prepare a disposal analysis comparing continued county landfilling to participation in the RSWA.</p>
+
+<p>Klappich presented preliminary statistics to the Board in August 2007 showing that Appomattox taxpayers could save "nearly a half-million dollars a year" by shipping waste to Lynchburg. Specifically:<sup><a href="#ref26">26</a></sup></p>
+
+<blockquote>Appomattox can maintain its existing landfill with a new trench at an annual cost of $1.36 million. Or, Appomattox could haul its trash to Lynchburg for about $900,000 a year.</blockquote>
+
+<p>The RSWA's member jurisdictions received a discounted tipping fee of $25 per ton, compared to the commercial rate of $35 per ton. The <strong>R.W. Beck</strong> consulting firm independently prepared a "snapshot report" that generally supported these figures, though with the caveat that it was preliminary rather than a comprehensive feasibility study.</p>
+
+<h3 id="rockefeller">Alice Rockefeller and the Manned Dumpster Site Proposal</h3>
+
+<p><strong>Alice Rockefeller</strong>, who had by this period taken over from Charlie Peterson as Landfill Supervisor (Peterson remained active in various capacities), was an early and vocal advocate for two connected changes: joining the regional authority, and converting the county's network of unmanned dumpster sites to supervised, manned operations.</p>
+
+<p>In August 2007, Rockefeller presented the Board with a specific proposal. She recommended closing three existing unmanned dumpster sites—at State Route 667 in Spout Spring, State Route 620 in Evergreen, and State Route 627 in Hixburg—and replacing them, along with remaining sites, with five manned sites at State Route 648 (Spout Spring), Route 26 (Oakville), Route 604 (Promise Land), Route 616 (Vera), and Route 632 at the existing county landfill.</p>
+
+<p>Each manned site would require an estimated $30,000 in capital setup costs (fencing, basic infrastructure) and approximately $35,000 per year in operating costs, covering one full-time and two part-time employees per site, plus portable toilet, electricity, and telephone. Rockefeller noted that <strong>Bedford County</strong> had been manning its sites with striking results: a 15-to-20-percent decrease in the volume of trash received and a 40-percent increase in recyclable materials diverted.<sup><a href="#ref27">27</a></sup></p>
+
+<p>"Let's get them manned and under control," Rockefeller urged the Board.<sup><a href="#ref28">28</a></sup></p>
+
+<p>Supervisor Willie Craft expressed concern about losing the Route 620 site—noting that residents south of Route 620 would have to drive an additional eight miles—and the Route 627 site in Hixburg. Rockefeller acknowledged these concerns but explained that the Route 620 site sat on privately owned land not under county control, making a manned operation impractical at that location.</p>
+
+<h3 id="rswa2007">The August 2007 Decision and RSWA Membership</h3>
+
+<p>The Board of Supervisors voted in August 2007 to pursue membership in the Regional Solid Waste Authority and to authorize Ferguson to inquire about the buy-in costs associated with joining. This effectively meant the county's days of landfilling its own trash were numbered.</p>
+
+<p>The path to RSWA membership was not immediate. County officials needed to establish what the existing RSWA members had invested in administrative and engineering costs over the years, since new members were expected to pay a proportionate share of those sunk costs as a buy-in condition. Ferguson reported that she had not yet been able to reach RSWA Executive Director <strong>Bob White</strong> to obtain these figures, and the Board was unwilling to sign any commitment until it had full cost information.<sup><a href="#ref29">29</a></sup></p>
+
+<p>In May 2008, at a meeting of the Region 2000 Local Government Council, <strong>Gary Christie</strong> of Region 2000 informed the Board that the regional landfill authority resolution would be presented for formal action. Appomattox County's supervisors passed the resolution to join the RSWA at their May 2008 meeting, and Appomattox County formally became a member jurisdiction. The county began hauling its trash to the Lynchburg regional facility shortly thereafter.<sup><a href="#ref30">30</a></sup></p>
+
+<h3 id="hauling">Hauling Logistics</h3>
+
+<p>The practical mechanics of hauling Appomattox County's solid waste to Lynchburg were worked out in 2008. The county's waste, compacted in its existing baler at the Route 632 facility, was loaded onto transfer trailers for the roughly 30-mile trip to the regional landfill site. The baling operation at Route 632 thus remained valuable even after the county ceased landfilling: baled waste takes up less space in a trailer and reduces the number of trips required, keeping per-ton hauling costs down.<sup><a href="#ref31">31</a></sup></p>
+
+<p>The Route 632 facility transitioned from active landfill to what county officials began calling the "Waste Management and Recycle Facility" or simply the "Waste Department"—a processing and transfer point that continued to accept waste from county residents while routing all material to the regional system.</p>
+
+<!-- ============================================================ -->
+<h2 id="closure">Closing the Landfill: The Final Cell Closure, 2009</h2>
+
+<p>With the county now directing its waste stream to Lynchburg, attention turned to the formal closure of the last active landfill cell on Route 632. Virginia DEQ requires permitted landfills to close cells in compliance with engineering specifications—installing impermeable caps, grading for drainage, planting ground cover, and establishing a 30-year post-closure monitoring program.</p>
+
+<p>In early 2009, the county solicited bids for the cell closure project. <strong>Twelve bids</strong> were received and opened on February 24, 2009. At the Board's March 25, 2009 meeting, Lynn Klappich of Draper Aden Associates reported that all 12 bids were "competitive and reasonable." The low bidder was <strong>Shearin Construction</strong> of Drakes Branch, Virginia, at a bid price of <strong>$556,395.13</strong>—approximately $100,000 less than DEQ's own estimate of the project cost. Supervisor <strong>Tom Conrad</strong> thanked Klappich for her work, and the Board voted <strong>5-0</strong> to accept Shearin Construction's bid.<sup><a href="#ref32">32</a></sup></p>
+
+<p>Work on the final cell closure began immediately following the Board's approval. The closure capped the end of an era: for more than a generation, Appomattox County had managed its own solid waste disposal through county employees working at a county-owned and county-operated facility. That operation was now finished.</p>
+
+<p>Under post-closure regulations, the county remained responsible for ongoing groundwater monitoring, maintenance of the gas extraction system, and inspection of the cell caps at the Route 632 site for <strong>30 years</strong> following closure. As of 2014, the county was in the process of replanting approximately 70 acres of the former landfill site and preparing a 30-acre parcel for additional ground cover, at a cost of approximately $4,900 for seeding services.<sup><a href="#ref33">33</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="convenience">The Convenience Center Network</h2>
+
+<h3 id="opening2009">Opening: July 2009</h3>
+
+<p>The manned dumpster sites that Alice Rockefeller had advocated since 2007 became a reality in the summer of 2009. The county officially branded them <strong>"Convenience Centers,"</strong> and on July 8, 2009, the <em>Times-Virginian</em> reported their debut under the headline "Manned dumpster sites make debut."</p>
+
+<p>Recycling Coordinator <strong>T.J. Knight</strong> described the new system: "The main thing we want to accomplish is to let people know this is going to be a service to our citizens. It's gonna kind of be like a full-service gas station."<sup><a href="#ref34">34</a></sup></p>
+
+<p>Seven sites opened across the county, all at locations of existing dumpster sites:</p>
+<ul>
+  <li>State Route 622, Evergreen</li>
+  <li>Route 608, Stonewall</li>
+  <li>Route 648, Spout Spring</li>
+  <li>Route 26, Oakville</li>
+  <li>Route 604, Promise Land</li>
+  <li>Route 616, Vera</li>
+  <li>Route 632 at the Waste Department (former landfill site)</li>
+</ul>
+
+<p>Two existing unmanned sites—at State Routes 667 in Spout Spring and 627 in Hixburg—were slated for closure. The county's new policy thus represented a net reduction from the scattered legacy of unmanned sites, consolidating service at supervised, gated locations with defined hours.</p>
+
+<h3 id="hours">Hours, Staffing, and Separation Policy</h3>
+
+<p>Each Convenience Center was staffed by an attendant visible in a navy blue t-shirt. The sites operated Monday, Tuesday, Thursday, Friday, and Saturday from 7:00 a.m. to 7:00 p.m., and Sunday from 9:00 a.m. to 3:00 p.m. Sites were closed on Wednesdays, reflecting historically low Wednesday usage. Winter hours (November 1 through February 28) saw the evening closing time moved back to 5:00 p.m. The Waste Department facility on Route 632 remained open on Wednesdays.<sup><a href="#ref35">35</a></sup></p>
+
+<p>Each site was equipped with eight separate receptacle categories for source separation of recyclable materials: mixed paper; cardboard; textiles; metals and appliances; wood; bulk items (such as sofa beds); a compactor for general waste; and plastics (segregated into No. 1 and No. 2 plastic categories).</p>
+
+<p>The Board of Supervisors had enacted a policy requiring that all recyclable materials be separated at the point of drop-off. This separation requirement was the county's principal strategy for maximizing the value of recyclable materials that could be sold on the secondary market, offsetting operating costs.</p>
+
+<h3 id="business">The Business Exclusion Controversy</h3>
+
+<p>Within weeks of the Convenience Centers' opening, a policy controversy arose. In late July 2009, <strong>Phillip L. Nelson</strong>, owner of Chestnut Mountain Feed in the Stonewall District, appeared before the Board to challenge a county policy barring businesses from using the Convenience Centers. Nelson noted that he paid property taxes on multiple tracts in the county, including his business property. When he brought recyclable materials—specifically shrink-wrap and paper—to the Stonewall site, he was told that because he owned a business, he could not use the facility.<sup><a href="#ref36">36</a></sup></p>
+
+<p>Rockefeller acknowledged the policy but noted that all Appomattox County businesses were permitted to bring recyclables directly to the Waste Department facility at the old landfill on Route 632. At the September 2009 Board meeting, the supervisors softened the restriction, allowing businesses, churches, and non-profit organizations to use the Convenience Centers—though with a limit of <strong>one truckload per visit per week</strong> for commercial users.<sup><a href="#ref37">37</a></sup></p>
+
+<h3 id="savings">Savings and Early Results</h3>
+
+<p>The transition to manned sites produced measurable results quickly. In the first eight days of operation, the county received only 60 tons of waste across all sites—compared to a typical weekly total under the old system of approximately 140 tons. This dramatic reduction was attributed to the tighter control that attended staffing: illegal dumping of construction debris, appliances, and oversized materials was largely eliminated by the presence of a trained attendant. Recycling rates climbed sharply.<sup><a href="#ref38">38</a></sup></p>
+
+<p>County officials estimated that the regional disposal arrangement combined with the Convenience Center system would save taxpayers approximately <strong>$400,000 per year</strong> compared to the cost of continuing to operate the county landfill. Over time, additional recycling revenue was expected to add further savings; preliminary projections in October 2009 suggested recycling diversion could save more than $100,000 additionally.<sup><a href="#ref39">39</a></sup></p>
+
+<p>The county also invested in infrastructure at the Convenience Centers. Lighting was added at a cost of approximately $47,500 for eleven light fixtures across the network. A free tire disposal program was implemented under county ordinance, allowing each household to dispose of up to eight passenger tires per year at no charge.</p>
+
+<h3 id="recycling2010s">Continued Recycling Program Development</h3>
+
+<p>The county's recycling portfolio expanded steadily through the 2010s. By 2011, the program was diverting 167 tons of cardboard and 177 tons of mixed paper annually. In 2012, <strong>steel cans</strong> were added to the list of accepted recyclable materials. The county participated in Regional Solid Waste Authority Household Hazardous Waste collection events at the Concord Turnpike regional facility, providing county residents with a safe disposal option for materials such as pesticides, solvents, paint, and batteries.<sup><a href="#ref40">40</a></sup></p>
+
+<p>The county also offered year-round drop-off of used motor oil, automotive batteries, and antifreeze at the Waste Department on Route 632. A computer recycling program and a textile recycling partnership with <strong>Green Earth Recycling</strong> were established around 2007, providing additional diversion pathways that reduced the volume of material entering the general waste stream.</p>
+
+<h3 id="ccstaff">Staffing and Community Recognition</h3>
+
+<p>The individual attendants at the Convenience Centers became familiar community figures. <strong>Gene Hamlett</strong>, the attendant at the Vera site, was publicly praised by citizens at Board meetings in both 2012 and 2015 for his helpful and professional service.<sup><a href="#ref41">41</a></sup> By the early 2020s, the Waste Department was being managed by <strong>Carey McCleese</strong>, who had served in that role for more than a decade and overseen a workforce of approximately 25 employees processing roughly 550 tons of trash per month.</p>
+
+<!-- ============================================================ -->
+<h2 id="rswa">The Region 2000 Service Authority</h2>
+
+<h3 id="rswastructure">Origins and Structure</h3>
+
+<p>The entity that Appomattox County joined in 2008 as the Regional Solid Waste Authority (RSWA) operated under the broader umbrella of the <strong>Region 2000 Local Government Council</strong>—a planning district commission serving the Central Virginia region, headquartered in Lynchburg. The Region 2000 organization served multiple functions: regional transportation planning, economic development coordination, hazard mitigation planning, and, through its Service Authority, solid waste management for member jurisdictions.</p>
+
+<p>The Service Authority—distinct from the planning council itself—was the joint authority comprising Appomattox County, Bedford County, Campbell County, and the City of Lynchburg. Nelson County was also mentioned as a member in various records. The authority operated regional landfill infrastructure on behalf of its member localities, including the Concord Turnpike Regional Landfill in Campbell County and disposal arrangements at the City of Lynchburg's permitted facility.<sup><a href="#ref42">42</a></sup></p>
+
+<p>In September 2018, the Region 2000 Local Government Council sought and received approval from the Appomattox Town Council to change its name to the <strong>Central Virginia Planning District Commission</strong>—a rebranding intended, as explained by Executive Director Gary Christie, to better align the organization's name with its mission. The name change affected only the planning council, not the Service Authority.<sup><a href="#ref43">43</a></sup></p>
+
+<h3 id="tipping">Financial Arrangements and Tipping Fees</h3>
+
+<p>Member jurisdictions of the RSWA received a preferential tipping fee of <strong>$25 per ton</strong> for waste delivered to the regional facility, compared to the commercial rate of <strong>$35 per ton</strong> available to non-members. This differential was a primary financial incentive for smaller jurisdictions like Appomattox to join the authority. For a county generating several hundred tons of waste per month, the $10-per-ton differential represented tens of thousands of dollars in annual savings beyond what the fixed cost comparison between the county landfill and the regional option already showed.<sup><a href="#ref44">44</a></sup></p>
+
+<p>In February 2018, the Board of Supervisors appropriated <strong>$27,000</strong> to the Region 2000 Service Authority for the authority's engineering fees related to the regional landfill—reflecting the ongoing capital costs of operating shared infrastructure that member jurisdictions were responsible for covering through their proportionate contributions.<sup><a href="#ref45">45</a></sup></p>
+
+<h3 id="lawsuit">The Excess Revenue Dispute and Campbell County Lawsuit, 2020–2021</h3>
+
+<p>By 2020, a significant internal dispute had emerged within the Region 2000 Service Authority over the distribution of excess revenue funds—money remaining after operational costs were covered that had accumulated within the authority's accounts. The amount in dispute reportedly exceeded <strong>$2.5 million</strong>.</p>
+
+<p>At its March 3, 2020 meeting, the <strong>Campbell County Board of Supervisors</strong> voted unanimously to authorize legal action against the Region 2000 Service Authority. Campbell County's decision was reported to have been joined or supported by the City of Lynchburg, whose representatives also had objections to the distribution formula.<sup><a href="#ref46">46</a></sup></p>
+
+<p>Appomattox County Administrator <strong>Susan Adams</strong> publicly responded to Campbell County's decision with concern. In a written statement, she noted: "Campbell County's decision to consider the filing of a suit against the Regional Landfill Authority in which they are a member along with the Counties of Appomattox, Nelson, and the City of Lynchburg is concerning news since there are so many variables relative to the annual vote of the disbursement of the excess revenues."<sup><a href="#ref47">47</a></sup></p>
+
+<p>At the Region 2000 Service Authority's January 8, 2021 meeting, the Authority voted unanimously to retain attorney <strong>Jeremy Carroll</strong> to represent it in the pending lawsuit. The legal dispute centered on what the <em>Times-Virginian</em> described as "a matter of semantics"—specifically, the interpretation of the contractual language governing how surplus revenues were to be allocated among member localities.<sup><a href="#ref48">48</a></sup> The outcome of the litigation was not conclusively resolved in the public record reviewed for this account.</p>
+
+<div class="note">The excess revenue dispute underscored the inherent complexities of multi-jurisdictional joint authorities, where member localities with differing financial needs and political priorities must agree on how shared financial benefits are to be distributed. Appomattox County, as a newer member that had joined in 2008 after larger original members had already built up the authority, occupied a distinct position in these negotiations.</div>
+
+<!-- ============================================================ -->
+<h2 id="countywaste">The County Waste Transfer Station Controversy, 2018–2019</h2>
+
+<h3 id="cwbackground">Background</h3>
+
+<p>A decade after Appomattox County had joined the regional disposal system and converted its dumpster sites to Convenience Centers, the question of a commercial solid waste transfer station returned to public prominence. This time the applicant was <strong>County Waste of Southwest Virginia, LLC</strong>, a private solid waste company seeking a conditional use permit to operate a waste transfer station and recycling center on Richmond Highway (formerly Stage Road), near the U.S. Route 460 corridor.</p>
+
+<p>The site in question encompassed 35.5 acres, of which 21.8 acres were proposed for the facility itself. Its location near the U.S. 460 commercial corridor in Concord—the same general area where BFI had proposed a transfer station in 2004—placed it in proximity to an established residential community as well as the regional transportation network.<sup><a href="#ref49">49</a></sup></p>
+
+<p>A conditional use permit had reportedly been granted at this same location in 2004 (during the BFI episode) but had never been exercised and had lapsed. County Waste's application thus represented a fresh start through the county's land use permitting process.</p>
+
+<h3 id="cwplanning">Planning Commission Review</h3>
+
+<p>The Appomattox County Planning Commission considered County Waste's application beginning in January 2019. At an initial session, the Commission tabled the matter pending further information. After receiving revised materials—including a modified access plan submitted by County Waste following a VDOT review that required the company to propose three commercial entrances (one on Route 460 for residential traffic to a convenience center portion of the site, and two off Stage Road for solid waste trucks and tractor trailers)—the Commission voted <strong>6-1</strong> on February 6, 2019 to recommend that the Board grant the conditional use permit.<sup><a href="#ref50">50</a></sup></p>
+
+<h3 id="cwvote">The February 2019 Public Hearing and Board Vote</h3>
+
+<p>The Board of Supervisors held its February 19, 2019 meeting at <strong>Appomattox County High School's auditorium</strong> to accommodate the anticipated public interest. The choice proved necessary: several hundred people attended. Nearly 50 citizens rose to speak at the public hearing.</p>
+
+<p>The citizen opposition organized under the slogan <strong>"Dump the Dump,"</strong> which appeared on shirts worn by the majority of those present to protest the facility. Led by community organizer <strong>Trevor Hipps</strong> and others, speakers raised concerns that were familiar from the 2004–2005 BFI debate: vermin, foul odors, noise, traffic hazards from large trucks, potential contamination of wells and surface water, and loss of scenic rural character. Several speakers expressed deep emotional attachment to their way of life and fear for the future of their properties. As reported by the <em>Times-Virginian</em>: "A few women choked up as they expressed their fear of losing the life they know."<sup><a href="#ref51">51</a></sup></p>
+
+<p>County Waste's attorney, <strong>Will Shewmake</strong>, presented the company's case and answered questions from supervisors.</p>
+
+<p>Supervisor <strong>Watkins Abbitt</strong> of the Piney Mountain District moved to grant the conditional use permit. Supervisor <strong>Chad Milner</strong> of the Falling River District seconded the motion. The Board voted <strong>4-1</strong> in favor, with Supervisor <strong>Bryan Moody</strong> of the Wreck Island District casting the dissenting vote.<sup><a href="#ref52">52</a></sup></p>
+
+<p>The reaction from the audience was immediate. The <em>Times-Virginian</em> reported: "Before the meeting was adjourned, people rose to leave when they heard the final decision." The evening ended with a confrontation between an angry opponent and Chairman <strong>Samuel Carter</strong>.</p>
+
+<h3 id="cwpost">The Company's Record and Post-Permit Developments</h3>
+
+<p>County Waste of Southwest Virginia had a checkered regulatory history that opponents raised during the permit process. The company had paid a <strong>$1 million settlement in 2011</strong> in connection with overcharging and environmental violations associated with its operations in New York. Critics argued this history counseled against granting a permit in Appomattox County.<sup><a href="#ref53">53</a></sup></p>
+
+<p>Following the permit grant, County Waste moved toward implementation. The company's engineers reduced the proposed footprint of the facility from 22 acres to approximately 7 acres during the design phase, a modification that addressed some but not all neighbor concerns. The facility—which was to include a convenience center open to county residents as well as the commercial transfer station function—remained a subject of public scrutiny in the years following the permit grant.</p>
+
+<!-- ============================================================ -->
+<h2 id="swmp">Solid Waste Management Planning</h2>
+
+<p>State law requires Virginia localities to maintain an approved Solid Waste Management Plan (SWMP) as a condition of eligibility for certain state programs and grants. In 2008, the Appomattox Town Council approved a Solid Waste Management Plan drafted by Hurt &amp; Proffitt, Inc. The Plan was submitted for concurrent adoption by Appomattox County and the Town of Pamplin.</p>
+
+<p>The SWMP identified existing solid waste infrastructure, projected future waste generation, evaluated disposal alternatives, and outlined recycling and waste reduction goals consistent with state targets. Its approval reflected the coordinated planning approach required of a locality that was, at the time of drafting, in the middle of its transition from county-operated landfill to regional disposal.<sup><a href="#ref54">54</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="timeline">Chronological Summary</h2>
+
+<table class="timeline-table">
+  <tr><th>Period</th><th>Key Events</th></tr>
+  <tr><td>Pre-1992</td><td>County operates municipal dump on State Route 632. Unmanned dumpster sites scattered across rural county. No formal environmental monitoring or closure plans required under prior law.</td></tr>
+  <tr><td>October 1991</td><td>EPA promulgates Subtitle D regulations for solid waste landfills, effective October 9, 1993.</td></tr>
+  <tr><td>July–August 1992</td><td>Board votes to participate in regional landfill feasibility study with Nelson and Buckingham Counties ($1,500 cost). Board directs new Subtitle D-compliant cell design. Tommy Gobble and Charlie Peterson identified as long-serving landfill staff.</td></tr>
+  <tr><td>December 1992</td><td>Board unanimously adopts resolution urging Congress to restore financial assurance exemptions for local governments under Subtitle D.</td></tr>
+  <tr><td>Late 1992–1993</td><td>Draper Aden regional landfill feasibility report presented. Amelia County private landfill (Chamber's Inc.) also evaluated. Regional concept abandoned after Nelson and Buckingham Counties decline Appomattox-controlled model.</td></tr>
+  <tr><td>1994–1999</td><td>Gas monitoring system installed after DEQ inspection citation (1994). Groundwater monitoring wells installed and upgraded. Methane gas venting plan authorized (1998). Gas remediation plan approved (1999). Baler installed at landfill (1999)—transforming per-ton economics.</td></tr>
+  <tr><td>August 2004</td><td>Board faces 12-month trench closure horizon. Hurt &amp; Proffitt analysis (Dickerson and Grubbs) shows county landfilling most cost-effective option at $780,000/year. Board votes unanimously to open new trench. Prince Edward County agrees to accept interim waste at $45/ton.</td></tr>
+  <tr><td>Fall 2004–2005</td><td>BFI Transfer Systems (Allied Waste) receives conditional use permit for commercial transfer station on Route 460. Planning Commission votes 8-0; Board approves unanimously. Facility never constructed; permit lapses.</td></tr>
+  <tr><td>2006</td><td>DEQ requires Gas Extraction System at closed landfill cells. Board approves $615,000 project (system + engineering). BB&amp;T loan of $1.6 million secured at 4.07% for 15 years.</td></tr>
+  <tr><td>August 2007</td><td>Draper Aden analysis (Klappich) shows $1.36M/year to continue landfilling vs. $900K/year to haul to Lynchburg. Board votes to explore RSWA membership. Alice Rockefeller proposes manned dumpster sites with Bedford County model showing 40% recycling increase.</td></tr>
+  <tr><td>May 2008</td><td>Solid Waste Management Plan adopted. Board passes RSWA membership resolution. Appomattox County formally joins Regional Solid Waste Authority (Bedford, Campbell, Lynchburg, Nelson). Waste shipped to Lynchburg regional landfill at $25/ton member rate.</td></tr>
+  <tr><td>February–March 2009</td><td>12 bids received for final cell closure. Board awards $556,395.13 cell closure contract to Shearin Construction of Drakes Branch (5-0 vote, March 25). Final landfill cell closed and capped. 30-year post-closure monitoring program begins.</td></tr>
+  <tr><td>July 2009</td><td>Seven manned Convenience Centers open across county (Route 622/Evergreen, Route 608/Stonewall, Route 648/Spout Spring, Route 26/Oakville, Route 604/Promise Land, Route 616/Vera, Route 632/Waste Dept.). Eight-stream source separation policy implemented. Estimated savings: $400,000/year.</td></tr>
+  <tr><td>September 2009</td><td>Business exclusion policy at Convenience Centers relaxed; businesses, churches, and non-profits permitted up to one truckload per visit per week.</td></tr>
+  <tr><td>2011–2012</td><td>Recycling program expands: 167 tons cardboard, 177 tons mixed paper annually by 2011. Steel cans added to accepted materials (2012). Household Hazardous Waste events held at Concord Turnpike facility.</td></tr>
+  <tr><td>2014</td><td>Tommy Gobble honored for 30 years of service. County replanting ~70 acres of former landfill site.</td></tr>
+  <tr><td>February 2018</td><td>Board appropriates $27,000 to Region 2000 Service Authority for regional landfill engineering costs.</td></tr>
+  <tr><td>September 2018</td><td>Region 2000 Local Government Council rebrands as Central Virginia Planning District Commission.</td></tr>
+  <tr><td>January 2019</td><td>Planning Commission initially tables County Waste CUP application; revised application submitted.</td></tr>
+  <tr><td>February 6, 2019</td><td>Planning Commission votes 6-1 to recommend approval of County Waste CUP.</td></tr>
+  <tr><td>February 19, 2019</td><td>Board votes 4-1 to grant conditional use permit to County Waste of Southwest Virginia for transfer station and recycling center on Richmond Highway. Hundreds attend public hearing at high school auditorium; community opposition organized as "Dump the Dump." Bryan Moody dissents.</td></tr>
+  <tr><td>March 2020</td><td>Campbell County Board of Supervisors votes unanimously to pursue legal action against Region 2000 Service Authority over distribution of $2.5 million in excess revenues.</td></tr>
+  <tr><td>January 2021</td><td>Region 2000 Service Authority retains attorney Jeremy Carroll for pending excess revenue distribution lawsuit.</td></tr>
+  <tr><td>2024</td><td>Waste Department managed by Carey McCleese (~25 employees, ~550 tons/month). County Waste facility remains subject of ongoing public attention.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="references">Primary Sources and Research Notes</h2>
+
+<p>This account is drawn entirely from primary source documents compiled from Appomattox County public records. No secondary sources, academic studies, or external databases were consulted. All dollar amounts are as reported in contemporary sources without adjustment for inflation. Direct quotations from meeting minutes reflect OCR-processed text of handwritten or typewritten records and may contain minor transcription irregularities.</p>
+
+<div class="reflist">
+<ol>
+  <li id="ref1">BOS Minutes, December 1992. Resolution regarding Subtitle D financial assurance requirements. <em>County Board of Supervisors Minute Books, Vol. 1 (1992–1996), Appomattox County, Virginia.</em></li>
+  <li id="ref2">BOS Minutes, July and September 1992. Peterson tonnage reports. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref3">BOS Minutes, 1994 (multiple entries); BOS Minutes, 2014, certificate of appreciation for Tommy Gobble. <em>County Board of Supervisors Minute Books, Vols. 1 and 6.</em></li>
+  <li id="ref4">BOS Minutes, 1992–1993. Hunter Jones site closure; Nash transfer site references; Farm and Migrant program. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref5">BOS Minutes, 1992–2009, multiple engineering contract references. <em>County Board of Supervisors Minute Books, Vols. 1–7.</em></li>
+  <li id="ref6">BOS Minutes, August 1992 (regular and recessed meetings). Regional landfill study authorization; cost ceiling $1,500. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref7">BOS Minutes, late 1992. Draper Aden feasibility report presentation by Jeff Crate; Chamber's Inc. Amelia County alternative. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref8">BOS Minutes, 1992–1993. W.E. Jamerson statements; Nelson and Buckingham County responses; Charlotte County non-participation. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref9">BOS Minutes, 1993–1994. Hurt &amp; Proffitt authorization; bond allocation for cell closure and new cell construction. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref10">BOS Minutes, 1994. Carwile comments on engineering fee overruns; Dickerson response. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref11">BOS Minutes, June 1994. Gas meter purchase, $2,400. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref12">BOS Minutes, March 1998. Dickerson gas remediation plan presentation; permit amendments authorized. <em>County Board of Supervisors Minute Books, Vol. 2.</em></li>
+  <li id="ref13">BOS Minutes, October 2006. Gas Extraction System bid authorization; BB&amp;T loan details. <em>County Board of Supervisors Minute Books, Vol. 5.</em></li>
+  <li id="ref14">BOS Minutes, 2001. DEQ HB1205 submission; Appomattox closure prioritization date 2020. <em>County Board of Supervisors Minute Books, Vol. 3.</em></li>
+  <li id="ref15">BOS Minutes, 1990s–2000s (multiple). Financial assurance method discussions. <em>County Board of Supervisors Minute Books, Vols. 1–5.</em></li>
+  <li id="ref16">BOS Minutes, 1992–1994. Scrap metal program; wood chipper debate. <em>County Board of Supervisors Minute Books, Vol. 1.</em></li>
+  <li id="ref17">BOS Minutes, 1993 (Johnny Knight request); BOS Minutes, October 1996 (public hearing, Solid Waste Ordinance amendment). <em>County Board of Supervisors Minute Books, Vols. 1–2.</em></li>
+  <li id="ref18">BOS Minutes, 1992–2007 (multiple). Rural dumpster site references and complaints. <em>County Board of Supervisors Minute Books, Vols. 1–5.</em></li>
+  <li id="ref19">BOS Minutes, 1999; Dickerson statements recounted in BOS Minutes, August 2004. <em>County Board of Supervisors Minute Books, Vols. 2–4.</em></li>
+  <li id="ref20"><em>Times-Virginian,</em> August 2004. "Time is of the essence" — County Administrator Ferguson; Hurt &amp; Proffitt analysis presentation by Dickerson and Grubbs, August 16, 2004. BOS Minutes, August 2004. <em>Times-Virginian Archive (2003–2024).</em></li>
+  <li id="ref21"><em>Times-Virginian,</em> August/September 2004. Carter, Craft, Armbrust quotations. BOS Minutes, August 25, 2004. <em>Times-Virginian Archive.</em></li>
+  <li id="ref22">BOS Minutes, August 2004. Prince Edward County interim arrangement; Dickerson on cost curve. <em>County Board of Supervisors Minute Books, Vol. 4.</em></li>
+  <li id="ref23"><em>Times-Virginian,</em> September–October 2004. BFI Transfer Systems rezoning application; tonnage and service area details. Planning Commission minutes, September 20, 2004. <em>Times-Virginian Archive; County Government PDF Archive.</em></li>
+  <li id="ref24"><em>Times-Virginian,</em> 2004–2005. Public information meeting; citizen concerns; permit lapse. <em>Times-Virginian Archive.</em></li>
+  <li id="ref25"><em>Times-Virginian,</em> 2005. Delegate Abbitt statements regarding Allied Waste disposal offer; $18–$43/ton rates. <em>Times-Virginian Archive.</em></li>
+  <li id="ref26"><em>Times-Virginian,</em> August 2007. Klappich presentation; $1.36M vs. $900K figures. BOS Minutes, August 2007. <em>Times-Virginian Archive; County Board of Supervisors Minute Books, Vol. 5.</em></li>
+  <li id="ref27"><em>Times-Virginian,</em> August 2007. Rockefeller proposal details; site locations; Bedford County results. BOS Minutes, August 2007. <em>Times-Virginian Archive.</em></li>
+  <li id="ref28"><em>Times-Virginian,</em> August 2007. Rockefeller direct quotation. <em>Times-Virginian Archive.</em></li>
+  <li id="ref29">BOS Minutes, August 2007 and subsequent meetings. RSWA buy-in inquiry; Bob White contact attempt. <em>County Board of Supervisors Minute Books, Vol. 5.</em></li>
+  <li id="ref30">BOS Minutes, May 2008; Region 2000 Local Government Council meeting records. Gary Christie presentation; RSWA membership resolution. <em>County Board of Supervisors Minute Books, Vol. 5; County Government PDF Archive.</em></li>
+  <li id="ref31">BOS Minutes, 2008. Hauling logistics discussion; baler continued utility noted. <em>County Board of Supervisors Minute Books, Vol. 5.</em></li>
+  <li id="ref32"><em>Times-Virginian,</em> March 2009. Cell closure bid opening; Klappich report; Shearin Construction award. BOS Minutes, March 25, 2009. <em>Times-Virginian Archive; County Board of Supervisors Minute Books, Vol. 6.</em></li>
+  <li id="ref33"><em>Times-Virginian,</em> 2014. Post-closure replanting program; $4,900 seeding services. BOS Minutes, 2014. <em>Times-Virginian Archive.</em></li>
+  <li id="ref34"><em>Times-Virginian,</em> July 8, 2009. "Manned dumpster sites make debut"; T.J. Knight quotation. <em>Times-Virginian Archive.</em></li>
+  <li id="ref35"><em>Times-Virginian,</em> July 2009. Convenience Center hours schedule; winter hours policy. <em>Times-Virginian Archive.</em></li>
+  <li id="ref36"><em>Times-Virginian,</em> late July 2009. Phillip Nelson appearance before Board; business exclusion policy. BOS Minutes, July 2009. <em>Times-Virginian Archive.</em></li>
+  <li id="ref37">BOS Minutes, September 2009. Business exclusion policy modification; one-truckload weekly limit. <em>County Board of Supervisors Minute Books, Vol. 6.</em></li>
+  <li id="ref38"><em>Times-Virginian,</em> July–August 2009. First eight-day tonnage figures (60 tons vs. 140 tons/week); recycling rate increases. <em>Times-Virginian Archive.</em></li>
+  <li id="ref39"><em>Times-Virginian,</em> October 2009. Savings estimate $400,000/year; recycling diversion potential >$100,000. BOS Minutes, October 2009. <em>Times-Virginian Archive.</em></li>
+  <li id="ref40"><em>Times-Virginian,</em> 2011–2012. Recycling tonnage figures; steel cans addition; HHW events. BOS Minutes, 2012. <em>Times-Virginian Archive.</em></li>
+  <li id="ref41">BOS Minutes, 2012 and 2015. Citizen commendations for Gene Hamlett at Vera site. <em>County Board of Supervisors Minute Books, Vols. 6–7.</em></li>
+  <li id="ref42">Region 2000 Service Authority records; BOS Minutes, 2008–2021. Authority membership structure; landfill infrastructure. <em>County Government PDF Archive; County Board of Supervisors Minute Books.</em></li>
+  <li id="ref43"><em>Times-Virginian,</em> September 2018. Region 2000 name change to Central Virginia Planning District Commission; Gary Christie explanation. Appomattox Town Council minutes, September 2018. <em>Times-Virginian Archive; County Town Government Meeting Minutes Database.</em></li>
+  <li id="ref44">BOS Minutes, 2008. RSWA tipping fee structure; $25/ton member rate vs. $35/ton commercial. <em>County Board of Supervisors Minute Books, Vol. 5.</em></li>
+  <li id="ref45">BOS Minutes, February 2018. $27,000 appropriation to Region 2000 Service Authority for engineering fees. <em>County Board of Supervisors Minute Books, Vol. 7.</em></li>
+  <li id="ref46"><em>Times-Virginian,</em> March 2020. Campbell County Board unanimous vote to authorize legal action; $2.5 million excess revenue. <em>Times-Virginian Archive.</em></li>
+  <li id="ref47"><em>Times-Virginian,</em> March 2020. Susan Adams written statement regarding Campbell County lawsuit announcement. <em>Times-Virginian Archive.</em></li>
+  <li id="ref48"><em>Times-Virginian,</em> January 2021. RSWA vote to retain Jeremy Carroll; "matter of semantics" characterization. BOS Minutes, January 2021. <em>Times-Virginian Archive; County Board of Supervisors Minute Books, Vol. 7.</em></li>
+  <li id="ref49"><em>Times-Virginian,</em> January–February 2019. County Waste application details; site acreage; Route 460 location. County Government PDF Archive (Planning Commission materials). <em>Times-Virginian Archive.</em></li>
+  <li id="ref50"><em>Times-Virginian,</em> February 2019. Planning Commission 6-1 vote on February 6, 2019; VDOT access requirements. <em>Times-Virginian Archive.</em></li>
+  <li id="ref51"><em>Times-Virginian,</em> February 20, 2019. Public hearing at high school auditorium; "Dump the Dump" opposition; Trevor Hipps; citizen quotations. <em>Times-Virginian Archive.</em></li>
+  <li id="ref52"><em>Times-Virginian,</em> February 20, 2019. Board vote 4-1; Abbitt motion; Milner second; Moody dissent; Carter/audience confrontation. BOS Minutes, February 19, 2019. <em>Times-Virginian Archive.</em></li>
+  <li id="ref53"><em>Times-Virginian,</em> February 2019. County Waste $1 million settlement (2011) referenced in citizen testimony and reporting. <em>Times-Virginian Archive.</em></li>
+  <li id="ref54">Appomattox Town Council minutes, 2008. SWMP adoption; Hurt &amp; Proffitt authors; concurrent adoption with County and Town of Pamplin. <em>County Town Government Meeting Minutes Database.</em></li>
+</ol>
+</div>
+
+<hr style="border: none; border-top: 1px solid #a2a9b1; margin: 30px 0 15px 0;">
+<p style="font-size: 12px; color: #555; text-align: center; font-style: italic;">This article was compiled as a community history resource for Appomattox County, Virginia, February 2026. Research drawn from the <em>Times-Virginian</em> newspaper archive (2003–2024), Appomattox County Board of Supervisors minute books (1992–2025), county government PDF records (2004–2023), and the AI-classified event database compiled from those sources.</p>
+
+</div>
+<div id="apxwiki-nav-bottom" style="border-bottom:none;border-top:1px solid #a7d7f9;margin-top:30px;">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-links">
+      <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Business &amp; Commerce</a>
+      <span class="nav-sep">|</span>
+      <a href="appomattox_solid_waste_history.html" class="current">Solid Waste</a>
+      <span class="nav-sep">|</span>
+      <a href="appomattox_county_tax_history.html">Taxation</a>
+      <span class="nav-sep">|</span>
+      <a href="Appomattox_Water_System_History.html">Water System</a>
+      <span class="nav-sep">|</span>
+      <a href="Winfred_D_Nash.html">Winfred D. Nash</a>
+      <span class="nav-sep">|</span>
+      <a href="Appomattox_County_School_Board_History.html">School Board</a>
+      <span class="nav-sep">|</span>
+      <a href="Samuel_E_Carter.html">Samuel E. Carter</a>
+      <span class="nav-sep">|</span>
+      <a href="Nathan_A_Simpson.html">Nathan A. Simpson</a>
+      <span class="nav-sep">|</span>
+      <a href="Paul_Harvey.html">Paul D. Harvey</a>
+    </div>
+    <div class="nav-prevnext">
+      <a href="Appomattox_Center_for_Business_and_Commerce_History.html">&larr; Business &amp; Commerce</a>
+      <a href="appomattox_county_tax_history.html">Taxation &rarr;</a>
+    </div>
+  </div>
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

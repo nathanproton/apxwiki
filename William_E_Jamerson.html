@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W.E. "Bill" Jamerson — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>W.E. "Bill" Jamerson</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">W.E. "Bill" Jamerson</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Courthouse District Supervisor</td></tr>
+    <tr><td>In office</td><td>c.&nbsp;1988&ndash;1993</td></tr>
+    <tr><td>Served as</td><td>Chairman of the Board</td></tr>
+    <tr><td>Succeeded by</td><td>Philip E. "Gus" Paulette</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Full name</td><td>William E. Jamerson</td></tr>
+    <tr><td>Born</td><td>c.&nbsp;1934, Appomattox County, Virginia</td></tr>
+    <tr><td>Died</td><td>2025, Appomattox County, Virginia</td></tr>
+    <tr><td>Spouse</td><td>Ellen Jamerson</td></tr>
+    <tr><td>Employer</td><td>J.E. Jamerson &amp; Sons, Inc.</td></tr>
+    <tr><td>Residence</td><td>Appomattox, Virginia</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Business interests</td></tr>
+    <tr><td>J.E. Jamerson &amp; Sons</td><td>Construction company (est. 1946)</td></tr>
+    <tr><td>Jamerson Building Supply</td><td>Retail building materials</td></tr>
+    <tr><td>Jamerson Real Estate</td><td>Property development</td></tr>
+    <tr><td>COJANA LLC</td><td>Hotel investment group</td></tr>
+  </table>
+</div>
+
+<p><b>William E. "Bill" Jamerson</b> (c.&nbsp;1934&ndash;2025) was an American businessman, civic leader, and politician who served as the Courthouse District representative on the <a href="Samuel_E_Carter.html">Appomattox County Board of Supervisors</a>, including a tenure as chairman. As the longtime owner of <b>J.E. Jamerson &amp; Sons, Inc.</b>, a construction and building supply firm founded by his father in 1946, Jamerson was one of the most prominent business figures in Appomattox County, Virginia, for more than half a century. Beyond his construction enterprise, he was an investor, philanthropist, and persistent advocate for economic development, public infrastructure, and community institutions. He died in 2025 at approximately 91 years of age.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#family_and_early_life">Family and early life</a></li>
+    <li><a href="#business_career">Business career</a>
+      <ol>
+        <li><a href="#je_jamerson_and_sons">J.E. Jamerson &amp; Sons</a></li>
+        <li><a href="#jamerson_building_supply">Jamerson Building Supply</a></li>
+        <li><a href="#real_estate_and_hotel">Real estate and hotel investment</a></li>
+      </ol>
+    </li>
+    <li><a href="#board_of_supervisors">Board of Supervisors</a></li>
+    <li><a href="#community_and_civic_involvement">Community and civic involvement</a>
+      <ol>
+        <li><a href="#actions_committee">ACTIONS Committee</a></li>
+        <li><a href="#courthouse_committee">Courthouse Committee</a></li>
+        <li><a href="#waterline_advocacy">Waterline advocacy</a></li>
+        <li><a href="#civil_war_museum">American Civil War Museum</a></li>
+        <li><a href="#library_and_philanthropy">Library and philanthropy</a></li>
+        <li><a href="#tourism_advocacy">Tourism advocacy</a></li>
+      </ol>
+    </li>
+    <li><a href="#athletics">Athletics and sports involvement</a></li>
+    <li><a href="#personal_life">Personal life</a></li>
+    <li><a href="#major_construction_projects">Major construction projects</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="family_and_early_life">Family and early life</h2>
+
+<p>Bill Jamerson was born circa 1934 in Appomattox County, Virginia.<sup><a href="#ref1">[1]</a></sup> He was a member of one of the county's most established families. His father, J.E. "Dutch" Jamerson, Sr., founded J.E. Jamerson and Sons, Inc. in 1946, initially locating the business behind what was formerly the Lee Theatre building in downtown Appomattox.<sup><a href="#ref2">[2]</a></sup> Bill's brother, <b>J. Robert Jamerson</b>, was a noted community figure who died in December 1986. The county's public library, the <a href="J_Robert_Jamerson_Memorial_Library.html">J. Robert Jamerson Memorial Library</a>, was dedicated in his honor in May 1992.<sup><a href="#ref3">[3]</a></sup></p>
+
+<h2 id="business_career">Business career</h2>
+
+<h3 id="je_jamerson_and_sons">J.E. Jamerson &amp; Sons</h3>
+
+<p>J.E. Jamerson &amp; Sons, Inc. was a construction and building supply company that became one of the largest and most respected firms in the Appomattox area. Founded in 1946, the company operated for more than 75 years under the Jamerson family's leadership.<sup><a href="#ref2">[2]</a></sup> Bill Jamerson succeeded his father as owner and operator of the firm, building it into a major general contractor that handled some of the most significant public construction projects in the county's modern history.</p>
+
+<p>The company won the contract to build the new Appomattox County Courthouse in 2003, a project valued at nearly $4&nbsp;million that was completed on schedule in late 2004.<sup><a href="#ref4">[4]</a></sup> J.E. Jamerson &amp; Sons also served as the general contractor for the satellite Museum of the Confederacy (now the American Civil War Museum at Appomattox), selected after a competitive interview process in December 2010.<sup><a href="#ref5">[5]</a></sup> In 2006, the firm was awarded contracts for renovations at the CVCC satellite campus ($269,400) and window replacement at the Carver-Price Legacy Museum ($29,880), both within the former Carver-Price Educational Complex.<sup><a href="#ref6">[6]</a></sup> The company was approved by the Appomattox County School Board in 2011 for the Appomattox Primary School renovation project, estimated at $12&ndash;$14&nbsp;million.<sup><a href="#ref7">[7]</a></sup> In 2022, J.E. Jamerson and Son was contracted to build an addition to the Pratt Administration Building at Patrick Henry Boys and Girls Plantation at an estimated cost of $135,000.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>The firm was well known for its community spirit. In 2008, Our Lady of Peace expressed gratitude to Jamerson and Sons for donating a truck and driver during the Christmas season to assist families in need.<sup><a href="#ref9">[9]</a></sup> The company donated sand and mortar for the construction of new dugouts at Appomattox Community Park in 2015.<sup><a href="#ref10">[10]</a></sup> The Appomattox Courthouse Theatre publicly acknowledged J.E. Jamerson for its ongoing support of community theater in 2015.<sup><a href="#ref11">[11]</a></sup> Employees of the firm included several notable longtime workers: Calvin Tanner retired as vice-president after 46 years of service,<sup><a href="#ref12">[12]</a></sup> Donald Lee "Duck" Williams retired as superintendent after more than 40 years,<sup><a href="#ref13">[13]</a></sup> and Jimmy Patterson Moore also retired as a superintendent.<sup><a href="#ref14">[14]</a></sup></p>
+
+<h3 id="jamerson_building_supply">Jamerson Building Supply</h3>
+
+<p>Jamerson Building Supply, the retail arm of the Jamerson business interests, occupied a prominent location on Confederate Boulevard (Bus.&nbsp;460) in the Town of Appomattox. A new building for the supply store was constructed in 2007, and the Appomattox County Chamber of Commerce held a ribbon-cutting ceremony to mark the occasion.<sup><a href="#ref15">[15]</a></sup> A letter to the editor in the <i>Times-Virginian</i> praised the building and its friendly employees.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>In 2007, Jamerson offered to purchase and donate new period-style lampposts to the Town of Appomattox, to be erected on Bus.&nbsp;460 near Jamerson Building Supply. The town council voted to accept the offer.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>Jamerson Building Supply celebrated its 75th anniversary on September&nbsp;30, 2021, with a "Local Hero Celebration" at Courtland Festival Park. The event, organized by Philip Jamerson, was free to the public and honored community members&mdash;particularly first responders and civil servants&mdash;who had continued working through the COVID-19 pandemic.<sup><a href="#ref18">[18]</a></sup> The business won first place for overall appearance in the Community of Candles Decoration Contest in both 1992 and 2007.<sup><a href="#ref19">[19]</a></sup></p>
+
+<h3 id="real_estate_and_hotel">Real estate and hotel investment</h3>
+
+<p>Jamerson also operated <b>Jamerson Real Estate, Inc.</b>, through which he pursued property development within the Town of Appomattox. In October 2010, he applied for a conditional use permit for a proposed apartment complex at the corner of Confederate Boulevard and Redfields Road. The Appomattox County Planning Commission recommended approval, but Jamerson withdrew the application in November 2010 due to unforeseen issues.<sup><a href="#ref20">[20]</a></sup> In 2019, Jamerson Real Estate proposed a 16-unit apartment development on a parcel connected to a requested vacation of an unopened portion of Rose Lane, intended to promote housing diversity in line with the town's Comprehensive Plan.<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>Jamerson was one of four principal investors in <b>COJANA LLC</b>, along with Phillip Jamerson, Buddy Conner, and <a href="Winfred_D_Nash.html">Winfred Nash</a>. The group financed and built the <b>Appomattox Inn and Suites</b>, a 56-room hotel on Old Courthouse Road that broke ground in March 2015. The three-story, brick-sided structure was built by Jamerson/Lewis Construction Company and included a 150-seat conference center, fitness center, and outdoor swimming pool. The investors secured financing from Farmers Bank of Appomattox, and the hotel was professionally managed by Marshall Hotels &amp; Resorts.<sup><a href="#ref22">[22]</a></sup> The hotel officially opened on March&nbsp;1, 2016, and notably opened some rooms early for volunteers and victims of the EF-3 tornado that struck Appomattox County in late February 2016.<sup><a href="#ref23">[23]</a></sup></p>
+
+<h2 id="board_of_supervisors">Board of Supervisors</h2>
+
+<p>Jamerson represented the Courthouse District on the Appomattox County Board of Supervisors and served as chairman of the board. He was serving in this capacity as early as July 1992, when the Board of Supervisors minutes first record his presence as chairman, and he continued through at least December 1993.<sup><a href="#ref24">[24]</a></sup> During his tenure, Jamerson presided over public hearings, planning commission sessions, and budget deliberations. Fellow board members during his service included Dennis W. Torrence (Appomattox River District), Frank H. Carwile (Wreck Island District), Russell H. Moore (Piney Mountain District), and Nina B. Beasley (Falling River District).<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>Philip E. "Gus" Paulette succeeded Jamerson as the Courthouse District supervisor, taking office as "Supervisor Elect" by early 1994.<sup><a href="#ref26">[26]</a></sup> After leaving the board, Jamerson remained an active voice at public meetings for the next three decades, frequently speaking during citizen comment periods on subjects ranging from rifle hunting regulations to water infrastructure to museum funding.<sup><a href="#ref27">[27]</a></sup></p>
+
+<h2 id="community_and_civic_involvement">Community and civic involvement</h2>
+
+<h3 id="actions_committee">ACTIONS Committee</h3>
+
+<p>In 1992, Jamerson was a founding member of the <b>ACTIONS Committee</b>, a citizen group formed for the sole purpose of improving the athletic complex at <a href="Appomattox_County_High_School.html">Appomattox County High School</a>. He served as finance chair, while his son Phillip Jamerson served as both president and construction chair.<sup><a href="#ref28">[28]</a></sup> Working in partnership with the Board of Supervisors and the School Board, the committee raised private funds and oversaw a series of improvements over twelve years: the groundbreaking in March 1994; the grand dedication of Bragg Stadium football field, field house, and rubberized track in October 1994; softball and baseball field lights in 1999 and 2000; the Louise Martin Softball Field dedication in 2001; track resurfacing in 2003; and tennis court resurfacing in 2004.<sup><a href="#ref28">[28]</a></sup> A farewell letter from the committee in 2004 extended special recognition to Bill and Ellen Jamerson for their generosity.<sup><a href="#ref28">[28]</a></sup></p>
+
+<h3 id="courthouse_committee">Courthouse Committee</h3>
+
+<p>Jamerson served on the citizen Courthouse Committee that oversaw the construction of the new Appomattox County courthouse complex. In his 2004 year-end address, Board Chairman <a href="Samuel_E_Carter.html">Sammy Carter</a> credited the committee&mdash;comprising Bill Jamerson, Barbara Williams, and Russell Moore&mdash;for the successful completion of the new courthouse on Court Street, which opened on time at a cost of nearly $4&nbsp;million.<sup><a href="#ref29">[29]</a></sup></p>
+
+<h3 id="waterline_advocacy">Waterline advocacy</h3>
+
+<p>Jamerson was a vocal advocate for the <a href="Appomattox_Water_System_History.html">county waterline project</a>, using his stature as a respected former supervisor and business leader to push for cooperation between the County and Town governments. In August 2005, he spoke at a joint meeting of the Board of Supervisors and Town Council, expressing support for securing an adequate water supply and urging officials to make a decision after years of deliberation.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>His most notable public intervention came in October 2009, when he addressed both governing bodies in successive weeks. Speaking to the Board of Supervisors, Jamerson, then 75, urged an end to the impasse between County and Town officials over the $5.6&nbsp;million waterline project. He noted that 17 letters had been exchanged between the two bodies without resolution, and he proposed that each side negotiate through small committees rather than attempting to negotiate with all members present. He argued that failure to cooperate would cost taxpayers more by forfeiting grant money.<sup><a href="#ref1">[1]</a></sup> A subsequent letter to the editor praised Jamerson's appearances and suggested he serve as a mediator between the two governing bodies.<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>In February 2019, Jamerson appeared before the Appomattox Town Council to request that a proposed water rate increase be delayed, arguing that landlords would disproportionately bear the burden and that the increase would discourage business investment.<sup><a href="#ref32">[32]</a></sup></p>
+
+<h3 id="civil_war_museum">American Civil War Museum</h3>
+
+<p>Jamerson played a significant role in supporting the American Civil War Museum at Appomattox (ACWM-Appomattox). J.E. Jamerson and Sons served as the general contractor for the museum's construction beginning in late 2010.<sup><a href="#ref5">[5]</a></sup> Jamerson attended the museum's grand opening in September 2017.<sup><a href="#ref33">[33]</a></sup></p>
+
+<p>In 2022, Jamerson was elected chairman of the ACWM-Appomattox fundraising committee. Under his leadership, the committee canvassed the local community&mdash;citizens, foundations, and other potential donors&mdash;and raised $520,000, exceeding a five-year goal of $500,000 in just several months. The county Board of Supervisors had previously granted $75,000 to the museum in September 2022.<sup><a href="#ref34">[34]</a></sup> In March 2024, Jamerson appeared before the Board of Supervisors to express his disappointment after a 3&ndash;2 vote denied a $15,000 funding request for the museum in fiscal year 2025, and he asked the board to reconsider.<sup><a href="#ref34">[34]</a></sup></p>
+
+<h3 id="library_and_philanthropy">Library and philanthropy</h3>
+
+<p>In 2011, Bill and Ellen Jamerson donated a bronze sculpture titled "Three Kids on a Log Reading" to the J. Robert Jamerson Memorial Library on Main Street. The 36-inch-tall, 72-inch-wide sculpture, purchased from an art company in New York City, was placed at the library's entrance as a tribute to Bill's brother, J. Robert Jamerson. Ellen Jamerson explained that her brother-in-law "loved doing research at libraries" and that the sculpture was a way to share their collection with the community.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Jamerson was also a personal donor to the construction of the concession stand at Appomattox Community Park, which was dedicated in April 2011.<sup><a href="#ref35">[35]</a></sup></p>
+
+<h3 id="tourism_advocacy">Tourism advocacy</h3>
+
+<p>In September 2018, Jamerson spoke before the Appomattox Town Council in favor of the Appomattox Tourism Committee's request for $8,000 in funding, calling the amount modest and highlighting the importance of tourism to the county. He also suggested increasing the town's tourism budget for the following year. The council voted unanimously to recommend the Economic Development Authority pay the funding in full.<sup><a href="#ref36">[36]</a></sup></p>
+
+<h2 id="athletics">Athletics and sports involvement</h2>
+
+<p>Jamerson was an athlete in his youth and maintained a lifelong connection to sports in Appomattox County. In 1999, he was inducted as a member of the charter class of the <b>Appomattox Scholastic Sports Hall of Fame</b>, alongside nine others including Gordon Bragg, Louise Martin, Woodrow Williams, Larry Robinson, Irie Mays, Kevin Ferguson, Ruby Smith, Bradley Babcock, and Mary Jane Smith.<sup><a href="#ref37">[37]</a></sup> His work as finance chair of the ACTIONS Committee, which built Bragg Stadium and modernized the ACHS athletic complex, further cemented his legacy in local athletics.<sup><a href="#ref28">[28]</a></sup></p>
+
+<h2 id="personal_life">Personal life</h2>
+
+<p>Jamerson was married to <b>Ellen Jamerson</b>. Their son, <b>Phillip Jamerson</b>, also became active in the family businesses and community affairs, serving as president of the ACTIONS Committee in the 1990s and later managing Jamerson Building Supply.<sup><a href="#ref28">[28]</a></sup><sup><a href="#ref18">[18]</a></sup> Bill Jamerson died in 2025. He was approximately 91 years old.</p>
+
+<h2 id="major_construction_projects">Major construction projects</h2>
+
+<p>The following table summarizes major public construction projects completed by J.E. Jamerson &amp; Sons, Inc. during Bill Jamerson's ownership, as documented in local records:</p>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th>
+    <th>Project</th>
+    <th>Value</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>2003&ndash;2004</td>
+    <td>Appomattox County Courthouse</td>
+    <td>~$4&nbsp;million</td>
+    <td>Completed on schedule; opened November 2004<sup><a href="#ref4">[4]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2006</td>
+    <td>CVCC satellite campus renovations</td>
+    <td>$269,400</td>
+    <td>Former Carver-Price Educational Complex<sup><a href="#ref6">[6]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2006</td>
+    <td>Carver-Price Legacy Museum windows</td>
+    <td>$29,880</td>
+    <td>Window replacement<sup><a href="#ref6">[6]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2010&ndash;2012</td>
+    <td>Museum of the Confederacy (Appomattox)</td>
+    <td>Not disclosed</td>
+    <td>Selected after competitive interview process<sup><a href="#ref5">[5]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2011&ndash;2012</td>
+    <td>Appomattox Primary School renovation</td>
+    <td>$12&ndash;$14&nbsp;million</td>
+    <td>Roof replacement and new wing<sup><a href="#ref7">[7]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2011</td>
+    <td>ACHS bathroom accessibility renovations</td>
+    <td>Not disclosed</td>
+    <td>Four bathrooms made wheelchair-accessible<sup><a href="#ref38">[38]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2022</td>
+    <td>Patrick Henry Boys &amp; Girls Plantation addition</td>
+    <td>$135,000</td>
+    <td>Pratt Administration Building addition<sup><a href="#ref8">[8]</a></sup></td>
+  </tr>
+</table>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Respected business leader Jamerson says yes to waterline, no to poor negotiations," <i>Times-Virginian</i>, October 7, 2009. Via times-virginian-2004-2024.db.</li>
+    <li id="ref2">"Jamerson celebrates 50th anniversary" (Looking Back), <i>Times-Virginian</i>, April 19, 2021; original coverage 1996. Via responses.db and times-virginian-2004-2024.db.</li>
+    <li id="ref3">"Jamerson's donate statue to library," <i>Times-Virginian</i>, October 12, 2011. Via times-virginian-2004-2024.db.</li>
+    <li id="ref4">"Supervisor Carter touts board's accomplishments in 2004," <i>Times-Virginian</i>, January 12, 2005; "New Appomattox Courthouse Expected to Open in Early November," <i>Times-Virginian</i>, October 20, 2004. Via responses.db.</li>
+    <li id="ref5">"J.E. Jamerson and Sons selected as general contractor for Appomattox museum," <i>Times-Virginian</i>, December 15, 2010. Via responses.db.</li>
+    <li id="ref6">"J.E. Jamerson &amp; Sons awarded contract for CVCC campus renovations" and "J.E. Jamerson &amp; Sons awarded contract for museum window replacement," <i>Times-Virginian</i>, August 2, 2006. Via responses.db.</li>
+    <li id="ref7">"Appomattox Primary School Renovation Project Awarded" and "Jamerson and Sons Approved for Primary School Construction," <i>Times-Virginian</i>, March 9, 2011. Via responses.db.</li>
+    <li id="ref8">"Jamerson and Son to build Patrick Henry addition," <i>Times-Virginian</i>, July 5, 2022. Via responses.db.</li>
+    <li id="ref9">"Our Lady of Peace thanks Jamerson and Sons for Christmas assistance," <i>Times-Virginian</i>, February 6, 2008. Via responses.db.</li>
+    <li id="ref10">"Donated materials used for dugout construction," <i>Times-Virginian</i>, July 29, 2015. Via responses.db.</li>
+    <li id="ref11">"Appomattox Courthouse Theatre acknowledges community support," <i>Times-Virginian</i>, December 9, 2015. Via responses.db.</li>
+    <li id="ref12">"Calvin Tanner inducted into ACHS Hall of Fame," <i>Times-Virginian</i>, October 4, 2017; "Calvin Tanner details early work experiences," <i>Times-Virginian</i>, January 28, 2015. Via times-virginian-2004-2024.db and responses.db.</li>
+    <li id="ref13">"Donald Lee Williams Died," <i>Times-Virginian</i>, September 19, 2016. Via times-virginian-2004-2024.db.</li>
+    <li id="ref14">"Jimmy Patterson Moore Passes Away," <i>Times-Virginian</i>, July 10, 2023. Via responses.db.</li>
+    <li id="ref15">"Appomattox County Chamber of Commerce holds ribbon-cutting for Jamerson Building Supply," <i>Times-Virginian</i>, October 24, 2007. Via responses.db.</li>
+    <li id="ref16">"Jamerson Building Supply praised" (letter to the editor), <i>Times-Virginian</i>, February 25, 2009. Via responses.db.</li>
+    <li id="ref17">"Council agrees to let Jamerson buy lampposts for Town," <i>Times-Virginian</i>, June 20, 2007. Via times-virginian-2004-2024.db.</li>
+    <li id="ref18">"Jamerson Building Supply celebrates 75 years," <i>Times-Virginian</i>, October 7, 2021. Via times-virginian-2004-2024.db.</li>
+    <li id="ref19">"Community of Candles Decoration Contest winners announced," <i>Times-Virginian</i>, December 5, 2007; "J.E. Jamerson and Son Inc. Wins Decoration Award," c.&nbsp;1992. Via responses.db.</li>
+    <li id="ref20">"Apartment complex permit put on hold," <i>Times-Virginian</i>, November 10, 2010; "Planning Commission recommends approval of apartment complex," <i>Times-Virginian</i>, October 20, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref21">"Jamerson Real Estate proposes 16-unit apartment development," <i>Times-Virginian</i>, September 30, 2019; "Public hearing held for Rose Lane property vacation," <i>Times-Virginian</i>, October 24, 2019. Via responses.db.</li>
+    <li id="ref22">"Appomattox Inn and Suites breaks ground in town," <i>Times-Virginian</i>, March 25, 2015. Via times-virginian-2004-2024.db.</li>
+    <li id="ref23">"New Appomattox hotel hosts ribbon-cutting," <i>Times-Virginian</i>, March 23, 2016. Via times-virginian-2004-2024.db.</li>
+    <li id="ref24">Appomattox County Board of Supervisors minutes, Book 17, Plates 1, 7, 19, et seq. (corpus 19920707&ndash;19950918). Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref25">Appomattox County Board of Supervisors minutes, Book 17, Plate 38 (September 14, 1992 meeting). Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref26">Appomattox County Board of Supervisors minutes, Book 17, Plate 327 (reference to "Supervisor Elect Paulette"). Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref27">"Citizens speak on rifles," <i>Times-Virginian</i>, February 25, 2004; "Bill Jamerson opposes rifles and criticizes out-of-county speakers," responses.db, April 7, 2004.</li>
+    <li id="ref28">"ACTIONS group fulfills all goals" (letter to the editor), <i>Times-Virginian</i>, October 13, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref29">"Supervisor Carter touts board's accomplishments in 2004," <i>Times-Virginian</i>, January 12, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref30">"Citizens comment on water options," <i>Times-Virginian</i>, August 3, 2005; "Former Supervisor Bill Jamerson supports water supply decision," responses.db, August 3, 2005.</li>
+    <li id="ref31">"Jamerson should moderate differences between Town, County on waterline" (letter to the editor by Carl H. Vena), <i>Times-Virginian</i>, October 21, 2009. Via times-virginian-2004-2024.db.</li>
+    <li id="ref32">"Businessman: Delay water hike?" <i>Times-Virginian</i>, February 13, 2019. Via times-virginian-2004-2024.db.</li>
+    <li id="ref33">"Large crowd attends Grand Opening of Museum of Confederacy," <i>Times-Virginian</i>, October 4, 2017. Via times-virginian-2004-2024.db.</li>
+    <li id="ref34">"Supervisors asked to reconsider denial of Civil War Museum funding," <i>Times-Virginian</i>, April 3, 2024. Via times-virginian-2004-2024.db.</li>
+    <li id="ref35">"Park concession stand dedicated," <i>Times-Virginian</i>, April 5, 2011; donor list published April 13, 2011. Via times-virginian-2004-2024.db.</li>
+    <li id="ref36">"Town Council: EDA can pay tourism money," <i>Times-Virginian</i>, September 13, 2018. Via times-virginian-2004-2024.db.</li>
+    <li id="ref37">"Nine to be inducted into the Appomattox Scholastic Sports Hall of Fame," <i>Times-Virginian</i>, September 23, 2009; "Appomattox Scholastic Sports Hall of Fame Charter Class Honored," responses.db, September 23, 2009.</li>
+    <li id="ref38">"Site Survey Work Begins for Appomattox County High School Renovations," <i>Times-Virginian</i>, April 13, 2011. Via responses.db.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

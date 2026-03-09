@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appomattox Walmart — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Appomattox Walmart</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<div class="infobox">
+<div class="infobox-title">Appomattox Walmart</div>
+<table>
+<tr><td colspan="2" class="infobox-subheader">Store Details</td></tr>
+<tr><td>Address</td><td>505 Oakville Road, Appomattox, Virginia</td></tr>
+<tr><td>Type</td><td>Walmart Supercenter</td></tr>
+<tr><td>Size</td><td>99,581&nbsp;sq&nbsp;ft</td></tr>
+<tr><td>Acreage</td><td>27.7 acres</td></tr>
+<tr><td>Parking</td><td>500 spaces</td></tr>
+<tr><td>Capacity</td><td>2,793 occupants</td></tr>
+<tr><td colspan="2" class="infobox-subheader">Timeline</td></tr>
+<tr><td>Announced</td><td>March 2007</td></tr>
+<tr><td>Land purchased</td><td>November 2008, $2.2&nbsp;million</td></tr>
+<tr><td>Building permit</td><td>May 2009, $12,000</td></tr>
+<tr><td>Construction began</td><td>July 2009</td></tr>
+<tr><td>Opened</td><td>May 19, 2010</td></tr>
+<tr><td>Construction cost</td><td>$11&ndash;12&nbsp;million (est.)</td></tr>
+<tr><td colspan="2" class="infobox-subheader">Key Figures</td></tr>
+<tr><td>Store manager</td><td>Denzil VanSwearingen</td></tr>
+<tr><td>Mayor (announcement)</td><td>John Wilson</td></tr>
+<tr><td>Mayor (opening)</td><td>Paul D. Harvey</td></tr>
+<tr><td>Town Manager</td><td>David Garrett (2007&ndash;08); Bart Van Nieuwenhuise (2009&ndash;10)</td></tr>
+<tr><td>Developer</td><td>Thalhimer</td></tr>
+<tr><td>Land seller</td><td>Courtland Realty Associates</td></tr>
+<tr><td>Jobs created</td><td>~210</td></tr>
+</table>
+</div>
+
+<p>The <b>Appomattox Walmart</b> is a Walmart Supercenter located at 505 Oakville Road in the Town of Appomattox, Virginia. The store's arrival was one of the most debated topics in Appomattox County between 2006 and 2010, generating years of public controversy over its potential impact on small businesses, the town's rural character, taxpayer-funded incentives, Civil War battlefield preservation, and the store's architectural design. Walmart announced its plans for the 99,581-square-foot store in April 2007, purchased the 27-acre site for $2.2&nbsp;million in November 2008, and officially opened on May 19, 2010, employing approximately 210 workers. The Supercenter remains the largest retail establishment in Appomattox County.</p>
+
+<div class="toc">
+<div class="toctitle">Contents</div>
+<ol>
+  <li><a href="#background">Background</a></li>
+  <li><a href="#early_rumors">Early rumors and community reaction (2006&ndash;2007)</a></li>
+  <li><a href="#announcement">Official announcement (April 2007)</a>
+    <ol>
+      <li><a href="#site_plan">Site plan and community briefings</a></li>
+      <li><a href="#secrecy_criticism">Criticism of secrecy</a></li>
+    </ol>
+  </li>
+  <li><a href="#controversy">Community debate and letters to the editor</a>
+    <ol>
+      <li><a href="#opposition">Opposition: small business and rural character</a></li>
+      <li><a href="#support">Support: jobs and convenience</a></li>
+      <li><a href="#battlefield">Historic battlefield concerns</a></li>
+    </ol>
+  </li>
+  <li><a href="#delays">Delays and the fee waiver controversy (2008)</a>
+    <ol>
+      <li><a href="#opening_delay">Opening delayed to 2009</a></li>
+      <li><a href="#water_sewer">Water and sewer availability waiver</a></li>
+    </ol>
+  </li>
+  <li><a href="#land_purchase">Land purchase and permits (2008&ndash;2009)</a></li>
+  <li><a href="#construction">Construction (2009&ndash;2010)</a></li>
+  <li><a href="#design_dispute">Storefront design dispute (December 2009&ndash;January 2010)</a></li>
+  <li><a href="#infrastructure">Infrastructure upgrades</a></li>
+  <li><a href="#opening">Grand opening (May 2010)</a></li>
+  <li><a href="#aftermath">Aftermath and legacy</a></li>
+  <li><a href="#timeline">Timeline</a></li>
+  <li><a href="#references">References</a></li>
+</ol>
+</div>
+
+<h2 id="background">Background</h2>
+
+<p>By the mid-2000s, Appomattox County had no major big-box retail presence. Residents who wanted discount shopping drove roughly twenty minutes to Walmart stores in Lynchburg, Madison Heights, or Farmville. The nearest Walmarts served as a regular draw for Appomattox shoppers, who combined the trips with doctor visits, car purchases, and mall shopping.<sup><a href="#ref1">[1]</a></sup> At the same time, the county's economy was under pressure: Thomasville Furniture, the town's largest private employer with approximately 600 workers, had been cutting jobs and restructuring since at least 2004.<sup><a href="#ref2">[2]</a></sup> The combination of limited local retail, rising gas prices, and economic anxiety created strong demand among many residents for a closer Walmart.</p>
+
+<p>Behind the scenes, the Town of Appomattox had been in discussions with Walmart as early as mid-2006. Town Council minutes from May 2007 reference a closed session held to discuss "the investment of public funds as incentives for the prospective location of Business&nbsp;A to Appomattox," a coded reference widely understood to mean Walmart.<sup><a href="#ref3">[3]</a></sup> Mayor John Wilson and the Town Council conducted these discussions confidentially, a decision that would later draw sharp criticism from residents who felt excluded from a consequential land-use decision.</p>
+
+<h2 id="early_rumors">Early rumors and community reaction (2006&ndash;2007)</h2>
+
+<p>Rumors of a potential Walmart began circulating in the fall of 2006, prompting a spirited exchange in the letters section of the <i>Times-Virginian</i>. In October 2006, resident Rick Thomas wrote that a Walmart would harm existing merchants, arguing that while low prices seemed attractive on the surface, the true cost would include closed businesses and the loss of Appomattox's rural appeal.<sup><a href="#ref4">[4]</a></sup> Another letter that month raised concerns about Walmart's employment practices, citing poverty-level wages and the deliberate use of part-time scheduling to avoid providing benefits.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>In November 2006, Ms. Walton of Appomattox countered that Walmart would bring needed business and jobs to the area, drawing a comparison with the economic decline of Brookneal after major employers left that community.<sup><a href="#ref6">[6]</a></sup> Thomas responded that Appomattox lacked a comprehensive development plan, warning that uncontrolled growth from big-box chains would permanently alter the town.<sup><a href="#ref7">[7]</a></sup> A third writer argued that locally owned businesses were preferable because they reinvested profits in the community, while Walmart sent its earnings to corporate headquarters in Bentonville, Arkansas.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>In December 2006, a resident linked the proposed Walmart directly to the county's contentious <a href="Appomattox_Water_System_History.html">waterline project</a>, asking whether the waterline along U.S. Route&nbsp;460 was being built primarily to accommodate commercial development such as Walmart.<sup><a href="#ref9">[9]</a></sup> This suspicion&mdash;that public infrastructure was being laid to benefit a single corporate retailer&mdash;would resurface repeatedly over the following years.</p>
+
+<h2 id="announcement">Official announcement (April 2007)</h2>
+
+<p>On April 10, 2007, Walmart officially announced that it would locate a Supercenter in the Town of Appomattox, ending months of speculation. The <i>Times-Virginian</i> was the first media outlet to break the story. The 99,000-square-foot facility would be constructed on a 27-acre parcel between the Shoppes of Appomattox and the U.S.&nbsp;460 West entry ramp, with a single entrance on State Route&nbsp;26 (Oakville Road). Walmart projected the store would open in the fall of 2008 and create approximately 200 jobs.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>Mayor John Wilson was effusive in his welcome. "On behalf of the Town of Appomattox, I am excited to welcome Wal-Mart to our community," Wilson said. "This new Wal-Mart Supercenter will create hundreds of new jobs, provide new services and serve as a significant tax revenue generator for our town."<sup><a href="#ref10">[10]</a></sup> Wilson also predicted the store would benefit local businesses by drawing new customers from surrounding areas, specifically citing Wilbun's Supermarket as a business that would gain from the increased foot traffic.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>Walmart Senior Public Affairs Manager Kelly Hobbs told the newspaper the Supercenter was designed to fit the community. "We wanted to make sure it fitted in the community. But it still is a Supercenter, so they all get the same conveniences of a larger format store," Hobbs said.<sup><a href="#ref12">[12]</a></sup> The building was to have a brick front and cost between $11 and $12&nbsp;million to construct. Approximately 70 percent of the 200 jobs would be full-time, with an average wage of $10.28 per hour and benefits including health insurance and a 401(k) plan.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>George Joyner, Walmart's Market Manager, expressed optimism that the store could coexist with local businesses. "I think that there is enough business for everyone. We can't be everything to everyone," Joyner said.<sup><a href="#ref12">[12]</a></sup> Beckie Nix, the town's Director of Tourism, added that the Supercenter would draw shoppers from outside the area who would also patronize restaurants and buy gasoline locally.<sup><a href="#ref11">[11]</a></sup></p>
+
+<h3 id="site_plan">Site plan and community briefings</h3>
+
+<p>On April 19, 2007, Walmart held two informational meetings at the Appomattox Town Office on Linden Street, attended by more than 30 citizens. Crystal Hill, a project manager with the Richmond engineering firm Vanasse Hangen Brustlin, presented the site plan. The plan revealed that in addition to the Supercenter, approximately four acres had been set aside for two outparcels intended for restaurants or smaller retail businesses&mdash;sparking immediate speculation that chains like Applebee's or Ruby Tuesday might follow.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>The site plan called for 500 parking spaces, energy-saving skylights that would automatically adjust interior lighting based on ambient light levels, and 50 percent green or open space. A connector road would link the Walmart complex to the adjacent Shoppes of Appomattox. The Virginia Department of Transportation approved a traffic study recommending a new signal on the eastbound ramp of U.S.&nbsp;460 to manage the expected increase in traffic volume.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>Town Manager David Garrett commended Walmart for its environmental efforts, specifically noting the installation of paper and plastic recycling bins. Hobbs assured citizens that the store would feature a design sensitive to the historical nature of Appomattox.<sup><a href="#ref13">[13]</a></sup></p>
+
+<h3 id="secrecy_criticism">Criticism of secrecy</h3>
+
+<p>The announcement immediately drew criticism for how it had been handled. In a pointed letter to the <i>Times-Virginian</i>, a resident demanded to know why Mayor Wilson and the Town Council had kept the Walmart negotiations from the public, arguing that Wilson had run on a platform of government transparency.</p>
+
+<blockquote>"What deals have been made behind closed doors to welcome and court Wal-Mart to build here? Don't be fooled, this is what Wal-Mart does, convincing the local government to pay for expenses, achieving any zoning and land use changes quickly and easily, and contracting certain exclusions from taxes is all part of their routine when moving into an American town."<sup><a href="#ref14">[14]</a></sup></blockquote>
+
+<p>The letter also criticized the <i>Times-Virginian</i> for withholding what it knew about the Walmart negotiations, accusing the newspaper of failing to do independent journalistic reporting on a story of clear public interest. The writer urged citizens to educate themselves about the Planning Commission and attend public meetings, describing the deal as "nearly a done deal" by the time the public was informed.<sup><a href="#ref14">[14]</a></sup></p>
+
+<h2 id="controversy">Community debate and letters to the editor</h2>
+
+<p>The Walmart question generated one of the most sustained public debates in Appomattox County's modern history, playing out primarily in the letters-to-the-editor pages of the <i>Times-Virginian</i> between 2006 and 2010. The debate divided along several fault lines: small-business concerns versus consumer convenience, rural preservation versus economic development, and the proper role of local government in courting or constraining corporate retailers.</p>
+
+<h3 id="opposition">Opposition: small business and rural character</h3>
+
+<p>Barbara Worley Shattuck of Spout Spring (and Middlesboro, Kentucky) emerged as one of the most persistent critics, writing multiple letters over several years. After the announcement, Shattuck argued that Appomattox should capitalize on its historical character and natural beauty rather than inviting big-box retail. "What Appomattox does not need is a Walmart. It does not need a lot of farmland turned into shopping centers along 460," she wrote in April 2007.<sup><a href="#ref15">[15]</a></sup> In later letters, Shattuck pledged to continue supporting Wilbun's Supermarket, Appomattox True Value Hardware, and Appomattox Drugstore, predicting that some of these stores would not survive Walmart's arrival.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>Rick Thomas of Appomattox was another prominent critic. In an April 2007 letter, he directly challenged Mayor Wilson's claim that Wilbun's would benefit from Walmart, writing sarcastically that he could not find the economic theory to support it. "That's like saying cyanide will cure the common cold," Thomas wrote. He questioned whether the town had factored proposed tax increases into its Walmart enthusiasm and warned that every available space between Appomattox and Concord would eventually be commercially developed.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>Other opponents raised concerns about the type of employment Walmart would provide. Critics noted that Walmart's definition of "full-time" might surprise residents, and questioned whether employees could afford the health insurance that was technically available on a wage of $10.28 per hour.<sup><a href="#ref17">[17]</a></sup> Letters predicted increased traffic, higher crime rates, and the permanent loss of Appomattox's distinctive small-town atmosphere.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h3 id="support">Support: jobs and convenience</h3>
+
+<p>Supporters countered that Walmart would bring sorely needed jobs during a period of economic hardship. In February 2009, as the national recession deepened and Thomasville Furniture continued to shed workers, one letter writer pointed to local layoffs and factory closures, asking opponents whether they could see the sunrise while their neighbors struggled to afford food and medicine.</p>
+
+<blockquote>"I can assure you, from what I have found, people here would rather have a job than see the sunrise and set. I wonder how many of those who oppose a Wal-Mart have lost their jobs, been laid off, had their hours cut, or can't afford to buy food or medicine for their families?"<sup><a href="#ref19">[19]</a></sup></blockquote>
+
+<p>The same letter directly compared prices at local stores to Walmart's, noting that some items cost significantly more in Appomattox. A pro-Walmart resident in March 2009 wrote of waiting eagerly for the store's arrival, citing the convenience of not having to drive to Lynchburg for routine purchases.<sup><a href="#ref20">[20]</a></sup></p>
+
+<p>Mayor Wilson and mayoral candidate Paul Harvey both voiced support for the project. Wilson argued the store would grow Appomattox as a retail center and tourist destination, while Harvey&mdash;who succeeded Wilson as mayor in mid-2008&mdash;told voters that Walmart would be an asset by increasing the tax base and saving elderly and retired citizens the cost of traveling to distant stores.<sup><a href="#ref21">[21]</a></sup></p>
+
+<h3 id="battlefield">Historic battlefield concerns</h3>
+
+<p>A distinctive thread in the opposition involved historic preservation. In May 2007, a letter to the <i>Times-Virginian</i> identified the Walmart site as ground fought over in the final days of the Civil War. The writer noted that the land had seen action between Federal cavalry under General Henry Davies and Confederate troopers under General Thomas Munford, including Company&nbsp;H of the 2nd Virginia Cavalry&mdash;the "Appomattox Rangers." The site was where Robert E. Lee's Army of Northern Virginia fired its last shots and suffered its last casualties, and Confederate dead had been buried on the ground slated for development.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>The letter urged the community to work with Walmart to preserve at least a portion of the historic ground, noting that Walmart stores were easily accessible within thirty minutes in either direction from Appomattox. "Is this what they gave their lives for?" the writer asked.<sup><a href="#ref22">[22]</a></sup> Barbara Shattuck echoed the concern in a subsequent letter, expressing dismay at the "destruction of local history for cheap merchandise" and suggesting alternative sites.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p>The issue of historic graves resurfaced during the December 2009 design meeting, when Councilwoman Jennifer Jamerson-Scruggs asked about gravesite markers and their preservation. Town Manager Bart Van Nieuwenhuise reported that one grave had been relocated and another had not been found.<sup><a href="#ref24">[24]</a></sup></p>
+
+<h2 id="delays">Delays and the fee waiver controversy (2008)</h2>
+
+<h3 id="opening_delay">Opening delayed to 2009</h3>
+
+<p>In January 2008, Walmart announced that the originally projected Fall 2008 opening had been pushed back due to planning delays. The company was still seeking site plan approvals from VDOT and the Department of Conservation and Recreation, as well as final approval from the Town of Appomattox. Stream assessments for a tributary to Phelps Branch required restoration measures as part of joint permits from the Army Corps of Engineers and the Virginia Department of Environmental Quality.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>By April 2008, rumors circulated that Walmart might abandon the project altogether. Town Manager David Garrett contacted Kelly Hobbs directly and received assurance that construction would proceed as planned, dispelling the cancellation rumors.<sup><a href="#ref26">[26]</a></sup></p>
+
+<h3 id="water_sewer">Water and sewer availability waiver</h3>
+
+<p>The most contentious government action related to the Walmart project came on September 30, 2008, when the Appomattox Town Council voted 5&ndash;1 to grant Walmart's developer, Thalhimer, an $89,145 waiver on water and sewer availability fees. The vote took place at a workshop meeting after the item was added to the agenda as a last-minute amendment.<sup><a href="#ref27">[27]</a></sup></p>
+
+<p>Town Manager David Garrett told the Council that the project was "in jeopardy of going away." The underlying issue was a series of unexpected infrastructure costs: a 10-inch water main near the Shoppes of Appomattox needed to be relocated, and a drainage pipe required enlargement. Because the Town did not own the sewer easement it believed it held, an adjacent property owner had to be approached, and that owner demanded the relocation of an access road. Garrett explained that Walmart's budget had already been exceeded twice.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>Three citizens spoke against the waiver during a public comment session. Peter Zdgiebloski of Church Street told the Council he did not think it was appropriate to waive the fees, arguing that Walmart should be required to pay the same hookup charges as any other customer. Marshall Goin encouraged the Council not to give concessions to a corporation of Walmart's size.<sup><a href="#ref27">[27]</a></sup></p>
+
+<p>Councilman Jimmy Mayberry made the motion, seconded by Karl Carter, to approve the waiver. The motion cited the facts that the Town had granted similar waivers before through a Memorandum of Understanding with Appomattox County for businesses in the Industrial Park, that Walmart was an asset to the community, and that the waiver would offset expenses the Town would otherwise have incurred. The vote was: Jamerson-Scruggs&mdash;aye, Carter&mdash;aye, Williams&mdash;aye, Mayberry&mdash;aye, McDearmon&mdash;aye. Baine cast the sole dissenting vote.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>Councilman Bryan Baine argued that the waiver represented lost income that could have been used for water and sewer system repairs. He cited the <i>Wall Street Journal</i>'s reporting that Walmart's global revenues were $374&nbsp;billion during the 2008 fiscal year and contrasted this with the Town's budget. "They are asking for special treatment to absorb unexpected cost," he told the Council.<sup><a href="#ref29">[29]</a></sup></p>
+
+<p>The decision sparked immediate backlash in letters to the editor. Rick Thomas accused the Council of caving to Walmart's demands, writing that the waiver was evidence of backroom deals. "Our citizens need to be aware of what the real cost of bringing Wal-Mart to Appomattox will be," Thomas wrote. "Only one Councilman, (Thank you, Mr.&nbsp;Baine) voted against issuing the waiver."<sup><a href="#ref30">[30]</a></sup> Another letter writer noted that Walmart had been stalling on the land purchase as a negotiation tactic.<sup><a href="#ref31">[31]</a></sup> Barbara Shattuck questioned how the town's water system&mdash;which had experienced shortages in prior years&mdash;could support the added demand of a Supercenter.<sup><a href="#ref32">[32]</a></sup></p>
+
+<p>In June 2008, the state health department had in fact required assurance that the town's water system was adequate for fire protection before Walmart could proceed, specifically a guarantee that the system could sustain a four-hour fire flow.<sup><a href="#ref33">[33]</a></sup> This requirement fed into the broader narrative that the town's aging infrastructure was being strained to accommodate a single corporate retailer.</p>
+
+<h2 id="land_purchase">Land purchase and permits (2008&ndash;2009)</h2>
+
+<p>After three and a half months of on-again, off-again negotiations, Walmart Real Estate Business Trust finalized the purchase of 27.727 acres from Courtland Realty Associates in November 2008 for $2.2&nbsp;million. Courtland Realty was an LLC of investors originally including the late John R. Lawson, the late Harry G. Lawson, the late Samuel R. Lawson, Joseph D. Ferguson, Frederick H. Lawson, and Samuel L. Ferguson&nbsp;III, who acted as Managing Partner. The land transaction was recorded in the Appomattox County Clerk of Circuit Court's office.<sup><a href="#ref34">[34]</a></sup></p>
+
+<p>In May 2009, Walmart paid $12,000 for a building permit specifying a 99,581-square-foot, one-story facility with an occupancy load of 2,793 persons. The permit was issued by Appomattox County Building Official Lonny Hamlett. County Administrator Aileen Ferguson told the Board of Supervisors they should "see something happening in a couple of weeks."<sup><a href="#ref35">[35]</a></sup></p>
+
+<h2 id="construction">Construction (2009&ndash;2010)</h2>
+
+<p>Construction workers from Johnson Excavating, a subcontractor of C.L. Lewis, began site preparation on Oakville Road on June 28, 2009, starting with erosion control measures at the proposed entrance. C.L. Lewis served as the general contractor. Keith Morris, Walmart's Public Affairs Director, told the <i>Times-Virginian</i> that the store was targeted for a Spring 2010 opening, with hiring details expected to emerge 60 to 180 days before the opening date.<sup><a href="#ref36">[36]</a></sup></p>
+
+<p>The reaction was again divided. A letter writer questioned the cost to taxpayers and asked what concessions the town had promised. Supporters pointed to the construction activity as evidence of progress during an economically difficult period, arguing that the store would stimulate the local economy when it was most needed.<sup><a href="#ref37">[37]</a></sup></p>
+
+<h2 id="design_dispute">Storefront design dispute (December 2009&ndash;January 2010)</h2>
+
+<p>In late 2009, a new controversy erupted when it became apparent that Walmart had changed the Supercenter's exterior design from the original plans without informing the Town. During early discussions in 2007, Walmart had presented drawings showing a brick facade with full-height columns and a vestibule&mdash;details intended to give the store a historical appearance befitting Appomattox. The Town had a "wish list" of architectural features based on those presentations. However, no legally binding agreement specifying these materials had been signed.<sup><a href="#ref38">[38]</a></sup></p>
+
+<p>In December 2009, Town Council members discovered that the building under construction featured painted split-face concrete masonry units rather than atlas brick, three-quarter-height columns rather than full-height ones, and no vestibule. Walmart had undergone a nationwide architectural review and adopted a standardized design for all stores under construction and future builds.<sup><a href="#ref39">[39]</a></sup></p>
+
+<p>On December 14, 2009, the Town Council convened in closed session to consult with legal counsel regarding "the legal options available to the Town to address unapproved changes to the Wal-Mart building design."<sup><a href="#ref40">[40]</a></sup> A week later, on December 22, Council held a special meeting attended by Walmart's corporate attorney Tom Kline (Troutman &amp; Sanders), architect Teresa Murphy (BRR Architects), Public Affairs representative Keith Morris, and Market Manager George Joyner.</p>
+
+<p>Councilwoman Jennifer Jamerson-Scruggs opened the discussion by noting that the original plans presented to Council had called for columns and a vestibule. "Although it is attractive it is not the store we were promised," she said. Councilman John "Plicky" Williams, referring to the concrete facade, said the appearance gave him "heartburn." Councilman Bryan Baine said he felt "a small bill of goods have been sold to them."<sup><a href="#ref39">[39]</a></sup></p>
+
+<p>Kline acknowledged a "lapse in communication," explaining that Walmart had contacted the County about the design changes rather than the Town, owing to a jurisdictional confusion where the County handled building inspections while the Town handled zoning and site plan review. Architect Murphy explained that the full-height columns had been abandoned due to water-tightness issues, and that bricking over the smooth block sides would be cost-prohibitive.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>The dispute generated yet another round of letters to the editor. One writer criticized the three dissenting council members&mdash;Jamerson-Scruggs, Williams, and Baine&mdash;for making "trivial, inconsequential complaints" that could drive away future businesses. "Think about it&nbsp;&hellip; because of a totally uncalled for hassle with Wal-Mart, our town could be left with a huge mud-hole, as well as an unfinished building," wrote June Goodrich of Appomattox.<sup><a href="#ref41">[41]</a></sup></p>
+
+<p>Nina Beasley of Appomattox called on voters to defeat the three critical council members in the upcoming May 2010 town elections, writing: "Instead of being seen as a business friendly community, there is a good chance that these comments will cause Appomattox to be seen as a business nuisance community."<sup><a href="#ref42">[42]</a></sup> Another resident pointed out that Councilman Williams was adding to his own home without brick and columns, and expressed bemusement at Councilwoman Jamerson-Scruggs's vision of "an elegant looking Wal-Mart."<sup><a href="#ref38">[38]</a></sup></p>
+
+<p>Barbara Shattuck, meanwhile, maintained her stance: "I may, one day, have to eat my words and shop at Wally World when all the other stores have closed. In the meantime, there is nothing at Wally World that I want or need that I can't find elsewhere."<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>The dispute was resolved in early January 2010 when Walmart agreed to install full-length columns, garden center fencing, and a screen for the loading dock. Following a January 8, 2010 follow-up meeting attended by Councilmembers Jamerson-Scruggs and Mayberry along with Walmart representatives and architect Brad Moore, Town Manager Van Nieuwenhuise confirmed the revised drawings met the Town's intent. "At no time was an actual stop work order or litigation considered," the Town stated in a press release, looking forward to the grand opening in May.<sup><a href="#ref43">[43]</a></sup></p>
+
+<p>The design saga would echo years later. At an August 2016 joint public hearing, a council member referenced the Walmart experience as a cautionary tale about informal agreements: "Our dear friends at Walmart, we had that gentleman's agreement that we are going to have painted red brick&mdash;now guess what it is not. The point I am trying to make is that all of this needs to be documented."<sup><a href="#ref44">[44]</a></sup></p>
+
+<h2 id="infrastructure">Infrastructure upgrades</h2>
+
+<p>The Walmart project prompted several infrastructure improvements in the immediate area. The most visible was a new traffic signal at the intersection of Business 460 and the entrance ramp from U.S.&nbsp;460 East. Don Austin, the VDOT Residency Administrator, confirmed that Walmart conducted a traffic impact analysis indicating the signal was necessary due to projected traffic increases. Walmart covered all associated costs, estimated between $150,000 and $200,000. The signal was to operate continuously, 24&nbsp;hours a day, without reverting to a blinking yellow during low-traffic periods. Austin said no other traffic signals were expected to be needed for the Walmart opening.<sup><a href="#ref45">[45]</a></sup></p>
+
+<p>A bridge was installed to provide access via a connector road linking the Supercenter complex with the Shoppes of Appomattox, allowing motorists to reach the store from U.S.&nbsp;460 without using the Oakville Road entrance.<sup><a href="#ref45">[45]</a></sup></p>
+
+<p>Beyond the immediate site, Supervisor Tom Conrad argued during the summer of 2008 that the pending Walmart underscored the urgency of the county's waterline project from Concord. Conrad stressed that delays in the waterline could jeopardize Walmart's interest and that the waterline would also benefit the county's industrial park.<sup><a href="#ref46">[46]</a></sup> The state health department's requirement that the town demonstrate adequate fire-flow capacity before Walmart could begin construction further linked the store to the county's broader water infrastructure challenges.<sup><a href="#ref33">[33]</a></sup></p>
+
+<p>The Walmart site was also integrated into recreational planning. Phase&nbsp;I of the Appomattox Heritage and Recreational Trail was designed to connect the Community Park on Police Tower Road with the area behind Walmart on Oakville Road. By late 2009, the county had secured approximately $273,000 in grants toward the $677,000 project, though the Board of Supervisors ultimately postponed funding due to the economic downturn.<sup><a href="#ref47">[47]</a></sup></p>
+
+<h2 id="opening">Grand opening (May 2010)</h2>
+
+<p>The Walmart Supercenter at 505 Oakville Road opened to the public on May 19, 2010. The Appomattox County Chamber of Commerce hosted an official ribbon-cutting ceremony at 7:30&nbsp;a.m., attended by Walmart staff, citizens, and local dignitaries. Prior to the ribbon-cutting, the crowd performed a Walmart cheer.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>Store manager Denzil VanSwearingen, an Appomattox native who had worked for Walmart for seven years, called the opening a dream come true. "I have a feeling that they are happy that we are here and we are happy to be here," VanSwearingen said. Market Manager George Joyner acknowledged the personal significance: "This is his dream come true. It is not every day that you get a chance to place a resident in a store."<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>Shoppers flocked to the store on opening day. Shirley Lovelace, one of the first customers, said she had previously driven to the Wards Road Walmart in Lynchburg. Sue Robinson purchased a pack of chewing gum just to be among the first checkout customers. "Now I do not have to go to Lynchburg or Farmville. I've been waiting for this for a long time," Robinson said.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>Three days before the grand opening, the Walmart Foundation presented $16,000 in grants to seventeen local organizations during a VIP walk-through on May 16. Recipients included Appomattox County Public Schools ($4,500), Appomattox Community Park and Trail ($1,000), and the Appomattox County High School memorial garden ($500).<sup><a href="#ref49">[49]</a></sup></p>
+
+<p>The store employed approximately 210 workers and operated seven days a week from 6&nbsp;a.m. to midnight. Full-time employees worked 34 to 40&nbsp;hours per week.<sup><a href="#ref48">[48]</a></sup></p>
+
+<h2 id="aftermath">Aftermath and legacy</h2>
+
+<p>The arrival of Walmart had the mixed effects both supporters and critics had predicted. At the June 4, 2007 meeting of the Board of Supervisors, Supervisor Sam Carter observed that the introduction of Walmart would "have a domino effect on our lives one way or another," noting it would increase the tax base but also generate more solid waste&mdash;a factor he cited in supporting the county's entry into the Region&nbsp;2000 Regional Solid Waste Authority.<sup><a href="#ref50">[50]</a></sup></p>
+
+<p>Wilbun's Supermarket, whose survival Mayor Wilson had assured residents of, closed in 2010, not long after the Walmart opening&mdash;a result that critics had foretold and that supporters attributed to broader economic forces.<sup><a href="#ref51">[51]</a></sup> The Triangle Plaza shopping center, already described as "almost empty" before Walmart's arrival, continued to decline. However, Walmart became the county's largest retail employer and a significant contributor to the local tax base through meals tax, lodging tax, and property taxes.</p>
+
+<p>Over the following years, Walmart became an integrated part of county life. The Appomattox County Sheriff's Department regularly provided security officers at the store, with Walmart reimbursing the county for overtime costs&mdash;a recurring item in the Board of Supervisors' supplemental appropriations.<sup><a href="#ref52">[52]</a></sup> The Walmart Foundation's "Shop With a Cop" program provided annual grants for holiday gift-giving through the Sheriff's Department.<sup><a href="#ref53">[53]</a></sup></p>
+
+<p>The hoped-for restaurant outparcels adjacent to the Walmart site did not materialize as quickly as speculated. The two four-acre outparcels remained graded but undeveloped for years after the store opening.</p>
+
+<p>In a broader sense, the Walmart debate served as a proxy for deeper questions about Appomattox County's identity and future: whether a rural community defined by its Civil War heritage and small-town atmosphere could or should embrace big-box retail development, and who should have a voice in those decisions. The letters to the editor from this period remain among the most extensive public dialogues in the newspaper's archives.</p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+<tr><th>Date</th><th>Event</th></tr>
+<tr><td>Fall 2006</td><td>Rumors of a Walmart in Appomattox begin circulating; first letters to the editor published</td></tr>
+<tr><td>May 2007</td><td>Town Council holds closed session to discuss incentives for "Business&nbsp;A"</td></tr>
+<tr><td>Apr 10, 2007</td><td>Walmart officially announces 99,000-sq-ft Supercenter on 27 acres in the Town of Appomattox</td></tr>
+<tr><td>Apr 19, 2007</td><td>Walmart holds two community briefings at the Appomattox Town Office</td></tr>
+<tr><td>May 2007</td><td>Historic battlefield concerns raised; Civil War cavalry action and burials identified on the site</td></tr>
+<tr><td>Jan 2008</td><td>Opening delayed from Fall 2008 to 2009 due to planning and permitting delays</td></tr>
+<tr><td>Apr 2008</td><td>Walmart confirms commitment to the project, dispelling cancellation rumors</td></tr>
+<tr><td>Jun 2008</td><td>State health department requires fire-flow capacity guarantee from the town water system</td></tr>
+<tr><td>Sep 30, 2008</td><td>Town Council votes 5&ndash;1 to grant $89,145 water/sewer availability fee waiver</td></tr>
+<tr><td>Nov 2008</td><td>Walmart purchases 27.7 acres from Courtland Realty Associates for $2.2&nbsp;million</td></tr>
+<tr><td>May 2009</td><td>Building permit issued; $12,000 fee for 99,581-sq-ft facility</td></tr>
+<tr><td>Jun 28, 2009</td><td>Site preparation and construction begin on Oakville Road</td></tr>
+<tr><td>Dec 14, 2009</td><td>Town Council holds closed session to discuss legal options over building design changes</td></tr>
+<tr><td>Dec 22, 2009</td><td>Special meeting with Walmart officials over storefront design; concrete block vs. brick dispute</td></tr>
+<tr><td>Jan 2010</td><td>Walmart agrees to revised design with full-length columns, fencing, and loading dock screen</td></tr>
+<tr><td>Apr 2010</td><td>New traffic signal erected at Bus.&nbsp;460 / U.S.&nbsp;460 East ramp; Walmart pays $150,000&ndash;$200,000</td></tr>
+<tr><td>May 16, 2010</td><td>VIP walk-through; Walmart Foundation donates $16,000 to 17 local organizations</td></tr>
+<tr><td>May 19, 2010</td><td>Grand opening; ribbon-cutting ceremony hosted by Chamber of Commerce; 210 employees</td></tr>
+</table>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+<ol>
+<li id="ref1">"Wal-Mart hurting taxpayers before it even gets here" (letter to the editor), <i>Times-Virginian</i>, October 8, 2008. via times-virginian-2004-2024.db</li>
+<li id="ref2">"Thomasville eliminates 30 jobs," <i>Times-Virginian</i>, February 1, 2006. via times-virginian-2004-2024.db</li>
+<li id="ref3">Town of Appomattox Council Minutes, Book 4, Plate 173 (May 2007 closed session referencing "Business A"). via county_town_gov_meeting_minutes.db</li>
+<li id="ref4">"Wal-Mart would hurt business community, county's appeal" (letter to the editor), <i>Times-Virginian</i>, October 12, 2006. via times-virginian-2004-2024.db</li>
+<li id="ref5">"Wal-Mart employment practices criticized," <i>Times-Virginian</i>, October 12, 2006. via responses.db</li>
+<li id="ref6">"Wal-Mart would help community" (letter to the editor), <i>Times-Virginian</i>, November 15, 2006. via times-virginian-2004-2024.db</li>
+<li id="ref7">"Town needs zoning to control growth" (letter to the editor), <i>Times-Virginian</i>, November 21, 2006. via times-virginian-2004-2024.db</li>
+<li id="ref8">"Wal-Mart is not the solution" (letter to the editor), <i>Times-Virginian</i>, November 21, 2006. via times-virginian-2004-2024.db</li>
+<li id="ref9">"What impact will waterline have on taxes?" (letter to the editor), <i>Times-Virginian</i>, December 27, 2006. via times-virginian-2004-2024.db</li>
+<li id="ref10">"Retail giant Wal-Mart to locate Supercenter in Town of Appomattox," <i>Times-Virginian</i>, April 11, 2007. via times-virginian-2004-2024.db</li>
+<li id="ref11">"Mayor says Wal-Mart will help small businesses; impact still to be determined," <i>Times-Virginian</i>, April 11, 2007. via times-virginian-2004-2024.db</li>
+<li id="ref12">"Wal-Mart site has enough leftover space to accommodate two restaurants," <i>Times-Virginian</i>, April 25, 2007. via times-virginian-2004-2024.db</li>
+<li id="ref13">"Wal-Mart praised for environmental initiatives in Appomattox," April 11, 2007. via responses.db</li>
+<li id="ref14">"Town sold out citizens by pursuing Wal-Mart in secret" (letter to the editor), <i>Times-Virginian</i>, April 25, 2007. via times-virginian-2004-2024.db</li>
+<li id="ref15">"Wal-Mart would not be helpful to small businesses" (letter by Barbara W. Shattuck), <i>Times-Virginian</i>, April 11, 2007. via times-virginian-2004-2024.db</li>
+<li id="ref16">"Same old predictable Wal-Mart" (letter by Barbara Worley Shattuck), <i>Times-Virginian</i>, January 6, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref17">"Wal-Mart will hurt Appomattox" (letter to the editor), <i>Times-Virginian</i>, April 25, 2007. via times-virginian-2004-2024.db</li>
+<li id="ref18">"Wal-Mart would hurt Appomattox" (letter to the editor), <i>Times-Virginian</i>, October 19, 2006. via times-virginian-2004-2024.db</li>
+<li id="ref19">"Letter defends Wal-Mart's arrival in Appomattox" (letter to the editor), <i>Times-Virginian</i>, February 25, 2009. via times-virginian-2004-2024.db</li>
+<li id="ref20">"Local shopper anticipates Walmart's arrival in Appomattox," <i>Times-Virginian</i>, March 11, 2009. via responses.db</li>
+<li id="ref21">"Mayor Harvey views Wal-Mart as an asset" and "Mayor Wilson favors Wal-Mart arrival," <i>Times-Virginian</i>, April 30, 2008. via responses.db</li>
+<li id="ref22">"Wal-Mart infringes on historic battle site" (letter to the editor), <i>Times-Virginian</i>, May 16, 2007. via times-virginian-2004-2024.db</li>
+<li id="ref23">"Criticism of Proposed Wal-Mart Location" (letter by Barbara Worley Shattuck), <i>Times-Virginian</i>, May 30, 2007. via responses.db</li>
+<li id="ref24">Town of Appomattox Council Minutes, Special Call Meeting, December 22, 2009 (Book 5, Plates 201&ndash;203). via county_town_gov_meeting_minutes.db</li>
+<li id="ref25">"Wal-Mart Supercenter Opening Delayed to 2009," <i>Times-Virginian</i>, January 2, 2008. via responses.db</li>
+<li id="ref26">"Wal-Mart Confirmation Squashes Rumors of Appomattox Store Cancellation," <i>Times-Virginian</i>, April 16, 2008. via responses.db</li>
+<li id="ref27">Town of Appomattox Council Minutes, Workshop Meeting, September 30, 2008 (Book 5, Plates 95&ndash;97). via county_town_gov_meeting_minutes.db</li>
+<li id="ref28">Town of Appomattox Council Minutes, Workshop Meeting, September 30, 2008 (Book 5, Plate 97). via county_town_gov_meeting_minutes.db</li>
+<li id="ref29">"Appomattox Town Council grants $89,000 waiver to keep Wal-Mart on track to come here," <i>Times-Virginian</i>, October 1, 2008. via times-virginian-2004-2024.db</li>
+<li id="ref30">"Wal-Mart already costing taxpayers money" (letter by Rick Thomas), <i>Times-Virginian</i>, October 8, 2008. via times-virginian-2004-2024.db</li>
+<li id="ref31">"Wal-Mart uses delaying tactics on land purchase," <i>Times-Virginian</i>, October 8, 2008. via responses.db</li>
+<li id="ref32">"Wal-Mart hurting taxpayers before it even gets here" (letter by Barbara Worley Shattuck), <i>Times-Virginian</i>, October 8, 2008. via times-virginian-2004-2024.db</li>
+<li id="ref33">"Town of Appomattox Water System Adequacy Questioned for Wal-Mart," <i>Times-Virginian</i>, June 18, 2008. via responses.db</li>
+<li id="ref34">"Wal-Mart buys land for $2.2 million," <i>Times-Virginian</i>, November 19, 2008. via times-virginian-2004-2024.db</li>
+<li id="ref35">"Wal-Mart secures building permit, could start construction within 'weeks'," <i>Times-Virginian</i>, May 6, 2009. via times-virginian-2004-2024.db</li>
+<li id="ref36">"Wal-Mart site sees first construction activity," <i>Times-Virginian</i>, July 1, 2009. via times-virginian-2004-2024.db</li>
+<li id="ref37">"Wal-Mart construction begins in Appomattox," <i>Times-Virginian</i>, July 8, 2009. via responses.db</li>
+<li id="ref38">"Council's immaturity shows in spat with Wal-Mart" (letter to the editor), <i>Times-Virginian</i>, January 6, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref39">"Council members irked that Wal-Mart changed plans of storefront look," <i>Times-Virginian</i>, December 30, 2009. via times-virginian-2004-2024.db</li>
+<li id="ref40">Town of Appomattox Council Minutes, Regular Meeting, December 14, 2009 (Book 5, Plate 195). via county_town_gov_meeting_minutes.db</li>
+<li id="ref41">"Quit badgering Wal-Mart" (letter by June Goodrich), <i>Times-Virginian</i>, January 6, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref42">"Certain council members should be defeated in May election" (letter by Nina Beasley), <i>Times-Virginian</i>, January 13, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref43">"Wal-Mart agrees to alter storefront," <i>Times-Virginian</i>, January 13, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref44">Town of Appomattox Council Minutes, Joint Public Hearing, August 23, 2016 (Book 5, Plate 764). via county_town_gov_meeting_minutes.db</li>
+<li id="ref45">"Wal-Mart prompts new traffic signal," <i>Times-Virginian</i>, April 6, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref46">"County supervisors urge Town to decide on waterline project," <i>Times-Virginian</i>, July 16, 2008. via responses.db</li>
+<li id="ref47">Appomattox County Board of Supervisors Minutes (December 2009 and March 2010), Book 22, Plate 311 and Book 23. via county_town_gov_meeting_minutes.db; "Grant Funding Secured for Appomattox Heritage Trail," March 31, 2010, via responses.db</li>
+<li id="ref48">"Big crowds flock to Walmart opening," <i>Times-Virginian</i>, May 26, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref49">"Walmart Donates $16,000 in Grants to Appomattox Community Groups," <i>Times-Virginian</i>, May 18, 2010. via responses.db; "Walmart set to hold Grand Opening on May 19," <i>Times-Virginian</i>, May 12, 2010. via times-virginian-2004-2024.db</li>
+<li id="ref50">Appomattox County Board of Supervisors Minutes, Book 22, Plate 64 (June 4, 2007). via county_town_gov_meeting_minutes.db</li>
+<li id="ref51">"Wilbun's Supermarket Closure" stub, ApxWiki page registry. See also responses.db entries from 2010.</li>
+<li id="ref52">Appomattox County Board of Supervisors Minutes, supplemental appropriations (multiple dates including Book 25, Plate 240, November 2016 security reimbursement; Book 24, Plates 325, 525, 713). via county_town_gov_meeting_minutes.db</li>
+<li id="ref53">Appomattox County Board of Supervisors Minutes, Book 24, Plate 713 (Walmart Grant&mdash;Shop With a Cop Program, 2015) and Book 25, Plate 231 (2016). via county_town_gov_meeting_minutes.db</li>
+</ol>
+</div>
+
+<!-- Footer placeholder - replaced by build -->
+<div id="apxwiki-footer">
+<b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+Generated from local newspaper archives, government meeting minutes, and public records.
+Last updated March 7, 2026.
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

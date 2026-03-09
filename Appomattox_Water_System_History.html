@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Town of Appomattox Water System — A History from Wells to County Pipeline, 1990–2024</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Town of Appomattox Water System: A History from Wells to County Pipeline, 1990–2024</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<div class="hatnote">This article covers the history of the <strong>Town of Appomattox</strong> municipal water supply, from its well-based origins through the construction of the U.S. 460 Concord-to-Appomattox pipeline in 2011–2012, and the ongoing planning for a post-2030 supply. It is compiled from the <em>Times-Virginian</em> newspaper archive (2003–2024), Appomattox County Board of Supervisors and Town Council minute books, and county government records. For the parallel history of county solid waste infrastructure, see <em>Solid Waste Management in Appomattox County, Virginia</em>.</div>
+
+<div class="infobox">
+  <caption>Town of Appomattox Water System — Key Facts</caption>
+  <table>
+    <tr><td>Pre-2012 supply</td><td>Eight municipal groundwater wells; max safe yield ~350,000 gpd</td></tr>
+    <tr><td>Average daily pumping</td><td>~316,000 gallons/day (pre-pipeline)</td></tr>
+    <tr><td>Drought catalyst</td><td>Summer 2002 — rationing imposed; wells critically low</td></tr>
+    <tr><td>Pipeline source</td><td>Campbell County Utilities &amp; Service Authority (CCUSA)</td></tr>
+    <tr><td>Pipeline route</td><td>U.S. 460, Concord to Appomattox; 7.5 miles, 12-inch pipe</td></tr>
+    <tr><td>Pipeline cost</td><td>~$5.7 million (Appomattox segment; total ~$9M)</td></tr>
+    <tr><td>Water tower</td><td>100,000-gallon elevated tank, Spout Spring</td></tr>
+    <tr><td>Construction began</td><td>Early 2011</td></tr>
+    <tr><td>Waterline activated</td><td>July 24, 2012</td></tr>
+    <tr><td>County BOS vote</td><td>3–2, October 2006 (proceed independently)</td></tr>
+    <tr><td>Town Council vote</td><td>5–0, February 2008 (negotiate with county)</td></tr>
+    <tr><td>CCUSA non-renewal notice</td><td>July 2021; supply ends December 31, 2030</td></tr>
+    <tr><td>Church St. project</td><td>6,225 LF of 8-inch pipe; ~80% complete Sept. 2024</td></tr>
+    <tr><td>Water Master Plan</td><td>CHA Consulting selected November 2023</td></tr>
+  </table>
+</div>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#wells">Background: The Well-Based System (Pre-2002)</a></li>
+    <li><a href="#drought2002">The 2002 Drought: A Defining Crisis</a></li>
+    <li><a href="#options">Evaluating the Options (2003–2005)</a>
+      <ol>
+        <li><a href="#wiley">The Wiley &amp; Wilson Engineering Study</a></li>
+        <li><a href="#region2000study">The Region 2000 Study and Revised Cost Estimates</a></li>
+        <li><a href="#campbell">The Campbell County Pathway Emerges</a></li>
+      </ol>
+    </li>
+    <li><a href="#debate">Public Debate and Community Opposition (2004–2006)</a></li>
+    <li><a href="#split">The County–Town Split (2006)</a>
+      <ol>
+        <li><a href="#countyforward">County Moves Forward Independently</a></li>
+        <li><a href="#wellsdecline">Town's Water System Conditions Deteriorate</a></li>
+      </ol>
+    </li>
+    <li><a href="#drought2007">The 2007 Drought and the Town's Reversal</a></li>
+    <li><a href="#partnership">The Path to Partnership (2008–2011)</a>
+      <ol>
+        <li><a href="#townvote">Town's 5-0 Vote and Engineering Endorsement</a></li>
+        <li><a href="#agreement">Formal Agreement and Water Purchase Contract</a></li>
+      </ol>
+    </li>
+    <li><a href="#construction">Construction and Activation (2011–2012)</a></li>
+    <li><a href="#postactivation">Post-Activation Era (2012–2019)</a>
+      <ol>
+        <li><a href="#economic">Economic Development Impact</a></li>
+        <li><a href="#quality">Water Quality Assurances and System Maintenance</a></li>
+        <li><a href="#rates2012">Water Rate Adjustments</a></li>
+      </ol>
+    </li>
+    <li><a href="#churchst">The Church Street Waterline Replacement Project (2020–2024)</a></li>
+    <li><a href="#ccusa2030">The Campbell County Non-Renewal and the 2030 Crisis</a>
+      <ol>
+        <li><a href="#nonrenewal">CCUSA Announces Non-Renewal</a></li>
+        <li><a href="#ratemou">Rate Adjustments and MOU for Out-of-Town Customers</a></li>
+        <li><a href="#masterplan">The Water Master Plan</a></li>
+      </ol>
+    </li>
+    <li><a href="#ratehistory">Water Rates and Financial History</a></li>
+    <li><a href="#wastewater">Wastewater System: Parallel Challenges</a></li>
+    <li><a href="#governance">Governance and Institutional Context</a></li>
+    <li><a href="#timeline">Chronological Summary</a></li>
+    <li><a href="#references">Primary Sources and Research Notes</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="overview">Overview</h2>
+
+<p>The water supply history of the Town of Appomattox, Virginia, is a story of deferred decisions, drought-driven crisis, and protracted intergovernmental conflict — culminating in a $5.7 million pipeline that transformed the community's infrastructure and redefined its relationship with neighboring Campbell County. For most of the twentieth century the town drew its entire water supply from a network of municipal groundwater wells. Two severe droughts, in 2002 and 2007, exposed the fragility of that system. A decade of sometimes bitter public debate followed before the town and county could agree to jointly pursue a regional connection to the Campbell County Utilities and Service Authority (CCUSA).</p>
+
+<p>The U.S. 460 Concord-to-Appomattox waterline was activated on July 24, 2012, delivering treated surface water from Campbell County to approximately 900 Town connections and 50 county customers along the Route 460 corridor. The project was widely credited as a prerequisite for the economic development that county officials had sought since the early 2000s.</p>
+
+<p>The story does not end with the pipeline's completion. In July 2021, CCUSA notified Appomattox County that it would not renew the water supply contract beyond December 31, 2030, reopening the fundamental question of Appomattox's long-term water supply strategy. The Town's engagement of engineering firm CHA Consulting in 2023 to develop a Water Master Plan represents the most systematic attempt yet to answer that question — and brings the arc of Appomattox water governance full circle.</p>
+
+<!-- ============================================================ -->
+<h2 id="wells">Background: The Well-Based System (Pre-2002)</h2>
+
+<p>For most of the twentieth century, the Town of Appomattox drew its entire municipal water supply from a series of groundwater wells drilled within and immediately surrounding town limits. By the early 2000s, the system comprised <strong>eight active production wells</strong>, operated in rotation — typically four at a time — to allow recovery of water tables between pumping cycles. The combined maximum safe yield of the system was estimated at approximately <strong>350,000 gallons per day</strong>, while average daily pumping ran closer to 316,000 gallons.<sup><a href="#ref1">1</a></sup></p>
+
+<p>Well No. 9, located in the Meadowlark Subdivision, was among the most productive, originally capable of delivering 175 gallons per minute. Over three decades of continuous use, however, its water table fell from a static level of 205 feet to only 57 feet, and output declined to 60 gallons per minute before the pump was ultimately turned off in September 2006. Well No. 15, situated behind the old Appomattox Elementary School, also showed considerable decline. These patterns were symptomatic of a broader, long-standing stress on the aquifer underlying the town.<sup><a href="#ref2">2</a></sup></p>
+
+<p>Despite recurring evidence of supply pressure, local officials had been aware of underlying water problems since at least 1964, yet substantive investment in an alternative supply was repeatedly deferred. A 2004 newsletter from Mayor John Wilson acknowledged that the town's eight wells were "insufficient to meet the needs of the entire Town and its commitment to the Industrial Park."<sup><a href="#ref3">3</a></sup> The failure to pursue alternatives through the 1970s, 1980s, and 1990s would ultimately leave the town acutely exposed when the 2002 drought arrived.</p>
+
+<p>In 2004, a groundwater specialist retained by the Town informed the Council that the eight wells were at a "high" risk of contamination, primarily from nearby private septic tanks and land application practices. The specialist recommended an organized groundwater protection program to safeguard public water supplies.<sup><a href="#ref4">4</a></sup> The town subsequently launched an educational campaign covering media outreach, Saturday workshops on chemical disposal, and water bill inserts — measures that addressed awareness but not the underlying vulnerability of the supply itself.</p>
+
+<p>One early regional infrastructure milestone was the groundbreaking for Slate River Watershed Dam No. 7, a recreational and conservation project in the Appomattox-Buckingham State Forest, around 1990. Though not directly part of the municipal water supply, its development reflected growing regional awareness of water resource management. The town's water system itself, however, remained anchored to its aging well network throughout the 1990s.<sup><a href="#ref5">5</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="drought2002">The 2002 Drought: A Defining Crisis</h2>
+
+<p>The summer of 2002 proved to be the pivotal turning point in Appomattox water history. A year-long drought gripped the region, causing private wells across Appomattox County to go dry and driving the town's municipal wells to dangerously low levels. Town officials were forced to impose <strong>water rationing</strong> on residents — a stark public demonstration of the system's fragility. Engineers later confirmed that static water levels in the town's wells had dropped between 42 and 114 feet from the levels recorded when the wells were originally drilled, a decline built over decades but dramatically accelerated by the drought.<sup><a href="#ref6">6</a></sup></p>
+
+<p>The crisis had immediate economic consequences. The Appomattox County Industrial Park, which the town was relying upon to attract new employers, could not guarantee the water supply that pharmaceutical, food-processing, and heavy-industrial prospects required. Over the following years, county officials would repeatedly report that <strong>more than a dozen business prospects</strong> had to be turned away because of inadequate water infrastructure. Assistant County Administrator <strong>John Spencer</strong> and Industrial Development Authority (IDA) members testified publicly that water availability had become the single greatest barrier to economic development in the county.<sup><a href="#ref7">7</a></sup></p>
+
+<p>Former Governor <strong>Mark Warner</strong> issued an executive order in 2002 requiring all localities in Virginia to develop alternative water supply plans, a direct response to the widespread drought failures. This mandate carried regulatory weight: localities that did not comply risked losing eligibility for state infrastructure funding. For Appomattox, it meant the question of a supplemental water source could no longer be deferred indefinitely.<sup><a href="#ref8">8</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="options">Evaluating the Options (2003–2005)</h2>
+
+<h3 id="wiley">The Wiley &amp; Wilson Engineering Study</h3>
+
+<p>In October 2003, engineering firm Wiley &amp; Wilson presented Appomattox officials with a formal assessment of three water supply alternatives. <strong>Walter Hancock</strong>, the firm's lead representative, recommended the U.S. 460 pipeline corridor as the most feasible option, citing lower risks for future operations, maintenance, and unforeseen expenses, as well as the ability to provide immediate service along the Route 460 corridor.<sup><a href="#ref9">9</a></sup> The three options and their estimated costs were:</p>
+
+<table class="wikitable">
+  <tr><th>Option</th><th>Estimated Cost</th><th>Notes</th></tr>
+  <tr><td>Surface reservoir (local)</td><td>$15.4 million</td><td>Locally controlled; high operating cost; 90% federal grant available 25 years prior had been declined</td></tr>
+  <tr><td>James River intake line</td><td>$16.4 million</td><td>+$730,000/year operating costs; treatment facility required</td></tr>
+  <tr><td>U.S. 460 pipeline to Lynchburg/Campbell <em>(recommended)</em></td><td>$16.4M ($15M net)</td><td>Deferred costs reduce effective price; treatment burden on upstream supplier</td></tr>
+</table>
+
+<p>A key advantage of the pipeline option, Hancock noted, was that water treatment costs would be borne by the upstream supplier — either the City of Lynchburg or Campbell County — rather than by Appomattox. The pipeline was projected to serve water to the entire Route 460 corridor, facilitating future residential, commercial, and industrial development. Appomattox County supervisors endorsed the concept in October 2003, though no formal action was taken at that time.<sup><a href="#ref10">10</a></sup></p>
+
+<h3 id="region2000study">The Region 2000 Study and Revised Cost Estimates</h3>
+
+<p>In early 2004, the Appomattox County Board of Supervisors and the Appomattox Town Council each contributed $25,000 to retain the <strong>Region 2000 Regional Commission</strong> as project manager to refine the water options study. Region 2000 Executive Director <strong>Gary Christie</strong> and staff engineer <strong>Jeff Rogers</strong> led the planning effort. By November 2004, Region 2000 had revised its cost estimates downward: the Lynchburg pipeline was re-estimated at $13 million (a 13-mile, 16- to 20-inch line), while a nearer connection point at Concord — running just eight miles on U.S. 460 into Campbell County — was estimated at only $5.5 million. This <strong>Concord option</strong> emerged as the most economically attractive path. Factoring in potential grant funding, officials estimated as early as May 2005 that the net cost to Appomattox for the Concord connection could be as low as approximately $400,000, split between the county and town.<sup><a href="#ref11">11</a></sup></p>
+
+<p>Also in 2004, the Town of Appomattox enacted a moratorium on new out-of-town water connections. In March 2006, the town passed an ordinance requiring all occupied buildings within 500 feet of a town water main to connect to the municipal system — effectively prohibiting the drilling of new private wells within those zones.<sup><a href="#ref12">12</a></sup></p>
+
+<h3 id="campbell">The Campbell County Pathway Emerges</h3>
+
+<p>By mid-2005, attention had largely converged on an eight-mile pipeline from Appomattox to the Concord community in Campbell County, where the <strong>Campbell County Utilities and Service Authority (CCUSA)</strong> was already planning its own infrastructure expansion from Rustburg to Concord to serve Concord Elementary School and surrounding development. Appomattox's participation would require contributing to an upgraded, larger-diameter pipe capable of carrying water for both jurisdictions.</p>
+
+<p>In July 2005, the Board of Supervisors and Town Council voted to begin formal negotiations with CCUSA over costs. That October, <strong>Draper Aden Associates</strong> was hired at a cost of $14,900 (later increased to $24,900) to perform hydraulic modeling and rate analysis for the proposed connection.<sup><a href="#ref13">13</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="debate">Public Debate and Community Opposition (2004–2006)</h2>
+
+<p>The water pipeline question generated sustained and at times heated public debate in Appomattox throughout 2004 and 2005. Citizens packed a community center meeting in February 2005 and overwhelmingly opposed the proposed U.S. 460 waterline, questioning its $5.5 million price tag and the necessity of the project given what many perceived as adequate existing wells.</p>
+
+<p>Multiple residents and letter-to-the-editor writers argued that the town had sufficient groundwater to meet needs through 2020 or even 2050 without an external pipeline, citing Wiley &amp; Wilson projections that the town's existing wells could serve "modest" needs for the next 30 years. Critics raised concerns about loss of local control, the risk of rate increases driven by an external supplier, the prospect of a Public Service Authority with limited public accountability, and the argument that the pipeline would primarily benefit commercial developers along Route 460 rather than ordinary residents.<sup><a href="#ref14">14</a></sup></p>
+
+<p>Councilman <strong>John L. Wilson</strong> — who also served as mayor for portions of this period — was among the most persistent opponents. He criticized Region 2000's final water report as placing an unfair financial burden on town residents while minimizing county taxpayer costs, and proposed an alternative plan in which Appomattox would draw initially from wells and later from locally developed surface reservoirs, maintaining full local control. His opposition reflected a genuine constituency in the town that was deeply skeptical of outside institutions and wary of dependency on neighboring Campbell County or the City of Lynchburg.<sup><a href="#ref15">15</a></sup></p>
+
+<p>Proponents of the pipeline, including the Appomattox County <strong>Industrial Development Authority (IDA)</strong>, argued that Appomattox was "the only surrounding locality without public water," that over a dozen businesses had already declined to locate in the county's industrial park because of inadequate water supply, and that without action the county would remain a "bedroom community" unable to sustain a healthy tax base. IDA Chairman <strong>Bill Slagle</strong> and members <strong>Buddy Conner</strong> and <strong>Wayne Lewis</strong> made repeated presentations to both the Town Council and the Board of Supervisors throughout 2006 pressing for action.<sup><a href="#ref16">16</a></sup></p>
+
+<div class="note">A recurring point made by IDA representatives was that the Virginia Department of Economic Development would not refer business prospects to Appomattox County because it could not certify an adequate public water supply — meaning the lack of infrastructure functioned as a de facto exclusion from the state's economic development pipeline.</div>
+
+<!-- ============================================================ -->
+<h2 id="split">The County–Town Split (2006)</h2>
+
+<h3 id="countyforward">County Moves Forward Independently</h3>
+
+<p>The year 2006 was characterized by a deepening divide between Appomattox County's Board of Supervisors, which was broadly supportive of the pipeline, and the Appomattox Town Council, which repeatedly declined to commit resources to the project.</p>
+
+<p>In June 2006, Draper Aden Associates completed its feasibility study. The results confirmed a total construction cost estimate of approximately $9 million for the full Concord-to-Appomattox waterline: $4.2 million for Campbell County's segment (to serve Concord) and <strong>$4.7 million for Appomattox County's segment</strong>. The County Board of Supervisors voted 3-to-1 in late June to pursue the project, with Supervisor <strong>Shawn Armbrust</strong> dissenting on grounds that the town should first make a decision before the county committed.<sup><a href="#ref17">17</a></sup></p>
+
+<p>Through mid-2006, CCUSA issued a series of deadlines pressing Appomattox to commit: a September 15 resolution deadline (to allow Campbell County to size the pipe appropriately) and a December 1 financial assurance deadline. The Town Council repeatedly declined to act on these requests. In September 2006, the Town formally withdrew from any joint venture on the waterline study.</p>
+
+<p>Seven days after the Town Council took no action at its October 2006 meeting, the County Board of Supervisors voted <strong>3-to-2</strong> to proceed with the $4.7 million waterline project independently, without the Town as a partner. The vote — with Supervisors <strong>Samuel Carter</strong>, <strong>Thomas H. Conrad</strong>, and <strong>Russell Moore</strong> in the majority and Supervisors <strong>Armbrust</strong> and <strong>Willie Craft</strong> dissenting — was named the top news story of 2006 by the <em>Times-Virginian</em>.<sup><a href="#ref18">18</a></sup></p>
+
+<p>The county's decision to purchase the waterline infrastructure established it as the sole owner of the new pipeline. This ownership structure — in which the county held the waterline and the town subsequently became a customer accessing it through a maintenance and purchase agreement — would persist for the life of the CCUSA contract. In December 2006, the Board voted 5-0 to commit up to $450,000 to CCUSA for engineering and pipe upgrades related to the project.<sup><a href="#ref19">19</a></sup></p>
+
+<div class="note">A 2006 article noted that Appomattox County missed a significant opportunity approximately 25 years earlier, when federal grants covering 90 percent of the cost of a water reservoir were available. Amherst County had pursued a similar project successfully at that time. Appomattox did not, a decision cited repeatedly as a cautionary example in later water debates.</div>
+
+<h3 id="wellsdecline">Town's Water System Conditions Deteriorate</h3>
+
+<p>While the policy dispute played out, the physical condition of the town's existing wells continued to decline. In September 2006, Town Manager <strong>David Garrett</strong> revealed that Well No. 9's output had been reduced to 60 gallons per minute — down from its original 175 gallons per minute — and that its water table had fallen from 205 feet to just 57 feet over three decades. The pump was turned off entirely.<sup><a href="#ref20">20</a></sup></p>
+
+<p>Officials acknowledged the town was exploring 12 or more potential new well sites both within and outside town limits, though they maintained publicly that current supply remained adequate. Mayor <strong>Ronnie Spiggle</strong> noted at a June 2006 meeting that USGS data indicated it takes 40 to 50 years for rainfall to recharge the local aquifer — meaning that even a wet year would provide no near-term relief for depleted wells.</p>
+
+<p>In July 2006, the Town Council approved water and sewer rate increases. Out-of-town connection rates rose sharply: the base water rate for out-of-town users increased from $9.55 to $12.70, and the incremental rate jumped from $4.50 to $11.10 per 1,000 gallons above 2,000 gallons. These changes reflected both genuine cost pressures on the aging well system and an effort to ensure that rural customers outside town limits bore an appropriate share of system costs.<sup><a href="#ref21">21</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="drought2007">The 2007 Drought and the Town's Reversal</h2>
+
+<p>The political stalemate was broken, at least partially, by another drought crisis in the fall of 2007. By October, the Town of Appomattox had been forced to shut off two of its eight operational wells due to critically low water levels. Static water levels had dropped between 42 and 114 feet from their original measurements. Citizens were placed under voluntary water restrictions, and town staff began reading meters daily for large water consumers. Mandatory restrictions were threatened if conditions did not improve within one to two weeks.<sup><a href="#ref22">22</a></sup></p>
+
+<p>A district health official from the <strong>Virginia Department of Health</strong> formally instructed Town Manager David Garrett that the town must "immediately seek an alternative water supply" and set a November 1 deadline for a written response. This directive — framed not as advice but as a regulatory order — carried considerable weight. At a Town Council Utility Committee meeting, a state health official praised the Appomattox County Board of Supervisors for having "the foresight to pursue a Concord-to-Appomattox waterline," suggesting the county had correctly anticipated precisely the crisis now unfolding.<sup><a href="#ref23">23</a></sup></p>
+
+<p>The internal tensions on the Council also burst into public view. At an October 2007 workshop meeting, Town Council members <strong>Joyce Bennett</strong> and <strong>Jimmy Mayberry</strong> walked out after a dispute with Mayor <strong>John Wilson</strong> over his refusal to entertain a motion to form a task force to study costs of the Concord-to-Appomattox waterline. The walkout underscored how deeply the issue had fractured the Council's working relationships.<sup><a href="#ref24">24</a></sup></p>
+
+<p>Mayor Wilson's continued opposition was now politically untenable in the face of the VDH directive and the visible failure of the well system. The Town Council's Utility Committee indicated for the first time that it was willing to revisit the prospect of joining the county's waterline project. Within months, the Council had voted again to meet with county officials — this time driven by unmistakable necessity rather than choice.</p>
+
+<!-- ============================================================ -->
+<h2 id="partnership">The Path to Partnership (2008–2011)</h2>
+
+<h3 id="townvote">Town's 5-0 Vote and Engineering Endorsement</h3>
+
+<p>In January 2008, the Town Council accepted a $25,000 planning grant from the Virginia Department of Health for a groundwater study — a parallel track to the waterline discussions, reflecting the town's continued interest in understanding its indigenous water resources. By early 2008, however, the engineering case for the waterline had become impossible to ignore.</p>
+
+<p>In February 2008, the Town Council received a fourth report from engineering firm <strong>Hurt &amp; Proffitt</strong> examining the feasibility of joining the project. Independent engineer <strong>Norman Walton</strong> made a clear recommendation: connecting to the Concord waterline would be cheaper than maintaining the town's aging well system, would eliminate the town's longstanding copper and zinc contamination problems at the trickling filter wastewater treatment plant, and would resolve the need for additional water sourcing. The Council voted <strong>5-to-0</strong> to meet with county officials to discuss a financing arrangement — a unanimous vote that represented a decisive shift from its previous position.<sup><a href="#ref25">25</a></sup></p>
+
+<p>Appomattox County offered to pay 75 percent of the waterline costs if the town would contribute 25 percent. Various funding scenarios were modeled: if the county paid 100 percent of costs, town water customers would pay approximately $20.85 for 5,000 gallons per month. Officials also explored grant funding from the Virginia Tobacco Commission, which specializes in economic development projects in tobacco-dependent regions.</p>
+
+<p>In March 2008, Campbell County water officials advised the Town Council to pursue the regional project rather than attempting to build a reservoir — adding an authoritative technical voice to the growing consensus in favor of the pipeline.<sup><a href="#ref26">26</a></sup></p>
+
+<p>In February and March 2009, both the Town and County applied for federal stimulus funding under the American Recovery and Reinvestment Act for the U.S. 460 waterline project, estimating that construction would create 25 jobs. The stimulus applications were not ultimately funded, but the effort reflected the depth of institutional commitment that had now developed on both sides. A petition supporting the project circulated in the community and gathered over <strong>477 signatures</strong>, presented to the Town Council by citizen <strong>Cliff Harvey</strong> in March 2010.<sup><a href="#ref27">27</a></sup></p>
+
+<h3 id="agreement">Formal Agreement and Water Purchase Contract</h3>
+
+<p>In <strong>July 2010</strong>, the Town of Appomattox formally agreed to partner with Appomattox County on the U.S. 460 waterline project, following years of on-and-off negotiations. CCUSA administrator <strong>Mike Damron</strong> called the newly approved collaboration "a win-win situation," noting that CCUSA had reserved 250,000 gallons per day for Appomattox customers to prevent stagnant water in the pipes.<sup><a href="#ref28">28</a></sup></p>
+
+<p>As part of the arrangement, the Town agreed to use its existing well system only for emergencies and would be responsible for billing, administration, repairs, and maintenance of the town-side infrastructure. In early 2011, the Town Council and the County Board of Supervisors jointly finalized a water purchase agreement with CCUSA. This agreement established that CCUSA would supply treated surface water to approximately <strong>900 town water connections</strong> and approximately <strong>50 county customers</strong> along the Route 460 corridor. The wholesale water purchase rate was set at <strong>$1.86 per 100 cubic feet</strong> (748 gallons).</p>
+
+<p>A 44-page draft maintenance agreement — governing billing, maintenance, and repair cooperation between the Town and County — was prepared by June 2011. The maintenance agreement established the Town as an independent contractor for the county, responsible for maintaining the town-side infrastructure. It was approved for an initial five-year term, renewable every five years, with provisions for metering, service installation, and labor costs. The Town Council approved the maintenance agreement draft in February 2012.<sup><a href="#ref29">29</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="construction">Construction and Activation (2011–2012)</h2>
+
+<p>Construction of the U.S. 460 waterline commenced in early 2011. The project involved laying <strong>7.5 miles of 12-inch-diameter piping</strong> originating in Concord at U.S. 460 East, running westward to the Spout Spring Ruritan Club entrance and the Laser Car Wash. A <strong>100,000-gallon elevated water storage tank</strong> was constructed in Spout Spring as part of the system. Construction on the Spout Spring tower began in September 2011. In Campbell County, a second elevated tank was built off Route 29, designed to increase system pressure and enable delivery of up to <strong>800,000 gallons per day</strong> — a dramatic multiple of what the town's wells could ever produce.<sup><a href="#ref30">30</a></sup></p>
+
+<p>By January 2012, approximately one mile of pipeline remained, with project completion projected for the end of January. Customer use was expected by March or April 2012. By February 2012, the Town Council had approved the draft maintenance agreement with the county, and the waterline was flushed and cleared; bacteriological testing was initiated. Town officials confirmed that <strong>four of the town's most productive wells</strong> would be retained as backup water sources, satisfying the Virginia Department of Health's requirement that a municipal system maintain at least two independent sources.<sup><a href="#ref31">31</a></sup></p>
+
+<p>On <strong>July 24, 2012</strong>, the U.S. 460 waterline was formally activated for Town of Appomattox residents. Water drawn from CCUSA's treatment infrastructure began flowing through the new line. County residents who had signed up for service received access in August 2012. Interim Town Manager <strong>Bill Gillespie</strong> described the project as "a win-win for all involved," and by December 2012 residents were already reporting noticeably better-tasting water and improved soap lather compared to the groundwater they had previously received.<sup><a href="#ref32">32</a></sup></p>
+
+<p>The new retail water rate structure adopted by the Town Council set a base charge of <strong>$10.00</strong> for the first 2,000 gallons of monthly consumption and <strong>$5.80 per 1,000 gallons</strong> for usage above that threshold. These rates reflected both the CCUSA wholesale cost and the capital and operational costs of the local distribution infrastructure.</p>
+
+<p>One unanticipated complication emerged in the months after activation: zinc content levels at the wastewater treatment plant did not decrease as expected, remaining in the 30–40 parts per million range. Engineers suspected zinc had accumulated in the system's pipes and required additional flushing — though the levels were well below the DEQ permit limit of 249 ppm.<sup><a href="#ref33">33</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="postactivation">Post-Activation Era: Operation and Maintenance (2012–2019)</h2>
+
+<h3 id="economic">Economic Development Impact</h3>
+
+<p>Officials had long argued that an adequate water supply was the prerequisite for meaningful economic development along the Route 460 corridor. After activation, the waterline was indeed cited as a key infrastructure asset in several notable business recruitment efforts. In 2015, the Appomattox Industrial Park's upgraded infrastructure — including the 460 Waterline, sewer capacity, three-phase power, and fiber optics — was credited as a crucial factor in attracting <strong>Xpress Natural Gas (XNG)</strong> to the park. County Administrator <strong>Aileen Ferguson</strong>, in a 2015 retrospective on her 36-year tenure, listed construction of the water line among the county's major institutional achievements of the era.<sup><a href="#ref34">34</a></sup></p>
+
+<p>Not all expectations were met, however. In 2015, outgoing Supervisor <strong>Willie Craft</strong> expressed public disappointment that the Route 460 waterline had not fully lived up to the development projections that had been used to justify it — an acknowledgment that the pipeline alone could not transform Appomattox's economic trajectory absent broader market conditions and additional infrastructure investment.<sup><a href="#ref35">35</a></sup></p>
+
+<h3 id="quality">Water Quality Assurances and System Maintenance</h3>
+
+<p>In February 2016, following national alarm over lead contamination in Flint, Michigan, the Town of Appomattox proactively reassured residents about the safety of local drinking water. Public Works Director <strong>Jeff Elder</strong> and Town Manager <strong>Bill Gillespie</strong> confirmed that the town conducted monthly water quality testing and that CCUSA performed additional testing of the water before it left their facilities en route to Appomattox. This layered testing regime was presented as evidence that Appomattox's water supply met all applicable state and federal standards.<sup><a href="#ref36">36</a></sup></p>
+
+<p>In fiscal year 2017, the town budgeted approximately $221,811 for waterline upgrades on Bandana, High, and Isbell streets — a capital improvement effort to replace smaller-diameter pipes and improve water flow, particularly for fire suppression purposes. The town's 1-million-gallon water tank was also scheduled for reconditioning and repainting. These investments reflected the ongoing need to maintain not only the CCUSA-supplied surface water infrastructure but also the legacy distribution network within town.<sup><a href="#ref37">37</a></sup></p>
+
+<h3 id="rates2012">Water Rate Adjustments</h3>
+
+<p>The water rate structure was revised periodically through this era as costs evolved. In April 2019, the Town Council approved a water rate hike effective July 1, 2019, following months of public hearings. Rates continued to reflect both the wholesale cost paid to CCUSA and the town's capital improvement and maintenance obligations.</p>
+
+<!-- ============================================================ -->
+<h2 id="churchst">The Church Street Waterline Replacement Project (2020–2024)</h2>
+
+<p>By 2020, sections of the Town of Appomattox's internal distribution network were significantly undersized. The oldest and most problematic section ran along Church Street and several connecting streets. The core project involved replacing approximately <strong>6,225 linear feet of aging 4-inch water line</strong> with new 8-inch pipe, routed to avoid existing utilities and sidewalks. The affected rights-of-way included Church Street, Confederate Boulevard, Red House Road, and Morris Avenue. In addition to expanding hydraulic capacity, the project incorporated new fire hydrant installations and sewer improvements.<sup><a href="#ref38">38</a></sup></p>
+
+<p>In September 2020, the Town Council approved a resolution to submit a Community Development Block Grant (CDBG) application to the Virginia Department of Housing and Community Development (VHCD) for the project. In January 2021, the town was awarded a <strong>$650,000 CDBG grant</strong> — a significant portion of the approximately $2.2 million total project cost. The town simultaneously pursued additional funding from the USDA Rural Development program.</p>
+
+<p>In July 2023, the Town Council authorized a <strong>$1,156,000 Water System Improvement General Obligation Bond</strong> through USDA Rural Development, carrying a 30-year repayment term at <strong>1.2 percent interest</strong> — favorable terms reflecting the federal agency's support for rural water infrastructure.<sup><a href="#ref39">39</a></sup></p>
+
+<p>Construction formally commenced on <strong>October 16, 2023</strong>. The project was anticipated to span over one year, with significant disruptions to traffic and temporary interruptions of water service to affected properties. By February 2024, daytime detours were in effect around Red House Road, and the section of Church Street near Liberty Baptist Church was closed to traffic on weekdays from 7 a.m. to 7 p.m.</p>
+
+<p>At an August 27, 2024 Town Council workshop, Interim Town Manager <strong>Rob Fowler</strong> reported that the project was approximately <strong>80 percent complete</strong>. Council member <strong>Nathan Simpson</strong> noted resident complaints about completion timelines. The Council also discussed the impact of tractor-trailer traffic on the construction site, including a prior accident that had damaged equipment and contributed to delays. Completion was expected in late 2024 or early 2025, delivering substantially improved fire flow capacity and system reliability to the central town area.<sup><a href="#ref40">40</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="ccusa2030">The Campbell County Non-Renewal and the 2030 Crisis</h2>
+
+<h3 id="nonrenewal">CCUSA Announces Non-Renewal</h3>
+
+<p>In <strong>July 2021</strong>, the Campbell County Utilities and Service Authority formally notified Appomattox County that it would not renew its water supply contract upon its expiration on <strong>December 31, 2030</strong>. The announcement — delivered approximately nine years before the contract's end — gave Appomattox a defined but finite window to identify, plan, and build an alternative water supply. The reasons for CCUSA's decision were not extensively detailed in public records, but the practical effect was unambiguous: Appomattox would need to develop an entirely new water supply strategy within a decade.<sup><a href="#ref41">41</a></sup></p>
+
+<p>The Appomattox Town Council held a workshop meeting on June 29, 2021 — days before the CCUSA announcement was publicly reported — to discuss long-range water supply strategies. Officials examined the possibility of reactivating the town's existing wells, which had been largely idle since the waterline's 2012 activation. A January 2020 maintenance agreement between the county and the town, replacing the 2012 contract that had been set to expire in 2021, was already in place to govern the interim period.</p>
+
+<h3 id="ratemou">Rate Adjustments and MOU for Out-of-Town Customers</h3>
+
+<p>In parallel with the strategic planning triggered by the CCUSA non-renewal, the town moved to address a longstanding inequity in water rates between in-town and out-of-town customers. In August 2021, the Town Council initially voted to increase out-of-town water rates to one and a half times the in-town rates. It subsequently became clear that a memorandum of understanding (MOU) from the Appomattox County Board of Supervisors was required before the rate change could take effect — reflecting the shared governance structure of the waterline.</p>
+
+<p>The County Supervisors approved that MOU in October 2021, and in December 2021 the Town Council <strong>unanimously re-voted</strong> to approve the rate increase, placing the new structure on a sound procedural footing. In June 2023, the Town Council approved further rate increases effective July 1, 2023: the monthly in-town base rate for up to 2,000 gallons rose to <strong>$12.26</strong>, and the out-of-town rate rose to <strong>$18.39</strong>. These increases were partly driven by the investment costs of the Church Street project and partly by anticipation of the capital needs that the 2030 transition would generate.<sup><a href="#ref42">42</a></sup></p>
+
+<h3 id="masterplan">The Water Master Plan</h3>
+
+<p>In November 2023, the Town of Appomattox selected engineering firm <strong>CHA Consulting, Inc.</strong> to develop the town's first comprehensive Water Master Plan since the late 1990s. The study was explicitly framed around the December 31, 2030 deadline, with a mandate to evaluate all viable water source options — including reactivation of existing wells, development of new wells, construction of a surface water intake, connection to a different regional supplier, or some combination thereof.<sup><a href="#ref43">43</a></sup></p>
+
+<p>The selection of CHA Consulting came just weeks after the October 16, 2023 groundbreaking for the Church Street waterline project, positioning the town as simultaneously managing a near-term infrastructure replacement and undertaking long-range strategic planning for supply security. The parallel timelines underscored the complexity of the town's water governance situation as it approached the mid-2020s.</p>
+
+<!-- ============================================================ -->
+<h2 id="ratehistory">Water Rates and Financial History</h2>
+
+<p>Water rates in the Town of Appomattox evolved substantially over the study period, reflecting shifts from a well-based system subsidized by general revenues to a regionally supplied system funded primarily through user fees. The following table summarizes key rate milestones recorded in the newspaper archive:</p>
+
+<table class="wikitable">
+  <tr><th>Year / Period</th><th>In-Town Base Rate</th><th>In-Town Incremental</th><th>Out-of-Town Base</th><th>Notes</th></tr>
+  <tr><td>2004 (pre-reform)</td><td>$6.35 / 2,000 gal.</td><td>$3.00 / 1,000 gal.</td><td>$9.55 / 2,000 gal.</td><td>Well-based; below cost of production</td></tr>
+  <tr><td>July 2006</td><td>$6.35 / 2,000 gal.</td><td>$5.54 / 1,000 gal.</td><td>$12.70 / 2,000 gal.</td><td>Rate hike; out-of-town incremental jumped to $11.10</td></tr>
+  <tr><td>May/Jun 2012</td><td>$10.00 / 2,000 gal.</td><td>$5.80 / 1,000 gal.</td><td>—</td><td>Adopted pre-activation; new CCUSA rate structure; wholesale from CCUSA at $1.86/100 cu. ft.</td></tr>
+  <tr><td>July 2019</td><td>Rate hike approved</td><td>(specific amount not recorded)</td><td>—</td><td>After months of public hearings</td></tr>
+  <tr><td>December 2021</td><td>—</td><td>—</td><td>1.5× in-town rates</td><td>MOU with county required; re-voted unanimously; CCUSA non-renewal context</td></tr>
+  <tr><td>July 2023</td><td>$12.26 / 2,000 gal.</td><td>—</td><td>$18.39 / 2,000 gal.</td><td>Church Street project and 2030 transition costs; approved June 2023</td></tr>
+</table>
+
+<p>The town's water and sewer systems have at various times operated at a deficit, requiring transfers from the General Fund to cover operational shortfalls. Engineering consultants repeatedly advised that water rates were set below the true cost of production, a structural problem acknowledged by officials as early as the 2006 rate increases. The trajectory toward full cost recovery has been gradual but consistent. A 2007 presentation to the Town Council by <strong>Bob Gay</strong> of the <strong>Virginia Rural Water Association</strong> urged the town to run its water and wastewater systems "like a business" to ensure long-term financial stability — advice echoed by successive engineers and managers.<sup><a href="#ref44">44</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="wastewater">Wastewater System: Parallel Challenges</h2>
+
+<p>The Town of Appomattox's wastewater infrastructure faced its own set of significant challenges during this period, often intertwined with the water supply story.</p>
+
+<p>Construction of the town's wastewater facility was completed in 2001, but almost immediately the concrete basins were found to have cracks and up to 2.75 inches of wall deflection — a consequence of design deficiencies that did not meet American Concrete Institute standards. A representative of engineering firm <strong>Johnson, Mirmiran and Thompson (JMT)</strong> allegedly admitted at a July 2002 Town Council meeting that "we screwed up" and offered to cover repair costs, but the town ultimately had to pursue litigation. In 2007, JMT paid <strong>$1.164 million</strong> under a judicial settlement. Groundwater testing near the plant — required by the Virginia DEQ due to potential leakage from the cracked basins — was approved in May 2006 at a cost of $17,722.<sup><a href="#ref45">45</a></sup></p>
+
+<p>A persistent <strong>copper contamination problem</strong> at the town's trickling filter wastewater treatment plant — caused by copper leaching from building plumbing into Caldwells Creek via the wastewater system — occupied the town for over seven years. The DEQ imposed a consent order and required a formal action plan. Solutions attempted included sequestering agents, soda ash pH adjustment, and a chemical treatment program using MIDFLOC 2603L. In May 2007, the Town Council added a provision to the town code limiting copper piping in new buildings to a maximum of five linear feet (with exceptions for fittings), and by July 2007 the town had finally reduced copper levels below the DEQ standard of 21 micrograms per liter.<sup><a href="#ref46">46</a></sup></p>
+
+<p>By 2014, inspections of the town's approximately 90,000 feet of sewer lines revealed approximately a dozen cracks and holes causing significant rainwater infiltration into the trickling filter plant, which was receiving 345,000 gallons per day — more than four times its normal 75,000-gallon load. The town submitted a preliminary engineering report to the USDA in 2014 seeking federal funding to close the aging trickling filter plant, estimated at a total project cost of $3.7 million. A <strong>groundbreaking ceremony for the Appomattox Wastewater Improvement Project</strong> was held in November 2020, marking a milestone toward replacing the existing treatment center with a modern facility funded in part through a $3,780,000 Wastewater System Improvement Revenue Bond approved by the Town Council in July 2020.<sup><a href="#ref47">47</a></sup></p>
+
+<p>The town's modern sequential batch reactor (SBR) facility — also known as the <strong>Appomattox Water Reclamation Facility</strong> — served as the primary wastewater treatment center from its completion in approximately 2001. The town was relieved from a DEQ consent order related to zinc discharge from this plant in July 2014, following years of compliance work. One of the rationales offered for connecting to the CCUSA surface water supply was that replacing groundwater with treated surface water would dilute the mineral content reaching the trickling filter plant and help bring zinc and copper levels into compliance — a benefit that materialized only partially after the 2012 activation.<sup><a href="#ref48">48</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="governance">Governance and Institutional Context</h2>
+
+<p>The water supply history of Appomattox County is inseparable from the institutional tensions between the Town of Appomattox and the surrounding county government. For much of the period from 2003 to 2010, the two bodies pursued divergent positions on the pipeline question, resulting in a governance structure in which the county purchased and owned the waterline infrastructure while the town ultimately became its primary customer — an arrangement that reflects the political compromises of that era.</p>
+
+<p>Key institutional actors through this period included:</p>
+<ul>
+  <li><strong>Region 2000 Regional Commission</strong> (now Central Virginia Planning District Commission) — served as project manager and grant coordinator; Gary Christie, Executive Director; Jeff Rogers, staff engineer</li>
+  <li><strong>Virginia Department of Health</strong> — whose formal directives to the town in 2007 ultimately broke the political impasse; district health official's November 1 letter was decisive</li>
+  <li><strong>Virginia Department of Environmental Quality</strong> — regulated both water supply planning and wastewater compliance; issued consent orders related to copper and zinc discharge</li>
+  <li><strong>USDA Rural Development program</strong> — provided low-interest financing for the Church Street project ($1,156,000 bond at 1.2%) and the wastewater improvement project</li>
+  <li><strong>Virginia Tobacco Commission</strong> — explored as a potential grant funding source for the waterline due to Appomattox's tobacco-dependent economic history</li>
+  <li><strong>Campbell County Utilities and Service Authority (CCUSA)</strong> — entry into and eventual withdrawal from the supply relationship has defined the town's most pressing current challenge</li>
+</ul>
+
+<p>The 2030 deadline imposed by CCUSA's non-renewal has introduced a new urgency to water governance in Appomattox. Unlike the 2002 drought, which was an acute crisis, the 2030 transition is a known, scheduled event with a defined timeline. The engagement of CHA Consulting for a comprehensive Water Master Plan in 2023 represents the town's most deliberate and systematic effort yet to address its long-term water supply — and brings the story of Appomattox water governance full circle from the improvised, crisis-driven decision-making of the early 2000s.<sup><a href="#ref49">49</a></sup></p>
+
+<!-- ============================================================ -->
+<h2 id="timeline">Chronological Summary</h2>
+
+<table class="timeline-table">
+  <tr><th>Period / Date</th><th>Key Events</th></tr>
+  <tr><td>Pre-2002</td><td>Town operates eight groundwater wells; max safe yield ~350,000 gpd; average pumping ~316,000 gpd. Well No. 9 and others show decades of declining output. Knowledge of water problems dates to at least 1964; substantive action repeatedly deferred. Appomattox is the only surrounding locality without public water.</td></tr>
+  <tr><td>Summer 2002</td><td>Year-long drought forces water rationing in the Town of Appomattox. Wells drop 42–114 feet from original static levels. Governor Mark Warner issues executive order requiring all localities to develop alternative water supply plans. More than a dozen business prospects turn away from industrial park due to inadequate water supply.</td></tr>
+  <tr><td>October 2003</td><td>Wiley &amp; Wilson (Walter Hancock) presents three-option study: reservoir ($15.4M), James River intake ($16.4M), U.S. 460 pipeline ($16.4M / ~$15M net). Pipeline recommended. County Supervisors endorse concept.</td></tr>
+  <tr><td>Early 2004</td><td>County and Town each contribute $25,000; Region 2000 (Gary Christie, Jeff Rogers) engaged as project manager. Town enacts moratorium on new out-of-town water connections.</td></tr>
+  <tr><td>November 2004</td><td>Region 2000 revises costs: Concord connection $5.5M; Lynchburg connection $13M. Concord option emerges as preferred path.</td></tr>
+  <tr><td>February 2005</td><td>Community center meeting packed; citizens overwhelmingly oppose waterline. Wiley &amp; Wilson projections cited by opponents claiming wells adequate through 2020–2050.</td></tr>
+  <tr><td>July 2005</td><td>BOS and Town Council vote to begin formal CCUSA negotiations.</td></tr>
+  <tr><td>October 2005</td><td>Draper Aden Associates hired for hydraulic modeling ($14,900).</td></tr>
+  <tr><td>March 2006</td><td>Town passes ordinance requiring buildings within 500 feet of a water main to connect to municipal system.</td></tr>
+  <tr><td>June 2006</td><td>Draper Aden study complete: total project $9M ($4.7M Appomattox segment, $4.2M Campbell). BOS votes 3-1 to pursue. County misses September 15 CCUSA deadline as Town declines to act.</td></tr>
+  <tr><td>July 2006</td><td>Town approves water rate increases; Well No. 9 pump shut off. USGS data: 40–50 year aquifer recharge lag.</td></tr>
+  <tr><td>October 2006</td><td><strong>BOS votes 3-2</strong> to proceed with $4.7M waterline independently. Town takes no action at its October meeting. Named #1 story of 2006 by <em>Times-Virginian</em>.</td></tr>
+  <tr><td>December 2006</td><td>BOS votes 5-0 to commit $450,000 to CCUSA for engineering and pipe upgrades.</td></tr>
+  <tr><td>October 2007</td><td>Second drought: two wells shut off; static levels 42–114 feet below original. VDH district official formally orders Town to "immediately seek an alternative water supply." Council members Bennett and Mayberry walk out of workshop over Mayor Wilson's opposition. State health official praises County's "foresight."</td></tr>
+  <tr><td>January 2008</td><td>Town Council accepts $25,000 VDH planning grant for groundwater study.</td></tr>
+  <tr><td>February 2008</td><td><strong>Town Council votes 5-0</strong> to negotiate with County. Hurt &amp; Proffitt / Norman Walton report endorses waterline as cheaper and safer than maintaining well system.</td></tr>
+  <tr><td>March 2008</td><td>Campbell County water officials advise Town to pursue regional project rather than reservoir.</td></tr>
+  <tr><td>Feb–Mar 2009</td><td>Town and County apply for federal stimulus (ARRA) funding; estimated 25 jobs. Application not funded.</td></tr>
+  <tr><td>March 2010</td><td>Cliff Harvey presents 477-signature petition to Town Council supporting waterline. County proposes wholesale rate of $2.27/1,000 gal. (vs. Town's current $2.45/1,000 gal.).</td></tr>
+  <tr><td>July 2010</td><td><strong>Town formally agrees to partner</strong> with County on U.S. 460 waterline. CCUSA reserves 250,000 gpd for Appomattox customers. Mike Damron: "win-win situation."</td></tr>
+  <tr><td>Early 2011</td><td>Water purchase agreement with CCUSA finalized (900 town + 50 county connections; $1.86/100 cu. ft. wholesale). Construction begins. 44-page maintenance agreement drafted.</td></tr>
+  <tr><td>September 2011</td><td>100,000-gallon elevated water storage tank under construction in Spout Spring.</td></tr>
+  <tr><td>January–February 2012</td><td>Final mile of pipeline laid; bacteriological testing initiated. Town Council approves maintenance agreement. Four wells retained as backup sources per VDH requirement.</td></tr>
+  <tr><td>July 24, 2012</td><td><strong>U.S. 460 waterline ACTIVATED</strong> — treated surface water from CCUSA flows to Town of Appomattox. County customers served August 2012. Base rate: $10.00 / 2,000 gal.; $5.80 / 1,000 gal. above.</td></tr>
+  <tr><td>December 2012</td><td>Residents report improved taste and soap lather. Zinc levels at wastewater plant remain unexpectedly elevated (30–40 ppm; limit 249 ppm); engineers suspect pipe accumulation.</td></tr>
+  <tr><td>2015</td><td>Xpress Natural Gas (XNG) cites waterline infrastructure in locating at Appomattox Industrial Park. Aileen Ferguson (County Administrator, 36-year tenure) lists waterline as major achievement. Willie Craft expresses disappointment that development projections not fully met.</td></tr>
+  <tr><td>February 2016</td><td>Town reassures residents after Flint, Michigan lead crisis. Monthly testing by Town; additional testing by CCUSA confirmed. Public Works Director Jeff Elder; Town Manager Bill Gillespie.</td></tr>
+  <tr><td>FY2017</td><td>Town budgets $221,811 for waterline upgrades on Bandana, High, and Isbell streets. 1-million-gallon water tank scheduled for reconditioning.</td></tr>
+  <tr><td>April 2019</td><td>Town Council approves water rate hike effective July 1, 2019.</td></tr>
+  <tr><td>July 2020</td><td>Town Council approves $3,780,000 Wastewater System Improvement Revenue Bond. Groundbreaking for Appomattox Wastewater Improvement Project in November 2020.</td></tr>
+  <tr><td>January 2020</td><td>New maintenance agreement between County and Town signed (replacing 2012 agreement).</td></tr>
+  <tr><td>July 2021</td><td><strong>CCUSA announces non-renewal</strong> — water supply contract will not be renewed after December 31, 2030. Town Council holds June 29 workshop on long-range water supply strategies.</td></tr>
+  <tr><td>August–December 2021</td><td>Town votes to raise out-of-town rates to 1.5× in-town. MOU from County BOS required; approved October 2021. Town unanimously re-votes December 2021.</td></tr>
+  <tr><td>June 2023</td><td>Town Council approves rate increases effective July 1, 2023: in-town base $12.26; out-of-town base $18.39. $1,156,000 USDA Rural Development bond authorized for Church Street project (30 years at 1.2%).</td></tr>
+  <tr><td>October 16, 2023</td><td>Church Street Waterline Replacement Project groundbreaking. 6,225 LF of 4-inch pipe replaced with 8-inch; Confederate Boulevard, Red House Road, Morris Avenue included.</td></tr>
+  <tr><td>November 2023</td><td>CHA Consulting, Inc. selected to develop first comprehensive Water Master Plan since late 1990s; explicitly framed around December 31, 2030 CCUSA deadline.</td></tr>
+  <tr><td>August 2024</td><td>Church Street project ~80% complete. Interim Town Manager Rob Fowler reports to Council. Completion expected late 2024 / early 2025.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="references">Primary Sources and Research Notes</h2>
+
+<p>This account is drawn entirely from primary source documents compiled from Appomattox County public records. The principal source for Section 1 through Section 14 is the pre-existing compiled history <em>Town of Appomattox Water System: A History from Wells to County Pipeline, 1990–2024</em> (N.A. Simpson, February 2026), supplemented by direct database queries described below. All dollar amounts are as reported in contemporary sources without adjustment for inflation. Direct quotations from newspaper articles are reproduced as historical record.</p>
+
+<div class="reflist">
+<ol>
+  <li id="ref1"><em>Times-Virginian,</em> multiple dates 2004–2012. Well system capacity and rotation described in news coverage of water debates. BOS Minutes, 2005–2007 (water study presentations by Region 2000). <em>Times-Virginian Archive; County Board of Supervisors Minute Books.</em></li>
+  <li id="ref2"><em>Times-Virginian,</em> September–October 2006. Town Manager David Garrett reveals Well No. 9 statistics; static level and output data. <em>Times-Virginian Archive.</em></li>
+  <li id="ref3"><em>Times-Virginian,</em> 2004. Mayor John Wilson newsletter referenced in reporting on water options debate. <em>Times-Virginian Archive.</em></li>
+  <li id="ref4"><em>Times-Virginian,</em> May 2006. Groundwater contamination risk assessment; specialist presentation to Town Council. <em>Times-Virginian Archive.</em></li>
+  <li id="ref5"><em>Times-Virginian,</em> ~1990. Slate River Watershed Dam No. 7 groundbreaking referenced. <em>Times-Virginian Archive.</em></li>
+  <li id="ref6"><em>Times-Virginian,</em> 2002–2003. Drought rationing; 42–114 foot water table declines confirmed by engineers. BOS Minutes, 2002–2003. <em>Times-Virginian Archive; County Board of Supervisors Minute Books.</em></li>
+  <li id="ref7"><em>Times-Virginian,</em> 2004–2006. John Spencer and IDA testimony; dozen-plus businesses turned away. <em>Times-Virginian Archive; AI-Classified Event Database (responses.db).</em></li>
+  <li id="ref8"><em>Times-Virginian,</em> 2002–2004. Governor Warner executive order cited in multiple water coverage articles. <em>Times-Virginian Archive.</em></li>
+  <li id="ref9"><em>Times-Virginian,</em> October 2003. Wiley &amp; Wilson presentation; Walter Hancock recommendation; three-option cost comparison. BOS Minutes, October 2003. <em>Times-Virginian Archive; County Board of Supervisors Minute Books.</em></li>
+  <li id="ref10">BOS Minutes, October 2003. County endorsement of pipeline concept. <em>County Board of Supervisors Minute Books.</em></li>
+  <li id="ref11">BOS Minutes, 2004–2005. Region 2000 engagement; $50,000 study. <em>Times-Virginian,</em> November 2004. Revised cost estimates ($5.5M Concord, $13M Lynchburg). <em>Times-Virginian Archive; County Board of Supervisors Minute Books.</em></li>
+  <li id="ref12">Town of Appomattox Town Council minutes, 2004 and March 2006. Out-of-town moratorium; 500-foot connection ordinance. <em>County Town Government Meeting Minutes Database.</em></li>
+  <li id="ref13"><em>Times-Virginian,</em> July and October 2005. BOS and Town Council begin CCUSA negotiations; Draper Aden Associates hired ($14,900 / $24,900). <em>Times-Virginian Archive.</em></li>
+  <li id="ref14"><em>Times-Virginian,</em> February 2005 and 2004–2006 (multiple). Community meeting opposition; letters to editor; cost and control concerns. <em>Times-Virginian Archive; AI-Classified Event Database (responses.db).</em></li>
+  <li id="ref15"><em>Times-Virginian,</em> 2005–2010 (multiple). John L. Wilson criticism of Region 2000 report; alternative well-and-reservoir proposal. Town Council minutes. <em>Times-Virginian Archive; County Town Government Meeting Minutes Database.</em></li>
+  <li id="ref16"><em>Times-Virginian,</em> 2006. IDA Chairman Bill Slagle; members Buddy Conner and Wayne Lewis presentations. "Only surrounding locality without public water" characterization. <em>Times-Virginian Archive.</em></li>
+  <li id="ref17"><em>Times-Virginian,</em> June 2006. Draper Aden study results ($9M total; $4.7M Appomattox). BOS vote 3-1. Armbrust dissent. <em>Times-Virginian Archive; County Board of Supervisors Minute Books, Vol. 21.</em></li>
+  <li id="ref18"><em>Times-Virginian,</em> October and December 2006; January 2007. BOS 3-2 vote; supervisors named. "Top story of 2006." <em>Times-Virginian Archive.</em></li>
+  <li id="ref19"><em>Times-Virginian,</em> December 2006. BOS votes 5-0 to commit $450,000 to CCUSA. <em>Times-Virginian Archive; County Board of Supervisors Minute Books, Vol. 21.</em></li>
+  <li id="ref20"><em>Times-Virginian,</em> September 2006. Garrett reveals Well No. 9 shutdown; 12+ well sites explored. <em>Times-Virginian Archive.</em></li>
+  <li id="ref21">Town Council minutes, July 2006. Water rate schedule; out-of-town rates. Mayor Spiggle USGS data statement. <em>County Town Government Meeting Minutes Database; Times-Virginian Archive.</em></li>
+  <li id="ref22"><em>Times-Virginian,</em> October 2007. Two wells shut off; voluntary restrictions; daily meter reads. BOS Minutes, October 2007. <em>Times-Virginian Archive.</em></li>
+  <li id="ref23"><em>Times-Virginian,</em> October 2007. VDH district official's formal directive; "immediately seek an alternative water supply" language; November 1 deadline. State health official's praise of County. <em>Times-Virginian Archive.</em></li>
+  <li id="ref24"><em>Times-Virginian,</em> October 25, 2007. Bennett and Mayberry walkout; dispute with Mayor Wilson. Town Council minutes, October 2007. <em>Times-Virginian Archive; County Town Government Meeting Minutes Database.</em></li>
+  <li id="ref25"><em>Times-Virginian,</em> February 2008. Hurt &amp; Proffitt / Norman Walton report; Council 5-0 vote to negotiate. Financing scenarios. <em>Times-Virginian Archive; Town Council minutes, February 2008.</em></li>
+  <li id="ref26"><em>Times-Virginian,</em> March 2008. Campbell County water officials recommend regional project over reservoir. <em>Times-Virginian Archive.</em></li>
+  <li id="ref27"><em>Times-Virginian,</em> February–March 2009. ARRA stimulus application; 25 jobs estimated. March 2010: Cliff Harvey 477-signature petition. <em>Times-Virginian Archive; AI-Classified Event Database (responses.db).</em></li>
+  <li id="ref28"><em>Times-Virginian,</em> July 2010. Town formally agrees to partner; Mike Damron "win-win" quotation; CCUSA 250,000 gpd reservation. <em>Times-Virginian Archive.</em></li>
+  <li id="ref29"><em>Times-Virginian,</em> June 2011. 44-page maintenance agreement drafted. February 2012: Town Council approves agreement. Town Council minutes, February 2012. <em>Times-Virginian Archive; County Town Government Meeting Minutes Database.</em></li>
+  <li id="ref30"><em>Times-Virginian,</em> September 2011. Spout Spring water tower construction begins. January 2012: one mile remaining. Campbell County second tank noted. <em>Times-Virginian Archive.</em></li>
+  <li id="ref31"><em>Times-Virginian,</em> January–February 2012. Completion timeline; bacteriological testing; four backup wells retained per VDH. <em>Times-Virginian Archive.</em></li>
+  <li id="ref32"><em>Times-Virginian,</em> July–December 2012. Activation date July 24; county customers August 2012. Bill Gillespie quotation; resident water taste reports. Rate structure. <em>Times-Virginian Archive.</em></li>
+  <li id="ref33"><em>Times-Virginian,</em> late 2012. Zinc levels at wastewater plant remain 30–40 ppm; engineers suspect pipe accumulation. DEQ permit limit 249 ppm. <em>Times-Virginian Archive.</em></li>
+  <li id="ref34"><em>Times-Virginian,</em> 2015. XNG location; Aileen Ferguson retrospective. <em>Times-Virginian Archive; AI-Classified Event Database (responses.db).</em></li>
+  <li id="ref35"><em>Times-Virginian,</em> 2015. Willie Craft disappointment statement. <em>Times-Virginian Archive.</em></li>
+  <li id="ref36"><em>Times-Virginian,</em> February 2016. Jeff Elder and Bill Gillespie Flint comparison; monthly testing confirmed. <em>Times-Virginian Archive.</em></li>
+  <li id="ref37"><em>Times-Virginian,</em> 2017. FY2017 budget; $221,811 for Bandana, High, and Isbell street waterline upgrades; 1-million-gallon tank reconditioning. <em>Times-Virginian Archive.</em></li>
+  <li id="ref38">Town Council minutes, September 2020. CDBG application resolution; 6,225 LF pipe replacement; Church Street, Confederate Blvd, Red House Road, Morris Avenue. <em>County Town Government Meeting Minutes Database.</em></li>
+  <li id="ref39">Town Council minutes, July 2023. $1,156,000 USDA Rural Development General Obligation Bond; 30 years at 1.2%. January 2021: $650,000 CDBG grant awarded. <em>County Town Government Meeting Minutes Database; Times-Virginian Archive.</em></li>
+  <li id="ref40"><em>Times-Virginian</em> / Town Council workshop minutes, August 27, 2024. Rob Fowler report (~80% complete); Nathan Simpson resident complaints; tractor-trailer accident noted. <em>Times-Virginian Archive; County Town Government Meeting Minutes Database.</em></li>
+  <li id="ref41"><em>Times-Virginian,</em> July 2021. CCUSA formal non-renewal notification; December 31, 2030 expiry. Town Council workshop, June 29, 2021. January 2020 maintenance agreement noted. <em>Times-Virginian Archive; AI-Classified Event Database (responses.db).</em></li>
+  <li id="ref42">Town Council minutes, August and December 2021. Out-of-town rate at 1.5× in-town; MOU with BOS; unanimous re-vote December 2021. June 2023: $12.26/$18.39 rates. <em>County Town Government Meeting Minutes Database; Times-Virginian Archive.</em></li>
+  <li id="ref43"><em>Times-Virginian,</em> November 2023. CHA Consulting, Inc. selected; Water Master Plan scope; 2030 deadline framing. <em>Times-Virginian Archive.</em></li>
+  <li id="ref44"><em>Times-Virginian,</em> March 2007. Bob Gay, Virginia Rural Water Association, presentation to Town Council; "run it like a business" recommendation. <em>Times-Virginian Archive.</em></li>
+  <li id="ref45"><em>Times-Virginian,</em> 2002–2007. JMT wastewater facility cracks; "we screwed up" admission; $1.164 million settlement 2007. May 2006 groundwater testing approved $17,722. <em>Times-Virginian Archive; AI-Classified Event Database (responses.db).</em></li>
+  <li id="ref46"><em>Times-Virginian,</em> 2004–2007. Copper contamination; DEQ consent order; MIDFLOC 2603L; May 2007 five-linear-foot copper ordinance; July 2007 compliance achieved (21 µg/L standard). <em>Times-Virginian Archive.</em></li>
+  <li id="ref47"><em>Times-Virginian,</em> 2014 and 2020. 90,000 feet sewer lines; 12 cracks; 345,000 gpd infiltration; USDA funding sought; $3.7M project estimate. July 2020 Bond; November 2020 groundbreaking. <em>Times-Virginian Archive; AI-Classified Event Database (responses.db).</em></li>
+  <li id="ref48"><em>Times-Virginian,</em> June 2008 and July 2014. SBR plant as solution to metal discharge; consent order relief July 2014. Post-activation zinc levels. <em>Times-Virginian Archive.</em></li>
+  <li id="ref49">Compiled from all four research databases. Institutional actors summary. CHA Consulting engagement, November 2023. <em>Times-Virginian Archive; County Board of Supervisors Minute Books; County Town Government Meeting Minutes Database; AI-Classified Event Database (responses.db).</em></li>
+</ol>
+</div>
+
+<hr style="border: none; border-top: 1px solid #a2a9b1; margin: 30px 0 15px 0;">
+<p style="font-size: 12px; color: #555; text-align: center; font-style: italic;">This article was compiled as a community history resource for Appomattox County, Virginia, February–March 2026. Primary research drawn from the <em>Times-Virginian</em> newspaper archive (2003–2024), Appomattox County Board of Supervisors minute books (1992–2025), Town of Appomattox Town Council minute books (1950–2025), county government PDF records (2004–2023), and the AI-classified event database compiled from those sources. Based in substantial part on the companion Word document <em>Town of Appomattox Water System: A History from Wells to County Pipeline, 1990–2024</em> (N.A. Simpson, 2026).</p>
+
+</div>
+<div id="apxwiki-nav-bottom" style="border-bottom:none;border-top:1px solid #a7d7f9;margin-top:30px;">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-links">
+      <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Business &amp; Commerce</a>
+      <span class="nav-sep">|</span>
+      <a href="appomattox_solid_waste_history.html">Solid Waste</a>
+      <span class="nav-sep">|</span>
+      <a href="appomattox_county_tax_history.html">Taxation</a>
+      <span class="nav-sep">|</span>
+      <a href="Appomattox_Water_System_History.html" class="current">Water System</a>
+      <span class="nav-sep">|</span>
+      <a href="Winfred_D_Nash.html">Winfred D. Nash</a>
+      <span class="nav-sep">|</span>
+      <a href="Appomattox_County_School_Board_History.html">School Board</a>
+      <span class="nav-sep">|</span>
+      <a href="Samuel_E_Carter.html">Samuel E. Carter</a>
+      <span class="nav-sep">|</span>
+      <a href="Nathan_A_Simpson.html">Nathan A. Simpson</a>
+      <span class="nav-sep">|</span>
+      <a href="Paul_Harvey.html">Paul D. Harvey</a>
+    </div>
+    <div class="nav-prevnext">
+      <a href="appomattox_county_tax_history.html">&larr; Taxation</a>
+      <a href="Winfred_D_Nash.html">Winfred D. Nash &rarr;</a>
+    </div>
+  </div>
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

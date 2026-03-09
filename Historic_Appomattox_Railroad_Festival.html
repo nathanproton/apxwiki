@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historic Appomattox Railroad Festival — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Historic Appomattox Railroad Festival</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Historic Appomattox Railroad Festival</div>
+  <table>
+    <tr><td>Type</td><td>Annual community festival</td></tr>
+    <tr><td>Established</td><td>1972</td></tr>
+    <tr><td>Location</td><td>Downtown Appomattox, Virginia</td></tr>
+    <tr><td>Held</td><td>Second weekend of October (typically)</td></tr>
+    <tr><td>Duration</td><td>2&ndash;3 days (Saturday&ndash;Sunday; Friday evening added in later years)</td></tr>
+    <tr><td>Admission</td><td>Free</td></tr>
+    <tr><td>Peak attendance</td><td>~50,000 (2008 est.)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Origin</td></tr>
+    <tr><td>Founded by</td><td>Appomattox Junior Woman's Club and Town of Appomattox</td></tr>
+    <tr><td>Purpose</td><td>Celebrate the donation of the historic train depot to the Town</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Governance</td></tr>
+    <tr><td>Governing body</td><td>Historic Appomattox Railroad Festival Board of Directors (nonprofit since 2014)</td></tr>
+    <tr><td>Past chairs</td><td>Bobby Swanberg, Dean Thompson, Rhonda Guill, Tony Clifton, Paul Harvey, Susan Adams</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key features</td></tr>
+    <tr><td>Signature events</td><td>Grand Parade, fireworks, Street Dance, Teddy Bear Parade, Good Ole Days, Firemen's Competition</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Recognition</td></tr>
+    <tr><td>Awards</td><td>Library of Congress Local Legacy (2000); IFEA Gold Pinnacle (2001); STS Top&nbsp;20 Southeast Event (2010)</td></tr>
+    <tr><td>Website</td><td>appomattoxrrfest.org</td></tr>
+  </table>
+</div>
+
+<p>The <b>Historic Appomattox Railroad Festival</b> is an annual community celebration held in downtown <b>Appomattox, Virginia</b>, each October. First staged in 1972 to commemorate the donation of the historic Norfolk and Western Railway depot to the Town of Appomattox, the festival has grown from a modest local gathering into one of Central Virginia's largest annual events, drawing estimated crowds of 30,000 to 50,000 over its two- or three-day run. The festival features a Grand Parade, live music on multiple stages, food and craft vendors, a fireworks display, a children's Teddy Bear Parade, and a Saturday-night Street Dance. Originally organized under the auspices of the Town government, the festival transitioned to an independent nonprofit board of directors in 2014. It was cancelled once, in 2020, due to the COVID-19 pandemic, and reached its 50th edition in 2022.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup></p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#founding">Founding and early years (1972&ndash;1983)</a></li>
+    <li><a href="#growth">Growth and recognition (1984&ndash;2003)</a></li>
+    <li><a href="#peak_years">Peak years (2004&ndash;2013)</a></li>
+    <li><a href="#transition">Transition to nonprofit governance (2014&ndash;2019)</a></li>
+    <li><a href="#covid_era">COVID-19 cancellation and revival (2020&ndash;2022)</a></li>
+    <li><a href="#recent">Recent years (2023&ndash;2024)</a></li>
+    <li><a href="#format">Format and traditions</a>
+      <ol>
+        <li><a href="#parade">Grand Parade</a></li>
+        <li><a href="#music_fireworks">Music and fireworks</a></li>
+        <li><a href="#teddy_bear">Teddy Bear Parade</a></li>
+        <li><a href="#good_ole_days">Good Ole Days</a></li>
+        <li><a href="#firemen">Firemen's Competition</a></li>
+        <li><a href="#other_features">Other features</a></li>
+      </ol>
+    </li>
+    <li><a href="#economic_impact">Economic impact</a></li>
+    <li><a href="#awards">Awards and recognition</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="background">Background</h2>
+
+<p>The festival traces its origins to the Norfolk and Western Railway depot that served the Town of Appomattox from the late nineteenth century into the mid-twentieth century. The depot was the social center of the community during the railroad era, welcoming passengers and freight that connected the small Piedmont town to Lynchburg, Richmond, and beyond. By the early 1970s, the depot's active railroad functions had ceased, and Norfolk and Western offered to donate the building to the Town of Appomattox. Although the formal deed transfer took place in 1973, the idea of an annual celebration around the depot emerged before the paperwork was finalized.<sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup></p>
+
+<h2 id="founding">Founding and early years (1972&ndash;1983)</h2>
+
+<p>In the summer of 1972, members of the <b>Appomattox Junior Woman's Club</b>&mdash;specifically <b>Betsy Carter</b> and <b>Anne Robinson</b>&mdash;approached the Town of Appomattox Building and Property Committee to propose a community event celebrating the historic depot. The committee, chaired by R.&nbsp;C. Hubbard and including Burke Guill and Ivey Holland, voted to recommend that the Town co-sponsor a "Historic Appomattox Railroad Festival" with the Junior Woman's Club, with Town financial sponsorship of up to one hundred dollars. The Appomattox Town Council approved the proposal, and the first festival was held on a weekend in October 1972.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>The early festivals were modest affairs, featuring arts and crafts displays, food vendors, period-costume hostesses provided by the Appomattox Woman's Club, and children's activities. By 1975, the festival had established itself as an annual tradition. Mrs. Frances Guill of the Junior Woman's Club presented festival plans to Town Council in June 1975, and in November of that year, Mrs. Paige Nolen and Mrs. Carolyn Thompson formally requested continued Town co-sponsorship for the 1976 event, which Council approved unanimously.<sup><a href="#ref7">[7]</a></sup><sup><a href="#ref8">[8]</a></sup></p>
+
+<p>A detailed 1976 planning report shows how the festival was growing in ambition. That year's lineup included free children's train rides operated by Norfolk and Western, a parade led by Grand Ole Opry performer Ray Pillow, Civil War artifact displays, Extension Office exhibits, arts and crafts vendors, and participation from community organizations including the Woodmen of the World and the Appomattox Primary School, which contributed Sesame Street characters for the parade.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>The festival continued to expand through the late 1970s and early 1980s, with the Town Council making annual appropriations to support the event. By 1982, the festival was celebrating its tenth anniversary. A Town Council resolution from October 1982 declared the event a success and commended the Railroad Festival Board for its work.<sup><a href="#ref10">[10]</a></sup> The first <b>Distinguished Citizen Award</b> was introduced in 1984, when <b>J.&nbsp;Robert Jamerson</b>&mdash;the community leader for whom the county library would later be named&mdash;received the honor at the festival's opening ceremony.<sup><a href="#ref11">[11]</a></sup></p>
+
+<h2 id="growth">Growth and recognition (1984&ndash;2003)</h2>
+
+<p>Through the 1980s and 1990s the festival steadily gained in scale and regional visibility. By its twentieth anniversary in 1992, the event was drawing large crowds to the historic downtown, and the Appomattox County Board of Supervisors regularly donated $1,500 and waived the entertainment permit fee for the festival.<sup><a href="#ref12">[12]</a></sup> In 1992, Mayor Ronnie Spiggle contacted the County Administrator to request that the county share expenses for a luncheon honoring Railroad Festival dignitaries.<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>A pivotal figure during this era was <b>Bobby Swanberg</b>, who served as festival chairman from 1998 to 2003. Under Swanberg's leadership, the festival introduced several new attractions, including Masters of the Chainsaw performances, racing skunks, remote-controlled stock-car racing, and the Wild West Follies variety show. The festival also began staging a model-train display, a feature that would become a recurring tradition.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>Swanberg's tenure brought national and international recognition. In 2000, the festival was honored as a <b>Local Legacy Project</b> by the Library of Congress in conjunction with its Bicentennial celebration. The following year, the <b>International Festivals and Events Association</b> (IFEA) awarded the festival a <b>Gold Pinnacle Award</b> in 2001, followed by a Bronze Pinnacle Award in 2002.<sup><a href="#ref14">[14]</a></sup> The 28th annual festival in 2000 drew an estimated 35,000 attendees, described as a record crowd at the time, with festival chairman Swanberg reporting one of the most successful editions to date.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>The 30th anniversary festival in 2002 was declared a success despite nearly three inches of rain over the weekend.<sup><a href="#ref16">[16]</a></sup> By 2003, the 31st annual edition featured over 175 vendors and exhibitors, a 100-plus-unit Grand Parade, two stages of live music and entertainment, children's rides, antique power demonstrations, and one of the largest fireworks displays in Central Virginia. Swanberg estimated attendance at approximately 35,000 over the weekend despite uncertain weather. Vice-chairman <b>Dean Thompson</b> attributed the success to community preparation and volunteer effort.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref17">[17]</a></sup></p>
+
+<p>Swanberg was named the Appomattox County Chamber of Commerce <b>Male Citizen of the Year</b> in 2004, in large part for his work with the festival. After stepping down as chairman, Swanberg continued to serve in an advisory capacity and oversaw the Good Ole Days area and model-train displays.<sup><a href="#ref14">[14]</a></sup></p>
+
+<h2 id="peak_years">Peak years (2004&ndash;2013)</h2>
+
+<p><b>Dean Thompson</b> succeeded Swanberg as chairman and led the festival through what many considered its golden era. The 32nd annual festival in 2004 drew an estimated 35,000 to 40,000 attendees and saw the revival of the <b>Street Dance</b>, a Main Street event that had been discontinued for several years. The Street Dance drew over 1,000 people on Saturday night, and Thompson announced it would return the following year. Other highlights included the Power Team performance at Abbitt Park and a fireworks show that received rave reviews.<sup><a href="#ref18">[18]</a></sup></p>
+
+<p>The 2006 festival set a new attendance record, with Thompson estimating 43,000 to 45,000 people over the weekend. Former Mayor Ronnie Spiggle served as Grand Marshal, and approximately 140 entries participated in the Saturday morning parade. Thompson reflected on the event's evolution, noting that what had begun as a celebration of the depot donation had become something akin to a community holiday&mdash;a homecoming weekend that reunited families and friends who scheduled school reunions around the festival.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>In 2007, the 35th annual festival was headlined by the selection of <b>Daniel Scott</b>, a 19-year-old Appomattox native who had survived a near-fatal motorcycle accident, as Grand Marshal of the parade. The community had rallied around Scott with fundraisers and prayers, and his appearance in the parade was a powerful emotional moment. Organizers again reported the crowd as among the largest in festival history.<sup><a href="#ref20">[20]</a></sup></p>
+
+<p>The 2008 edition achieved what organizers called the festival's highest-ever attendance, with an estimated <b>50,000 people</b> descending on downtown Appomattox over the weekend. The Appomattox County Board of Supervisors announced that four of the five supervisors would walk in the parade that year.<sup><a href="#ref21">[21]</a></sup> Following the festival, the committee invited the public to a meeting at the Community Center to discuss ideas for the future.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>The festival was named one of the <b>Top 20 Events in the Southeast</b> for October 2010 by the Southeast Tourism Society (STS). The designation was published to over 1,600 media outlets with a combined circulation in the millions. Will Simmons, the Town's Director of Tourism and co-chair of the festival, said the recognition would bring greater publicity to a wider audience of potential visitors.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p>That fall, the 38th annual festival in 2010 was called the "best ever" by Town Secretary <b>Rhonda Guill</b>, who oversaw much of the event's logistics. The Saturday parade featured a record 160 entries, topping the previous year's 120. A real train was stationed on the Main Street tracks for the first time in about ten years, and approximately 575 people attended the Street Dance featuring the band Out of Spite. Vendors reported their best sales in years, with many signing up immediately for the following year.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>The 40th anniversary in 2012 was highlighted by the Civil War 150th HistoryMobile, a walk-through interactive museum featuring soldiers' letters and stories from the war period. The Nscalers Miniature Train Display was set up in the Appomattox County School Administration Building, and the Appomattox Historical Society hosted the Good Ole Days at Courthouse Square. The festival drew upwards of 30,000 attendees and the Appomattox County High School Class of 1972 held its 40-year reunion to coincide with the festival's 40th anniversary.<sup><a href="#ref25">[25]</a></sup><sup><a href="#ref26">[26]</a></sup></p>
+
+<h2 id="transition">Transition to nonprofit governance (2014&ndash;2019)</h2>
+
+<p>A major organizational change came in 2014 when the <b>Appomattox Town Council</b> announced that the private sector needed to assume management of the festival because the Town's budget could no longer sustain the taxpayer investment required to stage the event. A volunteer citizens' committee stepped forward to take over, organizing the 42nd annual festival as a new independent entity. <b>Tony Clifton</b> served as president, <b>Adam Clifton</b> as first vice-president, <a href="Paul_Harvey.html">Paul Harvey</a> as second vice-president, Marilyn O'Sullivan as secretary, and Rhonda Guill as treasurer. The committee pursued 501(c)(3) nonprofit status and launched a sponsorship campaign and basket-raffle fundraiser to replace lost Town funding. The new board also established a $1,500 scholarship for a local high school senior, creating what Guill called a heritage of giving back to the community.<sup><a href="#ref27">[27]</a></sup></p>
+
+<p>Despite the organizational transition, the festival continued its traditions. The 2014 festival featured the band Exile as a headline music act, the return of the Joe Sweeney 5K race, and the standard complement of vendors, rides, and parades, though rain dampened attendance somewhat.<sup><a href="#ref28">[28]</a></sup><sup><a href="#ref29">[29]</a></sup></p>
+
+<p>The 43rd annual festival in 2015 drew an estimated 25,000 attendees.<sup><a href="#ref30">[30]</a></sup> In subsequent years, the festival maintained its traditional footprint while weathering leadership transitions. Tony Clifton eventually resigned as president, and <a href="Paul_Harvey.html"><b>Paul Harvey</b></a>&mdash;the Appomattox dentist who had served twelve years as mayor and was instrumental in developing Courtland Festival Park&mdash;assumed the presidency of the board. By 2019, however, the festival was in what Harvey himself described as a crisis. At a September 2019 Town workshop meeting, Harvey acknowledged the organization's struggles but confirmed the festival would proceed on October 12&ndash;13. Harvey and first vice-president <b>Charles Garrett</b> cited volunteer fatigue and organizational challenges as contributing factors.<sup><a href="#ref31">[31]</a></sup> Despite the difficulties, the 2019 festival was ultimately declared successful.<sup><a href="#ref32">[32]</a></sup></p>
+
+<h2 id="covid_era">COVID-19 cancellation and revival (2020&ndash;2022)</h2>
+
+<p>The COVID-19 pandemic forced the cancellation of the 2020 festival&mdash;the first and only cancellation in the event's history. Festival committee president Paul Harvey announced the decision, citing concerns about the health and safety of vendors, attendees, staff, and concessionaires. Only about 14 vendor applications had been received at the time of cancellation, a fraction of the typical number. Harvey said the committee would redirect its energy toward planning for 2021.<sup><a href="#ref33">[33]</a></sup></p>
+
+<p>Tragedy struck the festival community in October 2020 when Paul Harvey died at age 68 while still serving on the Appomattox Town Council. His death left a leadership vacuum at the festival board. In February 2021, acting president <b>Susan Adams</b> issued a public call for volunteer support, warning that the festival's continuation depended on community engagement. A meeting was held at the County Administrator's Building on February 10, 2021, to gauge interest and recruit new volunteers.<sup><a href="#ref34">[34]</a></sup><sup><a href="#ref35">[35]</a></sup></p>
+
+<p>The community responded. The 2021 festival was dedicated to Harvey's memory, opening on Friday evening, October 8, with a dedication ceremony at Courtland Festival Park on Court Street. A park bench was dedicated in Harvey's honor at the venue he had helped develop during his mayoral tenure. The festival featured both familiar attractions and several new additions, including a storefront-display contest and the return of the Teddy Bear Parade. <b>Phil Jamerson</b>, a committee member, recalled Harvey as a "playmaker" who made things happen for the community. Miss Virginia USA served as Grand Marshal. Adams and the committee successfully revived the festival after its one-year hiatus, with organizers and officials praising the turnout as a huge success.<sup><a href="#ref36">[36]</a></sup><sup><a href="#ref37">[37]</a></sup><sup><a href="#ref38">[38]</a></sup></p>
+
+<p>The <b>50th anniversary festival</b> in October 2022 was hailed as the largest in the event's history. Susan Adams, still serving as board president, estimated the weekend crowd topped 30,000 across Friday, Saturday, and Sunday events. Stacy Purcell, second vice-chair, noted that former Mayor Ronnie Spiggle&mdash;who had accepted the original depot deed decades earlier&mdash;was present and confirmed it was the most-attended festival since its inception. Saturday night's entertainment featured the country music bands Rare Form and Confederate Railroad on the Courtland Festival Park stage. The festival also included a hay-bale maze, amusement park rides, children's inflatables, and a Sunday morning worship service.<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup></p>
+
+<h2 id="recent">Recent years (2023&ndash;2024)</h2>
+
+<p>In January 2023, Susan Adams submitted her official resignation as board president, effective after the successful 50th anniversary event. In her letter to the board, Adams described her two-year tenure as challenging but rewarding.<sup><a href="#ref39">[39]</a></sup></p>
+
+<p>The 2023 festival introduced a <b>Hatch Market</b>, a new feature promoting entrepreneurial spirit among local students, and hosted a Vietnam Memorial replica wall as a special attraction. Rain affected Saturday's attendance, but Sunday drew a large crowd.<sup><a href="#ref40">[40]</a></sup><sup><a href="#ref41">[41]</a></sup></p>
+
+<p>The 2024 edition was dedicated to the late <b>Charles Garrett</b>, a former board vice-president who had passed away in April of that year. A Friday-evening ceremony honored Garrett's years of service to the festival. Vice-chair Stacy Purcell noted Garrett's extensive contributions to festival preparations and logistics. The event attracted thousands of visitors and featured live music, the Grand Parade, a car show, the Teddy Bear Parade, miniature train rides, and amusement park rides, with cooperative weather throughout the weekend.<sup><a href="#ref42">[42]</a></sup></p>
+
+<h2 id="format">Format and traditions</h2>
+
+<h3 id="parade">Grand Parade</h3>
+
+<p>The Saturday-morning Grand Parade has been a signature feature since the festival's earliest years. The parade winds through the downtown streets of Appomattox, typically beginning at Appomattox Elementary School and proceeding along Main Street. Entries have included antique cars and tractors, classic cars, fire trucks, rescue vehicles, motorcycles, church and school floats, marching bands, and community organizations. By 2006, the parade regularly featured 140 or more entries, and the 2010 parade set a record with approximately 160 entries. A Grand Marshal is selected each year&mdash;past honorees have included former Mayor Ronnie Spiggle (2006), Daniel Scott (2007), Lewis and Clark from the 108&nbsp;WYYD radio show (2004), and Miss Virginia USA (2021).<sup><a href="#ref18">[18]</a></sup><sup><a href="#ref19">[19]</a></sup><sup><a href="#ref24">[24]</a></sup><sup><a href="#ref36">[36]</a></sup></p>
+
+<h3 id="music_fireworks">Music and fireworks</h3>
+
+<p>Live music on multiple stages has been a festival mainstay. A downtown stage and the Courtland Festival Park stage host performers throughout the weekend, ranging from local Southern-rock bands like J.D.&nbsp;White &amp; The Southland Band to nationally touring acts such as Exile (2014) and Confederate Railroad (2022). The Saturday-night <b>Street Dance</b>, revived in 2004 after a period of discontinuation, typically features a headlining band on Main Street and has drawn over 1,000 attendees on peak nights. The fireworks display, traditionally held on Saturday evening, has been described as one of the largest in Central Virginia. The fireworks venue shifted to the Industrial Park area in 2006 and later to a location near Appomattox County High School.<sup><a href="#ref18">[18]</a></sup><sup><a href="#ref43">[43]</a></sup></p>
+
+<h3 id="teddy_bear">Teddy Bear Parade</h3>
+
+<p>The children's <b>Teddy Bear Parade</b>, held on Sunday afternoon, invites young children to march through downtown carrying their stuffed animals. The parade has been sponsored by the Girl Scouts and is a beloved tradition for families. After a lapse during the COVID period, the Teddy Bear Parade was restored in 2021.<sup><a href="#ref25">[25]</a></sup><sup><a href="#ref38">[38]</a></sup></p>
+
+<h3 id="good_ole_days">Good Ole Days</h3>
+
+<p>The <b>Good Ole Days</b> area, typically hosted by the Appomattox Historical Society, recreates aspects of earlier Appomattox life. Activities have included kettle-corn making, pork-rind frying, apple and cider sales by Rockhill Orchard, basket weaving, soap making, herb drying, and demonstrations of traditional crafts. The Good Ole Days area was originally located at Courthouse Square and was later moved to Abbitt Park before returning to the Square.<sup><a href="#ref14">[14]</a></sup><sup><a href="#ref18">[18]</a></sup><sup><a href="#ref25">[25]</a></sup></p>
+
+<h3 id="firemen">Firemen's Competition</h3>
+
+<p>The <b>Firemen's Competition</b>, held on Sunday, pits local volunteer fire departments against each other in events such as the Combat Challenge, Bucket Brigade, Water Battle, and Filler Up. Eight or more departments have participated in recent years, including the <a href="Appomattox_Volunteer_Fire_Department.html">Appomattox Volunteer Fire Department</a>, Pamplin, Concord, Gladstone, and Brookville departments. The competition has been sponsored by Fire and Safety of Concord and hosted by the Appomattox Volunteer Fire Department.<sup><a href="#ref19">[19]</a></sup></p>
+
+<h3 id="other_features">Other features</h3>
+
+<p>Over the decades, the festival has hosted a wide array of additional attractions, including model-train displays (organized by the Lynchburg Inscalers and the Nscalers), a chainsaw-performance act known as Railroad Willie, a Joe Sweeney 5K foot race (named for the Appomattox-born minstrel musician), a Fine Arts Show &amp; Sale, a Miss Historic Appomattox Railroad Festival beauty pageant, a Battle of the Bands, a car show, amusement park rides provided by FunTime Amusements, karaoke and lip-sync contests, and a Hatch Market for student entrepreneurs. The festival has typically featured 150 to 200 vendors and exhibitors offering food, arts and crafts, and various demonstrations.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref28">[28]</a></sup><sup><a href="#ref41">[41]</a></sup></p>
+
+<h2 id="economic_impact">Economic impact</h2>
+
+<p>The Railroad Festival has been widely acknowledged as the single largest economic event of the year for the Town of Appomattox. Local merchants have consistently reported strong sales during festival weekend. After the 2009 festival, the <i>Times-Virginian</i> reported that the event helped boost merchants' sales, and in 2004 merchants reported the festival among their best sales periods. The Town's tourism revenue saw measurable increases tied to the festival; a 2009 report noted that tourism revenue at the Appomattox Visitor Center had climbed, with the festival identified as a significant contributor. Will Simmons, Director of Tourism, attributed increased visitation at the Visitor Center in part to the festival's growing reputation.<sup><a href="#ref44">[44]</a></sup><sup><a href="#ref45">[45]</a></sup><sup><a href="#ref46">[46]</a></sup></p>
+
+<p>The festival's free admission policy has been maintained throughout its history, making it accessible to families of all income levels. Food, craft, and exhibitor vendors pay booth fees that help fund the event, supplemented by sponsorships from local businesses, organizations like the Spout Spring Ruritan Club, and annual appropriations that historically came from both the Town of Appomattox and the Appomattox County Board of Supervisors.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref12">[12]</a></sup></p>
+
+<h2 id="awards">Awards and recognition</h2>
+
+<p>The festival has received several notable recognitions over its history. In 2000, during chairman Bobby Swanberg's tenure, the festival was designated a <b>Local Legacy Project</b> by the Library of Congress as part of its Bicentennial celebration. In 2001, the International Festivals and Events Association (IFEA) awarded the festival a <b>Gold Pinnacle Award</b>, followed by a <b>Bronze Pinnacle Award</b> in 2002.<sup><a href="#ref14">[14]</a></sup> In 2010, the Southeast Tourism Society named the festival one of the <b>Top 20 Events in the Southeast</b> for October, a designation distributed to over 1,600 media outlets nationwide.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p>Within the county, the festival introduced the <b>Distinguished Citizen Award</b> in 1984, first presented to J.&nbsp;Robert Jamerson at the festival's opening ceremony.<sup><a href="#ref11">[11]</a></sup> Bobby Swanberg was named the Appomattox County Chamber of Commerce Male Citizen of the Year in 2004, in recognition largely of his festival leadership.<sup><a href="#ref14">[14]</a></sup></p>
+
+<h2 id="leadership">Leadership</h2>
+
+<p>The festival has been guided by a succession of volunteer leaders since its founding. The following table summarizes known chairpersons and presidents of the festival committee or board of directors.</p>
+
+<table class="wikitable">
+  <tr><th>Name</th><th>Title</th><th>Approximate tenure</th><th>Notes</th></tr>
+  <tr><td>Cindy Ranson</td><td>Tri-chairman</td><td>c.&nbsp;1992</td><td>Led the festival during the early 1990s; coordinated with BOS for funding<sup><a href="#ref12">[12]</a></sup></td></tr>
+  <tr><td>Bobby Swanberg</td><td>Chairman</td><td>1998&ndash;2003</td><td>Introduced new attractions; won IFEA and Library of Congress awards<sup><a href="#ref14">[14]</a></sup></td></tr>
+  <tr><td>Dean Thompson</td><td>Chairman</td><td>2004&ndash;c.&nbsp;2008</td><td>Presided over record-attendance years; oversaw 2006 and 2008 festivals<sup><a href="#ref18">[18]</a></sup><sup><a href="#ref19">[19]</a></sup></td></tr>
+  <tr><td>Rhonda Guill</td><td>Chairperson / Treasurer</td><td>c.&nbsp;2010&ndash;2014</td><td>Led the 2010 "best ever" festival and the 40th anniversary in 2012; later served as treasurer under the new board<sup><a href="#ref24">[24]</a></sup><sup><a href="#ref27">[27]</a></sup></td></tr>
+  <tr><td>Tony Clifton</td><td>President</td><td>2014&ndash;c.&nbsp;2018</td><td>First president of the independent nonprofit board after the Town relinquished oversight<sup><a href="#ref27">[27]</a></sup></td></tr>
+  <tr><td><a href="Paul_Harvey.html">Paul Harvey</a></td><td>President</td><td>c.&nbsp;2018&ndash;2020</td><td>Assumed presidency after Clifton's resignation; stewarded the festival through the 2019 crisis; oversaw the COVID cancellation; died October 2020<sup><a href="#ref31">[31]</a></sup><sup><a href="#ref33">[33]</a></sup></td></tr>
+  <tr><td>Susan Adams</td><td>President</td><td>2021&ndash;2023</td><td>Revived the festival after the COVID hiatus; led the 50th anniversary in 2022; resigned January 2023<sup><a href="#ref34">[34]</a></sup><sup><a href="#ref39">[39]</a></sup></td></tr>
+</table>
+
+<p>In addition to these leaders, committee members and volunteers such as Bobbie Mullins (Town Clerk), Teresa Doss, Tina Dunnam, Debbie Garrett, Ann Swanberg, Charles Garrett, Nikki Belcher, Leanne Belcher, Roxanne Paulette, Will Simmons, Phil Jamerson, and Stacy Purcell have played significant roles in organizing and sustaining the festival over the decades.<sup><a href="#ref19">[19]</a></sup><sup><a href="#ref24">[24]</a></sup><sup><a href="#ref37">[37]</a></sup></p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>Summer 1972</td><td>Appomattox Junior Woman's Club and Town Building and Property Committee propose a "Historic Appomattox Railroad Festival"<sup><a href="#ref6">[6]</a></sup></td></tr>
+  <tr><td>Oct 1972</td><td>First Historic Appomattox Railroad Festival held in downtown Appomattox<sup><a href="#ref5">[5]</a></sup></td></tr>
+  <tr><td>1973</td><td>Norfolk and Western Railway formally deeds the train depot to the Town of Appomattox<sup><a href="#ref4">[4]</a></sup></td></tr>
+  <tr><td>Oct 1976</td><td>Festival features Grand Ole Opry performer Ray Pillow as Grand Marshal; N&amp;W provides free train rides<sup><a href="#ref9">[9]</a></sup></td></tr>
+  <tr><td>Oct 1982</td><td>10th anniversary festival; Town Council passes resolution commending the festival board<sup><a href="#ref10">[10]</a></sup></td></tr>
+  <tr><td>Sep 1984</td><td>First Distinguished Citizen Award presented to J.&nbsp;Robert Jamerson<sup><a href="#ref11">[11]</a></sup></td></tr>
+  <tr><td>Oct 1992</td><td>20th anniversary draws large crowd; BOS donates $1,500<sup><a href="#ref12">[12]</a></sup><sup><a href="#ref15">[15]</a></sup></td></tr>
+  <tr><td>2000</td><td>Named Library of Congress Local Legacy Project; 28th festival draws record 35,000<sup><a href="#ref14">[14]</a></sup><sup><a href="#ref15">[15]</a></sup></td></tr>
+  <tr><td>2001</td><td>Awarded IFEA Gold Pinnacle Award<sup><a href="#ref14">[14]</a></sup></td></tr>
+  <tr><td>Oct 2004</td><td>Street Dance revived after years of discontinuation; attendance 35,000&ndash;40,000<sup><a href="#ref18">[18]</a></sup></td></tr>
+  <tr><td>Oct 2006</td><td>Record attendance of 43,000&ndash;45,000; former Mayor Spiggle serves as Grand Marshal<sup><a href="#ref19">[19]</a></sup></td></tr>
+  <tr><td>Oct 2008</td><td>All-time peak attendance estimated at 50,000<sup><a href="#ref21">[21]</a></sup></td></tr>
+  <tr><td>May 2010</td><td>Named STS Top 20 Event in the Southeast for October 2010<sup><a href="#ref23">[23]</a></sup></td></tr>
+  <tr><td>Oct 2010</td><td>38th festival called "best ever"; record 160-entry parade<sup><a href="#ref24">[24]</a></sup></td></tr>
+  <tr><td>Oct 2012</td><td>40th anniversary; features Civil War 150th HistoryMobile<sup><a href="#ref25">[25]</a></sup></td></tr>
+  <tr><td>Apr 2014</td><td>Town Council relinquishes oversight; independent nonprofit board takes over<sup><a href="#ref27">[27]</a></sup></td></tr>
+  <tr><td>Jun 2020</td><td>Festival cancelled for the first time due to COVID-19<sup><a href="#ref33">[33]</a></sup></td></tr>
+  <tr><td>Oct 2020</td><td>Paul Harvey dies; festival community mourns its president<sup><a href="#ref34">[34]</a></sup></td></tr>
+  <tr><td>Oct 2021</td><td>Festival returns, dedicated to Harvey; park bench dedicated in his memory<sup><a href="#ref36">[36]</a></sup></td></tr>
+  <tr><td>Oct 2022</td><td>50th anniversary; estimated as largest festival in history (30,000+)<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup></td></tr>
+  <tr><td>Jan 2023</td><td>Susan Adams resigns as board president<sup><a href="#ref39">[39]</a></sup></td></tr>
+  <tr><td>Oct 2024</td><td>Festival dedicated to late Charles Garrett<sup><a href="#ref42">[42]</a></sup></td></tr>
+</table>
+
+<h2 id="see_also">See also</h2>
+<ul>
+  <li><a href="Paul_Harvey.html">Paul D. Harvey</a></li>
+  <li><a href="Appomattox_Volunteer_Fire_Department.html">Appomattox Volunteer Fire Department</a></li>
+  <li><a href="Appomattox_County_High_School.html">Appomattox County High School</a></li>
+</ul>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Railroad Festival kicks off this weekend," <i>Times-Virginian</i>, October 8, 2003. Via times-virginian-2004-2024.db.</li>
+    <li id="ref2">"Appomattox's 50th Railroad Festival in full swing," <i>Times-Virginian</i>, October 8, 2022. Via times-virginian-2004-2024.db.</li>
+    <li id="ref3">"50th Appomattox Railroad Festival estimated as largest yet," <i>Times-Virginian</i>, October 13, 2022. Via times-virginian-2004-2024.db.</li>
+    <li id="ref4">"Railroad Festival kicks off this weekend," <i>Times-Virginian</i>, October 6, 2004 (describes depot donation history). Via times-virginian-2004-2024.db.</li>
+    <li id="ref5">"50th Appomattox Railroad Festival estimated as largest yet," <i>Times-Virginian</i>, October 13, 2022 (Stacy Purcell confirms 1972 founding and depot deed). Via times-virginian-2004-2024.db.</li>
+    <li id="ref6">Town of Appomattox Building and Property Committee minutes, Book 1, Plate 511, corpus 1950&ndash;1985. Appomattox Junior Woman's Club proposes "Historic Appomattox Railroad Festival" co-sponsored by the Town. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref7">Town of Appomattox Council minutes, Book 1, Plate 581, corpus 1950&ndash;1985. Mrs. Frances Guill of the Junior Woman's Club presents 1975 festival plans, June 9, 1975. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref8">Town of Appomattox Council minutes, Book 1, Plate 602, corpus 1950&ndash;1985. Mrs. Paige Nolen and Mrs. Carolyn Thompson request Town co-sponsorship for 1976 festival, November 10, 1975. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref9">Town of Appomattox, "Historic Appomattox Railroad Festival Report &mdash; July 12, 1976," Book 1, Plate 649, corpus 1950&ndash;1985. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref10">Town of Appomattox Council minutes, Book 1, Plate 1213, corpus 1950&ndash;1985. Council resolution commending the 10th Annual Historic Railroad Festival, October 11, 1982. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref11">"J. Robert Jamerson Honored with Distinguished Citizen Award," responses.db item, issued September 12, 1984. Via responses.db.</li>
+    <li id="ref12">Appomattox County Board of Supervisors minutes, Book 17, Plate 46, corpus 1992&ndash;1995. BOS donates $1,500 and waives entertainment permit fee for the Railroad Festival. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref13">Appomattox County Board of Supervisors minutes, Book 17, Plate 50, corpus 1992&ndash;1995. Mayor Spiggle requests county share expenses for Railroad Festival luncheon. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref14">"Swanberg named Male Citizen of The Year," <i>Times-Virginian</i>, October 6, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref15">"28th Annual Historic Railroad Festival Draws Record Crowd," responses.db item, issued October 20, 2000. Via responses.db.</li>
+    <li id="ref16">"30th Annual Historic Appomattox Railroad Festival declared huge success," responses.db item, issued October 17, 2002. Via responses.db.</li>
+    <li id="ref17">"35,000 attend Railroad Festival," <i>Times-Virginian</i>, October 15, 2003. Via times-virginian-2004-2024.db.</li>
+    <li id="ref18">"Railroad Festival declared a huge success," <i>Times-Virginian</i>, October 13, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref19">"Festival draws up to 45,000, committee head says," <i>Times-Virginian</i>, October 19, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref20">"Daniel Scott defeats death after motorcycle crash" (2007 Grand Marshal), <i>Times-Virginian</i>, October 16, 2007. Via times-virginian-2004-2024.db.</li>
+    <li id="ref21">"Festival draws 50,000," <i>Times-Virginian</i>, October 15, 2008. Via responses.db item summary.</li>
+    <li id="ref22">"Railroad Festival invites public to meeting on Saturday at Community Center," <i>Times-Virginian</i>, October 29, 2008. Via times-virginian-2004-2024.db.</li>
+    <li id="ref23">"Railroad Festival named Top 20 event," <i>Times-Virginian</i>, May 18, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref24">"Railroad Festival called 'best ever,'" <i>Times-Virginian</i>, October 13, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref25">"40th Annual Historic Railroad Festival takes place this weekend, Oct. 13-14," <i>Times-Virginian</i>, October 11, 2012. Via times-virginian-2004-2024.db.</li>
+    <li id="ref26">"ACHS Class of 1972 to have 40-year reunion coincide with Railroad Festival's 40-year anniversary," <i>Times-Virginian</i>, October 3, 2012. Via times-virginian-2004-2024.db.</li>
+    <li id="ref27">"Railroad Festival will remain two-day event, thanks to citizens group," <i>Times-Virginian</i>, April 16, 2014. Via times-virginian-2004-2024.db.</li>
+    <li id="ref28">"'Exile' headlines Festival music lineup," <i>Times-Virginian</i>, July 9, 2014. Via times-virginian-2004-2024.db.</li>
+    <li id="ref29">"Rain dampens festival, but doesn't slow it down too much," <i>Times-Virginian</i>, October 15, 2014. Via times-virginian-2004-2024.db.</li>
+    <li id="ref30">"Railroad Festival draws up to '25,000,'" <i>Times-Virginian</i>, October 14, 2015. Via times-virginian-2004-2024.db.</li>
+    <li id="ref31">"Railroad Fest in crisis, still will occur Oct. 12 and 13," <i>Times-Virginian</i>, October 3, 2019. Via times-virginian-2004-2024.db.</li>
+    <li id="ref32">"Railroad Fest successful," <i>Times-Virginian</i>, October 17, 2019. Via times-virginian-2004-2024.db.</li>
+    <li id="ref33">"Railroad Festival canceled, moves on to 2021 preparation," <i>Times-Virginian</i>, June 25, 2020. Via times-virginian-2004-2024.db.</li>
+    <li id="ref34">"Railroad Festival needs help: Many want it to continue in honor of Dr. Harvey," <i>Times-Virginian</i>, February 3, 2021. Via times-virginian-2004-2024.db.</li>
+    <li id="ref35">"Town's Railroad Festival committee gauges interest," <i>Times-Virginian</i>, February 18, 2021. Via times-virginian-2004-2024.db.</li>
+    <li id="ref36">"Railroad Festival dedicated to late Dr. Harvey," <i>Times-Virginian</i>, October 8, 2021. Via times-virginian-2004-2024.db.</li>
+    <li id="ref37">"Railroad Festival was huge hit," <i>Times-Virginian</i>, October 13, 2021. Via times-virginian-2004-2024.db.</li>
+    <li id="ref38">"Teddy Bear Parade makes 'cute' comeback to Railroad Festival," <i>Times-Virginian</i>, October 14, 2021. Via times-virginian-2004-2024.db.</li>
+    <li id="ref39">"Adams resigns as Appomattox Railroad Festival president," <i>Times-Virginian</i>, February 1, 2023. Via times-virginian-2004-2024.db.</li>
+    <li id="ref40">"Railroad Festival attracts big Sunday crowd after Saturday's rain," <i>Times-Virginian</i>, October 18, 2023. Via times-virginian-2004-2024.db.</li>
+    <li id="ref41">"Railroad Festival's Hatch Market promotes entrepreneurial spirit among students," <i>Times-Virginian</i>, October 19, 2023. Via times-virginian-2004-2024.db.</li>
+    <li id="ref42">"Appomattox wraps up successful Railroad Festival weekend," <i>Times-Virginian</i>, October 14, 2024. Via times-virginian-2004-2024.db.</li>
+    <li id="ref43">"Railroad Festival fireworks to move to Industrial Park," <i>Times-Virginian</i>, May 24, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref44">"Festival helps merchants' sales," <i>Times-Virginian</i>, October 14, 2009. Via times-virginian-2004-2024.db.</li>
+    <li id="ref45">"Local merchants receive positive results from festival," <i>Times-Virginian</i>, October 20, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref46">"Town's tourism revenue climbs in 2008," <i>Times-Virginian</i>, November 11, 2009. Via times-virginian-2004-2024.db.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

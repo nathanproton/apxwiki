@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVCC Appomattox Center — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>CVCC Appomattox Center</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<div class="infobox">
+  <div class="infobox-title">CVCC Appomattox Center</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Organization</td></tr>
+    <tr><td>Type</td><td>Public community college satellite campus</td></tr>
+    <tr><td>Established</td><td>June 8, 2007</td></tr>
+    <tr><td>Parent org</td><td>Central Virginia Community College (CVCC), Virginia Community College System (VCCS)</td></tr>
+    <tr><td>Jurisdiction</td><td>Town of Appomattox; serves Appomattox County</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Facility</td></tr>
+    <tr><td>Headquarters</td><td>Carver-Price Educational Complex, Business 460 West, Town of Appomattox</td></tr>
+    <tr><td>Phase I size</td><td>4,000 sq ft</td></tr>
+    <tr><td>Phone</td><td>434-832-7200</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key figures</td></tr>
+    <tr><td>Founding director</td><td>Walter Krug</td></tr>
+    <tr><td>Academic advisor</td><td>Betty Jo Smith</td></tr>
+    <tr><td>Career coach</td><td>Ghana Ramey</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Statistics (2017)</td></tr>
+    <tr><td>Enrollment</td><td>165 (spring 2017)</td></tr>
+    <tr><td>Graduates</td><td>60+ since opening (through 2017)</td></tr>
+    <tr><td>Courses</td><td>30 (up from 8 at opening)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Related articles</td></tr>
+    <tr><td>See also</td><td><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business &amp; Commerce</a></td></tr>
+  </table>
+</div>
+
+<p>The <b>CVCC Appomattox Center</b> is a satellite campus of <b>Central Virginia Community College</b> (CVCC) located at the Carver-Price Educational Complex on Business 460 West in the Town of Appomattox, Virginia. Opened on June 8, 2007, following more than four years of planning, renovation, and negotiation between the county and the college, the Center provides credit and non-credit instruction, workforce training, dual enrollment for high school students, and a range of student services to residents of Appomattox County without requiring travel to CVCC's main campus in Lynchburg. The satellite was established as part of a five-year regional strategy by CVCC to place a facility within fifteen minutes of every resident in its service area, joining similar centers in Bedford, Altavista, and Brookneal.<sup><a href="#ref1">[1]</a></sup></p>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#background">Background and origins</a></li>
+    <li><a href="#planning">Planning and negotiations (2003&ndash;2006)</a>
+      <ol>
+        <li><a href="#feasibility">Feasibility study and site selection</a></li>
+        <li><a href="#renovation">Renovation approvals and financing</a></li>
+        <li><a href="#lease">Lease agreement</a></li>
+      </ol>
+    </li>
+    <li><a href="#opening">Opening (2007)</a></li>
+    <li><a href="#mission">Mission and programs</a>
+      <ol>
+        <li><a href="#credit_courses">Credit and non-credit courses</a></li>
+        <li><a href="#dual_enrollment">Early College and dual enrollment</a></li>
+        <li><a href="#distance_learning">Distance learning</a></li>
+        <li><a href="#student_services">Student services</a></li>
+      </ol>
+    </li>
+    <li><a href="#growth">Growth and milestones (2007&ndash;2020)</a></li>
+    <li><a href="#community_role">Community role</a>
+      <ol>
+        <li><a href="#government_meetings">Government meetings</a></li>
+        <li><a href="#community_events">Community events and arts</a></li>
+      </ol>
+    </li>
+    <li><a href="#cte_academy">CTE Academy and later developments (2020&ndash;present)</a></li>
+    <li><a href="#governance">Governance and county oversight</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<h2 id="background">Background and origins</h2>
+
+<p>The Carver-Price Educational Complex — the building that would eventually house the CVCC Appomattox Center — was originally constructed as a school for the African-American community during the era of racial segregation. It later became an integrated intermediate school and was eventually operated as the Appomattox Elementary School. The school was vacated in October 2002 when the elementary school consolidated to a new facility, leaving the county with a large building and a question about its future use.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>In 2003, Central Virginia Community College expressed interest in establishing a satellite campus in Appomattox County, identifying the vacant elementary school building on Confederate Boulevard as a potential site. A feasibility study was commissioned to assess whether the county was a viable location for such a campus. The study concluded that Appomattox was indeed a suitable candidate, with its findings scheduled for presentation to the Board of Supervisors in December 2003.<sup><a href="#ref3">[3]</a></sup> The county's interest in hosting a satellite campus was driven by recognition that many residents faced significant barriers to higher education due to the distance to CVCC's main Lynchburg campus &mdash; a roughly forty-mile commute that was particularly burdensome for working adults and young parents.</p>
+
+<p>A joint committee of the Appomattox County School Board and the Board of Supervisors unanimously endorsed the satellite campus concept in late 2003, finding it worthwhile for county residents. The committee was also charged with determining the best potential uses for the old elementary school, which could include not only a CVCC satellite campus but also a Carver-Price Legacy Museum, a Workforce Development Center, Virginia Employment Commission offices, and other community services.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h2 id="planning">Planning and negotiations (2003&ndash;2006)</h2>
+
+<h3 id="feasibility">Feasibility study and site selection</h3>
+
+<p>Preliminary renovation estimates released in December 2003 painted a challenging financial picture. Plans to convert the former third-grade wing of the old elementary school &mdash; approximately 5,700 square feet of usable space, more than sufficient for CVCC's stated minimum requirement &mdash; were estimated to cost roughly $932,000 for basic work, not including the auditorium. Individual line items included $155,000 for electrical capacity upgrades, $82,000 for paint, floor, and ceiling work, $80,000 for rough carpentry, $75,000 for new windows, $25,000 for asbestos removal, and an additional $234,000 for auditorium renovation, bringing the total potential cost to approximately $1.16 million. CVCC's requirements also stipulated that the county cover operating costs for at least three consecutive years before the college would commit to locating a satellite campus there.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>The timeline posed its own difficulties. CVCC had initially hoped to open a campus as early as Fall 2004, but county officials acknowledged this was unrealistic given the renovation scope. A Spring 2005 start date was considered more feasible.<sup><a href="#ref6">[6]</a></sup> In January 2004, the Board of Supervisors agreed to request grant-writing services from the Region 2000 Regional Commission to help secure renovation funding, with the goal of avoiding burdening local taxpayers.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>In August 2004, the Board of Supervisors formally voted to rename the old elementary school the <b>"Carver-Price Educational Complex,"</b> in recognition of the building's historic identity as a school built by and for the African-American community of Appomattox County.<sup><a href="#ref8">[8]</a></sup> The renamed complex was envisioned as a multi-use community hub that would accommodate several services simultaneously. By early 2005, the proposed tenants included CVCC, a Workforce Development Center, a Visitors Center, and the Carver-Price Legacy Museum.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>Progress stalled through much of 2004 and 2005 as grant applications were submitted and the planning vision for the building broadened. By September 2005, CVCC confirmed that funding had been identified and that cost estimates for the renovation were being sought, with a revised target of Fall 2006 for opening.<sup><a href="#ref10">[10]</a></sup> The Board of Supervisors unanimously approved a motion allowing the County Administrator to permit CVCC to secure funding for the satellite campus, provided the renovation estimates were deemed reasonable.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>In November 2005, CVCC formally announced its intention to establish a satellite campus at the Carver-Price Educational Complex, with a revised target opening date of January 2007. Plans called for renovating approximately 4,000 square feet for instructional and administrative space in Phase I.<sup><a href="#ref12">[12]</a></sup> A community survey was also planned to identify which courses would be in greatest demand among area businesses and residents.<sup><a href="#ref13">[13]</a></sup></p>
+
+<h3 id="renovation">Renovation approvals and financing</h3>
+
+<p>In December 2005, the Board of Supervisors unanimously approved a $302,750 renovation contract for the Carver-Price Educational Complex to house the CVCC satellite campus.<sup><a href="#ref14">[14]</a></sup> The construction contract was awarded to <b>J.E. Jamerson &amp; Sons, Inc.</b> of Appomattox for $269,400.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>In January 2006, representatives from the Region 2000 Regional Commission met with county officials to plan development of the Carver-Price Complex using a $25,000 grant from the Virginia Department of Housing and Community Development.<sup><a href="#ref16">[16]</a></sup> By March 2006, a fuller vision for the building had been articulated: the renovated complex would accommodate CVCC classes, the Virginia Employment Commission, a Region 2000 Career Center, a small business development center, Appomattox County School Administration offices, an adult GED program, an alternative education program, a gymnasium, a Head Start program, a Chamber of Commerce and Visitor Center, and the Carver-Price Museum.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>In August 2006, the Board of Supervisors approved a total of $442,416 in renovations for the Carver-Price Educational Complex &mdash; covering both the CVCC satellite campus buildout and upgrades to the Carver-Price Legacy Museum space.<sup><a href="#ref18">[18]</a></sup> Separately, the Board submitted a $250,000 grant application to the Virginia Tobacco Indemnification and Community Revitalization Commission to support the satellite campus project.<sup><a href="#ref19">[19]</a></sup> By November 2006, Phases 1 and 2 of the satellite campus were financed through a $768,000 county loan.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h3 id="lease">Lease agreement</h3>
+
+<p>In March 2007, the Board of Supervisors approved a ten-year lease agreement with CVCC for the satellite campus space within the Carver-Price Educational Complex. Under the terms of the agreement, CVCC would pay the county $3,442.50 per month in rent.<sup><a href="#ref21">[21]</a></sup> Renovations were already underway by that point, with completion targeted in time for a summer 2007 opening. The county also approved the east end of the Carver-Price building for the Carver-Price Legacy Museum, with the Workforce Development Center remaining a longer-range aspiration.<sup><a href="#ref22">[22]</a></sup></p>
+
+<h2 id="opening">Opening (2007)</h2>
+
+<p>A ribbon-cutting ceremony was held on Friday, June 8, 2007, at the Carver-Price Educational Complex on Business 460 West in the Town of Appomattox. Approximately 50 people attended the event.<sup><a href="#ref23">[23]</a></sup> Speakers included CVCC President Darrel Staat, Interim Vice President Stan Shoun, Virginia State Senator Frank Ruff, and Appomattox County Board of Supervisors Chairman <a href="Samuel_E_Carter.html">Sammy Carter</a>.</p>
+
+<p>CVCC President Staat framed the center's dual mission: "We want to make this college accessible to everyone. The second purpose of this Center is to bring the college closer to the business community."<sup><a href="#ref24">[24]</a></sup> Senator Ruff highlighted the economic development angle, noting that satellite training programs could attract and retain businesses in rural Virginia.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>Chairman Carter described the occasion as "a Christmas gift to Appomattox County," and reflected on the five-year journey: "Now, five years later we can all stand here and celebrate this accomplishment. As we all know, progress sometimes is slow but it certainly has a positive impact in the end."<sup><a href="#ref26">[26]</a></sup> Carter noted that the building's heritage &mdash; originally constructed for the African-American community &mdash; made it a fitting location for a facility serving all county residents.</p>
+
+<p>The newly appointed Center Director, <b>Walter Krug</b> &mdash; who was simultaneously retiring as Appomattox County School Division Superintendent &mdash; called the assignment "the opportunity to be on the ground floor of this exciting initiative."<sup><a href="#ref27">[27]</a></sup> Summer classes began on June 25, 2007, offering introductory computer courses in Windows, spreadsheets, and computer literacy. Enrollment for the fall semester was already filling rapidly by July, with some courses nearly at capacity.<sup><a href="#ref28">[28]</a></sup></p>
+
+<h2 id="mission">Mission and programs</h2>
+
+<h3 id="credit_courses">Credit and non-credit courses</h3>
+
+<p>The CVCC Appomattox Center opened offering eight classes in its first semester, a figure that grew substantially over subsequent years. By fall 2012, the center was offering twenty-nine traditional seated classes, along with distance learning and dual enrollment sections.<sup><a href="#ref29">[29]</a></sup> By 2017, the total number of course sections had grown to thirty, including subjects such as College Composition, U.S. History, Psychology, Biology, Environmental Science, Sociology, Philosophy, Mathematics, and World Religion &mdash; all in the liberal arts and general studies curriculum that transfers to most four-year institutions.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>The center also offered a wide range of non-credit and continuing education classes aimed at working adults and community members. Course offerings over the years included Basic Computers, Intermediate Computers, Cake Decorating, Grooming and Stable Management, Boater Safety, GIS training, and consumer wine education programs. The center hosted community workshops in partnership with the Virginia Tourism Corporation, the Region 2000 Small Business Development Center, and the Appomattox Chamber of Commerce.<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>Senior citizens aged 60 and older meeting Virginia residency requirements were permitted to audit credit classes at no charge on a space-available basis &mdash; a policy that drew a steady stream of lifelong learners to the center, with courses such as American Government, Civil War history, and Introduction to Mathematics frequently mentioned in letters to the editor praising the center's offerings.<sup><a href="#ref32">[32]</a></sup></p>
+
+<h3 id="dual_enrollment">Early College and dual enrollment</h3>
+
+<p>The Early College program &mdash; a dual enrollment arrangement allowing Appomattox County High School juniors and seniors to earn college credits at the CVCC Appomattox Center &mdash; was launched in Fall 2007, just months after the center's opening. Under the program, students could ultimately accumulate two full years of college credits by graduation, entering a four-year university with junior standing.<sup><a href="#ref33">[33]</a></sup> Initial courses offered through the program included Western Civilization, Psychology, Spanish 201, and Nuclear Science II.<sup><a href="#ref34">[34]</a></sup></p>
+
+<p>The Class of 2008 was the first graduating class to participate in the Early College program.<sup><a href="#ref35">[35]</a></sup> The program operated as a cohort: two groups of juniors and seniors attended classes at the Carver-Price complex, with transportation provided from ACHS. The school division covered approximately 28 percent of tuition costs for students whose CVCC coursework fulfilled high school graduation requirements; the Spout Spring Ruritan Club provided additional tuition assistance, contributing more than $15,000 jointly with the CVCC Educational Foundation in the 2011&ndash;12 academic year alone.<sup><a href="#ref36">[36]</a></sup></p>
+
+<p>By May 2012, thirty-five center students received Associate in Arts degrees, including seventeen from the Early College cohort.<sup><a href="#ref37">[37]</a></sup> By fall 2012, thirty-nine high school students were enrolled across two cohorts.<sup><a href="#ref38">[38]</a></sup> By 2014, fifty-eight students were enrolled in the dual enrollment program, and seniors from the prior year had collectively transferred more than 1,400 credits to four-year colleges.<sup><a href="#ref39">[39]</a></sup> Students such as Sarah Jones (Class of 2012) transferred to Lynchburg College as juniors after completing the dual enrollment program, citing substantial tuition savings.<sup><a href="#ref40">[40]</a></sup></p>
+
+<p>The program also benefited from the work of a dedicated career coach at ACHS, a position created in 2005 through a partnership between CVCC and Appomattox County Public Schools. <b>Betty Jo Smith</b> served in the career coach role through the early years of the center's operation before transitioning to serve as academic counselor at the satellite campus itself; she was succeeded as career coach by <b>Ghana Ramey</b>, who also served as the dual enrollment coordinator, meeting weekly with enrolled students and arranging job shadowing opportunities at local businesses.<sup><a href="#ref41">[41]</a></sup></p>
+
+<h3 id="distance_learning">Distance learning</h3>
+
+<p>From the outset, 30 percent of instruction at the Appomattox Center was delivered through distance education. The center initially used compressed video &mdash; a live, two-way televised format that connected students in Appomattox with instructors at the main CVCC campus in Lynchburg.<sup><a href="#ref42">[42]</a></sup> In fall 2012, the center transitioned to Blackboard Collaborate, an internet-based platform that used individual computers, headsets, and microphones, improving audio and video quality.<sup><a href="#ref43">[43]</a></sup> By fall 2017, the center upgraded again to a new interactive platform with full-color monitors that allowed more fluid real-time interaction between students and off-site instructors.<sup><a href="#ref44">[44]</a></sup></p>
+
+<h3 id="student_services">Student services</h3>
+
+<p>As a full-service satellite campus rather than merely a classroom facility, the CVCC Appomattox Center provided on-site assistance with college applications, enrollment, registration, academic advising, financial aid applications, and placement testing in English and mathematics. Students did not need to travel to the Lynchburg main campus for these services. Academic advising was provided by Betty Jo Smith, available by appointment three days a week. The center's computer lab was also open to the public during specified hours for general use, printing, and test-taking.<sup><a href="#ref45">[45]</a></sup></p>
+
+<h2 id="growth">Growth and milestones (2007&ndash;2020)</h2>
+
+<p>In its first full semester of operation, fall 2007, the center enrolled 115 students. By 2010, one hundred students from Appomattox County High School alone were participating in some form of dual enrollment with CVCC, and by fall 2011 total enrollment had reached 169.<sup><a href="#ref46">[46]</a></sup> When the center entered its sixth year in fall 2012, approximately 100 students were enrolled in general studies courses; that same year, thirty-five residents earned associate degrees or certificates at the center.<sup><a href="#ref47">[47]</a></sup></p>
+
+<p>In October 2017, the center marked its tenth anniversary with enrollment at 165 students (spring 2017 semester), representing a roughly 50 percent increase over the 115 students enrolled in fall 2007. By that point, more than 60 students had earned associate degrees, career studies certificates, or completed certificate programs since the center's 2007 opening. Course offerings had grown from 8 to 30 classes.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>In December 2014, Governor Terry McAuliffe proposed a seven percent budget reduction for Virginia's community colleges that raised the prospect of satellite campus closures statewide. The Appomattox Center was spared from the cuts; interim director Betty Jo Smith confirmed the center's continued operation.<sup><a href="#ref49">[49]</a></sup> The reprieve was significant to county officials and the local business community, particularly given that the center was increasingly cited as an economic development asset by CVCC and by the Appomattox County Economic Development Authority when hosting site-selector visits.<sup><a href="#ref50">[50]</a></sup></p>
+
+<p>In March 2020, the Virginia Community College System canceled commencement exercises for all twenty-three community colleges, including CVCC with its Appomattox campus, due to the COVID-19 pandemic.<sup><a href="#ref51">[51]</a></sup> CVCC subsequently established open Wi-Fi zones in campus parking lots, including the Appomattox Center, to assist students who lacked reliable home internet connectivity.<sup><a href="#ref52">[52]</a></sup></p>
+
+<h2 id="community_role">Community role</h2>
+
+<h3 id="government_meetings">Government meetings</h3>
+
+<p>Beyond its core educational mission, the CVCC Appomattox Center became a significant civic gathering place for the county. In January 2010, the Board of Supervisors approved its 2010 meeting schedule with a provision to relocate regular meetings to the CVCC Satellite Center beginning March 1, 2010.<sup><a href="#ref53">[53]</a></sup> The first meeting was held in the new location on March 1, 2010, with County Administrator <a href="Aileen_Ferguson.html">Aileen Ferguson</a> noting that several citizen-friendly amenities &mdash; signage, a striped parking lot, a video screen, and a wall clock &mdash; were still to be added.<sup><a href="#ref54">[54]</a></sup> The Board of Supervisors meeting room at the CVCC Satellite Campus became the permanent venue for county government meetings thereafter.</p>
+
+<p>The Appomattox County School Board also regularly held its monthly business meetings and public comment sessions in the Board of Supervisors meeting room at the CVCC Satellite Campus. Election officials relocated the Courthouse Precinct voting location to the CVCC Satellite Campus in March 2014.<sup><a href="#ref55">[55]</a></sup></p>
+
+<p>In 2009, the Town of Appomattox used the satellite center as the venue for a series of community visioning meetings. Weekly sessions were held at the CVCC center on Wednesday evenings from November through December 2009, drawing citizen input that was compiled into a 15-year vision plan for the town.<sup><a href="#ref56">[56]</a></sup></p>
+
+<h3 id="community_events">Community events and arts</h3>
+
+<p>The CVCC Appomattox Center hosted a wide range of community programming beyond its academic schedule. In July 2007, shortly after opening, the center provided GIS training to approximately 30 town and county department representatives, with instruction by John McGee of Virginia Tech.<sup><a href="#ref57">[57]</a></sup> The Region 2000 Small Business Development Center held its "Start Smart" business seminar there in August 2007.<sup><a href="#ref58">[58]</a></sup></p>
+
+<p>Beginning in the 2017&ndash;18 academic year, the center established a monthly rotating art exhibit program, with <b>Sue Cochrane</b> of CVCC coordinating the selection of local artists to display their work in the lobby. Artists exhibiting at the center over subsequent years included watercolorist June Taylor, abstract artist Magda Liska, and local high school and homeschool students.<sup><a href="#ref59">[59]</a></sup> The Appomattox County Historical Society used the center as a venue for free public presentations, and community organizations such as the Appomattox Lions Club held health screening events there.<sup><a href="#ref60">[60]</a></sup></p>
+
+<h2 id="cte_academy">CTE Academy and later developments (2020&ndash;present)</h2>
+
+<p>In December 2020, CVCC received a $400,000 grant from the GO Virginia Board to establish a Regional Career and Technical Education (CTE) Academy. The academy was designed to serve students and workers across the region, including Appomattox, Amherst, Bedford, and Campbell counties as well as the City of Lynchburg, addressing documented gaps in workforce training.<sup><a href="#ref61">[61]</a></sup> A subsequent GO Virginia grant of $266,000 followed in early 2021 to further support the CTE talent pipeline initiative.<sup><a href="#ref62">[62]</a></sup></p>
+
+<p>In 2023, the Appomattox Christian Academy (ACA) partnered with CVCC to open a Career and Technical Education Institute at the Carver-Price Educational Complex. The ACA CTE Institute offered vocational training in fields including welding and health services, with dual-enrollment options through CVCC. U.S. Congressman Bob Good visited Appomattox in February 2023 to tour the facility under renovation and meet with program organizers; the institute opened around the last week of August 2023.<sup><a href="#ref63">[63]</a></sup></p>
+
+<p>Also in 2023, CVCC launched a "Lab School" initiative in partnership with superintendents from five school divisions &mdash; Amherst, Appomattox, Bedford, Campbell, and the City of Lynchburg &mdash; to establish seamless CTE pathways from middle school through community college and into careers.<sup><a href="#ref64">[64]</a></sup> In October 2023, CVCC successfully completed an on-site accreditation review by the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC), with the review team visiting the Appomattox Center along with other CVCC facilities and finding the college compliant with all applicable standards.<sup><a href="#ref65">[65]</a></sup></p>
+
+<h2 id="governance">Governance and county oversight</h2>
+
+<p>As a satellite of CVCC, the Appomattox Center operates under the authority of the Virginia Community College System (VCCS). CVCC's local board, appointed jointly by the governing bodies of the localities in CVCC's service region, provides oversight of the college's operations including the satellite centers. Appomattox County appoints one member to the CVCC Local Board; appointees have included Richard Carter (who served for multiple terms before his death in 2014), Carolyn Bergdoll (appointed to succeed Carter in 2014), and others over the center's history.<sup><a href="#ref66">[66]</a></sup></p>
+
+<p>The lease arrangement between Appomattox County and CVCC, approved in March 2007, gave the county a financial stake in the center's continued operation while placing academic and administrative control with the college. The ten-year lease at $3,442.50 per month required the county to maintain the facility, while CVCC provided instruction, staff, and programming.<sup><a href="#ref67">[67]</a></sup> County government involvement in promoting the center was ongoing; the Board of Supervisors invited CVCC president John Capps to host a town hall at the Appomattox Center in October 2012 to discuss community needs and potential program expansions.<sup><a href="#ref68">[68]</a></sup></p>
+
+<h2 id="leadership">Leadership</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Period</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Walter Krug</td>
+    <td>Center Director</td>
+    <td>2007&ndash;c.&nbsp;2014+</td>
+    <td>Former Appomattox County Schools Superintendent; resigned superintendency June 30, 2007 to accept director role; served at least through 2017</td>
+  </tr>
+  <tr>
+    <td>Betty Jo Smith</td>
+    <td>Career Coach / Academic Advisor / Interim Director</td>
+    <td>c.&nbsp;2007&ndash;c.&nbsp;2014</td>
+    <td>CVCC career coach for ACHS from c. 2005; became academic advisor at satellite campus; served as interim director in 2014 during budget-cut period</td>
+  </tr>
+  <tr>
+    <td>Ghana Ramey</td>
+    <td>Career Coach / Dual Enrollment Coordinator</td>
+    <td>c.&nbsp;2012+</td>
+    <td>Replaced Betty Jo Smith in career coach role; also served as dual enrollment coordinator for ACHS students</td>
+  </tr>
+</table>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>Jan. 2003</td><td>CVCC expresses interest in satellite campus at old Appomattox Elementary School; feasibility study commissioned</td></tr>
+  <tr><td>Dec. 2003</td><td>Feasibility study finds Appomattox viable; joint school board/BOS committee endorses concept; renovation estimated at up to $1.16 million</td></tr>
+  <tr><td>Jan. 2004</td><td>BOS seeks grant-writing assistance from Region 2000 Regional Commission</td></tr>
+  <tr><td>Aug. 2004</td><td>Building renamed "Carver-Price Educational Complex"</td></tr>
+  <tr><td>Sept. 2005</td><td>BOS unanimously authorizes CVCC to secure funding; Fall 2006 opening targeted</td></tr>
+  <tr><td>Nov. 2005</td><td>CVCC formally announces satellite campus plan; January 2007 opening target set</td></tr>
+  <tr><td>Dec. 2005</td><td>BOS approves $302,750 renovation; J.E. Jamerson &amp; Sons awarded $269,400 contract</td></tr>
+  <tr><td>Jan. 2006</td><td>Region 2000 Commission engages using $25,000 DHCD grant; broader complex vision outlined</td></tr>
+  <tr><td>Aug. 2006</td><td>BOS approves total $442,416 in renovations; $250,000 Tobacco Commission grant application submitted</td></tr>
+  <tr><td>Nov. 2006</td><td>Phases 1 and 2 financed through $768,000 county loan</td></tr>
+  <tr><td>Mar. 2007</td><td>BOS approves 10-year lease; CVCC pays $3,442.50/month</td></tr>
+  <tr><td>June 8, 2007</td><td>Ribbon-cutting ceremony; ~50 attend; speakers include CVCC President Staat, State Senator Ruff, Chairman Carter</td></tr>
+  <tr><td>June 25, 2007</td><td>First classes begin (Windows, Excel, computer literacy)</td></tr>
+  <tr><td>Fall 2007</td><td>Early College/dual enrollment program launched for ACHS juniors and seniors; 115 students enrolled</td></tr>
+  <tr><td>2008</td><td>ACHS Class of 2008 first graduating class to participate in Early College program; BOS contributes $21,000 toward CVCC Culinary Arts Building</td></tr>
+  <tr><td>Mar. 1, 2010</td><td>BOS relocates permanent monthly meetings to CVCC Satellite Center</td></tr>
+  <tr><td>May 2012</td><td>35 students earn degrees/certificates; 17 from Early College cohort</td></tr>
+  <tr><td>Fall 2012</td><td>Sixth year of operations; ~100 enrolled; 29 traditional seated classes; Blackboard Collaborate replaces compressed video</td></tr>
+  <tr><td>Mar. 2014</td><td>Courthouse Precinct voting relocated to CVCC Satellite Campus</td></tr>
+  <tr><td>Dec. 2014</td><td>Governor's proposed 7% community college budget cuts; Appomattox Center spared</td></tr>
+  <tr><td>Oct. 2017</td><td>10th anniversary; 165 enrolled; 60+ total graduates; 30 courses; new distance learning platform introduced</td></tr>
+  <tr><td>Mar. 2020</td><td>COVID-19 cancels commencement; CVCC establishes open Wi-Fi in Appomattox Center parking lot</td></tr>
+  <tr><td>Dec. 2020</td><td>$400,000 GO Virginia grant for Regional CTE Academy covering five localities</td></tr>
+  <tr><td>Jan. 2021</td><td>$266,000 additional GO Virginia grant for CTE talent pipeline</td></tr>
+  <tr><td>Aug. 2023</td><td>ACA CTE Institute opens at Carver-Price complex in partnership with CVCC</td></tr>
+  <tr><td>Oct. 2023</td><td>SACSCOC accreditation review includes Appomattox Center; college found fully compliant</td></tr>
+</table>
+
+<h2 id="see_also">See also</h2>
+
+<ul>
+  <li><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a></li>
+  <li><a href="Appomattox_County_School_Board_History.html">Appomattox County School Board History</a></li>
+  <li><a href="Appomattox_County_High_School.html">Appomattox County High School</a></li>
+  <li><a href="Carver_Price_Legacy_Museum.html">Carver-Price Legacy Museum</a></li>
+  <li><a href="Samuel_E_Carter.html">Samuel E. "Sammy" Carter</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"CVCC set to open satellite campus Friday," <i>Times-Virginian</i>, June 5, 2007; "CVCC Satellite Center Plan Five Years in Development," via responses.db.</li>
+    <li id="ref2">"CVCC satellite center opens doors in Appomattox," <i>Times-Virginian</i>, June 12, 2007 (Carter's remarks referencing the building's history); "Adult Education classes to relocate after 20 years," responses.db, Apr. 8, 2009.</li>
+    <li id="ref3">"CVCC proposes satellite campus in Appomattox," responses.db, Jan. 2003; "Feasibility Study for CVCC Satellite Campus in Appomattox Released," responses.db, Dec. 2003.</li>
+    <li id="ref4">"Appomattox satellite campus feasibility endorsed by joint committee," responses.db, Dec. 2003; "Committee Forms to Determine Feasible Uses for Old Elementary School," responses.db, Dec. 23, 2003.</li>
+    <li id="ref5">"Central Virginia Community College satellite campus renovation cost estimated at $932,000," responses.db, Dec. 2003; "Auditorium renovation for CVCC campus estimated at $234,000," responses.db, Dec. 2003; "CVCC requires three years of operating costs for satellite campus," responses.db, Dec. 2003.</li>
+    <li id="ref6">"CVCC proposes Fall 2004 start for satellite campus," responses.db, Dec. 2003; "Spring 2005 semester considered more feasible start date for CVCC campus," responses.db, Dec. 2003.</li>
+    <li id="ref7">"Appomattox Board Seeks Grants for CVCC Satellite Campus," responses.db, Jan. 7, 2004.</li>
+    <li id="ref8">"Old Carver-Price School to be renamed 'Carver-Price Educational Complex,'" responses.db, Aug. 25, 2004; "Old elementary school renamed Carver-Price Educational Complex," responses.db, Nov. 11, 2004.</li>
+    <li id="ref9">"Proposed projects for Carver-Price Educational Complex include CVCC campus and Visitors Center," responses.db, Jan. 5, 2005.</li>
+    <li id="ref10">"CVCC Satellite Campus Planned for Fall 2006," responses.db, Sept. 21, 2005.</li>
+    <li id="ref11">"Appomattox County Approves Go-Ahead for CVCC Funding," responses.db, Sept. 21, 2005.</li>
+    <li id="ref12">"CVCC Plans January 2007 Opening for Appomattox Satellite Campus," responses.db, Nov. 16, 2005.</li>
+    <li id="ref13">"CVCC to Survey Appomattox Residents for Course Demand," responses.db, Nov. 16, 2005.</li>
+    <li id="ref14">"CVCC renovation approved for Appomattox satellite campus," responses.db, Dec. 21, 2005; "Appomattox Supervisors Approve School Renovation for CVCC Campus," responses.db, Dec. 21, 2005.</li>
+    <li id="ref15">"CVCC satellite campus renovation contract awarded to J.E. Jamerson &amp; Sons, Inc.," responses.db, Mar. 14, 2007; "J.E. Jamerson &amp; Sons awarded contract for CVCC campus renovations," responses.db, Aug. 2, 2006.</li>
+    <li id="ref16">"Region 2000 Commission to develop Carver Price Complex," responses.db, Jan. 5, 2006.</li>
+    <li id="ref17">"Carver-Price Facility to House Multiple Community Services," responses.db, Mar. 8, 2006.</li>
+    <li id="ref18">"Appomattox County approves renovations for CVCC satellite campus," responses.db, Aug. 2, 2006; "Appomattox County approves $442,416 in renovations for Carver-Price Complex," responses.db, Aug. 2, 2006.</li>
+    <li id="ref19">"Appomattox County Board approves grant application for satellite campus," responses.db, Aug. 30, 2006.</li>
+    <li id="ref20">"Central Virginia Community College Satellite Campus phases 1 and 2 funded," responses.db, Nov. 30, 2006.</li>
+    <li id="ref21">"Appomattox County Board approves 10-year lease for CVCC satellite campus," responses.db, Mar. 14, 2007.</li>
+    <li id="ref22">"Carver-Price Legacy Museum and Workforce Development Center planned for building," responses.db, Mar. 14, 2007.</li>
+    <li id="ref23">"CVCC Appomattox Center Ribbon Cutting Ceremony Held," responses.db, June 12, 2007; "CVCC satellite center opens doors in Appomattox," <i>Times-Virginian</i>, June 12, 2007.</li>
+    <li id="ref24">"CVCC satellite center opens doors in Appomattox," <i>Times-Virginian</i>, June 12, 2007 (Staat quote).</li>
+    <li id="ref25">Ibid. (Ruff quote).</li>
+    <li id="ref26">Ibid. (Carter quotes).</li>
+    <li id="ref27">"CVCC set to open satellite campus Friday," <i>Times-Virginian</i>, June 5, 2007 (Krug quote); "Superintendent Walter Krug Resigns to Accept New Position," responses.db, June 20, 2007.</li>
+    <li id="ref28">"CVCC Appomattox Center to Begin Classes June 25," responses.db, June 12, 2007; "CVCC Appomattox Satellite Center enrollment filling," responses.db, July 24, 2007.</li>
+    <li id="ref29">"CVCC Appomattox to Offer 29 Traditional Classes for Fall 2012," responses.db, Apr. 4, 2012.</li>
+    <li id="ref30">"CVCC Appomattox Branch Expanded Course Offerings," responses.db, Oct. 4, 2017.</li>
+    <li id="ref31">"CVCC Appomattox Center and Virginia Tourism Corporation to Host Marketing Workshops," responses.db, Sept. 11, 2012; "Region 2000 SBDC to Offer 'Start Smart' Business Seminar," responses.db, Aug. 8, 2007; "Consumer Wine Education Program," responses.db, Nov. 2, 2016.</li>
+    <li id="ref32">"CVCC Appomattox Satellite Campus Recommended," responses.db, May 13, 2009; "CVCC Appomattox Satellite Campus Offers Numerous Classes," responses.db, May 12, 2010; "CVCC Senior Citizens Eligible for Auditing Classes," responses.db, June 6, 2012.</li>
+    <li id="ref33">"CVCC Appomattox to Offer Early College Program," responses.db, June 5, 2007; "Appomattox County High School to offer early college program," responses.db, May 9, 2007.</li>
+    <li id="ref34">"ACHS Students to Enroll in Specific CVCC Courses," responses.db, June 5, 2007.</li>
+    <li id="ref35">"ACHS Class of 2008 First to Participate in Early College Program," responses.db, June 11, 2008.</li>
+    <li id="ref36">"Spout Spring Ruritans provide tuition assistance to CVCC Appomattox Center students," responses.db, Sept. 5, 2012; "CVCC Educational Foundation and Spout Spring Ruritans provided $15,000+ in tuition aid," responses.db, Sept. 5, 2012; "Appomattox County School Division Supports Student Tuition," responses.db, Dec. 17, 2014.</li>
+    <li id="ref37">"CVCC Appomattox Center Graduates Recognized," responses.db, May 16, 2012.</li>
+    <li id="ref38">"Thirty-nine students enrolled in CVCC Appomattox Center dual enrollment cohorts," responses.db, Sept. 5, 2012.</li>
+    <li id="ref39">"CVCC Early College Program Success," responses.db, Dec. 17, 2014.</li>
+    <li id="ref40">"CVCC celebrates five years of success at satellite campus," <i>Times-Virginian</i>, Oct. 4, 2017 (Jones quote).</li>
+    <li id="ref41">"CVCC Career Coach Program Established," responses.db, June 27, 2012; "New career coach hired at ACHS," <i>Times-Virginian</i>, Oct. 4, 2017.</li>
+    <li id="ref42">"CVCC Appomattox Center to Utilize Interactive and Compressed Video," responses.db, June 5, 2007.</li>
+    <li id="ref43">"CVCC Appomattox Center to implement new distance education technology," responses.db, July 18, 2012.</li>
+    <li id="ref44">"CVCC Appomattox Branch Introduced New Distance Learning Platform," responses.db, Oct. 4, 2017.</li>
+    <li id="ref45">"CVCC Appomattox Center Services Detailed," responses.db, Jan. 4, 2012; "CVCC Academic Counseling Services Available," responses.db, June 27, 2012; "CVCC Appomattox Center Computer Lab Availability," responses.db, Feb. 8, 2012.</li>
+    <li id="ref46">"100 ACHS Students Pursuing College Courses at CVCC," responses.db, May 12, 2010; "CVCC celebrates five years of success at satellite campus," <i>Times-Virginian</i>, Oct. 4, 2017.</li>
+    <li id="ref47">"CVCC Appomattox Center Fall Semester Begins," responses.db, Aug. 22, 2012; "CVCC Appomattox Center Graduates 35 in 2012," responses.db, Aug. 22, 2012.</li>
+    <li id="ref48">"CVCC Appomattox Branch Enrollment Increased 50 Percent," responses.db, Oct. 4, 2017; "CVCC Appomattox Branch Expanded Course Offerings," responses.db, Oct. 4, 2017; "CVCC Appomattox Branch Graduates Earned Degrees/Certificates," responses.db, Oct. 4, 2017.</li>
+    <li id="ref49">"CVCC Appomattox satellite campus spared from budget cuts," responses.db, Dec. 17, 2014.</li>
+    <li id="ref50">"VEDP visited Appomattox multiple times in 2007," responses.db, Jan. 22, 2008; "CVCC Invites New Businesses for Training," responses.db, Dec. 17, 2014.</li>
+    <li id="ref51">"Virginia Community Colleges Cancel Commencement Exercises," responses.db, Mar. 19, 2020.</li>
+    <li id="ref52">"CVCC offers free Wi-Fi zones for students," responses.db, Dec. 29, 2020.</li>
+    <li id="ref53">"Appomattox County Board of Supervisors sets 2010 meeting schedule," responses.db, Jan. 13, 2010.</li>
+    <li id="ref54">"Appomattox County Board of Supervisors moves to new meeting room," responses.db, Mar. 1, 2010.</li>
+    <li id="ref55">"Courthouse Precinct Relocated to CVCC Satellite Campus," responses.db, Mar. 12, 2014; "Appomattox School Board meeting on Nov 10 at CVCC," responses.db, Jan. 20, 2016.</li>
+    <li id="ref56">"Visioning Process Meetings to Begin," responses.db, Nov. 11, 2009; "Citizen Vision Plan Created Based on Community Input in 2009," responses.db, May 25, 2011.</li>
+    <li id="ref57">"CVCC Appomattox Center provided GIS training," responses.db, July 24, 2007.</li>
+    <li id="ref58">"Region 2000 SBDC to Offer 'Start Smart' Business Seminar," responses.db, Aug. 8, 2007.</li>
+    <li id="ref59">"CVCC Appomattox Center hosts monthly local artist exhibits," responses.db, Nov. 28, 2018; "Margaret Whorley's Art Displayed at CVCC Appomattox Center," responses.db, Dec. 1, 2017; "CVCC Appomattox Center seeks artists for monthly exhibits," responses.db, Feb. 21, 2019.</li>
+    <li id="ref60">"Free Health Screening Offered in Appomattox," responses.db, Sept. 30, 2009; "Golf Course History Talk Hosted by Appomattox County Historical Society," responses.db, Feb. 13, 2018.</li>
+    <li id="ref61">"CVCC Awarded $400,000 GO Virginia Grant for Regional CTE Academy," responses.db, Dec. 16, 2020.</li>
+    <li id="ref62">"CVCC CTE Academy receives $266,000 GO Virginia grant," responses.db, Jan. 1, 2021.</li>
+    <li id="ref63">"Congressman Good tours future vocational school site at Carver-Price Center," responses.db, Feb. 22, 2023; "ACA's CTE Institute to open late August," responses.db, July 26, 2023.</li>
+    <li id="ref64">"CVCC Lab School Partners with Five School Divisions," responses.db, Apr. 20, 2023.</li>
+    <li id="ref65">"CVCC On-site Review by SACSCOC Completed," responses.db, Dec. 21, 2023.</li>
+    <li id="ref66">"Appomattox County reappoints citizen to Community College Board," responses.db, Mar. 10, 2010; "Carolyn Bergdoll Appointed to Community College Board," responses.db, July 30, 2014; "Richard Carter re-appointed to Community College Board," responses.db, Apr. 2, 2014.</li>
+    <li id="ref67">"Appomattox County Board approves 10-year lease for CVCC satellite campus," responses.db, Mar. 14, 2007.</li>
+    <li id="ref68">"CVCC President Capps to Host Town Hall Meeting in Appomattox," responses.db, Oct. 10, 2012.</li>
+  </ol>
+</div>
+
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+</div>
+</body>
+</html>

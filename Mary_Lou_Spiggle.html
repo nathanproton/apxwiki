@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mary Lou Spiggle — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Mary Lou Spiggle</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Mary Lou Spiggle</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Member, Appomattox Town Council</td></tr>
+    <tr><td>In office</td><td>July 2010 &ndash; present</td></tr>
+    <tr><td>Committee chairs</td><td>Street &amp; Property (2010&ndash;); ROSE Program Chair (2014&ndash;)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Other public service</td></tr>
+    <tr><td>Town EDA</td><td>2015 &ndash; present</td></tr>
+    <tr><td>Community Services Board</td><td>2010 &ndash; c.&nbsp;2012</td></tr>
+    <tr><td>Physical Development Committee</td><td>2020 &ndash; present</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Residence</td><td>Town of Appomattox, Virginia</td></tr>
+    <tr><td>Family</td><td>Son Paul Spiggle; grandchildren</td></tr>
+    <tr><td>Known for</td><td>Patriotic editorials in the <i>Times-Virginian</i>; AVFD Auxiliary; ROSE gardens program</td></tr>
+  </table>
+</div>
+
+<p><b>Mary Lou Spiggle</b> is an American civic leader, editorial writer, and member of the <a href="index.html">Appomattox</a> Town Council in Appomattox County, Virginia. First elected to council in May 2010, she has served continuously since that time, winning re-election in 2012, 2016, 2020, and 2022. A prolific contributor of letters to the editor in the <i>Times-Virginian</i>, Spiggle is widely recognized for her annual patriotic commemorations honoring veterans, first responders, and national days of remembrance. She also spearheaded the town's ROSE (Roadway Opportunities for Sustainable Enhancements) beautification program beginning in 2014 and has been active in the <b>Appomattox Volunteer Fire Department</b> Auxiliary and the <b>American Legion Post 104</b> Auxiliary.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#community_involvement">Community involvement before council</a></li>
+    <li><a href="#first_council_run">First council campaign (2008)</a></li>
+    <li><a href="#election_2010">Election to Town Council (2010)</a></li>
+    <li><a href="#council_service">Town Council service</a>
+      <ol>
+        <li><a href="#first_term">First term (2010&ndash;2012)</a></li>
+        <li><a href="#second_term">Second and third terms (2012&ndash;2020)</a></li>
+        <li><a href="#recent_terms">Recent terms (2020&ndash;present)</a></li>
+      </ol>
+    </li>
+    <li><a href="#rose_program">ROSE beautification program</a></li>
+    <li><a href="#editorial_writing">Editorial writing</a></li>
+    <li><a href="#electoral_history">Electoral history</a></li>
+    <li><a href="#other_service">Other public and community service</a></li>
+    <li><a href="#personal_life">Personal life</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="community_involvement">Community involvement before council</h2>
+
+<p>Before seeking elected office, Spiggle was active in Appomattox civic organizations. In 2005, she was a founding member of the newly formed <a href="Appomattox_Volunteer_Fire_Department.html">Appomattox Volunteer Fire Department</a> Auxiliary, serving as its secretary alongside President Jane Vaughan, Vice-President Lucy Harvey, Treasurer Dianne Osborne, and Chaplain Cynthia Spiggle.<sup><a href="#ref1">[1]</a></sup> Over the following years, the auxiliary raised funds for a thermal imaging camera for the fire department, organized benefit spaghetti suppers, and hosted community events on the anniversaries of September&nbsp;11.<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup><sup><a href="#ref4">[4]</a></sup></p>
+
+<p>Spiggle was also a member of the American Legion Post 104 Auxiliary.<sup><a href="#ref5">[5]</a></sup> In October 2007, she wrote a letter to the <i>Times-Virginian</i> expressing support for a proposed hiking and biking trail in Appomattox, comparing it favorably to the Blackwater Creek trail system in Lynchburg.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h2 id="first_council_run">First council campaign (2008)</h2>
+
+<p>Spiggle entered the political arena in 2008, running as one of three newcomers&mdash;alongside Bryan Baine and Karl "Toots" Carter&mdash;challenging six incumbents for Town Council. The March 2008 filing marked her first candidacy for elected office.<sup><a href="#ref7">[7]</a></sup> During the campaign, she identified economic development, tourism, lower taxes, and restoring a professional atmosphere on council as her priorities.<sup><a href="#ref8">[8]</a></sup> Leota Vaughan Wright, a fellow AVFD Auxiliary and American Legion Auxiliary member, endorsed Spiggle in a letter to the editor, citing her integrity and community service record.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>In the May&nbsp;6 election, newcomers Baine (243&nbsp;votes) and Carter (225) won seats, unseating incumbents Joyce Bennett and Steven Lawson. Spiggle, however, finished ninth of nine candidates with 140&nbsp;votes and did not win a seat.<sup><a href="#ref9">[9]</a></sup></p>
+
+<h2 id="election_2010">Election to Town Council (2010)</h2>
+
+<p>In January 2010, the Appomattox County Board of Supervisors unanimously appointed Spiggle to the Community Services Board, replacing Lynn Doss.<sup><a href="#ref10">[10]</a></sup> This marked her first public appointment.</p>
+
+<p>Spiggle ran again for Town Council in 2010, this time as part of a slate of candidates who supported the proposed U.S.&nbsp;460 waterline from Concord to Appomattox. The waterline had been a divisive issue in local politics for years, and the 2010 election was widely seen as a referendum on the project. In a candidate profile published by the <i>Times-Virginian</i>, Spiggle stated that the waterline was essential for economic development and job creation, and would resolve longstanding water quality issues including odor, taste, and staining.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>Multiple endorsement letters appeared in the paper supporting Spiggle alongside candidates including Steve Conner and Timmy Garrett. One letter from Pam Mays expressed frustration with the town's lack of business growth and endorsed Spiggle, Garrett, and Conner as candidates who would foster improvement.<sup><a href="#ref12">[12]</a></sup> Another broadly endorsed the full pro-waterline slate of Paul Harvey for mayor, and Bennett, Conner, Garrett, Mayberry, McDearmon, and Spiggle for council.<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>On May&nbsp;4, 2010, waterline supporters won a clean sweep. Mayor Harvey was re-elected by a nearly two-to-one margin over challenger and former mayor John Wilson (279&ndash;156). All six winning council candidates supported the waterline: Timothy Garrett (293), Steven Conner (264), Norman "Jimmy" Mayberry (249), C. Lewis McDearmon (237), Joyce Bennett (224), and Mary Lou Spiggle (204).<sup><a href="#ref14">[14]</a></sup></p>
+
+<h2 id="council_service">Town Council service</h2>
+
+<h3 id="first_term">First term (2010&ndash;2012)</h3>
+
+<p>Spiggle took office on July&nbsp;1, 2010. At the council's organizational meeting on July&nbsp;12, she nominated Norman "Jimmy" Mayberry for vice mayor, citing his experience; the motion passed 5&ndash;0.<sup><a href="#ref15">[15]</a></sup> She was appointed chair of the Street and Property Committee, while other council members were assigned to finance, ordinance, utility, and fire and safety committees.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>In November 2010, the council voted 5&ndash;1 to grant a conditional use permit to the Delta Response Team to locate on Jones Street. Spiggle cast the lone dissenting vote.<sup><a href="#ref16">[16]</a></sup> That same month, she proposed a joint meeting of the Town Council, Board of Supervisors, and Economic Development Authority to discuss hiring an economic development director, prompted by the announced closure of the Thomasville furniture plant.<sup><a href="#ref17">[17]</a></sup> Her push for a joint approach to economic development continued through December 2010 and into early 2011, as the town and county haggled over revenue-sharing for the proposed position.<sup><a href="#ref18">[18]</a></sup><sup><a href="#ref19">[19]</a></sup></p>
+
+<p>In May 2012, Spiggle attended the Virginia Municipal League's Town Section Meeting in Farmville alongside Mayor <a href="Paul_Harvey.html">Paul Harvey</a>, receiving training and networking opportunities for local government officials.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h3 id="second_term">Second and third terms (2012&ndash;2020)</h3>
+
+<p>Spiggle was re-elected in May 2012 alongside four other incumbents and newcomer Claudia Paulette. The race was uncontested, and all six candidates won seats.<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>During this period Spiggle continued to be an active voice on council. In October 2012, she spoke in support of funding for park lights at the community ballfield, noting that her grandchildren played at a ballfield in Spout Spring because the local park lacked lighting.<sup><a href="#ref22">[22]</a></sup> In November 2012, she and Mayor Harvey praised the success of a recent train excursion to Appomattox as an example of town-county cooperation on tourism.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p>In 2014, Spiggle spearheaded the ROSE beautification program (described in a <a href="#rose_program">separate section below</a>). In June 2015, following the death of longtime council member Norman "Jimmy" Mayberry, the council voted to appoint Spiggle to fill Mayberry's unexpired term on the Town of Appomattox Economic Development Authority.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>In the May 2016 election, all six incumbent council members&mdash;including Spiggle&mdash;ran unopposed and were re-elected.<sup><a href="#ref25">[25]</a></sup> In June 2018, two council members departed, and Erin Finch had earlier been appointed to fill a vacancy.<sup><a href="#ref26">[26]</a></sup></p>
+
+<p>In October 2018, Spiggle spoke directly to congressional candidate Denver Riggleman during his visit to the Appomattox firehouse, urging him to prioritize the town's needs if elected.<sup><a href="#ref27">[27]</a></sup> In 2019, she invited council members to the grand opening of a Horizon Behavioral Health wellness center in town<sup><a href="#ref28">[28]</a></sup> and participated in discussions about whether to establish the American Civil War Museum as a welcome center for Appomattox.<sup><a href="#ref29">[29]</a></sup></p>
+
+<h3 id="recent_terms">Recent terms (2020&ndash;present)</h3>
+
+<p>In May 2020, Spiggle was re-elected to Town Council alongside Timothy Garrett, Nathan Simpson, Jonathan Garrett, Paul Harvey, and Claudia Puckette. The election also installed Richard Conner as the new mayor, running unopposed.<sup><a href="#ref30">[30]</a></sup> At the organizational meeting in July, Mayor Conner appointed Spiggle to the Town EDA and the Physical Development Committee alongside Timothy Garrett and Nathan Simpson.<sup><a href="#ref31">[31]</a></sup> Spiggle nominated Timothy Garrett for vice mayor; the motion passed unanimously.<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>In September 2020, after Jonathan Garrett resigned due to relocating outside town limits, Spiggle motioned to appoint Aaron Tilton to fill the vacancy; the motion passed on a roll-call vote.<sup><a href="#ref32">[32]</a></sup></p>
+
+<p>Spiggle was an advocate for preserving the historic Appomattox train depot on Main Street. In January 2020, she initiated a council discussion about the depot's deteriorating roof and exterior.<sup><a href="#ref33">[33]</a></sup> In May 2021, when the depot issue resurfaced, Spiggle urged the council to act, warning that further delay would double the cost of repairs.<sup><a href="#ref34">[34]</a></sup></p>
+
+<p>In November 2022, Spiggle was re-elected to Town Council with 304&nbsp;votes, the second-highest total among the six candidates behind Timothy Garrett (356).<sup><a href="#ref35">[35]</a></sup> Under the new staggered-term system approved by the Virginia General Assembly, the top vote-getters received four-year terms. Spiggle and Garrett were accordingly sworn to four-year terms at the December&nbsp;12 ceremony, with their terms running through 2026.<sup><a href="#ref36">[36]</a></sup></p>
+
+<p>In March 2024, Spiggle was involved in a censure controversy when the council voted to censure fellow member <a href="Nathan_A_Simpson.html">Nathan Simpson</a> over an alleged parking-lot confrontation. Spiggle and Claudia Puckette reported that Simpson approached them in the municipal building parking lot in a manner they described as frightening. Simpson acknowledged raising his voice but denied acting threateningly. The council voted to censure Simpson at the March&nbsp;11 meeting, then voted to rescind the censure at the March&nbsp;18 meeting; all council members were directed to complete training on professionalism.<sup><a href="#ref37">[37]</a></sup><sup><a href="#ref38">[38]</a></sup></p>
+
+<p>In 2024, Spiggle co-hosted the first four episodes of "Our Town Appomattox," a five-part YouTube video series produced by Rev. Carlton Duck featuring town improvements, the high school apprenticeship program, water supply projects, sidewalk replacement, and train depot renovations.<sup><a href="#ref39">[39]</a></sup></p>
+
+<h2 id="rose_program">ROSE beautification program</h2>
+
+<p>The <b>Roadway Opportunities for Sustainable Enhancements</b> (ROSE) program was a beautification initiative spearheaded by Spiggle beginning in late 2013. The idea was initially discussed at a council retreat in the fall of 2013, and by June 2014 the program had secured its first sponsor, Farmers Bank of Appomattox, with a donation of at least $5,000. The Town Council allocated $15,000 to hire an architect and design garden layouts.<sup><a href="#ref40">[40]</a></sup></p>
+
+<p>On June&nbsp;9, 2014, the Town Council unanimously approved a resolution to formally establish the ROSE program, adopting the Virginia Department of Transportation's Comprehensive Management Plan. Spiggle, as chairwoman, expressed gratitude for the support. Twenty-eight locations were identified for potential spot gardens, including areas near Kroger, Walmart, Triangle Plaza, and the Museum of the Confederacy.<sup><a href="#ref41">[41]</a></sup></p>
+
+<p>By the spring of 2015, ROSE gardens were blooming throughout the town, having been developed under Spiggle's leadership with sponsorship from various local entities. The landscaped gardens were designed to enhance the town's appeal for both residents and tourists, particularly in anticipation of the sesquicentennial celebration of the April 1865 surrender at Appomattox Court House.<sup><a href="#ref42">[42]</a></sup></p>
+
+<h2 id="editorial_writing">Editorial writing</h2>
+
+<p>Spiggle is one of the most prolific letter-to-the-editor contributors in the modern history of the <i>Times-Virginian</i>. Her writings fall into several recurring categories. The most prominent are her annual patriotic commemorations: she has written letters marking September&nbsp;11 nearly every year since 2007, as well as pieces honoring Memorial Day, Veterans Day, Independence Day, and Thanksgiving.<sup><a href="#ref43">[43]</a></sup><sup><a href="#ref44">[44]</a></sup><sup><a href="#ref45">[45]</a></sup><sup><a href="#ref46">[46]</a></sup><sup><a href="#ref47">[47]</a></sup><sup><a href="#ref48">[48]</a></sup></p>
+
+<p>Her September&nbsp;11 letters have been a particularly consistent tradition, appearing from at least 2007 through 2014, each recounting the events of that day and honoring the 343 New York City firefighters killed in the attacks. The letters often connected the national tragedy to the service of local Appomattox volunteer firefighters.<sup><a href="#ref43">[43]</a></sup><sup><a href="#ref45">[45]</a></sup><sup><a href="#ref47">[47]</a></sup><sup><a href="#ref48">[48]</a></sup></p>
+
+<p>In addition to patriotic themes, Spiggle wrote letters on behalf of the AVFD Auxiliary thanking supporters and promoting fundraising efforts,<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup> supported American Legion Poppy sales,<sup><a href="#ref49">[49]</a></sup> endorsed council candidates during elections,<sup><a href="#ref50">[50]</a></sup> and occasionally weighed in on local political matters, including a pointed 2010 letter reviewing the record of former Mayor John Wilson ahead of that year's elections.<sup><a href="#ref51">[51]</a></sup> At least nineteen letters to the editor attributed to Spiggle appear in the newspaper archive between 2006 and 2016.</p>
+
+<h2 id="electoral_history">Electoral history</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th><th>Office</th><th>Result</th><th>Vote</th><th>Notes</th>
+  </tr>
+  <tr>
+    <td>2008</td>
+    <td>Appomattox Town Council</td>
+    <td style="color:red;font-weight:bold;">Lost</td>
+    <td>140 (9th of 9)</td>
+    <td>Six seats; newcomers Baine and Carter won; Spiggle finished last<sup><a href="#ref9">[9]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2010</td>
+    <td>Appomattox Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>204 (6th of 10)</td>
+    <td>Pro-waterline sweep; all six winners supported the U.S.&nbsp;460 waterline<sup><a href="#ref14">[14]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2012</td>
+    <td>Appomattox Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Uncontested</td>
+    <td>All incumbents re-elected<sup><a href="#ref21">[21]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2016</td>
+    <td>Appomattox Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Unopposed</td>
+    <td>All six incumbents ran unopposed<sup><a href="#ref25">[25]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2020</td>
+    <td>Appomattox Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>&mdash;</td>
+    <td>Elected alongside Garrett, Simpson, J.&nbsp;Garrett, Harvey, Puckette<sup><a href="#ref30">[30]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2022</td>
+    <td>Appomattox Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>304 (2nd of 6)</td>
+    <td>Four-year staggered term through 2026<sup><a href="#ref35">[35]</a></sup></td>
+  </tr>
+</table>
+
+<h2 id="other_service">Other public and community service</h2>
+
+<p>Beyond her council duties, Spiggle has held a number of appointed and volunteer positions. She served on the Appomattox County Community Services Board beginning in January 2010, appointed to replace Lynn Doss.<sup><a href="#ref10">[10]</a></sup> In 2015, she was appointed to fill a vacancy on the Town of Appomattox Economic Development Authority,<sup><a href="#ref24">[24]</a></sup> and was reappointed to the EDA in 2020.<sup><a href="#ref31">[31]</a></sup> She has served on the Physical Development Committee since 2020.<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>In the community, Spiggle was active in the AVFD Auxiliary from its founding in 2005, helping to raise funds for equipment including a thermal imaging camera.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup> She has been a member of the American Legion Post 104 Auxiliary, supporting Poppy sales and veterans' commemorative events.<sup><a href="#ref5">[5]</a></sup><sup><a href="#ref49">[49]</a></sup> She has regularly attended Memorial Day ceremonies at the Appomattox Courthouse Square alongside other local officials.<sup><a href="#ref52">[52]</a></sup></p>
+
+<h2 id="personal_life">Personal life</h2>
+
+<p>Spiggle resides in the Town of Appomattox. She has a son, Paul, who lives in the Evergreen community of Appomattox County.<sup><a href="#ref53">[53]</a></sup> Paul Spiggle Jr. earned a degree from the University of Nebraska-Lincoln in 2022.<sup><a href="#ref54">[54]</a></sup> Spiggle has grandchildren who are involved in local youth sports.<sup><a href="#ref22">[22]</a></sup></p>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Auxiliary forms for fire department," <i>Times-Virginian</i>, August 24, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref2">"AVFD Auxiliary raises funds for new thermal imaging camera," <i>Times-Virginian</i>, February 22, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref3">"AVFD Auxiliary says thanks," <i>Times-Virginian</i>, March 8, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref4">"AVFD Auxiliary says thanks for support," <i>Times-Virginian</i>, September 26, 2007. Via times-virginian-2004-2024.db.</li>
+    <li id="ref5">"Reader supports Spiggle" (letter by Leota Vaughan Wright), <i>Times-Virginian</i>, April 30, 2008. Via times-virginian-2004-2024.db.</li>
+    <li id="ref6">"Citizen supports trail development," responses.db item, October 24, 2007. Extracted from <i>Times-Virginian</i>.</li>
+    <li id="ref7">"In Appomattox, 2 vie for mayor, 9 vie for 6 council seats," <i>Times-Virginian</i>, March 4, 2008. Via times-virginian-2004-2024.db.</li>
+    <li id="ref8">"Council candidates explain top issues," <i>Times-Virginian</i>, April 30, 2008. Via times-virginian-2004-2024.db.</li>
+    <li id="ref9">"Harvey edges Wilson for Mayor; two newcomers oust incumbents from Council," <i>Times-Virginian</i>, May 6, 2008. Via times-virginian-2004-2024.db.</li>
+    <li id="ref10">"Board of Supervisors sets meeting schedule," <i>Times-Virginian</i>, January 13, 2010. Via responses.db: "Mary Lou Spiggle was unanimously appointed to the Community Services Board."</li>
+    <li id="ref11">"Town of Appomattox candidate profiles," <i>Times-Virginian</i>, April 28, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref12">"Support Spiggle, Garrett, Conner for Town Council" (letter by Pam Mays), <i>Times-Virginian</i>, April 21, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref13">"Reader supports Harvey, Bennett, Conner, Garrett, Mayberry, McDearmon, Spiggle," <i>Times-Virginian</i>, April 28, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref14">"Town of Appomattox voters usher in sweep of waterline-supporting candidates; Harvey beats Wilson for mayor," <i>Times-Virginian</i>, May 4, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref15">"Town makes new committee appointments," <i>Times-Virginian</i>, July 14, 2010. Via responses.db.</li>
+    <li id="ref16">"Town Council grants conditional use permit to Delta Response Team," responses.db item, November 3, 2010. Extracted from <i>Times-Virginian</i>.</li>
+    <li id="ref17">"Spiggle: Town and county should join forces to hire economic development director," <i>Times-Virginian</i>, November 17, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref18">"Economic Director should be pursued, monitored," <i>Times-Virginian</i>, December 8, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref19">"Town, County still haggling over revenue-sharing for new position," <i>Times-Virginian</i>, March 2, 2011. Via times-virginian-2004-2024.db.</li>
+    <li id="ref20">"Harvey, Spiggle attend VML meeting," <i>Times-Virginian</i>, May 30, 2012. Via times-virginian-2004-2024.db.</li>
+    <li id="ref21">"Incumbents cruise to re-elections in Appomattox, Pamplin," <i>Times-Virginian</i>, May 2, 2012. Via times-virginian-2004-2024.db.</li>
+    <li id="ref22">"Council member supports funding for park lights," responses.db item, October 17, 2012. Extracted from <i>Times-Virginian</i>.</li>
+    <li id="ref23">"New video targets tourism in Appomattox," <i>Times-Virginian</i>, November 20, 2012. Via responses.db: "Mayor Paul Harvey and Council member Mary Lou Spiggle praised the success of a recent train excursion."</li>
+    <li id="ref24">"Proclamation Honors Norman H. Mayberry; Council Appoints Successor," <i>Times-Virginian</i>, June 10, 2015. Via times-virginian-2004-2024.db.</li>
+    <li id="ref25">"No surprises in uncontested Town elections; Harvey re-elected Appomattox mayor, Horton re-elected Pamplin mayor," <i>Times-Virginian</i>, May 3, 2016. Via times-virginian-2004-2024.db.</li>
+    <li id="ref26">"Two town council members bid farewell," <i>Times-Virginian</i>, June 27, 2018. Via times-virginian-2004-2024.db.</li>
+    <li id="ref27">"Riggleman visits Appomattox firehouse," <i>Times-Virginian</i>, October 17, 2018. Via responses.db: "Councilwoman Mary Lou Spiggle expressed the town's expectations to Denver Riggleman."</li>
+    <li id="ref28">"Horizon Behavioral Health announces wellness center opening," responses.db item, May 18, 2019. Extracted from <i>Times-Virginian</i>.</li>
+    <li id="ref29">"ACWM welcome center discussed," <i>Times-Virginian</i>, June 29, 2019. Via times-virginian-2004-2024.db.</li>
+    <li id="ref30">"Election results are in; new mayors welcomed," <i>Times-Virginian</i>, May 19, 2020. Via times-virginian-2004-2024.db.</li>
+    <li id="ref31">"Mayor Conner makes committee appointments," <i>Times-Virginian</i>, July 20, 2020. Via times-virginian-2004-2024.db.</li>
+    <li id="ref32">"Appomattox town council vacancy filled," <i>Times-Virginian</i>, September 25, 2020. Via times-virginian-2004-2024.db.</li>
+    <li id="ref33">"Train depot repairs back on table," <i>Times-Virginian</i>, January 24, 2020. Via times-virginian-2004-2024.db.</li>
+    <li id="ref34">"Train depot resurfaces," <i>Times-Virginian</i>, May 31, 2021. Via times-virginian-2004-2024.db.</li>
+    <li id="ref35">"Unofficial local election results are listed," <i>Times-Virginian</i>, November 9, 2022. Via times-virginian-2004-2024.db.</li>
+    <li id="ref36">"Council members and mayor take oaths," <i>Times-Virginian</i>, January 4, 2023. Via times-virginian-2004-2024.db.</li>
+    <li id="ref37">"(UPDATED) Appomattox Town Council censures member at Monday's meeting," <i>Times-Virginian</i>, March 15, 2024. Via times-virginian-2004-2024.db.</li>
+    <li id="ref38">"Appomattox Town Council votes to rescind censure of Simpson; council must complete training on professionalism," <i>Times-Virginian</i>, March 20, 2024. Via times-virginian-2004-2024.db.</li>
+    <li id="ref39">"YouTube video series features Appomattox," <i>Times-Virginian</i>, June 13, 2024. Via times-virginian-2004-2024.db.</li>
+    <li id="ref40">"Farmers Bank to sponsor ROSE program in Town," <i>Times-Virginian</i>, June 4, 2014. Via times-virginian-2004-2024.db.</li>
+    <li id="ref41">"Town approves resolution to start ROSE program," <i>Times-Virginian</i>, June 11, 2014. Via times-virginian-2004-2024.db.</li>
+    <li id="ref42">"Artwork of Harlow, Crews praised," <i>Times-Virginian</i>, May 27, 2015. Via times-virginian-2004-2024.db. Also responses.db: "The ROSE group, under Mary Lou Spiggle and a committee, has developed landscaped gardens."</li>
+    <li id="ref43">"Remembering 9-11 for local firemen," <i>Times-Virginian</i>, September 5, 2007 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref44">"Remember reason by Independence Day," <i>Times-Virginian</i>, July 2, 2008 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref45">"Be sure to remember 9/11," <i>Times-Virginian</i>, September 10, 2008 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref46">"Remembering veterans on Veterans Day," <i>Times-Virginian</i>, November 11, 2009 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref47">"Remembering September 11, 2001," <i>Times-Virginian</i>, September 7, 2011 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref48">"Always remember Sept. 11," <i>Times-Virginian</i>, September 10, 2014 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref49">"Support Legion's Poppy sales," <i>Times-Virginian</i>, May 16, 2012 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref50">"Keep Appomattox Town Council in tact," <i>Times-Virginian</i>, April 25, 2012 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref51">"Remember past dealings with ex-Mayor Wilson," <i>Times-Virginian</i>, April 28, 2010 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref52">"Post 104 honors fallen," <i>Times-Virginian</i>, May 30, 2019. Via times-virginian-2004-2024.db.</li>
+    <li id="ref53">"Thanks for helping with car trouble," <i>Times-Virginian</i>, March 16, 2011 (letter by Mary Lou Spiggle). Via times-virginian-2004-2024.db.</li>
+    <li id="ref54">"Paul Spiggle Jr. earns degree from the University of Nebraska-Lincoln," <i>Times-Virginian</i>, May 30, 2022. Via times-virginian-2004-2024.db.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>

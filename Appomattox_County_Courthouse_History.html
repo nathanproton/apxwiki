@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appomattox County Courthouse — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; padding: 8px 30px;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Appomattox County Courthouse</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Appomattox County Courthouse</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">General information</td></tr>
+    <tr><td>Location</td><td>Court Street, Appomattox, Virginia</td></tr>
+    <tr><td>Jurisdiction</td><td>Appomattox County</td></tr>
+    <tr><td>Governing body</td><td><a href="Samuel_E_Carter.html">Board of Supervisors</a></td></tr>
+    <tr><td>Current status</td><td>Active</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">New courthouse (2004)</td></tr>
+    <tr><td>Opened</td><td>October&nbsp;17, 2004</td></tr>
+    <tr><td>Construction cost</td><td>c.&nbsp;$4&nbsp;million</td></tr>
+    <tr><td>Contractor</td><td>J.E. Jamerson &amp; Sons</td></tr>
+    <tr><td>Financed through</td><td>IDA Series&nbsp;A Note ($5.29M)</td></tr>
+    <tr><td>Courtrooms</td><td>3 (Circuit, General District, Juvenile &amp; Domestic Relations)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Former courthouse (1892)</td></tr>
+    <tr><td>Built</td><td>c.&nbsp;1892</td></tr>
+    <tr><td>Vacated</td><td>2004</td></tr>
+    <tr><td>Reuse (2006)</td><td>Appomattox Courthouse Theatre</td></tr>
+    <tr><td>Reuse (2020s)</td><td>Board of Supervisors meeting room (renovation)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key figures</td></tr>
+    <tr><td>Judge</td><td>Charles E. Poston (ruled on adequacy)</td></tr>
+    <tr><td>County Admin.</td><td>Aileen Ferguson (construction era)</td></tr>
+    <tr><td>Supervisors</td><td>Carwile, Moore, Carter, Kendrick, Hancock</td></tr>
+  </table>
+</div>
+
+<!-- HATNOTE -->
+<div class="hatnote">
+  This article is about the modern Appomattox County government courthouse complex on Court Street. For the Civil War&ndash;era village and National Park Service site, see <a class="redlink" href="Appomattox_Court_House_National_Historical_Park.html">Appomattox Court House National Historical Park</a>.
+</div>
+
+<!-- LEAD PARAGRAPH -->
+<p>The <b>Appomattox County Courthouse</b> is the judicial center of Appomattox County, Virginia, located on Court Street in the town of Appomattox. The current courthouse complex, which opened on October&nbsp;17, 2004, consolidates the county's three courts&mdash;Circuit Court, General District Court, and Juvenile and Domestic Relations Court&mdash;into a single facility constructed at a cost of approximately $4&nbsp;million.<sup><a href="#ref1">[1]</a></sup> The building replaced a courthouse dating to c.&nbsp;1892, which itself had been built after fire destroyed an earlier structure along with much of the county's genealogical and legal records.<sup><a href="#ref2">[2]</a></sup> The decision to build new rather than renovate the aging 1892 building was the product of a contentious multi-year debate among the Board of Supervisors, the judiciary, and the public that ran from 1998 through 2002.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>The courthouse complex sits within the Courthouse Square area, a civic nucleus that also includes the former courthouse (now adapted for community and government use), the old county jail (now a museum operated by the Appomattox Historical Society), and related county offices. The site is distinct from <a class="redlink" href="Appomattox_Court_House_National_Historical_Park.html">Appomattox Court House National Historical Park</a>, the National Park Service property several miles to the northeast that preserves the village where General Robert&nbsp;E. Lee surrendered to Lieutenant General Ulysses&nbsp;S. Grant on April&nbsp;9, 1865.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#renovation_debate">The renovation&ndash;versus&ndash;new construction debate (1998&ndash;2002)</a>
+      <ol>
+        <li><a href="#1999_vote">1999 vote to renovate</a></li>
+        <li><a href="#2000_reversal">The March 2000 reversal</a></li>
+        <li><a href="#judicial_ruling">Judicial ruling on inadequacy</a></li>
+      </ol>
+    </li>
+    <li><a href="#construction">Construction of the new courthouse (2003&ndash;2004)</a>
+      <ol>
+        <li><a href="#financing">Financing</a></li>
+        <li><a href="#connector_controversy">The connector controversy</a></li>
+        <li><a href="#opening">Opening</a></li>
+      </ol>
+    </li>
+    <li><a href="#courts_operations">Courts and operations</a></li>
+    <li><a href="#security_and_covid">Security and the COVID-19 pandemic</a></li>
+    <li><a href="#old_courthouse">The former courthouse</a>
+      <ol>
+        <li><a href="#theatre_lease">Courthouse Theatre lease (2006)</a></li>
+        <li><a href="#bos_renovation">Board of Supervisors meeting room renovation (2020s)</a></li>
+      </ol>
+    </li>
+    <li><a href="#community_role">Community role</a></li>
+    <li><a href="#key_figures">Key figures</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="background">Background</h2>
+
+<p>The 1892 Appomattox County Courthouse was built after fire destroyed a predecessor structure, an event that also consumed much of the county's genealogical documentation and legal records.<sup><a href="#ref2">[2]</a></sup> For over a century the 1892 building served as the seat of county justice, but by the late 1990s it had become a source of growing concern. The building lacked compliance with the Americans with Disabilities Act (ADA), had a deteriorating roof, and presented fire-safety risks due to its age and construction.<sup><a href="#ref4">[4]</a></sup> Judges and court personnel raised objections about the adequacy of the facility for modern judicial operations, including the need for multiple security checkpoints across separate floors and offices.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>The courthouse question became one of the defining local government issues of the late 1990s and early 2000s, drawing intense public interest and dividing the <a href="Samuel_E_Carter.html">Board of Supervisors</a> along lines that would persist for several years.</p>
+
+<h2 id="renovation_debate">The renovation&ndash;versus&ndash;new construction debate (1998&ndash;2002)</h2>
+
+<h3 id="1999_vote">1999 vote to renovate</h3>
+
+<p>In 1998 and 1999, the Board of Supervisors deliberated over whether to renovate the existing courthouse or build a new facility on county-owned land adjacent to Courthouse Square. The county had previously purchased approximately two acres for the express purpose of courthouse expansion.<sup><a href="#ref5">[5]</a></sup> Supervisor Carwile emerged as the leading advocate for new construction, arguing that renovation costs were unpredictable, that the 1892 building would require an expensive elevator to the third floor, and that a new building would need only a single security checkpoint rather than four.<sup><a href="#ref5">[5]</a></sup> He framed the choice in terms of long-term value, contending that renovation was merely a costly band-aid on a century-old structure.</p>
+
+<p>Supervisor Torrence countered that available cost estimates showed renovation saving approximately $1.7&nbsp;million over new construction. He argued that the Board had already heard from the public and that the decision was straightforward. <a href="Samuel_E_Carter.html">Supervisor Sammy Carter</a>, representing the Courthouse District, reported that the overwhelming majority of constituents who contacted him favored renovation, and he opposed overturning a prior Board decision to renovate. In 1999, the Board voted to proceed with renovation, with Torrence making the motion and Carter seconding it.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h3 id="2000_reversal">The March 2000 reversal</h3>
+
+<p>The renovation decision did not hold. By early 2000, public pressure and continued advocacy from Supervisor Carwile prompted the Board to reconsider. At a pivotal meeting on March&nbsp;6, 2000, the question returned to the table.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Carwile presented a detailed case for new construction, citing architectural and engineering fees of 11&nbsp;percent on renovation versus 9&nbsp;percent on new construction&mdash;a difference he calculated at roughly $47,000 in money that would yield nothing tangible. He argued that the old courthouse should be placed on the Virginia state historical register, kept under local government control, and repurposed for community use and tourism. Under his plan, grant money would fund the old building's restoration while taxpayer dollars went toward a new facility designed for the next century.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Supervisor Kendrick, widely viewed as the swing vote, described his agonizing deliberation. He recounted that a citizen had told him she did not want Appomattox to be known as the county with a back-door entrance into its courthouse&mdash;a reference to the ADA-required rear entry that renovation would necessitate. Kendrick ultimately voted for new construction.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>Supervisor Moore, who had championed renovation on the principle that the best way to preserve a building is to continue using it, remained opposed. He noted that the people he had spoken to in Courthouse Square all supported renovation and that the push for a new building came primarily from people associated with the Historical Society. Carter likewise voted to renovate, maintaining that the Board should honor its prior decision. Supervisor Hancock cast the decisive fifth vote, and the Board approved new construction by a 3&ndash;2 margin.<sup><a href="#ref7">[7]</a></sup><sup><a href="#ref8">[8]</a></sup></p>
+
+<h3 id="judicial_ruling">Judicial ruling on inadequacy</h3>
+
+<p>In May 2002, Appointed Circuit Court Judge Charles&nbsp;E. Poston formally ruled the old courthouse inadequate for judicial operations, a determination that gave legal impetus to the new construction plan.<sup><a href="#ref9">[9]</a></sup> The county had earlier encountered legal difficulties when it rejected judicial plans to renovate, an action later described in the press as having been done illegally.<sup><a href="#ref10">[10]</a></sup> Judge Poston's ruling effectively ended the renovation option and set the stage for construction to begin.</p>
+
+<h2 id="construction">Construction of the new courthouse (2003&ndash;2004)</h2>
+
+<h3 id="financing">Financing</h3>
+
+<p>The Board of Supervisors directed Davenport &amp; Company, LLC, the county's financial advisor, to prepare a request for proposals for construction financing. After reviewing responses, the financial advisor and bond counsel Sands Anderson Marks &amp; Miller recommended the proposal from Central National Bank. The Industrial Development Authority of Appomattox County issued a lease revenue note (Series&nbsp;A) in an approximate amount of $5,290,000 to finance the acquisition, design, construction, and equipping of the courthouse, along with a Series&nbsp;B Note of approximately $2,574,000 to refund outstanding 1998 bonds.<sup><a href="#ref11">[11]</a></sup> The county's obligation to pay rent under the lease agreement was subject to annual appropriation by the Board of Supervisors, a standard Virginia mechanism for public facility financing.</p>
+
+<h3 id="connector_controversy">The connector controversy</h3>
+
+<p>Construction began in January 2003, with J.E. Jamerson &amp; Sons as the general contractor and a budget of approximately $4&nbsp;million.<sup><a href="#ref1">[1]</a></sup> The back portion of the old courthouse was demolished in April 2003 to make way for the new building.<sup><a href="#ref12">[12]</a></sup> A significant design dispute arose over the county's proposal to connect the new courthouse to the old one with a three-story enclosed connector. On December&nbsp;3, 2003, Judge Poston rejected the connector plan, ruling that it would create significant security risks and fail to meet ADA requirements. The decision meant the new and old buildings would be separated by a walkway rather than physically joined.<sup><a href="#ref13">[13]</a></sup></p>
+
+<h3 id="opening">Opening</h3>
+
+<p>The new courthouse was completed in the fall of 2004. An open house on September&nbsp;15, 2004, drew approximately 150 citizens to view the facility.<sup><a href="#ref14">[14]</a></sup> The official opening took place on October&nbsp;17, 2004, and full operations commenced in the following weeks, with all three courts&mdash;Circuit Court, General District Court, and Juvenile and Domestic Relations Court&mdash;beginning regular sessions in the new building.<sup><a href="#ref15">[15]</a></sup> The project was completed at a cost of approximately $4&nbsp;million, broadly in line with initial estimates.</p>
+
+<h2 id="courts_operations">Courts and operations</h2>
+
+<p>The new courthouse consolidated county judicial functions that had previously been distributed across inadequate spaces in the 1892 building. The facility houses three courtrooms serving the Circuit Court, General District Court, and Juvenile and Domestic Relations Court, along with the offices of the Circuit Court Clerk, the Commonwealth's Attorney, and support staff.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>As of 2019, the Commonwealth's Attorney was Darrel Puckett, who prosecuted cases across all three courts. The office included an Assistant Commonwealth's Attorney, Dana Smith, who primarily handled cases in Juvenile and Domestic Relations Court with occasional appearances in General District Court. Smith, a former television news reporter, assumed the part-time position in October 2018.<sup><a href="#ref16">[16]</a></sup> The courthouse also employed legal assistants; in 2019, former Liberty University football player Desmond Rice joined the staff as a part-time legal assistant while pursuing a law degree.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>The Circuit Court Clerk's office, led by Janet Hix as of 2020, handled land records, court filings, and public document access on the building's first floor. The General District Court Clerk's office operated from the second floor.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="security_and_covid">Security and the COVID-19 pandemic</h2>
+
+<p>The original design of the new courthouse incorporated a security desk with metal detection equipment in the front lobby. In June 2020, several changes were implemented in response to the COVID-19 pandemic. An intercom system was installed at the main entrance, requiring visitors to alert security desk personnel before entering. The Circuit Court Clerk's office installed protective window barriers at the reception area to separate visitors from staff. Courtroom seating was reconfigured to enforce social distancing, and the metal detection area beside the security desk was reorganized.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>In August 2020, the Circuit Court Clerk's office temporarily closed to walk-in visitors after staff were exposed to COVID-19. Clerk Janet Hix stated that employees were placed in quarantine, creating a limited staffing situation. The office continued to serve the public by telephone and through written instructions placed in the lobby. Individuals entering the building were required to answer health-screening questions and have their temperature taken. The office reopened on August&nbsp;31, 2020, following the standard 14-day waiting period.<sup><a href="#ref18">[18]</a></sup></p>
+
+<p>Also in June 2020, the Board of Supervisors increased the courthouse security fee from $10 to $20 per case.<sup><a href="#ref20">[20]</a></sup></p>
+
+<p>In July 2023, an altercation occurred in the courthouse parking lot following a sentencing hearing, an incident that underscored the ongoing security considerations associated with the facility.<sup><a href="#ref21">[21]</a></sup></p>
+
+<h2 id="old_courthouse">The former courthouse</h2>
+
+<p>After court operations relocated to the new building in late 2004, the 1892 courthouse stood vacant. The building was not ADA-compliant, had a leaking roof, and posed fire-safety concerns, particularly given its close proximity to the new courthouse. In 2006, state officials inspected the rear exterior wall of the old building to evaluate its ability to prevent a fire from spreading to the new facility. Several deficiencies were identified, including the need for striker plates on rear doors, proper door handle assemblies, mortar and caulking around door frames, and fire-rated materials.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>During a related hearing, Judge Poston entered an order stipulating that the county could not connect the old courthouse to the new one without prior approval from the Circuit Court Judge. He praised County Administrator Aileen Ferguson for her handling of the matter, stating that if she had been in charge during the earlier period of contention over the courthouse, the litigation might never have been necessary.<sup><a href="#ref10">[10]</a></sup></p>
+
+<h3 id="theatre_lease">Courthouse Theatre lease (2006)</h3>
+
+<p>In July 2006, Appomattox businesswoman Jillian Mitchel approached the Board of Supervisors with a proposal to lease the old courthouse as a community theatre. Mitchel, the owner of the Appomattox Gallery, the Appomattox Tea Room, and Longacre Bed &amp; Breakfast, envisioned the space hosting theatrical productions&mdash;murder mysteries, courtroom dramas, and Civil War&ndash;era historical plays&mdash;as well as performing arts classes in music, drama, and dance.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>The Board approved a one-year lease for $1 on July&nbsp;17, 2006, on the condition that Mitchel would fund repairs and pay all utility bills. County Attorney Johnny Overstreet confirmed that granting such a lease was permissible provided it could be shown to benefit the public or that the lessee would fund repairs. Mitchel planned to paint the columns white, remove interior carpet to expose hardwood floors, change the fluorescent lighting, and install a new toilet and sink in the side offices. She had a full-time carpenter and electrician available for the work. Supervisor Tom Conrad asked about the roof, and Ferguson indicated that state budget funds might be available for that repair.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p><a href="Samuel_E_Carter.html">Supervisor Sammy Carter</a> called the arrangement a &ldquo;win-win situation for the citizens of Appomattox County,&rdquo; noting that the activities would provide new opportunities for residents.<sup><a href="#ref22">[22]</a></sup> The venue subsequently became known as the <a class="redlink" href="Appomattox_Courthouse_Theatre.html">Appomattox Courthouse Theatre</a> and hosted performances, recitals, and community events. By 2014, activities at the theatre included an annual community pumpkin carving contest on its front steps, organized by Appomattox Christian Academy.<sup><a href="#ref24">[24]</a></sup> The county provided arts grant funding to support both the Courthouse Theatre and the Wolfbane theatre company through a Virginia Commission for the Arts Local Government Challenge Grant.<sup><a href="#ref25">[25]</a></sup></p>
+
+<h3 id="bos_renovation">Board of Supervisors meeting room renovation (2020s)</h3>
+
+<p>In the early 2020s, the county undertook a project to convert the 1892 courthouse into a dedicated Board of Supervisors meeting room. The comprehensive agreement, entered into with Jamerson-Lewis Construction, Inc., called for 1,220 square feet of building additions&mdash;including an entry vestibule, egress stair, two-story elevator, and utility space&mdash;and 2,700 square feet of building renovations encompassing entirely new HVAC, electrical, and plumbing systems; new finishes; and accessories to adapt the interior for its new purpose.<sup><a href="#ref26">[26]</a></sup> The project realized, in a different form, the longstanding aspiration to keep the 1892 building in active governmental use.</p>
+
+<h2 id="community_role">Community role</h2>
+
+<p>The Courthouse Square has served as a gathering place for civic events throughout the life of both the old and new courthouses. In September 2001, approximately 200 citizens gathered at the courthouse for a noon-time prayer service hours after the September&nbsp;11 terrorist attacks on the World Trade Center and the Pentagon.<sup><a href="#ref27">[27]</a></sup> The American Legion Post&nbsp;104 held a memorial ceremony at Courtyard Square on September&nbsp;11, 2005, with remarks by Delegate Watkins&nbsp;M. Abbitt and representatives of local emergency response organizations.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>The courthouse steps have long served as the traditional site for trustee sales and public auctions, including the December 2015 auction of the old Thomasville industrial property following the collapse of the Lindenburg Industries deal.<sup><a href="#ref29">[29]</a></sup> In September 2020, the old courthouse hosted a law enforcement rally for congressional candidate Bob Good, with former state senator and trooper Bill Carrico providing opening remarks.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>In 2019, the Reverend Alfred Jones, a local historian and retired social studies teacher, began an effort to have a portrait of the Honorable James William&nbsp;D. Bland placed in the courthouse alongside other notable area figures, as part of broader work to document African American stories from the Civil War and emancipation period.<sup><a href="#ref31">[31]</a></sup></p>
+
+<h2 id="key_figures">Key figures</h2>
+
+<table class="wikitable">
+  <tr><th>Name</th><th>Role</th><th>Significance</th></tr>
+  <tr><td>Charles E. Poston</td><td>Appointed Circuit Court Judge</td><td>Ruled old courthouse inadequate (2002); rejected connector plan (2003); oversaw litigation through 2006</td></tr>
+  <tr><td>Aileen Ferguson</td><td>County Administrator</td><td>Managed construction project and old courthouse disposition; praised by Judge Poston for her leadership</td></tr>
+  <tr><td>John Spencer</td><td>Assistant County Administrator</td><td>Participated in state inspections and project oversight</td></tr>
+  <tr><td>Carwile</td><td>Supervisor</td><td>Led advocacy for new construction over renovation beginning in 1998</td></tr>
+  <tr><td>Russell H. Moore</td><td>Supervisor</td><td>Championed renovation; argued the best way to preserve a building is to continue using it. Died November&nbsp;8, 2020, at age&nbsp;97</td></tr>
+  <tr><td><a href="Samuel_E_Carter.html">Samuel E. Carter</a></td><td>Supervisor, Courthouse District</td><td>Favored renovation in 1999&ndash;2000 votes; later championed the theatre lease as vice-chairman</td></tr>
+  <tr><td>Kendrick</td><td>Supervisor</td><td>Cast the swing vote for new construction in March 2000</td></tr>
+  <tr><td>Jillian Mitchel</td><td>Businesswoman / Theatre operator</td><td>Leased old courthouse in 2006 for $1/year; established the Appomattox Courthouse Theatre</td></tr>
+  <tr><td>Johnny Overstreet</td><td>County Attorney</td><td>Provided legal guidance on lease and ADA requirements</td></tr>
+  <tr><td>Janet Hix</td><td>Clerk of Circuit Court</td><td>Led courthouse operations during COVID-19 pandemic</td></tr>
+  <tr><td>Darrel Puckett</td><td>Commonwealth's Attorney</td><td>Chief prosecutor at the courthouse as of the late 2010s</td></tr>
+  <tr><td>S. Anderson Nelson</td><td>Circuit Court Judge</td><td>Presided over cases in the new courthouse from at least 2018</td></tr>
+</table>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>c.&nbsp;1892</td><td>Current &ldquo;old courthouse&rdquo; built after fire destroys predecessor and county records</td></tr>
+  <tr><td>1999</td><td>Board of Supervisors votes to renovate existing courthouse (3&ndash;2)</td></tr>
+  <tr><td>Mar&nbsp;2000</td><td>Board reverses course and votes 3&ndash;2 for new construction; Supervisor Kendrick casts swing vote</td></tr>
+  <tr><td>May&nbsp;2002</td><td>Judge Poston rules old courthouse inadequate for judicial operations</td></tr>
+  <tr><td>Jan&nbsp;2003</td><td>Construction begins; J.E. Jamerson &amp; Sons awarded contract (c.&nbsp;$4M)</td></tr>
+  <tr><td>Apr&nbsp;2003</td><td>Back portion of old courthouse demolished</td></tr>
+  <tr><td>Dec&nbsp;2003</td><td>Judge Poston denies three-story connector plan on security and ADA grounds</td></tr>
+  <tr><td>Sep&nbsp;2004</td><td>Open house draws approximately 150 citizens</td></tr>
+  <tr><td>Oct&nbsp;2004</td><td>New courthouse officially opens; three courts begin operations</td></tr>
+  <tr><td>Jul&nbsp;2006</td><td>Board approves $1/year lease of old courthouse to Jillian Mitchel for community theatre</td></tr>
+  <tr><td>Aug&nbsp;2006</td><td>State inspection of old courthouse fire wall; Judge Poston closes remaining litigation</td></tr>
+  <tr><td>Jun&nbsp;2020</td><td>COVID-19 adaptations: intercom system, protective barriers, security fee increase ($10&nbsp;&rarr;&nbsp;$20)</td></tr>
+  <tr><td>Aug&nbsp;2020</td><td>Circuit Court Clerk's Office temporarily closed for COVID-19 quarantine (Aug&nbsp;17&ndash;31)</td></tr>
+  <tr><td>May&nbsp;2021</td><td>Board of Supervisors honors Russell H. Moore for his role in courthouse construction</td></tr>
+  <tr><td>2020s</td><td>Renovation of 1892 building for Board of Supervisors meeting room (Jamerson-Lewis Construction)</td></tr>
+</table>
+
+<h2 id="see_also">See also</h2>
+<ul>
+  <li><a class="redlink" href="Appomattox_Court_House_National_Historical_Park.html">Appomattox Court House National Historical Park</a></li>
+  <li><a class="redlink" href="Appomattox_Courthouse_Theatre.html">Appomattox Courthouse Theatre</a></li>
+  <li><a href="Samuel_E_Carter.html">Samuel E. &ldquo;Sammy&rdquo; Carter</a></li>
+  <li><a href="appomattox_county_tax_history.html">Taxation in Appomattox County, Virginia</a></li>
+  <li><a class="redlink" href="Appomattox_County_Elections_History.html">Appomattox County Elections History</a></li>
+</ul>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">&ldquo;Construction begins on new Appomattox County courthouse,&rdquo; <i>Times-Virginian</i>, January 2003 (via responses.db). Describes J.E. Jamerson &amp; Sons contract for nearly $4&nbsp;million with November 2004 target completion.</li>
+    <li id="ref2">Tom Adams, president of the Appomattox Historical Society, quoted in &ldquo;9th annual Wine Festival beats the rain,&rdquo; <i>Times-Virginian</i>, August&nbsp;24, 2018. Notes that the courthouse burned in the 1800s, destroying genealogical records.</li>
+    <li id="ref3">Appomattox County Board of Supervisors meeting minutes, March&nbsp;6, 2000 (Book&nbsp;19, Plates&nbsp;239&ndash;242). Debate between Supervisors Carwile, Moore, Carter, Kendrick, and Hancock on renovation vs. new construction.</li>
+    <li id="ref4">&ldquo;Supervisors approve old courthouse lease for community theatre,&rdquo; <i>Times-Virginian</i>, August&nbsp;2, 2006. Notes old courthouse was not ADA-compliant and had a leaking roof.</li>
+    <li id="ref5">BOS meeting minutes, March&nbsp;6, 2000 (Book&nbsp;19, Plates&nbsp;239&ndash;241). Supervisor Carwile&rsquo;s detailed presentation on security checkpoints, elevator costs, architectural fee differentials, and the two-acre land purchase.</li>
+    <li id="ref6">BOS meeting minutes, 1999 (Book&nbsp;18, Plate&nbsp;645). Supervisor Torrence&rsquo;s motion to renovate, seconded by Carter; vote to renovate the existing courthouse.</li>
+    <li id="ref7">BOS meeting minutes, March&nbsp;6, 2000 (Book&nbsp;19, Plate&nbsp;242). Supervisor Kendrick&rsquo;s statement that he did not want Appomattox known as &ldquo;the County with a back door entrance into a Courthouse.&rdquo;</li>
+    <li id="ref8">BOS meeting minutes, March&nbsp;6, 2000 (Book&nbsp;19, Plate&nbsp;242). Supervisor Moore&rsquo;s and Hancock&rsquo;s remarks; final 3&ndash;2 vote for new construction.</li>
+    <li id="ref9">&ldquo;Judge rules old courthouse inadequate,&rdquo; responses.db item, May 2002. Judge Charles&nbsp;E. Poston&rsquo;s determination.</li>
+    <li id="ref10">&ldquo;Courthouse approved by judge,&rdquo; <i>Times-Virginian</i>, August&nbsp;2, 2006. Describes the July&nbsp;13 state inspection, Judge Poston&rsquo;s order prohibiting connection of buildings, and his praise for County Administrator Ferguson.</li>
+    <li id="ref11">BOS Resolution for Courthouse Project financing (Book&nbsp;20, Plates&nbsp;272&ndash;277). Details the Series&nbsp;A Note ($5.29M) and Series&nbsp;B Note ($2.574M) through IDA with Central National Bank.</li>
+    <li id="ref12">&ldquo;Old Appomattox Courthouse Demolished in Part,&rdquo; responses.db item, April 2003.</li>
+    <li id="ref13">&ldquo;Judge denies Appomattox County&rsquo;s courthouse connector plan,&rdquo; responses.db item, December&nbsp;3, 2003. Ruling cited security risks and ADA compliance issues.</li>
+    <li id="ref14">&ldquo;New Appomattox courthouse open house,&rdquo; responses.db item, September&nbsp;15, 2004. Approximately 150 citizens attended.</li>
+    <li id="ref15">&ldquo;Grand Opening of New $4 Million Appomattox County Courthouse Complex,&rdquo; responses.db item, October&nbsp;17, 2004. Three courtrooms operational.</li>
+    <li id="ref16">&ldquo;&lsquo;Unconventional path&rsquo; brought current Assistant CA to Appomattox County,&rdquo; <i>Times-Virginian</i>, August&nbsp;9, 2019. Profile of Dana Smith.</li>
+    <li id="ref17">&ldquo;Legal assistant is ex-football player pursuing law career,&rdquo; <i>Times-Virginian</i>, August&nbsp;29, 2019. Profile of Desmond Rice.</li>
+    <li id="ref18">&ldquo;Circuit Court Clerk&rsquo;s Office hopes to reopen Aug.&nbsp;31,&rdquo; <i>Times-Virginian</i>, August&nbsp;21, 2020. Quotes Clerk Janet Hix on COVID quarantine and public service continuity.</li>
+    <li id="ref19">&ldquo;COVID-19 prompts changes in courthouse,&rdquo; <i>Times-Virginian</i>, June&nbsp;4, 2020. Describes intercom system, protective windows, courtroom reconfiguration, and metal detection reorganization.</li>
+    <li id="ref20">&ldquo;Courthouse security fee increase,&rdquo; responses.db item, June&nbsp;17, 2020. Fee raised from $10 to $20 per case.</li>
+    <li id="ref21">&ldquo;Altercation in courthouse parking lot,&rdquo; responses.db item, July&nbsp;20, 2023.</li>
+    <li id="ref22">&ldquo;Old courthouse may be used for community theatre,&rdquo; <i>Times-Virginian</i>, July&nbsp;6, 2006. Mitchel&rsquo;s proposal and Sammy Carter&rsquo;s &ldquo;win-win&rdquo; comment.</li>
+    <li id="ref23">&ldquo;Supervisors approve old courthouse lease for community theatre,&rdquo; <i>Times-Virginian</i>, August&nbsp;2, 2006. Board approves $1/year lease; details of Mitchel&rsquo;s planned renovations and ADA discussion.</li>
+    <li id="ref24">&ldquo;Community Calendar,&rdquo; <i>Times-Virginian</i>, October&nbsp;29, 2014. Pumpkin carving contest on Courthouse Theatre steps.</li>
+    <li id="ref25">BOS meeting minutes (Book&nbsp;25, Plate&nbsp;152). Anne Dixon, Tourism Director, describes Virginia Commission for the Arts Local Government Challenge Grant supporting Wolfbane and Courthouse Theatre.</li>
+    <li id="ref26">Comprehensive Agreement between Appomattox County Board of Supervisors and Jamerson-Lewis Construction, Inc. (Book&nbsp;26, Plate&nbsp;568). Project scope: 1,220&nbsp;SF additions and 2,700&nbsp;SF renovations for Board of Supervisors meeting room.</li>
+    <li id="ref27">&ldquo;Looking Back,&rdquo; <i>Times-Virginian</i>, September&nbsp;28, 2021. Notes that 200 citizens gathered at the courthouse for a prayer service after the September&nbsp;11, 2001 attacks.</li>
+    <li id="ref28">&ldquo;Sept.&nbsp;11 ceremony to be this Sunday,&rdquo; <i>Times-Virginian</i>, September&nbsp;7, 2005. American Legion Post&nbsp;104 memorial at Courtyard Square, with remarks by Delegate Abbitt.</li>
+    <li id="ref29">&ldquo;Thomasville plant up for public auction Dec.&nbsp;15; Lindenburg&rsquo;s 349 jobs in jeopardy,&rdquo; <i>Times-Virginian</i>, December&nbsp;2, 2015. Trustee sale on courthouse steps.</li>
+    <li id="ref30">&ldquo;Good visits area twice in a week: Good for Law Enforcement Rally held at courthouse,&rdquo; <i>Times-Virginian</i>, September&nbsp;10, 2020.</li>
+    <li id="ref31">&ldquo;Local historian works to honor influential man,&rdquo; <i>Times-Virginian</i>, January&nbsp;11, 2019. Rev. Alfred Jones&rsquo;s effort to place a portrait of J.W.D. Bland in the courthouse.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
