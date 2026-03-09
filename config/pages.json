@@ -8,7 +8,13 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 50906
+      "content_length": 42970,
+      "alerts": [
+        {
+          "type": "success",
+          "message": "This article was substantially revised on March 9, 2026 to conform to ApxWiki style guide v1.2. See <a href='moderator-changelog.html#MCL-001'>moderator changelog</a> for details."
+        }
+      ]
     },
     {
       "filename": "Appomattox_County_Courthouse_History.html",
@@ -17,7 +23,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 41026
+      "content_length": 41036
     },
     {
       "filename": "Appomattox_County_High_School.html",
@@ -26,7 +32,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 70443
+      "content_length": 70453
     },
     {
       "filename": "Appomattox_County_School_Board_History.html",
@@ -35,7 +41,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 61684
+      "content_length": 61694
     },
     {
       "filename": "Appomattox_Volunteer_Fire_Department.html",
@@ -44,7 +50,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-04",
-      "content_length": 29665,
+      "content_length": 33495,
       "alerts": [
         {
           "type": "info",
@@ -59,7 +65,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 80138
+      "content_length": 80148
     },
     {
       "filename": "appomattox_county_tax_history.html",
@@ -68,7 +74,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 89229
+      "content_length": 89239
     },
     {
       "filename": "appomattox_solid_waste_history.html",
@@ -77,7 +83,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 79179
+      "content_length": 79189
     },
     {
       "filename": "Nathan_A_Simpson.html",
@@ -86,7 +92,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 30654
+      "content_length": 30664
     },
     {
       "filename": "Paul_Harvey.html",
@@ -95,7 +101,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 36284
+      "content_length": 36294
     },
     {
       "filename": "Samuel_E_Carter.html",
@@ -104,7 +110,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 35281
+      "content_length": 35291
     },
     {
       "filename": "Winfred_D_Nash.html",
@@ -113,7 +119,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 27307
+      "content_length": 25613
     },
     {
       "filename": "William_E_Jamerson.html",
@@ -122,7 +128,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-07",
-      "content_length": 35165,
+      "content_length": 35175,
       "alerts": [
         {
           "type": "info",
@@ -137,7 +143,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-07",
-      "content_length": 55140,
+      "content_length": 55150,
       "alerts": [
         {
           "type": "info",
@@ -152,7 +158,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 50005,
+      "content_length": 50015,
       "alerts": [
         {
           "type": "info",
@@ -167,7 +173,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 33662,
+      "content_length": 33672,
       "alerts": [
         {
           "type": "info",
@@ -182,7 +188,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 37239,
+      "content_length": 37249,
       "alerts": [
         {
           "type": "info",
@@ -197,7 +203,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 38469,
+      "content_length": 38479,
       "alerts": [
         {
           "type": "info",
@@ -212,7 +218,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 52507,
+      "content_length": 52517,
       "alerts": [
         {
           "type": "info",
@@ -227,7 +233,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 48789,
+      "content_length": 48799,
       "alerts": [
         {
           "type": "info",
@@ -242,11 +248,56 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 53109,
+      "content_length": 53119,
       "alerts": [
         {
           "type": "info",
           "message": "First draft — research drawn from the <i>Times-Virginian</i> archive (2004–2018), Appomattox Town Council meeting minutes (2002–2012), and responses.db. Consolidation project details post-2018 are incomplete."
+        }
+      ]
+    },
+    {
+      "filename": "Thomasville_Furniture_Appomattox.html",
+      "title": "Thomasville Furniture (Appomattox)",
+      "description": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.",
+      "type": "organization",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 45908,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
+        }
+      ]
+    },
+    {
+      "filename": "Timothy_Garrett.html",
+      "title": "Timothy W. \"Timmy\" Garrett",
+      "description": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 34031,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Appomattox_County_Broadband_History.html",
+      "title": "Broadband and Internet Infrastructure in Appomattox County",
+      "description": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 57915,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
         }
       ]
     }

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thomasville Furniture (Appomattox) — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Thomasville Furniture (Appomattox)</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Thomasville Furniture &mdash; Appomattox Plant</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Overview</td></tr>
+    <tr><td>Type</td><td>Furniture manufacturing plant</td></tr>
+    <tr><td>Industry</td><td>Casegoods, RTA furniture, contract furniture</td></tr>
+    <tr><td>Parent company</td><td>Furniture Brands International (NYSE:&nbsp;FBN)</td></tr>
+    <tr><td>Founded</td><td>October 1974 (as Founders Furniture)</td></tr>
+    <tr><td>Closed</td><td>April&nbsp;1, 2011</td></tr>
+    <tr><td>Years active</td><td>36 years</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Location</td></tr>
+    <tr><td>Address</td><td>310 Founders Lane, Appomattox, VA</td></tr>
+    <tr><td>Location</td><td>Town of Appomattox, south side of U.S.&nbsp;460</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Facility</td></tr>
+    <tr><td>Building size</td><td>831,000 sq&nbsp;ft</td></tr>
+    <tr><td>Land area</td><td>85.5 acres</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Employment</td></tr>
+    <tr><td>Peak workforce</td><td>c.&nbsp;1,000+ employees</td></tr>
+    <tr><td>At closure</td><td>c.&nbsp;200 employees</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key figures</td></tr>
+    <tr><td>Phil Miller</td><td>Senior VP / President, Virginia operations</td></tr>
+    <tr><td>Bill Gilleland</td><td>VP of Manufacturing / General Production Manager</td></tr>
+    <tr><td>Ryan&nbsp;/&nbsp;Rich Lewandowski</td><td>Manufacturing Manager</td></tr>
+    <tr><td>Fred Vine</td><td>Human Resources Manager</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">After closure</td></tr>
+    <tr><td>2014&ndash;2015</td><td>Lindenburg Industries (failed)</td></tr>
+    <tr><td>2015&ndash;present</td><td>George Aznavorian (owner); Virginia MetalFab (tenant, 2022)</td></tr>
+  </table>
+</div>
+
+<p>The <b>Thomasville Furniture plant</b> in the Town of Appomattox, Virginia, was a furniture manufacturing facility that operated from October 1974 until April 2011. Originally established as <b>Founders Furniture</b>, a division of Thomasville Furniture Industries, the plant was located at 310 Founders Lane on the south side of U.S.&nbsp;Route&nbsp;460. For most of its 36-year history, it served as the largest private employer in Appomattox County, reaching a peak workforce of more than 1,000 employees before a prolonged decline driven by overseas competition and shifting consumer markets led to its closure. The plant's shutdown eliminated approximately 200 jobs and was widely regarded as one of the most significant economic blows in modern Appomattox County history.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup></p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#founding">Founding and early years (1972&ndash;1990s)</a></li>
+    <li><a href="#divisions">Divisions and products</a></li>
+    <li><a href="#peak_and_decline">Peak employment and early decline (2000s)</a>
+      <ol>
+        <li><a href="#thirtieth">Thirtieth anniversary and community role</a></li>
+        <li><a href="#restructuring_2005_2006">Restructuring (2005&ndash;2006)</a></li>
+        <li><a href="#cvs_rezoning">CVS rezoning (2007)</a></li>
+      </ol>
+    </li>
+    <li><a href="#recession">Great Recession layoffs (2008&ndash;2009)</a></li>
+    <li><a href="#closure">Closure announcement and final days (2010&ndash;2011)</a>
+      <ol>
+        <li><a href="#announcement">Closure announcement</a></li>
+        <li><a href="#ashley">Ashley Furniture pursuit</a></li>
+        <li><a href="#final_day">Final day of operations</a></li>
+        <li><a href="#auction">Auction and shutdown</a></li>
+      </ol>
+    </li>
+    <li><a href="#community_impact">Community involvement and impact</a></li>
+    <li><a href="#economic_impact">Economic impact of closure</a></li>
+    <li><a href="#afterlife">Afterlife of the building</a>
+      <ol>
+        <li><a href="#lindenburg">Lindenburg Industries (2014&ndash;2015)</a></li>
+        <li><a href="#aznavorian">Aznavorian ownership and Virginia MetalFab</a></li>
+      </ol>
+    </li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="founding">Founding and early years (1972&ndash;1990s)</h2>
+
+<p>Grading at the plant site began in 1972, and the facility opened its doors in October 1974 as Founders Furniture, a division of Thomasville Furniture Industries.<sup><a href="#ref3">[3]</a></sup><sup><a href="#ref4">[4]</a></sup> The plant was located in the Town of Appomattox on the south side of U.S.&nbsp;Route&nbsp;460, adjacent to Business&nbsp;460 near the Dairy Queen. Bill Slagle, who would later serve as chairman of the <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox County Economic Development Authority</a>, played a key role in convincing Thomasville to locate in Appomattox in the early 1970s. As Slagle later recalled during a 2010 EDA meeting, the company presented about a dozen requirements, and local officials worked to meet each one.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>Founders Furniture was created from a vision of manufacturing quality furniture at affordable prices through mass production. The plant initially employed approximately 200 workers and began shipping furniture via freight car shortly after opening.<sup><a href="#ref3">[3]</a></sup> Focusing primarily on bedroom suites, the company grew steadily over the following decades and eventually became the largest employer in Appomattox County, with a workforce exceeding 1,000 at its peak.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>A fire broke out at the plant in 1982, apparently starting in the dust collection system, though the facility continued operating.<sup><a href="#ref6">[6]</a></sup> In 1986, employees Donald Alan Bates of Appomattox and James William Jordan of Prospect received the Thomasville Furniture Industries President's Award, the company's highest honor.<sup><a href="#ref7">[7]</a></sup></p>
+
+<h2 id="divisions">Divisions and products</h2>
+
+<p>Over its history, the Appomattox plant operated several product divisions under the Thomasville umbrella. The original Founders Furniture division specialized in bedroom suites produced through mass-production methods. In the mid-1980s, Creative Interiors was formed to manufacture ready-to-assemble (RTA) furniture. A contract furniture division followed in the mid-1990s, serving the hospitality and commercial markets. In 2001, the Vignettes brand was established, specializing in imported master and youth bedroom furniture constructed of wood solids and veneers.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>The plant's major retail customers over the years included Walmart, Target, Sam's Club, Value City, and Aaron's. Founders Furniture was also sold through regional chains such as Schewels and Badcock. The company maintained showrooms in High Point, North Carolina, and Tupelo, Mississippi, and employed a product design staff across the East Coast.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Thomasville Furniture operated two production facilities in Virginia: the Appomattox plant and one in Carysbrook. The parent company, Furniture Brands International (NYSE:&nbsp;FBN), was headquartered in St.&nbsp;Louis, Missouri, and also owned Broyhill, Lane, and several other furniture brands.<sup><a href="#ref8">[8]</a></sup></p>
+
+<h2 id="peak_and_decline">Peak employment and early decline (2000s)</h2>
+
+<h3 id="thirtieth">Thirtieth anniversary and community role</h3>
+
+<p>Founders Furniture celebrated its 30th anniversary in October 2004 with a company-wide event on the plant grounds that included a catered lunch, live music, and giveaways for active and retired employees. By that time, overseas outsourcing had already reduced the payroll from its peak of over 1,000 to approximately 500 workers, yet the plant remained the county's largest employer.<sup><a href="#ref3">[3]</a></sup> Phil Miller, Senior Vice President of Founders, acknowledged the significance of the milestone, noting that companies surviving 30 years in the current manufacturing climate was a rare occurrence. Bill Gilleland, Vice President of Manufacturing, pointed to new contracts with Walmart and Target as reasons for optimism, and the company was projecting a four-percent increase in sales for the following year.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>In 2002, Appomattox officials had honored Thomasville Furniture during Business Appreciation Week for its significant contributions to the community.<sup><a href="#ref9">[9]</a></sup> Despite periodic shutdown weeks when demand slowed, company leaders publicly expressed confidence in the plant's future. The question of what would happen to Appomattox if Thomasville ever closed was, even at the time of the 30th anniversary, a topic of frequent speculation among residents.<sup><a href="#ref3">[3]</a></sup></p>
+
+<h3 id="restructuring_2005_2006">Restructuring (2005&ndash;2006)</h3>
+
+<p>In August 2005, Furniture Brands International announced a marketing realignment that shifted two of the Appomattox plant's divisions &mdash; Founders and Creative Interiors &mdash; from reporting to Thomasville to reporting to its sister brand, Broyhill. Phil Miller described the change as a marketing move rather than an operational one, emphasizing that daily operations and employment would not be affected.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>In January 2006, the company eliminated 30 jobs from its manual labor force, reducing the workforce to approximately 575. Gilleland said the cuts were based on work performance and seniority and were intended to smooth out seasonal production cycles that had resulted in three-to-four-week shutdown periods each year. The company offered affected employees extended benefits and brought in Region 2000's workforce training group to assist with résumés and job placement.<sup><a href="#ref10">[10]</a></sup> Sammy Carter, Chairman of the Appomattox County Board of Supervisors, called the cuts a "heavy blow" to Appomattox.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>In October 2006, Thomasville announced the elimination of its Founders Furniture division from all future operations. Phil Miller, by then president of Thomasville's Virginia operations, said the change would not reduce employment levels. Founders had shrunk to about four percent of the plant's production volume, and the approximately 600-person workforce was expected to continue at its current level, operating six days a week, 24 hours a day. Miller simultaneously announced a major new contract with Walmart &mdash; a five-item collection going to 3,000 stores &mdash; as well as pending deals with Office Max and another large unnamed retailer.<sup><a href="#ref11">[11]</a></sup></p>
+
+<h3 id="cvs_rezoning">CVS rezoning (2007)</h3>
+
+<p>In mid-2007, Thomasville Furniture requested a rezoning of a 10-acre strip of its land from M1&nbsp;(industrial) to B1&nbsp;(business) to facilitate the sale of property for a new CVS Pharmacy location. The proposed 12,000-square-foot freestanding CVS would be built across U.S.&nbsp;460 from the existing CVS location, on land that included the Thomasville ball field. The Appomattox Planning Commission recommended approval in June 2007, but the Town Council delayed the vote several times as Council member Steve Lawson raised concerns about potential unrestricted commercial development on the rezoned property.<sup><a href="#ref12">[12]</a></sup><sup><a href="#ref13">[13]</a></sup> The property was eventually sold to a group that owned CVS for an estimated $1.9 million, with the deed recorded in early 2010.<sup><a href="#ref14">[14]</a></sup></p>
+
+<h2 id="recession">Great Recession layoffs (2008&ndash;2009)</h2>
+
+<p>The national economic downturn devastated the furniture industry, and the Appomattox plant bore the consequences in two successive rounds of layoffs. In December 2008, Thomasville eliminated 29&nbsp;percent of its workforce &mdash; more than 140 employees &mdash; reducing the payroll to approximately 350 workers. The cuts affected both hourly and salaried employees and effectively eliminated the third shift. John Hastings, Vice President of Communications at Furniture Brands International, said the layoffs were part of a company-wide reduction totaling 1,400 positions nationwide, described as an "inevitable response to the recessionary environment." Furniture Brands Chairman and CEO Ralph P. Scozzafava stated the company was "aligning our costs with anticipated lower sales volumes."<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>Robert Ayers of Pamplin, who had worked at the plant since its opening in 1974 as a Product Packaging Engineer, was among those laid off. Ayers told the <i>Times-Virginian</i> that the camaraderie among workers was what he would miss most, describing the plant as "one big family."<sup><a href="#ref15">[15]</a></sup> Former Supervisor Nina Beasley subsequently urged the Board of Supervisors to pursue a waterline and hire an Economic Development Director, citing the Thomasville layoffs as evidence of the county's vulnerability.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>A further round of layoffs in September 2009 cut approximately 40 more workers, reducing the workforce to around 300 employees. Furniture Brands spokesman Hastings again declined to provide location-specific numbers, citing company policy, but attributed the cuts to a weak consumer economy. Appomattox County Board of Supervisors Chairman Tom Conrad expressed concern and emphasized ongoing efforts to attract new jobs through waterline development and an Economic Development Director position.<sup><a href="#ref17">[17]</a></sup></p>
+
+<h2 id="closure">Closure announcement and final days (2010&ndash;2011)</h2>
+
+<h3 id="announcement">Closure announcement</h3>
+
+<p>On November 2, 2010, Furniture Brands International announced that the Appomattox facility would close the following spring. Employees were told their jobs would end on March 25, 2011, though a small number of workers would remain beyond that date to manage the official shutdown. The plant employed approximately 200 workers at the time of the announcement.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Furniture Brands stated it would transfer a portion of production to one or more facilities in North Carolina and that the closure would generate restructuring charges of approximately $7&nbsp;million, with annual cost savings of approximately $5&nbsp;million. The company framed the move as part of a strategy to broaden sourcing options, combining domestic manufacturing with contractors in Latin America and Asia.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Gary Tanner, Chairman of the Appomattox County Board of Supervisors, called the announcement a source of sadness, saying Thomasville had been "a great business partner for the people in this area." The <i>Times-Virginian</i> ranked the closure as the second-biggest news story of 2010, behind only the Snapps Mill Road shooting massacre in January of that year.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref18">[18]</a></sup></p>
+
+<h3 id="ashley">Ashley Furniture pursuit</h3>
+
+<p>Within weeks of the closure announcement, local officials launched an aggressive campaign to attract Ashley Furniture Industries to the Thomasville site. Ashley Furniture chairman Ron Wanek reportedly indicated that the Appomattox plant was one of several locations in Virginia and the Carolinas being considered for a new East Coast manufacturing and distribution facility that could employ about 1,000 workers. Ashley officials had toured the Thomasville plant in November 2010.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>The county-appointed Economic Development Authority voted 6&ndash;0 in December 2010 to send a delegation to Ashley's headquarters in Arcadia, Wisconsin. EDA member Ronnie Spiggle urged an all-out effort, declaring that the group needed to "wine 'em and dine 'em and do whatever we've got to do to get them here." The Town of Appomattox sent a letter of support to Ashley, and both the Town Council and Board of Supervisors endorsed the effort.<sup><a href="#ref5">[5]</a></sup><sup><a href="#ref19">[19]</a></sup> Despite these efforts, Ashley ultimately did not select the Appomattox facility.</p>
+
+<h3 id="final_day">Final day of operations</h3>
+
+<p>The Thomasville plant officially closed on Friday, April 1, 2011, after 36 years in operation. The final production shipment went out that day. William Gilliland, Vice President and General Production Manager, addressed the remaining workers, telling them, "You care about each other. You have a lot of heart &hellip; Sometimes in life there are some special moments and memories that come along &hellip; it has been great. I will never forget it."<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>Several longtime employees spoke publicly about the closure's personal impact. Faye Thompson, who had worked at the plant for all 36 years, described her coworkers as a second family. Leon Gaines, a warehouse leader with nearly 34 years at the plant, said the job had changed him socially, making him more open as a person. Hettie Adams, a 35-year employee, planned to pursue a career as a certified nursing assistant. Others, including Ellis Shorter (26 years) and Thomas McCoy (26 years), expressed concern about the economic toll on the broader community.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>At the time of closure, the plant employed 135 people in manufacturing, 30 in management, and 30 temporary workers. The company had applied for and received approval under the federal Trade Adjustment Assistance Act, which provided extended unemployment benefits and tuition assistance for eligible displaced workers.<sup><a href="#ref2">[2]</a></sup></p>
+
+<h3 id="auction">Auction and shutdown</h3>
+
+<p>An auction was held on August 10, 2011, managed by Loeb Winternitz Industrial Auctioneers. Tens of thousands of pieces of furniture-making equipment were sold, with bidders receiving steep discounts &mdash; one saw normally worth $750,000 sold for $1,000, and another bidder purchased approximately $1.5&nbsp;million worth of equipment for less than $30,000. However, the 831,000-square-foot plant and its 85.5 acres of land did not receive any bids at the minimum price of $6.3&nbsp;million.<sup><a href="#ref20">[20]</a></sup></p>
+
+<p>Gilliland noted that the bargain prices helped small operators get started in the furniture business. A skeleton crew of 12 employees remained through September to manage shutdown procedures and oversee removal of sold items.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h2 id="community_impact">Community involvement and impact</h2>
+
+<p>Throughout its history, Thomasville maintained a visible presence in the Appomattox community beyond its role as an employer. The plant contributed to local charitable causes, including a $1,000 donation from its Public Relations Budget to the Appomattox Elementary School playground project in 2004.<sup><a href="#ref21">[21]</a></sup> The company also supported the annual school supply drive for underprivileged students and provided a $500 scholarship through the Miss Appomattox Festival Pageant.<sup><a href="#ref22">[22]</a></sup><sup><a href="#ref23">[23]</a></sup></p>
+
+<p>Thomasville Furniture Industries administered the T.&nbsp;Austin Finch Scholarship program, which awarded scholarships to children of employees across its operations, including recipients from Appomattox County High School.<sup><a href="#ref24">[24]</a></sup> The plant's ball field, located along Business&nbsp;460, was used by community groups and occasionally served as a landing spot for a helicopter used by Buckingham Virginia Slate Corporation employees.<sup><a href="#ref25">[25]</a></sup> The Thomasville property also served as the traditional starting point for the annual Historic Appomattox Railroad Festival parade; after the plant's closure, the parade was forced to relocate its staging area to Appomattox Elementary School in 2011.<sup><a href="#ref26">[26]</a></sup></p>
+
+<p>In 2005, the plant took environmental action by removing copper water piping from its facility after the Town of Appomattox identified it as a contributor to elevated copper levels in the municipal wastewater system.<sup><a href="#ref27">[27]</a></sup> In late 2010, the company and a private citizen donated two decibel meters to the Appomattox County Sheriff's Department for noise ordinance enforcement.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>Numerous obituaries in the <i>Times-Virginian</i> throughout the 2000s, 2010s, and into the 2020s list Thomasville Furniture as a former employer, reflecting the generations of Appomattox County families whose livelihoods were tied to the plant.</p>
+
+<h2 id="economic_impact">Economic impact of closure</h2>
+
+<p>The plant's closure had cascading effects on the local economy. The loss of approximately 200 jobs directly reduced consumer spending in the area; several former employees and business owners noted the impact on local stores and services. Wanda Doss, a 36-year employee, reported that business owners had told her they were already hurt by the earlier rounds of layoffs.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>The Town of Appomattox faced a sewer rate increase after Thomasville's cessation of operations reduced revenue from the utility system.<sup><a href="#ref29">[29]</a></sup> Appomattox County Supervisor Jerry Small warned that he expected county revenues to decrease in the wake of the closure, complicating an already tight budget for school funding and other services.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>The closure heightened a longstanding push to hire a county Economic Development Director. The county had debated the position for 28 months prior to the closure announcement, but the loss of Thomasville injected new urgency. Town Council member Mary Lou Spiggle proposed a joint meeting of town and county governing bodies specifically to address the hiring, and both bodies eventually moved forward with the position, hiring Jeff Taylor as Appomattox County's first Economic Development Director.<sup><a href="#ref31">[31]</a></sup><sup><a href="#ref32">[32]</a></sup></p>
+
+<h2 id="afterlife">Afterlife of the building</h2>
+
+<h3 id="lindenburg">Lindenburg Industries (2014&ndash;2015)</h3>
+
+<p>After the auction failed to sell the property, the building sat largely vacant for three years while various prospects toured the facility. Economic Development Director Jeff Taylor reported interest from two clients in early 2012 and additional inquiries through mid-2012, including manufacturers and speculators.<sup><a href="#ref33">[33]</a></sup> In 2014, Furniture Brands International &mdash; which had itself filed for bankruptcy &mdash; listed the property through Hilco Real Estate with a bid deadline of June 24, 2014. The 831,000-square-foot building on 85.5 acres had been listed at an estimated value of $4.6&nbsp;million.<sup><a href="#ref34">[34]</a></sup></p>
+
+<p>In November 2014, Virginia Governor Terry McAuliffe announced at a ceremony in the plant parking lot that Lindenburg Industry, LLC, a subsidiary of a Chinese-owned company, would invest $113&nbsp;million to establish a honeycomb manufacturing operation for industrial air pollution control components at the site, creating up to 349 jobs. The property was purchased for just over $2&nbsp;million. The announcement was celebrated as transformational for Appomattox, with CEO Stella Li expressing excitement about the community's workforce talent and business environment.<sup><a href="#ref35">[35]</a></sup></p>
+
+<p>The venture quickly unraveled. Lindenburg encountered visa problems that delayed the arrival of its Chinese management team, and the factory never opened. By late 2015, the property was placed under liens by the Town of Appomattox, which was pursuing approximately $45,000 in unreimbursed costs for water system upgrades made in anticipation of Lindenburg's operations.<sup><a href="#ref36">[36]</a></sup> A foreclosure auction was held on December 15, 2015, at which businessman George Aznavorian submitted the sole bid of $1&nbsp;million.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>The Virginia Economic Development Partnership subsequently sued Lindenburg and its associated firm, Development Advisors, to recover $1.4&nbsp;million in state grant money that had been disbursed. The Virginia State Police also initiated an investigation into the investment. In 2018, the Virginia Supreme Court dismissed Lindenburg's appeal in the lawsuit. The episode became a recurring political issue, cited by critics during Terry McAuliffe's 2021 gubernatorial campaign and by Republican candidate Glenn Youngkin.<sup><a href="#ref38">[38]</a></sup><sup><a href="#ref39">[39]</a></sup><sup><a href="#ref40">[40]</a></sup></p>
+
+<h3 id="aznavorian">Aznavorian ownership and Virginia MetalFab</h3>
+
+<p>George Aznavorian, the new owner, developed plans for a mixed-use redevelopment of the property that included ground-floor commercial spaces, apartments intended to create a "main street effect" along U.S.&nbsp;460, an industrial hub, and senior housing cottages with an associated assisted living facility. In October 2016, the Appomattox Town Council unanimously approved a conditional use permit for the redevelopment plan.<sup><a href="#ref41">[41]</a></sup></p>
+
+<p>Progress was slow in the following years, though portions of the property were put to interim use. In 2016, Bays Trash Removal received a conditional use permit to store portable toilets on part of the site, and the parking lot served as a volunteer clean-up staging area after the February 2016 tornado. The old Thomasville building parking lot also hosted the Appomattox Show &amp; Shine Festival in 2017.<sup><a href="#ref42">[42]</a></sup></p>
+
+<p>The building found its most significant new occupant in 2022, when Ron Martin relocated his companies Stallworks and Virginia MetalFab to the former Thomasville facility. Governor Glenn Youngkin attended an open house on December 9, 2022, where hundreds of community members celebrated the return of manufacturing activity to the site. Virginia MetalFab announced plans to add 130 jobs to its workforce, which had already grown from 39 to 75 employees.<sup><a href="#ref43">[43]</a></sup><sup><a href="#ref44">[44]</a></sup></p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>1972</td><td>Grading begins at the plant site on U.S.&nbsp;460 in the Town of Appomattox</td></tr>
+  <tr><td>Oct 1974</td><td>Founders Furniture opens with approximately 200 employees</td></tr>
+  <tr><td>May 1982</td><td>Fire breaks out in the dust collection system; plant continues operations</td></tr>
+  <tr><td>Mid-1980s</td><td>Creative Interiors division formed for ready-to-assemble furniture</td></tr>
+  <tr><td>Mid-1990s</td><td>Contract furniture division established</td></tr>
+  <tr><td>2001</td><td>Vignettes brand launched for imported bedroom furniture</td></tr>
+  <tr><td>Oct 2004</td><td>30th anniversary celebration; workforce at approximately 500</td></tr>
+  <tr><td>Aug 2005</td><td>Founders and Creative Interiors shifted to Broyhill reporting structure</td></tr>
+  <tr><td>Jan 2006</td><td>30 jobs eliminated; workforce reduced to approximately 575</td></tr>
+  <tr><td>Oct 2006</td><td>Founders Furniture division eliminated; plant employs approximately 600</td></tr>
+  <tr><td>Jun&ndash;Aug 2007</td><td>10-acre parcel rezoned and sold to CVS Pharmacy group for $1.9&nbsp;million</td></tr>
+  <tr><td>Dec 2008</td><td>140+ employees laid off (29% of workforce); payroll drops to approximately 350</td></tr>
+  <tr><td>Sep 2009</td><td>Approximately 40 more workers laid off; workforce falls to approximately 300</td></tr>
+  <tr><td>Nov 2, 2010</td><td>Furniture Brands International announces plant closure for spring 2011</td></tr>
+  <tr><td>Apr 1, 2011</td><td>Plant officially closes after 36 years; final production shipment goes out</td></tr>
+  <tr><td>Aug 10, 2011</td><td>Equipment auction held; building fails to sell at $6.3&nbsp;million minimum</td></tr>
+  <tr><td>Jun 2014</td><td>Property listed for bankruptcy sale through Hilco Real Estate</td></tr>
+  <tr><td>Nov 2014</td><td>Lindenburg Industry announces $113&nbsp;million investment and 349 jobs</td></tr>
+  <tr><td>Dec 2015</td><td>Foreclosure auction after Lindenburg failure; George Aznavorian buys for $1&nbsp;million</td></tr>
+  <tr><td>Nov 2022</td><td>Virginia MetalFab moves into the former Thomasville building</td></tr>
+  <tr><td>Dec 2022</td><td>Governor Youngkin attends open house; VMF announces 130 additional jobs</td></tr>
+</table>
+
+<h2 id="see_also">See also</h2>
+<ul>
+  <li><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a> &mdash; the county's industrial park and EDA history</li>
+</ul>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Thomasville Furniture to close doors; 200 employees to lose jobs," <i>Times-Virginian</i>, November 3, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref2">"Thomasville officially shuts its doors in Appomattox," <i>Times-Virginian</i>, April 5, 2011. Via times-virginian-2004-2024.db.</li>
+    <li id="ref3">"Founders Furniture celebrates 30 years in Appomattox," <i>Times-Virginian</i>, November 3, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref4">"Optimism abounds after Lindenburg announcement," <i>Times-Virginian</i>, November 12, 2014 (Robert Ayers recollection of 1972 grading). Via times-virginian-2004-2024.db.</li>
+    <li id="ref5">"Local officials to visit Ashley Furniture headquarters in Wisconsin," <i>Times-Virginian</i>, December 15, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref6">Items from responses.db: "Fire breaks out at Thomasville plant in Appomattox," issued_date 1982-05-02. Via responses.db.</li>
+    <li id="ref7">Items from responses.db: "Donald Alan Bates received Thomasville Furniture Industries President's Award" and "James William Jordan received Thomasville Furniture Industries President's Award," issued_date 1986-12-28. Via responses.db.</li>
+    <li id="ref8">"Founders replaces Thomasville with Broyhill," <i>Times-Virginian</i>, August 31, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref9">Items from responses.db: "Thomasville Furniture Honored During Business Appreciation Week," issued_date 2002-05-16. Via responses.db.</li>
+    <li id="ref10">"Thomasville eliminates 30 jobs," <i>Times-Virginian</i>, February 1, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref11">"Thomasville furniture dumps Founders, not workforce," <i>Times-Virginian</i>, October 12, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref12">Items from responses.db: "Appomattox Planning Commission Approves Thomasville Furniture Rezoning Request," issued_date 2007-07-03; "Appomattox Council delays rezoning vote for Thomasville Furniture," issued_date 2007-07-11. Via responses.db.</li>
+    <li id="ref13">Items from responses.db: "Council member Lawson raises concerns about development limits," issued_date 2007-08-22. Via responses.db.</li>
+    <li id="ref14">Items from responses.db: "Thomasville sells land for CVS relocation," issued_date 2010-02-10. Via responses.db.</li>
+    <li id="ref15">"Thomasville lays off 140 employees," <i>Times-Virginian</i>, December 17, 2008. Via times-virginian-2004-2024.db.</li>
+    <li id="ref16">Items from responses.db: "Former Supervisor Emphasizes Economic Development Director Urgency" (Nina Beasley), issued_date 2009-01-28. Via responses.db.</li>
+    <li id="ref17">"Thomasville Furniture officials mum about recent layoff," <i>Times-Virginian</i>, September 23, 2009. Via times-virginian-2004-2024.db.</li>
+    <li id="ref18">"Snapps Mill Road massacre named top story of 2010," <i>Times-Virginian</i>, December 29, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref19">"Town supports pursuit of Ashley Furniture," <i>Times-Virginian</i>, January 5, 2011. Via times-virginian-2004-2024.db.</li>
+    <li id="ref20">"Thomasville auctions items; plant, land does not receive bid," <i>Times-Virginian</i>, August 17, 2011. Via times-virginian-2004-2024.db.</li>
+    <li id="ref21">"Thomasville donates $1,000 for AES playground," <i>Times-Virginian</i>, February 11, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref22">Items from responses.db: "Community members and businesses thanked for supporting school supply drive," issued_date 2004-08-25. Via responses.db.</li>
+    <li id="ref23">Items from responses.db: "Mills Awarded Scholarships and Prizes" (Miss Appomattox Festival, $500 from Thomasville), issued_date 2006-09-27. Via responses.db.</li>
+    <li id="ref24">Items from responses.db: "Brian Mitchell Receives Scholarship from Thomasville Furniture Industries," issued_date 2007-05-16; "Michael Chambers Awarded T. Austin Finch Scholarship," issued_date 2008-06-04. Via responses.db.</li>
+    <li id="ref25">Items from responses.db: "Buckingham Virginia Slate Corp. uses helicopter for travel" (landed at Thomasville Ball field), issued_date 2007-01-25. Via responses.db.</li>
+    <li id="ref26">Items from responses.db: "Appomattox Railroad Festival Parade Relocates Starting Point," issued_date 2011-09-20. Via responses.db.</li>
+    <li id="ref27">Items from responses.db: "Thomasville Furniture Factory Removed Copper Piping in 2005," issued_date 2007-05-02. Via responses.db.</li>
+    <li id="ref28">Items from responses.db: "Donations of Decibel Meters Secured for Noise Ordinance Enforcement," issued_date 2010-12-29. Via responses.db.</li>
+    <li id="ref29">Items from responses.db: "Appomattox council considers sewer rate increase," issued_date 2011-04-20. Via responses.db.</li>
+    <li id="ref30">"School Board eyes budget deficit," <i>Times-Virginian</i>, April 13, 2011. Via times-virginian-2004-2024.db.</li>
+    <li id="ref31">Items from responses.db: "Spiggle: Hire economic development director due to Thomasville plant closure," issued_date 2010-11-17; "County Discusses Hiring Economic Development Director," issued_date 2010-12-08. Via responses.db.</li>
+    <li id="ref32">Items from responses.db: "Jeff Taylor emphasizes positive community attitude for economic development," issued_date 2011-09-20. Via responses.db.</li>
+    <li id="ref33">Items from responses.db: "Two clients express interest in vacant Thomasville building," issued_date 2012-02-29; "Prospect Emerges for Thomasville Facility," issued_date 2012-08-15. Via responses.db.</li>
+    <li id="ref34">Items from responses.db: "Bankruptcy sale advertised for old Thomasville plant," issued_date 2014-04-02. Via responses.db.</li>
+    <li id="ref35">"Lindenburg Industry to locate in old Thomasville plant, will bring up to 349 jobs to Appomattox area," <i>Times-Virginian</i>, November 5, 2014; "Lindenburg to bring 349 jobs to Thomasville plant," <i>Times-Virginian</i>, November 12, 2014. Via times-virginian-2004-2024.db.</li>
+    <li id="ref36">Items from responses.db: "Town of Appomattox pursuing legal action against Lindenburg Industries," issued_date 2015-12-02. Via responses.db.</li>
+    <li id="ref37">Items from responses.db: "George Aznavorian bids $1 million for old Thomasville plant," issued_date 2015-12-15. Via responses.db.</li>
+    <li id="ref38">Items from responses.db: "Virginia Supreme Court denies Lindenburg Industry appeal," issued_date 2018-10-05; "VEDP sued Lindenburg and Development Advisors," issued_date 2018-10-05. Via responses.db.</li>
+    <li id="ref39">Items from responses.db: "State Police investigate Lindenburg Industry investment," issued_date 2016-04-06. Via responses.db.</li>
+    <li id="ref40">Items from responses.db: "Youngkin criticizes McAuliffe's handling of Lindenburg Industries deal," issued_date 2021-10-28; "McAuliffe's jobs promise broken in Appomattox," issued_date 2021-04-13. Via responses.db.</li>
+    <li id="ref41">Items from responses.db: "Appomattox Approves Conditional Permit for Thomasville Plant Redevelopment," issued_date 2016-10-05; "Thomasville Plant Redevelopment Plan Includes Mixed-Use and Industrial Hub," issued_date 2016-10-05. Via responses.db.</li>
+    <li id="ref42">Items from responses.db: "Bays Trash Removal storage permit approved," issued_date 2016-09-14; "Volunteer clean-up center established in Appomattox" (tornado response), issued_date 2016-02-26; "Appomattox Show &amp; Shine Festival Scheduled," issued_date 2017-04-04. Via responses.db.</li>
+    <li id="ref43">"Virginia MetalFab moves into former Thomasville building," <i>Times-Virginian</i>, November 9, 2022; "Ron Martin to Relocate Companies to Thomasville Building," items from responses.db, issued_date 2022-05-18. Via times-virginian-2004-2024.db and responses.db.</li>
+    <li id="ref44">Items from responses.db: "Virginia MetalFab/Stallworks Open House Attracts Large Crowd with Governor Youngkin," issued_date 2022-12-09; "Virginia MetalFab Plans to Add 130 Jobs at Appomattox Facility," issued_date 2022-12-09. Via responses.db.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

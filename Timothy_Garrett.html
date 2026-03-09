@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timothy W. "Timmy" Garrett — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Timothy W. "Timmy" Garrett</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Timothy W. "Timmy" Garrett</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Vice-Mayor, Town of Appomattox</td></tr>
+    <tr><td>In office</td><td>July 2015 &ndash; present</td></tr>
+    <tr><td>Mayor</td><td>Paul D. Harvey (2015&ndash;2020)<br>Richard C. Conner (2020&ndash;present)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Appomattox Town Council</td></tr>
+    <tr><td>In office</td><td>July 2010 &ndash; present</td></tr>
+    <tr><td>Elected</td><td>2010, 2012, 2014, 2016, 2018, 2020, 2022</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Fire Chief, Appomattox Volunteer Fire Department</td></tr>
+    <tr><td>In office</td><td>c.&nbsp;2002 &ndash; 2018</td></tr>
+    <tr><td>Succeeded by</td><td>Jonathan Garrett (son)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Full name</td><td>Timothy W. Garrett</td></tr>
+    <tr><td>Residence</td><td>Appomattox, Virginia</td></tr>
+    <tr><td>Employer</td><td>Appomattox County Public Schools (Maintenance Supervisor)</td></tr>
+    <tr><td>Children</td><td>Jonathan Garrett (AVFD Fire Chief)</td></tr>
+    <tr><td>Brother</td><td><a href="David_T_Garrett_Jr.html" class="redlink">David T. Garrett, Jr.</a> (former Town Manager)</td></tr>
+  </table>
+</div>
+
+<!-- LEAD PARAGRAPH -->
+<p><b>Timothy W. "Timmy" Garrett</b> is an American public servant, firefighter, and tradesman who has served on the Appomattox Town Council since 2010 and as Vice-Mayor since 2015. Before entering elected office, Garrett served for approximately sixteen years as Fire Chief of the <a href="Appomattox_Volunteer_Fire_Department.html">Appomattox Volunteer Fire Department</a> (AVFD), leading the department through the construction of its modern firehouse, the 2008 Williams Transco pipeline explosion, and numerous emergency responses. He is also the Maintenance Supervisor for Appomattox County Public Schools. The brother of former Town Manager David T. Garrett, Jr., and father of current AVFD Fire Chief Jonathan Garrett, Timothy Garrett represents a multi-generational family commitment to public service in Appomattox County.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_life">Early life and family</a></li>
+    <li><a href="#fire_department">Appomattox Volunteer Fire Department</a>
+      <ol>
+        <li><a href="#fire_chief">Fire Chief (c.&nbsp;2002&ndash;2018)</a></li>
+        <li><a href="#firehouse">New firehouse construction (2003&ndash;2005)</a></li>
+        <li><a href="#pipeline">Pipeline explosion (2008)</a></li>
+        <li><a href="#retirement">Retirement and succession</a></li>
+      </ol>
+    </li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#town_council">Appomattox Town Council</a>
+      <ol>
+        <li><a href="#election_2010">2010 election and the waterline</a></li>
+        <li><a href="#subsequent_elections">Subsequent elections</a></li>
+        <li><a href="#vice_mayor">Vice-Mayor (2015&ndash;present)</a></li>
+        <li><a href="#council_service">Council service highlights</a></li>
+      </ol>
+    </li>
+    <li><a href="#electoral_history">Electoral history</a></li>
+    <li><a href="#community_service">Other public and community service</a></li>
+    <li><a href="#personal_life">Personal life</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<h2 id="early_life">Early life and family</h2>
+
+<p>Timothy W. Garrett was born and raised in Appomattox, Virginia. He is the brother of David T. Garrett, Jr., who served for decades as the Town of Appomattox's Director of Public Works and later as Town Manager, a position to which he was appointed in June 2000.<sup><a href="#ref1">[1]</a></sup> The Garrett family is deeply rooted in Appomattox civic life: Timothy's brother David began working for the Town in the early 1980s and was approved for a salary of $10,500 per year by Town Council in March 1984.<sup><a href="#ref2">[2]</a></sup> A 1975 <i>Times-Virginian</i> mention of the <a href="Historic_Appomattox_Railroad_Festival.html">Appomattox Railroad Festival</a> lists Tim Garrett alongside Matt Garrett, David Garrett, Jr., and Todd Garrett, indicating the family's early involvement in community events.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Garrett possesses extensive expertise in HVAC, electrical, and plumbing trades&mdash;skills that would prove valuable both in his fire department leadership and his later service on Town Council.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h2 id="fire_department">Appomattox Volunteer Fire Department</h2>
+
+<h3 id="fire_chief">Fire Chief (c.&nbsp;2002&ndash;2018)</h3>
+
+<p>Garrett joined the <a href="Appomattox_Volunteer_Fire_Department.html">Appomattox Volunteer Fire Department</a> in 1986.<sup><a href="#ref5">[5]</a></sup> By 2002, he had risen to the position of Fire Chief, leading the all-volunteer department in providing fire suppression, rescue, and emergency services to the Town of Appomattox and surrounding Appomattox County. His first documented appearances in the public record as chief include receiving donations on behalf of the department: a $250 check from New Hope Baptist Church in March 2002 and an $800 check from the Appomattox Junior Woman's Club in May of that year, both for the department's building fund.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>Throughout his sixteen years as chief, Garrett was a visible and accessible leader. He regularly represented the department at public events, conducted fire prevention education at local schools and daycare centers, and issued safety advisories to the community through the <i>Times-Virginian</i>.<sup><a href="#ref7">[7]</a></sup> In February 2004, following a string of winter house fires, Garrett urged residents to check their chimneys and practice heating safety.<sup><a href="#ref8">[8]</a></sup> He also led the department in responding to dozens of structure fires, vehicle accidents, brush fires, and hazardous material incidents over his tenure.</p>
+
+<h3 id="firehouse">New firehouse construction (2003&ndash;2005)</h3>
+
+<p>Garrett's most significant achievement as Fire Chief was spearheading the construction of the AVFD's modern firehouse on Business Route 460 East. The department had long operated from a cramped facility beneath the Appomattox Town Office Building on Linden Street. Ground was broken on September 3, 2003, on a new purpose-built station.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>Garrett led a fundraising committee that included John Caldwell, Ronnie Spiggle, Watkins Abbitt, Del Chambers, James Cheatham, Greg Heath, Phillip Jamerson, Anne Miller, and Bill Slagle. The total project cost was approximately $490,000. The County Board of Supervisors contributed $150,000 and the Town of Appomattox allocated $90,000, covering roughly half the budget. The remaining funds were raised through community donations, golf tournaments, yard sales, bake sales, and a $10,000 grant from the Walter J. Payne Foundation.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>Garrett and the volunteer firefighters significantly reduced construction costs through donated labor, performing partition walls, sheetrock installation, and portions of the plumbing and electrical work themselves. By February 2005, the firehouse was approximately 75 percent complete, though the department was still short about $140,000.<sup><a href="#ref11">[11]</a></sup> The 8,400-square-foot facility was sited on land donated by the adjacent Appomattox Volunteer Rescue Squad.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>More than 200 people attended the grand opening on October 5, 2005, with remarks from U.S. Congressman Virgil Goode, Mayor Ronnie Spiggle, and Board of Supervisors Chairman <a href="Samuel_E_Carter.html">Samuel Carter</a>. Garrett expressed gratitude for community support and acknowledged the firefighters who had worked nights and weekends on the project.<sup><a href="#ref13">[13]</a></sup></p>
+
+<h3 id="pipeline">Pipeline explosion (2008)</h3>
+
+<p>On September 14, 2008, a 30-inch Williams Transco natural gas pipeline ruptured in Appomattox County at 7:44 a.m., sending a 30-foot section of pipe out of the ground. The escaping gas crossed a power line, igniting a massive fire. Garrett, who was at home, recalled the deafening sound and recognized immediately from his training that it was coming from the pipeline. His pager activated shortly afterward.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>Under Garrett's command, AVFD personnel and fire departments from surrounding communities responded, handling perimeter fires and working together to contain the blaze. After approximately two hours, the main fire burned itself out. Garrett credited the department's training with Williams, noting the value of emergency preparedness exercises the pipeline company had conducted with local departments.<sup><a href="#ref15">[15]</a></sup> One year later, Williams Transco hosted an appreciation dinner for the AVFD, commending the department's response.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h3 id="retirement">Retirement and succession</h3>
+
+<p>Garrett retired as Fire Chief in early 2018 after approximately sixteen years in the position. The department voted his son, Jonathan Garrett, as the new chief. Jonathan had joined the AVFD in 2007, initially serving as a driver for the Appomattox Volunteer Rescue Squad before transferring to the fire department, where he rose through the ranks from Lieutenant to Assistant Fire Chief. In a 2018 <i>Times-Virginian</i> profile naming Jonathan as a "Hometown Hero," the younger Garrett credited his father as his primary influence and mentor, stating that his uncles had also served on the department through the years.<sup><a href="#ref17">[17]</a></sup></p>
+
+<h2 id="career">Career</h2>
+
+<p>In addition to his volunteer fire service, Garrett has worked professionally as Maintenance Supervisor for Appomattox County Public Schools, responsible for the upkeep and capital improvement of the county's school buildings. In October 2017, he presented pressing HVAC issues at the Appomattox Middle School and High School to the School Board, detailing the need to replace aging rooftop units, chillers, and boilers across the district. Garrett noted that 17 rooftop HVAC units at the high school, installed in a 2000 retrofit, were failing under heat and humidity stress.<sup><a href="#ref18">[18]</a></sup> He also assisted with other school projects: in 2004, he helped spread ground cover under playground equipment at Appomattox Elementary School as part of a maintenance department project.<sup><a href="#ref19">[19]</a></sup></p>
+
+<h2 id="town_council">Appomattox Town Council</h2>
+
+<h3 id="election_2010">2010 election and the waterline</h3>
+
+<p>Garrett first ran for the Appomattox Town Council in the May 4, 2010 election, one of the most consequential local elections in the town's history. The contest was widely understood as a referendum on the proposed <a href="Appomattox_Water_System_History.html">U.S. 460 waterline from Concord to Appomattox</a>, which had been stalled for years by divisions on the prior council. Garrett ran as a vocal supporter of the waterline, arguing that it would be less expensive, more reliable than the town's aging well system, and would improve fire protection ratings, potentially lowering homeowners' insurance premiums.<sup><a href="#ref20">[20]</a></sup></p>
+
+<p>Garrett received endorsements from multiple community figures, including Virginia Delegate Watkins M. Abbitt, who called him one of five candidates who "demonstrated a strong understanding of the needs of the Town."<sup><a href="#ref21">[21]</a></sup> Endorsement letters in the <i>Times-Virginian</i> cited his 21 years of volunteer fire service, his effectiveness as chief during the pipeline explosion, and his trade expertise in HVAC, electrical, and plumbing as qualifications for office.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>Garrett was elected as one of six pro-waterline candidates who swept the council seats, fundamentally shifting the political dynamics of the town government. The new council moved swiftly on the waterline: at its July 2010 organizational meeting, Garrett was appointed to the waterline committee alongside Councilman Norman H. "Jimmy" Mayberry to negotiate maintenance and billing terms with the County.<sup><a href="#ref23">[23]</a></sup></p>
+
+<h3 id="subsequent_elections">Subsequent elections</h3>
+
+<p>Garrett has been re-elected to the Town Council in every subsequent cycle. He ran unopposed in 2012, 2014, and 2016 alongside the other incumbents.<sup><a href="#ref24">[24]</a></sup> In 2018, he was re-elected alongside newcomers Jonathan Garrett and James Boyce, who replaced retiring members C. Lewis McDearmon and Erin Finch.<sup><a href="#ref25">[25]</a></sup> In the 2020 election, Garrett was again elected alongside <a href="Nathan_A_Simpson.html">Nathan A. Simpson</a>, Jonathan Garrett, <a href="Mary_Lou_Spiggle.html">Mary Lou Spiggle</a>, <a href="Paul_Harvey.html">Paul D. Harvey</a>, and Claudia G. Puckette.<sup><a href="#ref26">[26]</a></sup></p>
+
+<p>In the November 2022 election&mdash;the first held under the new staggered-term system&mdash;Garrett was the top vote-getter among council candidates with 356 votes (22.40 percent), earning a four-year term extending to 2026. He was sworn in alongside re-elected members in December 2022.<sup><a href="#ref27">[27]</a></sup></p>
+
+<h3 id="vice_mayor">Vice-Mayor (2015&ndash;present)</h3>
+
+<p>In July 2015, the Appomattox Town Council voted to appoint Garrett as Vice-Mayor, a role that involves standing in for the Mayor during absences.<sup><a href="#ref28">[28]</a></sup> He was re-elected to the vice-mayoral position by unanimous council vote in July 2020, nominated by Councilwoman <a href="Mary_Lou_Spiggle.html">Mary Lou Spiggle</a>.<sup><a href="#ref29">[29]</a></sup> He has continued to serve as Vice-Mayor (sometimes styled "Deputy Mayor") under Mayor Richard C. Conner.</p>
+
+<h3 id="council_service">Council service highlights</h3>
+
+<p>Garrett's council tenure has spanned a period of significant change for the Town of Appomattox. Key highlights include his work on the waterline committee that brought the U.S. 460 waterline project to fruition, his appointment to the Physical Development Committee in 2020 alongside Councilmembers Spiggle and Simpson, and his involvement in capital funding decisions for the fire department.<sup><a href="#ref30">[30]</a></sup> In August 2020, the council unanimously approved $240,000 toward a new fire engine for the AVFD, a project Garrett had championed.<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>In September 2018, Garrett suggested that the Economic Development Authority sign an $8,000 check to the Appomattox Tourism Committee for television advertisements promoting the town's Christmas parade, a maneuver that avoided impacting the town's planned budget.<sup><a href="#ref32">[32]</a></sup> In June 2020, he presented former Mayor <a href="Paul_Harvey.html">Paul Harvey</a> with a plaque honoring Harvey's twelve years of mayoral service.<sup><a href="#ref33">[33]</a></sup></p>
+
+<p>In December 2024, the Town Council unanimously agreed to contribute $300,000 toward the purchase of a 2014 Pierce Arrow XT ladder truck for the AVFD, with the Appomattox County Board of Supervisors approving a complementary $450,000 interest-free loan to fund the remainder of the $650,000 acquisition.<sup><a href="#ref34">[34]</a></sup></p>
+
+<h2 id="electoral_history">Electoral history</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th><th>Office</th><th>Result</th><th>Notes</th>
+  </tr>
+  <tr>
+    <td>2010</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Elected as one of six pro-waterline candidates; eleven candidates for six seats</td>
+  </tr>
+  <tr>
+    <td>2012</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Re-elected; five incumbents returned plus newcomer Claudia Puckette</td>
+  </tr>
+  <tr>
+    <td>2014</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Re-elected; seven candidates for six seats (first contested race in four years)</td>
+  </tr>
+  <tr>
+    <td>2016</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Re-elected unopposed</td>
+  </tr>
+  <tr>
+    <td>2018</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Re-elected; sworn in June 11, 2018</td>
+  </tr>
+  <tr>
+    <td>2020</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Re-elected; election postponed to May 19 due to COVID-19</td>
+  </tr>
+  <tr>
+    <td>2022</td>
+    <td>Town Council</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Top vote-getter (356 votes, 22.40%); earned four-year term under new staggered system</td>
+  </tr>
+</table>
+
+<h2 id="community_service">Other public and community service</h2>
+
+<p>Beyond his fire department and council roles, Garrett has served on the Appomattox County Local Emergency Planning Committee, to which he was appointed in March 2010 as the fire department's representative.<sup><a href="#ref35">[35]</a></sup> He has served on several council-appointed joint committees with the Board of Supervisors, including the waterline committee, and was appointed to the Physical Development Committee in July 2020.<sup><a href="#ref36">[36]</a></sup></p>
+
+<p>Garrett participated in community 9/11 memorial ceremonies organized in downtown Appomattox, leading fire department members in tributes to first responders and national service members.<sup><a href="#ref37">[37]</a></sup> He has also been involved in the annual Appomattox Christmas parade and other civic events throughout his decades of public service.</p>
+
+<h2 id="personal_life">Personal life</h2>
+
+<p>Timothy Garrett is the brother of David T. Garrett, Jr., who served the Town of Appomattox for decades, rising from a public works employee in the 1980s to Town Manager, a position he held from 2000 until his retirement. David Garrett managed the town's day-to-day operations during a period of significant infrastructure change, including the early stages of the waterline debate and the construction of the new firehouse.<sup><a href="#ref38">[38]</a></sup></p>
+
+<p>Timothy's son, Jonathan Garrett, succeeded him as AVFD Fire Chief in 2018 and also served briefly on the Appomattox Town Council from July 2018 until August 2020, when he resigned after relocating outside the town limits.<sup><a href="#ref39">[39]</a></sup> Jonathan is also the Automotive Technology instructor at <a href="Appomattox_County_High_School.html">Appomattox County High School</a>.<sup><a href="#ref40">[40]</a></sup> The Garrett family's combined decades of service to the fire department, town government, and school system represent one of the most sustained records of civic engagement in Appomattox County's modern history.</p>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"David T. Garrett Appointed Town Manager," <i>Times-Virginian</i>, June 30, 2000 (via responses.db)</li>
+    <li id="ref2">Town of Appomattox Council Minutes, Book 2, Plate 151, March 12, 1984: Council approved salary for David Garrett, Jr. of $10,500 per year</li>
+    <li id="ref3">"Appomattox Railroad Festival held in 1975," <i>Times-Virginian</i>, 1975 (via responses.db)</li>
+    <li id="ref4">"Mayor Harvey's opponents spreading lies; reader also supports Garrett for Council," <i>Times-Virginian</i>, April 21, 2010</li>
+    <li id="ref5">"Hometown Hero: Jonathan Garrett," <i>Times-Virginian</i>, March 31, 2018: Jonathan Garrett states his father Timmy "had been on the Department since 1986 and was the chief for 16 years"</li>
+    <li id="ref6">"New Hope Baptist Church donates to Fire Department," <i>Times-Virginian</i>, March 14, 2002; "Appomattox Junior Woman's Club Donates to Volunteer Fire Department," <i>Times-Virginian</i>, May 8, 2002 (via responses.db)</li>
+    <li id="ref7">"Appomattox Fire Department teaches fire prevention at daycare," <i>Times-Virginian</i>, October 24, 2002 (via responses.db)</li>
+    <li id="ref8">"County home sustains heavy fire damage," <i>Times-Virginian</i>, February 5, 2004</li>
+    <li id="ref9">"Hundreds attend Open House for new AVFD firehouse," <i>Times-Virginian</i>, October 5, 2005 (via responses.db)</li>
+    <li id="ref10">"Firehouse slates Open House for Oct. 2 at 3 p.m.," <i>Times-Virginian</i>, September 28, 2005; "Walter J. Payne Foundation presents $80,000 in grants to local groups," <i>Times-Virginian</i>, September 29, 2004 (via responses.db)</li>
+    <li id="ref11">"New firehouse nears completion; more funds needed," <i>Times-Virginian</i>, February 9, 2005 (via responses.db)</li>
+    <li id="ref12">"Firehouse slates Open House for Oct. 2 at 3 p.m.," <i>Times-Virginian</i>, September 28, 2005 (via responses.db)</li>
+    <li id="ref13">"Hundreds attend Open House for new AVFD firehouse," <i>Times-Virginian</i>, October 5, 2005 (via responses.db)</li>
+    <li id="ref14">"Williams plans appreciation event for AVFD," <i>Times-Virginian</i>, September 9, 2009</li>
+    <li id="ref15">"Williams plans appreciation event for AVFD," <i>Times-Virginian</i>, September 9, 2009</li>
+    <li id="ref16">"Williams Transco plans appreciation event for AVFD," <i>Times-Virginian</i>, September 9, 2009 (via responses.db)</li>
+    <li id="ref17">"Hometown Hero: Jonathan Garrett," <i>Times-Virginian</i>, March 31, 2018</li>
+    <li id="ref18">"HVAC issues addressed at School Board meeting," <i>Times-Virginian</i>, October 5, 2017</li>
+    <li id="ref19">"AES principal thanks supporters of playground," <i>Times-Virginian</i>, June 30, 2004</li>
+    <li id="ref20">"Timothy Garrett supports U.S. 460 waterline project," <i>Times-Virginian</i>, April 28, 2010 (via responses.db)</li>
+    <li id="ref21">"Del. Abbitt endorses Mayor Harvey, council candidates," <i>Times-Virginian</i>, April 28, 2010</li>
+    <li id="ref22">"Mayor Harvey's opponents spreading lies; reader also supports Garrett for Council," <i>Times-Virginian</i>, April 21, 2010; "Support Spiggle, Garrett, Conner for Town Council," <i>Times-Virginian</i>, April 21, 2010</li>
+    <li id="ref23">"Appomattox Town Council Appoints Members to Waterline Committee," <i>Times-Virginian</i>, July 14, 2010 (via responses.db)</li>
+    <li id="ref24">"Five Incumbents Re-elected to Appomattox Town Council," <i>Times-Virginian</i>, May 2, 2012; "Appomattox mayoral and council election: all incumbents running unopposed," <i>Times-Virginian</i>, March 9, 2016 (via responses.db)</li>
+    <li id="ref25">"June Town Council Meeting held June 11," <i>Times-Virginian</i>, June 16, 2018</li>
+    <li id="ref26">"Election results are in; new mayors welcomed," <i>Times-Virginian</i>, May 19, 2020</li>
+    <li id="ref27">"Unofficial local election results are listed," <i>Times-Virginian</i>, November 9, 2022; "Council members and mayor take oaths," <i>Times-Virginian</i>, January 4, 2023</li>
+    <li id="ref28">"Timmy Garrett Appointed Vice-Mayor of Appomattox," <i>Times-Virginian</i>, July 15, 2015 (via responses.db)</li>
+    <li id="ref29">"Timothy Garrett elected Vice Mayor," <i>Times-Virginian</i>, July 20, 2020 (via responses.db)</li>
+    <li id="ref30">"Physical Development Committee appointments made," <i>Times-Virginian</i>, July 20, 2020 (via responses.db)</li>
+    <li id="ref31">"Appomattox Town Council approves $240,000 for fire truck," <i>Times-Virginian</i>, August 20, 2020 (via responses.db)</li>
+    <li id="ref32">"Council recommends EDA sign $8,000 check to tourism committee," <i>Times-Virginian</i>, September 13, 2018 (via responses.db)</li>
+    <li id="ref33">"Paul Harvey Honored for Mayoral Service," <i>Times-Virginian</i>, June 25, 2020 (via responses.db)</li>
+    <li id="ref34">"Appomattox County Supervisors approve $450,000 loan for fire truck," <i>Times-Virginian</i>, December 18, 2024; "Appomattox Town Council agrees to contribute $300,000 for fire truck," <i>Times-Virginian</i>, December 18, 2024 (via responses.db)</li>
+    <li id="ref35">"Citizens appointed to Appomattox Local Emergency Planning Committee," <i>Times-Virginian</i>, March 10, 2010 (via responses.db)</li>
+    <li id="ref36">"Physical Development Committee appointments made," <i>Times-Virginian</i>, July 20, 2020; "Council members appointed to joint committees," <i>Times-Virginian</i>, July 14, 2010 (via responses.db)</li>
+    <li id="ref37">"Appomattox hosts 9/11 ceremony," <i>Times-Virginian</i>, September 15, 2004; "Residents pay tribute to Sept. 11 victims in ceremony," <i>Times-Virginian</i>, September 14, 2005 (via responses.db)</li>
+    <li id="ref38">"David T. Garrett Appointed Town Manager," <i>Times-Virginian</i>, June 30, 2000; "Town Manager David Garrett assumed mayor's administrative duties," <i>Times-Virginian</i>, c.&nbsp;2002 (via responses.db)</li>
+    <li id="ref39">"Jonathan Garrett resigns from Appomattox Town Council," <i>Times-Virginian</i>, September 25, 2020; "Appomattox Town Council Seat Vacancy to Be Advertised," <i>Times-Virginian</i>, August 28, 2020 (via responses.db)</li>
+    <li id="ref40">"Hometown Hero: Jonathan Garrett," <i>Times-Virginian</i>, March 31, 2018</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

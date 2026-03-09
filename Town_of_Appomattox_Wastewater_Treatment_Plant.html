@@ -163,12 +163,20 @@
   }
   #apxwiki-nav .nav-inner {
     max-width: 960px; margin: 0 auto;
-    display: flex; align-items: center; padding: 8px 30px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
   }
   #apxwiki-nav .nav-brand {
     font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
   }
   #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
 
   /* Footer */
   #apxwiki-footer {
@@ -203,6 +211,21 @@
   }
   .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
 
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
   @media print {
     body { background: white; font-size: 11pt; }
     #content { border: none; padding: 0; max-width: 100%; }
@@ -221,6 +244,10 @@
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
   </div>
 </div>
 
@@ -619,6 +646,16 @@
   Generated from local newspaper archives, government meeting minutes, and public records.
   Last updated March 9, 2026.
 </div>
+
+
+
+
+
+
+
+
+
+
 
 
 

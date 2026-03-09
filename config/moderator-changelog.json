@@ -1,0 +1,38 @@
+{
+  "_comment": "Tracks substantive editorial changes to ApxWiki articles. Each entry represents a moderation action — not routine build updates or cosmetic fixes, but changes to article content, tone, structure, or sourcing that alter the reader's experience.",
+  "schema_version": "1.0",
+  "entries": [
+    {
+      "id": "MCL-001",
+      "article": {
+        "filename": "Appomattox_Center_for_Business_and_Commerce_History.html",
+        "title": "Appomattox Center for Business and Commerce",
+        "type": "government-topic-history"
+      },
+      "action": "full_rewrite",
+      "moderator": "nasimpson",
+      "timestamp": "2026-03-09T09:08:00Z",
+      "justification": "Original article predates ApxWiki styleguide v1.2. Article read like an editorial or opinion column — used evaluative language ('extraordinary historical full-circle,' 'devastating in multiple ways,' 'propitious'), included extended macroeconomic commentary without local sourcing, and lacked inline citations. Rewritten to satisfy encyclopedic tone, citation, and structural requirements of the current style guide.",
+      "changes_summary": "Converted flat source list to 51 numbered inline citations; added right-floated infobox with key dates, infrastructure, and tenants; added timeline table; removed duplicate plain-text table of contents; removed standalone 'Contextual Notes' macro-economic essay section and integrated relevant economic context into chronological narrative; neutralized editorial voice throughout; added cross-links to Appomattox Water System History; restructured section headings to follow topic-history conventions; added See Also section.",
+      "previous_version": {
+        "word_count_approx": 5800,
+        "reference_count": 36,
+        "reference_style": "flat_bullet_list",
+        "date_created": "2026-02-24",
+        "had_infobox": false,
+        "had_inline_citations": false,
+        "had_timeline_table": false
+      },
+      "new_version": {
+        "word_count_approx": 4200,
+        "reference_count": 51,
+        "reference_style": "numbered_inline_superscript",
+        "had_infobox": true,
+        "had_inline_citations": true,
+        "had_timeline_table": true
+      },
+      "styleguide_version": "1.2",
+      "notes": "This was the first article created for ApxWiki (2026-02-24) and served as a prototype before the style guide and build system were finalized. The original content was factually sound in most respects but did not conform to the encyclopedic register, citation format, or structural conventions established for subsequent articles. No factual claims were removed — editorial framing and unsourced macro-economic commentary were either cut or condensed and attributed."
+    }
+  ]
+}

@@ -163,12 +163,20 @@
   }
   #apxwiki-nav .nav-inner {
     max-width: 960px; margin: 0 auto;
-    display: flex; align-items: center; padding: 8px 30px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
   }
   #apxwiki-nav .nav-brand {
     font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
   }
   #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
 
   /* Footer */
   #apxwiki-footer {
@@ -203,6 +211,21 @@
   }
   .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
 
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
   @media print {
     body { background: white; font-size: 11pt; }
     #content { border: none; padding: 0; max-width: 100%; }
@@ -219,6 +242,10 @@
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
   </div>
 </div>
 
@@ -236,111 +263,126 @@
   <li>
     <a href="AVAIO_Data_Center_Project.html">AVAIO Data Center Project (2024)</a>
     <div class="desc">The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.</div>
-    <div class="meta">Notable Event &middot; 33,662 chars</div>
+    <div class="meta">Notable Event &middot; 33,672 chars</div>
   </li>
   <li>
     <a href="Alfred_L_Jones_III.html">Alfred &quot;Al&quot; Jones III</a>
     <div class="desc">Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.</div>
-    <div class="meta">Biography &middot; 38,469 chars</div>
+    <div class="meta">Biography &middot; 38,479 chars</div>
   </li>
   <li>
     <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a>
     <div class="desc">History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.</div>
-    <div class="meta">Government Topic History &middot; 50,906 chars</div>
+    <div class="meta">Government Topic History &middot; 42,970 chars</div>
   </li>
   <li>
     <a href="Appomattox_County_Courthouse_History.html">Appomattox County Courthouse</a>
     <div class="desc">History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.</div>
-    <div class="meta">Government Topic History &middot; 41,026 chars</div>
+    <div class="meta">Government Topic History &middot; 41,036 chars</div>
   </li>
   <li>
     <a href="Appomattox_County_High_School.html">Appomattox County High School</a>
     <div class="desc">The county&#x27;s public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.</div>
-    <div class="meta">Organization / Entity &middot; 70,443 chars</div>
+    <div class="meta">Organization / Entity &middot; 70,453 chars</div>
   </li>
   <li>
     <a href="Appomattox_County_School_Board_History.html">Appomattox County School Board History</a>
     <div class="desc">History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.</div>
-    <div class="meta">Government Topic History &middot; 61,684 chars</div>
+    <div class="meta">Government Topic History &middot; 61,694 chars</div>
   </li>
   <li>
     <a href="Appomattox_Town_County_Boundary_Dispute_2012.html">Appomattox Town–County Boundary Line Dispute (2006–2012)</a>
     <div class="desc">The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.</div>
-    <div class="meta">Notable Event &middot; 48,789 chars</div>
+    <div class="meta">Notable Event &middot; 48,799 chars</div>
   </li>
   <li>
     <a href="Appomattox_Volunteer_Fire_Department.html">Appomattox Volunteer Fire Department</a>
     <div class="desc">The county&#x27;s primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.</div>
-    <div class="meta">Organization / Entity &middot; 29,665 chars</div>
+    <div class="meta">Organization / Entity &middot; 33,495 chars</div>
   </li>
   <li>
     <a href="Appomattox_Walmart.html">Appomattox Walmart</a>
     <div class="desc">The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.</div>
-    <div class="meta">Notable Event &middot; 55,140 chars</div>
+    <div class="meta">Notable Event &middot; 55,150 chars</div>
+  </li>
+  <li>
+    <a href="Appomattox_County_Broadband_History.html">Broadband and Internet Infrastructure in Appomattox County</a>
+    <div class="desc">History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.</div>
+    <div class="meta">Government Topic History &middot; 57,915 chars</div>
   </li>
   <li>
     <a href="CVCC_Appomattox_Center.html">CVCC Appomattox Center</a>
     <div class="desc">Central Virginia Community College&#x27;s satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.</div>
-    <div class="meta">Organization / Entity &middot; 52,507 chars</div>
+    <div class="meta">Organization / Entity &middot; 52,517 chars</div>
   </li>
   <li>
     <a href="Historic_Appomattox_Railroad_Festival.html">Historic Appomattox Railroad Festival</a>
     <div class="desc">The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman&#x27;s Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.</div>
-    <div class="meta">Notable Event &middot; 50,005 chars</div>
+    <div class="meta">Notable Event &middot; 50,015 chars</div>
   </li>
   <li>
     <a href="Mary_Lou_Spiggle.html">Mary Lou Spiggle</a>
     <div class="desc">Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.</div>
-    <div class="meta">Biography &middot; 37,239 chars</div>
+    <div class="meta">Biography &middot; 37,249 chars</div>
   </li>
   <li>
     <a href="Nathan_A_Simpson.html">Nathan A. Simpson</a>
     <div class="desc">Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.</div>
-    <div class="meta">Biography &middot; 30,654 chars</div>
+    <div class="meta">Biography &middot; 30,664 chars</div>
   </li>
   <li>
     <a href="Paul_Harvey.html">Paul D. Harvey</a>
     <div class="desc">Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.</div>
-    <div class="meta">Biography &middot; 36,284 chars</div>
+    <div class="meta">Biography &middot; 36,294 chars</div>
   </li>
   <li>
     <a href="Samuel_E_Carter.html">Samuel E. &quot;Sammy&quot; Carter</a>
     <div class="desc">Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, &quot;Voice of the Raiders,&quot; and community leader.</div>
-    <div class="meta">Biography &middot; 35,281 chars</div>
+    <div class="meta">Biography &middot; 35,291 chars</div>
   </li>
   <li>
     <a href="appomattox_solid_waste_history.html">Solid Waste Management in Appomattox County, Virginia</a>
     <div class="desc">History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.</div>
-    <div class="meta">Government Topic History &middot; 79,179 chars</div>
+    <div class="meta">Government Topic History &middot; 79,189 chars</div>
   </li>
   <li>
     <a href="appomattox_county_tax_history.html">Taxation in Appomattox County, Virginia</a>
     <div class="desc">History of real estate and personal property taxes, reassessments, and related relief programs.</div>
-    <div class="meta">Government Topic History &middot; 89,229 chars</div>
+    <div class="meta">Government Topic History &middot; 89,239 chars</div>
+  </li>
+  <li>
+    <a href="Thomasville_Furniture_Appomattox.html">Thomasville Furniture (Appomattox)</a>
+    <div class="desc">History of the Thomasville Furniture plant (1974–2011), Appomattox County&#x27;s largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building&#x27;s afterlife including the failed Lindenburg venture and Virginia MetalFab&#x27;s arrival.</div>
+    <div class="meta">Organization / Entity &middot; 45,908 chars</div>
+  </li>
+  <li>
+    <a href="Timothy_Garrett.html">Timothy W. &quot;Timmy&quot; Garrett</a>
+    <div class="desc">AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.</div>
+    <div class="meta">Biography &middot; 34,031 chars</div>
   </li>
   <li>
     <a href="Town_of_Appomattox_Wastewater_Treatment_Plant.html">Town of Appomattox Wastewater Treatment Plant (2005–2020)</a>
     <div class="desc">History of the Town of Appomattox&#x27;s two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.</div>
-    <div class="meta">Government Topic History &middot; 53,109 chars</div>
+    <div class="meta">Government Topic History &middot; 53,119 chars</div>
   </li>
   <li>
     <a href="Appomattox_Water_System_History.html">Town of Appomattox Water System</a>
     <div class="desc">History of the town water system from wells to the county pipeline, 1990–2024.</div>
-    <div class="meta">Government Topic History &middot; 80,138 chars</div>
+    <div class="meta">Government Topic History &middot; 80,148 chars</div>
   </li>
   <li>
     <a href="William_E_Jamerson.html">W.E. &quot;Bill&quot; Jamerson</a>
     <div class="desc">Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson &amp; Sons construction company and championed community development for over five decades.</div>
-    <div class="meta">Biography &middot; 35,165 chars</div>
+    <div class="meta">Biography &middot; 35,175 chars</div>
   </li>
   <li>
     <a href="Winfred_D_Nash.html">Winfred D. Nash</a>
     <div class="desc">Nuclear industry executive, BWXT president, and Appomattox County civic leader.</div>
-    <div class="meta">Biography &middot; 27,307 chars</div>
+    <div class="meta">Biography &middot; 25,613 chars</div>
   </li>
 </ul>
 
-<p class="stats">21 published articles &middot; ApxWiki</p>
+<p class="stats">24 published articles &middot; ApxWiki</p>
 
 <h2>Proposed Articles &mdash; Priority Stubs</h2>
 
@@ -604,7 +646,7 @@
     <div class="desc">History of the county jail, regional jail proposals, law enforcement operations, and criminal justice policy.</div>
   </li>
   <li>
-    <a class="redlink" href="Appomattox_County_Broadband_History.html">Broadband and Internet Infrastructure in Appomattox County</a>
+    <a href="Appomattox_County_Broadband_History.html">Broadband and Internet Infrastructure in Appomattox County</a> &#x2714;
     <div class="desc">History of efforts to expand high-speed internet access in Appomattox County.</div>
   </li>
   <li>
@@ -785,7 +827,7 @@
   </li>
 </ul>
 
-<p class="stats" style="margin-top:18px;">21 published articles &middot; 100 proposed stubs &middot; ApxWiki</p>
+<p class="stats" style="margin-top:18px;">24 published articles &middot; 99 proposed stubs &middot; ApxWiki</p>
 </div>
 </body>
 </html>

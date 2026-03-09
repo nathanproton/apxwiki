@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broadband and Internet Infrastructure in Appomattox County — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Broadband and Internet Infrastructure in Appomattox County</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<div class="infobox">
+  <div class="infobox-title">Broadband and Internet Infrastructure<br>in Appomattox County, Virginia</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Overview</td></tr>
+    <tr><td>Jurisdiction</td><td>Appomattox County &amp; Town of Appomattox</td></tr>
+    <tr><td>Governing bodies</td><td>Board of Supervisors; Town Council; School Board</td></tr>
+    <tr><td>Time span</td><td>c.&nbsp;1990 &ndash; present</td></tr>
+    <tr><td>Current status</td><td>Fiber buildout ongoing (Firefly / CVEC)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key Dates</td></tr>
+    <tr><td>c.&nbsp;1990</td><td>Commonwealth Cable Group begins service to Pamplin area</td></tr>
+    <tr><td>Sep 2005</td><td>Gov. Warner groundbreaking for MBC broadband hub at industrial park</td></tr>
+    <tr><td>Jan 2008</td><td>Bridgemaxx launches first WiMax network in Virginia</td></tr>
+    <tr><td>Dec 2009</td><td>BOS creates Broadband Authority</td></tr>
+    <tr><td>Nov 2013</td><td>School Board issues RFP for fiber optic construction</td></tr>
+    <tr><td>Mar 2018</td><td>CVEC announces fiber-optic network construction</td></tr>
+    <tr><td>Mar 2019</td><td>Firefly Fiber Broadband launches in Appomattox</td></tr>
+    <tr><td>Mar 2020</td><td>CVEC / Firefly awarded $28M USDA Reconnect grant</td></tr>
+    <tr><td>Dec 2021</td><td>$79M VATI grant awarded for RISE project</td></tr>
+    <tr><td>Aug 2024</td><td>$12.2M VATI grant for final coverage gaps</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key Figures</td></tr>
+    <tr><td>Tad Deriso</td><td>MBC General Manager</td></tr>
+    <tr><td>Brett Arbogast</td><td>ACPS Director of Technology</td></tr>
+    <tr><td>Gary Wood</td><td>Firefly CEO &amp; President</td></tr>
+    <tr><td>Warren Kane</td><td>B2X Online CEO</td></tr>
+    <tr><td>Galen Creekmore</td><td>CVEC Key Accounts Representative</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Related Articles</td></tr>
+    <tr><td colspan="2"><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a></td></tr>
+  </table>
+</div>
+
+<p><b>Broadband and internet infrastructure in Appomattox County, Virginia</b> has been an evolving challenge spanning more than three decades, from the arrival of the first cable television provider in the early 1990s to the multi-million-dollar fiber-optic buildout of the 2020s. The rural character of the county&mdash;low population density spread across 334 square miles&mdash;made it economically unattractive for private telecommunications companies to invest in last-mile connectivity, leaving large portions of the population dependent on dial-up internet well into the mid-2000s. Beginning with the Mid-Atlantic Broadband Cooperative's regional backbone initiative in 2005, a series of public-private partnerships, federal and state grants, school division technology projects, and ultimately Central Virginia Electric Cooperative's Firefly Fiber Broadband subsidiary have progressively extended high-speed internet access across the county. As of 2024, a combination of Virginia Telecommunication Initiative (VATI) grants, USDA Reconnect funds, and Dominion Energy middle-mile fiber is bringing gigabit-speed service to the last unserved addresses.</p>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_cable">Early Cable Television (1990&ndash;2004)</a></li>
+    <li><a href="#mbc_backbone">The Mid-Atlantic Broadband Backbone (2005&ndash;2006)</a></li>
+    <li><a href="#jet_broadband">Jet Broadband and the Nesbe Acquisition (2005&ndash;2010)</a></li>
+    <li><a href="#wimax">WiMax and Digital Bridge Communications (2007&ndash;2009)</a></li>
+    <li><a href="#broadband_authority">The Broadband Authority and the Digital Divide Debate (2009&ndash;2012)</a></li>
+    <li><a href="#school_fiber">School Division Fiber Buildout (2009&ndash;2017)</a>
+      <ol>
+        <li><a href="#arbogast_hiring">Brett Arbogast and Technology Modernization</a></li>
+        <li><a href="#mbc_donation">Mid-Atlantic Broadband Donation (2013)</a></li>
+        <li><a href="#fiber_rfp">Fiber Optic Construction RFPs (2013&ndash;2014)</a></li>
+        <li><a href="#wifi_hotspots">Town Wi-Fi Hotspot Partnership (2015)</a></li>
+        <li><a href="#fiber_update_2017">School Fiber Project Update (2017)</a></li>
+      </ol>
+    </li>
+    <li><a href="#shentel">Shentel Era (2010&ndash;2021)</a></li>
+    <li><a href="#industrial_park">Industrial Park Connectivity</a></li>
+    <li><a href="#cvec_firefly">CVEC and the Birth of Firefly Fiber Broadband (2018&ndash;2019)</a></li>
+    <li><a href="#covid_b2x">COVID-19 and B2X Online (2020&ndash;2021)</a></li>
+    <li><a href="#rise_project">The RISE Project and VATI Funding (2021&ndash;2024)</a>
+      <ol>
+        <li><a href="#dominion_middlemile">Dominion Energy Middle-Mile Fiber</a></li>
+        <li><a href="#town_franchise">Town Council Franchise Amendment (2022)</a></li>
+        <li><a href="#vati_2024">2024 VATI Grant and Universal Coverage</a></li>
+      </ol>
+    </li>
+    <li><a href="#public_reception">Public Reception and Citizen Advocacy</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See Also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<h2 id="early_cable">Early Cable Television (1990&ndash;2004)</h2>
+
+<p>The earliest form of wired telecommunications infrastructure beyond telephone service arrived in Appomattox County around 1990, when <b>Commonwealth Cable Group, Inc.</b> commenced engineering work to bring cable television to the Pamplin area and surrounding eastern portions of the county, including Prospect and Evergreen.<sup><a href="#ref1">[1]</a></sup> In the Town of Appomattox proper, cable service was provided by <b>Nesbe Cable TV</b>, a small operator based in Rustburg that also maintained systems in parts of Campbell County and southern West Virginia. Nesbe offered basic cable channels and, eventually, rudimentary high-speed internet service&mdash;though its broadband reach was extremely limited.</p>
+
+<p>By 2004, Nesbe's cable infrastructure had become a modest civic fixture. The company's Channel 7 (also broadcast over-the-air on UHF Channel 33 by Carlton Duck) carried recorded Appomattox Town Council meetings, giving residents their first opportunity to watch local government proceedings from home.<sup><a href="#ref2">[2]</a></sup> Nesbe was also recognized as a sponsor of community events such as the Historic Appomattox Railroad Festival.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>The franchise system that governed cable in Appomattox dated to the 1980s. The Town of Appomattox had refused at least one earlier franchise application&mdash;from TeleCable Communications Corp. in the early 1970s&mdash;before eventually granting rights to a cable operator.<sup><a href="#ref4">[4]</a></sup> The Appomattox County Board of Supervisors held public hearings on cable franchise renewal in April and May 1997.<sup><a href="#ref5">[5]</a></sup></p>
+
+<h2 id="mbc_backbone">The Mid-Atlantic Broadband Backbone (2005&ndash;2006)</h2>
+
+<p>The transformative moment for Appomattox County's broadband landscape came in 2005 with the arrival of the <b>Mid-Atlantic Broadband Cooperative</b> (MBC). Formed in November 2003, MBC was a wholesale broadband provider charged with constructing a 700-mile fiber-optic backbone across rural Southside Virginia, funded primarily by $21&nbsp;million from the Virginia Tobacco Indemnification and Community Revitalization Commission and $6&nbsp;million from the U.S. Economic Development Administration.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>In April 2005, Pamplin Mayor Robert Mitchell announced that MBC would route broadband fiber through U.S. Business 460&mdash;rather than bypassing the smaller communities&mdash;a decision influenced by discussions with Mitchell and Congressman Virgil Goode.<sup><a href="#ref7">[7]</a></sup> Mitchell was particularly hopeful that broadband access would allow a bank to open in Pamplin, where the absence of high-speed connectivity had been a barrier.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>In July 2005, MBC General Manager <b>Tad Deriso</b> presented the Regional Backbone Initiative to local officials in Lynchburg, designating Appomattox as a major connection station linking to Northern Virginia and eventually to international networks.<sup><a href="#ref9">[9]</a></sup> By that point, 125 miles of the fiber backbone had been completed.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>The project's signature public moment came on September 28, 2005, when Virginia Governor <b>Mark Warner</b> flew by helicopter to the <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a> for a groundbreaking ceremony. More than 125 officials, residents, and students attended. Warner described the initiative as "one of the most ambitious broadband initiatives anywhere in the United States," noting it would provide multi-gigabit connections to 700,000 Virginians and 19,000 businesses across five cities, twenty counties, and fifty-six industrial parks.<sup><a href="#ref11">[11]</a></sup> Deriso told attendees that construction in Appomattox would be completed by year's end, with the full network operational by July 2006.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>The Appomattox connection hub, called a Point of Presence (POP), used cutting-edge technology to provide open-access interconnectivity with the National Lambda Rail, a major fiber backbone network.<sup><a href="#ref11">[11]</a></sup> MBC operated as a wholesale provider, selling access to retail internet service providers rather than serving end-customers directly&mdash;a model that would prove critical to the county's broadband future.</p>
+
+<h2 id="jet_broadband">Jet Broadband and the Nesbe Acquisition (2005&ndash;2010)</h2>
+
+<p>In August 2005, <b>Jet Broadband</b>, a Connecticut-based company, signed a definitive asset purchase agreement to acquire Nesbe Cable TV. Chief Operating Officer David Baum praised the existing staff in Rustburg and pledged to upgrade the aging systems by the end of 2006, introducing digital video, high-definition television, and expanded broadband services.<sup><a href="#ref13">[13]</a></sup> Nesbe General Manager Danny Jobe confirmed that the sale was driven by the systems' need for capital upgrades that Jet Broadband was willing to finance.<sup><a href="#ref14">[14]</a></sup> Appomattox County Supervisor <a href="Samuel_E_Carter.html">Sammy Carter</a> expressed optimism that the acquisition would bring better services and more channel options to county residents.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>In May 2006, Jet Broadband President John Brinker wrote a letter to the <i>Times-Virginian</i> detailing an $8&nbsp;million investment in plant and facility upgrades across all service areas. The company committed to providing high-speed internet to every home it passed by the end of that summer, along with digital cable, DVR, HDTV, and video on demand before 2007.<sup><a href="#ref16">[16]</a></sup> Brinker personally assured the Appomattox Town Council that technicians were present in Appomattox every day, countering complaints about spotty service.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>In May 2007, the Board of Supervisors unanimously approved a Jet Broadband proposal to upgrade county-owned buildings with fiber optics, including the 911 Call Center and buildings within Courthouse Square, at an estimated cost savings to the county.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="wimax">WiMax and Digital Bridge Communications (2007&ndash;2009)</h2>
+
+<p>While the MBC backbone brought fiber to Appomattox's industrial park, the "last mile" problem persisted: most homes still could not access high-speed internet. In August 2007, <b>Digital Bridge Communications Corp.</b> presented plans to the Appomattox Town Council to provide broadband Internet services, targeting 1,000 homes within town limits.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>On January 16, 2008, Digital Bridge's retail brand, <b>Bridgemaxx</b>, officially went online, making Appomattox the first town in Virginia&mdash;and one of the first in the United States&mdash;to have a WiMax wireless broadband network.<sup><a href="#ref20">[20]</a></sup> Two towers had been erected: one at the industrial park and another near Appomattox County High School, transmitting radio waves for up to three miles. The tower near the high school was added after residents requested expanded coverage. Service started at $23.95 per month.<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>In June 2008, the Commonwealth of Virginia's Broadband Roundtable met at the Appomattox Community Center to discuss last-mile strategies. Senator Mark Warner praised Digital Bridge's work and described a 20&nbsp;percent penetration rate achieved within just three months of launch in a community where 100&nbsp;percent of residents had been underserved in 2005.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>In December 2009, Digital Bridge received a $250,000 matching grant from MBC, funded by the Virginia Tobacco Commission, to install fourth-generation wireless equipment in Evergreen and Pamplin, tripling MBC's broadband wireless coverage in the county.<sup><a href="#ref23">[23]</a></sup> By that point, an estimated 30&nbsp;percent of residents and businesses in the Bridgemaxx service area had adopted broadband.<sup><a href="#ref24">[24]</a></sup></p>
+
+<h2 id="broadband_authority">The Broadband Authority and the Digital Divide Debate (2009&ndash;2012)</h2>
+
+<p>Despite the progress of MBC and Digital Bridge, large portions of Appomattox County&mdash;particularly the more rural western and southern areas&mdash;remained without broadband. On December 21, 2009, the Appomattox County Board of Supervisors adopted a resolution creating a <b>Broadband Authority</b>, enabling the county to issue bonds, enter contracts, and set fees to pursue high-speed Internet for underserved areas. Brian David, executive director of the Region 2000 Economic Development Council, told the Board the authority would involve minimal taxpayer cost. Supervisor Willie Craft asked whether other counties were forming similar bodies; David replied that Appomattox was "ahead of just about everybody" in the effort.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>In late 2011, the Board of Supervisors agreed to join <b>Accelerate Virginia</b>, a statewide effort to map broadband availability. The county launched a campaign encouraging residents to test their internet speeds or report "broadband dead zones" on a federal website.<sup><a href="#ref26">[26]</a></sup> In February 2011, Region 2000 informed the Appomattox Town Council of plans to seek federal funding for a dark fiber ring to enhance broadband capabilities across the region.<sup><a href="#ref27">[27]</a></sup></p>
+
+<p>Despite these institutional efforts, the Broadband Authority was largely a legal framework rather than an active construction program. Private investment remained the primary driver of connectivity improvements, and much of the county would wait another decade for fiber service.</p>
+
+<h2 id="school_fiber">School Division Fiber Buildout (2009&ndash;2017)</h2>
+
+<h3 id="arbogast_hiring">Brett Arbogast and Technology Modernization</h3>
+
+<p>In October 2009, the Appomattox County school division hired <b>Brett Arbogast</b> as Director of Technology. Arbogast, who had previously held a similar role in the Charlotte County school division, arrived with the goal of making the technology program "the best in Southside Virginia."<sup><a href="#ref28">[28]</a></sup> His tenure would prove pivotal for the county's broadband infrastructure, as school fiber projects laid groundwork that later benefited broader county connectivity.</p>
+
+<p>Arbogast quickly established himself as an innovator. In March 2011, he presented a new SwipeK12 attendance tracking system to the School Board&mdash;the first of its kind in Virginia&mdash;at a startup cost of approximately $7,000.<sup><a href="#ref29">[29]</a></sup> By January 2012, he was appointed the School Board's records officer.<sup><a href="#ref30">[30]</a></sup> He also led anti-bullying awareness planning for the school division and directed the Career and Technical Education program alongside his technology duties.<sup><a href="#ref31">[31]</a></sup></p>
+
+<h3 id="mbc_donation">Mid-Atlantic Broadband Donation (2013)</h3>
+
+<p>In November 2013, the Mid-Atlantic Broadband Communities Corporation (the successor entity to MBC) made a donation to the Appomattox County school division, details of which were presented as an agenda item at the School Board's regular monthly meeting on November&nbsp;14.<sup><a href="#ref32">[32]</a></sup> The donation supported the school division's growing ambitions to build out its own fiber infrastructure connecting school buildings.</p>
+
+<h3 id="fiber_rfp">Fiber Optic Construction RFPs (2013&ndash;2014)</h3>
+
+<p>At the same November 14, 2013 meeting, Arbogast presented information to the School Board concerning <b>Fiber Optic Construction Project RFPs</b> (Requests for Proposals), signaling the school division's intention to undertake a significant fiber buildout connecting its facilities.<sup><a href="#ref33">[33]</a></sup> This was a major step: rather than relying on commercial providers for connectivity between schools, the division would own its own fiber network, providing high-speed links among the elementary, middle, and high school buildings and the central administration office on Court Street.</p>
+
+<h3 id="wifi_hotspots">Town Wi-Fi Hotspot Partnership (2015)</h3>
+
+<p>In November 2015, during a day-long retreat, the Appomattox Town Council discussed partnering with the school division to create Wi-Fi hotspots throughout the town. The proposed project would involve placing fiber cable underground and installing devices on streetlights, powered by the streetlight electrical supply, capable of dispersing a Wi-Fi signal within a half-mile radius. Mayor <a href="Paul_Harvey.html">Paul Harvey</a> described the retreat as an opportunity to discuss "where the town needs to plan for the future."<sup><a href="#ref34">[34]</a></sup></p>
+
+<h3 id="fiber_update_2017">School Fiber Project Update (2017)</h3>
+
+<p>On January 26, 2017, Arbogast provided the School Board with an update on the <b>School Fiber Project</b>, confirming that the fiber construction initiated by the 2013 RFPs had progressed through the construction and commissioning phases.<sup><a href="#ref35">[35]</a></sup> The school division's fiber network gave Appomattox County Public Schools a high-bandwidth backbone independent of commercial providers&mdash;a significant achievement for a rural division of its size.</p>
+
+<h2 id="shentel">Shentel Era (2010&ndash;2021)</h2>
+
+<p>In May 2010, <b>Shenandoah Telecommunications Company</b> (Shentel) announced plans to acquire Jet Broadband's cable operations in Appomattox County and across southern Virginia. The deal, finalized that summer, expanded Shentel's customer base to approximately 50,000 residential subscribers. Shentel committed to a $30&nbsp;million infrastructure upgrade.<sup><a href="#ref36">[36]</a></sup> The Pamplin Town Council voted in support of the acquisition in July 2010.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>Shentel's tenure as the county's primary cable and internet provider was not without friction. In December 2011, the company announced that local broadcast channels (FOX, ABC, CBS, NBC) might be removed due to retransmission fee disputes. A compromise was reached in January 2012, but a previously scheduled rate increase took effect on January&nbsp;17.<sup><a href="#ref38">[38]</a></sup> In June 2012, the Appomattox Town Council renewed the cable television franchise,<sup><a href="#ref39">[39]</a></sup> and in October 2012, the Pamplin Town Council agreed to a fifteen-year contract renewal with Shentel.<sup><a href="#ref40">[40]</a></sup></p>
+
+<p>In July 2014, Supervisor Ronnie Spiggle noted that some residents were experiencing difficulty receiving services from Shentel.<sup><a href="#ref41">[41]</a></sup> Shentel remained the sole cable-based provider in the county through the end of the decade. In 2021, the company sold its wireless assets to T-Mobile for $1.95&nbsp;billion and refocused on its broadband and cable operations.<sup><a href="#ref42">[42]</a></sup></p>
+
+<h2 id="industrial_park">Industrial Park Connectivity</h2>
+
+<p>The <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a> (the county industrial park) served as the anchor point for broadband infrastructure from the earliest MBC buildout. The 2005 POP hub was physically located there, and the EDA leased property to Mid-Atlantic Broadband for tower construction at $1&nbsp;per year for ninety-nine years, receiving half the revenue and space for county public safety equipment.<sup><a href="#ref43">[43]</a></sup></p>
+
+<p>The industrial park's connectivity was an explicit selling point for economic development. A 2008 Virginia Economic Development Partnership (VEDP) assessment identified broadband access, along with natural gas and hub zone status, as among Appomattox's key strengths for attracting business.<sup><a href="#ref44">[44]</a></sup> The park's MBC trunkline was cited when exploring potential Department of Defense and Homeland Security facilities.<sup><a href="#ref45">[45]</a></sup></p>
+
+<p>By 2015, the park's fiber optic infrastructure was named alongside the Route 460 waterline, sewer, and three-phase power as the combination that attracted Xpress Natural Gas (XNG) to the park.<sup><a href="#ref46">[46]</a></sup> In December 2015, Economic Development Director Mike Davidson advised the town and county EDAs to leverage broadband internet alongside nearby colleges for business retention and growth strategies.<sup><a href="#ref47">[47]</a></sup></p>
+
+<h2 id="cvec_firefly">CVEC and the Birth of Firefly Fiber Broadband (2018&ndash;2019)</h2>
+
+<p>The most consequential development in Appomattox County's broadband history came in March 2018, when <b>Central Virginia Electric Cooperative</b> (CVEC) announced plans to construct a fiber-optic network providing high-speed internet across its service territory, including Appomattox County. The announced pricing&mdash;100&nbsp;Mbps for $49.99 per month and 1&nbsp;Gbps for $79.99&mdash;represented a dramatic improvement over existing options.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>A letter to the <i>Times-Virginian</i> editor hailed the announcement as a "huge boost for the residents and businesses in Appomattox County," noting that high-speed internet creates new opportunities in innovation, e-commerce, and education after years of struggle with unreliable and expensive service.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>On March 27, 2019, CVEC hosted a celebratory launch event at its Appomattox Division Office, formally introducing <b>Firefly Fiber Broadband</b>&mdash;a wholly owned CVEC subsidiary&mdash;as Central Virginia's new high-speed internet provider, with Appomattox County as its inaugural service area. Melissa Gay, CVEC's communications manager, called the launch a "monumental achievement."<sup><a href="#ref49">[49]</a></sup></p>
+
+<p>In February 2019, the Board of Supervisors had adopted an endorsement resolution supporting CVEC's Phase&nbsp;II efforts to expand broadband to the Pamplin area.<sup><a href="#ref50">[50]</a></sup> In June 2019, the Virginia Tobacco Commission awarded $600,000 for the Pamplin Area Fiber Broadband Project, on top of $979,850 received in March, to extend Firefly's network to nearly 600 homes and businesses across portions of Appomattox, Buckingham, and Prince Edward counties.<sup><a href="#ref51">[51]</a></sup></p>
+
+<p>By early 2019, one CVEC member, Amy Franklin, was able to work from home for the first time in twenty-six years, eliminating her daily commute to Lynchburg&mdash;a personal story that encapsulated the transformative potential of rural fiber.<sup><a href="#ref52">[52]</a></sup></p>
+
+<h2 id="covid_b2x">COVID-19 and B2X Online (2020&ndash;2021)</h2>
+
+<p>The COVID-19 pandemic laid bare the remaining broadband gaps. Students forced into virtual learning and adults working remotely struggled in areas without reliable internet. In September 2020, <b>Warren Kane</b>, CEO of <b>B2X Online</b>, a family-owned wireless broadband company headquartered in Salem, Virginia, presented a proposal to the Board of Supervisors to expand coverage using CARES Act funds.<sup><a href="#ref53">[53]</a></sup> Councilman Paul Harvey suggested inviting Kane to present to the Town Council as well, and in October 2020 Kane described his company's services in a town council workshop.<sup><a href="#ref54">[54]</a></sup></p>
+
+<p>Meanwhile, in March 2020, CVEC and Firefly had received a major $28&nbsp;million grant from the USDA Reconnect Program, announced by USDA Virginia State Director Beth Green to a gathering of 200 officials and community members.<sup><a href="#ref55">[55]</a></sup></p>
+
+<p>By February 2021, B2X had installed all but one tower in the county; the Evergreen tower faced contractual hurdles that Kane reported to the Board of Supervisors he was working to resolve.<sup><a href="#ref56">[56]</a></sup> B2X's wireless service filled a gap for households still waiting for fiber, though its fixed wireless speeds could not match the gigabit capacity of Firefly's fiber network.</p>
+
+<h2 id="rise_project">The RISE Project and VATI Funding (2021&ndash;2024)</h2>
+
+<p>In the summer of 2021, Firefly Fiber Broadband launched the <b>Regional Internet Service Expansion</b> (RISE) project, surveying eleven Central Virginia counties to identify remaining broadband needs. Two virtual town hall meetings in July and August gave residents the opportunity to provide input.<sup><a href="#ref57">[57]</a></sup></p>
+
+<p>On August 26, 2021, the Appomattox County Board of Supervisors voted to commit county funds to the RISE project&mdash;a universal service initiative spanning twelve counties in partnership with Firefly, Dominion Energy, the Thomas Jefferson Planning District Commission, and CVEC.<sup><a href="#ref58">[58]</a></sup></p>
+
+<p>The effort bore major fruit in December 2021, when Governor Ralph Northam announced a $79&nbsp;million Virginia Telecommunication Initiative (VATI) grant to Firefly and partner Rappahannock Electric Cooperative. The $288&nbsp;million total project aimed to provide gigabit-speed broadband to 36,000 unserved homes and businesses across thirteen counties, with local governments contributing $33.5&nbsp;million in matching funds.<sup><a href="#ref59">[59]</a></sup></p>
+
+<h3 id="dominion_middlemile">Dominion Energy Middle-Mile Fiber</h3>
+
+<p>A critical component of the RISE project was <b>Dominion Energy Virginia's</b> commitment to deploy middle-mile fiber infrastructure. In May 2022, Dominion requested approval from the State Corporation Commission (SCC) for approximately 300 miles of middle-mile fiber optic cable across Virginia, partnering with Firefly in Appomattox County.<sup><a href="#ref60">[60]</a></sup> Dominion's role was to extend fiber to areas where Firefly would then connect end-customers&mdash;effectively serving as the "middle man" between the backbone network and the last-mile provider.</p>
+
+<h3 id="town_franchise">Town Council Franchise Amendment (2022)</h3>
+
+<p>Dominion's broadband role created an unexpected legal complication in the Town of Appomattox. On October&nbsp;11, 2022, Dominion Energy representatives Garrett Braun, Christi Taylor, and Brittani Edwards appeared before the Appomattox Town Council to explain that the town's existing franchise agreement, written in the 1980s, did not grant Dominion the rights needed to lay fiber for internet service within town limits. Dominion offered a Memorandum of Understanding (MOU) to amend the franchise. Taylor warned that if the Town chose not to sign, it would effectively kill the broadband project within town boundaries. Dominion was already in construction and expected completion by the end of the first quarter of 2023; they requested the amendment be signed by the end of 2022.<sup><a href="#ref61">[61]</a></sup></p>
+
+<p>At the October&nbsp;25 workshop meeting, the Council discussed the amendment with some caution. Council members expressed a desire for Dominion to identify a last-mile internet service provider for the fiber before the Town signed. The Council directed Town Manager Terry McGhee to obtain additional information from Dominion and report back. Council member <a href="Nathan_A_Simpson.html">Nathan Simpson</a> seconded a motion by Claudia Puckette during the same meeting for a separate resolution.<sup><a href="#ref62">[62]</a></sup> Simpson's concern centered on ensuring that the franchise amendment would actually guarantee broadband access for town residents, rather than simply granting Dominion rights to traverse town infrastructure without a commitment to serve the town itself.</p>
+
+<p>On November&nbsp;14, 2022, the Council voted 4&ndash;0 to execute the MOU with Dominion Energy for the Rural Broadband project. Simpson was absent from this meeting. Town Manager McGhee noted that the designated internet service provider for Dominion's fiber within the town would be Firefly.<sup><a href="#ref63">[63]</a></sup></p>
+
+<p>Simpson continued to follow up on the matter. At the January&nbsp;24, 2023 workshop meeting, he inquired whether the MOU had been signed and executed. McGhee confirmed he had signed on behalf of the town and would check with Dominion for a status update.<sup><a href="#ref64">[64]</a></sup></p>
+
+<h3 id="vati_2024">2024 VATI Grant and Universal Coverage</h3>
+
+<p>By late 2023, Firefly was building approximately 30 miles of fiber and completing 200 in-home connections per week in Appomattox County, with plans to increase to 250 per week. CVEC Key Accounts Representative Galen Creekmore updated the Board of Supervisors in November 2023 that Firefly had recently celebrated its 25,000th total connection as a company&mdash;having originated in Appomattox County in 2019.<sup><a href="#ref65">[65]</a></sup> The county and Firefly also announced plans to apply for another VATI grant in 2024 to address locations previously deemed ineligible, particularly along the Route 460 corridor.<sup><a href="#ref66">[66]</a></sup></p>
+
+<p>In August 2024, Governor Glenn Youngkin announced a $12.2&nbsp;million VATI grant to Firefly to support a $48.6&nbsp;million project spanning 603 miles of fiber across ten Central Virginia counties, reaching nearly 6,000 additional unserved locations including those in Appomattox. Firefly CEO <b>Gary Wood</b> stated that the grant would "assure that every family and business in central Virginia will have access to reliable, affordable internet service equivalent to the best in the United States."<sup><a href="#ref67">[67]</a></sup></p>
+
+<p>By mid-2024, Firefly celebrated 30,000 rural broadband connections at a "Broadband Independence Bash" at Carter Mountain Orchard, where retiring board member Henry Chiles was honored for his forty-six years of CVEC board service.<sup><a href="#ref68">[68]</a></sup></p>
+
+<h2 id="public_reception">Public Reception and Citizen Advocacy</h2>
+
+<p>Throughout the two-decade arc of broadband development, Appomattox County residents were vocal advocates for improved connectivity&mdash;and sharp critics of its absence. As early as March 2005, a letter to the <i>Times-Virginian</i> excoriated the state of broadband access: only about 100 customers in the entire county had broadband, the author wrote, and Nesbe's monopoly offered service that "cannot stand up to true, consistent broadband." Residents were being forced to "suffer with surfing the web at tortoise like speeds" while expected to conduct online banking and take online classes.<sup><a href="#ref69">[69]</a></sup></p>
+
+<p>A recurring frustration was Verizon's refusal to provide DSL service to parts of the county. In April 2006, a resident of the Concord/Stonewall area wrote that they had waited five years for high-speed service while neighbors had access, and urged others to contact Verizon and elected representatives.<sup><a href="#ref70">[70]</a></sup> In January 2007, the same resident reported that an FCC complaint had generated "token" phone calls from Verizon's Richmond and Roanoke offices but no actual service, with the company citing the expense of special equipment for fiber optic compatibility.<sup><a href="#ref71">[71]</a></sup> By October 2007, the resident had filed complaints with both the FCC and the State Corporation Commission.<sup><a href="#ref72">[72]</a></sup></p>
+
+<p>The broadband initiative enjoyed broad community support. In October 2005, a letter to the editor praised the Southside Regional Broadband Initiative as "a clean technology that can enhance the community by attracting new businesses" and viewed it as vital for training young people in high-tech skills.<sup><a href="#ref73">[73]</a></sup> In February 2008, a resident wrote to the Board of Supervisors requesting expanded broadband coverage after finding they could not subscribe to the new Bridgemaxx wireless system due to lack of signal at their home.<sup><a href="#ref74">[74]</a></sup></p>
+
+<p>Broadband also became a political issue. In the 2016 Fifth District congressional race, Democratic candidate Jane Dittmar pledged to seek FCC grants for communications infrastructure.<sup><a href="#ref75">[75]</a></sup> In 2019, House of Delegates candidate Tim Hickey made broadband internet a centerpiece of his campaign, hosting a meet-and-greet at Baine's Books &amp; Coffee in Appomattox to discuss the issue.<sup><a href="#ref76">[76]</a></sup> In 2020, congressional candidate Dr. Cameron Webb spoke in Appomattox about bringing inexpensive, reliable internet to the county.<sup><a href="#ref77">[77]</a></sup></p>
+
+<p>The arrival of Firefly brought occasional growing pains. In September 2023 and again in September 2024, Firefly's newly installed fiber optic cable&mdash;strung on electric poles&mdash;was damaged by birdshot from dove hunters on the opening day of hunting season, causing internet and phone outages across multiple counties. Firefly CEO Gary Wood acknowledged the issue was new for both the company and local hunters, and the company launched an educational campaign.<sup><a href="#ref78">[78]</a></sup></p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>c.&nbsp;1990</td><td>Commonwealth Cable Group begins cable TV engineering for Pamplin area</td></tr>
+  <tr><td>Apr&ndash;May 1997</td><td>BOS holds public hearings on cable franchise renewal</td></tr>
+  <tr><td>Apr 2005</td><td>MBC announces fiber route through U.S. Business 460</td></tr>
+  <tr><td>Sep 2005</td><td>Gov. Mark Warner groundbreaking at industrial park broadband hub</td></tr>
+  <tr><td>Aug 2005</td><td>Jet Broadband signs agreement to acquire Nesbe Cable</td></tr>
+  <tr><td>May 2006</td><td>Jet Broadband announces $8M upgrade program</td></tr>
+  <tr><td>May 2007</td><td>BOS approves fiber optic upgrades for county buildings via Jet Broadband</td></tr>
+  <tr><td>Aug 2007</td><td>Digital Bridge Communications presents broadband plans to Town Council</td></tr>
+  <tr><td>Jan 2008</td><td>Bridgemaxx launches first WiMax network in Virginia at Appomattox</td></tr>
+  <tr><td>Jun 2008</td><td>Virginia Broadband Roundtable meets in Appomattox</td></tr>
+  <tr><td>Oct 2009</td><td>Brett Arbogast hired as ACPS Director of Technology</td></tr>
+  <tr><td>Dec 2009</td><td>BOS adopts resolution creating Broadband Authority</td></tr>
+  <tr><td>Dec 2009</td><td>Digital Bridge receives $250K MBC grant for Evergreen/Pamplin towers</td></tr>
+  <tr><td>May 2010</td><td>Shentel announces acquisition of Jet Broadband cable operations</td></tr>
+  <tr><td>Dec 2011</td><td>County joins Accelerate Virginia broadband mapping initiative</td></tr>
+  <tr><td>Jun 2012</td><td>Town Council renews cable franchise; Pamplin approves 15-year Shentel contract</td></tr>
+  <tr><td>Nov 2013</td><td>MBC donates to school division; Arbogast presents Fiber Optic RFPs to School Board</td></tr>
+  <tr><td>Nov 2015</td><td>Town Council discusses wi-fi hotspot partnership with school division</td></tr>
+  <tr><td>Jan 2017</td><td>Arbogast provides School Fiber Project update to School Board</td></tr>
+  <tr><td>Mar 2018</td><td>CVEC announces fiber-optic network construction for Appomattox County</td></tr>
+  <tr><td>Feb 2019</td><td>BOS adopts endorsement resolution for CVEC Phase II broadband (Pamplin)</td></tr>
+  <tr><td>Mar 2019</td><td>Firefly Fiber Broadband launches in Appomattox County</td></tr>
+  <tr><td>Jun 2019</td><td>Tobacco Commission awards $600K for Pamplin fiber project</td></tr>
+  <tr><td>Mar 2020</td><td>CVEC / Firefly awarded $28M USDA Reconnect grant</td></tr>
+  <tr><td>Sep 2020</td><td>B2X Online proposes wireless broadband using CARES Act funds</td></tr>
+  <tr><td>Aug 2021</td><td>BOS commits funds to RISE universal broadband project</td></tr>
+  <tr><td>Dec 2021</td><td>$79M VATI grant awarded to Firefly for 13-county buildout</td></tr>
+  <tr><td>May 2022</td><td>Dominion Energy seeks SCC approval for 300 miles of middle-mile fiber</td></tr>
+  <tr><td>Oct 2022</td><td>Dominion requests franchise amendment from Town Council</td></tr>
+  <tr><td>Nov 2022</td><td>Town Council votes 4&ndash;0 to execute MOU with Dominion for broadband</td></tr>
+  <tr><td>Nov 2023</td><td>Firefly reaches 25,000 total connections; builds 30 mi/week in Appomattox</td></tr>
+  <tr><td>Aug 2024</td><td>$12.2M VATI grant for final 6,000 unserved locations across 10 counties</td></tr>
+  <tr><td>Jul 2024</td><td>Firefly celebrates 30,000 rural broadband connections</td></tr>
+</table>
+
+<h2 id="see_also">See Also</h2>
+<p>
+  <a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce</a> &bull;
+  <a href="Appomattox_County_School_Board_History.html">Appomattox County School Board History</a> &bull;
+  <a href="Samuel_E_Carter.html">Samuel E. "Sammy" Carter</a> &bull;
+  <a href="Paul_Harvey.html">Paul D. Harvey</a> &bull;
+  <a href="Nathan_A_Simpson.html">Nathan A. Simpson</a>
+</p>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Pamplin Area to Receive Cable Television Service," <i>Times-Virginian</i>, Oct. 20, 1990, via responses.db.</li>
+    <li id="ref2">"Town Council meetings to be televised," <i>Times-Virginian</i>, Jun. 30, 2004, via responses.db.</li>
+    <li id="ref3">"Sponsors recognized for festival support," <i>Times-Virginian</i>, Oct. 6, 2004, via responses.db.</li>
+    <li id="ref4">Town of Appomattox Council Minutes, Book 1, Plate 328 (c.&nbsp;1970), via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref5">Appomattox County Board of Supervisors Minutes, Book 18, Plate 232 (1997), via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref6">"Broadband initiative in Appomattox touted by Governor," <i>Times-Virginian</i>, Sep. 28, 2005.</li>
+    <li id="ref7">"Pamplin seeks broadband to help land bank," <i>Times-Virginian</i>, Apr. 6, 2005.</li>
+    <li id="ref8">"Pamplin awaits broadband for bank establishment," <i>Times-Virginian</i>, Apr. 6, 2005, via responses.db.</li>
+    <li id="ref9">"Regional Backbone Initiative presented to local officials," <i>Times-Virginian</i>, Jul. 26, 2005, via responses.db.</li>
+    <li id="ref10">"MBC constructs 125 miles of fiber optic backbone," <i>Times-Virginian</i>, Jul. 26, 2005, via responses.db.</li>
+    <li id="ref11">"Broadband initiative in Appomattox touted by Governor," <i>Times-Virginian</i>, Sep. 28, 2005.</li>
+    <li id="ref12">"Broadband construction in Appomattox to finish by year-end," <i>Times-Virginian</i>, Sep. 28, 2005, via responses.db.</li>
+    <li id="ref13">"Connecticut company buys NESBE cable," <i>Times-Virginian</i>, Aug. 24, 2005.</li>
+    <li id="ref14">"Nesbe Cable selling due to system upgrade needs," <i>Times-Virginian</i>, Aug. 24, 2005, via responses.db.</li>
+    <li id="ref15">"Appomattox County anticipates positive impact from cable system upgrade," <i>Times-Virginian</i>, Aug. 24, 2005, via responses.db.</li>
+    <li id="ref16">"Cable prez says upgrades on the way" (letter to editor), <i>Times-Virginian</i>, May 17, 2006.</li>
+    <li id="ref17">"Jet Broadband assures technicians are available daily in Appomattox," <i>Times-Virginian</i>, May 17, 2006, via responses.db.</li>
+    <li id="ref18">"Fiber Optics Upgrades Approved for County Buildings," <i>Times-Virginian</i>, May 30, 2007, via responses.db.</li>
+    <li id="ref19">"Digital Bridge Communications to offer broadband in Appomattox," <i>Times-Virginian</i>, Aug. 22, 2007, via responses.db.</li>
+    <li id="ref20">"Wireless Internet provider goes online," <i>Times-Virginian</i>, Jan. 16, 2008.</li>
+    <li id="ref21">"Bridgemaxx Offers Wireless Internet Service Starting at $23.95/Month," <i>Times-Virginian</i>, Jan. 16, 2008, via responses.db.</li>
+    <li id="ref22">"DigitalBridge Communications Reports Strong Initial Uptake," <i>Times-Virginian</i>, Jun. 11, 2008, via responses.db.</li>
+    <li id="ref23">"DigitalBridge Communications receives $250,000 grant," <i>Times-Virginian</i>, Dec. 16, 2009, via responses.db.</li>
+    <li id="ref24">"30 percent of residents and businesses adopted broadband since 2008," <i>Times-Virginian</i>, Dec. 16, 2009, via responses.db.</li>
+    <li id="ref25">"Supervisors agree to form Broadband Authority," <i>Times-Virginian</i>, Dec. 23, 2009.</li>
+    <li id="ref26">"Appomattox County joins Accelerate Virginia broadband initiative," <i>Times-Virginian</i>, Dec. 28, 2011, via responses.db.</li>
+    <li id="ref27">"Region 2000 includes Town of Appomattox in economic development plan," <i>Times-Virginian</i>, Feb. 2, 2011, via responses.db.</li>
+    <li id="ref28">"Brett Arbogast hired as Appomattox County Schools Technology Director," <i>Times-Virginian</i>, Oct. 7, 2009, via responses.db.</li>
+    <li id="ref29">"Appomattox County School Board Reviews Attendance System," <i>Times-Virginian</i>, Mar. 29, 2011, via responses.db.</li>
+    <li id="ref30">"Brett Arbogast appointed records officer," <i>Times-Virginian</i>, Jan. 11, 2012, via responses.db.</li>
+    <li id="ref31">"Appomattox Schools Promote Anti-Bullying Awareness," <i>Times-Virginian</i>, Nov. 11, 2015, via responses.db.</li>
+    <li id="ref32">Appomattox County School Board Meeting Minutes, Nov. 14, 2013 (block 9D5RNA6EB5C5), via appomattox_county_public.db.</li>
+    <li id="ref33">Appomattox County School Board Meeting Minutes, Nov. 14, 2013 (block 9D5RNA6EB5C5), Agenda Item F: "Fiber Optic RFPs," via appomattox_county_public.db.</li>
+    <li id="ref34">"Town Council discusses priorities during retreat," <i>Times-Virginian</i>, Nov. 18, 2015.</li>
+    <li id="ref35">Appomattox County School Board Meeting Minutes, Jan. 26, 2017 (block AHQMJP57A36E), Agenda Item E: "Update on School Fiber Project," via appomattox_county_public.db.</li>
+    <li id="ref36">"Shentel announces plan to acquire JetBroadband cable operations," <i>Times-Virginian</i>, May 18, 2010, via responses.db.</li>
+    <li id="ref37">"Pamplin Town Council supports Shentell Cable Television takeover," <i>Times-Virginian</i>, Jul. 7, 2010, via responses.db.</li>
+    <li id="ref38">"Shentel resolves dispute to continue local channel broadcasting," <i>Times-Virginian</i>, Jan. 11, 2012, via responses.db.</li>
+    <li id="ref39">"Appomattox Council renews cable television franchise," <i>Times-Virginian</i>, Jun. 13, 2012, via responses.db.</li>
+    <li id="ref40">"Pamplin Town Council Renews Shentel Contract," <i>Times-Virginian</i>, Oct. 10, 2012, via responses.db.</li>
+    <li id="ref41">"Resident Concerns Regarding Shentel Services," <i>Times-Virginian</i>, Jul. 30, 2014, via responses.db.</li>
+    <li id="ref42">"Shentel Wireless appraisal completed; purchase price set at $1.95 billion," <i>Times-Virginian</i>, Feb. 8, 2021, via responses.db.</li>
+    <li id="ref43">"EDA leased property to Mid-Atlantic for tower construction," <i>Times-Virginian</i>, Jan. 22, 2008, via responses.db.</li>
+    <li id="ref44">"VEDP provided strengths and weaknesses assessment for region," <i>Times-Virginian</i>, Jan. 22, 2008, via responses.db.</li>
+    <li id="ref45">"EDA discussed Homeland Security Activities with VEDP," <i>Times-Virginian</i>, Jan. 22, 2008, via responses.db.</li>
+    <li id="ref46">"Appomattox Industrial Park infrastructure key to attracting XNG," <i>Times-Virginian</i>, Oct. 16, 2015, via responses.db.</li>
+    <li id="ref47">"Appomattox EDAs discuss business retention strategies," <i>Times-Virginian</i>, Dec. 23, 2015, via responses.db.</li>
+    <li id="ref48">"CVEC Announces Fiber-Optic Network Construction" (letter to editor), <i>Times-Virginian</i>, Mar. 20, 2018.</li>
+    <li id="ref49">"Firefly broadband internet service arrives," <i>Times-Virginian</i>, Mar. 27, 2019.</li>
+    <li id="ref50">"Resolution adopted to support CVEC broadband expansion," <i>Times-Virginian</i>, Feb. 28, 2019, via responses.db.</li>
+    <li id="ref51">"Appomattox County awarded $600,000 for Pamplin Area Fiber Broadband Project," <i>Times-Virginian</i>, Jun. 20, 2019, via responses.db.</li>
+    <li id="ref52">"CVEC broadband service enables remote work for resident," <i>Times-Virginian</i>, Apr. 4, 2019, via responses.db.</li>
+    <li id="ref53">"B2X Online proposes broadband expansion for Appomattox County," <i>Times-Virginian</i>, Oct. 2, 2020, via responses.db.</li>
+    <li id="ref54">"Warren Kane presents B2X Online's services to town council," <i>Times-Virginian</i>, Oct. 28, 2020, via responses.db.</li>
+    <li id="ref55">"CVEC, Firefly awarded $28M," <i>Times-Virginian</i>, Mar. 7, 2020.</li>
+    <li id="ref56">"Evergreen tower installation hurdles discussed," <i>Times-Virginian</i>, Feb. 16, 2021, via responses.db.</li>
+    <li id="ref57">"Firefly Fiber Announces Virtual Town Hall Meetings for RISE Project," <i>Times-Virginian</i>, Jul. 29, 2021, via responses.db.</li>
+    <li id="ref58">"Appomattox County Supervisors vote on broadband commitment," <i>Times-Virginian</i>, Aug. 26, 2021, via responses.db.</li>
+    <li id="ref59">"Virginia Telecommunication Initiative grants $79 million to Firefly Fiber Broadband," <i>Times-Virginian</i>, Dec. 17, 2021, via responses.db.</li>
+    <li id="ref60">"Dominion Energy seeks approval for rural broadband projects," <i>Times-Virginian</i>, May 30, 2022, via responses.db.</li>
+    <li id="ref61">Town of Appomattox Council Minutes, Book 5, Plate 1467, Regular Council Meeting, Oct. 11, 2022, via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref62">Town of Appomattox Council Minutes, Book 5, Plate 1470, Workshop Meeting, Oct. 25, 2022, via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref63">Town of Appomattox Council Minutes, Book 5, Plate 1474, Regular Council Meeting, Nov. 14, 2022, via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref64">Town of Appomattox Council Minutes, Book 5, Plate 1496, Workshop Meeting, Jan. 24, 2023, via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref65">"Firefly broadband project update provided," <i>Times-Virginian</i>, Nov. 29, 2023, via responses.db.</li>
+    <li id="ref66">"County and Firefly seek additional VATI grant funds," <i>Times-Virginian</i>, Nov. 29, 2023, via responses.db.</li>
+    <li id="ref67">"Appomattox among counties to benefit from broadband grant," <i>Times-Virginian</i>, Aug. 1, 2024.</li>
+    <li id="ref68">"Firefly celebrates 30,000 rural broadband connections," <i>Times-Virginian</i>, Jul. 26, 2024, via responses.db.</li>
+    <li id="ref69">"Appomattox needs broadband" (letter to editor), <i>Times-Virginian</i>, Mar. 9, 2005.</li>
+    <li id="ref70">"Resident urges action on rural broadband access," <i>Times-Virginian</i>, Apr. 5, 2006, via responses.db.</li>
+    <li id="ref71">"FCC complaint prompts Verizon response," <i>Times-Virginian</i>, Jan. 3, 2007, via responses.db.</li>
+    <li id="ref72">"Author files complaints with FCC and SCC regarding broadband access," <i>Times-Virginian</i>, Oct. 11, 2007, via responses.db.</li>
+    <li id="ref73">"Southside Regional Broadband Initiative supported" (letter), <i>Times-Virginian</i>, Oct. 5, 2005, via responses.db.</li>
+    <li id="ref74">"Broadband Coverage Expansion Requested in Appomattox," <i>Times-Virginian</i>, Feb. 13, 2008, via responses.db.</li>
+    <li id="ref75">"Dittmar Plans to Seek FCC Grants for Communications Infrastructure," <i>Times-Virginian</i>, Sep. 28, 2016, via responses.db.</li>
+    <li id="ref76">"Appomattox campaign event details provided," <i>Times-Virginian</i>, Jan. 11, 2019, via responses.db.</li>
+    <li id="ref77">"Dr. Cameron Webb advocated for affordable healthcare and internet," <i>Times-Virginian</i>, Sep. 26, 2020, via responses.db.</li>
+    <li id="ref78">"Firefly CEO Gary Wood addresses damage from shooting at power lines," <i>Times-Virginian</i>, Nov. 22, 2023, via responses.db.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+</div>
+</body>
+</html>
