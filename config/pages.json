@@ -8,7 +8,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 42970,
+      "content_length": 43939,
       "alerts": [
         {
           "type": "success",
@@ -23,7 +23,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 41036
+      "content_length": 42005
     },
     {
       "filename": "Appomattox_County_High_School.html",
@@ -32,7 +32,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 70453
+      "content_length": 71422
     },
     {
       "filename": "Appomattox_County_School_Board_History.html",
@@ -41,7 +41,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 61694
+      "content_length": 62663
     },
     {
       "filename": "Appomattox_Volunteer_Fire_Department.html",
@@ -50,7 +50,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-04",
-      "content_length": 33495,
+      "content_length": 34464,
       "alerts": [
         {
           "type": "info",
@@ -65,7 +65,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 80148
+      "content_length": 81117
     },
     {
       "filename": "appomattox_county_tax_history.html",
@@ -74,7 +74,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 89239
+      "content_length": 90208
     },
     {
       "filename": "appomattox_solid_waste_history.html",
@@ -83,7 +83,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 79189
+      "content_length": 80158
     },
     {
       "filename": "Nathan_A_Simpson.html",
@@ -92,7 +92,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 30664
+      "content_length": 31633
     },
     {
       "filename": "Paul_Harvey.html",
@@ -101,7 +101,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 36294
+      "content_length": 37263
     },
     {
       "filename": "Samuel_E_Carter.html",
@@ -110,7 +110,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 35291
+      "content_length": 36260
     },
     {
       "filename": "Winfred_D_Nash.html",
@@ -119,7 +119,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 25613
+      "content_length": 26582
     },
     {
       "filename": "William_E_Jamerson.html",
@@ -128,7 +128,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-07",
-      "content_length": 35175,
+      "content_length": 36144,
       "alerts": [
         {
           "type": "info",
@@ -143,7 +143,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-07",
-      "content_length": 55150,
+      "content_length": 56119,
       "alerts": [
         {
           "type": "info",
@@ -158,7 +158,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 50015,
+      "content_length": 50984,
       "alerts": [
         {
           "type": "info",
@@ -173,7 +173,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 33672,
+      "content_length": 34641,
       "alerts": [
         {
           "type": "info",
@@ -188,7 +188,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 37249,
+      "content_length": 38218,
       "alerts": [
         {
           "type": "info",
@@ -203,7 +203,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 38479,
+      "content_length": 39448,
       "alerts": [
         {
           "type": "info",
@@ -218,7 +218,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 52517,
+      "content_length": 53486,
       "alerts": [
         {
           "type": "info",
@@ -233,7 +233,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 48799,
+      "content_length": 49768,
       "alerts": [
         {
           "type": "info",
@@ -248,7 +248,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 53119,
+      "content_length": 54088,
       "alerts": [
         {
           "type": "info",
@@ -263,7 +263,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 45908,
+      "content_length": 46877,
       "alerts": [
         {
           "type": "info",
@@ -278,7 +278,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 34031,
+      "content_length": 35000,
       "alerts": [
         {
           "type": "info",
@@ -293,11 +293,26 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 57915,
+      "content_length": 58884,
       "alerts": [
         {
           "type": "info",
           "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Ronnie_Spiggle.html",
+      "title": "Ronnie Spiggle",
+      "description": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-03-09",
+      "content_length": 37942,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
         }
       ]
     }

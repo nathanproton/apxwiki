@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronnie Spiggle — ApxWiki</title>
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Ronnie Spiggle</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<!-- Infobox -->
+<div class="infobox">
+  <div class="infobox-title">Ronald C. "Ronnie" Spiggle</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Mayor of Appomattox</td></tr>
+    <tr><td>In office</td><td>1978&ndash;2006</td></tr>
+    <tr><td>Preceded by</td><td>H. B. Pack</td></tr>
+    <tr><td>Succeeded by</td><td>John L. Wilson</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Board of Supervisors<br>Falling River District</td></tr>
+    <tr><td>In office</td><td>January 2012&ndash;December 2015</td></tr>
+    <tr><td>Preceded by</td><td>Thomas Conrad</td></tr>
+    <tr><td>Succeeded by</td><td>F. L. Godsey or Chad Millner</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Appomattox Town Council</td></tr>
+    <tr><td>In office</td><td>1974&ndash;1978</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Full name</td><td>Ronald C. Spiggle</td></tr>
+    <tr><td>Born</td><td>c.&nbsp;1946&ndash;1947<br>Virginia</td></tr>
+    <tr><td>Military</td><td>United States Army<br>1966&ndash;1972</td></tr>
+    <tr><td>Employer</td><td>Robinson Funeral Home &amp; Cremation Service</td></tr>
+    <tr><td>Other work</td><td>Ronald C. Spiggle Auctions (founder)</td></tr>
+
+    <tr><td>Children</td><td>6 (Terri, Paul, John, Tina, Tony, Todd)</td></tr>
+    <tr><td>Church</td><td>St. Anne's Episcopal Church, Appomattox</td></tr>
+    <tr><td>Residence</td><td>Appomattox, Virginia</td></tr>
+  </table>
+</div>
+
+<p><b>Ronald C. "Ronnie" Spiggle</b> (born c.&nbsp;1946&ndash;1947) is an American politician, funeral director, auctioneer, and community leader in Appomattox County, Virginia. Spiggle served as Mayor of the Town of Appomattox for twenty-eight consecutive years (1978&ndash;2006), making him the longest-serving mayor in the town's modern history. He later represented the Falling River District on the Appomattox County Board of Supervisors from 2012 to 2015. Widely referred to as the "Face of Appomattox" during his decades in public office, Spiggle has been a central figure in the town's civic and ceremonial life since the mid-1970s.<sup><a href="#ref1">[1]</a></sup></p>
+
+<!-- Table of Contents -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_life">Early life and military service</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#town_council">Appomattox Town Council (1974&ndash;1978)</a></li>
+    <li><a href="#mayor">Mayor of Appomattox (1978&ndash;2006)</a>
+      <ol>
+        <li><a href="#mayor_early">Early tenure and Town Manager duties</a></li>
+        <li><a href="#mayor_later">Later years and the waterline debate</a></li>
+        <li><a href="#retirement">Retirement announcement</a></li>
+      </ol>
+    </li>
+    <li><a href="#bos">Board of Supervisors (2012&ndash;2015)</a>
+      <ol>
+        <li><a href="#bos_election">2011 election</a></li>
+        <li><a href="#bos_tenure">Tenure on the Board</a></li>
+      </ol>
+    </li>
+    <li><a href="#electoral_history">Electoral history</a></li>
+    <li><a href="#policy_issues">Major policy issues and initiatives</a>
+      <ol>
+        <li><a href="#waterline">Concord&ndash;Appomattox waterline</a></li>
+        <li><a href="#candles">Community of Candles</a></li>
+        <li><a href="#heritage_trail">Appomattox Heritage and Recreational Trail</a></li>
+        <li><a href="#pamplin">Pamplin financial recovery</a></li>
+      </ol>
+    </li>
+    <li><a href="#community_service">Other public and community service</a></li>
+
+    <li><a href="#honors">Honors and recognition</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="early_life">Early life and military service</h2>
+
+<p>Spiggle was born circa 1946&ndash;1947 in Virginia. He moved to Appomattox when he was five years old and has resided in the community ever since.<sup><a href="#ref2">[2]</a></sup> His parents were Ernest Bolton Spiggle and Mildred Spiggle, who celebrated their fiftieth wedding anniversary in 1982 with a reception at their home in Hampton, Virginia.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Spiggle served in the United States Army from 1966 to 1972. He served as a medic in Vietnam in 1967, an experience that would later inform his lifelong commitment to veterans' causes in Appomattox County.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h2 id="career">Career</h2>
+
+<p>Spiggle has spent the majority of his professional career at <b>Robinson Funeral Home and Cremation Service</b> in Appomattox, where he has served as Funeral Director and Vice-President. By 2011, he had worked at the funeral home for over forty-three years, having joined the firm in approximately 1968 after returning from military service.<sup><a href="#ref2">[2]</a></sup> In his 2006 retirement announcement as mayor, Spiggle specifically thanked his colleagues at Robinson Funeral Home for their understanding and support throughout his decades of public service.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Spiggle is also the founder of <b>Ronald C. Spiggle Auctions</b>, a certified Virginia auctioneer business. He has conducted numerous auctions for community organizations and businesses, including serving as auctioneer for St. Anne's Episcopal Church fundraisers and conducting vehicle auctions for Farmer's Bank of Appomattox.<sup><a href="#ref5">[5]</a></sup><sup><a href="#ref6">[6]</a></sup></p>
+
+<h2 id="town_council">Appomattox Town Council (1974&ndash;1978)</h2>
+
+<p>Spiggle was first elected to the Appomattox Town Council in 1974. Town Council minute books record his attendance as a visitor at the May 20, 1974, council meeting before his term began, and his presence as a sitting council member at the July 15, 1974, meeting, where Mayor H. B. Pack welcomed the new members and distributed committee assignments.<sup><a href="#ref7">[7]</a></sup> Spiggle was immediately active on committees, serving on the Water Committee and the Sewer Committee during his first months in office. He also served on the Fire Committee and was involved in early discussions about the town's sewage treatment capacity and compliance with federal Public Law 92-500.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>Spiggle served four years on Town Council before being elected mayor in 1978, succeeding H. B. Pack.<sup><a href="#ref1">[1]</a></sup></p>
+
+<h2 id="mayor">Mayor of Appomattox (1978&ndash;2006)</h2>
+
+<h3 id="mayor_early">Early tenure and Town Manager duties</h3>
+
+<p>Spiggle was elected Mayor of the Town of Appomattox in 1978 and would go on to serve fourteen consecutive two-year terms in the position. Town Council minutes from January 14, 1980, show "Mayor R. C. Spiggle presiding" over regular meetings alongside council members including R. C. Hubbard, T. W. Lawson, R. L. Bass, S. E. Carter, M. E. Gordon, and T. E. Conner.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>In 1982, Spiggle was elected Chairman of the Town Section of the Virginia Municipal League (VML) at its 77th Annual Conference in Virginia Beach, a position that gave him a platform in statewide municipal policy discussions.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>In 1986, after Town Manager Bill Britton resigned, Mayor Spiggle assumed the administrative duties and responsibilities of Town Manager, assisted by Councilman Dick Bass. To compensate Spiggle for the additional workload, the Town Council increased his mayoral salary to as much as $16,000 per year.<sup><a href="#ref11">[11]</a></sup> Spiggle effectively managed both roles for over a decade until David Garrett was appointed Town Manager in 2000. By 2002, Garrett had fully assumed the administrative duties, and the Town Council reduced the mayor's salary to $700 per month ($8,400 per year).<sup><a href="#ref11">[11]</a></sup></p>
+
+<h3 id="mayor_later">Later years and the waterline debate</h3>
+
+<p>During his later years as mayor, Spiggle was a vocal advocate for planning the town's long-term water supply. Following severe drought conditions in 2002 that forced the Town of Appomattox to implement water-use restrictions, Spiggle urged prompt action on securing a viable water source. He warned that delays would escalate costs and limit options, referencing problems in Charlotte Court House as a cautionary tale.<sup><a href="#ref12">[12]</a></sup> He also noted that United States Geological Survey testing indicated it takes forty to fifty years for rainwater recharge to benefit the town's water system.<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>In January 2004, Mayor Spiggle initiated a meeting with local officials to find grants and private investors needed for the town to purchase the battlefield property adjacent to the Appomattox Court House National Historical Park.<sup><a href="#ref14">[14]</a></sup> In 2003, he also spearheaded the concept for the <a class="redlink" href="Appomattox_Heritage_Trail_History.html">Appomattox Heritage and Recreational Trail</a>, leading meetings of citizens, officials, and outdoor enthusiasts to discuss developing a trail system in the community.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>Spiggle was not afraid to use his tie-breaking authority as mayor. In August 2005, when the Appomattox County Chamber of Commerce requested the Town Council publicly endorse a "liquor by the drink" referendum, the council split 2&ndash;2 and Mayor Spiggle cast the deciding vote against the measure.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h3 id="retirement">Retirement announcement</h3>
+
+<p>On March 1, 2006, Spiggle announced through a written statement to the <i>Times-Virginian</i> that he would not seek re-election as mayor after twenty-eight years in the office. The newspaper described the announcement as "a stunning development" and called Spiggle the "Face of Appomattox," noting that he had spent three decades building a reputation for professionalism and proactive thinking as the town's most well-known ambassador.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>In his farewell, Spiggle expressed gratitude to the citizens, his family, and his colleagues at Robinson Funeral Home. He also thanked town employees past and present, saying they were dedicated to providing superior service.<sup><a href="#ref1">[1]</a></sup> At the July 2006 council meeting, Spiggle formally thanked the citizens for his twenty-eight years as mayor and four years on Town Council, calling it a pleasure and honor.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>Vice-Mayor Marvin Mitchell initially declared his candidacy to succeed Spiggle, but the eventual mayoral contest was won by John L. Wilson, who defeated Mitchell in the May 2006 election.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="bos">Board of Supervisors (2012&ndash;2015)</h2>
+
+<h3 id="bos_election">2011 election</h3>
+
+<p>In August 2011, five years after retiring as mayor, Spiggle announced his candidacy for the Falling River District seat on the Appomattox County Board of Supervisors, seeking to replace Thomas Conrad, who had decided not to seek re-election after two terms. Spiggle, then sixty-five years old, described himself as a "middle-of-the-road conservative" and said job creation and economic development were his top priorities.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>On November 8, 2011, Spiggle won the contested race with 606 votes (58 percent) to Chad Millner's 443 votes (42 percent), carrying the Spout Spring precinct 472&ndash;322 while Millner won the Chap precinct 110&ndash;103.<sup><a href="#ref19">[19]</a></sup> Upon his election to the Board, Laura Mills was appointed to fill Spiggle's unexpired term on the Appomattox County Economic Development Authority.<sup><a href="#ref20">[20]</a></sup></p>
+
+<h3 id="bos_tenure">Tenure on the Board</h3>
+
+<p>As a county supervisor, Spiggle was generally known for fiscal conservatism. In May 2012, he and Supervisor Jerry Small dissented from a proposed eight-cent real estate tax increase, arguing that it was too substantial given the economic hardships faced by county residents and that they had campaigned against tax hikes.<sup><a href="#ref21">[21]</a></sup> In 2014, Spiggle opposed a proposed fifteen-cent real estate tax rate increase.<sup><a href="#ref22">[22]</a></sup> A local taxpayer publicly praised Spiggle's fiscal prudence in a letter to the editor.<sup><a href="#ref23">[23]</a></sup></p>
+
+<p>Spiggle introduced several procedural proposals during his time on the Board. In June 2012, he suggested that the Board hold a workshop to develop and prioritize a Capital Improvement Projects (CIP) plan, including researching funding options.<sup><a href="#ref24">[24]</a></sup> He also recommended that county department heads attend Board of Supervisors meetings on a quarterly basis to improve accountability and communication.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>In 2015, Spiggle expressed concern about the local economy, particularly pending the opening of Lindenburg Industries and the creation of projected jobs. He also raised concerns about the county's new retirement contribution reporting requirements and their potential impact on borrowing capacity.<sup><a href="#ref26">[26]</a></sup> He questioned the proposal to increase local school funding to fifty percent over five years, stating the county could not afford it.<sup><a href="#ref27">[27]</a></sup></p>
+
+<p>Spiggle did not seek re-election to the Board in 2015. The Falling River seat was subsequently contested by F. L. Godsey and Chad Millner.<sup><a href="#ref28">[28]</a></sup></p>
+
+<h2 id="electoral_history">Electoral history</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th><th>Office</th><th>District / Jurisdiction</th><th>Result</th><th>Opponent(s)</th><th>Vote</th>
+  </tr>
+  <tr>
+    <td>1974</td>
+    <td>Town Council</td>
+    <td>Town of Appomattox</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>&mdash;</td>
+    <td>Details not available</td>
+  </tr>
+  <tr>
+    <td>1978</td>
+    <td>Mayor</td>
+    <td>Town of Appomattox</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>&mdash;</td>
+    <td>Details not available</td>
+  </tr>
+  <tr>
+    <td>1980&ndash;2004</td>
+    <td>Mayor (13 re-elections)</td>
+    <td>Town of Appomattox</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Various / Unopposed</td>
+    <td>Details not available</td>
+  </tr>
+  <tr>
+    <td>2011</td>
+    <td>Board of Supervisors</td>
+    <td>Falling River</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Chad Millner</td>
+    <td>606&ndash;443</td>
+  </tr>
+</table>
+
+<h2 id="policy_issues">Major policy issues and initiatives</h2>
+
+<h3 id="waterline">Concord&ndash;Appomattox waterline</h3>
+
+<p>The question of the town's water supply was among the most consequential issues of Spiggle's time as mayor. Following a severe drought in 2002 that forced water-use restrictions, Spiggle and county officials began exploring options for a pipeline from Concord (Campbell County) to Appomattox along the U.S. Route 460 corridor. Spiggle emphasized the urgency of the issue repeatedly, warning that delays escalated costs and that the town's groundwater recharge rate was insufficient for long-term needs.<sup><a href="#ref12">[12]</a></sup><sup><a href="#ref13">[13]</a></sup></p>
+
+<p>In 2004, Spiggle and County Supervisor Chairman Sam Carter defended the <a href="Appomattox_Water_System_History.html">water supply study</a> decisions against public criticism, calling some of the feedback "misinformation" and "scare tactics."<sup><a href="#ref29">[29]</a></sup> Former Town Council member Billy Conner publicly defended Spiggle and Carter in a letter to the editor, calling them dedicated public servants.<sup><a href="#ref30">[30]</a></sup> The waterline issue ultimately became the <i>Times-Virginian</i>'s top story of 2006, with the county voting 3&ndash;2 to pursue the project while the town, under newly elected Mayor John Wilson, voted 3&ndash;2 to reject it.<sup><a href="#ref31">[31]</a></sup></p>
+
+<h3 id="candles">Community of Candles</h3>
+
+<p>In approximately 1985, then-Mayor Spiggle and citizen W. C. Dundley co-initiated the <b>Community of Candles</b> tradition in downtown Appomattox, a collaborative holiday event in which businesses and homes place a single candle in each window and a green wreath on each door. The event, funded by the Board of Supervisors, Town Council, and community contributions, features a candle walk from the old Appomattox Courthouse steps to the Main Street Train Depot, accompanied by holiday music and refreshments. The tradition celebrated its twenty-fifth anniversary in 2010 and has remained one of the town's signature annual events.<sup><a href="#ref32">[32]</a></sup><sup><a href="#ref33">[33]</a></sup></p>
+
+<h3 id="heritage_trail">Appomattox Heritage and Recreational Trail</h3>
+
+<p>In 2003, Spiggle spearheaded the concept for the Appomattox Heritage and Recreational Trail, convening meetings of citizens, officials, and outdoor enthusiasts to discuss the possibility of developing a trail system in the community. Community member Mary Lou Spiggle later expressed support for the project, wishing for Appomattox to have a trail similar to the Blackwater Creek trail in Lynchburg.<sup><a href="#ref15">[15]</a></sup><sup><a href="#ref34">[34]</a></sup></p>
+
+<h3 id="pamplin">Pamplin financial recovery</h3>
+
+<p>During his time on the Board of Supervisors, Spiggle played a leading role in efforts to assist the Town of Pamplin with its financial and operational difficulties. In early 2016, Spiggle was expected to present figures regarding the financial struggles of the town's sewer system. The Board of Supervisors appointed him, along with Supervisors Willie Craft and Watkins Abbitt, to a special committee tasked with helping Pamplin develop future plans and recover from its financial crisis.<sup><a href="#ref35">[35]</a></sup><sup><a href="#ref36">[36]</a></sup></p>
+
+<h2 id="community_service">Other public and community service</h2>
+
+<p>Beyond his elected offices, Spiggle has been active in numerous civic organizations and appointed positions throughout his career. He served as a member of the <b>Appomattox County Economic Development Authority</b> (EDA) prior to his election to the Board of Supervisors in 2011, a position he resigned upon joining the Board.<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref20">[20]</a></sup> He also served on the <b>Region 2000 Regional Commission</b>, alongside Supervisor Samuel Carter and County Administrator Aileen Ferguson, as officers for the 2005&ndash;06 year.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>Spiggle is a former commander of <b>American Legion Post 104</b> in Appomattox and past vice-commander of the 10th District of the American Legion.<sup><a href="#ref4">[4]</a></sup> He is also a member of the <b>Appomattox Lions Club</b>.<sup><a href="#ref2">[2]</a></sup> A member of <b>Farmer's Bank of Appomattox</b>'s Board of Directors, he recused himself from a 2006 Town Council discussion regarding the bank's renovation plans for the Darrowby House facade, and later voted, in his capacity as a bank board member, in favor of saving the historic facade.<sup><a href="#ref38">[38]</a></sup></p>
+
+<p>As both mayor and former mayor, Spiggle was regularly called upon to serve ceremonial roles. He issued proclamations for events ranging from National Agriculture Week (1992) to Garden Week (1996) to Red Ribbon Week and Smokey Bear Day.<sup><a href="#ref39">[39]</a></sup> He issued a proclamation on September 11, 2002, calling on citizens to remember the victims of the September 11 attacks, a proclamation that was read at subsequent memorial ceremonies.<sup><a href="#ref40">[40]</a></sup> He delivered keynote addresses at the annual Memorial Day ceremonies and Veterans Day ceremonies at Courthouse Square.<sup><a href="#ref41">[41]</a></sup><sup><a href="#ref4">[4]</a></sup></p>
+
+<p>In 2008, Spiggle participated in a meeting to plan the transition of the Pamplin Clay Pipe Factory to the Appomattox Historical Society.<sup><a href="#ref42">[42]</a></sup> He also hosted the Vera Bradley Bingo Fundraiser at the Appomattox Moose Lodge in 2007.<sup><a href="#ref43">[43]</a></sup></p>
+
+
+<h2 id="honors">Honors and recognition</h2>
+
+<p>In 1982, Spiggle was elected Chairman of the Town Section of the Virginia Municipal League at its 77th Annual Conference, a recognition of his standing among Virginia's municipal leaders.<sup><a href="#ref10">[10]</a></sup> In 1992, he received the <b>Friend of Extension Award</b> from the Alpha Gamma Chapter of Epsilon Sigma Phi in Charlottesville, honoring his support for the Virginia Cooperative Extension's work in Appomattox County.<sup><a href="#ref46">[46]</a></sup></p>
+
+<p>Following his retirement as mayor in 2006, Spiggle was named Grand Marshal of the 34th Annual Historic Appomattox Railroad Festival parade, which drew an estimated 43,000 to 45,000 attendees&mdash;the highest attendance in the festival's history at that time.<sup><a href="#ref47">[47]</a></sup></p>
+
+<p>In September 2014, a Federal Emergency Management Agency (FEMA) representative presented Spiggle with $50,000 to help cover costs from the previous March's ice storm cleanup, recognizing the community's recovery efforts.<sup><a href="#ref48">[48]</a></sup></p>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Mayor Spiggle won't seek re-election," <i>Times-Virginian</i>, March 1, 2006. via times-virginian-2004-2024.db</li>
+    <li id="ref2">"Spiggle to run for Board of Supervisors," <i>Times-Virginian</i>, August 24, 2011. via times-virginian-2004-2024.db</li>
+    <li id="ref3">"Ernest and Mildred Spiggle honored on 50th wedding anniversary," <i>Times-Virginian</i>, c. May 1982. via responses.db</li>
+    <li id="ref4">"Citizens honor veterans with ceremony," <i>Times-Virginian</i>, November 12, 2014. via times-virginian-2004-2024.db</li>
+    <li id="ref5">"St. Anne's Episcopal Church announces 62nd Anniversary celebration," <i>Times-Virginian</i>, April 4, 2012. via responses.db</li>
+    <li id="ref6">"Farmer's Bank Holds Successful Vehicle Auction," <i>Times-Virginian</i>, August 14, 2020. via responses.db</li>
+    <li id="ref7">Town of Appomattox Council Minutes, Book 1, Plates 505 and 512, July 15, 1974. via county_town_gov_meeting_minutes.db</li>
+    <li id="ref8">Town of Appomattox Council Minutes, Book 1, Plates 513&ndash;525, July&ndash;November 1974. via county_town_gov_meeting_minutes.db</li>
+    <li id="ref9">Town of Appomattox Council Minutes, Book 2, Plate 1, January 14, 1980. via county_town_gov_meeting_minutes.db</li>
+    <li id="ref10">"Appomattox Mayor Ronald C. Spiggle elected VML Town Section Chairman," <i>Times-Virginian</i>, c. October 1982. via responses.db</li>
+    <li id="ref11">"Council votes to reduce mayor's salary," <i>Times-Virginian</i>, October 19, 2006. via times-virginian-2004-2024.db</li>
+    <li id="ref12">"Officials Emphasize Need for Waterline Planning," <i>Times-Virginian</i>, June 7, 2006. via responses.db</li>
+    <li id="ref13">"Appomattox Mayor Discusses Water Recharge and Runoff," <i>Times-Virginian</i>, June 21, 2006. via responses.db</li>
+    <li id="ref14">"Mayor Spiggle initiates meeting to find grants for battlefield purchase," <i>Times-Virginian</i>, May 31, 2006. via responses.db</li>
+    <li id="ref15">"Concept for Appomattox Heritage and Recreational Trail Initiated," <i>Times-Virginian</i>, March 31, 2010. via responses.db</li>
+    <li id="ref16">"Appomattox Town Council denies endorsement for 'liquor by the drink,'" <i>Times-Virginian</i>, August 10, 2005. via responses.db</li>
+    <li id="ref17">"Mayor Spiggle Thanks Citizens for Service," <i>Times-Virginian</i>, July 20, 2006. via responses.db</li>
+    <li id="ref18">"Appomattox Mayor Election: Wilson to Challenge Incumbent," <i>Times-Virginian</i>, March 8, 2006. via responses.db</li>
+    <li id="ref19">"Letterman elected new sheriff; Spiggle elected supervisor," <i>Times-Virginian</i>, November 8, 2011. via times-virginian-2004-2024.db</li>
+    <li id="ref20">"Laurie Harris Re-appointed to EDA; Laura Mills Appointed," <i>Times-Virginian</i>, December 14, 2011. via responses.db</li>
+    <li id="ref21">"Supervisors Spiggle and Small Oppose 8-Cent Tax Hike," <i>Times-Virginian</i>, May 8, 2012. via responses.db</li>
+    <li id="ref22">"Appomattox supervisors discussed 15-cent tax rate increase in March," <i>Times-Virginian</i>, April 23, 2014. via responses.db</li>
+    <li id="ref23">"Taxpayer praises Mr. Spiggle for fiscal prudence," <i>Times-Virginian</i>, April 16, 2014. via responses.db</li>
+    <li id="ref24">"Spiggle Suggests Capital Improvement Projects Plan Workshop," <i>Times-Virginian</i>, June 13, 2012. via responses.db</li>
+    <li id="ref25">"Supervisor Suggests Department Heads Attend Board Meetings," <i>Times-Virginian</i>, August 29, 2012. via responses.db</li>
+    <li id="ref26">"Appomattox County Economic Uncertainty Cited by Supervisor Spiggle," <i>Times-Virginian</i>, July 8, 2015. via responses.db</li>
+    <li id="ref27">"Increased School Funding to 50% Opposed Due to Budget Constraints," <i>Times-Virginian</i>, February 18, 2015. via responses.db</li>
+    <li id="ref28">"Appomattox County Elections: Falling River District Supervisor Race Contested," <i>Times-Virginian</i>, June 10, 2015. via responses.db</li>
+    <li id="ref29">"Appomattox Officials Defend Water Supply Study Decisions Amidst Public Criticism," <i>Times-Virginian</i>, July 7, 2004. via responses.db</li>
+    <li id="ref30">"Reader defends Ronnie Spiggle and Sam Carter," <i>Times-Virginian</i>, July 21, 2004. via responses.db</li>
+    <li id="ref31">"Waterline issue named top story of 2006," <i>Times-Virginian</i>, January 3, 2007. via times-virginian-2004-2024.db</li>
+    <li id="ref32">"Community of Candles Tradition Initiated 25 Years Ago," <i>Times-Virginian</i>, December 1, 2010. via responses.db</li>
+    <li id="ref33">"Community of Candles to be Dec. 5 at 5 p.m.," <i>Times-Virginian</i>, December 1, 2004. via times-virginian-2004-2024.db</li>
+    <li id="ref34">"Citizen supports trail development," <i>Times-Virginian</i>, October 24, 2007. via responses.db</li>
+    <li id="ref35">"Pamplin Sewer System Financial Crisis Report Presented," <i>Times-Virginian</i>, February 17, 2016. via responses.db</li>
+    <li id="ref36">"Special committee formed to assist Pamplin's future plans," <i>Times-Virginian</i>, March 23, 2016. via responses.db</li>
+    <li id="ref37">"Region 2000 officers elected," <i>Times-Virginian</i>, July 27, 2006. via responses.db</li>
+    <li id="ref38">"Mayor recuses himself from Farmer's Bank facade discussion," <i>Times-Virginian</i>, January 11, 2006; "Spiggle and Abbitt vote to save Darrowby House facade," <i>Times-Virginian</i>, February 1, 2006. via responses.db</li>
+    <li id="ref39">"Appomattox Mayor proclaims National Agriculture Week," <i>Times-Virginian</i>, c. March 1992; "Mayor Declares Garden Week," <i>Times-Virginian</i>, c. June 1996. via responses.db</li>
+    <li id="ref40">"Proclamation read honoring 9/11 victims," <i>Times-Virginian</i>, September 15, 2004; "Mayor Declares September 11 as Day of Remembrance," <i>Times-Virginian</i>, September 7, 2005. via responses.db</li>
+    <li id="ref41">"Ronnie Spiggle Addresses Memorial Day Attendees," <i>Times-Virginian</i>, June 2, 2004. via responses.db</li>
+    <li id="ref42">"Meeting Held for Pamplin Pipe Factory Transition," <i>Times-Virginian</i>, July 2, 2008. via responses.db</li>
+    <li id="ref43">"Vera Bradley Bingo Fundraiser Promoters and Hosts Thanked," <i>Times-Virginian</i>, September 26, 2007. via responses.db</li>
+    <li id="ref44">"Appomattox County 4-H Youth Achieve Placements," <i>Times-Virginian</i>, May 23, 2012. via responses.db</li>
+    <li id="ref45">"8 &amp; Under Free Relay team wins first place," <i>Times-Virginian</i>, July 22, 2009. via responses.db</li>
+    <li id="ref46">"Appomattox Mayor Spiggle honored with Friend of Extension Award," <i>Times-Virginian</i>, c. January 1992. via responses.db</li>
+    <li id="ref47">"Festival draws up to 45,000, committee head says," <i>Times-Virginian</i>, October 19, 2006. via times-virginian-2004-2024.db</li>
+    <li id="ref48">"Appomattox receives $50,000 for ice storm cleanup," <i>Times-Virginian</i>, September 2, 2014. via responses.db</li>
+  </ol>
+</div>
+
+<!-- FOOTER will be injected by build.py -->
+<div id="apxwiki-footer"></div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 9, 2026.
+</div>
+
+
+
+</div>
+</body>
+</html>
