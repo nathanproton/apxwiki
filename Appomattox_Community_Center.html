@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appomattox Community Center — ApxWiki</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
+
+  /* ── Search bar ── */
+  .nav-search-wrap {
+    position: relative;
+    flex: 0 1 260px;
+    min-width: 140px;
+  }
+  #apxwiki-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #a2a9b1;
+    border-radius: 3px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #apxwiki-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 3px rgba(51, 102, 204, 0.3);
+  }
+  #apxwiki-search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 2px 0 0 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #a2a9b1;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  #apxwiki-search-results.active { display: block; }
+  #apxwiki-search-results li {
+    margin: 0;
+    padding: 0;
+  }
+  #apxwiki-search-results li a {
+    display: block;
+    padding: 8px 12px;
+    color: #202122;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #apxwiki-search-results li:last-child a { border-bottom: none; }
+  #apxwiki-search-results li a:hover,
+  #apxwiki-search-results li a.active {
+    background: #eaf3fb;
+  }
+  #apxwiki-search-results li .sr-title {
+    font-weight: bold;
+    color: #3366cc;
+  }
+  #apxwiki-search-results li .sr-type {
+    font-size: 11px;
+    color: #72777d;
+    margin-left: 6px;
+  }
+  #apxwiki-search-results li .sr-desc {
+    font-size: 11.5px;
+    color: #54595d;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  #apxwiki-search-results .sr-empty {
+    padding: 10px 12px;
+    color: #72777d;
+    font-size: 12.5px;
+    font-style: italic;
+  }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; flex-wrap: wrap; }
+    .nav-search-wrap { flex: 1 1 100%; order: 3; margin-top: 6px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-search-wrap">
+      <input type="text" id="apxwiki-search" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
+      <ul id="apxwiki-search-results"></ul>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Appomattox Community Center</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+<div class="infobox">
+  <div class="infobox-title">Appomattox Community Center</div>
+  <table>
+    <tr><td>Type</td><td>County-owned public facility</td></tr>
+    <tr><td>Established</td><td>c.&nbsp;1990</td></tr>
+    <tr><td>Location</td><td>220 Community Lane, Appomattox, Virginia 24522</td></tr>
+    <tr><td>Jurisdiction</td><td>Appomattox County</td></tr>
+    <tr><td>Governing body</td><td><a href="Appomattox_County_Board_of_Supervisors.html">Board of Supervisors</a></td></tr>
+    <tr><td>Site area</td><td>7.7 acres</td></tr>
+    <tr><td>Building size</td><td>6,000 sq&nbsp;ft</td></tr>
+    <tr><td>Construction cost</td><td>$550,000</td></tr>
+    <tr><td>Capacity</td><td>300 persons (fire code)</td></tr>
+    <tr><td>Operating hours</td><td>Mon&ndash;Fri, 8:00&nbsp;a.m.&ndash;4:30&nbsp;p.m.</td></tr>
+    <tr><td>Current status</td><td>Active; shared with DSS (2024&ndash;present)</td></tr>
+  </table>
+</div>
+
+<p>The <b>Appomattox Community Center</b> is a county-owned multi-use public facility located at 220 Community Lane in the Town of Appomattox, Virginia, off Route 460 across from Town Hall Park. Opened c.&nbsp;1990, the $550,000 building covers 6,000 square feet on a 7.7-acre parcel and serves as a central hub for county government meetings, youth athletics registration, senior services, emergency sheltering, and a wide variety of civic and community events.<sup><a href="#ref1">[1]</a></sup> Since its opening, the center has hosted hundreds of public gatherings each year, from <a href="Appomattox_Youth_Sports.html">Appomattox Youth Sports</a> sign-ups and Board of Supervisors meetings to disaster-relief operations during the <a href="2016_Appomattox_County_Tornado.html">2016 tornado</a> and political candidate forums.</p>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#history">History</a>
+      <ol>
+        <li><a href="#construction_and_opening">Construction and opening</a></li>
+        <li><a href="#early_governance">Early governance and use policies</a></li>
+      </ol>
+    </li>
+    <li><a href="#facility">Facility and operations</a>
+      <ol>
+        <li><a href="#building_and_grounds">Building and grounds</a></li>
+        <li><a href="#rental_policies">Rental policies</a></li>
+      </ol>
+    </li>
+    <li><a href="#government_use">Use as a government meeting venue</a></li>
+    <li><a href="#youth_sports">Youth sports and recreation</a></li>
+    <li><a href="#senior_services">Senior services</a></li>
+    <li><a href="#emergency_use">Emergency and disaster use</a>
+      <ol>
+        <li><a href="#2009_snowstorm">2009 snowstorm</a></li>
+        <li><a href="#2016_tornado">2016 tornado</a></li>
+      </ol>
+    </li>
+    <li><a href="#civic_events">Civic and community events</a></li>
+    <li><a href="#recent_developments">Recent developments</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="history">History</h2>
+
+<h3 id="construction_and_opening">Construction and opening</h3>
+
+<p>The Appomattox Community Center was constructed in the late 1980s and opened for full operation c.&nbsp;1990. The facility was built on a 7.7-acre parcel off Route 460, across from Town Hall Park, at a cost of approximately $550,000.<sup><a href="#ref1">[1]</a></sup> The building was one of several major county infrastructure projects completed during the tenure of County Administrator Aileen Ferguson, who was promoted to that position in 1990 and later cited the community center among the county's most significant capital accomplishments alongside the new courthouse, library, and 911 center.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>The first community activity held at the center was a Halloween party attended by an estimated 400 to 500 people, signaling the facility's immediate popularity as a gathering place.<sup><a href="#ref1">[1]</a></sup></p>
+
+<h3 id="early_governance">Early governance and use policies</h3>
+
+<p>The center was governed in its early years by a Board of Directors that established policies for facility use. Ora McCoy served as chairperson of the board in the early 1990s.<sup><a href="#ref3">[3]</a></sup> In July 1992, the Board of Supervisors addressed one of the first policy questions involving the center when Supervisor Frank Carwile reported that the Sentinels were considering conducting bingo games there for fundraising purposes. The supervisors voted unanimously to disallow bingo at the Community Center, and later voted to prohibit all gambling on county property.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>The Board of Directors articulated a guiding principle that all non-governmental groups should have equal opportunity for Community Center use and that no special consideration should be given or exceptions made based on a group's purpose. In a letter to the Board of Supervisors, McCoy noted that the Board of Directors supported the goals of the local Youth Association but could not exclude them when establishing guidelines for facility access.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>In 1991, the county entered into a lease agreement with the Central Virginia Area Agency on Aging (later renamed the Central Virginia Alliance for Community Living) at a rate of $275 per month, granting the agency use of the center's kitchen, office, and meeting space for senior services programming. At some point thereafter, the Board of Supervisors voted to waive the monthly fee.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>The Community Center was assigned budget line item 8108 under the county's Community Development category, appearing in the county's general fund appropriations from at least the 1992&ndash;93 fiscal year onward.<sup><a href="#ref6">[6]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="facility">Facility and operations</h2>
+
+<h3 id="building_and_grounds">Building and grounds</h3>
+
+<p>The building encompasses 6,000 square feet and includes a main hall, kitchen facilities, office space, restrooms, and meeting areas. Fire regulations limit occupancy to 300 persons.<sup><a href="#ref7">[7]</a></sup> The 7.7-acre grounds include parking areas. A county staff person is on duty during all rental events to open and close the building and assist with needs.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>Normal operating hours are 8:00&nbsp;a.m. to 4:30&nbsp;p.m., Monday through Friday. The facility may be rented for functions on weekdays and weekends up until 11:00&nbsp;p.m.<sup><a href="#ref7">[7]</a></sup></p>
+
+<h3 id="rental_policies">Rental policies</h3>
+
+<p>As of 2008, the rental charge was $20.00 per hour, inclusive of set-up time, rental time, and clean-up time. Payment was due seven days prior to the event, with a $25 cancellation fee for rentals cancelled within seven days. A $50 clean-up fee was assessed if the building was not left clean after use. The renter assumed full liability for any damages to the facility and county property.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>Facility rules prohibited smoking, alcoholic beverages, gambling, amplified sound audible beyond 50 feet, pets, wall or door decorations, and running inside the building. Tables and chairs were not to be dragged across the floors, and all trash was required to be placed in designated receptacles and taken to the dumpster outside the kitchen.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>In March 2018, the Board of Supervisors approved an updated fee policy for the Community Center following extensive discussion.<sup><a href="#ref8">[8]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="government_use">Use as a government meeting venue</h2>
+
+<p>The Community Center has served as one of the primary meeting venues for the <a href="Appomattox_County_Board_of_Supervisors.html">Appomattox County Board of Supervisors</a> since at least the mid-2000s. In 2007, the supervisors met on the first and third Mondays of each month at 6:30&nbsp;p.m. at the Community Center.<sup><a href="#ref9">[9]</a></sup> Beginning in 2008, under newly elected Chairman Willie Craft, the Board adopted an alternating schedule, meeting at the County Administrator's office on first Mondays and the Community Center on third Mondays.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>The arrangement prompted debate. Supervisor Samuel Carter argued in January 2009 that all Board meetings should be held at the Community Center to eliminate confusion among citizens and to ensure adequate seating capacity for large crowds. Carter noted that the County Administrator's building could seat only about 25 people, while the Community Center could accommodate far more. Supervisors Craft, Conrad, Moore, and Tanner disagreed, noting that transporting materials and preparing the Community Center required up to two days of staff time. The Board voted 4&ndash;1 to continue the alternating arrangement.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>The center has also hosted numerous public hearings on major county issues, including a June 2008 hearing on a proposed Land Use ordinance,<sup><a href="#ref12">[12]</a></sup> a May 2009 hearing on the proposed $40.3 million county budget and a 10-cent real estate tax increase,<sup><a href="#ref13">[13]</a></sup> and budget hearings in subsequent years. Contentious public meetings held at the center include a February 2005 gathering of the Appomattox Citizens Coalition, where approximately 80 to 100 residents turned out to voice opposition to the proposed U.S. 460 <a href="Appomattox_Water_System_History.html">waterline project</a>, the supervisors' restrictions on citizen comments, and the Carver-Price Legacy Museum lease.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>Congressional representatives have also used the center for constituent events. In August 2009, Congressman Tom Perriello held a constituent meeting at the center as part of his "Tom In Your Town" series.<sup><a href="#ref15">[15]</a></sup> In October 2008, Williams pipeline representatives held a public meeting at the center to update citizens on repairs following a natural gas pipeline rupture.<sup><a href="#ref16">[16]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="youth_sports">Youth sports and recreation</h2>
+
+<p>The Community Center has served as the primary registration site for <a href="Appomattox_Youth_Sports.html">Appomattox Youth Sports</a> (AYS) since the early 2000s and likely from the facility's opening. Youth sports sign-ups&mdash;for baseball, softball, tee-ball, coach-pitch, football, cheerleading, basketball, and soccer&mdash;are held at the center multiple times per year, typically on designated evenings and Saturday mornings. Registration fees increased from $35 per player in the mid-2000s to $40 by 2007 and $50 by 2019.<sup><a href="#ref17">[17]</a></sup><sup><a href="#ref18">[18]</a></sup><sup><a href="#ref19">[19]</a></sup></p>
+
+<p>The AYS Board of Directors has held its general meetings and annual elections at the Community Center. Commissioner and board member elections were conducted there in December of each year, open to the public.<sup><a href="#ref20">[20]</a></sup><sup><a href="#ref21">[21]</a></sup> The county's Recreation Advisory Committee, established by the Board of Supervisors in the early 1990s, also held its quarterly meetings at the center on the first Thursday of January, April, July, and October at 7:00&nbsp;p.m.<sup><a href="#ref22">[22]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="senior_services">Senior services</h2>
+
+<p>Since 1991, the Community Center has served as a site for senior services programming operated by the Central Virginia Area Agency on Aging, later renamed the Central Virginia Alliance for Community Living (CVACL). The agency utilized the center's kitchen, office space, and meeting room to provide hot meals, classes, and social activities for area seniors.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>In April 2015, the Board of Supervisors voted unanimously to eliminate the county's $5,768 annual contribution to the CVACL and to impose a monthly rental fee of $250 for the agency's continued use of the Community Center. Supervisor Sara Carter made the motion, seconded by Gary Tanner.<sup><a href="#ref23">[23]</a></sup> CVACL Executive Director Debra Silverman appeared before the Board in August 2015, warning that if the rental charge was not reversed, the agency might have to relocate and potentially transport seniors to Lynchburg for services.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p>At the September 2015 meeting, Silverman returned and offered to contribute $50 per month or $600 annually toward utility expenses, presenting updated information on the services CVACL provided to county residents. The Board and staff had met with Silverman to discuss several rental options, and the Board ultimately expressed continued support for the agency's presence at the center while working out a revised arrangement.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>As of late 2024, senior activities continued at the Community Center. Site manager Shirley Wheeler voiced concerns at the December 2024 Board of Supervisors meeting about maintaining adequate space for senior programming if the Department of Social Services were to remain permanently at the facility.<sup><a href="#ref26">[26]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="emergency_use">Emergency and disaster use</h2>
+
+<h3 id="2009_snowstorm">2009 snowstorm</h3>
+
+<p>In early March 2009, a 10-inch snowfall caused widespread power outages across Appomattox County. The Board of Supervisors opened the Community Center as an emergency shelter. Chairman Tom Conrad and Supervisor Willie Craft determined on the morning of March 2 to open the facility, and county staff shoveled snow around the sidewalks for pedestrian access. A social services worker staffed the building from 8:00&nbsp;a.m. to 4:30&nbsp;p.m. the first day, followed by Director of Parks, Recreation and Tourism Anne Dixon the next morning.<sup><a href="#ref27">[27]</a></sup></p>
+
+<p>The shelter drew public criticism when Joe and Linda Coflin of Appomattox wrote a letter to the <i>Times-Virginian</i> reporting that an elderly couple had gone to the Community Center on Monday evening only to find it empty and locked. Conrad responded that staff had posted a notice on the door directing anyone seeking shelter to call the 911 Center, where arrangements would be made.<sup><a href="#ref27">[27]</a></sup></p>
+
+<h3 id="2016_tornado">2016 tornado</h3>
+
+<p>Following the <a href="2016_Appomattox_County_Tornado.html">EF-3 tornado</a> that struck Appomattox County on February 24, 2016, the Community Center served as one of the primary relief sites. The American Red Cross set up operations at the center on the night of the tornado, providing support to displaced residents. The center and the Pamplin Fire Department served as shelters for those whose homes were destroyed. Non-perishable food donations were collected at the center for distribution to affected families.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>In June 2016, the U.S. Small Business Administration established a Disaster Loan Outreach Center at the Community Center, where representatives assisted residents and business owners in applying for low-interest disaster loans. The center at 220 Community Lane operated from June 14 through at least June 18.<sup><a href="#ref29">[29]</a></sup> Later that month, the National Weather Service hosted a public meeting at the center where Warning Coordination Meteorologist Phil Hysell presented details about the tornado and offered severe weather preparedness advice.<sup><a href="#ref30">[30]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="civic_events">Civic and community events</h2>
+
+<p>The Community Center has hosted a diverse range of civic, cultural, and political events over its three-plus decades of operation. Notable examples include:</p>
+
+<ul>
+<li>In November 1997, Mable and Alex Cyrus of Concord celebrated their 25th wedding anniversary with a reception at the center.<sup><a href="#ref31">[31]</a></sup></li>
+<li>In October 2008, the Appomattox Railroad Festival invited the public to a planning meeting at the center.<sup><a href="#ref32">[32]</a></sup></li>
+<li>In March 2015, the Company of Strangers Theater presented the drama <i>Twelve Angry Men</i> at the center over four performances, with a suggested donation of $5.<sup><a href="#ref33">[33]</a></sup></li>
+<li>In April 2016, the Appomattox 1865 Foundation hosted a Civil War Ball at the center, featuring period music and refreshments.<sup><a href="#ref34">[34]</a></sup></li>
+<li>In May 2024, the Appomattox County Republican Committee hosted a U.S. Senate candidate forum at the center, where candidates Jonathan Emord and Scott Parkinson addressed topics for approximately two and a half hours before a local audience.<sup><a href="#ref35">[35]</a></sup></li>
+</ul>
+
+<p>Church groups and nonprofits have also used the facility regularly. Mount Comfort United Methodist Church held its annual Spaghetti Dinner and Live Auction at the center, with proceeds benefiting a Guatemala mission trip.<sup><a href="#ref36">[36]</a></sup> The Marines' Toys for Tots program has used the center for logistics support during holiday distribution campaigns.<sup><a href="#ref37">[37]</a></sup> Wine festival advance tickets have been sold at the center, and blood drives organized by the American Red Cross have taken place there as well.<sup><a href="#ref38">[38]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="recent_developments">Recent developments</h2>
+
+<p>In late 2024, the Appomattox County Department of Social Services (DSS) temporarily relocated its offices to the Community Center on Community Lane after the agency's longtime Court Street offices sustained water damage requiring renovation. Interim DSS Director Shannon Reed, who began duties during Thanksgiving week 2024, described the center as the department's current base of operations while the county evaluated options for a permanent DSS location.<sup><a href="#ref39">[39]</a></sup></p>
+
+<p>At the December 16, 2024 Board of Supervisors meeting, County Maintenance Supervisor Jeff Shepherd reported that the Court Street offices lacked adequate space for confidential caseworker meetings and filing cabinets, raising questions about whether DSS should remain at the Community Center permanently. CVACL site manager Shirley Wheeler expressed concerns about the impact on senior programming if DSS continued to occupy space at the center. The topic was scheduled for further discussion at the Board's organizational meeting on January 2, 2025.<sup><a href="#ref26">[26]</a></sup></p>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+<tr><th>Date</th><th>Event</th></tr>
+<tr><td>c.&nbsp;1990</td><td>Appomattox Community Center opens; first event is a Halloween party attended by 400&ndash;500 people</td></tr>
+<tr><td>1991</td><td>Central Virginia Area Agency on Aging begins leasing kitchen, office, and meeting space at $275/month</td></tr>
+<tr><td>Jul 1992</td><td>Board of Supervisors votes unanimously to disallow bingo at the Community Center</td></tr>
+<tr><td>2007</td><td>BOS meetings held regularly at the Community Center on 1st and 3rd Mondays</td></tr>
+<tr><td>Jan 2008</td><td>BOS adopts alternating meeting schedule: County Administrator's office on 1st Mondays, Community Center on 3rd Mondays</td></tr>
+<tr><td>Nov 2008</td><td>Rental application and rules formalized; rental rate set at $20/hour</td></tr>
+<tr><td>Mar 2009</td><td>Center opened as emergency shelter during 10-inch snowfall and widespread power outages</td></tr>
+<tr><td>Feb 2005</td><td>Approximately 80&ndash;100 citizens pack the center for Citizens Coalition meeting opposing 460 waterline</td></tr>
+<tr><td>Apr 2015</td><td>BOS votes to eliminate CVACL funding and impose $250/month rental fee</td></tr>
+<tr><td>Feb 2016</td><td>Center serves as Red Cross shelter and donation collection site following EF-3 tornado</td></tr>
+<tr><td>Jun 2016</td><td>SBA Disaster Loan Outreach Center established at the facility</td></tr>
+<tr><td>Mar 2018</td><td>BOS approves updated Community Center fee policy</td></tr>
+<tr><td>May 2024</td><td>U.S. Senate candidate forum held at the center</td></tr>
+<tr><td>Nov 2024</td><td>Department of Social Services temporarily relocates to Community Center due to water damage at Court Street offices</td></tr>
+</table>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="see_also">See also</h2>
+
+<ul>
+<li><a href="Appomattox_Youth_Sports.html">Appomattox Youth Sports</a></li>
+<li><a href="2016_Appomattox_County_Tornado.html">2016 Appomattox County Tornado</a></li>
+<li><a href="Appomattox_Water_System_History.html">Appomattox Water System History</a></li>
+</ul>
+
+<!-- ══════════════════════════════════════════════ -->
+<h2 id="references">References</h2>
+<div class="reflist">
+<ol>
+<li id="ref1">"Looking Back," <i>Times-Virginian</i>, November 11, 2020. Reports the Community Center opened c. 1990 with a $550,000 cost, 6,000 sq ft on 7.7 acres; first event a Halloween party of 400&ndash;500 attendees. Via times-virginian-2004-2024.db.</li>
+<li id="ref2">"Aileen Ferguson's retirement leaves behind legacy of growth, redemption," <i>Times-Virginian</i>, July 1, 2015. Lists the community center among major county projects completed during Ferguson's 36-year tenure. Via times-virginian-2004-2024.db.</li>
+<li id="ref3">Letter from Ora McCoy, Chairperson, Community Center Board of Directors, to Board of Supervisors. BOS Minute Book 17, Plate 42 (corpus 1992&ndash;1995). Via county_town_gov_meeting_minutes.db.</li>
+<li id="ref4">Appomattox County Board of Supervisors minutes, July 1992. BOS Minute Book 17, Plate 16 (corpus 1992&ndash;1995). Motion by Mr. Torrence, seconded by Mrs. Beasley, to disallow bingo; passed unanimously. Via county_town_gov_meeting_minutes.db.</li>
+<li id="ref5">Appomattox County Board of Supervisors work session minutes, April 6, 2015. BOS Minute Book 24, Plate 568 (corpus 2012&ndash;2015). Discusses 1991 lease origins and history of waived rent. Via county_town_gov_meeting_minutes.db.</li>
+<li id="ref6">Appomattox County budget appropriations, 1992&ndash;93. BOS Minute Book 17, Plate 18 (corpus 1992&ndash;1995). Line item 8108 "Community Center" under Community Development. Via county_town_gov_meeting_minutes.db.</li>
+<li id="ref7">"Appomattox County Community Center Rental Application," November 21, 2008. Two-page document detailing rental charges ($20/hour), cancellation policies, rules, and capacity (300 maximum). Via county-board-eda-planning-commission-2010-2020.db.</li>
+<li id="ref8">"Appomattox County Community Center approves fee policy," <i>Times-Virginian</i>, c. March 2018. Reports BOS approved a fee policy after extensive discussion. Via responses.db.</li>
+<li id="ref9">"Supervisors set 2007 meeting schedule," <i>Times-Virginian</i>, January 17, 2007. BOS to meet 1st and 3rd Mondays at 6:30 p.m. at the Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref10">"Craft replaces Carter as chairman of Board of Supervisors," <i>Times-Virginian</i>, January 10, 2008. Board approves alternating meeting schedule between County Administrator's Office and Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref11">"Supervisors will continue to have two meeting venues," <i>Times-Virginian</i>, January 14, 2009. 4&ndash;1 vote to continue alternating; Carter favored all meetings at Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref12">"Supervisors schedule June 2 hearing for Land Use ordinance," <i>Times-Virginian</i>, May 14, 2008. Public hearing at 5:30 p.m. at Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref13">"Appomattox County schedules budget and tax increase hearing for May 11," <i>Times-Virginian</i>, c. May 2009. Public hearing at 6 p.m. at Community Center on $40.3 million budget and 10-cent tax increase. Via responses.db.</li>
+<li id="ref14">"Resident pack community center for Citizen Coalition movement," <i>Times-Virginian</i>, February 9, 2005. 80&ndash;100 citizens attend meeting organized by Councilman John Wilson opposing waterline project. Via times-virginian-2004-2024.db.</li>
+<li id="ref15">"Congressman Tom Perriello to visit Appomattox," <i>Times-Virginian</i>, c. August 2009. "Tom In Your Town" constituent event at the Community Center. Via responses.db.</li>
+<li id="ref16">"Pipeline officials to put line back in operation, schedules public meeting for Oct. 23 at 7 p.m.," <i>Times-Virginian</i>, October 22, 2008. Williams representatives to meet at Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref17">"Signups to be Feb. 14 for Dixie baseball, softball, tee ball," <i>Times-Virginian</i>, February 11, 2004. AYS registration at Community Center, $35 fee. Via times-virginian-2004-2024.db.</li>
+<li id="ref18">"Spring Sports Registration Dates Announced," <i>Times-Virginian</i>, c. February 2007. Registration at Community Center, fee increased to $40. Via responses.db.</li>
+<li id="ref19">"Appomattox Dixie Fall softball and baseball sign-ups opened," <i>Times-Virginian</i>, August 13, 2019. Sign-ups at Community Center, fee $50. Via times-virginian-2004-2024.db.</li>
+<li id="ref20">"Appomattox Youth Sports to elect officers and commissioners," <i>Times-Virginian</i>, December 3, 2014. Election at 6 p.m. at the Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref21">"AYS to elect commissioners during Dec. 17 meeting," <i>Times-Virginian</i>, December 9, 2015. Via times-virginian-2004-2024.db.</li>
+<li id="ref22">Recreation Advisory Committee bylaws, c. 1992. BOS Minute Book 17, Plate 47 (corpus 1992&ndash;1995). Quarterly meetings at the Community Center. Via county_town_gov_meeting_minutes.db.</li>
+<li id="ref23">Appomattox County Board of Supervisors regular meeting minutes, April 6, 2015. BOS Minute Book 24, Plate 573 (corpus 2012&ndash;2015). Motion by Ms. Carter, seconded by Mr. Tanner; roll call vote unanimous. Via county_town_gov_meeting_minutes.db.</li>
+<li id="ref24">"Supervisors reconsidering financial burden against senior citizens group," <i>Times-Virginian</i>, August 19, 2015. Silverman warns of potential relocation to Lynchburg. Via times-virginian-2004-2024.db.</li>
+<li id="ref25">Appomattox County Board of Supervisors regular meeting minutes, September 8, 2015. BOS Minute Book 24, Plate 644 (corpus 2012&ndash;2015). Silverman offers $50/month toward utilities. Via county_town_gov_meeting_minutes.db.</li>
+<li id="ref26">"Supervisors discuss future Social Services location," <i>Times-Virginian</i>, December 30, 2024. DSS at Community Center; space concerns raised by CVACL site manager. Via times-virginian-2004-2024.db.</li>
+<li id="ref27">"Chairman Conrad refutes letter that criticizes county's reaction during snowstorm," <i>Times-Virginian</i>, March 25, 2009. Center opened as shelter; Coflin letter criticized response. Via times-virginian-2004-2024.db.</li>
+<li id="ref28">"Volunteers, donations sought for tornado victims," <i>Times-Virginian</i>, February 26, 2016. Red Cross at Community Center; donations collected; shelter for displaced. Via times-virginian-2004-2024.db.</li>
+<li id="ref29">"SBA Offers Disaster Assistance to Residents of Virginia Affected by Severe Storms and Tornadoes," <i>Times-Virginian</i>, June 15, 2016. Outreach center at 220 Community Lane. Via times-virginian-2004-2024.db.</li>
+<li id="ref30">"Meteorologist provides details on February tornado, gives advice," <i>Times-Virginian</i>, June 22, 2016. NWS presentation at the Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref31">"25th Wedding Anniversary Celebration," <i>Times-Virginian</i>, c. November 1997. Mable and Alex Cyrus of Concord. Via responses.db.</li>
+<li id="ref32">"Railroad Festival invites public to meeting on Saturday at Community Center," <i>Times-Virginian</i>, October 29, 2008. Via times-virginian-2004-2024.db.</li>
+<li id="ref33">"Company of Strangers Theater Presents 'Twelve Angry Men'," <i>Times-Virginian</i>, c. March 2015. Four performances at the Community Center. Via responses.db.</li>
+<li id="ref34">"Appomattox 1865 Foundation to host Civil War Ball," <i>Times-Virginian</i>, c. April 2016. Ball at Community Center, $10 charge. Via responses.db.</li>
+<li id="ref35">"Republican Virginia Senate candidate forum held in Appomattox," <i>Times-Virginian</i>, May 4, 2024. Emord and Parkinson at Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref36">"Mount Comfort UMC Spaghetti Dinner and Auction," <i>Times-Virginian</i>, c. April 2012. 3rd annual dinner at Community Center, $8 suggested donation. Via responses.db.</li>
+<li id="ref37">"Social Services Thanks Marines for Toys for Tots," <i>Times-Virginian</i>, c. December 2007. Community Center provided logistical support. Via responses.db.</li>
+<li id="ref38">"Wine Festival Ticket Information," <i>Times-Virginian</i>, July 22, 2015. Advance tickets sold at Community Center. Via times-virginian-2004-2024.db.</li>
+<li id="ref39">"Appomattox County names interim Department of Social Services director," <i>Times-Virginian</i>, December 11, 2024. DSS temporarily at Community Center on Community Lane. Via times-virginian-2004-2024.db.</li>
+</ol>
+</div>
+
+<!-- Footer will be injected by build.py -->
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 13, 2026.
+</div>
+
+
+
+
+
+</div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  var input = document.getElementById('apxwiki-search');
+  var list  = document.getElementById('apxwiki-search-results');
+  if (!input || !list) return;
+
+  var activeIdx = -1;
+
+  function render(results) {
+    activeIdx = -1;
+    if (!results.length) {
+      if (input.value.trim().length > 0) {
+        list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+        list.classList.add('active');
+      } else {
+        list.innerHTML = '';
+        list.classList.remove('active');
+      }
+      return;
+    }
+    list.innerHTML = results.slice(0, 8).map(function(r, i) {
+      var desc = r.desc || '';
+      if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+      return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+        + '<span class="sr-title">' + esc(r.title) + '</span>'
+        + '<span class="sr-type">' + esc(r.type) + '</span>'
+        + '<div class="sr-desc">' + esc(desc) + '</div>'
+        + '</a></li>';
+    }).join('');
+    list.classList.add('active');
+  }
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function setActive(items) {
+    for (var j = 0; j < items.length; j++) {
+      items[j].classList.toggle('active', j === activeIdx);
+    }
+  }
+
+  input.addEventListener('input', function() {
+    var q = this.value.trim();
+    if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+    var results = ms.search(q);
+    render(results);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    var items = list.querySelectorAll('a[data-idx]');
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, items.length - 1);
+      setActive(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, 0);
+      setActive(items);
+    } else if (e.key === 'Enter' && activeIdx >= 0) {
+      e.preventDefault();
+      items[activeIdx].click();
+    } else if (e.key === 'Escape') {
+      list.innerHTML = ''; list.classList.remove('active');
+      input.blur();
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!input.contains(e.target) && !list.contains(e.target)) {
+      list.innerHTML = ''; list.classList.remove('active');
+    }
+  });
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
+</body>
+</html>

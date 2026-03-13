@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Street Appomattox — Downtown Revitalization — ApxWiki</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
+
+  /* ── Search bar ── */
+  .nav-search-wrap {
+    position: relative;
+    flex: 0 1 260px;
+    min-width: 140px;
+  }
+  #apxwiki-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #a2a9b1;
+    border-radius: 3px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #apxwiki-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 3px rgba(51, 102, 204, 0.3);
+  }
+  #apxwiki-search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 2px 0 0 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #a2a9b1;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  #apxwiki-search-results.active { display: block; }
+  #apxwiki-search-results li {
+    margin: 0;
+    padding: 0;
+  }
+  #apxwiki-search-results li a {
+    display: block;
+    padding: 8px 12px;
+    color: #202122;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #apxwiki-search-results li:last-child a { border-bottom: none; }
+  #apxwiki-search-results li a:hover,
+  #apxwiki-search-results li a.active {
+    background: #eaf3fb;
+  }
+  #apxwiki-search-results li .sr-title {
+    font-weight: bold;
+    color: #3366cc;
+  }
+  #apxwiki-search-results li .sr-type {
+    font-size: 11px;
+    color: #72777d;
+    margin-left: 6px;
+  }
+  #apxwiki-search-results li .sr-desc {
+    font-size: 11.5px;
+    color: #54595d;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  #apxwiki-search-results .sr-empty {
+    padding: 10px 12px;
+    color: #72777d;
+    font-size: 12.5px;
+    font-style: italic;
+  }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; flex-wrap: wrap; }
+    .nav-search-wrap { flex: 1 1 100%; order: 3; margin-top: 6px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-search-wrap">
+      <input type="text" id="apxwiki-search" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
+      <ul id="apxwiki-search-results"></ul>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>Main Street Appomattox &mdash; Downtown Revitalization</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Main Street Appomattox &mdash; Downtown Revitalization</div>
+  <table>
+    <tr><td>Jurisdiction</td><td>Town of Appomattox, Virginia</td></tr>
+    <tr><td>Governing body</td><td>Appomattox Town Council</td></tr>
+    <tr><td>Time span</td><td>1976&ndash;present</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key dates</td></tr>
+    <tr><td>1976</td><td>Downtown Redevelopment Project (hotel demolition, parking, Lee&nbsp;St.)</td></tr>
+    <tr><td>1997</td><td>Volunteer flower-barrel beautification begins</td></tr>
+    <tr><td>2006</td><td>Abbitt Park upgrades approved; Darrowby House facade controversy</td></tr>
+    <tr><td>2007</td><td>Town pursues Virginia Main Street Affiliate status</td></tr>
+    <tr><td>2009</td><td>Sign ordinance adopted; Farmers Market opens</td></tr>
+    <tr><td>2014</td><td>Spot-garden beautification program launched</td></tr>
+    <tr><td>2016</td><td>DHCD planning grant; Downtown Revitalization Project begins</td></tr>
+    <tr><td>2019</td><td>CDBG facade-improvement grant awarded</td></tr>
+    <tr><td>2022</td><td>Final facade contract completed</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Details</td></tr>
+    <tr><td>Current status</td><td>Ongoing</td></tr>
+    <tr><td>Key figures</td><td>H.&nbsp;B. Pack, Ronnie Spiggle, Beckie Nix, Anne Dixon, Paul Harvey, Mary Lou Spiggle, Gary Shanaberger</td></tr>
+    <tr><td>Related topics</td><td><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Business &amp; Commerce History</a></td></tr>
+  </table>
+</div>
+
+<p><b>Main Street Appomattox &mdash; Downtown Revitalization</b> encompasses more than four decades of public and private efforts to improve, beautify, and economically strengthen the commercial core of the Town of Appomattox, Virginia. Anchored by Main Street and the surrounding blocks of Court Street, Church Street, Lee Street, and Confederate Boulevard (Business U.S.&nbsp;460), the downtown district has been the subject of federally funded redevelopment, volunteer beautification campaigns, tourism infrastructure investments, historic-preservation debates, and a formal revitalization project funded through the Virginia Department of Housing and Community Development (DHCD). The area is listed on the National Register of Historic Places as part of the Appomattox Historic District, with 306 of 450 surveyed buildings identified as contributing structures.<sup><a href="#ref1">[1]</a></sup></p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#1976_redevelopment">The 1976 Downtown Redevelopment Project</a></li>
+    <li><a href="#1990s_2000s">Voluntary Beautification and Early Tourism (1997&ndash;2007)</a>
+      <ol>
+        <li><a href="#flower_barrels">Flower Barrels and Merchant Efforts</a></li>
+        <li><a href="#abbitt_park">Abbitt Park Upgrades (2006)</a></li>
+        <li><a href="#darrowby_house">The Darrowby House Facade Controversy (2006)</a></li>
+        <li><a href="#tourism_infrastructure">Tourism Infrastructure</a></li>
+        <li><a href="#main_street_affiliate">Virginia Main Street Affiliate (2007)</a></li>
+      </ol>
+    </li>
+    <li><a href="#regulatory_era">Regulatory and Institutional Changes (2007&ndash;2014)</a>
+      <ol>
+        <li><a href="#sign_ordinance">Landscape and Sign Ordinance</a></li>
+        <li><a href="#downtown_events">Downtown Events as Economic Drivers</a></li>
+        <li><a href="#spot_gardens">Spot-Garden Beautification (2014)</a></li>
+      </ol>
+    </li>
+    <li><a href="#revitalization_project">The Appomattox Downtown Revitalization Project (2016&ndash;2022)</a>
+      <ol>
+        <li><a href="#planning_phase">DHCD Planning Grant and Consumer Survey (2016)</a></li>
+        <li><a href="#facade_program">CDBG Facade Improvement Program (2019&ndash;2022)</a></li>
+        <li><a href="#branding_signage">Branding, Signage, and Wayfinding</a></li>
+      </ol>
+    </li>
+    <li><a href="#private_investment">Private Investment and New Businesses</a></li>
+    <li><a href="#current_status">Current Status</a></li>
+    <li><a href="#public_reception">Public Reception and Controversy</a></li>
+    <li><a href="#key_figures">Key Figures</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See Also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="background">Background</h2>
+
+<p>The Town of Appomattox, the county seat of Appomattox County, developed around the railroad depot built in the late nineteenth century, which served as the social and commercial center of the community. Main Street runs roughly parallel to the Norfolk Southern rail line, with commercial storefronts concentrated in a compact walkable district. The town's proximity to Appomattox Court House National Historical Park&mdash;site of the April&nbsp;9, 1865, surrender that ended the Civil War&mdash;gave it an enduring connection to heritage tourism, attracting visitors from all fifty states and twenty-nine countries by 2010.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>Despite its historical significance, the downtown experienced the same pressures that affected small-town commercial centers across Virginia in the late twentieth century: competition from highway-oriented development along U.S.&nbsp;Route&nbsp;460, aging building stock, and limited public investment. Efforts to reverse this decline have come in distinct waves&mdash;a federally funded physical redevelopment in the mid-1970s, a period of grassroots beautification and tourism promotion from the late 1990s through the 2000s, regulatory reforms in the late 2000s, and a structured revitalization project backed by state grants beginning in 2016.</p>
+
+<h2 id="1976_redevelopment">The 1976 Downtown Redevelopment Project</h2>
+
+<p>The earliest documented downtown revitalization effort was the Appomattox Downtown Redevelopment Project, a federally assisted initiative that the Town Council pursued during 1976 and 1977. By March 1976, the Town's Street Committee was receiving updates on both a Court Street improvement project and a broader Downtown Redevelopment Plan.<sup><a href="#ref3">[3]</a></sup> Mayor H.&nbsp;B. Pack circulated a letter to committee members on March&nbsp;3, 1976, requesting approval for May-Hines and Associates, the town's engineering firm, to perform design work for the downtown project at a cost not to exceed $5,000&mdash;an eligible expense under the federal grant.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>A special Council meeting on September&nbsp;27, 1976, reviewed the project's scope. The plan called for the demolition of an old hotel building, construction of a new parking lot, and improvements to Lee Street. Council heard from engineers Ralph Hines and William Berkley of May-Hines and Associates on design alternatives and cost estimates. Town Manager W.&nbsp;S. Slagle reported that most parcels had been acquired, though negotiations were still ongoing with the McDearmon Estate (which sought $12,000 against an appraised value of $5,227), Continental Telephone Company, and Farmer's Bank for right-of-way.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>On November&nbsp;8, 1976, Council opened sealed bids for the demolition and construction work. Three contractors submitted proposals: D.&nbsp;S. Nash Construction ($39,970), W.&nbsp;F. Moore Construction ($32,917.50), and T.&nbsp;E. Brown Construction ($28,450). Council unanimously awarded the contract to T.&nbsp;E. Brown on the engineers' recommendation.<sup><a href="#ref6">[6]</a></sup> A change order for storm-drain work, not included in the original bid, added approximately $18,000 to the project; the Street Committee approved letting T.&nbsp;E. Brown perform this additional work in late November 1976.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>In December 1976, Council authorized May-Hines Associates to apply for additional federal funding to complete the downtown project.<sup><a href="#ref8">[8]</a></sup> Public hearings for the supplemental funding were advertised for January&nbsp;13 and 14, 1977, at the Appomattox Town Hall.<sup><a href="#ref9">[9]</a></sup> The project resulted in the removal of the deteriorating hotel structure, creation of new off-street parking between Lee Street and Main Street, and associated drainage and streetwork improvements in the heart of the commercial district.</p>
+
+<h2 id="1990s_2000s">Voluntary Beautification and Early Tourism (1997&ndash;2007)</h2>
+
+<h3 id="flower_barrels">Flower Barrels and Merchant Efforts</h3>
+
+<p>In 1997, residents Carolyn Davis and Frances Lewis began a volunteer beautification project, filling barrels along Main Street with flowers and committing to maintain the plantings through the growing season.<sup><a href="#ref10">[10]</a></sup> The effort was among the first visible grassroots actions to improve the streetscape's appearance. By 2005, a broader wave of private investment was visible: Bryan Baine had renovated and opened Baine's Books and Coffee, the Mitchel family had transformed the old Appomattox Hardware building into the Appomattox Gallery and Tea Room, and Jerry and Sheila Palamar had established the Babcock House bed-and-breakfast&mdash;all on or near Main Street.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>A 2005 letter to the <i>Times-Virginian</i> praised the cumulative effect, noting brick edging of sidewalks in the historic area, newly planted dogwoods on Lee Street, removal of run-down buildings, and sewer-system improvements, alongside the voluntary property renovations by individual business owners.<sup><a href="#ref12">[12]</a></sup> By 2007, merchants were being publicly commended for their beautification work, though some observers noted that not all property owners had made comparable investments, and that eyesores&mdash;including a wrecked vehicle used for advertising and a dilapidated building facade&mdash;detracted from the historic area.<sup><a href="#ref13">[13]</a></sup></p>
+
+<h3 id="abbitt_park">Abbitt Park Upgrades (2006)</h3>
+
+<p>In June 2006, the Appomattox Town Council approved more than $50,000 in improvements to Watkins M. Abbitt Memorial Park, a green space along Main Street that had become the venue for Friday Cheers concerts, the Lions Club Food Festival, and other community gatherings. The plan called for a 24-by-40-foot pavilion, a re-angled and roofed stage, a five-foot sidewalk with brick edging to replace the existing three-foot walk along Main Street, removal of hedges in favor of a black metal fence matching the depot's design, and four new period streetlights identical to those already on Main Street.<sup><a href="#ref14">[14]</a></sup> The beautification was recommended by the Council's street and property committee, chaired by Steve Lawson.</p>
+
+<p>The project met public pushback. In a letter to town officials, Abbitt Memorial Park Volunteer Committee members Bill Burke, Watkins Abbitt Jr., and Penny Taylor urged Council to reconsider several elements, arguing that the stage should be left in its current orientation to maximize park space, that a less expensive pavilion design (modeled on those at James River State Park) would suffice, and that the existing hedge row provided a better atmosphere than a metal fence. By August 2006, Council had agreed to put portions of the project on hold pending further citizen input.<sup><a href="#ref15">[15]</a></sup></p>
+
+<h3 id="darrowby_house">The Darrowby House Facade Controversy (2006)</h3>
+
+<p>One of the most contentious episodes in downtown preservation occurred in January 2006, when Farmer's Bank announced plans to demolish the facade of the adjacent Darrowby House building on Main Street to create additional office space. The building, formerly an antique store operated by Susan Book, had originally been Cleveland Fuqua's handmade cigar factory, built c.&nbsp;1910, and was largely unaltered&mdash;one of the few surviving original storefronts in the Historic District.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>About a dozen residents packed the Town Office on January&nbsp;9, 2006, to urge preservation. Council voted unanimously to send a delegation&mdash;Town Manager David Garrett and council members Marvin Mitchell and John Wilson&mdash;to meet with bank officials. Farmer's Bank President Floyd Williams met with the delegation and acknowledged that preserving the facade was technically feasible, though it would reduce usable interior space. He agreed to forward the town's concerns to the bank's board of directors.<sup><a href="#ref17">[17]</a></sup> Mayor Ronnie Spiggle recused himself from the discussion because of his membership on the bank's board.</p>
+
+<p>The bank's board ultimately voted to proceed with demolition, with only two members dissenting&mdash;Spiggle and Delegate Watkins Abbitt, both of whom voted to save the facade.<sup><a href="#ref18">[18]</a></sup> Former owner Susan Book published an open letter expressing her disappointment, arguing that minor modifications could have preserved the storefront's historical character.<sup><a href="#ref19">[19]</a></sup> The episode galvanized broader community discussion about the need for architectural standards and preservation tools in the downtown area.</p>
+
+<h3 id="tourism_infrastructure">Tourism Infrastructure</h3>
+
+<p>Tourism promotion became increasingly intertwined with downtown improvement during this period. The Visitors Center, housed in the renovated railroad depot on Main Street, served as the primary point of contact for tourists. In 2006, the Town Council moved to take direct control of the Visitors Center from the Chamber of Commerce, which had been operating it on the town's behalf.<sup><a href="#ref20">[20]</a></sup> In 2005, Anne Dixon, the county's Director of Parks, Tourism and Recreation, explored installing wayfinding signage to direct motorists from U.S.&nbsp;460 to Main Street, pending VDOT approval.<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>In early 2008, the town erected a four-sided tourism information kiosk on Main Street, positioned between the Visitors Center and the commercial district, to provide visitor information when the center was closed.<sup><a href="#ref22">[22]</a></sup> By April 2008, the kiosk was being adapted to feature community-event listings, with Beckie Nix, Director of Tourism, soliciting submissions from citizens and businesses.<sup><a href="#ref23">[23]</a></sup> In 2009, the town erected five new Downtown Historic District signs along Confederate Boulevard to direct visitors toward the commercial core and reduce confusion about reaching the area.<sup><a href="#ref24">[24]</a></sup></p>
+
+<h3 id="main_street_affiliate">Virginia Main Street Affiliate (2007)</h3>
+
+<p>In July 2007, Beckie Nix and Anne Dixon attended a statewide training session hosted by the Virginia Main Street (VMS) program in Luray, which focused on heritage tourism and downtown development. The VMS program, managed by the Virginia Department of Housing and Community Development (DHCD), provides training and technical support to help Main Street communities improve their downtowns and encourage private investment.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>Following the training, the Town of Appomattox filed to become a Main Street Affiliate Community. The designation was intended to help attract businesses, tourists, and customers to the downtown area, though the town did not yet qualify as a fully designated Virginia Main Street Community.<sup><a href="#ref26">[26]</a></sup> In December 2014, town officials again discussed pursuing a Main Street designation, this time as part of a broader set of economic-development priorities established at a Council retreat. Mayor Paul Harvey noted the designation could unlock revitalization grants.<sup><a href="#ref27">[27]</a></sup></p>
+
+<h2 id="regulatory_era">Regulatory and Institutional Changes (2007&ndash;2014)</h2>
+
+<h3 id="sign_ordinance">Landscape and Sign Ordinance</h3>
+
+<p>Beginning in 2006, Town Council members discussed the need for ordinances to regulate signage and landscaping in the commercial district. In March 2007, Council invited Lynchburg City Planner Tom Martin to present information on landscape and sign ordinances, drawing on Lynchburg's experience with similar regulations.<sup><a href="#ref28">[28]</a></sup> Council subsequently appointed five citizen advisors to an Ordinance Committee to help develop the standards.<sup><a href="#ref29">[29]</a></sup></p>
+
+<p>The Appomattox County Planning Commission voted 8&ndash;1 in July 2009 to recommend adoption of the sign ordinance, and the Town Council formally adopted it in September 2009. The seventeen-page ordinance divided the town into three sign districts&mdash;the 460 District, the Downtown District, and the Court Street/Fringe District&mdash;with specific rules for each area. Sandwich-board signs were permitted exclusively within the Downtown District. Existing signs erected before September 2009 were grandfathered as nonconforming.<sup><a href="#ref30">[30]</a></sup> When business owners received written notification of the new rules in early 2010, some confusion arose, prompting town officials to clarify the grandfathering provisions.</p>
+
+<h3 id="downtown_events">Downtown Events as Economic Drivers</h3>
+
+<p>A series of recurring events reinforced downtown's role as the community's social and commercial center. The Historic Appomattox Railroad Festival, held annually since 1973, drew an estimated 35,000 to 40,000 attendees by 2004 and consistently boosted merchant revenues.<sup><a href="#ref31">[31]</a></sup> The Friday Cheers concert series, launched at Abbitt Park in the early 2000s by the Chamber of Commerce, became a regular warm-weather fixture, later rebranded as Appomattox Cheerz.<sup><a href="#ref32">[32]</a></sup> The Community of Candles, a Christian-inspired Christmas celebration featuring a candlelit walk from the old courthouse to Main Street, had been a tradition since at least the late 1980s, drawing hundreds to the downtown each December.<sup><a href="#ref33">[33]</a></sup></p>
+
+<p>In 2009, the Appomattox Farmers Market opened on Main Street in front of the Appomattox Gallery, operating every Saturday from 7&nbsp;a.m. to 2&nbsp;p.m. Organizers reported a positive impact on Main Street businesses, with foot traffic from the market drawing customers into nearby shops.<sup><a href="#ref34">[34]</a></sup> A second farmers market, sponsored by the Chamber of Commerce and held at the Cardinal Chevrolet lot, launched in April 2011 and ran on Fridays through October.<sup><a href="#ref35">[35]</a></sup></p>
+
+<h3 id="spot_gardens">Spot-Garden Beautification (2014)</h3>
+
+<p>In March 2014, the Town Council approved a proposal from Councilwoman Mary Lou Spiggle's spot-garden committee to hire Harvey Design Land Architects of Lynchburg for landscaping work. The firm, which had performed similar aesthetic work for Farmville, Lynchburg, and Altavista, was chosen from among three companies that submitted proposals. The initiative was part of a broader set of Council priorities approved earlier that year, which also included improving the Route&nbsp;24 corridor entrance to the town, seeking new small-business opportunities, and cleaning up blighted property.<sup><a href="#ref36">[36]</a></sup></p>
+
+<h2 id="revitalization_project">The Appomattox Downtown Revitalization Project (2016&ndash;2022)</h2>
+
+<h3 id="planning_phase">DHCD Planning Grant and Consumer Survey (2016)</h3>
+
+<p>The most structured downtown-improvement effort came in 2016, when the Town of Appomattox was awarded a planning grant from the Virginia Department of Housing and Community Development. The Appomattox Downtown Revitalization Project was designed as a comprehensive effort to frame physical improvements along the commercial corridors&mdash;Confederate Boulevard, Court Street, Main Street, and Church Street&mdash;and to enhance the economic vitality of the entire town. Kelly Hitchcock, Senior Planner with the Region 2000 Local Government Council, served as the project coordinator.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>As part of the planning phase, the town distributed a Consumer Interest Survey in July 2016 to gather data on shopping patterns, attitudes toward the downtown, and desired businesses and services. The survey results were intended to inform a marketing and branding study, a physical assessment of downtown properties, and plans for infrastructure and streetscape improvements including benches, trees, lighting, and building upgrades.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>In October 2016, downtown business owners attended a session on facade-improvement matching-grant opportunities, signaling the project's intended trajectory toward physical investment.<sup><a href="#ref38">[38]</a></sup> In early 2017, a public meeting discussed potential streetscape enhancements, increased parking, facade improvements, a downtown marketing area designation, and pop-up shops to support local entrepreneurs.<sup><a href="#ref39">[39]</a></sup></p>
+
+<h3 id="facade_program">CDBG Facade Improvement Program (2019&ndash;2022)</h3>
+
+<p>The planning phase led to a Community Development Block Grant (CDBG) application for facade improvements. By February 2019, a Facade Improvement Program was formally planned for downtown Appomattox, utilizing CDBG funds to assist property owners with external improvements to deteriorated commercial buildings.<sup><a href="#ref40">[40]</a></sup> The program was structured as a matching grant: downtown property owners could receive up to $10,000 for facade work, with the Appomattox Economic Development Authority (EDA) covering half of their required match.<sup><a href="#ref41">[41]</a></sup></p>
+
+<p>Craig Wilson of Summit Design and Engineering Services was engaged to manage the project. A kick-off meeting was held on December&nbsp;12, 2019, at the Appomattox Municipal Building, where Town Manager Gary Shanaberger and Wilson reviewed the project scope with attendees.<sup><a href="#ref42">[42]</a></sup> By January 2021, six properties were under contract and construction had commenced on one of them.<sup><a href="#ref43">[43]</a></sup> The Facade Advisory Board approved low bidders for facade improvements on several buildings, including properties owned by Coleman, Mays, and Theonomic Reformation, in February 2021.<sup><a href="#ref44">[44]</a></sup></p>
+
+<p>In January 2022, the EDA approved $5,000 for exterior facade improvements on the building at 266&ndash;276 Court Street, marking the final facade contract under the program.<sup><a href="#ref45">[45]</a></sup> A fair-housing poster contest associated with the project drew 160 entries from approximately twenty locations; fifth-grader Gunner Nowell of Appomattox Elementary School won the contest and was recognized by Town Council in November 2023.<sup><a href="#ref46">[46]</a></sup></p>
+
+<h3 id="branding_signage">Branding, Signage, and Wayfinding</h3>
+
+<p>Parallel to the facade work, downtown stakeholders pursued improved wayfinding to address a longstanding challenge: motorists on the U.S.&nbsp;460 bypass often drove past the town without realizing the historic downtown existed. In January 2019, the Appomattox County Chamber of Commerce secured $9,000 from Farmer's Bank and Bank of the James to erect a sign near the U.S.&nbsp;460/Oakleigh Avenue overpass promoting downtown Appomattox.<sup><a href="#ref47">[47]</a></sup> The signage project, a two-and-a-half-year effort involving land-use permissions, was reported as nearly complete by May 2019.<sup><a href="#ref48">[48]</a></sup></p>
+
+<p>The Downtown Revitalization Project also incorporated a branding component. By 2022, the project's branding work had begun to position Appomattox's identity as extending beyond the April&nbsp;9, 1865, surrender, emphasizing the town's broader history and community character.<sup><a href="#ref49">[49]</a></sup></p>
+
+<h2 id="private_investment">Private Investment and New Businesses</h2>
+
+<p>Throughout the revitalization period, private investment in downtown properties complemented public efforts. In 2004, Bryan Baine opened Baine's Books and Coffee in a renovated Main Street building, later crediting downtown revitalization for drawing customers; his sales increased markedly on events like the Christmas parade.<sup><a href="#ref50">[50]</a></sup> Bobby Swanberg purchased and operated Village Printshop on Main Street from 2002.<sup><a href="#ref51">[51]</a></sup> The Mitchel family, immigrants to the area, transformed multiple buildings&mdash;the old Appomattox Hardware became the Appomattox Gallery and Tea Room, and the old courthouse was converted into the Courthouse Theatre&mdash;contributing both commercial activity and cultural programming.<sup><a href="#ref52">[52]</a></sup></p>
+
+<p>In July 2016, Don and Nancy Wilk purchased the historic Babcock Store building and began renovating it to create Local APX Market, envisioned as a venue for healthy food, arts, and community events.<sup><a href="#ref53">[53]</a></sup> Beth Turner's Country Charm, a gift shop on Main Street, operated continuously for over thirty years.<sup><a href="#ref54">[54]</a></sup> In 2017, That's Too Cute relocated from The Junction Shopping Center to Main Street.<sup><a href="#ref55">[55]</a></sup> Edward Jones opened a financial-services office on Main Street in October 2020.<sup><a href="#ref56">[56]</a></sup> In May 2024, Threaded-N-Grace Boutique opened with a ribbon cutting, its owner, Robbie Childress, fulfilling a longtime dream of operating a Main Street shop.<sup><a href="#ref57">[57]</a></sup></p>
+
+<h2 id="current_status">Current Status</h2>
+
+<p>As of 2024, the CDBG-funded facade improvement program has been completed, with all contracted properties having received exterior work. The broader Downtown Revitalization Project's branding and marketing elements continue to shape the town's promotional efforts. The Appomattox County Board of Supervisors in 2024 approved an amendment to the county's Comprehensive Plan to add a Pamplin Main Street Improvement Project, extending revitalization attention to the county's other incorporated town.<sup><a href="#ref58">[58]</a></sup></p>
+
+<p>Main Street continues to host annual events including the Railroad Festival, the Community of Candles, and seasonal markets. The 2019 proposal to relocate the Visitors Center from the railroad depot to the American Civil War Museum generated debate about the future of the depot and its role in downtown foot traffic.<sup><a href="#ref59">[59]</a></sup> Downtown Appomattox remains a mix of small retail shops, professional offices, and dining establishments, with vacant storefronts along Confederate Boulevard cited as an ongoing challenge by the Downtown Revitalization Project.<sup><a href="#ref60">[60]</a></sup></p>
+
+<h2 id="public_reception">Public Reception and Controversy</h2>
+
+<p>Public opinion on downtown revitalization has been mixed. Supporters have pointed to visible improvements&mdash;renovated facades, new businesses, and well-attended events&mdash;as evidence of progress. In 2005, a resident wrote that Appomattox's special character was being enhanced by individual investment in property improvement and new business activity.<sup><a href="#ref12">[12]</a></sup> Baine's Books and Coffee credited downtown revitalization for increased sales.<sup><a href="#ref50">[50]</a></sup></p>
+
+<p>Critics have raised concerns at various points. In 2007, a longtime resident lamented that Main Street no longer resembled the town she had known, expressing fear that its character was being lost.<sup><a href="#ref61">[61]</a></sup> In 2011, business owner Gary Barton publicly questioned past investments in Main Street revitalization and opposed the proposed relocation of the Visitors Center, arguing it would harm downtown businesses.<sup><a href="#ref62">[62]</a></sup> In 2019, a businessman criticized the $700,000 budgeted for downtown revitalization, contending that the spending was poorly directed and would not increase foot traffic.<sup><a href="#ref63">[63]</a></sup></p>
+
+<p>The Darrowby House episode of 2006 illustrated the tension between private property rights and community preservation interests. The Abbitt Park upgrade debate of the same year revealed differing visions for the downtown's public spaces. Throughout, letter writers to the <i>Times-Virginian</i> expressed opinions ranging from enthusiastic support to skepticism that public spending would produce lasting benefits.</p>
+
+<h2 id="key_figures">Key Figures</h2>
+
+<p><b>H.&nbsp;B. Pack</b> served as Mayor during the 1976 Downtown Redevelopment Project, guiding the town through property acquisition, federal grant applications, and the hotel demolition. <b>Ronnie Spiggle</b>, who served on Council during the 1976 project and later as Mayor, was a consistent presence in downtown affairs for decades, recusing himself from the Darrowby House vote due to his bank board membership. <b>Beckie Nix</b>, Director of Tourism, led the 2007 Virginia Main Street Affiliate application and managed the downtown kiosk program. <b>Anne Dixon</b>, Parks, Recreation and Tourism Director for the county, worked alongside Nix on tourism and wayfinding initiatives. <b>Mary Lou Spiggle</b> chaired the spot-garden committee that launched the 2014 beautification effort. <b>Paul Harvey</b>, as Mayor from 2014, articulated the Council's economic-development vision and pushed for Main Street designation. <b>Gary Shanaberger</b> served as Town Manager during the CDBG facade-improvement project from 2019.</p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr><th>Date</th><th>Event</th></tr>
+  <tr><td>Mar 1976</td><td>Street Committee briefed on Downtown Redevelopment Plan; engineering design authorized</td></tr>
+  <tr><td>Sep 1976</td><td>Special Council meeting reviews project scope; property acquisitions underway</td></tr>
+  <tr><td>Nov 1976</td><td>T.&nbsp;E. Brown Construction awarded $28,450 contract for hotel demolition, parking lot, and Lee&nbsp;St. work</td></tr>
+  <tr><td>Jan 1977</td><td>Public hearings held for additional federal funding for downtown project</td></tr>
+  <tr><td>May 1997</td><td>Carolyn Davis and Frances Lewis begin volunteer flower-barrel beautification on Main Street</td></tr>
+  <tr><td>c.&nbsp;2002</td><td>Friday Cheers concert series begins at Abbitt Park</td></tr>
+  <tr><td>2004</td><td>Baine's Books and Coffee opens on Main Street; Railroad Festival draws 35,000&ndash;40,000</td></tr>
+  <tr><td>Jun 2006</td><td>Town Council approves $50,000+ Abbitt Park upgrade plan (partially deferred after citizen input)</td></tr>
+  <tr><td>Jan 2006</td><td>Farmer's Bank board votes to demolish Darrowby House facade despite town delegation's appeal</td></tr>
+  <tr><td>Mar 2006</td><td>Virginia DHR presents on Historic District significance and tax credits</td></tr>
+  <tr><td>Jul 2007</td><td>Town officials attend Virginia Main Street training; file for Affiliate status</td></tr>
+  <tr><td>Jan 2008</td><td>Tourism information kiosk erected on Main Street</td></tr>
+  <tr><td>May 2009</td><td>Appomattox Farmers Market opens on Main Street</td></tr>
+  <tr><td>Sep 2009</td><td>Town Council adopts sign ordinance dividing town into three districts</td></tr>
+  <tr><td>Sep 2009</td><td>Five Downtown Historic District signs erected along Confederate Boulevard</td></tr>
+  <tr><td>Mar 2014</td><td>Council approves Harvey Design Land Architects for spot-garden beautification</td></tr>
+  <tr><td>Dec 2014</td><td>Council retreat establishes downtown expansion and beautification as priority goals</td></tr>
+  <tr><td>Jul 2016</td><td>DHCD planning grant awarded; Consumer Interest Survey distributed</td></tr>
+  <tr><td>Oct 2016</td><td>Downtown business owners briefed on facade-improvement grant opportunities</td></tr>
+  <tr><td>Feb 2017</td><td>Public meeting discusses streetscape, parking, facade improvements, and pop-up shops</td></tr>
+  <tr><td>Jun 2018</td><td>EDA meeting held at train depot to discuss downtown revitalization with merchants</td></tr>
+  <tr><td>Jan 2019</td><td>Chamber secures $9,000 for U.S.&nbsp;460 bypass signage promoting downtown</td></tr>
+  <tr><td>Feb 2019</td><td>CDBG Facade Improvement Program formally announced</td></tr>
+  <tr><td>Dec 2019</td><td>Kick-off meeting for Downtown Revitalization Project at Municipal Building</td></tr>
+  <tr><td>Jan 2021</td><td>Six facade properties under contract; construction begins</td></tr>
+  <tr><td>Feb 2021</td><td>Facade Advisory Board approves low bidders for multiple buildings</td></tr>
+  <tr><td>Jan 2022</td><td>EDA approves final facade contract ($5,000 for 266&ndash;276 Court&nbsp;St.)</td></tr>
+  <tr><td>May 2024</td><td>Threaded-N-Grace Boutique opens on Main Street; Pamplin Main Street Project added to Comprehensive Plan</td></tr>
+</table>
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+  <li><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox Center for Business and Commerce History</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Presentation highlights significance of Appomattox Historic District and tax credits," <i>Times-Virginian</i>, March 8, 2006 (via responses.db).</li>
+    <li id="ref2">"Appomattox Historic Downtown District Draws Visitors," <i>Times-Virginian</i>, February 10, 2010 (via responses.db).</li>
+    <li id="ref3">Town of Appomattox Street Committee minutes, March 2, 1976, Book 1, Plate 610 (via county_town_gov_meeting_minutes.db).</li>
+    <li id="ref4">Letter from Mayor H.&nbsp;B. Pack to Street Committee members, March 3, 1976, Book 1, Plate 611 (via county_town_gov_meeting_minutes.db).</li>
+    <li id="ref5">Town of Appomattox special meeting minutes, September 27, 1976, Book 1, Plate 670 (via county_town_gov_meeting_minutes.db).</li>
+    <li id="ref6">Town of Appomattox bid opening and regular meeting minutes, November 8, 1976, Book 1, Plate 675 (via county_town_gov_meeting_minutes.db).</li>
+    <li id="ref7">Town of Appomattox Street Committee minutes, November 29, 1976, Book 1, Plate 683 (via county_town_gov_meeting_minutes.db).</li>
+    <li id="ref8">Town of Appomattox regular meeting minutes, December 13, 1976, Book 1, Plate 684 (via county_town_gov_meeting_minutes.db).</li>
+    <li id="ref9">Public notices for Appomattox Downtown Redevelopment Project hearings, January 1977, Book 1, Plates 688&ndash;690 (via county_town_gov_meeting_minutes.db).</li>
+    <li id="ref10">"Community Ladies Begin Main Street Beautification Project," <i>Times-Virginian</i>, May 16, 1997 (via responses.db).</li>
+    <li id="ref11">"Appomattox community revitalization efforts highlighted," <i>Times-Virginian</i>, December 1, 2004 (via responses.db).</li>
+    <li id="ref12">"Appomattox is beautiful and unique" (letter to the editor), <i>Times-Virginian</i>, June 29, 2005.</li>
+    <li id="ref13">"Downtown Appomattox Beautification Needs Addressed" (letter to the editor), <i>Times-Virginian</i>, July 3, 2007 (via responses.db).</li>
+    <li id="ref14">"Upgrades approved for Abbitt Park," <i>Times-Virginian</i>, July 12, 2006.</li>
+    <li id="ref15">"Abbitt Park upgrades put on hold," <i>Times-Virginian</i>, August 24, 2006.</li>
+    <li id="ref16">"Reader wants to preserve Main Street facade" (letter to the editor), <i>Times-Virginian</i>, January 5, 2006.</li>
+    <li id="ref17">"Town council asks Farmer's Bank to reconsider plans for facade," <i>Times-Virginian</i>, January 11, 2006.</li>
+    <li id="ref18">"Spiggle and Abbitt vote to save Darrowby House facade," <i>Times-Virginian</i>, February 1, 2006 (via responses.db).</li>
+    <li id="ref19">"Former owner of Darrowby House heartbroken" (letter to the editor), <i>Times-Virginian</i>, January 25, 2006.</li>
+    <li id="ref20">"Appomattox Town Council to take control of Depot Visitors Center," <i>Times-Virginian</i>, February 1, 2006 (via responses.db).</li>
+    <li id="ref21">"Downtown Appomattox Signage Planned," <i>Times-Virginian</i>, June 23, 2005 (via responses.db).</li>
+    <li id="ref22">"Appomattox erects tourism kiosk on Main Street," <i>Times-Virginian</i>, January 30, 2008 (via responses.db).</li>
+    <li id="ref23">"Town seeks community event information for Main Street kiosk," <i>Times-Virginian</i>, April 9, 2008 (via responses.db).</li>
+    <li id="ref24">"Town of Appomattox Erects Five New Downtown Historic District Signs," <i>Times-Virginian</i>, September 23, 2009 (via responses.db).</li>
+    <li id="ref25">"Town of Appomattox participates in Main Street training," <i>Times-Virginian</i>, August 14, 2007.</li>
+    <li id="ref26">"Appomattox Seeks Main Street Affiliate Status," <i>Times-Virginian</i>, August 14, 2007 (via responses.db).</li>
+    <li id="ref27">"Town sets economic goals," <i>Times-Virginian</i>, December 10, 2014.</li>
+    <li id="ref28">"Lynchburg planner presents landscape ordinance details," <i>Times-Virginian</i>, March 20, 2007 (via responses.db).</li>
+    <li id="ref29">"Town Council appoints citizen advisors to Ordinance Committee," <i>Times-Virginian</i>, August 22, 2007 (via responses.db).</li>
+    <li id="ref30">"Town of Appomattox Adopts Sign Ordinance," <i>Times-Virginian</i>, March 17, 2010 (via responses.db).</li>
+    <li id="ref31">"Railroad Festival draws large crowds and positive feedback," <i>Times-Virginian</i>, October 13, 2004 (via responses.db).</li>
+    <li id="ref32">"Friday Cheers series dates finalized for 2004," <i>Times-Virginian</i>, April 1, 2004 (via responses.db).</li>
+    <li id="ref33">"Large crowds attend Appomattox Christmas Parade and Community of Candles," <i>Times-Virginian</i>, December 9, 2002 (via responses.db).</li>
+    <li id="ref34">"Appomattox Farmers Market Boosts Downtown Business," <i>Times-Virginian</i>, May 20, 2009 (via responses.db).</li>
+    <li id="ref35">"Appomattox County Farmer's Market Planned for April Launch," <i>Times-Virginian</i>, February 23, 2011 (via responses.db).</li>
+    <li id="ref36">"Town seeks to beautify community," <i>Times-Virginian</i>, March 26, 2014.</li>
+    <li id="ref37">"Citizen surveys needed for town project," <i>Times-Virginian</i>, July 6, 2016.</li>
+    <li id="ref38">"Appomattox downtown business owners hear about facade improvement grants," <i>Times-Virginian</i>, October 26, 2016 (via responses.db).</li>
+    <li id="ref39">"Town Considers Downtown Improvements and 'Shop Local' Initiatives," <i>Times-Virginian</i>, February 1, 2017 (via responses.db).</li>
+    <li id="ref40">"Appomattox Facade Improvement Program Planned," <i>Times-Virginian</i>, February 22, 2019 (via responses.db).</li>
+    <li id="ref41">"Downtown Property Owners Eligible for Facade Improvement Funds," <i>Times-Virginian</i>, August 22, 2018 (via responses.db).</li>
+    <li id="ref42">"Downtown revitalization project meeting held," <i>Times-Virginian</i>, December 28, 2019 (via responses.db).</li>
+    <li id="ref43">"Downtown Revitalization Project Property Under Contract," <i>Times-Virginian</i>, January 13, 2021 (via responses.db).</li>
+    <li id="ref44">"Fa&ccedil;ade Advisory Board approves low bidders for downtown buildings," <i>Times-Virginian</i>, February 25, 2021 (via responses.db).</li>
+    <li id="ref45">"Appomattox EDA approves $5,000 for Court Street building facade improvements," <i>Times-Virginian</i>, January 20, 2022 (via responses.db).</li>
+    <li id="ref46">"Gunner Nowell wins Appomattox Fair Housing poster contest," <i>Times-Virginian</i>, November 22, 2023 (via responses.db).</li>
+    <li id="ref47">"Chamber Sign Funding Secured," <i>Times-Virginian</i>, January 24, 2019 (via responses.db).</li>
+    <li id="ref48">"US 460 Bypass Signage Project Nears Completion," <i>Times-Virginian</i>, May 16, 2019 (via responses.db).</li>
+    <li id="ref49">"Appomattox Tourism Committee promotes broader narrative," <i>Times-Virginian</i>, April 29, 2022 (via responses.db).</li>
+    <li id="ref50">"Baine's Books and Coffee Attributes Success to Downtown Revitalization," <i>Times-Virginian</i>, December 21, 2005 (via responses.db).</li>
+    <li id="ref51">"Swanberg purchased Village Printshop," <i>Times-Virginian</i>, October 6, 2004 (via responses.db).</li>
+    <li id="ref52">"Mitchel family revitalizes Appomattox buildings and theater," <i>Times-Virginian</i>, January 24, 2007 (via responses.db).</li>
+    <li id="ref53">"Wilk family purchases and begins renovating historic Babcock Store building," <i>Times-Virginian</i>, January 26, 2017 (via responses.db).</li>
+    <li id="ref54">"Country Charm business operating for 30-plus years," <i>Times-Virginian</i>, January 27, 2022 (via responses.db).</li>
+    <li id="ref55">"That's Too Cute Relocates to Main Street," <i>Times-Virginian</i>, June 19, 2017 (via responses.db).</li>
+    <li id="ref56">"Edward Jones opens Main Street office in Appomattox," <i>Times-Virginian</i>, November 23, 2020 (via responses.db).</li>
+    <li id="ref57">"Threaded-N-Grace Boutique Opens," <i>Times-Virginian</i>, May 1, 2024 (via responses.db).</li>
+    <li id="ref58">"Appomattox County Comprehensive Plan amended for Pamplin Main Street Project," <i>Times-Virginian</i>, May 1, 2024 (via responses.db).</li>
+    <li id="ref59">"Welcome Center Proposal for American Civil War Museum Debated," <i>Times-Virginian</i>, July 6, 2019 (via responses.db).</li>
+    <li id="ref60">"Downtown Revitalization Project progresses," <i>Times-Virginian</i>, December 17, 2021 (via responses.db).</li>
+    <li id="ref61">"Resident Expresses Dissatisfaction with Main Street Changes" (letter to the editor), <i>Times-Virginian</i>, July 3, 2007 (via responses.db).</li>
+    <li id="ref62">"Business owner questions investment in Main Street revitalization and visitor's center relocation," <i>Times-Virginian</i>, May 10, 2011 (via responses.db).</li>
+    <li id="ref63">"Downtown revitalization funds criticized," <i>Times-Virginian</i>, October 21, 2019 (via responses.db).</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 13, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  var input = document.getElementById('apxwiki-search');
+  var list  = document.getElementById('apxwiki-search-results');
+  if (!input || !list) return;
+
+  var activeIdx = -1;
+
+  function render(results) {
+    activeIdx = -1;
+    if (!results.length) {
+      if (input.value.trim().length > 0) {
+        list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+        list.classList.add('active');
+      } else {
+        list.innerHTML = '';
+        list.classList.remove('active');
+      }
+      return;
+    }
+    list.innerHTML = results.slice(0, 8).map(function(r, i) {
+      var desc = r.desc || '';
+      if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+      return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+        + '<span class="sr-title">' + esc(r.title) + '</span>'
+        + '<span class="sr-type">' + esc(r.type) + '</span>'
+        + '<div class="sr-desc">' + esc(desc) + '</div>'
+        + '</a></li>';
+    }).join('');
+    list.classList.add('active');
+  }
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function setActive(items) {
+    for (var j = 0; j < items.length; j++) {
+      items[j].classList.toggle('active', j === activeIdx);
+    }
+  }
+
+  input.addEventListener('input', function() {
+    var q = this.value.trim();
+    if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+    var results = ms.search(q);
+    render(results);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    var items = list.querySelectorAll('a[data-idx]');
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, items.length - 1);
+      setActive(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, 0);
+      setActive(items);
+    } else if (e.key === 'Enter' && activeIdx >= 0) {
+      e.preventDefault();
+      items[activeIdx].click();
+    } else if (e.key === 'Escape') {
+      list.innerHTML = ''; list.classList.remove('active');
+      input.blur();
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!input.contains(e.target) && !list.contains(e.target)) {
+      list.innerHTML = ''; list.classList.remove('active');
+    }
+  });
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
+</body>
+</html>

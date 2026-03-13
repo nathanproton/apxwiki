@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Timothy W. "Timmy" Garrett — ApxWiki</title>
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 
   body {
@@ -178,6 +179,85 @@
   }
   #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
 
+  /* ── Search bar ── */
+  .nav-search-wrap {
+    position: relative;
+    flex: 0 1 260px;
+    min-width: 140px;
+  }
+  #apxwiki-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #a2a9b1;
+    border-radius: 3px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #apxwiki-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 3px rgba(51, 102, 204, 0.3);
+  }
+  #apxwiki-search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 2px 0 0 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #a2a9b1;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  #apxwiki-search-results.active { display: block; }
+  #apxwiki-search-results li {
+    margin: 0;
+    padding: 0;
+  }
+  #apxwiki-search-results li a {
+    display: block;
+    padding: 8px 12px;
+    color: #202122;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #apxwiki-search-results li:last-child a { border-bottom: none; }
+  #apxwiki-search-results li a:hover,
+  #apxwiki-search-results li a.active {
+    background: #eaf3fb;
+  }
+  #apxwiki-search-results li .sr-title {
+    font-weight: bold;
+    color: #3366cc;
+  }
+  #apxwiki-search-results li .sr-type {
+    font-size: 11px;
+    color: #72777d;
+    margin-left: 6px;
+  }
+  #apxwiki-search-results li .sr-desc {
+    font-size: 11.5px;
+    color: #54595d;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  #apxwiki-search-results .sr-empty {
+    padding: 10px 12px;
+    color: #72777d;
+    font-size: 12.5px;
+    font-style: italic;
+  }
+
   /* Footer */
   #apxwiki-footer {
     margin-top: 30px; padding: 10px 14px;
@@ -214,7 +294,8 @@
   /* ── Mobile ── */
   @media screen and (max-width: 720px) {
     #content { padding: 14px 16px 28px 16px; }
-    #apxwiki-nav .nav-inner { padding: 8px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; flex-wrap: wrap; }
+    .nav-search-wrap { flex: 1 1 100%; order: 3; margin-top: 6px; }
     .infobox {
       float: none; clear: both;
       width: 100%; max-width: 100%;
@@ -244,6 +325,10 @@
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-search-wrap">
+      <input type="text" id="apxwiki-search" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
+      <ul id="apxwiki-search-results"></ul>
+    </div>
     <div class="nav-right">
       <a href="index.html">All Articles</a>
       <a href="moderator-changelog.html">Moderation</a>
@@ -494,7 +579,7 @@
 <div id="apxwiki-footer">
   <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
   Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 9, 2026.
+  Last updated March 13, 2026.
 </div>
 
 
@@ -503,6 +588,115 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  var input = document.getElementById('apxwiki-search');
+  var list  = document.getElementById('apxwiki-search-results');
+  if (!input || !list) return;
+
+  var activeIdx = -1;
+
+  function render(results) {
+    activeIdx = -1;
+    if (!results.length) {
+      if (input.value.trim().length > 0) {
+        list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+        list.classList.add('active');
+      } else {
+        list.innerHTML = '';
+        list.classList.remove('active');
+      }
+      return;
+    }
+    list.innerHTML = results.slice(0, 8).map(function(r, i) {
+      var desc = r.desc || '';
+      if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+      return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+        + '<span class="sr-title">' + esc(r.title) + '</span>'
+        + '<span class="sr-type">' + esc(r.type) + '</span>'
+        + '<div class="sr-desc">' + esc(desc) + '</div>'
+        + '</a></li>';
+    }).join('');
+    list.classList.add('active');
+  }
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function setActive(items) {
+    for (var j = 0; j < items.length; j++) {
+      items[j].classList.toggle('active', j === activeIdx);
+    }
+  }
+
+  input.addEventListener('input', function() {
+    var q = this.value.trim();
+    if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+    var results = ms.search(q);
+    render(results);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    var items = list.querySelectorAll('a[data-idx]');
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, items.length - 1);
+      setActive(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, 0);
+      setActive(items);
+    } else if (e.key === 'Enter' && activeIdx >= 0) {
+      e.preventDefault();
+      items[activeIdx].click();
+    } else if (e.key === 'Escape') {
+      list.innerHTML = ''; list.classList.remove('active');
+      input.blur();
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!input.contains(e.target) && !list.contains(e.target)) {
+      list.innerHTML = ''; list.classList.remove('active');
+    }
+  });
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

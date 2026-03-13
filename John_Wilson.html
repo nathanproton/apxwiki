@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John L. Wilson — ApxWiki</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+
+  body {
+    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202122;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px 40px 30px;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 3px;
+    margin-top: 30px;
+  }
+  h3 { font-size: 17px; font-weight: bold; margin-top: 20px; }
+  h4 { font-size: 15px; font-weight: bold; margin-top: 15px; }
+  p { margin: 0.5em 0 0.7em 0; text-align: justify; }
+  a { color: #0645ad; }
+  a.redlink { color: #ba0000; text-decoration: none; }
+  a.redlink:hover { text-decoration: underline; color: #cc0000; }
+  blockquote {
+    margin: 10px 30px; color: #555; font-style: italic;
+    border-left: 3px solid #ccc; padding-left: 10px;
+  }
+  ul, ol { margin: 0.4em 0 0.7em 0; padding-left: 2em; }
+  li { margin: 2px 0; }
+  sup { font-size: 10px; color: #0645ad; }
+
+  /* ── Alerts (inside #content) ── */
+  .apxwiki-alert {
+    padding: 10px 14px;
+    margin: 10px 0 16px 0;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .alert-warning {
+    background: #fef6e7;
+    border: 1px solid #f0c36d;
+    border-left: 4px solid #f0c36d;
+    color: #5a4a28;
+  }
+  .alert-info {
+    background: #eaf3fb;
+    border: 1px solid #a7d7f9;
+    border-left: 4px solid #3680b0;
+    color: #1a3a5c;
+  }
+  .alert-success {
+    background: #edf7ed;
+    border: 1px solid #a3d9a3;
+    border-left: 4px solid #4caf50;
+    color: #2e5c2e;
+  }
+  .alert-danger {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #d32f2f;
+    color: #611a15;
+  }
+
+  /* Infobox */
+  .infobox {
+    float: right; clear: right; margin: 0 0 20px 25px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #a2a9b1; font-size: 12.5px;
+    width: 310px; line-height: 1.5;
+  }
+  .infobox caption, .infobox .infobox-title {
+    font-weight: bold; font-size: 13.5px; text-align: center;
+    margin-bottom: 8px; display: block; background: #cee0f2;
+    padding: 5px 4px; margin: -10px -14px 10px -14px;
+  }
+  .infobox .infobox-subheader {
+    background: #dce8f4; padding: 4px 6px; font-weight: bold;
+    margin: 6px -14px 6px -14px; text-align: center; font-size: 12px;
+  }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox td {
+    padding: 2px 4px; vertical-align: top; border-bottom: 1px solid #eaecf0;
+  }
+  .infobox td:first-child {
+    font-weight: bold; white-space: nowrap; width: 48%; color: #555;
+  }
+
+  /* Tables */
+  .wikitable {
+    border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px;
+  }
+  .wikitable th {
+    background: #eaecf0; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .wikitable td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .wikitable tr:nth-child(even) { background: #f8f9fa; }
+  .timeline-table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  .timeline-table th {
+    background: #cee0f2; border: 1px solid #a2a9b1; padding: 5px 8px;
+    text-align: left; font-weight: bold;
+  }
+  .timeline-table td { border: 1px solid #a2a9b1; padding: 4px 8px; vertical-align: top; }
+  .timeline-table td:first-child { width: 130px; white-space: nowrap; font-weight: bold; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa; border: 1px solid #a2a9b1; padding: 12px 18px;
+    display: inline-block; margin: 15px 0; min-width: 200px; font-size: 13px;
+  }
+  .toc .toctitle { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+  .toc a { color: #0645ad; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* References */
+  .reflist {
+    font-size: 12.5px; column-count: 2; column-gap: 20px;
+    border-top: 1px solid #a2a9b1; padding-top: 10px; margin-top: 5px;
+  }
+  .reflist ol { margin: 0; padding-left: 20px; }
+  .reflist li { margin-bottom: 4px; line-height: 1.4; }
+
+  /* Notes */
+  .note {
+    background: #eaf3fb; border-left: 4px solid #3680b0;
+    padding: 8px 12px; margin: 12px 0; font-size: 13px; font-style: italic;
+  }
+  .hatnote { font-style: italic; color: #555; font-size: 13px; margin-bottom: 10px; }
+
+  /* Navigation bar */
+  #apxwiki-nav {
+    background: #f6f6f6; border-bottom: 1px solid #a7d7f9;
+    padding: 0; margin: 0;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  #apxwiki-nav .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 30px; flex-wrap: wrap; gap: 4px 0;
+  }
+  #apxwiki-nav .nav-brand {
+    font-weight: bold; font-size: 16px; color: #3366cc; text-decoration: none;
+  }
+  #apxwiki-nav .nav-brand:hover { text-decoration: underline; }
+  #apxwiki-nav .nav-right {
+    display: flex; gap: 14px; align-items: center;
+  }
+  #apxwiki-nav .nav-right a {
+    color: #3366cc; text-decoration: none; font-size: 12.5px;
+  }
+  #apxwiki-nav .nav-right a:hover { text-decoration: underline; }
+
+  /* ── Search bar ── */
+  .nav-search-wrap {
+    position: relative;
+    flex: 0 1 260px;
+    min-width: 140px;
+  }
+  #apxwiki-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #a2a9b1;
+    border-radius: 3px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #apxwiki-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 3px rgba(51, 102, 204, 0.3);
+  }
+  #apxwiki-search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 2px 0 0 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #a2a9b1;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  #apxwiki-search-results.active { display: block; }
+  #apxwiki-search-results li {
+    margin: 0;
+    padding: 0;
+  }
+  #apxwiki-search-results li a {
+    display: block;
+    padding: 8px 12px;
+    color: #202122;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #apxwiki-search-results li:last-child a { border-bottom: none; }
+  #apxwiki-search-results li a:hover,
+  #apxwiki-search-results li a.active {
+    background: #eaf3fb;
+  }
+  #apxwiki-search-results li .sr-title {
+    font-weight: bold;
+    color: #3366cc;
+  }
+  #apxwiki-search-results li .sr-type {
+    font-size: 11px;
+    color: #72777d;
+    margin-left: 6px;
+  }
+  #apxwiki-search-results li .sr-desc {
+    font-size: 11.5px;
+    color: #54595d;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  #apxwiki-search-results .sr-empty {
+    padding: 10px 12px;
+    color: #72777d;
+    font-size: 12.5px;
+    font-style: italic;
+  }
+
+  /* Footer */
+  #apxwiki-footer {
+    margin-top: 30px; padding: 10px 14px;
+    background: #f8f9fa; border: 1px solid #ddd;
+    font-size: 12px; color: #555;
+  }
+
+  /* Index-specific */
+  .article-list { list-style: none; padding: 0; }
+  .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
+  .article-list li:last-child { border-bottom: none; }
+  .article-list a { color: #3366cc; text-decoration: none; font-size: 16px; font-weight: bold; }
+  .article-list a:hover { text-decoration: underline; }
+  .article-list .desc { color: #54595d; font-size: 13px; margin-top: 3px; }
+  .article-list .meta { color: #888; font-size: 11px; margin-top: 2px; }
+
+  .stub-list { list-style: none; padding: 0; column-count: 2; column-gap: 28px; }
+  .stub-list li { padding: 7px 0; border-bottom: 1px solid #eaecf0; break-inside: avoid; }
+  .stub-list li:last-child { border-bottom: none; }
+  .stub-list a { font-size: 14px; font-weight: bold; }
+  .stub-list .desc { color: #54595d; font-size: 12px; margin-top: 2px; }
+
+  .stub-note {
+    background: #fff3cd; border: 1px solid #ffc107; border-left: 4px solid #ffc107;
+    padding: 10px 16px; font-size: 13px; color: #555; margin: 12px 0 20px 0;
+    border-radius: 2px;
+  }
+  .intro {
+    background: #f0f7fb; border: 1px solid #a7d7f9; padding: 15px 20px;
+    border-radius: 4px; margin: 15px 0 25px 0; font-size: 14px;
+  }
+  .stats { color: #54595d; font-size: 12px; margin-top: 20px; }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 720px) {
+    #content { padding: 14px 16px 28px 16px; }
+    #apxwiki-nav .nav-inner { padding: 8px 16px; flex-wrap: wrap; }
+    .nav-search-wrap { flex: 1 1 100%; order: 3; margin-top: 6px; }
+    .infobox {
+      float: none; clear: both;
+      width: 100%; max-width: 100%;
+      margin: 14px 0; box-sizing: border-box;
+    }
+    .toc { display: block; width: 100%; box-sizing: border-box; }
+    .reflist { column-count: 1; }
+    .stub-list { column-count: 1; }
+    .timeline-table td:first-child { width: auto; white-space: normal; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    #content { border: none; padding: 0; max-width: 100%; }
+    #apxwiki-nav { display: none; }
+    .apxwiki-alert { border: 1px solid #ccc; }
+    .infobox { font-size: 10pt; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ApxWiki</a>
+    <div class="nav-search-wrap">
+      <input type="text" id="apxwiki-search" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
+      <ul id="apxwiki-search-results"></ul>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">All Articles</a>
+      <a href="moderator-changelog.html">Moderation</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+
+<h1>John L. Wilson</h1>
+
+<!-- APXWIKI-ALERTS-START -->
+<div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed.</div>
+<!-- APXWIKI-ALERTS-END -->
+
+
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">John Lennie Wilson</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Mayor of Appomattox</td></tr>
+    <tr><td>In office</td><td>July 1, 2006 &ndash; June 30, 2008</td></tr>
+    <tr><td>Preceded by</td><td><a href="Ronnie_Spiggle.html">Ronnie Spiggle</a></td></tr>
+    <tr><td>Succeeded by</td><td><a href="Paul_Harvey.html">Paul D. Harvey</a></td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Appomattox Town Council</td></tr>
+    <tr><td>In office</td><td>July 1, 2004 &ndash; June 30, 2006</td></tr>
+    <tr><td>Preceded by</td><td>William H. "Buddy" Carson</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Planning Commission</td></tr>
+    <tr><td>Service</td><td>c.&nbsp;2002&ndash;2004</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+    <tr><td>Full name</td><td>John Lennie Wilson</td></tr>
+    <tr><td>Born</td><td>September 20, 1931<br>Randolph County, North Carolina</td></tr>
+    <tr><td>Died</td><td>September 13, 2016 (aged 84)<br>Appomattox, Virginia</td></tr>
+    <tr><td>Military</td><td>United States Army (Korean War)</td></tr>
+    <tr><td>Occupation</td><td>Airline captain (United Airlines, retired)</td></tr>
+    <tr><td>Spouse</td><td>Patricia Jean Guill Wilson ("Patsy")</td></tr>
+    <tr><td>Residence</td><td>107 North Church Street (Nebraska House), Appomattox, Virginia</td></tr>
+    <tr><td>Church</td><td>Liberty Baptist Church</td></tr>
+  </table>
+</div>
+
+<p><b>John Lennie Wilson</b> (September 20, 1931 &ndash; September 13, 2016) was an American military officer, airline captain, historic preservationist, and local politician who served as Mayor of the Town of Appomattox, Virginia, from 2006 to 2008. A polarizing figure in Appomattox County public life, Wilson was first elected to the Appomattox Town Council in 2004 and won the mayoral seat in 2006, becoming the town's first new mayor in 28 years. He ran for elected office five times between 2004 and 2010, winning only once&mdash;his 2006 mayoral victory&mdash;but left an outsized mark on local politics through his vigorous advocacy for citizen participation, opposition to a regional <a href="Appomattox_Water_System_History.html">waterline</a>, and founding of the Appomattox Citizens Coalition.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup></p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#early_life">Early life and career</a></li>
+    <li><a href="#nebraska_house">The Nebraska House</a></li>
+    <li><a href="#civic_involvement">Early civic involvement</a></li>
+    <li><a href="#town_council">Appomattox Town Council (2004&ndash;2006)</a>
+      <ol>
+        <li><a href="#water_opposition">Opposition to the U.S. 460 waterline</a></li>
+        <li><a href="#citizens_coalition">Appomattox Citizens Coalition</a></li>
+        <li><a href="#transparency">Transparency and citizen access</a></li>
+      </ol>
+    </li>
+    <li><a href="#bos_race_2005">Board of Supervisors race (2005)</a></li>
+    <li><a href="#mayor">Mayor of Appomattox (2006&ndash;2008)</a>
+      <ol>
+        <li><a href="#mayor_election_2006">2006 election</a></li>
+        <li><a href="#mayoral_tenure">Tenure as mayor</a></li>
+        <li><a href="#charter_dispute">Charter change controversy</a></li>
+        <li><a href="#walmart">Wal-Mart and economic development</a></li>
+      </ol>
+    </li>
+    <li><a href="#later_races">Later campaigns (2008&ndash;2010)</a>
+      <ol>
+        <li><a href="#race_2008">2008 mayoral race</a></li>
+        <li><a href="#race_2010">2010 mayoral race</a></li>
+      </ol>
+    </li>
+    <li><a href="#electoral_history">Electoral history</a></li>
+    <li><a href="#personal_life">Personal life and legacy</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<h2 id="early_life">Early life and career</h2>
+
+<p>John Lennie Wilson was born on September 20, 1931, in Randolph County, North Carolina, a son of Weldon Dock Wilson and Queen Victoria Hinshaw Wilson-Lambe.<sup><a href="#ref4">[4]</a></sup> He served as a commissioned officer in the United States Army during the Korean War.<sup><a href="#ref4">[4]</a></sup> After his military service, Wilson pursued a career in commercial aviation and retired as a captain with United Airlines.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h2 id="nebraska_house">The Nebraska House</h2>
+
+<p>Wilson and his wife Patsy purchased a historic home at 107 North Church Street in downtown Appomattox in 1993. The house, known as the "Nebraska House," is named for the original name of the community&mdash;Nebraska&mdash;which the settlement bore from 1855 until it was renamed West Appomattox in 1895.<sup><a href="#ref5">[5]</a></sup> The house was originally a two-room structure expanded into a six-room, two-story home in 1854 by Colonel Samuel McDearmon, a Virginia Militia colonel who served as the first postmaster of Nebraska and owned the Clover Hill Tavern, now part of the Appomattox Court House National Historical Park. The house was later remodeled in the Queen Anne style by John Atwood between 1890 and 1892.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>The Wilsons undertook an extensive restoration of the property over more than nine years. On April 10, 2004, they opened the home for a public tour to benefit the Appomattox Historical Society, drawing more than 220 visitors who paid ten dollars each. The event featured Civil War reenactors, including a descendant of George Armstrong Custer, and refreshments on the lawn.<sup><a href="#ref5">[5]</a></sup><sup><a href="#ref6">[6]</a></sup> The restoration was widely praised; W. Eston Harvey called the result "a jewel" and noted that the Wilsons' work had added to the charm of the town.<sup><a href="#ref7">[7]</a></sup> In 2004, one of the white dogwood trees bequeathed to the town by the late Mildred Tucker McDearmon was planted in the yard of the Nebraska House.<sup><a href="#ref8">[8]</a></sup></p>
+
+<h2 id="civic_involvement">Early civic involvement</h2>
+
+<p>Before running for office, Wilson was active in local civic affairs. He served as a member of the Appomattox County Planning Commission from at least 2002, appearing in joint public hearings with the Board of Supervisors and Town Council throughout 2002 and 2003.<sup><a href="#ref9">[9]</a></sup> In November 2002, Wilson appeared before the Board of Supervisors to raise concerns about the county's cable television franchise agreement, presenting research showing that cable rates had increased substantially while service had not improved. Board Chairman <a href="Samuel_E_Carter.html">Samuel E. Carter</a> acknowledged that Wilson had done "an excellent job of looking into this matter."<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>Wilson was also recognized for his role in preserving the <a href="Appomattox_County_Courthouse_History.html">old Appomattox County Courthouse</a>. At a 2003 Veterans Day ceremony, he and Frank Carwile were honored for persuading the Board of Supervisors to preserve the main frame of the historic 1892 building rather than demolish it during the construction of the new courthouse.<sup><a href="#ref11">[11]</a></sup></p>
+
+<h2 id="town_council">Appomattox Town Council (2004&ndash;2006)</h2>
+
+<p>In March 2004, Wilson filed his candidacy for the Appomattox Town Council, the sole non-incumbent in the race.<sup><a href="#ref12">[12]</a></sup> He received endorsements from citizens praising his intelligence, ethics, and commitment to seeking constituent input.<sup><a href="#ref13">[13]</a></sup> In the May 4, 2004, election, Wilson won a council seat with 98 votes, replacing William H. "Buddy" Carson, who had failed to file for re-election and mounted an unsuccessful write-in campaign that netted approximately 60 votes.<sup><a href="#ref14">[14]</a></sup> Incumbents Joyce Bennett (120), Steven Lawson (121), Lewis McDearmon (121), Marvin Mitchell (113), and Jimmy Mayberry also won seats.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>Upon his election, Wilson stated his intention to be a voice for citizen interests. He quickly became one of the most active and outspoken members of the council, chairing the Ordinance Committee and pushing for initiatives including the recodification of the Town Code, televised council meetings, and improved citizen access to government information.<sup><a href="#ref15">[15]</a></sup><sup><a href="#ref16">[16]</a></sup></p>
+
+<h3 id="water_opposition">Opposition to the U.S. 460 waterline</h3>
+
+<p>Wilson's defining issue on the council&mdash;and throughout his political career&mdash;was his opposition to proposals to pipe water from Lynchburg or Campbell County to the Town of Appomattox via U.S. Route 460. He argued that the town and county should instead develop local water sources, including drilling additional wells and building a reservoir, which he maintained would be less expensive, preserve local control, and create local jobs.<sup><a href="#ref17">[17]</a></sup> Wilson contended that the pipeline proposal had been advanced without adequate public input and that local officials and Region 2000 were pushing a regional solution the majority of citizens opposed.<sup><a href="#ref18">[18]</a></sup></p>
+
+<p>His position placed him in frequent conflict with Board of Supervisors Chairman <a href="Samuel_E_Carter.html">Sammy Carter</a>, Mayor <a href="Ronnie_Spiggle.html">Ronnie Spiggle</a>, and a majority of his fellow council members, who supported exploring the waterline as a long-term solution to the town's water supply challenges. Wilson wrote extensively on the subject in letters to the <i>Times-Virginian</i>, at times publishing weekly letters questioning the cost estimates, engineering assumptions, and decision-making process behind the waterline proposals.<sup><a href="#ref19">[19]</a></sup><sup><a href="#ref20">[20]</a></sup></p>
+
+<h3 id="citizens_coalition">Appomattox Citizens Coalition</h3>
+
+<p>In February 2005, Wilson organized the first meeting of the Appomattox Citizens Coalition at the Appomattox Community Center. Approximately 80 to 100 people attended to discuss their concerns about the proposed waterline, recent restrictions on citizen comments at Board of Supervisors meetings, and the Board's lease offer for the Carver-Price Legacy Museum. Board Chairman Carter also attended and spoke.<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>The Coalition became an ongoing advocacy group, holding periodic public meetings and circulating petitions opposing the waterline and the proposed Public Service Authority. Wilson described its purpose as providing a forum for open discussion where citizens could express views without the restrictions imposed by official government meetings.<sup><a href="#ref22">[22]</a></sup> The group continued to meet during Wilson's tenure as mayor and beyond, holding meetings as late as July 2006 that drew more than 30 attendees.<sup><a href="#ref23">[23]</a></sup></p>
+
+<h3 id="transparency">Transparency and citizen access</h3>
+
+<p>Wilson championed government transparency throughout his council tenure. In 2004, he proposed a resolution requiring both the Town Council and the Board of Supervisors to place copies of their agenda packets in the J. Robert Jamerson Memorial Library at least one week before meetings, so citizens could review upcoming business in advance. The Town Council adopted a version of the proposal, but the Board of Supervisors rejected it.<sup><a href="#ref24">[24]</a></sup><sup><a href="#ref25">[25]</a></sup> Wilson also played a role in getting town council meetings recorded and broadcast on Nesbe Cable Channel 33, beginning in July 2004.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h2 id="bos_race_2005">Board of Supervisors race (2005)</h2>
+
+<p>While still serving on Town Council, Wilson challenged incumbent Courthouse District Supervisor <a href="Samuel_E_Carter.html">Samuel E. Carter</a> in the November 2005 general election. Wilson ran on a platform of increased citizen input, opposition to the waterline, support for tourism, and criticism of what he characterized as the Board's unresponsive governance.<sup><a href="#ref26">[26]</a></sup> The race drew competing endorsement letters in the <i>Times-Virginian</i>, with supporters praising Wilson as a champion of the people and critics questioning his temperament and citing a property-line dispute with a neighbor.<sup><a href="#ref27">[27]</a></sup><sup><a href="#ref28">[28]</a></sup></p>
+
+<p>Carter won decisively, receiving 510 votes to Wilson's 290, with three write-in votes&mdash;a margin of approximately 64 to 36 percent.<sup><a href="#ref29">[29]</a></sup> Wilson accepted the result gracefully, stating that he had given voters a choice and that it was time to move on.<sup><a href="#ref29">[29]</a></sup> The Virginia Department of Elections recorded the race as a general election for the Board of Supervisors, Courthouse District.<sup><a href="#ref30">[30]</a></sup></p>
+
+<h2 id="mayor">Mayor of Appomattox (2006&ndash;2008)</h2>
+
+<h3 id="mayor_election_2006">2006 election</h3>
+
+<p>Undeterred by his 2005 loss, Wilson entered the May 2006 mayoral race against Vice-Mayor Marvin Hugh Mitchell. The election drew unusually heavy voter turnout of 36 percent among registered town voters. Wilson won with 209 votes to Mitchell's 164, a margin of 56 to 44 percent, becoming the Town of Appomattox's first new mayor in 28 years&mdash;Mayor <a href="Ronnie_Spiggle.html">Ronnie Spiggle</a> had held the office since 1978.<sup><a href="#ref31">[31]</a></sup><sup><a href="#ref32">[32]</a></sup></p>
+
+<p>Wilson acknowledged the significance of his victory, noting that he felt he had run not only against Mitchell but also against the incumbent mayor and the broader political establishment. He thanked his supporters, including his wife Patsy, whom he called his campaign manager, and pledged to be "Mayor of all the people" with a non-partisan approach.<sup><a href="#ref31">[31]</a></sup><sup><a href="#ref33">[33]</a></sup></p>
+
+<h3 id="mayoral_tenure">Tenure as mayor</h3>
+
+<p>Wilson took office on July 1, 2006, and opened his tenure by extending an olive branch to the Town Council, acknowledging past disagreements and soliciting cooperation.<sup><a href="#ref34">[34]</a></sup> In January 2007, he delivered a "State of the Town Report" in which he reported the town's financial status as strong, with assets of approximately $12 million against debts of $2.6 million. He recommended financing capital improvements through low-interest loans rather than depleting general reserves and emphasized the need to adjust tax rates and fees to recover operating expenses.<sup><a href="#ref35">[35]</a></sup></p>
+
+<p>Wilson identified three key priorities for his administration: maintaining the town's financial integrity, creating an overlay district to protect entrance corridors from unrestricted development, and promoting tourism.<sup><a href="#ref35">[35]</a></sup> He served on the 2007 Virginia Municipal League's General Laws Steering Committee, contributing to statewide policy decisions on issues including water, biosolids, and wastewater disposal.<sup><a href="#ref36">[36]</a></sup></p>
+
+<p>On the waterline issue, Wilson continued to oppose the proposed Concord-to-Appomattox pipeline. In July 2006, he declined the county's request for the town to appoint representatives to a waterline negotiating committee, arguing that the council needed more time to study the issue.<sup><a href="#ref37">[37]</a></sup> This stance drew criticism from county officials, with Board Chairman Carter noting it created a "strategic void" in negotiations.<sup><a href="#ref37">[37]</a></sup></p>
+
+<h3 id="charter_dispute">Charter change controversy</h3>
+
+<p>In May 2007, Wilson clashed publicly with three council members&mdash;Jimmy Mayberry, Lewis McDearmon, and Joyce Bennett&mdash;over a proposed change to the Town Charter that would have transferred most of the mayor's authority to the Town Manager. Wilson accused the three of acting out of personal spite and obstructionism, and expressed strong opposition to what he characterized as an undermining of the office voters had elected him to fill. He urged citizens to contact council members to voice their opinions on the proposed changes.<sup><a href="#ref38">[38]</a></sup></p>
+
+<h3 id="walmart">Wal-Mart and economic development</h3>
+
+<p>Wilson publicly welcomed the arrival of <a href="Appomattox_Walmart.html">Wal-Mart</a> to Appomattox in 2007, predicting the store would act as an anchor that would attract shoppers and boost local businesses and tourism.<sup><a href="#ref39">[39]</a></sup> However, he drew criticism from some citizens who accused the mayor and council of keeping negotiations with Wal-Mart from the public, which they viewed as contradicting Wilson's platform of transparency.<sup><a href="#ref40">[40]</a></sup></p>
+
+<h2 id="later_races">Later campaigns (2008&ndash;2010)</h2>
+
+<h3 id="race_2008">2008 mayoral race</h3>
+
+<p>Wilson sought re-election as mayor in the May 2008 town elections but was narrowly defeated by local dentist <a href="Paul_Harvey.html">Paul D. Harvey</a>, who won 202 votes to Wilson's 189&mdash;a margin of just 13 votes.<sup><a href="#ref41">[41]</a></sup> The same election saw two newcomers, Bryan Baine and Karl "Toots" Carter, oust incumbents Joyce Bennett and Steven Lawson from the council.<sup><a href="#ref41">[41]</a></sup> Wilson's loss was attributed in part to voter sentiment on the waterline issue, with the town divided between those favoring regional cooperation and those supporting Wilson's local-control approach.</p>
+
+<h3 id="race_2010">2010 mayoral race</h3>
+
+<p>In February 2010, Wilson filed to challenge Harvey in a rematch. He distributed a newsletter and questionnaire to town residents outlining his opposition to the waterline, which drew criticism from opponents who called the survey questions biased.<sup><a href="#ref42">[42]</a></sup> The May 4, 2010, election was widely characterized as a referendum on whether the town should cooperate with the county on the proposed waterline. Harvey won decisively, 279 to 156&mdash;a nearly 2-to-1 margin.<sup><a href="#ref43">[43]</a></sup></p>
+
+<p>The 2010 election also saw a clean sweep by waterline-supporting council candidates, with all six winning seats and unseating two incumbents who had opposed the project. Harvey described the result as proof that citizens supported not only the waterline but also cooperation between the town and county.<sup><a href="#ref43">[43]</a></sup> The loss effectively ended Wilson's electoral career.</p>
+
+<h2 id="electoral_history">Electoral history</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Year</th><th>Office</th><th>District</th><th>Result</th><th>Opponent(s)</th><th>Vote</th>
+  </tr>
+  <tr>
+    <td>2004</td>
+    <td>Town Council</td>
+    <td>Town of Appomattox</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Steven Lawson, Joyce Bennett, Lewis McDearmon, Marvin Mitchell, Jimmy Mayberry (all won); William Carson (write-in, lost)</td>
+    <td>98 of 6 seats (top-six elected)</td>
+  </tr>
+  <tr>
+    <td>2005</td>
+    <td>Board of Supervisors</td>
+    <td>Courthouse District</td>
+    <td style="color:red;font-weight:bold;">Lost</td>
+    <td><a href="Samuel_E_Carter.html">Samuel E. Carter</a> (incumbent)</td>
+    <td>290&ndash;510 (36%&ndash;64%)<sup><a href="#ref29">[29]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2006</td>
+    <td>Mayor</td>
+    <td>Town of Appomattox</td>
+    <td style="color:green;font-weight:bold;">Won</td>
+    <td>Marvin Hugh Mitchell</td>
+    <td>209&ndash;164 (56%&ndash;44%)<sup><a href="#ref30">[30]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2008</td>
+    <td>Mayor</td>
+    <td>Town of Appomattox</td>
+    <td style="color:red;font-weight:bold;">Lost</td>
+    <td><a href="Paul_Harvey.html">Paul D. Harvey</a></td>
+    <td>189&ndash;202 (48%&ndash;52%)<sup><a href="#ref41">[41]</a></sup></td>
+  </tr>
+  <tr>
+    <td>2010</td>
+    <td>Mayor</td>
+    <td>Town of Appomattox</td>
+    <td style="color:red;font-weight:bold;">Lost</td>
+    <td><a href="Paul_Harvey.html">Paul D. Harvey</a> (incumbent)</td>
+    <td>156&ndash;279 (36%&ndash;64%)<sup><a href="#ref43">[43]</a></sup></td>
+  </tr>
+</table>
+
+<p>Wilson's record of one win in five contests&mdash;as recorded by the Virginia Department of Elections&mdash;belies the impact he had on local politics. His advocacy helped push the county to revise its waterline cost estimates multiple times, prompted the hiring of a professional planner, and forced greater public engagement on land-use issues.<sup><a href="#ref44">[44]</a></sup><sup><a href="#ref30">[30]</a></sup></p>
+
+<h2 id="personal_life">Personal life and legacy</h2>
+
+<p>Wilson was married to Patricia Jean Guill Wilson, known as Patsy, who was active alongside him in civic and historical preservation activities.<sup><a href="#ref4">[4]</a></sup> The couple had five children: Cynthia Wilson Shebuski, Terry Lynn Hatcher, Kelly M. Bevins, Henry Weldon Wilson, and Elaine W. Glose, who predeceased him. He was also survived by ten grandchildren and two great-grandchildren.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>Wilson was a member of Liberty Baptist Church in Appomattox.<sup><a href="#ref4">[4]</a></sup> On June 30, 2014, Appomattox Town Manager David Garrett presented Wilson with a plaque recognizing his years of service as a councilman and mayor.<sup><a href="#ref45">[45]</a></sup></p>
+
+<p>Wilson died on Tuesday, September 13, 2016, one week before his 85th birthday. A celebration of his life was held on October 2, 2016, at his residence on Church Street. In lieu of flowers, his family requested donations to the building fund at Liberty Baptist Church.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>In the years since Wilson's death, the issues he championed have continued to resonate in Appomattox County politics. The proposed Concord-to-Appomattox <a href="Appomattox_Water_System_History.html">waterline</a>&mdash;which Wilson fought for six years&mdash;was ultimately constructed in a form shaped in part by the public scrutiny he and the Citizens Coalition brought to the project. His insistence on government transparency and citizen engagement left a lasting mark on local civic culture, even as his electoral record reflected the limits of his appeal at the ballot box.</p>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">"Wilson elected to Appomattox Town Council," <i>Times-Virginian</i>, May 5, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref2">"Wilson elected Mayor of Appomattox," <i>Times-Virginian</i>, May 3, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref3">Virginia Department of Elections, Historical Elections Database, candidate profile: John L. Wilson. Via historical.elections.virginia.gov.</li>
+    <li id="ref4">"John L. Wilson" (obituary), <i>Times-Virginian</i>, September 19, 2016. Via times-virginian-2004-2024.db.</li>
+    <li id="ref5">"Nebraska House to be open to public as fundraiser for Historical Society," <i>Times-Virginian</i>, April 1, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref6">"Nebraska House couple says everything was great for weekend home tour" (letter), <i>Times-Virginian</i>, April 14, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref7">"Thanks to Wilsons for opening Nebraska House" (letter by W. Eston Harvey), <i>Times-Virginian</i>, April 21, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref8">"Dogwood trees bequeathed to town," <i>Times-Virginian</i>, April 28, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref9">Appomattox County Board of Supervisors joint public hearing records, 2002&ndash;2003. Book 20, various plates. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref10">Appomattox County Board of Supervisors minutes, November 18, 2002. Book 20, Plates 174, 181, 183. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref11">"Residents show support at Veterans Day ceremony," <i>Times-Virginian</i>, November 12, 2003. Via responses.db.</li>
+    <li id="ref12">"Town election deadline 2004," <i>Times-Virginian</i>, March 3, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref13">"Reader supports Wilson for Town Council" (letter), <i>Times-Virginian</i>, April 21, 2004; and "To the Editor" (endorsement letter), April 28, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref14">"Wilson elected to Appomattox Town Council," <i>Times-Virginian</i>, May 5, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref15">Town of Appomattox Town Council minutes, July 12, 2004 and October 12, 2004. Book 3, Plates 139&ndash;155. Via county_town_gov_meeting_minutes.db.</li>
+    <li id="ref16">"Appomattox Town Council meetings to be aired on cable television," <i>Times-Virginian</i>, July 14, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref17">"Citizens criticize 460 pipeline plan," <i>Times-Virginian</i>, May 5, 2004; "Citizen Suggests Water Reservoir Alternative," responses.db, May 5, 2004.</li>
+    <li id="ref18">"Government shuns public input on waterline" (letter), <i>Times-Virginian</i>, May 26, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref19">"Councilman Wilson criticizes Region 2000 water report" (letter), <i>Times-Virginian</i>, April 6, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref20">"Water line meeting was charade" (letter), <i>Times-Virginian</i>, June 8, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref21">"Resident pack community center for Citizen Coalition movement," <i>Times-Virginian</i>, February 9, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref22">"Citizen Coalition to meet March 20" (letter), <i>Times-Virginian</i>, March 16, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref23">"Citizens blast waterline during Coalition meeting," <i>Times-Virginian</i>, July 25, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref24">"Supervisors reject proposal to print agenda packets a week earlier," <i>Times-Virginian</i>, September 15, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref25">"Wilson's agenda packet proposal a good idea" (letter), <i>Times-Virginian</i>, September 15, 2004. Via times-virginian-2004-2024.db.</li>
+    <li id="ref26">"Carter, Wilson to battle for supervisor seat," <i>Times-Virginian</i>, June 29, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref27">"Reader supports Wilson" (letter), <i>Times-Virginian</i>, November 2, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref28">"Reader supports Carter over Wilson in supervisor race" (letter), <i>Times-Virginian</i>, October 26, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref29">"Carter defeats Wilson for supervisor seat," <i>Times-Virginian</i>, November 9, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref30">Virginia Department of Elections, Historical Elections Database, candidate profile: John L. Wilson. Five elections: 2004 (Town Council), 2005 (Board of Supervisors), 2006 (Mayor), 2008 (Mayor), 2010 (Mayor). Won 1 of 5 general elections.</li>
+    <li id="ref31">"Wilson elected Mayor of Appomattox," <i>Times-Virginian</i>, May 3, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref32">"Election went smoothly, registrar says," <i>Times-Virginian</i>, May 10, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref33">"New town council members hope to get along," <i>Times-Virginian</i>, May 17, 2006. Via times-virginian-2004-2024.db.</li>
+    <li id="ref34">"Mayor Wilson extends olive branch to Appomattox Town Council," responses.db, July 25, 2006.</li>
+    <li id="ref35">"Mayor reports strong Town financial status" and related items, responses.db, January 17, 2007.</li>
+    <li id="ref36">"Appomattox Mayor John Wilson appointed to Virginia Municipal League Steering Committee," <i>Times-Virginian</i>, c.&nbsp;January 2007. Via responses.db.</li>
+    <li id="ref37">"Mayor Declines Seat on Waterline Negotiating Committee" and "Town declines joint committee participation," responses.db, August 10, 2006.</li>
+    <li id="ref38">"Appomattox Mayor irate over potential change to Town Charter," <i>Times-Virginian</i>, c.&nbsp;May 9, 2007. Via responses.db.</li>
+    <li id="ref39">"Appomattox officials express excitement over Wal-Mart arrival," responses.db, April 11, 2007.</li>
+    <li id="ref40">"Wal-Mart Issue Kept from Public" and "Town Leaders Accused of Betraying Citizens on Wal-Mart Deal," responses.db, April 25, 2007.</li>
+    <li id="ref41">"Harvey edges Wilson for Mayor; two newcomers oust incumbents from Council," <i>Times-Virginian</i>, May 6, 2008. Via times-virginian-2004-2024.db.</li>
+    <li id="ref42">"John Wilson's mailing criticized for biased questionnaire wording" and related items, responses.db, February 24, 2010.</li>
+    <li id="ref43">"Town of Appomattox voters usher in sweep of waterline-supporting candidates; Harvey beats Wilson for mayor," <i>Times-Virginian</i>, May 4, 2010. Via times-virginian-2004-2024.db.</li>
+    <li id="ref44">"Still issues to follow after election" (letter by Wilson), <i>Times-Virginian</i>, November 16, 2005. Via times-virginian-2004-2024.db.</li>
+    <li id="ref45">"John Wilson recognized for service as Councilman and Mayor," responses.db, March 19, 2014.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 13, 2026.
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  var input = document.getElementById('apxwiki-search');
+  var list  = document.getElementById('apxwiki-search-results');
+  if (!input || !list) return;
+
+  var activeIdx = -1;
+
+  function render(results) {
+    activeIdx = -1;
+    if (!results.length) {
+      if (input.value.trim().length > 0) {
+        list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+        list.classList.add('active');
+      } else {
+        list.innerHTML = '';
+        list.classList.remove('active');
+      }
+      return;
+    }
+    list.innerHTML = results.slice(0, 8).map(function(r, i) {
+      var desc = r.desc || '';
+      if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+      return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+        + '<span class="sr-title">' + esc(r.title) + '</span>'
+        + '<span class="sr-type">' + esc(r.type) + '</span>'
+        + '<div class="sr-desc">' + esc(desc) + '</div>'
+        + '</a></li>';
+    }).join('');
+    list.classList.add('active');
+  }
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function setActive(items) {
+    for (var j = 0; j < items.length; j++) {
+      items[j].classList.toggle('active', j === activeIdx);
+    }
+  }
+
+  input.addEventListener('input', function() {
+    var q = this.value.trim();
+    if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+    var results = ms.search(q);
+    render(results);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    var items = list.querySelectorAll('a[data-idx]');
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, items.length - 1);
+      setActive(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, 0);
+      setActive(items);
+    } else if (e.key === 'Enter' && activeIdx >= 0) {
+      e.preventDefault();
+      items[activeIdx].click();
+    } else if (e.key === 'Escape') {
+      list.innerHTML = ''; list.classList.remove('active');
+      input.blur();
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!input.contains(e.target) && !list.contains(e.target)) {
+      list.innerHTML = ''; list.classList.remove('active');
+    }
+  });
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
+</body>
+</html>

@@ -8,7 +8,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 43939,
+      "content_length": 60251,
       "alerts": [
         {
           "type": "success",
@@ -23,7 +23,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 42005
+      "content_length": 58317
     },
     {
       "filename": "Appomattox_County_High_School.html",
@@ -32,7 +32,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 71422
+      "content_length": 87734
     },
     {
       "filename": "Appomattox_County_School_Board_History.html",
@@ -41,7 +41,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 62663
+      "content_length": 78975
     },
     {
       "filename": "Appomattox_Volunteer_Fire_Department.html",
@@ -50,7 +50,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-04",
-      "content_length": 34464,
+      "content_length": 50776,
       "alerts": [
         {
           "type": "info",
@@ -65,7 +65,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 81117
+      "content_length": 97429
     },
     {
       "filename": "appomattox_county_tax_history.html",
@@ -74,7 +74,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 90208
+      "content_length": 106520
     },
     {
       "filename": "appomattox_solid_waste_history.html",
@@ -83,7 +83,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 80158
+      "content_length": 96470
     },
     {
       "filename": "Nathan_A_Simpson.html",
@@ -92,7 +92,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 31633
+      "content_length": 47945
     },
     {
       "filename": "Paul_Harvey.html",
@@ -101,7 +101,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 37263
+      "content_length": 53575
     },
     {
       "filename": "Samuel_E_Carter.html",
@@ -110,7 +110,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 36260
+      "content_length": 52572
     },
     {
       "filename": "Winfred_D_Nash.html",
@@ -119,7 +119,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-02-24",
-      "content_length": 26582
+      "content_length": 42894
     },
     {
       "filename": "William_E_Jamerson.html",
@@ -128,7 +128,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-07",
-      "content_length": 36144,
+      "content_length": 52456,
       "alerts": [
         {
           "type": "info",
@@ -143,7 +143,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-07",
-      "content_length": 56119,
+      "content_length": 72431,
       "alerts": [
         {
           "type": "info",
@@ -158,7 +158,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 50984,
+      "content_length": 67296,
       "alerts": [
         {
           "type": "info",
@@ -173,7 +173,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 34641,
+      "content_length": 50953,
       "alerts": [
         {
           "type": "info",
@@ -188,7 +188,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 38218,
+      "content_length": 54530,
       "alerts": [
         {
           "type": "info",
@@ -203,7 +203,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 39448,
+      "content_length": 55760,
       "alerts": [
         {
           "type": "info",
@@ -218,7 +218,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 53486,
+      "content_length": 69798,
       "alerts": [
         {
           "type": "info",
@@ -233,7 +233,7 @@
       "type": "notable-event",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 49768,
+      "content_length": 66080,
       "alerts": [
         {
           "type": "info",
@@ -248,7 +248,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 54088,
+      "content_length": 70400,
       "alerts": [
         {
           "type": "info",
@@ -263,7 +263,7 @@
       "type": "organization",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 46877,
+      "content_length": 63189,
       "alerts": [
         {
           "type": "info",
@@ -278,7 +278,7 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 35000,
+      "content_length": 51312,
       "alerts": [
         {
           "type": "info",
@@ -293,7 +293,7 @@
       "type": "government-topic-history",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 58884,
+      "content_length": 75196,
       "alerts": [
         {
           "type": "info",
@@ -308,7 +308,127 @@
       "type": "biography",
       "status": "published",
       "date_created": "2026-03-09",
-      "content_length": 37942,
+      "content_length": 54254,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
+        }
+      ]
+    },
+    {
+      "filename": "Main_Street_Appomattox.html",
+      "title": "Main Street Appomattox — Downtown Revitalization",
+      "description": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-03-12",
+      "content_length": 68028,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
+        }
+      ]
+    },
+    {
+      "filename": "2008_Appomattox_Pipeline_Incident.html",
+      "title": "2008 Appomattox Pipeline Incident",
+      "description": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.",
+      "type": "notable-event",
+      "status": "published",
+      "date_created": "2026-03-12",
+      "content_length": 56619,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
+        }
+      ]
+    },
+    {
+      "filename": "Appomattox_County_Budget_History.html",
+      "title": "Appomattox County Budget History",
+      "description": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-03-12",
+      "content_length": 85739,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "John_Wilson.html",
+      "title": "John L. Wilson",
+      "description": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-03-12",
+      "content_length": 55279,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
+        }
+      ]
+    },
+    {
+      "filename": "Appomattox_County_Chamber_of_Commerce.html",
+      "title": "Appomattox County Chamber of Commerce",
+      "description": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.",
+      "type": "organization",
+      "status": "published",
+      "date_created": "2026-03-12",
+      "content_length": 60982,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
+        }
+      ]
+    },
+    {
+      "filename": "Appomattox_Community_Center.html",
+      "title": "Appomattox Community Center",
+      "description": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.",
+      "type": "organization",
+      "status": "published",
+      "date_created": "2026-03-13",
+      "content_length": 56490,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed."
+        }
+      ]
+    },
+    {
+      "filename": "Route_460_Appomattox_History.html",
+      "title": "U.S. Route 460 and Appomattox County",
+      "description": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.",
+      "type": "government-topic-history",
+      "status": "published",
+      "date_created": "2026-03-13",
+      "content_length": 67287,
+      "alerts": [
+        {
+          "type": "info",
+          "message": "This article is a first draft and has not yet been reviewed for accuracy."
+        }
+      ]
+    },
+    {
+      "filename": "Aileen_Ferguson.html",
+      "title": "Aileen Ferguson",
+      "description": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.",
+      "type": "biography",
+      "status": "published",
+      "date_created": "2026-03-13",
+      "content_length": 23574,
       "alerts": [
         {
           "type": "info",
