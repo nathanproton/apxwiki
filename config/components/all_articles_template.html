@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Articles &mdash; {{site_name}}</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+{{shared_css}}
+</style>
+</head>
+<body>
+{{rendered_header}}
+<div id="content">
+<h1>All Articles</h1>
+
+{{alerts_html}}
+
+<div class="intro">
+  <b>{{pub_count}} published articles</b> and <b>{{stub_count}} proposed stubs</b> in the {{site_name}} encyclopedia.
+  Stubs are proposed topics shown as <a class="redlink" href="#">red links</a> &mdash; these are priority candidates for future articles.
+</div>
+
+<h2>Published Articles (A&ndash;Z)</h2>
+<ul class="article-list">
+{{articles_html}}
+</ul>
+
+<p class="stats">{{pub_count}} published articles &middot; {{site_name}}</p>
+
+<h2>Proposed Articles &mdash; Priority Stubs</h2>
+
+<div class="stub-note">
+  <b>Red links</b> indicate proposed articles that do not yet exist. These subjects are priority candidates
+  for new {{site_name}} pages, selected based on frequency of coverage across the four local databases.
+</div>
+{{stubs_html}}
+
+<p class="stats" style="margin-top:18px;">{{pub_count}} published articles &middot; {{stub_count}} proposed stubs &middot; {{site_name}}</p>
+
+{{rendered_footer}}
+</div>
+{{search_script}}
+</body>
+</html>

@@ -7,6 +7,7 @@
   "site_sources": "Generated from local newspaper archives, government meeting minutes, and public records.",
   "author": "Nathan Simpson",
   "base_url": "",
+  "gtm_id": "GTM-T2PJMRLJ",
   "alerts": [
     {
       "id": "ai-disclaimer",

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{site_title}}</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+{{shared_css}}
+</style>
+</head>
+<body>
+{{rendered_header}}
+<div id="content">
+
+<!-- ── Hero Section ── -->
+<div class="hero">
+  <img src="icon.png" alt="Appomattox County" class="hero-icon">
+  <h1 class="hero-title">{{site_name}}</h1>
+  <p class="hero-tagline">{{site_tagline}}</p>
+  <p class="hero-description">{{site_description}}</p>
+  <div class="hero-search-wrap">
+    <input type="text" id="hero-search" placeholder="Search {{pub_count}} articles..." autocomplete="off" aria-label="Search articles">
+    <ul id="hero-search-results"></ul>
+  </div>
+</div>
+
+{{alerts_html}}
+
+<!-- ── Featured Articles ── -->
+<div class="home-section">
+  <h2>Featured Articles</h2>
+  <div class="featured-grid">
+{{featured_html}}
+  </div>
+</div>
+
+<!-- ── Browse by Category ── -->
+<div class="home-section">
+  <h2>Browse by Category</h2>
+  <div class="category-grid">
+{{category_html}}
+  </div>
+</div>
+
+<!-- ── External Resources ── -->
+<div class="home-section">
+  <h2>External Resources</h2>
+  <div class="resource-grid">
+    <a class="resource-card" href="https://archive.org/details/@nasimpson/lists/1/appomattox-resources" target="_blank" rel="noopener">
+      <span class="resource-icon">&#x1f4da;</span>
+      <span class="resource-name">Archive.org</span>
+      <span class="resource-desc">Newspaper &amp; document scans</span>
+    </a>
+    <a class="resource-card" href="https://apxwiki.org/" target="_blank" rel="noopener">
+      <span class="resource-icon">&#x1f5bc;</span>
+      <span class="resource-name">APX Commons</span>
+      <span class="resource-desc">Object &amp; multimedia storage</span>
+    </a>
+    <a class="resource-card" href="https://huggingface.co/datasets/nasimpson/appomattox-county" target="_blank" rel="noopener">
+      <span class="resource-icon">&#x1f4ca;</span>
+      <span class="resource-name">APX Data</span>
+      <span class="resource-desc">Tabular data &amp; datasets</span>
+    </a>
+    <a class="resource-card" href="moderator-changelog.html">
+      <span class="resource-icon">&#x1f4dd;</span>
+      <span class="resource-name">Moderator Log</span>
+      <span class="resource-desc">Editorial change history</span>
+    </a>
+    <a class="resource-card" href="all_articles.html">
+      <span class="resource-icon">&#x1f4d6;</span>
+      <span class="resource-name">All Articles</span>
+      <span class="resource-desc">Complete A&ndash;Z article index</span>
+    </a>
+    <a class="resource-card" href="https://en.wikipedia.org/wiki/Appomattox_County,_Virginia" target="_blank" rel="noopener">
+      <span class="resource-icon">&#x1f30d;</span>
+      <span class="resource-name">Wikipedia</span>
+      <span class="resource-desc">Appomattox County article</span>
+    </a>
+  </div>
+</div>
+
+<p class="stats">{{pub_count}} published articles &middot; {{stub_count}} proposed stubs &middot; Last updated {{build_date}}</p>
+
+{{rendered_footer}}
+</div>
+{{search_script}}
+</body>
+</html>

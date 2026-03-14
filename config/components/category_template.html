@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{category_label}} &mdash; {{site_name}}</title>
+<link rel="icon" type="image/png" href="../icon.png">
+<style>
+{{shared_css}}
+</style>
+</head>
+<body>
+{{rendered_header}}
+<div id="content">
+<h1>{{category_icon}} {{category_label}}</h1>
+
+{{alerts_html}}
+
+<div class="intro">
+  <b>{{article_count}} published article{{article_plural}}</b> in this category, with
+  <b>{{stub_count}} proposed stub{{stub_plural}}</b> awaiting creation.
+  <a href="../all_articles.html">View all articles &rarr;</a>
+</div>
+
+<h2>Published Articles (A&ndash;Z)</h2>
+<ul class="article-list">
+{{articles_html}}
+</ul>
+
+{{stubs_section_html}}
+
+<p class="stats">{{article_count}} published &middot; {{stub_count}} stubs &middot; <a href="../index.html">{{site_name}} Home</a></p>
+
+{{rendered_footer}}
+</div>
+{{search_script}}
+</body>
+</html>

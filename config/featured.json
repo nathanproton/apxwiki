@@ -1,0 +1,45 @@
+{
+  "_comment": "Featured articles highlighted on the ApxWiki homepage. Order determines display order.",
+  "featured": [
+    {
+      "filename": "Appomattox_County_High_School.html",
+      "reason": "The county's central public high school — touchstone for athletics, education, and community identity"
+    },
+    {
+      "filename": "Route_460_Appomattox_History.html",
+      "reason": "The highway corridor that has shaped Appomattox County commerce and development for a century"
+    },
+    {
+      "filename": "Appomattox_Center_for_Business_and_Commerce_History.html",
+      "reason": "Decades of economic development from the 1970s IDA through the transformative AVAIO data center deal"
+    },
+    {
+      "filename": "AVAIO_Data_Center_Project.html",
+      "reason": "The $3 billion project that put Appomattox County on the national economic development map"
+    },
+    {
+      "filename": "Ronnie_Spiggle.html",
+      "reason": "28-year mayor of Appomattox and one of the most consequential local political figures"
+    },
+    {
+      "filename": "Samuel_E_Carter.html",
+      "reason": "Longtime Board of Supervisors chairman who shaped county governance across decades"
+    },
+    {
+      "filename": "Appomattox_Volunteer_Fire_Department.html",
+      "reason": "The county's primary emergency services organization, a pillar of community life"
+    },
+    {
+      "filename": "Historic_Appomattox_Railroad_Festival.html",
+      "reason": "The town's signature annual event since 1972, drawing thousands each October"
+    },
+    {
+      "filename": "Thomasville_Furniture_Appomattox.html",
+      "reason": "The county's largest employer for decades — its 2010–2011 closure reshaped the local economy"
+    },
+    {
+      "filename": "Appomattox_County_Broadband_History.html",
+      "reason": "A government topic history tracing decades of rural connectivity struggles and progress"
+    }
+  ]
+}
