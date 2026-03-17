@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carver-Price Legacy Museum &mdash; ApxWiki</title>
+<title>Carver-Price Legacy Museum — ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald...">
+<meta property="og:title" content="Carver-Price Legacy Museum">
+<meta property="og:description" content="Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Carver-Price Legacy Museum">
+<meta name="twitter:description" content="Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 
   body {
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,72 +480,368 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
-
-<!-- ApxWiki Header Component -->
-<div id="apxwiki-nav">
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">ApxWiki</a>
-    <div class="nav-search-wrap">
-      <input type="text" id="apxwiki-search" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
-      <ul id="apxwiki-search-results"></ul>
-    </div>
-    <div class="nav-right">
-      <a href="index.html">All Articles</a>
-      <a href="moderator-changelog.html">Moderation</a>
-    </div>
-  </div>
-</div>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div id="content">
 
 <h1>Carver-Price Legacy Museum</h1>
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Organization / Entity</span>
 
-<p>Museum preserving the history and contributions of the African-American community.</p>
-
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<div class="infobox">
+  <span class="infobox-title">Carver-Price Legacy Museum</span>
+  <table>
+    <tr>
+      <td>Type</td>
+      <td>History Museum</td>
+    </tr>
+    <tr>
+      <td>Established</td>
+      <td>June 1, 2008</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>Appomattox, Virginia</td>
+    </tr>
+    <tr>
+      <td>Focus</td>
+      <td>African American history and education</td>
+    </tr>
+    <tr>
+      <td>Building</td>
+      <td>Former Carver-Price Elementary School (built c. 1930)</td>
+    </tr>
+    <tr>
+      <td>Governing body</td>
+      <td>Carver-Price Alumni Association and Legacy Museum Board</td>
+    </tr>
+  </table>
 </div>
 
+<p><b>Carver-Price Legacy Museum</b> is a community-operated history museum in Appomattox, Virginia, dedicated to preserving and interpreting the history of African American education and community life in Appomattox County. Located in the restored former Carver-Price Elementary School building on Confederate Boulevard, the museum chronicles the experiences of Black students and educators from the segregation era through integration, with particular emphasis on the school's foundational role in providing quality education to African Americans during an era of legal racial discrimination.<sup><a href="#ref1">[1]</a></sup> The museum also celebrates the pioneering work of Mozella Jordan Price, the African American educator who directed the establishment and growth of Black schools in Appomattox County beginning in 1918.<sup><a href="#ref2">[2]</a></sup> Since its grand opening in 2008, the museum has served as a vital community resource and educational venue, hosting student groups, scholars, and visitors seeking to understand local and regional African American history.</p>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#History_of_the_School_Building">History of the School Building</a></li>
+    <li><a href="#Founding_and_Early_Development">Founding and Early Development</a></li>
+    <li><a href="#Segregation_and_Integration">Segregation and Integration</a></li>
+    <li><a href="#Museum_Establishment">Museum Establishment</a></li>
+    <li><a href="#Collections_and_Exhibits">Collections and Exhibits</a></li>
+    <li><a href="#Programs_and_Educational_Activities">Programs and Educational Activities</a></li>
+    <li><a href="#The_Carver-Price_Educational_Complex">The Carver-Price Educational Complex</a></li>
+    <li><a href="#Community_Recognition">Community Recognition</a></li>
+    <li><a href="#See_also">See also</a></li>
+    <li><a href="#References">References</a></li>
+  </ol>
+</div>
+
+<h2 id="History_of_the_School_Building">History of the School Building</h2>
+
+<p>The building that now houses the Carver-Price Legacy Museum was constructed around 1930 with support from the Julius Rosenwald Fund, a philanthropic initiative that financed the construction of thousands of schools for African American students across the American South during the Jim Crow era.<sup><a href="#ref3">[3]</a></sup> The Rosenwald Fund provided matching grants to communities that contributed their own labor and resources, fostering a collaborative approach to addressing educational inequality. The Appomattox County community successfully mobilized funds and volunteer effort to construct a substantial brick school building with multiple classrooms, supporting facilities, and eventually an auditorium—a significant achievement in a county facing widespread segregation and limited public resources for Black education.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>The original facility opened as a school serving African American students in elementary and secondary grades. Over its decades of operation, the building became a centerpiece of Black educational and cultural life in Appomattox County, hosting not only academic instruction but also community gatherings, cultural events, and social activities that reinforced bonds within the African American community during a period of enforced segregation.<sup><a href="#ref5">[5]</a></sup></p>
+
+<h2 id="Founding_and_Early_Development">Founding and Early Development</h2>
+
+<p>The effort to establish high-quality Black schools in Appomattox County originated with the leadership of <b>Mozella Jordan Price</b>, an African American educator appointed in 1918 by Superintendent N. Ragland Featherston as Supervisor of Colored Schools in Appomattox County.<sup><a href="#ref6">[6]</a></sup> In this groundbreaking position—uncommon for an African American woman in the early 20th century—Price oversaw significant improvements to the county's segregated school system. She expanded the school term from seven to nine months, increased the number of schools serving African American students, and secured substantial raises in teachers' salaries, despite the constrained budgets and discriminatory allocation of public funds typical of the era.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>Recognizing that public funding was insufficient to meet community needs, Price and local residents raised additional funds through private subscriptions to construct the Appomattox Training School in 1928 and subsequently the larger Carver-Price school building.<sup><a href="#ref8">[8]</a></sup> The school was initially named the George Washington Carver School in honor of the pioneering African American scientist and educator. In 1951, following a significant expansion that added new classrooms, a gymnasium, and a cafeteria, the school was renamed <b>Carver-Price High School</b> in recognition of Mozella Price's extraordinary contributions to African American education in the county.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>Throughout the 1950s and 1960s, Carver-Price High School served as the sole secondary institution for African American students in Appomattox County and attracted students from neighboring Prince Edward County.<sup><a href="#ref10">[10]</a></sup> The school employed dedicated educators, many with advanced degrees, and maintained rigorous academic standards despite resource constraints. Notable faculty members included Joseph Lewis, a teacher and coach from 1957 to 1969 who became legendary for his coaching achievements and contributions to health and biology education, eventually earning induction into the Appomattox Scholastic Sports Hall of Fame.<sup><a href="#ref11">[11]</a></sup></p>
+
+<h2 id="Segregation_and_Integration">Segregation and Integration</h2>
+
+<p>Carver-Price High School's significance in regional African American history extends beyond Appomattox County due to its role in the aftermath of Prince Edward County's school closures. In 1959, rather than comply with court-ordered desegregation, Prince Edward County officials closed the entire public school system for five years (1959–1964).<sup><a href="#ref12">[12]</a></sup> Hundreds of African American students from Prince Edward County—many separated from their families—were able to continue their education at Carver-Price High School in Appomattox, which admitted them despite the additional strain on facilities and resources. Some Prince Edward County students lived with local families; notably, educator Mozella Price opened her home to students without relatives in the area, exemplifying the community solidarity that sustained educational opportunity during this crisis.<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>The integration of Appomattox County's schools occurred peacefully in February 1970, following Virginia's state-level adoption of a public-private hybrid funding system for education.<sup><a href="#ref14">[14]</a></sup> Carver-Price High School consolidated with the predominantly white Appomattox County High School, ending the de jure segregated education system in the county. The last graduating class of Carver-Price as a separate high school completed their studies in 1969, and by 1970, the building transitioned to serve other educational purposes.<sup><a href="#ref15">[15]</a></sup></p>
+
+<h2 id="Museum_Establishment">Museum Establishment</h2>
+
+<p>The concept for a museum dedicated to preserving Carver-Price School's legacy emerged organically from the school's alumni community. In 2004, during a high school reunion, alumni expressed a strong desire to document and preserve the school's history before institutional memory faded.<sup><a href="#ref16">[16]</a></sup> This grassroots enthusiasm led to the formation of the <b>Carver-Price Alumni Association</b>, which began organizing preservation efforts and collecting artifacts relating to the school's history and impact.</p>
+
+<p>In August 2004, the Carver-Price Alumni Association formally proposed to the Appomattox County Board of Supervisors a lease agreement to establish the Carver-Price Legacy Museum in the front portion of the former elementary school building.<sup><a href="#ref17">[17]</a></sup> County leaders, recognizing the building's historical significance, renamed it the "Carver-Price Educational Complex" to acknowledge both its educational heritage and its emerging role as a multi-purpose community facility.<sup><a href="#ref18">[18]</a></sup> The Board of Supervisors approved the lease proposal, granting the Alumni Association space to develop the museum while supporting a parallel project to renovate other areas of the building for use by Central Virginia Community College.</p>
+
+<p>After several years of fundraising, restoration, and exhibit development, the museum achieved a major milestone. The <b>Carver-Price Legacy Museum officially opened on June 1, 2008</b>, welcoming approximately 80 visitors on opening day.<sup><a href="#ref19">[19]</a></sup> The opening was preceded by a successful pre-opening event in May 2008, generating community awareness and excitement.<sup><a href="#ref20">[20]</a></sup> The official Grand Opening celebration, held later that year, drew approximately 300 attendees and was sponsored by the Appomattox County Chamber of Commerce.<sup><a href="#ref21">[21]</a></sup> The museum received funding support, including grants from the Julius Rosenwald Fund—honoring the organization whose grants had originally helped construct the school building itself—and pursued Community Development Block Grants to support ongoing operations and exhibit expansion.<sup><a href="#ref22">[22]</a></sup></p>
+
+<h2 id="Collections_and_Exhibits">Collections and Exhibits</h2>
+
+<p>The museum's collections focus on documenting the lived experiences of African Americans in Appomattox County from the slavery era through the present day, with particular emphasis on the Carver-Price school years and the integration period. The museum operates several permanent exhibit spaces designed to engage visitors with local history:</p>
+
+<p><b>Mozella J. Price Office Exhibit:</b> A dedicated exhibit space honors the pioneering educator whose leadership established the foundation for quality Black education in Appomattox County. The exhibit displays Mozella Price's desk, piano, chair, and personal artifacts, along with documentary materials about her career and influence.<sup><a href="#ref23">[23]</a></sup> This exhibit was formally established in December 2023 as part of the museum's expanded programming.</p>
+
+<p><b>Timeline Room:</b> This permanent exhibit presents a chronological narrative of African American history in Appomattox County from the slavery period through the 21st century. Visual displays, photographs of former students, documents, and contextual text guide visitors through pivotal moments in the county's social and educational history, including the Jim Crow era, the struggle for equal educational resources, school integration, and contemporary community efforts toward reconciliation and historical preservation.<sup><a href="#ref24">[24]</a></sup></p>
+
+<p><b>Historical Memorabilia and Artifacts:</b> The museum houses photographs of Carver-Price students and faculty spanning decades; yearbooks and academic records; personal narratives from alumni; materials documenting the Prince Edward County students' experience; athletic trophies and memorabilia from the school's sports programs; and items illustrating daily school life, curriculum, and extracurricular activities.<sup><a href="#ref25">[25]</a></sup> These artifacts provide tactile connection to the past and illuminate the achievements and challenges of multiple generations.</p>
+
+<p><b>Video Presentation and Community Room:</b> The Dominion Energy Community Room serves both as a programming space and exhibit area, featuring professional video presentations about the school's history and the broader context of African American education during segregation and integration.<sup><a href="#ref26">[26]</a></sup> This multipurpose space accommodates group tours, educational programs, and community events.</p>
+
+<h2 id="Programs_and_Educational_Activities">Programs and Educational Activities</h2>
+
+<p>Since 2008, the Carver-Price Legacy Museum has evolved into a significant educational venue serving students, researchers, and community members. The museum offers formal and informal educational programming designed to connect contemporary generations with local African American history:</p>
+
+<p><b>School Group Tours:</b> The museum has hosted tours for K-12 student groups, including classes from Appomattox County High School and Cornerstone Christian Academy.<sup><a href="#ref27">[27]</a></sup> Educational tours are structured to meet curriculum objectives, particularly for history, social studies, and civil rights education. Docent-led presentations in the Timeline Room and Mozella J. Price Office help students understand segregation, education equity, integration challenges, and community resilience.</p>
+
+<p><b>Integration History Program:</b> In October 2014, the museum hosted a significant community program in which Appomattox County High School students heard firsthand accounts of local school integration from five community panelists with direct experience of the desegregation process.<sup><a href="#ref28">[28]</a></sup> This intergenerational dialogue program connected youth with elder community members' lived experiences, enriching understanding of the county's racial history.</p>
+
+<p><b>Oral History Initiatives:</b> Beginning in 2015, the museum partnered with the National Park Service and folklore producers Michael and Carrie Kline to record oral histories from Carver-Price school alumni.<sup><a href="#ref29">[29]</a></sup> These recorded interviews preserve first-person narratives of school experiences, the segregation and integration era, and the school's cultural and social significance. This archival effort recognizes oral history as a vital means of documenting African American experience that might otherwise remain unrecorded.</p>
+
+<p><b>Community Celebrations and Fundraising:</b> The museum has hosted numerous community events and cultural celebrations that celebrate African American history and generate operating revenue. Annual Martin Luther King Jr. commemorations feature keynote speakers, community dinners, and programs addressing civil rights topics.<sup><a href="#ref30">[30]</a></sup> Other events have included fish fries, yard sales, and cultural performances, all serving to deepen community engagement and financial support for the museum's mission.</p>
+
+<p><b>Literacy and Tutoring Services:</b> The museum space has served community members for educational support beyond formal programming. In 2014, retired teacher Lynn Stahling conducted twice-weekly reading tutoring sessions with a local student at the museum, demonstrating the space's flexible use for literacy education aligned with the site's historical educational mission.<sup><a href="#ref31">[31]</a></sup></p>
+
+<h2 id="The_Carver-Price_Educational_Complex">The Carver-Price Educational Complex</h2>
+
+<p>The building housing the Carver-Price Legacy Museum comprises part of the larger <b>Carver-Price Educational Complex</b>, a multi-tenant facility shared by the museum and other educational institutions. Recognizing the building's potential to serve multiple community needs, Appomattox County worked to develop complementary educational uses that would sustain the facility and advance educational access in the region.</p>
+
+<p><b>Central Virginia Community College Appomattox Center:</b> In 2005, Central Virginia Community College (CVCC) announced plans to establish a satellite campus within the Carver-Price Educational Complex.<sup><a href="#ref32">[32]</a></sup> The college completed renovations of approximately 4,000 square feet for instructional and administrative spaces and opened its Appomattox Center in January 2007, targeting initial enrollment from both local residents and regional students.<sup><a href="#ref33">[33]</a></sup> The CVCC Appomattox Center offers associate-degree programs, certificates, and continuing education courses in general education, business, and technical fields, extending educational opportunity consistent with the site's historical mission.</p>
+
+<p>By 2012, the CVCC Appomattox Center was offering courses including General Biology, Computer Business Applications, College Composition, World Literature, and supplementary academic services including admissions advising, financial aid counseling, and placement testing.<sup><a href="#ref34">[34]</a></sup> The Center's presence has helped sustain the building and reinforced its role as an educational hub serving the broader Appomattox region.</p>
+
+<p><b>Auditorium Restoration Project:</b> The Carver-Price Educational Complex contains a historic auditorium built as part of the school's 1951 expansion. Beginning in 2021, a citizens' group undertook a restoration project to convert the auditorium into a dedicated arts center, addressing structural and safety requirements while preserving the building's architectural integrity.<sup><a href="#ref35">[35]</a></sup> Local architect Brian Goldman was selected to oversee initial planning and permitting, signaling the community's commitment to revitalizing the entire complex as a cultural and educational resource.</p>
+
+<h2 id="Community_Recognition">Community Recognition</h2>
+
+<p>The Carver-Price Legacy Museum has received growing recognition at local, state, and regional levels for its contributions to historical preservation and community education. In 2007, the Appomattox County School Board formally donated an original framed photograph of Mozella Price to the museum, acknowledging the institution's role in honoring the pioneering educator's legacy while retaining a copy for the school board's administrative offices.<sup><a href="#ref36">[36]</a></sup></p>
+
+<p>In 2014, the museum hired Charlene Scruggs as its first paid director.<sup><a href="#ref37">[37]</a></sup> Scruggs, appointed by the Carver-Price Alumni Board and the Legacy Museum Board, has worked to increase museum visibility, expand programming, pursue grant funding for operations and exhibits, and strengthen the museum's capacity to fulfill its educational mission.<sup><a href="#ref38">[38]</a></sup> The museum underwent significant renovations and exhibit updates in 2023, reopening with expanded collections and improved facilities.</p>
+
+<p><b>Virginia Landmarks Register Listing:</b> In December 2023, the Carver-Price Legacy Museum received state-level historical recognition when the Commonwealth of Virginia's Board of Historic Resources officially added the building to the Virginia Landmarks Register.<sup><a href="#ref39">[39]</a></sup> The Landmarks Register is the commonwealth's official catalog of places possessing historic, architectural, archaeological, and cultural significance. The inclusion acknowledges the building's importance as a Rosenwald School and as a symbol of African American educational achievement during segregation, and recognizes the museum's contemporary contribution to preserving and interpreting that history.</p>
+
+<p><b>Community Coalition and Regional Cooperation:</b> The museum has increasingly positioned itself as part of a broader coalition of historical and cultural institutions in the Appomattox region. In 2024, the Carver-Price Legacy Museum participated alongside the American Civil War Museum, Patrick Henry's Red Hill, and Thomas Jefferson's Poplar Forest in the American Civil War Museum's Fall Festival, collaborating on joint promotional efforts and community programming.<sup><a href="#ref40">[40]</a></sup></p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>CVCC Appomattox Center</li>
+  <li>Mozella Jordan Price</li>
+  <li>Appomattox County School History</li>
+  <li>Prince Edward County School Closure</li>
+  <li>Julius Rosenwald Fund</li>
+  <li>School Integration in Virginia</li>
+  <li>African American History in Appomattox</li>
+</ul>
+
+<h2 id="References">References</h2>
+
+<div class="reflist">
+<ol>
+<li id="ref1">"Carver-Price Legacy Museum listed on Virginia Landmarks Register," Times-Virginian, December 27, 2023. The Commonwealth's Board of Historic Resources approved Virginia Landmarks Register listings, including the Carver-Price School building, built ca. 1930 using contributions from the Julius Rosenwald Fund.</li>
+
+<li id="ref2">"Mozella Jordan Price Appointed Supervisor of Colored Schools," Appomattox County records, March 24, 2022. Mozella Jordan Price was hired in fall 1918 to serve as Supervisor of Colored Schools in Appomattox County.</li>
+
+<li id="ref3">"Carver-Price Legacy Museum added to Virginia Landmarks Register," Times-Virginian, December 27, 2023. The Carver-Price School building was built ca. 1930 using contributions from the Julius Rosenwald Fund.</li>
+
+<li id="ref4">"Carver-Price Legacy Museum updates on new exhibits," Appomattox County records, February 2, 2023. The museum highlights the community's efforts to build a school for their children during segregation.</li>
+
+<li id="ref5">"Carver-Price School history and integration timeline," Appomattox County records, August 11, 2008. The school served as a center for Black educational and cultural life in the region.</li>
+
+<li id="ref6">"Mozella Jordan Price Appointed Supervisor of Colored Schools," Appomattox County records, March 24, 2022.</li>
+
+<li id="ref7">"Mozella Jordan Price Expanded Black Schools and Teachers' Salaries," Appomattox County records, March 24, 2022. Under her leadership, the school term was extended to nine months, the number of schools increased, and teachers' annual salaries significantly rose.</li>
+
+<li id="ref8">"Mozella Jordan Price Raised Funds for Black Schools," Appomattox County records, March 24, 2022. Mozella Jordan Price overcame financial inequalities in the segregated school system by raising funds through private subscriptions.</li>
+
+<li id="ref9">"Carver High School Renamed Carver-Price High School," Appomattox County records, March 24, 2022. Carver High School was renamed in honor of Mozella Jordan Price for her contributions to the education system.</li>
+
+<li id="ref10">"Carver-Price High School Operated from Early 1950s to 1969," Times-Virginian, August 11, 2008. Carver-Price High School served black students in Appomattox and Prince Edward counties before integration.</li>
+
+<li id="ref11">"Joseph Lewis inducted into Hall of Fame," Appomattox County records, October 13, 2010. Joseph Lewis was a teacher and coach at Carver-Price School from 1957-1969, coaching multiple championship teams and receiving coach of the year honors.</li>
+
+<li id="ref12">"Appomattox Welcomes Prince Edward Students During School Closures," Appomattox County historical records, 1959. Appomattox provided educational opportunity through Carver Price School for students from Prince Edward County displaced by school closures due to desegregation resistance.</li>
+
+<li id="ref13">"Prince Edward County Schools Shutdown Led Students to Attend Carver-Price," Appomattox County historical records, 1951. Following Prince Edward County Schools' refusal to unify and subsequent shutdown, Mozella Jordan Price opened her home to students without family in Appomattox.</li>
+
+<li id="ref14">"Appomattox County Public Schools Integrated," Times-Virginian, March 24, 2022. The Appomattox County Public Schools underwent a peaceful integration process in February 1970.</li>
+
+<li id="ref15">"Carver-Price Integrated into County Public School System in 1970," Times-Virginian, August 11, 2008. In 1970, Carver-Price became part of the Appomattox County Public School system following integration.</li>
+
+<li id="ref16">"Museum Idea Originated from 2004 Alumni Reunion," Appomattox County records, November 26, 2008. The concept for the Carver-Price Legacy Museum emerged from a 2004 Carver-Price High School reunion, driven by alumni's desire to preserve the school's legacy.</li>
+
+<li id="ref17">"Carver-Price Alumni Association proposes lease for old school museum," Appomattox County Board of Supervisors meeting minutes, August 25, 2004. The Carver-Price Alumni Association presented a lease agreement to establish the Carver-Price Legacy Museum in the front portion of the old elementary school building.</li>
+
+<li id="ref18">"Old Carver-Price School to be renamed 'Carver-Price Educational Complex'," Appomattox County Board of Supervisors meeting minutes, August 25, 2004. The board agreed to rename the old elementary school building the Carver-Price Educational Complex, with future plans for community use.</li>
+
+<li id="ref19">"Carver-Price Legacy Museum Officially Opened June 1st," Appomattox County records, November 26, 2008. The Carver-Price Legacy Museum officially opened its doors on June 1st, attracting an estimated 80 visitors.</li>
+
+<li id="ref20">"Carver-Price Legacy Museum to Host Pre-Opening Event," Appomattox County records, May 28, 2008. Officials from the museum hosted a pre-opening event from 2 p.m. to 5 p.m.</li>
+
+<li id="ref21">"Carver-Price Legacy Museum Celebrates Grand Opening," Times-Virginian, December 3, 2008. Approximately 300 people attended the official Grand Opening of the Carver-Price Legacy Museum, housed in the former elementary school.</li>
+
+<li id="ref22">"Museum Received Julius Rosenwald Grant Funding," Appomattox County records, November 26, 2008. The Carver-Price Legacy Museum received funding, including a Julius Rosenwald grant, to support its establishment.</li>
+
+<li id="ref23">"Mozella J. Price Office exhibit opened at Carver-Price Legacy Museum," Appomattox County records, December 20, 2023. A new exhibit showcasing artifacts of Mozella Jordan Price, including her desk, piano, and chair, was opened at the museum.</li>
+
+<li id="ref24">"Carver-Price Museum hosts CCA 4-H Club student tour," Times-Virginian, March 20, 2024. CCA students visited the Mozella J. Price Office exhibit and the Timeline Room during their tour.</li>
+
+<li id="ref25">"Carver-Price Legacy Museum Experiences Strong Visitation Since Opening," Appomattox County records, July 2, 2008. The museum showcased historical memorabilia.</li>
+
+<li id="ref26">"Happy Hearts seniors tour Carver-Price Legacy Museum," Times-Virginian, July 31, 2024. Seniors watched a presentation video about the history and mission of Carver-Price in the Dominion Energy Community Room.</li>
+
+<li id="ref27">"Carver-Price Museum hosts CCA 4-H Club student tour," Times-Virginian, March 20, 2024. The museum hosted its first student tour since reopening in late 2023.</li>
+
+<li id="ref28">"ACHS students hear integration experiences at Carver-Price Museum," Appomattox County records, October 22, 2014. Appomattox County High School students heard firsthand accounts of local integration from five panelists at the museum.</li>
+
+<li id="ref29">"Oral history project initiated for Carver-Price school alumni," Appomattox County records, December 23, 2015. The museum partnered with the National Park Service and folklore producers Michael and Carrie Kline to record oral histories of Carver-Price school alumni.</li>
+
+<li id="ref30">"Carver-Price Museum to Host MLK Jr. Life Celebration," Appomattox County records, December 31, 2014. The museum hosted a community dinner and program celebrating Dr. Martin Luther King, Jr., with keynote speaker Christy Coleman.</li>
+
+<li id="ref31">"Lynn Stahling tutors Zane O'Bannion at Carver Price Legacy Museum," Appomattox County records, December 23, 2014. Lynn Stahling, a retired teacher, tutored students twice a week at the museum.</li>
+
+<li id="ref32">"CVCC Plans January 2007 Opening for Appomattox Satellite Campus," Appomattox County records, November 16, 2005. Central Virginia Community College aimed to open a new satellite campus in Appomattox by January 2007, located in the former Carver-Price Educational Complex.</li>
+
+<li id="ref33">"CVCC Appomattox Center Provides Admissions and Advising Services," Appomattox County records, May 2, 2012. The CVCC Appomattox Center offers assistance with college applications, admissions, registration, academic advising, and other student services.</li>
+
+<li id="ref34">"CVCC Appomattox Center Announces Summer Classes," Appomattox County records, May 2, 2012. The CVCC Appomattox Center announced its summer class schedule, including courses in General Biology I, Computer Business Applications, College Composition, and Survey of World Literature II.</li>
+
+<li id="ref35">"Architect approved for Carver-Price School auditorium project," Appomattox County records, August 20, 2021. A citizens' group approved local architect Brian Goldman to lead the project of opening the Carver-Price School auditorium as an arts center.</li>
+
+<li id="ref36">"Appomattox School Board donates Mozella Price picture to Carver-Price museum," Appomattox County records, November 14, 2007. The Appomattox County School Board decided to donate the original framed picture of Mozella Price to the Carver Price Alumni Association for their Legacy Museum.</li>
+
+<li id="ref37">"Director Hired at Carver Price Legacy Museum," Appomattox County records, October 8, 2014. Charlene Scruggs began her position as director at the museum on October 6, 2014.</li>
+
+<li id="ref38">"Museum Seeks Grants for Operations and Exhibits," Appomattox County records, October 8, 2014. The new director planned to pursue grants for operations, exhibits, and equipment.</li>
+
+<li id="ref39">"Carver-Price Legacy Museum listed on Virginia Landmarks Register," Times-Virginian, December 27, 2023. The museum was officially added to the Virginia Landmarks Register on December 14, 2023.</li>
+
+<li id="ref40">"American Civil War Museum in Appomattox hosts successful third Fall Festival," Times-Virginian, October 30, 2024. The Carver-Price Legacy Museum participated in the Fall Festival alongside other regional historical organizations.</li>
+</ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-footer">
   <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
   Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+  Last updated March 17, 2026.
 </div>
 
+
+
+
+
+
+
+
+
+
+
 </div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

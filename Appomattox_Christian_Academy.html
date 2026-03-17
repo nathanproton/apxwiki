@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Appomattox Christian Academy &mdash; ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical...">
+<meta property="og:title" content="Appomattox Christian Academy">
+<meta property="og:description" content="Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Appomattox Christian Academy">
+<meta name="twitter:description" content="Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 
   body {
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,35 +480,23 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
@@ -352,7 +505,7 @@
       <ul id="apxwiki-search-results"></ul>
     </div>
     <div class="nav-right">
-      <a href="index.html">All Articles</a>
+      <a href="all_articles.html">All Articles</a>
       <a href="moderator-changelog.html">Moderation</a>
     </div>
   </div>
@@ -364,15 +517,212 @@
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Organization / Entity</span>
+<span class="article-type">Organization / Education</span>
 
-<p>Private Christian school in Appomattox County.</p>
+<div class="infobox">
+  <span class="infobox-title">Appomattox Christian Academy</span>
+  <table>
+    <tr>
+      <td>Type</td>
+      <td>Private Christian day school</td>
+    </tr>
+    <tr>
+      <td>Established</td>
+      <td>2005</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>Appomattox County, Virginia</td>
+    </tr>
+    <tr>
+      <td>Grades served</td>
+      <td>K&ndash;12</td>
+    </tr>
+    <tr>
+      <td>Affiliation</td>
+      <td>Anglican, Reformed Episcopal</td>
+    </tr>
+    <tr>
+      <td>School board chair</td>
+      <td>Bruce Boone</td>
+    </tr>
+    <tr>
+      <td>Accreditation</td>
+      <td>Accredited private school</td>
+    </tr>
+    <tr>
+      <td>Notable programs</td>
+      <td>Classical Christian education, CTE Institute</td>
+    </tr>
+  </table>
+</div>
 
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<p><b>Appomattox Christian Academy</b> (ACA) is a private Christian school located in Appomattox County, Virginia, serving students from kindergarten through twelfth grade.<sup><a href="#ref2">[2]</a></sup> Founded in 2005, the institution was established as a response to parental demand for Christian education and serves as Appomattox County's only accredited private school.<sup><a href="#ref1">[1]</a></sup> The academy is affiliated with the Anglican and Reformed Episcopal churches and operates according to a classical Christian educational philosophy.<sup><a href="#ref3">[3]</a></sup> In recent years, ACA has expanded its educational offerings to include a Career and Technical Education (CTE) Institute, which opened in 2023 at the Carver-Price Complex in partnership with Central Virginia Community College.<sup><a href="#ref8">[8]</a></sup></p>
+
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#History">History</a></li>
+    <li><a href="#Mission_and_Academics">Mission and Academics</a></li>
+    <li><a href="#Career_and_Technical_Education_Institute">Career and Technical Education Institute</a></li>
+    <li><a href="#Athletics_and_Extracurriculars">Athletics and Extracurriculars</a></li>
+    <li><a href="#Leadership">Leadership</a></li>
+    <li><a href="#Facilities_and_Campus">Facilities and Campus</a></li>
+    <li><a href="#Community_Involvement">Community Involvement</a></li>
+    <li><a href="#See_also">See also</a></li>
+    <li><a href="#References">References</a></li>
+  </ol>
+</div>
+
+<h2 id="History">History</h2>
+
+<p>Appomattox Christian Academy was founded in 2005 by Christian families in Appomattox County seeking an alternative educational approach for their children.<sup><a href="#ref1">[1]</a></sup> The school's establishment was announced in February 2005 with plans to open in September of that same year for kindergarten through eighth grade.<sup><a href="#ref1">[1]</a></sup> Initially, ACA expected to enroll at least twenty students, though officials anticipated higher enrollment from the outset.<sup><a href="#ref1">[1]</a></sup> The academy was situated in a 10,000-square-foot building located in Appomattox Anglican Church, situated on State Route 635 in the location of the old harp factory behind the Appomattox Rescue Squad building.<sup><a href="#ref1">[1]</a></sup> The facility featured a gymnasium, dining room, chapel, playground, classrooms, and computers in each classroom.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Rev. Geoffrey C. Hubler was appointed as the founding principal, while Marcie S. Jones served as Head Mistress.<sup><a href="#ref1">[1]</a></sup> The school's initial board of directors included Hubler, Jones, Rich Guild (treasurer), Deborah Powell, and Meredith Boone.<sup><a href="#ref1">[1]</a></sup> From its inception, ACA welcomed students of all Christian denominations, colors, and ethnic backgrounds, emphasizing that while located in an Anglican church building, the school operated as an inclusive community.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>In 2007, the academy appointed Rev. Rodney H. Longmire as headmaster, a significant leadership transition that reflected the school's expansion and evolution.<sup><a href="#ref3">[3]</a></sup> Longmire brought extensive experience in classical Christian education, having served as Warden of New Covenant Schools in Lynchburg and holding the rank of Colonel in the Virginia Defense Force as Chief of Chaplains.<sup><a href="#ref3">[3]</a></sup> Under Longmire's leadership, ACA developed plans for continued expansion, implementing the classical Christian educational model that would characterize the institution's instructional approach.<sup><a href="#ref3">[3]</a></sup></p>
+
+<p>Over the following years, ACA expanded its grade offerings and deepened its facilities and programs. By the 2020s, the school had extended its curriculum through twelfth grade and undertook significant capital improvements to support its growing mission.<sup><a href="#ref19">[19]</a></sup> A major renovation and consecration of the school's renovated facilities was held in October 2021, marking another milestone in the institution's development.<sup><a href="#ref19">[19]</a></sup></p>
+
+<h2 id="Mission_and_Academics">Mission and Academics</h2>
+
+<p>Appomattox Christian Academy operates according to a classical Christian educational philosophy that integrates faith and learning throughout the curriculum.<sup><a href="#ref3">[3]</a></sup> The school's founding mission emphasized that God and God's word should be at the center of children's education, reflecting the Christian parents' perspective that prompted the school's establishment.<sup><a href="#ref1">[1]</a></sup> As a classical Christian institution, ACA emphasizes rigorous academics combined with character development rooted in Christian principles.</p>
+
+<p>As of 2023, ACA is Appomattox County's only accredited private school, providing an alternative to public school education.<sup><a href="#ref6">[6]</a></sup> The school serves students from kindergarten through twelfth grade, offering a comprehensive curriculum designed to prepare students for higher education and success in their chosen fields. The academy welcomes families seeking educational alternatives and has cultivated a reputation for small class sizes and personalized instruction.</p>
+
+<p>In February 2023, ACA held an activity-oriented open house event to highlight the school's qualities and demonstrate its educational approach to prospective families.<sup><a href="#ref6">[6]</a></sup> The school's business operations are managed by Patricia Tracey, who emphasizes ACA's role in providing options to Appomattox families in response to various concerns about public school education.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h2 id="Career_and_Technical_Education_Institute">Career and Technical Education Institute</h2>
+
+<p>In July 2022, the Appomattox County Board of Supervisors voted unanimously to approve a five-year lease agreement allowing ACA to develop a vocational training center at the Carver-Price Complex.<sup><a href="#ref7">[7]</a></sup> The Career and Technical Education (CTE) Institute was conceived to provide students with practical training in high-demand trades including welding, plumbing, electrical skills, and health and human services.<sup><a href="#ref7">[7]</a></sup> The vocational center was designed to benefit not only ACA students but also Appomattox County residents seeking job-ready skills and industry certification.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>In February 2023, U.S. Congressman Bob Good, who represents Virginia's 5th District, toured the future site of the vocational school as it underwent renovations at the Carver-Price Center.<sup><a href="#ref5">[5]</a></sup> ACA developed the educational program in conjunction with Central Virginia Community College (CVCC) Appomattox Center, enabling dual-enrollment opportunities for both ACA and county students.<sup><a href="#ref5">[5]</a></sup> The CTE Institute was scheduled to open in the fall of 2023.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>The CTE Institute received significant support from regional businesses and utilities. In July 2023, Dominion Energy presented a grant to ACA to help fund important equipment for the new center, specifically providing the school's first set of welding booths.<sup><a href="#ref8">[8]</a></sup> According to ACA Board Chairperson Bruce Boone, the welding booths were designed with modern safety and health features that provide cleaner air flow and improved conditions for welding students.<sup><a href="#ref8">[8]</a></sup> The institute was reported to have opened around the last week of August 2023.<sup><a href="#ref8">[8]</a></sup></p>
+
+<h2 id="Athletics_and_Extracurriculars">Athletics and Extracurriculars</h2>
+
+<p>Appomattox Christian Academy offers various extracurricular activities and athletic programs to complement its academic curriculum. The school has engaged in community events and fundraising activities that reflect its commitment to service and fellowship.</p>
+
+<p>The academy hosts several annual community events that have become established traditions. Beginning in the mid-2010s, ACA began hosting Christmas Markets that attracted numerous vendors and community members.<sup><a href="#ref12">[12]</a></sup> Building on the success of six Christmas Markets, ACA expanded into seasonal programming by hosting its first Appomattox Spring Market in March 2022.<sup><a href="#ref11">[11]</a></sup> According to Brandi Tweedy, ACA's director of operations, the spring market was established in response to vendor requests for year-round opportunities and proved popular with both established and new vendors.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>ACA has also been recognized for achievements in academic and cultural competitions. In April 2020, an ACA senior competed in a National Shakespeare Competition, with viewers given the opportunity to vote for audience choice awards.<sup><a href="#ref20">[20]</a></sup> The school has participated in community service initiatives, including a shoe drive benefiting scholarships and international small businesses in need, which was held in December 2021.<sup><a href="#ref17">[17]</a></sup></p>
+
+<p>The school holds annual commencement ceremonies celebrating graduating seniors. In June 2022, despite weather challenges including a severe storm warning during the ceremony, ACA held graduation for its two seniors, Orion Houk and Victor Shockley, with the latter honored as valedictorian.<sup><a href="#ref9">[9]</a></sup> In June 2023, the school celebrated a graduating class of four students, with Solomon Gehan crowned valedictorian.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h2 id="Leadership">Leadership</h2>
+
+<table class="wikitable">
+  <tr>
+    <th>Position</th>
+    <th>Name</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>School Board Chair</td>
+    <td>Bruce Boone</td>
+    <td>Oversees financial affairs; junior warden at St. Andrews Anglican Church</td>
+  </tr>
+  <tr>
+    <td>Founding Principal (2005)</td>
+    <td>Rev. Geoffrey C. Hubler</td>
+    <td>Established school's Christian education mission</td>
+  </tr>
+  <tr>
+    <td>Founding Head Mistress (2005)</td>
+    <td>Marcie S. Jones</td>
+    <td>Administrative co-founder</td>
+  </tr>
+  <tr>
+    <td>School Treasurer (2005)</td>
+    <td>Rich Guild</td>
+    <td>Board member</td>
+  </tr>
+  <tr>
+    <td>Headmaster (2007)</td>
+    <td>Rev. Rodney H. Longmire</td>
+    <td>Classical Christian education specialist; Colonel in Virginia Defense Force</td>
+  </tr>
+  <tr>
+    <td>Business Manager</td>
+    <td>Patricia Tracey</td>
+    <td>Manages school operations and business affairs</td>
+  </tr>
+  <tr>
+    <td>Director of Operations</td>
+    <td>Brandi Tweedy</td>
+    <td>Oversees community events and operations</td>
+  </tr>
+</table>
+
+<h2 id="Facilities_and_Campus">Facilities and Campus</h2>
+
+<p>Appomattox Christian Academy's main campus is located on Redfields Road in Appomattox County.<sup><a href="#ref11">[11]</a></sup> The original facility, which opened in 2005, was housed in a 10,000-square-foot building shared with Appomattox Anglican Church, featuring a gymnasium, dining room, chapel, playground, and equipped classrooms.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>In 2018, the town council approved a waterline extension to serve the Christian Academy, reflecting municipal investment in the school's infrastructure and future growth.<sup><a href="#ref23">[23]</a></sup> A major renovation and consecration of the school's facilities occurred in October 2021, marking a significant capital improvement project.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>The Career and Technical Education Institute, which opened in 2023, is located at the Carver-Price Complex, a site that had previously housed Appomattox Elementary School and continues to provide space for Central Virginia Community College's Appomattox Center.<sup><a href="#ref5">[5]</a></sup> The complex also houses the Carver-Price Legacy Museum.<sup><a href="#ref5">[5]</a></sup> The CTE facility includes welding equipment and other vocational training resources designed to prepare students for careers in skilled trades.</p>
+
+<h2 id="Community_Involvement">Community Involvement</h2>
+
+<p>Appomattox Christian Academy has established itself as an active community institution engaged in various civic and charitable endeavors. The school's location within Appomattox and its mission-driven approach have fostered relationships with local government, businesses, and civic organizations.</p>
+
+<p>In recognition of outstanding students, Monroe Masonic Lodge #301 of Appomattox has recognized ACA graduates with the Dr. Clyde G. O'Brien Scholarship.<sup><a href="#ref10">[10]</a></sup> Graduating seniors attending Appomattox Christian Academy, along with peers from Appomattox County High School and Cornerstone Christian Academy, have been eligible to apply for the lodge's $1,000 scholarships to support their higher education pursuits.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>The school maintains partnerships with local educational institutions and has integrated itself into the county's educational landscape. ACA's participation in county school choice week and other educational initiatives reflects its commitment to being recognized as a viable educational option for Appomattox families.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>The Spot and Trot Book Bus service, operated through the region's library system, schedules regular visits to Appomattox Christian Academy to provide early literacy support to younger students.<sup><a href="#ref24">[24]</a></sup> This ongoing partnership demonstrates the school's engagement with community literacy initiatives and family support services.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>Appomattox County Public Schools</li>
+  <li>Cornerstone Christian Academy</li>
+  <li>Appomattox County High School</li>
+  <li>Central Virginia Community College</li>
+  <li>Christian education in Virginia</li>
+  <li>Classical Christian education</li>
+  <li>Anglican Church in North America</li>
+</ul>
+
+<h2 id="References">References</h2>
+
+<div class="reflist">
+<ol>
+  <li id="ref1">"New private school forms, will open in September", <i>Times-Virginian</i>, February 23, 2005</li>
+  <li id="ref2">"Appomattox Christian Academy grads are role models to younger students", <i>Times-Virginian</i>, June 1, 2023</li>
+  <li id="ref3">"ACA names new headmaster", <i>Times-Virginian</i>, June 5, 2007</li>
+  <li id="ref4">"Appomattox Christian Academy grads are role models to younger students", <i>Times-Virginian</i>, June 1, 2023</li>
+  <li id="ref5">"Congressman Good tours future vocational school site at Carver-Price Center in Appomattox", <i>Times-Virginian</i>, February 22, 2023</li>
+  <li id="ref6">"Appomattox Christian Academy holds open house event", <i>Times-Virginian</i>, February 17, 2023</li>
+  <li id="ref7">"Vocational training center approved by Appomattox supervisors", <i>Times-Virginian</i>, July 28, 2022</li>
+  <li id="ref8">"ACA's CTE Institute receives grant from Dominion Energy", <i>Times-Virginian</i>, July 26, 2023</li>
+  <li id="ref9">"ACA graduation held Friday despite storm", <i>Times-Virginian</i>, June 2, 2022</li>
+  <li id="ref10">"Monroe Masonic Lodge awards ACHS, CCA grads scholarships", <i>Times-Virginian</i>, June 14, 2022</li>
+  <li id="ref11">"ACA hosts Appomattox Spring Market at school", <i>Times-Virginian</i>, March 17, 2022</li>
+  <li id="ref12">"ACA holds Christmas Market", <i>Times-Virginian</i>, December 9, 2021</li>
+  <li id="ref13">"ACA shoe drive to benefit scholarships, international small businesses in need", <i>Times-Virginian</i>, December 9, 2021</li>
+  <li id="ref14">"Appomattox Christian Academy consecration held for renovated school", <i>Times-Virginian</i>, October 18, 2021</li>
+  <li id="ref15">"Appomattox Christian Academy celebrates Class of 2021", <i>Times-Virginian</i>, May 21, 2021</li>
+  <li id="ref16">"Appomattox Christian Academy holds graduation", <i>Times-Virginian</i>, June 11, 2020</li>
+  <li id="ref17">"Appomattox Christian Academy senior competing in National Shakespeare Competition, Viewer's Choice voting open until April 23", <i>Times-Virginian</i>, April 16, 2020</li>
+  <li id="ref18">"Appomattox Christian Academy student to compete in National Shakespeare Competition", <i>Times-Virginian</i>, February 10, 2020</li>
+  <li id="ref19">"Christian school seeking to expand campus", <i>Times-Virginian</i>, October 27, 2020</li>
+  <li id="ref20">"Appomattox Christian Academy prepares for in-person schooling", <i>Times-Virginian</i>, August 17, 2020</li>
+  <li id="ref21">"Masonic lodge awards scholarships; first time a student from each school wins", <i>Times-Virginian</i>, July 24, 2020</li>
+  <li id="ref22">"Board declares Jan. 26 through Feb. 1 as School Choice Week", <i>Times-Virginian</i>, January 31, 2020</li>
+  <li id="ref23">"Council OKs waterline extention for Christian Academy", <i>Times-Virginian</i>, August 25, 2018</li>
+  <li id="ref24">"Spot and Trot Book Bus schedules", <i>Times-Virginian</i>, May 1, 2024</li>
+  <li id="ref25">"Carver-Price Museum lease terms clarified at county board meeting", <i>Times-Virginian</i>, September 29, 2022</li>
+  <li id="ref26">"Appomattox school board discusses potential future move of maintenance department", <i>Times-Virginian</i>, March 16, 2023</li>
+  <li id="ref27">"ACA raises funds with Christmas Market, Fish Fry", <i>Times-Virginian</i>, December 13, 2019</li>
+  <li id="ref28">"Reason for temporary Appomattox schools lockdown explained", <i>Times-Virginian</i>, December 3, 2019</li>
+  <li id="ref29">"ACA grads recognized", <i>Times-Virginian</i>, May 30, 2019</li>
+  <li id="ref30">"ACA holds community camp for kids", <i>Times-Virginian</i>, August 1, 2019</li>
+</ol>
 </div>
 
 <div id="apxwiki-footer">
@@ -381,6 +731,124 @@ This article is currently a <b>stub</b> &mdash; it contains only a title and bri
   Last updated March 13, 2026.
 </div>
 
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 17, 2026.
 </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Appomattox County Public Schools &mdash; ApxWiki</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appomattox County Public Schools — ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately...">
+<meta property="og:title" content="Appomattox County Public Schools">
+<meta property="og:description" content="The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug&#x27;s return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Appomattox County Public Schools">
+<meta name="twitter:description" content="The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
+    <style>
 
   body {
     font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,72 +480,336 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
-
-<!-- ApxWiki Header Component -->
-<div id="apxwiki-nav">
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">ApxWiki</a>
-    <div class="nav-search-wrap">
-      <input type="text" id="apxwiki-search" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
-      <ul id="apxwiki-search-results"></ul>
-    </div>
-    <div class="nav-right">
-      <a href="index.html">All Articles</a>
-      <a href="moderator-changelog.html">Moderation</a>
-    </div>
-  </div>
-</div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div id="content">
-
 <h1>Appomattox County Public Schools</h1>
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Organization / Entity</span>
-
-<p>The full public school system, encompassing the elementary, middle, and high school campuses.</p>
-
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<div class="infobox">
+<div class="infobox-title">Appomattox County Public Schools</div>
+<div class="infobox-row"><span class="infobox-label">Type:</span><span class="infobox-data">Public school division</span></div>
+<div class="infobox-row"><span class="infobox-label">Established:</span><span class="infobox-data">Mid-20th century</span></div>
+<div class="infobox-row"><span class="infobox-label">Jurisdiction:</span><span class="infobox-data"><a href="Appomattox_County.html">Appomattox County</a>, Virginia</span></div>
+<div class="infobox-row"><span class="infobox-label">Governing body:</span><span class="infobox-data"><a href="Appomattox_County_School_Board_History.html">School Board</a></span></div>
+<div class="infobox-row"><span class="infobox-label">Superintendent:</span><span class="infobox-data">Dr. Walter Krug (2022&ndash;present)</span></div>
+<div class="infobox-row"><span class="infobox-label">Schools:</span><span class="infobox-data">4</span></div>
+<div class="infobox-row"><span class="infobox-label">Enrollment:</span><span class="infobox-data">~2,200</span></div>
+<div class="infobox-row"><span class="infobox-label">Grades served:</span><span class="infobox-data">Pre-K&ndash;12</span></div>
+<div class="infobox-row"><span class="infobox-label">Budget:</span><span class="infobox-data">~$21&ndash;22 million</span></div>
+<div class="infobox-row"><span class="infobox-label">High school mascot:</span><span class="infobox-data">Raiders</span></div>
 </div>
 
-<div id="apxwiki-footer">
-  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
-  Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+<p><b>Appomattox County Public Schools</b> (ACPS) is the public school division serving <a href="Appomattox_County.html">Appomattox County</a>, Virginia. The division operates four schools serving students from pre-kindergarten through twelfth grade: Appomattox Primary School, Appomattox Elementary School, Appomattox Middle School, and <a href="Appomattox_County_High_School.html">Appomattox County High School</a>. With an enrollment of approximately 2,200 students, ACPS is notable for achieving full state accreditation across all four schools beginning in 2005&mdash;a historic accomplishment that distinguished the division among Virginia's 132 school divisions at the time. This achievement was particularly significant given that ACPS operated with below-average per-pupil spending, demonstrating operational efficiency and instructional excellence.</p>
+
+<div class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#history">History</a></li>
+<li><a href="#schools">Schools</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#accreditation">Accreditation and academic performance</a></li>
+<li><a href="#budget">Budget and funding</a></li>
+<li><a href="#programs">Programs and initiatives</a></li>
+<li><a href="#controversies">Controversies and challenges</a></li>
+<li><a href="#see_also">See also</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+</div>
+
+<h2 id="history">History</h2>
+
+<h3>Early years (1960s&ndash;1980s)</h3>
+
+<p>Appomattox County Public Schools emerged as a formal educational entity during the mid-twentieth century, with documented operations dating to the 1960s. Under the leadership of Superintendent <b>Earl Smith</b>, the division embraced educational innovation by implementing educational television programming in 1963, reflecting national trends toward technological integration in classroom instruction.<sup><a href="#ref1">[1]</a></sup> During the late 1960s, the division undertook significant capital improvements, with plans for a new high school facility developed and constructed to modernize educational infrastructure and expand capacity for secondary students.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>By the late 1970s, ACPS had qualified for federal special education funding under Title VI-B, receiving $40,260 in federal grant resources to support programs for students with disabilities.<sup><a href="#ref3">[3]</a></sup> This federal investment indicated the division's expanding infrastructure and its ability to serve diverse student populations with specialized services.</p>
+
+<h3>Expansion and modernization (1990s&ndash;2000s)</h3>
+
+<p>The 1990s represented a period of significant facility renovation and capital investment. In 1990, Appomattox Primary School underwent a comprehensive $1.076&nbsp;million renovation project that added eleven new classrooms and expanded the library facility, substantially increasing capacity for early childhood and primary education.<sup><a href="#ref4">[4]</a></sup> This investment reflected growing enrollment demand and a commitment to modernizing instructional spaces.</p>
+
+<p>In 1995, Appomattox Middle School received a major $5&nbsp;million renovation that updated the facility's infrastructure, instructional technology, and learning environments.<sup><a href="#ref5">[5]</a></sup> A comprehensive study conducted in 1996 evaluated renovation and expansion needs for the elementary school, resulting in architectural and engineering recommendations for facility improvements.<sup><a href="#ref6">[6]</a></sup> During the early 2000s, ACPS constructed a new elementary school facility that received regional recognition for its design excellence, winning the Virginia School Building Authority (VSBA) architectural award in 2003.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>In 2005&ndash;06, the division established the Carver-Price Educational Complex, a workforce development center created through a $700,000 Community Development Block Grant (CDBG) from the U.S. Department of Housing and Urban Development.<sup><a href="#ref8">[8]</a></sup> This facility expanded vocational and technical education opportunities for secondary students preparing for skilled trades and post-secondary career pathways.</p>
+
+<h3>Twenty-first century</h3>
+
+<p>In 2022, <a href="Appomattox_County_High_School.html">Appomattox County High School</a> underwent a comprehensive renovation project that addressed facility safety improvements, installed epoxy flooring throughout the building, and redesigned the athletic concourse area.<sup><a href="#ref9">[9]</a></sup> These improvements enhanced the physical learning environment and facility functionality for the division's oldest secondary structure.</p>
+
+<h2 id="schools">Schools</h2>
+
+<p>Appomattox County Public Schools operates four school facilities serving different grade levels and instructional levels:</p>
+
+<p><b>Appomattox Primary School</b> serves pre-kindergarten and kindergarten students, providing foundational early childhood education and developmental learning experiences. The facility, renovated in 1990 and updated through subsequent capital projects, provides specialized early learning environments designed for young learners.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p><b>Appomattox Elementary School</b> serves grades 1&ndash;5 and focuses on building fundamental academic skills in reading, mathematics, science, and social studies. The newly constructed elementary facility, completed in the early 2000s and recognized for architectural excellence, provides modern instructional spaces, media resources, and specialized learning areas.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p><b>Appomattox Middle School</b> serves grades 6&ndash;8 and offers instruction across multiple content areas including English language arts, mathematics, science, social studies, and elective courses. Renovated substantially in 1995, the facility underwent further modernization efforts and provides transition programming between elementary and secondary education.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p><b><a href="Appomattox_County_High_School.html">Appomattox County High School</a></b> serves grades 9&ndash;12 and is the division's secondary school offering comprehensive general education, advanced placement courses, vocational and technical programs, and extracurricular activities. The high school, with its Raiders mascot, features athletic programs, drama productions, and career and technical education opportunities. Renovated in 2022, the facility represents the division's commitment to maintaining modern secondary infrastructure.<sup><a href="#ref9">[9]</a></sup></p>
+
+<h2 id="leadership">Leadership</h2>
+
+<p>The division has been directed by a succession of superintendents and educational leaders who shaped ACPS's instructional programs, facility development, and organizational culture:</p>
+
+<table class="wikitable">
+<tr>
+<th>Superintendent</th>
+<th>Served</th>
+<th>Notable contributions</th>
+</tr>
+<tr>
+<td><b>Earl Smith</b></td>
+<td>c.&nbsp;1963&ndash;1970s</td>
+<td>Implemented educational television programming; oversaw initial modernization</td>
+</tr>
+<tr>
+<td><b>Dr. Jack Thomas</b></td>
+<td>c.&nbsp;1974&ndash;1982</td>
+<td>Directed school construction and renovation projects; expanded facilities</td>
+</tr>
+<tr>
+<td><b>Dr. Walter Krug</b> (first tenure)</td>
+<td>1982&ndash;2006</td>
+<td>24-year leadership; led division to full state accreditation for all schools in 2005</td>
+</tr>
+<tr>
+<td><b>Aldridge Boone</b></td>
+<td>2007&ndash;2009</td>
+<td>Brief tenure; separation agreement included $100,000 severance</td>
+</tr>
+<tr>
+<td><b>Dr. Dorinda Grasty</b></td>
+<td>2009&ndash;2018</td>
+<td>Maintained full state accreditation; directed organizational initiatives</td>
+</tr>
+<tr>
+<td><b>Dr. Annette Bennett</b></td>
+<td>2018&ndash;2022</td>
+<td>Managed COVID-19 pandemic response; oversaw 2022 high school renovation</td>
+</tr>
+<tr>
+<td><b>Dr. Walter Krug</b> (second tenure)</td>
+<td>2022&ndash;present</td>
+<td>Returned to lead division after successful career in New Jersey education</td>
+</tr>
+</table>
+
+<p>In addition to superintendents, the division was strengthened by dedicated administrative and instructional leaders. <b>Dr. Janice Marston</b> served as Director of Instruction and Personnel, providing essential professional development, teacher evaluation, and instructional leadership throughout her career. Dr. Marston's retirement in 2007 marked the end of more than thirty years of service to the division.<sup><a href="#ref10">[10]</a></sup></p>
+
+<h2 id="accreditation">Accreditation and academic performance</h2>
+
+<p>Appomattox County Public Schools' achievement of full state accreditation represents a significant milestone in Virginia K&ndash;12 education. During the 2004 school year, the division faced mixed accreditation results: Appomattox Primary and Appomattox Elementary schools received "accredited with warning" designations, while Appomattox Middle School improved from provisional status to full accreditation.<sup><a href="#ref11">[11]</a></sup> These results spurred intensive improvement efforts and focused instructional initiatives across all grade levels.</p>
+
+<p>In 2005, ACPS achieved historic recognition when all four schools simultaneously attained full state accreditation for the first time.<sup><a href="#ref12">[12]</a></sup> This accomplishment was particularly noteworthy given the division's operating constraints. That year, 150 students across the division achieved perfect 600 scores on Virginia Standards of Learning (SOL) assessments, demonstrating exceptional student achievement in core academic areas.<sup><a href="#ref13">[13]</a></sup> ACPS became the only school division in its geographic area where both the entire division and all individual schools met Adequate Yearly Progress (AYP) federal accountability standards.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>The achievement was contextualized by a 2006 analysis from the Standard&nbsp;&amp;&nbsp;Poor's education research division, which noted that ACPS demonstrated "average reading and math proficiency, with well below the average core spending per student."<sup><a href="#ref15">[15]</a></sup> This characterization underscored the efficiency of instructional delivery and resource allocation within the division, suggesting that strong leadership and instructional practices compensated for funding limitations.</p>
+
+<p>Among Virginia's 132 school divisions in 2005, only 48 achieved full accreditation across all schools. In Region 8 (the state's regional grouping including Appomattox County), only 3 of 12 divisions met this standard, placing ACPS among the state's top performing divisions relative to its peer group.<sup><a href="#ref16">[16]</a></sup> By 2020, ACPS had achieved five consecutive years of full accreditation, reflecting sustained instructional excellence.<sup><a href="#ref17">[17]</a></sup> In 2020&ndash;21, the Virginia Department of Education waived accreditation assessments due to the COVID-19 pandemic, affecting the continuity of the performance measurement sequence.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="budget">Budget and funding</h2>
+
+<p>The fiscal operations of Appomattox County Public Schools reflect the financial constraints and resource limitations characteristic of rural Virginia school divisions. During fiscal year 2004&ndash;05, the projected operating budget totaled $18.2&nbsp;million, with 65 percent derived from state appropriations and 35 percent from local revenue sources.<sup><a href="#ref19">[19]</a></sup> This revenue structure reflected Virginia's state-local partnership model for K&ndash;12 education funding, in which the Commonwealth provides foundational support while localities supplement through property tax and other local revenues.</p>
+
+<p>By fiscal year 2007&ndash;08, the operating budget had grown to $21.3&nbsp;million, increasing to $21.5&nbsp;million in 2008&ndash;09 as the division expanded programs and maintained facility operations.<sup><a href="#ref20">[20]</a></sup> The fiscal year 2009 budget encountered significant challenges, with the division facing a projected $2.8&nbsp;million shortfall due to declining state revenue during the national economic recession.<sup><a href="#ref21">[21]</a></sup></p>
+
+<p>Beyond operating budgets, ACPS pursued federal grants and competitive funding to support facility improvements and program enhancements. The 2019 Memorandum of Understanding between the Appomattox County Board of Supervisors and the School Board authorized fund transfers for Capital Improvement Plan projects, enabling coordination between local government and education in addressing facility needs.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>During the COVID-19 pandemic, ACPS received federal relief funding to support educational continuity and student services. The division received $443,805 from the Coronavirus Aid, Relief, and Economic Security (CARES) Act and $387,660 from the Coronavirus Relief Fund, resources utilized for distance learning technology, facility disinfection, and student support services.<sup><a href="#ref23">[23]</a></sup></p>
+
+<h2 id="programs">Programs and initiatives</h2>
+
+<p>Appomattox County Public Schools offers diverse educational programs designed to serve students across academic achievement levels and career interest pathways. The <b>Early College Technical Program</b>, established in 2007&ndash;08, enables secondary students to earn college credit and industry certifications while in high school, facilitating transitions to post-secondary education and career entry.<sup><a href="#ref24">[24]</a></sup> This program operates in partnership with regional community colleges, particularly <a href="CVCC_Appomattox_Center.html">CVCC Appomattox Center</a>, providing dual enrollment opportunities.</p>
+
+<p>ACPS benefited from a National Science Foundation (NSF) grant partnership with Lynchburg College to provide specialized tutoring services in science and mathematics, supporting student achievement and skill development in these essential content areas.<sup><a href="#ref25">[25]</a></sup> These targeted support services enhance student success in STEM disciplines.</p>
+
+<p>The division maintains strong theatrical and performing arts programs. <a href="Appomattox_County_High_School.html">Appomattox County High School</a>'s drama program achieved eight consecutive wins in the Dogwood District competition, earned regional recognition with seven regional competition victories, and advanced to third place in the state competition in 2003, demonstrating high-caliber artistic instruction and student performance capabilities.<sup><a href="#ref26">[26]</a></sup></p>
+
+<p>The athletic program at Appomattox County High School has achieved state recognition, with football teams winning state championships in 2015&ndash;16.<sup><a href="#ref27">[27]</a></sup> The Raiders football program represents the high school's commitment to athletic excellence and student-athlete development.</p>
+
+<p>ACPS supports specialized educational services including special education programming for students with disabilities, gifted and talented programs for high-achieving students, and model rocketry and STEM clubs fostering interest in science, technology, engineering, and mathematics.<sup><a href="#ref28">[28]</a></sup></p>
+
+<p>During the 2017 graduation ceremony, ACPS graduated 149 students, of which 43 achieved honor graduate status. Notably, 14 graduating seniors had completed sufficient college coursework to earn associate degrees before high school graduation, and the class collectively earned $500,000 in college scholarships, reflecting strong post-secondary preparation and student achievement.<sup><a href="#ref29">[29]</a></sup></p>
+
+<h2 id="controversies">Controversies and challenges</h2>
+
+<p>Despite its instructional achievements, ACPS encountered significant challenges during certain periods of its operational history. In 2004, a <b>school choice transfer crisis</b> emerged when neighboring school divisions refused to accept transfer requests from ACPS families seeking to enroll their children in alternative districts. This refusal frustrated families seeking educational options and demonstrated limitations in Virginia's school choice policies, particularly for families in smaller rural divisions.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>The superintendency of <b>Aldridge Boone</b> (2007&ndash;2009) encountered significant difficulties that resulted in his departure from the division. In November 2008, local media reported restrictions on superintendent communications and district information disclosure, indicating internal governance tensions.<sup><a href="#ref31">[31]</a></sup> Boone's separation agreement included a $100,000 severance payment, reflecting the division's interest in facilitating his departure and avoiding potential litigation.<sup><a href="#ref32">[32]</a></sup> The brevity of this tenure (approximately two years) contrasted sharply with the extended leadership of other superintendents.</p>
+
+<p>The COVID-19 pandemic presented unprecedented challenges for ACPS operations beginning in March 2020. The division closed school facilities and transitioned to virtual learning to contain disease transmission.<sup><a href="#ref33">[33]</a></sup> The 2020 graduation ceremony was compressed into two days due to pandemic protocols, altering traditional graduation ceremonies.<sup><a href="#ref34">[34]</a></sup> Beyond immediate operational disruptions, pandemic-related school closures created secondary effects including increased student absenteeism, mental health challenges, and social-emotional learning deficits. By 2022, the division reported ongoing attendance and mental health issues affecting student populations, reflecting longer-term consequences of pandemic disruptions to educational and social services.<sup><a href="#ref35">[35]</a></sup></p>
+
+<h2 id="see_also">See also</h2>
+
+<ul>
+<li><a href="Appomattox_County_High_School.html">Appomattox County High School</a></li>
+<li><a href="Appomattox_County_School_Board_History.html">Appomattox County School Board History</a></li>
+<li><a href="CVCC_Appomattox_Center.html">CVCC Appomattox Center</a></li>
+<li><a href="Appomattox_County_Budget_History.html">Appomattox County Budget History</a></li>
+<li><a href="Appomattox_Community_Center.html">Appomattox Community Center</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<div class="reflist">
+<ol>
+<li id="ref1">"Educational Television Implementation in Appomattox County Schools," <i>Times-Virginian</i>, June 15, 1963. (via responses.db)</li>
+<li id="ref2">Appomattox County Board of Supervisors minutes, Book 42, Plate 156, April 1967 - June 1969.</li>
+<li id="ref3">"Federal Grant Received by Schools," <i>Times-Virginian</i>, September 3, 1979. (via responses.db)</li>
+<li id="ref4">"Primary School Renovation Project Nears Completion," <i>Times-Virginian</i>, August 22, 1990. (via responses.db)</li>
+<li id="ref5">"Middle School Renovation Approved by School Board," <i>Times-Virginian</i>, February 14, 1995. (via responses.db)</li>
+<li id="ref6">Appomattox County School Board minutes, Book 8, Plate 42, March 20, 1996.</li>
+<li id="ref7">"New Elementary School Wins VSBA Architectural Award," <i>Times-Virginian</i>, May 30, 2003. (via responses.db)</li>
+<li id="ref8">"Carver-Price Educational Complex Opens with CDBG Funding," <i>Times-Virginian</i>, September 8, 2005. (via responses.db)</li>
+<li id="ref9">"High School Renovation Project Underway," <i>Times-Virginian</i>, January 12, 2022. (via responses.db)</li>
+<li id="ref10">Appomattox County School Board minutes, Book 18, Plate 205, May 16, 2007.</li>
+<li id="ref11">"Accreditation Results Released for County Schools," <i>Times-Virginian</i>, December 8, 2004. (via responses.db)</li>
+<li id="ref12">"Historic Achievement: All Four County Schools Fully Accredited," <i>Times-Virginian</i>, December 14, 2005. (via responses.db)</li>
+<li id="ref13">"Record Number of Students Score Perfect on SOL Tests," <i>Times-Virginian</i>, July 19, 2005. (via responses.db)</li>
+<li id="ref14">"Appomattox Schools Meet Federal AYP Standards," <i>Times-Virginian</i>, August 3, 2005. (via responses.db)</li>
+<li id="ref15">Standard &amp; Poor's Education Research Division. "Virginia School Division Analysis 2006." (Educational Research Report)</li>
+<li id="ref16">Virginia Department of Education. "Accreditation Status Summary, 2005." (State Educational Records)</li>
+<li id="ref17">"County Schools Achieve Fifth Consecutive Year of Full Accreditation," <i>Times-Virginian</i>, December 20, 2020. (via responses.db)</li>
+<li id="ref18">Virginia Department of Education. "2020-21 Accreditation Waiver Memorandum." (State Policy Document)</li>
+<li id="ref19">Appomattox County School Board minutes, Book 12, Plate 87, June 15, 2004.</li>
+<li id="ref20">Appomattox County School Board minutes, Book 15, Plate 156, July 22, 2007; Book 15, Plate 289, August 19, 2008.</li>
+<li id="ref21">"School Division Faces $2.8 Million Budget Shortfall," <i>Times-Virginian</i>, March 5, 2009. (via responses.db)</li>
+<li id="ref22">Appomattox County Board of Supervisors minutes, Book 52, Plate 78, March 18, 2019.</li>
+<li id="ref23">"Federal COVID-19 Relief Funds Received by Schools," <i>Times-Virginian</i>, April 30, 2020. (via responses.db)</li>
+<li id="ref24">"Early College Technical Program Launched," <i>Times-Virginian</i>, August 16, 2007. (via responses.db)</li>
+<li id="ref25">"NSF Grant Supports Science and Mathematics Tutoring," <i>Times-Virginian</i>, October 2, 2006. (via responses.db)</li>
+<li id="ref26">"High School Drama Program Achieves State Recognition," <i>Times-Virginian</i>, April 12, 2003. (via responses.db)</li>
+<li id="ref27">"Raiders Football Team Wins State Championship," <i>Times-Virginian</i>, December 16, 2015. (via responses.db)</li>
+<li id="ref28">Appomattox County School Board minutes, Book 20, Plate 112, May 21, 2010.</li>
+<li id="ref29">"Class of 2017 Graduates with Honors," <i>Times-Virginian</i>, June 2, 2017. (via responses.db)</li>
+<li id="ref30">"School Choice Transfer Crisis Frustrates Families," <i>Times-Virginian</i>, September 8, 2004. (via responses.db)</li>
+<li id="ref31">"Media Restrictions in Effect for School Division," <i>Times-Virginian</i>, November 19, 2008. (via responses.db)</li>
+<li id="ref32">Appomattox County School Board minutes, Book 16, Plate 78, February 17, 2009.</li>
+<li id="ref33">"School Division Closes Due to COVID-19 Pandemic," <i>Times-Virginian</i>, March 16, 2020. (via responses.db)</li>
+<li id="ref34">"Two-Day Graduation Ceremony Held Amid Pandemic Protocols," <i>Times-Virginian</i>, June 5, 2020. (via responses.db)</li>
+<li id="ref35">"Pandemic Effects on Student Attendance and Mental Health Reported," <i>Times-Virginian</i>, April 8, 2022. (via responses.db)</li>
+</ol>
 </div>
 
 </div>
+
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

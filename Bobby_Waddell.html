@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bobby Waddell &mdash; ApxWiki</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobby Waddell - ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024...">
+<meta property="og:title" content="Bobby Waddell">
+<meta property="og:description" content="Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bobby Waddell">
+<meta name="twitter:description" content="Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
+    <style>
 
   body {
     font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,35 +480,22 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
@@ -352,7 +504,7 @@
       <ul id="apxwiki-search-results"></ul>
     </div>
     <div class="nav-right">
-      <a href="index.html">All Articles</a>
+      <a href="all_articles.html">All Articles</a>
       <a href="moderator-changelog.html">Moderation</a>
     </div>
   </div>
@@ -364,23 +516,373 @@
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Biography</span>
 
-<p>Appomattox County School Board member representing the Piney Mountain District; recognized as Virginia School Boards Association Regional Member of the Year.</p>
-
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<div class="infobox">
+    <div class="infobox-title">Bobby Waddell</div>
+    <table>
+        <tr><td colspan="2" class="infobox-subheader">Appomattox County School Board</td></tr>
+        <tr><td>District</td><td>Falling River (2005–2020)<br/>Piney Mountain (2021)</td></tr>
+        <tr><td>In office</td><td>July 2005 – November 2020<br/>May 2021 – (interim)</td></tr>
+        <tr><td>Chairman</td><td>2006–2008, 2012–2019</td></tr>
+        <tr><td colspan="2" class="infobox-subheader">Personal details</td></tr>
+        <tr><td>Born</td><td>circa 1952</td></tr>
+        <tr><td>Residence</td><td>Appomattox County, Virginia</td></tr>
+        <tr><td>Spouse</td><td>Sue Waddell</td></tr>
+        <tr><td>Children</td><td>Jeremy, Christopher, Nicholas</td></tr>
+    </table>
 </div>
 
+<p><b>Bobby Waddell</b> is an American educator and public servant who represented Appomattox County on the School Board for approximately 15 years, most prominently serving as board chairman for eight years. Honored as the Virginia School Boards Association (VSBA) Regional Member of the Year in 2024, Waddell became known for his unwavering commitment to student achievement, teacher compensation, and bridging communication gaps between educational and governmental leadership.</p>
+
+<div class="toc">
+    <div class="toctitle">Contents</div>
+    <ol>
+        <li><a href="#Early_Life_and_Career">Early Life and Career</a></li>
+        <li><a href="#Appointment_to_School_Board">Appointment to School Board</a></li>
+        <li><a href="#School_Board_Service">School Board Service</a></li>
+        <li><a href="#Electoral_History">Electoral History</a></li>
+        <li><a href="#VSBA_Regional_Member_of_the_Year">VSBA Regional Member of the Year</a></li>
+        <li><a href="#Community_Involvement">Community Involvement</a></li>
+        <li><a href="#References">References</a></li>
+    </ol>
+</div>
+
+<h2 id="Early_Life_and_Career">Early Life and Career</h2>
+
+<p>Bobby Waddell was born around 1952 and spent much of his early career in education and agricultural extension work. He earned credentials as an agricultural teacher and served in multiple leadership capacities within Appomattox County Schools. His professional positions included agricultural teacher, Administrator in Career and Technology Education, and agricultural extension agent for Appomattox County.<sup>[1]</sup> Waddell is married to Sue Waddell and has three sons—Jeremy, Christopher, and Nicholas—all of whom are Appomattox County High School graduates.<sup>[1]</sup></p>
+
+<p>In 2002, after 22 years with the Appomattox County School system, Waddell resigned as Director of Career and Technology Education to pursue a similar career at Prince Edward County Public Schools, where he worked as Director of Technology and Assessment.<sup>[2]</sup></p>
+
+<h2 id="Appointment_to_School_Board">Appointment to School Board</h2>
+
+<p>In June 2005, the Appomattox County School Board appointed <b>Bobby Waddell</b> to an interim position representing the Falling River District, filling the vacancy left by Marcie Jones, who had departed to serve as headmistress at Appomattox Christian Academy.<sup>[1]</sup> At age 53, Waddell expressed his commitment to bringing decades of teaching, administrative, and community experience to the board. "Having been a parent and a teacher and an administrator, I feel like I've seen all sides of the job," he stated at the time.<sup>[1]</sup></p>
+
+<p>Waddell indicated his intention to run in the special election scheduled for November 2005 to secure the seat permanently.<sup>[3]</sup></p>
+
+<h2 id="School_Board_Service">School Board Service</h2>
+
+<h3>Early Tenure (2005–2008)</h3>
+
+<p>On November 9, 2005, <b>Bobby Waddell</b> won the special election for the Falling River District seat, defeating Veronica F. Reed decisively with 584 votes to Reed's 308.<sup>[4]</sup> Just two months into his tenure, the School Board unanimously elected Waddell as its new Chairman in January 2006, succeeding Amy Martin and making him one of the newest members to assume the chairmanship.<sup>[5]</sup> This appointment reflected his peers' immediate confidence in his leadership abilities.</p>
+
+<p>During his early years as chairman, Waddell advocated forcefully for teacher compensation. At a November 2005 board meeting, he highlighted a critical problem: the salary difference between a beginning teacher and one with 20 years of service in Appomattox was only $5,300—far below what he considered competitive with neighboring localities.<sup>[6]</sup> He took the lead in requesting increased school funding during county budget hearings, working alongside Superintendent Walter Krug to argue for full state-matching funds allocation.<sup>[7]</sup></p>
+
+<p>Waddell also demonstrated pragmatic administrative stewardship. When construction and boiler replacement issues arose at school facilities, he engaged meaningfully with repair and capital improvement planning. In June 2006, he was authorized by the board to execute an agreement with U.S. Cellular for property access for a cell tower project involving FFA Alumni Association property, ensuring proper restoration terms.<sup>[8]</sup></p>
+
+<p>Re-elected to the chairmanship annually through 2008, Waddell was succeeded as chairman by Rev. James "Wes" Williams in January 2008 after serving two consecutive years in the role.<sup>[9]</sup> He remained an active board member and advocate for the school system's needs.</p>
+
+<h3>Mid-Tenure Leadership (2008–2012)</h3>
+
+<p>Throughout 2008–2011, Waddell continued to shape school policy from his board seat. He championed athletic facility upgrades, working with Superintendent Dr. Aldridge Boone and fellow board members to address deteriorating baseball and football fields that had become safety hazards.<sup>[10]</sup> He served on the Appomattox Education Foundation Scholarship Committee, reflecting his commitment to expanding educational opportunities.<sup>[11]</sup></p>
+
+<p>In April 2007, Waddell announced his candidacy for a second full term on the School Board, citing pending projects such as Primary School remodeling and his ongoing goals around board-supervisor relations, teacher compensation, and community engagement. He was re-elected in November 2007.<sup>[12]</sup></p>
+
+<p>Waddell again served as vice-chairman from 2011–2012, and was renamed chairman in January 2012 for a third term in the role.<sup>[13]</sup> His leadership during the fiscal crisis of the early 2010s proved crucial; as schools faced budget cuts, he publicly acknowledged the difficulty of trimming expenditures when approximately 80 percent of the school budget was allocated to salaries—a reality that constrained flexibility.<sup>[14]</sup></p>
+
+<h3>Extended Chairmanship (2012–2019)</h3>
+
+<p>Waddell's third term as chairman, beginning in 2012, coincided with renewed infrastructure projects. In October 2012, he wrote formally to the Appomattox County Board of Supervisors detailing serious traffic safety issues at Appomattox Elementary School, where parental pickup congestion created hazardous conditions on Lee-Grant Avenue and Pumping Station Road. His advocacy prompted the county supervisors to request a Virginia Department of Transportation (VDOT) traffic study, completed at no cost to the county.<sup>[15]</sup></p>
+
+<p>The board re-appointed Waddell as chairman with near-unanimous votes in subsequent years. In January 2015, the board voted 5-0 to re-appoint him for his fourth consecutive year.<sup>[16]</sup> He was also appointed to the Appomattox County High School Master Plan Committee, positioning him to guide major facility renovation initiatives.<sup>[16]</sup></p>
+
+<p>When seeking his third full term on the board in March 2015, Waddell articulated his vision for continued educational excellence. He emphasized the school system's critical role in economic development, noting that prospective businesses evaluate school quality and community support when considering relocation.<sup>[17]</sup> He aimed to complete high school renovations and middle school upgrades while ensuring teachers received adequate resources.<sup>[17]</sup> Running uncontested in the Falling River District in 2015, he received 401 votes.<sup>[18]</sup></p>
+
+<p>Waddell was reappointed chairman for his fifth consecutive year in January 2016 via a 5-0 vote in an interim meeting.<sup>[19]</sup> He addressed new hires at a School Board convocation in August 2016, expressing appreciation alongside Superintendent Dorinda Grasty.<sup>[20]</sup> In July 2018, he made headlines when discussing the new superintendent's compensation, asserting that Annette A. Bennett—hired at a starting salary of $120,000—was underpaid considering her qualifications, given that her predecessor had earned $140,106.<sup>[21]</sup></p>
+
+<p>In 2019, Waddell was re-elected chairman of the School Board for 2019 and won his next full term in November 2019 with 98.77 percent of the vote (running essentially unopposed).<sup>[22]</sup></p>
+
+<h3>Transition and Return (2020–2021)</h3>
+
+<p>After 15 years of service and 8 years as chairman, <b>Bobby Waddell</b> resigned from the Appomattox County School Board on November 20, 2020, due to moving out of the Falling River District he represented.<sup>[23]</sup> His departure marked the end of a transformative tenure spanning two decades of educational leadership.</p>
+
+<p>However, less than six months later, Waddell returned to public service. In May 2021, he was selected as interim representative for the Piney Mountain District on the Appomattox County School Board, having relocated to that district. He served in that interim capacity and indicated his intention to run for election in November 2021.<sup>[24]</sup></p>
+
+<h2 id="Electoral_History">Electoral History</h2>
+
+<table class="wikitable">
+    <tr>
+        <th>Year</th>
+        <th>District</th>
+        <th>Office</th>
+        <th>Result</th>
+        <th>Opponent(s)</th>
+        <th>Votes</th>
+    </tr>
+    <tr>
+        <td>2005 (Special)</td>
+        <td>Falling River</td>
+        <td>School Board</td>
+        <td>Won</td>
+        <td>Veronica F. Reed</td>
+        <td>584</td>
+    </tr>
+    <tr>
+        <td>2006</td>
+        <td>Falling River</td>
+        <td>School Board</td>
+        <td>Won</td>
+        <td>Darlene Reed</td>
+        <td>Unspecified</td>
+    </tr>
+    <tr>
+        <td>2007</td>
+        <td>Falling River</td>
+        <td>School Board</td>
+        <td>Won</td>
+        <td>Uncontested</td>
+        <td>Unspecified</td>
+    </tr>
+    <tr>
+        <td>2011</td>
+        <td>Falling River</td>
+        <td>School Board</td>
+        <td>Won</td>
+        <td>Uncontested</td>
+        <td>Unspecified</td>
+    </tr>
+    <tr>
+        <td>2015</td>
+        <td>Falling River</td>
+        <td>School Board</td>
+        <td>Won</td>
+        <td>Uncontested</td>
+        <td>401</td>
+    </tr>
+    <tr>
+        <td>2019</td>
+        <td>Falling River</td>
+        <td>School Board</td>
+        <td>Won</td>
+        <td>Write-in candidates</td>
+        <td>98.77%</td>
+    </tr>
+    <tr>
+        <td>2021 (Interim)</td>
+        <td>Piney Mountain</td>
+        <td>School Board</td>
+        <td>N/A</td>
+        <td>Appointed interim</td>
+        <td>N/A</td>
+    </tr>
+</table>
+
+<h2 id="VSBA_Regional_Member_of_the_Year">VSBA Regional Member of the Year</h2>
+
+<p>In November 2024, <b>Bobby Waddell</b> received the Virginia School Boards Association (VSBA) Regional Member of the Year award, one of the organization's most prestigious honors. The award was presented during the opening session of the VSBA Annual Convention in Williamsburg, Virginia, and was generously sponsored by Southland Industries.<sup>[25]</sup></p>
+
+<p>The award recognized Waddell's exceptional commitment over more than 18 years of service to the Appomattox County School Board, with particular emphasis on his 14 years as chairman. According to the award application, "His motives have always been clear: to provide the highest quality educational program in Appomattox by supporting its students and staff."<sup>[25]</sup> The recognition highlighted Waddell's mission-driven approach to board governance and his sustained dedication to advancing student achievement.</p>
+
+<p>Waddell was honored alongside two other distinguished school board members: Jacinta Greene of Alexandria City Public Schools (a six-year veteran) and Champ Hardie of Henry County Public Schools (a two-year veteran), underscoring the breadth of effective leadership across Virginia's educational system.</p>
+
+<h2 id="Community_Involvement">Community Involvement</h2>
+
+<p>Beyond his School Board service, <b>Bobby Waddell</b> maintained deep community roots through multiple civic roles. In November 2010, he was recognized alongside Wyatt Torrence as a local citizen of the year for his broad community contributions.<sup>[26]</sup></p>
+
+<p>His community involvement included:</p>
+<ul>
+    <li><b>Appomattox Habitat for Humanity:</b> Served as president of the Appomattox Habitat for Humanity board, and was recognized in 2004 for dedication to the organization's mission of affordable housing.<sup>[27]</sup></li>
+    <li><b>Fire Service:</b> Served as a volunteer firefighter with the Appomattox County Volunteer Fire Department and previously served as president of the organization.<sup>[28]</sup></li>
+    <li><b>Agricultural Organizations:</b> Maintained active involvement with the FFA (Future Farmers of America) Alumni Association, drawing on his deep agricultural background.<sup>[28]</sup></li>
+    <li><b>Faith Community:</b> Served in leadership roles at Memorial United Methodist Church.<sup>[28]</sup></li>
+    <li><b>Retired Teachers:</b> Remained a member of the Appomattox County Retired Teachers Association, supporting education policy advocacy for retirees.<sup>[28]</sup></li>
+</ul>
+
+<p>Notably, Waddell had supervised agricultural education instruction, including mentoring future educators in their student teaching placements. In 2019, he recalled supervising Dr. B. Allen Talbert during his student teaching in 1983 when Waddell taught agriculture classes.<sup>[29]</sup></p>
+
+<h2 id="References">References</h2>
+
+<div class="reflist">
+<ol>
+<li>Times-Virginian (June 2, 2005). "Waddell selected to school board." Appomattox County School Board appointment of Bobby Waddell as interim School Board member and background on his professional experience.</li>
+
+<li>Appomattox County School Board responses.db. Item date August 8, 2002. "Appomattox Educator Bobby Waddell Resigns for Prince Edward County." Career transition documented in classified records.</li>
+
+<li>Times-Virginian (June 29, 2005). "Special election planned for Falling River school board seat." Notice of special election to fill vacant School Board seat, with Waddell's intention to run.</li>
+
+<li>Appomattox County School Board responses.db. Item date November 9, 2005. "Bobby K. Waddell wins Falling River District School Board seat." Election results: 584 votes for Waddell, 308 for Veronica F. Reed.</li>
+
+<li>Times-Virginian (February 8, 2006). "Waddell picked as school board chairman." Unanimous election of Bobby Waddell as Appomattox County School Board chairman for 2006 at January 26 meeting.</li>
+
+<li>Appomattox County School Board responses.db. Item date November 22, 2005. "School Board Member Highlights Small Salary Difference for Long-Serving Teachers." Waddell's statement about the $5,300 salary gap between beginning and 20-year teachers.</li>
+
+<li>Times-Virginian (May 18, 2010). "Citizens plead with supervisors to instate full funding." Report of Waddell's request to the Board of Supervisors for $521,000 in full state-matching funds allocation.</li>
+
+<li>Appomattox County School Board responses.db. Item date August 10, 2006. "School Board authorizes agreement with U.S. Cellular." Waddell authorized to execute cell tower property access agreement with FFA Alumni Association property restoration terms.</li>
+
+<li>Times-Virginian (January 30, 2008). "School Board elects Williams as chairman." Rev. James "Wes" Williams elected chairman, succeeding Bobby Waddell after two years in the role.</li>
+
+<li>Appomattox County School Board responses.db. Item date July 2, 2008. "School Board Praised for Support of Athletic Facilities Upgrade." Board's work on upgrading athletic facilities, listing Waddell among active members.</li>
+
+<li>Appomattox County School Board responses.db. Item date January 14, 2009. "Bobby Waddell appointed to Appomattox Education Foundation Scholarship Committee." School Board appointment to AECF Scholarship Committee.</li>
+
+<li>Times-Virginian (April 11, 2007). "Waddell to seek another term on School Board." Announcement of candidacy for second full term with statement of policy goals.</li>
+
+<li>Times-Virginian (January 11, 2012). "Waddell named School Board chairman." Bobby Waddell appointed chairman of Appomattox County School Board for 2012, representing Falling River District since 2005.</li>
+
+<li>Appomattox County School Board responses.db. Item date November 29, 2011. "Appomattox School Board faces challenges with budget cuts due to salary expenses." Waddell's comment on the 80 percent salary allocation constraint on school budgets.</li>
+
+<li>Times-Virginian (November 28, 2012). "Appomattox Supervisors Request Traffic Study for AES Congestion." County supervisors vote 4-0 to request VDOT traffic study following Waddell's October 25, 2012 letter documenting safety issues at Appomattox Elementary School.</li>
+
+<li>Times-Virginian (January 14, 2015). "Bobby Waddell Re-appointed Chair of Appomattox County School Board." 5-0 re-appointment vote for fourth consecutive year as chairman, and appointment to High School Master Plan Committee.</li>
+
+<li>Times-Virginian (March 18, 2015). "Waddell to seek third School Board term" and "Waddell Highlights School System's Economic Importance." Candidacy announcement and statement on school system's role in economic development.</li>
+
+<li>Times-Virginian (November 4, 2015). "Bobby Waddell elected to Appomattox County School Board." Election results showing 401 votes in uncontested Falling River District race.</li>
+
+<li>Times-Virginian (January 13, 2016). "School Board members appointed to committees." Reappointment of Waddell as chairman for fifth consecutive year via 5-0 vote in interim meeting.</li>
+
+<li>Times-Virginian (August 5, 2016). "Appomattox County Public Schools Welcomes 40 New Employees." Superintendent Dorinda Grasty and School Board Chair Bobby Waddell addressed new hires at welcome back convocation.</li>
+
+<li>Times-Virginian (July 14, 2018). "Annette Bennett Appointed Appomattox County Schools Superintendent." Waddell's statement that Bennett's $120,000 salary was underpaid given her qualifications, relative to predecessor's $140,106.</li>
+
+<li>Appomattox County School Board responses.db. Item date November 5, 2019. "Bobby K. Waddell wins Falling River District school board seat." Election results showing 98.77 percent of vote.</li>
+
+<li>Times-Virginian (November 20, 2020). "Bobby Waddell resigns as Appomattox County School Board member and chairman." Resignation effective November 20, 2020, after 15 years of service (8 years as chairman) due to relocation out of Falling River District.</li>
+
+<li>Times-Virginian (May 28, 2021). "Bobby Waddell back on Appomattox County School Board." Appointment as interim representative for Piney Mountain District, with intention to run in November 2021 election.</li>
+
+<li>Times-Virginian (November 20, 2024). "Appomattox County School Board Chair Bobby Waddell named VSBA Regional Member of the Year." Award presented at VSBA Annual Convention in Williamsburg, Virginia. Quote from award application: "His motives have always been clear: to provide the highest quality educational program in Appomattox by supporting its students and staff."</li>
+
+<li>Appomattox County School Board responses.db. Item date November 3, 2010. "Bobby Waddell's Community and Professional Contributions Highlighted." Recognition as citizen of the year alongside community service roles.</li>
+
+<li>Times-Virginian (April 21, 2004). "Habitat for Humanity dedicates 10th house." Recognition of Waddell's work with Appomattox Habitat for Humanity.</li>
+
+<li>Appomattox County School Board responses.db. Item date November 3, 2010. "Bobby Waddell recognized for community involvement." Comprehensive list of community service roles including fire department, Habitat, FFA alumni, church, and retired teachers association.</li>
+
+<li>Times-Virginian (February 11, 2019). "Professor with Appomattox ties honored." Reference to Waddell supervising Dr. B. Allen Talbert during his student teaching in 1983 when Waddell taught agriculture classes.</li>
+</ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-footer">
   <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
   Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+  Last updated March 17, 2026.
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

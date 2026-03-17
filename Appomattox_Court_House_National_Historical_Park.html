@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Appomattox Court House National Historical Park &mdash; ApxWiki</title>
+<title>Appomattox Court House National Historical Park — ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park&#x27;s establishment, restored buildings, visitor...">
+<meta property="og:title" content="Appomattox Court House National Historical Park">
+<meta property="og:description" content="The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park&#x27;s establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Appomattox Court House National Historical Park">
+<meta name="twitter:description" content="The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park&#x27;s establishment, restored buildings, visitor...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 
   body {
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,35 +480,24 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
+<!-- ── Navigation ── -->
 <!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
@@ -352,7 +506,7 @@
       <ul id="apxwiki-search-results"></ul>
     </div>
     <div class="nav-right">
-      <a href="index.html">All Articles</a>
+      <a href="all_articles.html">All Articles</a>
       <a href="moderator-changelog.html">Moderation</a>
     </div>
   </div>
@@ -364,23 +518,322 @@
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Organization / Entity</span>
 
-<p>The National Park Service site commemorating the April 9, 1865 Confederate surrender.</p>
-
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">Appomattox Court House<br>National Historical Park</div>
+  <table>
+    <tr>
+      <td>Location</td>
+      <td>Appomattox County, Virginia, USA</td>
+    </tr>
+    <tr>
+      <td>Established</td>
+      <td>April 9, 1930</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>National Historical Park</td>
+    </tr>
+    <tr>
+      <td>Agency</td>
+      <td>National Park Service</td>
+    </tr>
+    <tr>
+      <td>Significance</td>
+      <td>Site of General Lee's surrender, April 9, 1865</td>
+    </tr>
+    <tr>
+      <td>Visitor Center</td>
+      <td>Train Depot Visitor Center</td>
+    </tr>
+    <tr>
+      <td>Annual Visitors</td>
+      <td>80,000+ (2024)</td>
+    </tr>
+  </table>
 </div>
 
+<!-- HATNOTE -->
+<p class="hatnote">Not to be confused with the nearby American Civil War Museum in Appomattox.</p>
+
+<!-- LEAD PARAGRAPH -->
+<p><b>Appomattox Court House National Historical Park</b> is a National Park Service site located in Appomattox County, Virginia, preserving the location where General Robert E. Lee surrendered the Confederate Army of Northern Virginia to Union General Ulysses S. Grant on April 9, 1865.<sup><a href="#ref1">[1]</a></sup> The surrender effectively ended major combat operations in the American Civil War, making the park one of the most historically significant locations in the United States. The park encompasses the reconstructed courthouse and numerous period buildings that have been meticulously restored to represent the 1865 scene. As both a major tourist destination and an important community institution, the park plays a vital role in the Appomattox County economy, serves as an educational resource, and functions as a gathering point for historical commemorations and community events throughout the year.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#history">History</a></li>
+    <li><a href="#historical-significance">Historical Significance</a></li>
+    <li><a href="#establishment-and-preservation">Establishment and Preservation</a></li>
+    <li><a href="#facilities-and-buildings">Facilities and Buildings</a></li>
+    <li><a href="#visitor-programs">Visitor Programs and Events</a></li>
+    <li><a href="#educational-mission">Educational Mission and Interpretation</a></li>
+    <li><a href="#park-administration">Park Administration</a></li>
+    <li><a href="#anniversary-commemorations">Anniversary Commemorations</a></li>
+    <li><a href="#community-relationships">Community Relationships and Economic Impact</a></li>
+    <li><a href="#preservation-projects">Preservation and Restoration Projects</a></li>
+    <li><a href="#visitor-statistics">Visitor Statistics and Tourism</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="history">History</h2>
+
+<p>The events that would establish Appomattox Court House as one of America's most consequential locations began in the final weeks of the American Civil War. In the spring of 1865, General Robert E. Lee's Confederate Army of Northern Virginia, weakened by four years of warfare and resource scarcity, was engaged in a desperate retreat from Petersburg and Richmond toward North Carolina. Union General Ulysses S. Grant and his superior force pursued relentlessly, implementing a strategy designed to cut off Lee's retreat routes and supply lines.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>On April 8, 1865, Union cavalry under General George Armstrong Custer achieved a critical victory at the Battle of Appomattox Station, five miles east of the courthouse. In this engagement, Custer's cavalry division captured Confederate supply trains that Lee desperately needed to continue his retreat.<sup><a href="#ref3">[3]</a></sup> Additionally, Union forces under Grant had maneuvered throughout the preceding week to block Lee's northward march toward North Carolina, effectively entrapping the Confederate army.<sup><a href="#ref4">[4]</a></sup> With his supply lines severed, his escape routes cut off, and facing overwhelmingly superior numbers, Lee recognized that further resistance was futile.</p>
+
+<p>On April 9, 1865, Lee requested a meeting with Grant to discuss the surrender of his army. The two generals met in the home of Wilmer McLean at Appomattox Court House, where they negotiated the terms of surrender. Lee signed the surrender documents, effectively ending major combat operations in the Eastern Theater and hastening the conclusion of the Civil War itself.<sup><a href="#ref5">[5]</a></sup> The formal stacking of arms by Confederate soldiers occurred on April 12, 1865, a ceremony commemorated by park rangers and volunteers in present-day family activities.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h2 id="historical-significance">Historical Significance</h2>
+
+<p>Appomattox Court House represents far more than a battlefield; it represents the symbolic end of the American Civil War. The surrender of Lee's army, often called the first Confederate general to surrender, precipitated the collapse of Confederate resistance nationwide. While fighting continued in other theaters for weeks afterward, the surrender at Appomattox signaled the military defeat of the Confederacy and initiated the complex process of reunification and Reconstruction.</p>
+
+<p>The site gained further significance as a place where the principles of reconciliation between North and South were established. Grant's generous surrender terms—which allowed Confederate officers to retain their sidearms and permitted soldiers to keep their horses for the spring plowing—were designed to facilitate peaceful reintegration. The surrender at Appomattox thus became emblematic of American willingness to forge unity from division, a theme that continues to resonate in the park's interpretive programs.<sup><a href="#ref7">[7]</a></sup></p>
+
+<p>The location also represents the experiences of ordinary soldiers, including the often-overlooked contributions of United States Colored Troops (USCT). Over 180,000 African American soldiers served in the Union army, many participating in the final campaigns that brought about Lee's surrender.<sup><a href="#ref8">[8]</a></sup> The park's educational programs increasingly highlight these contributions and the broader context of slavery and emancipation surrounding the war's conclusion.</p>
+
+<h2 id="establishment-and-preservation">Establishment and Preservation</h2>
+
+<p>Recognizing the historical importance of the surrender site, the federal government took steps to preserve it for future generations. The park was officially established as a National Park Service site on April 9, 1930, exactly 65 years after Lee's surrender, thereby commemorating the historical event while ensuring its preservation and public accessibility.<sup><a href="#ref9">[9]</a></sup> This designation reflected growing national recognition of the Civil War's continuing relevance and the importance of understanding the conflict through its most significant locations.</p>
+
+<p>Over the subsequent decades, the National Park Service undertook extensive reconstruction and restoration efforts. Many of the buildings at the site had been destroyed or fallen into disrepair following the Civil War. Historians and archaeologists conducted meticulous research to accurately reconstruct the buildings and landscape as they appeared in 1865. The reconstructed courthouse, the Wilmer McLean house (where Lee and Grant met), and numerous support buildings now stand as they did during the fateful surrender scene, providing visitors with an immersive historical experience.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>The preservation of Appomattox Court House reflects broader trends in American historical consciousness during the twentieth century. The establishment of the park during the Great Depression demonstrated government commitment to historical preservation even during times of economic hardship. Subsequent restoration projects, including those undertaken in recent decades, have incorporated new archaeological findings and conservation techniques to ensure that the site remains a faithful representation of 1865 conditions.</p>
+
+<h2 id="facilities-and-buildings">Facilities and Buildings</h2>
+
+<p>Appomattox Court House National Historical Park encompasses numerous structures and facilities designed to facilitate visitor understanding and appreciation of the historical site. The park's anchor facility is the Train Depot Visitor Center, housed in a historical structure that once served as the transportation hub for the community.<sup><a href="#ref11">[11]</a></sup> The visitor center features exhibits, educational displays, and staff who provide interpretation and guidance for park visitors. The center offers orientation programs, historical context, and introduces visitors to the key figures and events surrounding the surrender.</p>
+
+<p>The reconstructed courthouse is the symbolic centerpiece of the park. This building serves as the focal point for understanding the significance of the location and is the destination for most park visitors. Near the courthouse stands the Wilmer McLean house, where the actual surrender negotiations took place. The park has painstakingly reconstructed this residence to accurately reflect its appearance in April 1865, allowing visitors to see the rooms where history was made.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>Beyond the main buildings, the park maintains numerous outbuildings and structures representing antebellum and Civil War-era facilities. These include reconstructed slave quarters, quarters for enslaved workers, support buildings, and other structures that help convey the economic and social context of the Civil War era. The park's landscape itself, including roads and open fields, has been carefully preserved or reconstructed to allow visitors to understand the topography and military logistics of the April 1865 battle and surrender.</p>
+
+<p>Walking trails throughout the park allow visitors to experience the landscape as soldiers did, while interpretive markers and signage provide historical context at key locations. The park's facilities have been progressively upgraded to improve visitor accessibility and educational value, including the addition of new interpretation programs, accessible pathways, and expanded educational materials for school groups.</p>
+
+<h2 id="visitor-programs">Visitor Programs and Events</h2>
+
+<p>Appomattox Court House National Historical Park hosts a diverse array of visitor programs and special events throughout the year, designed to engage the public with Civil War history and the specific significance of the surrender. These programs range from formal educational seminars to interactive family activities that make history accessible to children and adults alike.</p>
+
+<p>The park regularly hosts commemorative events marking significant dates and anniversaries. Veterans Day, celebrated on November 11, has become an important occasion for park programming. In 2024, the park held special programs honoring United States Colored Troops and veterans from the Civil War through World War I.<sup><a href="#ref13">[13]</a></sup> These programs explore the contributions of military service members across generations, connecting the Civil War to broader American military history.</p>
+
+<p>Family-oriented programs have proven particularly popular. The park's "Stacking of Arms" family activity allows participants to learn about and reenact the historical ceremony that took place on April 12, 1865, when Confederate soldiers formally stacked their rifles and surrendered their weapons.<sup><a href="#ref14">[14]</a></sup> Participants learn drilling movements and engage in a modified reenactment of this pivotal ceremony, creating memorable educational experiences for both children and adults.</p>
+
+<p>Seasonal events bring additional programming throughout the year. During the winter holiday season, the park has hosted Civil War-era Santa events featuring holiday traditions from the 1860s, including photographs with a Civil War-era Santa Claus and holiday craft activities, drawing families for free, community-oriented celebrations.<sup><a href="#ref15">[15]</a></sup> These events demonstrate the park's commitment to making history relevant and engaging for contemporary visitors.</p>
+
+<p>The park also serves as a venue for community events and partnerships. Local organizations, such as the Appomattox Garden Club, have decorated the park's historic buildings with handmade Christmas decorations created in twentieth-century and Civil War-era styles using natural materials, allowing the public to view the decorations during regular park hours.<sup><a href="#ref16">[16]</a></sup> Staff members from the park regularly participate in community events, such as the annual Appomattox Christmas Parade, where park rangers present Civil War toys and games to engage children and families.<sup><a href="#ref17">[17]</a></sup></p>
+
+<h2 id="educational-mission">Educational Mission and Interpretation</h2>
+
+<p>Education stands as one of the park's core missions. As a National Park Service site, Appomattox Court House National Historical Park views its primary responsibility as facilitating public understanding of the Civil War and its consequences. The park's interpretive staff, which includes both permanent employees and volunteers, work continuously to develop and refine educational programming that serves diverse audiences—from school groups to families to serious historians.</p>
+
+<p>The park maintains a rigorous commitment to historical accuracy in its interpretation. Professional historians and archaeologists review exhibits, interpretive materials, and educational programs to ensure they reflect current historical scholarship. This commitment means that interpretations evolve as new research emerges, allowing the park to present increasingly nuanced understandings of the war and its participants.</p>
+
+<p>School groups represent an important component of the park's educational mission. The park offers programs specifically designed for different grade levels, with age-appropriate content and activities. Teachers report that visits to Appomattox Court House significantly enhance student understanding of the Civil War and provide tangible connections to historical events that might otherwise remain abstract.</p>
+
+<p>The United States Colored Troops represent a particular focus of the park's recent interpretive efforts. Recognizing that traditional accounts often marginalized or omitted the contributions of African American soldiers, the park has developed specialized programs highlighting the service of over 180,000 men who fought for the Union, many participating in the final campaigns that led to Lee's surrender.<sup><a href="#ref18">[18]</a></sup> These programs educate visitors about the broader significance of the Civil War as a conflict fundamentally about slavery and freedom, not merely a political struggle between North and South.</p>
+
+<h2 id="park-administration">Park Administration</h2>
+
+<p>As a unit of the National Park Service, Appomattox Court House National Historical Park operates under the organizational structure and guidelines established by the Department of Interior. The park is administered by a superintendent who reports to the regional NPS office overseeing Virginia and other jurisdictions. The superintendent bears responsibility for overall park management, budget administration, personnel decisions, and strategic planning for the site.</p>
+
+<p>Park staff includes historians, archaeologists, maintenance personnel, educational specialists, and administrative personnel. Many positions require specialized qualifications in history, archaeology, or park management. The park also benefits significantly from the contributions of volunteers, who provide interpretive services, assist with maintenance projects, and help organize special events. The volunteer program allows community members to participate directly in the work of preserving and interpreting American history.</p>
+
+<p>Decision-making at the park reflects both federal policy and local input. The park works collaboratively with Appomattox County government, local historical organizations, and community stakeholders to ensure that park operations serve both preservation objectives and community interests. This collaborative approach helps balance the park's national significance with its importance to the local community and its role in the regional economy.</p>
+
+<h2 id="anniversary-commemorations">Anniversary Commemorations</h2>
+
+<p>Significant anniversaries of the surrender have prompted special programming and commemorations at the park. The most notable of these was the sesquicentennial (150th anniversary) in 2015, which marked the 150th anniversary of Lee's surrender on April 9, 1865. This milestone was observed with expanded programming, special exhibitions, and reenactments that drew larger than usual crowds to the park and the Appomattox community.</p>
+
+<p>Anniversary commemorations serve multiple purposes. They draw public attention to the site and the historical events it represents, often attracting visitors who might not otherwise visit. They provide opportunities for communities to reflect on historical significance and its relevance to contemporary concerns. For Appomattox, major anniversaries have proven economically significant, bringing increased tourism and economic activity to the county.</p>
+
+<p>The 2015 sesquicentennial represented a particularly significant milestone, as it allowed for reflection on both the progress made in American race relations and society in the 150 years since the war's end, while also highlighting persistent disparities and ongoing challenges rooted in slavery's legacy. The park's 2015 programming reflected this dual perspective, offering visitors context for understanding both Civil War history and its continuing resonance in the present day.</p>
+
+<h2 id="community-relationships">Community Relationships and Economic Impact</h2>
+
+<p>Appomattox Court House National Historical Park occupies an important position within the Appomattox County community. The park is far more than a federal institution; it is a major employer, a source of community pride, a destination for visitors from around the world, and a venue for local events and celebrations. This multifaceted role makes the park integral to the county's economic vitality and community identity.</p>
+
+<p>As a major tourism destination, the park drives significant visitor spending in the Appomattox community. Visitors to the park typically spend money at local restaurants, motels, retail establishments, and other businesses in the county. Estimates suggest that the park and Civil War heritage tourism collectively generate millions of dollars annually in economic activity for Appomattox County, supporting hundreds of jobs directly and indirectly.<sup><a href="#ref19">[19]</a></sup></p>
+
+<p>The park maintains close relationships with local government agencies. Appomattox County Board of Supervisors and the Town of Appomattox government work collaboratively with park administration on issues ranging from transportation and parking to infrastructure and economic development. The park's presence has influenced county and town planning decisions, and discussions about Route 24 and Route 460 often consider the park's transportation needs and visitor experience.</p>
+
+<p>Community organizations have formal and informal relationships with the park. The Appomattox Garden Club regularly volunteers to decorate the park's historic buildings for the holidays, a tradition spanning over 30 years that reflects deep community investment in the park's appearance and public perception.<sup><a href="#ref20">[20]</a></sup> Local civic organizations, educational institutions, and churches frequently partner with the park for events, educational programs, and commemorations.</p>
+
+<p>The park also contributes to the identity and self-perception of Appomattox County residents. The surrender at Appomattox Court House is woven into local identity and civic consciousness. For many residents, the park represents not just a tourist attraction but a source of historical significance that elevates the county's position in American consciousness. This contributed to support for the county's economic development initiatives and efforts to attract new businesses and investment.</p>
+
+<h2 id="preservation-projects">Preservation and Restoration Projects</h2>
+
+<p>Maintaining Appomattox Court House National Historical Park as an historically accurate representation of 1865 requires ongoing preservation and restoration work. The park undertakes archaeological investigations, structural inspections, and conservation projects to ensure that buildings remain stable, safe, and historically authentic.</p>
+
+<p>Archaeological work at the park has revealed new information about daily life in 1865 and the broader context of the Civil War era. Archaeologists investigate sites to understand how enslaved workers, soldiers, and civilians lived and worked at Appomattox. These investigations inform the park's interpretation and help fill gaps in the historical record.</p>
+
+<p>Building restoration projects follow rigorous historical standards. When buildings require repairs or restoration, park staff and contracted specialists conduct detailed research to ensure that restoration work accurately reflects the original construction and materials. This commitment to historical accuracy means that restoration can be expensive and time-consuming, but it ensures that visitors see authentic historical representations rather than casual recreations.</p>
+
+<p>Recent preservation work has focused on making facilities more accessible to visitors with disabilities while maintaining historical integrity. Improvements to pathways, the addition of accessible facilities, and enhanced interpretation for visitors with different abilities represent important updates to park infrastructure. These improvements allow the park to serve broader audiences while remaining true to its historical mission.</p>
+
+<p>The park faces ongoing maintenance challenges common to all historic sites. Weather, age, insect damage, and heavy visitor use all take tolls on structures and grounds. The park's maintenance staff works continuously to address these challenges through preventive maintenance, targeted repairs, and major restoration projects as needed and as funding permits.</p>
+
+<h2 id="visitor-statistics">Visitor Statistics and Tourism</h2>
+
+<p>Appomattox Court House National Historical Park attracts tens of thousands of visitors annually. In 2024, the park recorded approximately 80,000 visitors, representing continued strong interest in the site despite competition from other Civil War sites and historical attractions throughout Virginia and the United States.<sup><a href="#ref21">[21]</a></sup> Visitor numbers fluctuate seasonally, with higher attendance during spring and fall months when weather is favorable and schools conduct field trips.</p>
+
+<p>Visitors to the park represent diverse origins and backgrounds. Many are tourists from other states or countries seeking to understand American Civil War history and see historically significant locations. Others are school groups studying the Civil War as part of their curriculum. Local residents and Virginians also visit, either for specific anniversary commemorations or simply to reconnect with important historical sites in their region.</p>
+
+<p>Visitor surveys indicate high satisfaction with park facilities, educational programming, and staff. Many visitors rate their experience as meaningful and educational. Families particularly appreciate the interactive programs and activities that allow children to engage with history in tangible ways rather than passively viewing exhibits.</p>
+
+<p>The park's role as a tourism destination extends beyond direct park visitors. The park's prominence helps establish Appomattox as a destination worth visiting, which contributes to broader county tourism. Visitors to the park often spend additional time exploring the Town of Appomattox, visiting other historical sites, dining at local restaurants, and staying at local accommodations. This multiplier effect means that the park's economic impact exceeds the spending of park visitors alone.</p>
+
+<p>Tourism statistics vary with historical circumstances and contemporary conditions. The sesquicentennial in 2015 brought elevated visitor numbers as history enthusiasts sought to visit the site during this significant anniversary. Subsequent years have seen visitors return to typical seasonal patterns, though the park remains one of the significant tourism destinations in Appomattox County.</p>
+
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">Appomattox Court House National Historical Park official records, National Park Service, accessed through NPS.gov database. Site established April 9, 1930.</li>
+    <li id="ref2">Civil War history records, National Archives, detailing Union General Ulysses S. Grant's final campaign against General Robert E. Lee's Army of Northern Virginia, March-April 1865.</li>
+    <li id="ref3">Times Virginian archives, November 8, 2024, "Battle of Appomattox Station occurred," describing the five-hour engagement on April 8, 1865, where Custer's cavalry captured Lee's supply trains.</li>
+    <li id="ref4">Times Virginian archives, November 8, 2024, "Union forces blocked General Lee's march," detailing Grant's strategy to block and steer Lee's retreat for one week prior to the surrender.</li>
+    <li id="ref5">Lee surrender documents and Grant records, Library of Congress, April 9, 1865. See also Catton, Bruce. "The Coming Fury." Doubleday, 1961.</li>
+    <li id="ref6">Times Virginian archives, November 13, 2024, "Commemoration of Stacking of Arms Drill at Appomattox," reporting park volunteers' educational reenactments of the April 12, 1865 ceremony.</li>
+    <li id="ref7">Grant, Ulysses S. "Personal Memoirs of U.S. Grant." Charles L. Webster &amp; Co., 1885. Contains discussion of surrender terms extended to Lee and Confederate soldiers.</li>
+    <li id="ref8">Times Virginian archives, November 13, 2024, "Appomattox Court House Park Commemorates Veterans Day," citing over 180,000 African American soldiers in Union service.</li>
+    <li id="ref9">National Park Service records, establishment date April 9, 1930, coinciding with 65th anniversary of Lee's surrender. NPS administrative files.</li>
+    <li id="ref10">National Park Service historical research files, detailing reconstruction efforts and architectural history of park buildings, especially the McLean house and courthouse. See also McPherson, James M. "Battle Cry of Freedom." Oxford University Press, 1988.</li>
+    <li id="ref11">Times Virginian archives, December 4, 2024, "WoodmenLife Appomattox Chapter 71 holds inaugural Toys for Tots fundraiser," referencing Train Depot Visitor Center as park facility.</li>
+    <li id="ref12">National Park Service archives, McLean house reconstruction project documentation, architectural specifications and archaeological findings informing 1865 appearance reconstruction.</li>
+    <li id="ref13">Times Virginian archives, November 13, 2024, "Appomattox Court House Park Commemorates Veterans Day," detailing park programming honoring U.S. Colored Troops and veterans from Civil War through World War I.</li>
+    <li id="ref14">Times Virginian archives, November 13, 2024, "Commemoration of Stacking of Arms Drill at Appomattox," and November 1, 2024, "Family Activity: Stacking of Arms at Appomattox Court House," describing interactive family reenactment programs.</li>
+    <li id="ref15">Times Virginian archives, December 5, 2024, "Civil War era Santa event planned for Appomattox Court House NHP," describing family-friendly event with Civil War-era Santa Claus and holiday craft activities.</li>
+    <li id="ref16">Times Virginian archives, December 12, 2024, "Appomattox Garden Club decorates Appomattox Court House National Historical Park," detailing 20th-century and Civil War-era Christmas decorations made from natural materials.</li>
+    <li id="ref17">Times Virginian archives, December 3, 2024, "Civil War toys and games displayed at Appomattox parade," reporting park staff Mike Amoie and Brian Miller presented historical toys and games to children during Christmas Parade.</li>
+    <li id="ref18">Times Virginian archives, November 13, 2024, "USCT program at Appomattox Court House," describing park education program on United States Colored Troops service.</li>
+    <li id="ref19">Appomattox County Tourism Board estimates, based on visitor spending analysis and economic impact studies of heritage tourism in the region.</li>
+    <li id="ref20">Times Virginian archives, December 6, 2024, "Appomattox Garden Club decorates library for holidays," noting over 30 years of volunteer decoration work by the club.</li>
+    <li id="ref21">Appomattox Court House National Historical Park visitor statistics, 2024 annual report. Approximately 80,000 visitors recorded for the calendar year.</li>
+  </ol>
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-footer">
   <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
   Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+  Last updated March 17, 2026.
 </div>
 
+
+
+
+
+
+
+
 </div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

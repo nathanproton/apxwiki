@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>J. Robert Jamerson Memorial Library &mdash; ApxWiki</title>
+<title>J. Robert Jamerson Memorial Library — ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="The Appomattox County public library system&#x27;s main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive...">
+<meta property="og:title" content="J. Robert Jamerson Memorial Library">
+<meta property="og:description" content="The Appomattox County public library system&#x27;s main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="J. Robert Jamerson Memorial Library">
+<meta name="twitter:description" content="The Appomattox County public library system&#x27;s main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 
   body {
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,35 +480,24 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
+<!-- ── Navigation ── -->
 <!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
@@ -352,7 +506,7 @@
       <ul id="apxwiki-search-results"></ul>
     </div>
     <div class="nav-right">
-      <a href="index.html">All Articles</a>
+      <a href="all_articles.html">All Articles</a>
       <a href="moderator-changelog.html">Moderation</a>
     </div>
   </div>
@@ -364,23 +518,423 @@
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Organization / Entity</span>
 
-<p>The Appomattox County public library system&#x27;s main branch.</p>
-
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<!-- INFOBOX -->
+<div class="infobox">
+  <div class="infobox-title">J. Robert Jamerson Memorial Library</div>
+  <table>
+    <tr><td>Type</td><td>Public Library</td></tr>
+    <tr><td>Location</td><td>157 Main Street, Appomattox, Virginia</td></tr>
+    <tr><td>Established</td><td>Current building opened 1995</td></tr>
+    <tr><td>Governing Body</td><td>Appomattox County Library Board</td></tr>
+    <tr><td>Website</td><td>www.jrjml.org</td></tr>
+    <tr><td>Services</td><td>Lending library, computer access, community programs</td></tr>
+  </table>
+  <div class="infobox-subheader">Key Facts</div>
+  <table>
+    <tr><td>County Funding</td><td>Annual budget allocation from Appomattox County</td></tr>
+    <tr><td>Staff</td><td>Librarians, pages, and community volunteers</td></tr>
+    <tr><td>Collections</td><td>Books, audiobooks, DVDs, digital resources</td></tr>
+    <tr><td>Programs</td><td>Summer reading, children's events, adult services</td></tr>
+  </table>
 </div>
 
+<!-- LEAD PARAGRAPH -->
+<p>The <b>J. Robert Jamerson Memorial Library</b> is a public library serving Appomattox County, Virginia, located at 157 Main Street in the town of Appomattox.<sup><a href="#ref1">[1]</a></sup> The library is named after J. Robert Jamerson, a prominent Appomattox resident whose legacy shaped the community. Located on Main Street, the library building stands as a distinctive feature of downtown Appomattox and serves as a cultural and educational hub for the county. The institution provides comprehensive library services including book lending, computer access, internet connectivity, and an array of community programs designed to serve patrons of all ages. As one of the primary public institutions in the county, the Jamerson Library plays a vital role in literacy promotion, lifelong learning, and community engagement.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#history">History and Naming</a></li>
+    <li><a href="#jamerson">J. Robert Jamerson</a></li>
+    <li><a href="#previous">Previous Library Facility</a></li>
+    <li><a href="#current_building">Current Building</a></li>
+    <li><a href="#leadership">Leadership and Administration</a></li>
+    <li><a href="#mission">Mission and Services</a></li>
+    <li><a href="#collections">Collections and Resources</a></li>
+    <li><a href="#programs">Programs and Events</a></li>
+    <li><a href="#youth_services">Youth Services and Programs</a></li>
+    <li><a href="#digital_services">Digital Services and Technology</a></li>
+    <li><a href="#community_partnerships">Community Partnerships</a></li>
+    <li><a href="#governance">Library Board and Governance</a></li>
+    <li><a href="#budget">Budget and Funding</a></li>
+    <li><a href="#facilities">Facilities and Renovations</a></li>
+    <li><a href="#covid">COVID-19 Response and Adaptations</a></li>
+    <li><a href="#recent_developments">Recent Developments and Future</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="history">History and Naming</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> represents a long-standing commitment by Appomattox County to provide public library services to its residents.<sup><a href="#ref2">[2]</a></sup> The institution has served the county for decades, evolving from earlier library facilities to its current location on Main Street. The library's name honors J. Robert Jamerson, a respected member of the Appomattox community whose contributions and leadership left a lasting impact on local civic institutions. The naming of the library after Jamerson reflects the community's desire to preserve his memory and acknowledge his role in the county's development and cultural advancement.</p>
+
+<p>Public library services in Appomattox County developed gradually over the twentieth century as part of a broader movement across Virginia to establish county library systems. The commitment to maintaining and expanding library services demonstrates the county's recognition of the importance of public access to information, educational resources, and community gathering spaces. The library has continuously adapted to serve changing community needs, incorporating new technologies and programs while maintaining its core mission of providing access to books and information.</p>
+
+<h2 id="jamerson">J. Robert Jamerson</h2>
+
+<p>J. Robert Jamerson was a prominent Appomattox resident whose life and contributions earned him recognition through the naming of the county's library.<sup><a href="#ref3">[3]</a></sup> While detailed biographical information about Jamerson requires further documentation, his legacy is preserved through the institutional name and the ongoing work of the library that bears his name. The decision to name the library after Jamerson reflects the community's appreciation for his civic engagement and his influence on the development of cultural institutions in Appomattox County.</p>
+
+<p>The memorial nature of the library's name indicates that Jamerson played a significant role in the county's civic life, though comprehensive biographical documentation of his specific achievements and dates would require additional research into county historical records and newspaper archives. The fact that a major public institution bears his name demonstrates the respect with which he was regarded by the community and the lasting nature of his influence on local institutions.</p>
+
+<h2 id="previous">Previous Library Facility</h2>
+
+<p>Before the opening of the current library building on Main Street, Appomattox County operated library services from an earlier facility.<sup><a href="#ref4">[4]</a></sup> The history of the previous library location and its services provides important context for understanding the development of library services in the county. The evolution from earlier library facilities to the current building reflects both the growth of the county and changing standards for library facilities and services.</p>
+
+<p>Library services in communities across Virginia during the mid-twentieth century often operated from modest facilities, with collections and services expanding as county budgets and community demands increased. The decision to construct a new library building represented a significant investment by Appomattox County in public library infrastructure, reflecting a commitment to modernizing library facilities and expanding services to county residents. The transition to the current facility allowed for improved accessibility, expanded collections, and enhanced programming capabilities.</p>
+
+<h2 id="current_building">Current Building and Location</h2>
+
+<p>The current <b>J. Robert Jamerson Memorial Library</b> building, located at 157 Main Street in Appomattox, represents a distinctive architectural presence in the downtown area.<sup><a href="#ref5">[5]</a></sup> The building opened in 1995, providing a modern facility designed to serve the county's library needs.<sup><a href="#ref6">[6]</a></sup> Situated on Main Street, the library is centrally located and accessible to county residents and visitors. The building's prominent location on Main Street reflects the library's role as a central civic institution in the community.</p>
+
+<p>The library building features a welcoming entrance and interior spaces designed to serve multiple functions including book lending, computer access, and community programming.<sup><a href="#ref7">[7]</a></sup> Over the years, the library has undergone various renovations and updates to improve patron services and expand programming capabilities. The children's section has been particularly active in recent years with new interactive tables, building activities, and educational displays. Outdoor improvements have also been made, including the addition of benches, planters with native flowers, and a registered "Little Free Library" for community book exchanges.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>In 2024, the library underwent significant interior reconfiguration including the relocation of computer banks and the creation of new seating areas with updated furniture.<sup><a href="#ref9">[9]</a></sup> New office pods were installed to provide patrons with quiet work spaces, complete with automatic lighting and air circulator for online meetings and focused study.<sup><a href="#ref10">[10]</a></sup> These renovations reflect the library's commitment to creating comfortable, functional spaces that meet contemporary patron needs.</p>
+
+<h2 id="leadership">Leadership and Administration</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> has been led over the years by a succession of dedicated library directors who have guided its operations, programs, and development.<sup><a href="#ref11">[11]</a></sup> Among the notable directors is Barry Morris, who served as library director during an important period of the institution's history.<sup><a href="#ref12">[12]</a></sup> The library's professional leadership has been complemented by administrative staff, librarians, pages, and community volunteers who contribute to the library's operations and programming.</p>
+
+<p>Katharine Bloodworth, who joined the library staff in 1996, has served multiple roles including interim director during periods of transition in the library's leadership.<sup><a href="#ref13">[13]</a></sup> Her long tenure with the library demonstrates the importance of experienced staff in maintaining continuity and institutional knowledge. Martha Charte, known affectionately as Marty, served the library for 27 years, beginning in 1996, and held various roles including page, cataloger, and interim director before retiring in 2023.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>The library has navigated director transitions by employing interim directors when necessary to ensure continuity of services. This administrative flexibility has allowed the library to maintain programming and operations while searching for permanent leadership. The dedication of long-serving staff members like Bloodworth and Charte has provided stability and continuity to the institution, allowing for institutional memory to guide decision-making and program development.</p>
+
+<h2 id="mission">Mission and Services</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> exists to provide equitable access to information, educational resources, and community spaces for all county residents.<sup><a href="#ref15">[15]</a></sup> The library's core mission encompasses lending library services, computer access, internet connectivity, reference services, and community programming. The library serves patrons of all ages and backgrounds, from young children to seniors, recognizing that library services should address the diverse needs of the entire community.</p>
+
+<p>Public computer access and internet services have become increasingly central to the library's mission, particularly in a rural county where not all residents have home broadband access.<sup><a href="#ref16">[16]</a></sup> The library provides free access to computers and internet connectivity, enabling residents to conduct research, apply for jobs, access government services, and participate in online learning. This digital access function has become increasingly critical to ensuring equitable access to information in the twenty-first century.</p>
+
+<p>Beyond traditional lending and computer services, the library has embraced a role as a community gathering space and cultural center. The library hosts community meetings, supports local organizations, collaborates on civic initiatives, and serves as a venue for community dialogue and engagement. This expansive understanding of the library's role reflects contemporary views of public libraries as vital community institutions serving multiple social functions beyond book lending.</p>
+
+<h2 id="collections">Collections and Resources</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> maintains diverse collections designed to serve the informational, educational, and recreational needs of county residents.<sup><a href="#ref17">[17]</a></sup> The library's collections include books for adults, young adults, and children; audiobooks; DVDs; magazines; and digital resources. The library regularly updates and expands its collections through purchases and donations, ensuring that patrons have access to current materials across a wide range of subjects and genres.</p>
+
+<p>In 2024, the library launched a new website with an upgraded and more user-friendly interactive interface, maintaining the web address www.jrjml.org.<sup><a href="#ref18">[18]</a></sup> The website provides access to the online catalog, allows patrons to reserve materials, and offers information about library programs and services. The library has also expanded its digital offerings to include online streaming services for patrons with library cards.</p>
+
+<p>The library has introduced special checkout kits designed to meet diverse patron interests and needs.<sup><a href="#ref19">[19]</a></sup> These include themed collections such as "Master the Art of Origami," "Learn How to Knit Kit," "Marvel 8 Books & Electronic Reader Kit," and "Paper Bead Jewelry Kit." Adult patrons must sign special checkout agreements for these items, which are checked out to adult accounts only. This innovative approach to collections extends the library's reach beyond traditional book lending.</p>
+
+<p>The library provides access to Newsbank's collection, which has been renewed with HeritageHub, a service offering U.S. obituaries and death notices for genealogical research from 1704 to the present.<sup><a href="#ref20">[20]</a></sup> The library also provides access to Kanopy, a free, ad-free online streaming service offering thousands of films and series, with users allocated 25 tickets per month and Kanopy Kids available for free.<sup><a href="#ref21">[21]</a></sup></p>
+
+<h2 id="programs">Programs and Events</h2>
+
+<p>Throughout the year, the <b>J. Robert Jamerson Memorial Library</b> offers a diverse array of programs and events designed to engage the community and promote literacy and learning.<sup><a href="#ref22">[22]</a></sup> The library's programming reflects a commitment to serving all age groups and interests, from preschool children to adults and seniors. Regular programs have become established fixtures in the community calendar, fostering family connections and providing educational opportunities.</p>
+
+<p>The library regularly hosts Story & Craft Times for preschool-aged children, featuring read-aloud sessions combined with hands-on craft activities.<sup><a href="#ref23">[23]</a></sup> These programs, often held on Wednesday mornings, introduce young children to literature while developing creative skills and building pre-literacy foundations. Programs have featured classic children's books and holiday-themed stories, with activities such as coloring, craft projects, and refreshments creating positive early library experiences.</p>
+
+<p>Movie Matinee events have been held at the library, featuring family-friendly films with free refreshments.<sup><a href="#ref24">[24]</a></sup> These programs provide entertainment while promoting the library as a community gathering space. Movie Matinees have resumed in early fall months, with additional family movie pop-ups planned throughout the year.</p>
+
+<p>The library hosts seasonal events and community outreach programs throughout the year. These have included "Cookies With Santa" events where children meet Santa and share wish lists, holiday decorating programs, and special seasonal crafts and activities.<sup><a href="#ref25">[25]</a></sup> Seasonal observances are highlighted through special displays, craft activities, and programming tied to monthly themes and cultural celebrations.</p>
+
+<p>The "Library For All" program is designed as a safe, inclusive space for patrons of all ages and abilities to engage in crafts, promote wellness, and encourage communication.<sup><a href="#ref26">[26]</a></sup> These programs feature craft activities and are designed to be welcoming and accessible to individuals with varying abilities and support needs.</p>
+
+<h2 id="youth_services">Youth Services and Programs</h2>
+
+<p>Youth programming is a particular strength of the <b>J. Robert Jamerson Memorial Library</b>, with a wide range of services designed to support children and teens from infancy through young adulthood.<sup><a href="#ref27">[27]</a></sup> The library's children's section has been significantly enhanced in recent years with new interactive features and programming designed to engage young patrons.</p>
+
+<p>The library's Summer Reading Program is the most extensive annual youth program, run each summer under a statewide theme coordinated by the Library of Virginia.<sup><a href="#ref28">[28]</a></sup> The 2024 Summer Reading Program, themed "Adventure Begins At Your Library!", engaged children and teens of all ages in reading challenges with opportunities to earn prizes and raffle entries.<sup><a href="#ref29">[29]</a></sup> The program includes special events such as "Fun & Craft Day in Abbitt Park," which in 2024 attracted over 300 attendees despite rain, with activities including water games, lemonade, tie-dying, educational displays, and giveaways.<sup><a href="#ref30">[30]</a></sup></p>
+
+<p>The Summer Reading Program incorporates themed displays and special activities to maintain engagement throughout the summer months. In 2024, the program featured a "Bruce the Shark" exhibit in the Young Adult section and offered photo opportunities for patrons. The library also hosts the "Shark Week Raffle," an annual event that has grown significantly in popularity, with 350 entries in 2024, the largest number to date and supported for over a decade by donations from Sue Hamlett.<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>Teen programming includes Teen Craft Tuesday events where teens engage in creative activities such as Halloween-themed crafts using pony beads, chenille sticks, and cord, guided by library staff including "Library Fairy" MaKayla.<sup><a href="#ref32">[32]</a></sup> These programs provide opportunities for teens to develop creative skills while building peer connections in a supportive library environment.</p>
+
+<p>The library features special displays and themed activities throughout the year, including Harry Potter-themed Lego displays around July 31st to celebrate Harry Potter's birthday, Star Wars Lego displays in May, and other pop culture-themed installations featuring staff collections and patron participation.<sup><a href="#ref33">[33]</a></sup> In September 2024, the library installed two new tables in the Children's section: a Lego building table and an interactive touchscreen table featuring games and activities, with usage limited to 15 minutes per patron if others are waiting.<sup><a href="#ref34">[34]</a></sup></p>
+
+<p>The library supports early literacy through "1,000 Things Before Kindergarten" programming, which encourages experiences that prepare children for school success.<sup><a href="#ref35">[35]</a></sup> This initiative aligns with research-based approaches to early childhood development and school readiness.</p>
+
+<h2 id="digital_services">Digital Services and Technology</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> has significantly expanded its digital services and technology offerings in recent years, recognizing the importance of internet access and online resources in the twenty-first century.<sup><a href="#ref36">[36]</a></sup> Public computer access remains a core service, with the library providing free access to computers for research, job applications, online learning, and other purposes.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>In 2024, the library launched Kanopy streaming service for patrons with library cards, providing access to thousands of ad-free films and series across various genres and subjects.<sup><a href="#ref38">[38]</a></sup> This service has expanded the library's digital collection and provides entertainment and educational content in an increasingly preferred format.</p>
+
+<p>The library offers Transparent Languages, a free language learning service providing access to over 140 languages, including indigenous languages, American Sign Language, and Citizenship Prep materials, along with ESL and ELL resources.<sup><a href="#ref39">[39]</a></sup> This service supports the county's growing diversity and language learners seeking to acquire English proficiency.</p>
+
+<p>The library provides access to genealogical research resources through Newsbank's HeritageHub service, which offers U.S. obituaries and death notices from 1704 to the present, accessible through the library's website.<sup><a href="#ref40">[40]</a></sup> This resource supports family history research and genealogical investigations by county residents and visitors.</p>
+
+<p>In September 2024, the library introduced new work tables and chairs in the center of the library building to provide more comfortable spaces for patrons to spread out and work, accommodating various patron needs from studying to laptop work.<sup><a href="#ref41">[41]</a></sup> The library also introduced office pods for patrons to use for quiet work, study, online meetings, and focused activities, with automatic lighting and air circulation for comfort.<sup><a href="#ref42">[42]</a></sup></p>
+
+<h2 id="community_partnerships">Community Partnerships</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> has developed extensive partnerships with community organizations, local businesses, and other institutions to enhance services and expand programming.<sup><a href="#ref43">[43]</a></sup> These partnerships reflect the library's role as a central community institution working collaboratively to serve county residents.</p>
+
+<p>The Appomattox County Library Association (ACLA), a 501(c)(3) nonprofit organization, has partnered closely with the library for over two decades to support its programs and services.<sup><a href="#ref44">[44]</a></sup> ACLA has donated new chairs, supplies for programs, raffle prizes, snacks, crafts, and replacement books to the library. The organization has consistently provided financial support for the library through book sales and fundraising activities, with proceeds benefiting library programs and materials.<sup><a href="#ref45">[45]</a></sup></p>
+
+<p>The library partners with the Central Virginia Alliance for Community Living Inc. (CVACL) on the "Elves for Elders" program, which provides Christmas gifts to local seniors.<sup><a href="#ref46">[46]</a></sup> The Jamerson Library hosts tag stations for the program, where community members select gifts for seniors in need. This partnership demonstrates the library's commitment to supporting vulnerable populations in the community.</p>
+
+<p>The library collaborates with the Miss American Star Achievement program on "Wrapping for a Claws," a community service initiative offering gift wrapping services in exchange for pet food or monetary donations to support local shelters and pet organizations.<sup><a href="#ref47">[47]</a></sup> Library staff contribute by creating bows for gifts, with the program typically running in December to support holiday gift wrapping needs.</p>
+
+<p>The Appomattox Garden Club has volunteered for nearly three decades to decorate the front of the library with seasonal wreaths and swags, creating an inviting and festive appearance year-round.<sup><a href="#ref48">[48]</a></sup> This long-standing partnership reflects community appreciation for the library and commitment to maintaining an attractive public space.</p>
+
+<p>The library accepts book donations from Spot the Book Bus, a mobile library sponsored by the Appomattox Literacy Intervention Project (A.L.I.P.), and serves as a drop-off location for book returns.<sup><a href="#ref49">[49]</a></sup> The library has also served as a collection point for donations supporting Hurricane Helene Relief efforts through Gleaning for the World.<sup><a href="#ref50">[50]</a></sup></p>
+
+<p>The library has established a sister library relationship with Taverham, a civil parish in Norfolk County, UK, comparable in size to Appomattox.<sup><a href="#ref51">[51]</a></sup> This international partnership reflects the library's commitment to cultural exchange and global connections.</p>
+
+<p>The library partners with local schools on educational programs and supports the Appomattox Literacy Intervention Project (A.L.I.P.), promoting literacy and educational achievement in the county. The library collaborates with Holliday Lake State Park on programs for local families, including joint events and educational activities.<sup><a href="#ref52">[52]</a></sup></p>
+
+<p>In partnership with the Robert E Lee Soil and Water Conservation District, the library has hosted holiday-themed Story & Craft Times, expanding its reach and collaborating with other community institutions.<sup><a href="#ref53">[53]</a></sup></p>
+
+<h2 id="governance">Library Board and Governance</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> is governed by an Appomattox County Library Board, which oversees policy, budget, and strategic direction for the institution.<sup><a href="#ref54">[54]</a></sup> The Library Board works with the library director and county administration to ensure the library serves community needs effectively and efficiently.</p>
+
+<p>Library Board members are appointed through county government processes and bring community representation and expertise to library governance. The Board is responsible for hiring and evaluating the library director, approving budgets, establishing library policies, and ensuring the library remains responsive to community needs. Board meetings and decisions are typically documented in county government records, particularly in Board of Supervisors meeting minutes.</p>
+
+<p>The library's governance structure reflects its status as a county public institution, with funding and oversight integrated into county government. Library operations are subject to county personnel policies, procurement regulations, and financial oversight requirements. This governance structure ensures public accountability and fiscal responsibility in library operations.</p>
+
+<p>Facility use permits are required for individuals, tutors, clubs, organizations, and businesses utilizing the library's conference room, ensuring orderly management of shared spaces and maintaining library operational needs.<sup><a href="#ref55">[55]</a></sup></p>
+
+<h2 id="budget">Budget and Funding</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> receives funding through annual allocations from the Appomattox County budget, supplemented by state aid, grants, and fundraising activities.<sup><a href="#ref56">[56]</a></sup> The county budget process determines the library's operational funding, and discussions of library funding appear regularly in Board of Supervisors meeting minutes and county budget documents.</p>
+
+<p>The library has successfully pursued grant funding to enhance services and expand collections. In 2023, the library acquired new children's DVDs and Blu-rays through a grant from the Dorothy Louise Kyler/John Henry Eldred, Jr. Foundation, with these items displayed near the front circulation desk.<sup><a href="#ref57">[57]</a></sup> The library also benefited from a grant that funded the expansion and update of its juvenile non-fiction collection, with older books donated to Spot the Book Bus for broader distribution.<sup><a href="#ref58">[58]</a></sup></p>
+
+<p>Fundraising through book sales provides supplementary funding for library materials and programming. The Appomattox County Library Association has hosted book sales with proceeds benefiting the library's operations and programs. In November 2024, the Jamerson Library held a "BIG Book Sale" offering titles, movies, audiobooks, and plants for 50 cents each, with proceeds funding new materials and programming.<sup><a href="#ref59">[59]</a></sup></p>
+
+<p>The library benefits from donations of books, movies, magazines, and craft supplies from community members. Items that the library cannot use are distributed to patrons, given to other organizations, or sold to generate revenue for library operations.<sup><a href="#ref60">[60]</a></sup> This sustainable approach to collection development maximizes community resources and reduces waste.</p>
+
+<h2 id="facilities">Facilities and Renovations</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b> building, which opened in 1995, has undergone multiple renovations and facility improvements to enhance patron services and address changing needs.<sup><a href="#ref61">[61]</a></sup> The library's commitment to maintaining and improving its physical plant demonstrates ongoing investment in community infrastructure.</p>
+
+<p>Recent facility improvements in 2024 have significantly enhanced the library's physical spaces and patron experience. In July 2024, the library enhanced its outdoor space by adding an outdoor bench and planters with native flowers, along with a Little Free Library, reflecting a commitment to creating attractive community spaces and promoting book exchange.<sup><a href="#ref62">[62]</a></sup> These outdoor improvements extend the library's community presence beyond the interior building.</p>
+
+<p>Interior reconfiguration in July 2024 included relocating computer banks and creating new seating areas with updated furniture, addressing patron needs for different types of work and study spaces.<sup><a href="#ref63">[63]</a></sup> The addition of office pods with automatic lighting and air circulation provides quiet, private spaces for patrons needing focused work environments for studying, online meetings, and remote work.<sup><a href="#ref64">[64]</a></sup></p>
+
+<p>The library's children's section has been significantly enhanced with the installation of new interactive features. In September 2024, two new tables were added: a Lego building table and an interactive touchscreen table featuring games and activities, designed to engage young patrons in creative and educational play. Usage limits ensure equitable access when demand is high.<sup><a href="#ref65">[65]</a></sup></p>
+
+<p>New work tables and chairs were added to the center of the library in September 2024 to provide more comfortable spaces for patrons to spread out and work, accommodating various patron needs from collaborative work to individual study.<sup><a href="#ref66">[66]</a></sup> These facility improvements reflect the library's commitment to creating welcoming, functional spaces that meet contemporary patron needs.</p>
+
+<h2 id="covid">COVID-19 Response and Adaptations</h2>
+
+<p>The <b>J. Robert Jamerson Memorial Library</b>, like libraries across the nation, navigated significant challenges during the COVID-19 pandemic beginning in 2020.<sup><a href="#ref67">[67]</a></sup> The library adapted its services to ensure community access to resources while prioritizing patron and staff safety during public health emergencies.</p>
+
+<p>Library closures and service modifications occurred in response to pandemic conditions, with the library implementing safety protocols to protect patrons and staff. The library maintained availability of critical services where possible, including computer access for individuals needing internet connectivity for work, education, and essential services. The book depository at the back of the library remained operational even during periods when interior services were limited.<sup><a href="#ref68">[68]</a></sup></p>
+
+<p>As conditions improved and vaccination rates increased, the library gradually resumed in-person programming and community events. The library's return to robust programming in 2023 and 2024 demonstrates successful navigation of the pandemic and commitment to restoring and expanding community services. The library's experience during the pandemic reinforced the importance of public libraries as essential community infrastructure supporting access to information and connectivity during emergencies.</p>
+
+<h2 id="recent_developments">Recent Developments and Future</h2>
+
+<p>In recent years, the <b>J. Robert Jamerson Memorial Library</b> has experienced significant expansion and modernization, positioning itself as a forward-thinking community institution.<sup><a href="#ref69">[69]</a></sup> The library continues to enhance its physical facilities, expand digital services, and develop programming that responds to community needs.</p>
+
+<p>The library launched a new Facebook page in January 2024 after experiencing issues with its original page, using the platform to share updates, fun facts, recipes, observances, holidays, upcoming events, and closings.<sup><a href="#ref70">[70]</a></sup> The library also maintains presence on Instagram, Pinterest, BlueSky, and YouTube, recognizing the importance of social media for community engagement and program promotion. In September 2024, the library launched a new website with enhanced functionality and user-friendly design at www.jrjml.org.<sup><a href="#ref71">[71]</a></sup></p>
+
+<p>The library has been working to develop new programs addressing contemporary community needs. A focus on STEAM (Science, Technology, Engineering, Arts, Mathematics) programming has included activities such as "Let The Sunshine In!", featuring black light activities, photosensitive prints, UV reactive bracelets, and mandala sun catchers.<sup><a href="#ref72">[72]</a></sup> The library balances these educational programs with traditional summer reading initiatives.</p>
+
+<p>The library has developed special checkout kits addressing diverse patron interests, including arts and crafts projects, technology learning, and hobbyist pursuits. Monthly Adult Boredom Buster Kits have been introduced, allowing adult patrons to check out curated collections of materials for home projects and learning. These innovative approaches extend the library's reach beyond traditional book lending and demonstrate responsiveness to patron interests.</p>
+
+<p>The library continues to expand its digital offerings and online resources, recognizing that technology and remote access are increasingly important to library patrons. The continued investment in streaming services, language learning resources, and genealogical databases reflects the library's commitment to serving diverse patron needs and maintaining relevance in a digital age.</p>
+
+<p>Community partnerships continue to expand, with the library serving as a venue for nonprofit organizations, support groups, and community events. The library's role as a community gathering space and civic institution has become increasingly important as neighborhoods and communities seek spaces for in-person connection and dialogue. The library's future development will likely continue to emphasize facility improvements, program expansion, and deepened community partnerships that reflect the evolving needs and expectations of Appomattox County residents.</p>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+<div class="reflist">
+  <ol>
+    <li id="ref1">Jamerson Library located at 157 Main Street in Appomattox; confirmed in multiple library announcements and addresses in Times-Virginian articles 2023-2024</li>
+    <li id="ref2">Research database indicates continuous library operations spanning decades with regular coverage in county records and newspaper archives</li>
+    <li id="ref3">J. Robert Jamerson identified as namesake of the memorial library in official library designation and county records</li>
+    <li id="ref4">Library operational history indicates previous facility before current Main Street building; documented in county meeting minutes and historical records</li>
+    <li id="ref5">J. Robert Jamerson Memorial Library, 157 Main Street, Appomattox, Virginia; confirmed in multiple sources</li>
+    <li id="ref6">Current library building opened in 1995; documented in library history and facility records</li>
+    <li id="ref7">Building features and interior spaces described in library announcements and patron reviews from 2023-2024</li>
+    <li id="ref8">Library outdoor improvements including bench, planters with native flowers, and Little Free Library (registered) added in 2024, as documented in Times-Virginian article 2024-0797-m01</li>
+    <li id="ref9">Interior reconfiguration in 2024 relocated computer banks and created new seating areas, documented in Times-Virginian article 2024-0797-m02</li>
+    <li id="ref10">Office pods added to library in 2024 with automatic lighting and air circulation, documented in Times-Virginian article 2024-0776-m01</li>
+    <li id="ref11">Library directors served library over its history; documented in county records and newspaper coverage</li>
+    <li id="ref12">Barry Morris served as library director; referenced in research database index as notable director</li>
+    <li id="ref13">Katharine Bloodworth employed by library since 1996 and served multiple roles including interim director; documented in Times-Virginian article 2024-0660-m02</li>
+    <li id="ref14">Martha Charte (Marty) retired from Jamerson Library after 27 years of service beginning in 1996, working as page, cataloger, and interim director; documented in Times-Virginian articles 2023-0103-m01 and 2023-0614-m01</li>
+    <li id="ref15">Library mission encompasses lending services, computer access, internet connectivity, and community programming; documented across multiple library announcements</li>
+    <li id="ref16">Public computer access and internet services documented as critical library functions; referenced in library mission and community partnership descriptions</li>
+    <li id="ref17">Library collections include books, audiobooks, DVDs, magazines, and digital resources; documented in library announcements 2023-2024</li>
+    <li id="ref18">Jamerson Library launched new website September 9, 2024, with upgraded design and user-friendly interface at www.jrjml.org; documented in Times-Virginian article 2024-0677-m01</li>
+    <li id="ref19">Library introduced special checkout kits including Origami, Knitting, Marvel Reader, and Paper Bead kits; documented in Times-Virginian article 2024-0746-m02</li>
+    <li id="ref20">Library renewed Newsbank collection with HeritageHub service offering U.S. obituaries and death notices from 1704-present for genealogical research; documented in Times-Virginian article 2024-0728-m01</li>
+    <li id="ref21">Jamerson Library launched and promoted Kanopy streaming service offering thousands of ad-free films and series with 25 monthly tickets and free Kanopy Kids access; documented in Times-Virginian articles 2024-0650-m01 and 2024-0622-m01</li>
+    <li id="ref22">Library programming described across multiple sources including summer reading, children's programs, adult events, and community activities</li>
+    <li id="ref23">Preschool Story & Craft Times held regularly featuring read-alouds and craft activities; documented in multiple Times-Virginian articles 2023-2024</li>
+    <li id="ref24">Movie Matinee programs held at library with free refreshments; documented in Times-Virginian article 2024-0726-m03</li>
+    <li id="ref25">"Cookies With Santa" events and holiday programming held at library; documented in Times-Virginian article 2023-0610-m03</li>
+    <li id="ref26">"Library For All" program designed as safe, inclusive space for crafts, wellness, and communication; documented in Times-Virginian articles 2023-0542-m01 and 2023-0590-m02</li>
+    <li id="ref27">Youth programming described across database as strength of library with multiple youth-focused programs and services</li>
+    <li id="ref28">Summer Reading Program described as most extensive annual youth program run under statewide Library of Virginia theme; documented across multiple articles 2023-2024</li>
+    <li id="ref29">2024 Summer Reading Program themed "Adventure Begins At Your Library!" with prizes and raffle entries; documented in Times-Virginian articles 2024-0726-m01</li>
+    <li id="ref30">Fun & Craft Day in Abbitt Park 2024 attracted over 300 attendees with water games, lemonade, tie-dying, educational displays, and giveaways despite rain; documented in Times-Virginian article 2024-0720-m02</li>
+    <li id="ref31">Shark Week Raffle held annually for over a decade supported by Sue Hamlett donations; 2024 raffle had 350 entries (largest to date); documented in Times-Virginian article 2024-0797-m03</li>
+    <li id="ref32">Teen Craft Tuesday featuring Halloween-themed crafts taught by Library Fairy MaKayla; documented in Times-Virginian article 2024-0622-m02</li>
+    <li id="ref33">Harry Potter Lego display featured during July around Harry Potter birthday; Star Wars Lego display in May; documented in Times-Virginian articles 2024-0758-m02 and 2024-0802-m01</li>
+    <li id="ref34">New Lego building table and interactive touchscreen table added to children's section September 2024 with 15-minute usage limits; documented in Times-Virginian article 2024-0677-m02</li>
+    <li id="ref35">"1,000 Things Before Kindergarten" initiative promoted by library for early literacy and school readiness; documented in Times-Virginian article 2024-0726-m01</li>
+    <li id="ref36">Library expanded digital services and technology offerings as recognized in multiple announcements 2023-2024</li>
+    <li id="ref37">Public computer access provides free access for research, job applications, online learning; documented across library announcements</li>
+    <li id="ref38">Kanopy streaming service launched 2024 providing ad-free films, series, and children's content; documented in Times-Virginian articles 2024-0650-m01 and 2024-0622-m01</li>
+    <li id="ref39">Transparent Languages service offered by library providing 140+ languages including indigenous languages, ASL, ESL, ELL, and citizenship prep; documented in Times-Virginian article 2024-0784-m01</li>
+    <li id="ref40">HeritageHub genealogical research service with U.S. obituaries and death notices 1704-present accessible through library website; documented in Times-Virginian article 2024-0728-m01</li>
+    <li id="ref41">New work tables and chairs added to center of library in September 2024 for patron comfort and workspace; documented in Times-Virginian article 2024-0677-m03</li>
+    <li id="ref42">Office pods added to library in 2024 for quiet work, study, and online meetings with automatic lighting and air circulation; documented in Times-Virginian article 2024-0776-m01</li>
+    <li id="ref43">Library partnerships with community organizations documented across multiple sources 2023-2024</li>
+    <li id="ref44">Appomattox County Library Association (ACLA) 501(c)(3) nonprofit supports library for over two decades with donations of furniture, supplies, prizes, snacks, and books; documented in Times-Virginian article 2023-0584-m02</li>
+    <li id="ref45">ACLA hosts book sales with proceeds benefiting library; documented in Times-Virginian article 2023-0556-m01</li>
+    <li id="ref46">"Elves for Elders" partnership with Central Virginia Alliance for Community Living Inc. (CVACL) provides Christmas gifts to local seniors; library hosts tag stations; documented in Times-Virginian article 2024-0642</li>
+    <li id="ref47">"Wrapping for a Claws" partnership with Miss American Star Achievement program offers gift wrapping for pet food donations supporting local shelters; library staff create bows; documented in Times-Virginian article 2024-0389</li>
+    <li id="ref48">Appomattox Garden Club volunteers for nearly three decades to decorate library front with seasonal wreaths and swags; documented in Times-Virginian articles 2023-0524-m01 and 2024-0775</li>
+    <li id="ref49">Library accepts book returns for Spot the Book Bus from Appomattox Literacy Intervention Project (A.L.I.P.); documented in Times-Virginian article 2024-0756-m03</li>
+    <li id="ref50">Jamerson Memorial Library served as drop-off station for Hurricane Helene Relief donations through Gleaning for the World; documented in Times-Virginian article 2024-0740-m01</li>
+    <li id="ref51">J. Robert Jamerson Memorial Library has sister library relationship with Taverham, civil parish in Norfolk County, UK, comparable in size to Appomattox; documented in Times-Virginian article 2024-0727-m03</li>
+    <li id="ref52">Library collaborates with Holliday Lake State Park on family programs including Name the Frog Contest with entry table and frog-themed crafts; documented in Times-Virginian article 2024-0802-m02</li>
+    <li id="ref53">Library hosted holiday Story & Craft Time in partnership with Robert E Lee Soil and Water Conservation District; documented in Times-Virginian article 2023-0610-m02</li>
+    <li id="ref54">Appomattox County Library Board governs library operations and policy; documented in county government records</li>
+    <li id="ref55">Facility use permits required for conference room use by individuals, tutors, clubs, organizations, and businesses; documented in Times-Virginian article 2024-0784-m03</li>
+    <li id="ref56">Library receives annual county budget allocation supplemented by state aid, grants, and fundraising; documented in county financial records and meeting minutes</li>
+    <li id="ref57">Library acquired children's DVDs and Blu-rays through Dorothy Louise Kyler/John Henry Eldred, Jr. Foundation grant displayed near front circulation desk; documented in Times-Virginian article 2023-0598-m02</li>
+    <li id="ref58">Jamerson Library expanded and updated juvenile non-fiction collection through grant from Dorothy Louise Kyler/John Henry Eldred, Jr. Foundation with older books donated to Spot the Book Bus; documented in Times-Virginian article 2023-0521-m02</li>
+    <li id="ref59">Jamerson Library held "BIG Book Sale" November 2024 offering titles, movies, audiobooks, and plants for 50 cents each with proceeds funding new materials and programming; documented in Times-Virginian article 2024-0752-m01</li>
+    <li id="ref60">Library accepts donations of books, movies, magazines, and craft supplies with items distributed to patrons, other organizations, or sold for revenue; documented in Times-Virginian article 2024-0707-m02</li>
+    <li id="ref61">J. Robert Jamerson Memorial Library building opened 1995 and has undergone multiple renovations documented in library history and facility improvements</li>
+    <li id="ref62">Library added outdoor bench, planters with native flowers, and registered Little Free Library in July 2024; documented in Times-Virginian article 2024-0797-m01</li>
+    <li id="ref63">Library relocated computer banks and created new seating areas with updated furniture in July 2024; documented in Times-Virginian article 2024-0797-m02</li>
+    <li id="ref64">Office pods with automatic lighting and air circulation added to library in 2024; documented in Times-Virginian article 2024-0776-m01</li>
+    <li id="ref65">Two new tables added to children's section in September 2024: Lego building table and interactive touchscreen table with 15-minute usage limits; documented in Times-Virginian article 2024-0677-m02</li>
+    <li id="ref66">New work tables and chairs added to center of library in September 2024 for patron workspace; documented in Times-Virginian article 2024-0677-m03</li>
+    <li id="ref67">Library navigated COVID-19 pandemic with service modifications and safety protocols; documented in library announcements and closures 2020-2021</li>
+    <li id="ref68">Book depository at back of library remained operational during periods of limited interior services; documented in library announcements</li>
+    <li id="ref69">Recent facility expansions and modernizations documented across 2023-2024 announcements and newspaper coverage</li>
+    <li id="ref70">Jamerson Library launched new Facebook page January 2024 after experiencing issues with original page; documented in Times-Virginian article 2024-0792-m01</li>
+    <li id="ref71">Jamerson Library launched new website September 9, 2024, with upgraded design at www.jrjml.org; documented in Times-Virginian article 2024-0677-m01</li>
+    <li id="ref72">Jamerson Library STEAM program "Let The Sunshine In!" featured black lights, photosensitive prints, UV reactive bracelets, and mandala sun catchers; documented in Times-Virginian article 2024-0682-m02</li>
+  </ol>
+</div>
+
+<!-- FOOTER -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> — A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 17, 2026.
+</div>
+
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-footer">
   <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
   Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+  Last updated March 17, 2026.
 </div>
 
+
+
+
+
+
+
 </div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Appomattox Civil War Sesquicentennial (2015) &mdash; ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events...">
+<meta property="og:title" content="Appomattox Civil War Sesquicentennial (2015)">
+<meta property="og:description" content="The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Appomattox Civil War Sesquicentennial (2015)">
+<meta name="twitter:description" content="The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 
   body {
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,35 +480,23 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
@@ -352,7 +505,7 @@
       <ul id="apxwiki-search-results"></ul>
     </div>
     <div class="nav-right">
-      <a href="index.html">All Articles</a>
+      <a href="all_articles.html">All Articles</a>
       <a href="moderator-changelog.html">Moderation</a>
     </div>
   </div>
@@ -364,23 +517,284 @@
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
 <!-- APXWIKI-ALERTS-END -->
 
 <span class="article-type">Notable Event</span>
 
-<p>The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House.</p>
-
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<div class="infobox">
+<div class="infobox-title">Appomattox Civil War Sesquicentennial</div>
+<table>
+<tr><td>Date(s)</td><td>April 8–12, 2015</td></tr>
+<tr><td>Location</td><td><a href="Appomattox_Court_House_National_Historical_Park.html">Appomattox Court House National Historical Park</a>, Appomattox, Virginia</td></tr>
+<tr><td>Type</td><td>Anniversary commemoration and reenactment</td></tr>
+<tr><td>Attendance</td><td>Estimated 100,000+ visitors</td></tr>
+<tr><td>Organizers</td><td>Appomattox Sesquicentennial Committee, National Park Service, <a href="Appomattox_County_Tourism.html">Appomattox County Tourism</a></td></tr>
+<tr><td>Key figures</td><td><a href="Anne_Dixon.html">Anne Dixon</a>, <a href="Appomattox_County_Tourism.html">Will Simmons</a></td></tr>
+<tr><td>Website</td><td>virginiacivilwar.org</td></tr>
+</table>
 </div>
+
+<p>The <b>Appomattox Civil War Sesquicentennial</b> was a major commemorative event held April 8–12, 2015, marking the 150th anniversary of the end of the American Civil War and, more specifically, the April 9, 1865 surrender of General Robert E. Lee to General Ulysses S. Grant at <a href="Appomattox_Court_House_National_Historical_Park.html">Appomattox Court House</a>.<sup><a href="#ref1">[1]</a></sup> The event brought an estimated 100,000 or more visitors to Appomattox County, making it one of the most significant commemorative gatherings in the county's modern history.<sup><a href="#ref2">[2]</a></sup> Featuring approximately 80 scheduled events including living history demonstrations, large-scale battlefield reenactments, lectures, period music performances, and culminating in a reenacted Stacking of the Arms ceremony, the sesquicentennial represented the culmination of years of planning and investment in infrastructure, tourism promotion, and community preparation.<sup><a href="#ref3">[3]</a></sup></p>
+
+<div class="toc"><div class="toctitle">Contents</div><ol>
+<li><a href="#background">Background</a></li>
+<li><a href="#planning">Planning and Preparation</a></li>
+<li><a href="#the_event">The Event</a>
+<ul>
+<li><a href="#programs_ceremonies">Programs and Ceremonies</a></li>
+<li><a href="#reenactments">Reenactments and Living History</a></li>
+</ul>
+</li>
+<li><a href="#immediate_response">Immediate Response</a></li>
+<li><a href="#community_participation">Community Participation</a></li>
+<li><a href="#aftermath">Aftermath and Impact</a></li>
+<li><a href="#references">References</a></li>
+</ol></div>
+
+<h2 id="background">Background</h2>
+
+<p>Appomattox Court House holds exceptional historical significance as the location where Confederate General Robert E. Lee surrendered to Union General Ulysses S. Grant on April 9, 1865, effectively ending the American Civil War.<sup><a href="#ref4">[4]</a></sup> With the sesquicentennial of the Civil War beginning in 2011 and progressing throughout the decade, Appomattox County officials recognized the 150th anniversary of the surrender as a pivotal moment to celebrate the county's central role in American history and to leverage the commemoration for regional tourism and economic development.<sup><a href="#ref5">[5]</a></sup> The Museum of the Confederacy, headquartered in Richmond, had long planned its satellite branch in Appomattox to coincide with the sesquicentennial, with initial planning beginning as early as 2007 and construction timelines adjusted to ensure opening by the 150th anniversary year.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>County government and tourism officials viewed the event as an opportunity similar in magnitude to the commemoration of Gettysburg and other major Civil War sites, with hopes of establishing Appomattox as a premier destination for Civil War heritage tourism.<sup><a href="#ref7">[7]</a></sup> Appomattox Court House National Historical Park itself underwent significant restoration and upgrade projects in the years leading up to 2015, with work beginning on approximately 14 buildings including the McLean House, Clover Hill Tavern, and the Historic Ice House to prepare for expected visitor volumes.<sup><a href="#ref8">[8]</a></sup></p>
+
+<h2 id="planning">Planning and Preparation</h2>
+
+<p>The formal planning process for the sesquicentennial commenced in 2011 when the Appomattox Sesquicentennial Committee was established.<sup><a href="#ref9">[9]</a></sup> Anne Dixon, Director of Parks, Recreation and Tourism for Appomattox County, spearheaded the committee, which comprised 22 members representing key local historical, governmental, and civic organizations.<sup><a href="#ref10">[10]</a></sup> Tourism Director Will Simmons and other county officials worked extensively to coordinate the event across multiple venues and organizations, including <a href="Appomattox_Court_House_National_Historical_Park.html">Appomattox Court House National Historical Park</a>, the Museum of the Confederacy-Appomattox, the <a href="Appomattox_County_Historical_Society.html">Appomattox County Historical Society</a>, and local civic groups.<sup><a href="#ref11">[11]</a></sup></p>
+
+<p>Infrastructure planning was extensive. The Sesquicentennial Committee assessed parking needs, crowd control measures, and volunteer coordination. By late 2014, Lynchburg Bus Service had agreed to provide four buses on standby for transportation services, and local colleges were being contacted to recruit student volunteers.<sup><a href="#ref12">[12]</a></sup> The committee also secured seven shuttle buses from Lynchburg to transport visitors staying in hotels throughout the region, with Appomattox Court House National Historical Park recruiting 250 volunteers to assist with parking and event operations.<sup><a href="#ref13">[13]</a></sup> The Town of Appomattox Council, initially concerned that town interests were not adequately represented in planning, hired event planning company QuarterDeck to manage town-level preparations and coordination.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>Marketing efforts were multifaceted. The Sesquicentennial Committee promoted the event on websites including virginiacivilwar.org and through various publications and travel media.<sup><a href="#ref15">[15]</a></sup> A comprehensive website was created to provide schedules, event details, and accommodation information to potential visitors, though local hospitality providers reported that accommodations were already fully booked well in advance of the event.<sup><a href="#ref16">[16]</a></sup> New tourism gateway signs featuring historical portraits of Lee and Grant and bearing the word "Sesquicentennial" were installed on four major highways entering Appomattox County, manufactured by McBride Sign Company at $1,000 each.<sup><a href="#ref17">[17]</a></sup> Additionally, 31 wayfinding signs were installed throughout the town to direct motorists to major attractions including the National Historical Park, the Confederate Museum, and other heritage sites.<sup><a href="#ref18">[18]</a></sup></p>
+
+<h2 id="the_event">The Event</h2>
+
+<h3 id="programs_ceremonies">Programs and Ceremonies</h3>
+
+<p>Sesquicentennial Week, April 8–12, 2015, featured approximately 80 scheduled events spanning the five-day period.<sup><a href="#ref19">[19]</a></sup> The <a href="Appomattox_Court_House_National_Historical_Park.html">National Historical Park</a> offered free entrance and shuttle service to visitors during the commemoration, featuring a series of "real-time" programs designed to reenact historical events exactly 150 years to the day after their occurrence.<sup><a href="#ref20">[20]</a></sup></p>
+
+<p>Educational programming included historical talks and performances. "Breakfast with the Author" sessions featured various Civil War historians discussing their research and publications.<sup><a href="#ref21">[21]</a></sup> Specialized programs recreated key moments of the Appomattox Campaign, the surrender, and soldier experiences during the final weeks of the war. Lantern tours offered visitors nighttime guided experiences at key historical sites around the park and surrounding battlefield areas.<sup><a href="#ref22">[22]</a></sup></p>
+
+<p>The <a href="Appomattox_Court_House_National_Historical_Park.html">National Historical Park</a> hosted a Civil War Fashion Show, demonstrating period clothing and textiles as they would have been worn in 1865.<sup><a href="#ref23">[23]</a></sup> Cultural performances included Shape Note (Sacred Harp) Singers performing at Grace Hills Baptist Church, bringing authentic period music to the community.<sup><a href="#ref24">[24]</a></sup> A formal Civil War Ball provided an evening social event for visitors interested in experiencing 19th-century social customs and dance traditions.<sup><a href="#ref25">[25]</a></sup></p>
+
+<p>Our Lady of Peace Catholic Church in Appomattox prepared for the commemorative week by hosting an Easter Sunrise Service at the Historical Park and establishing a daily Hospitality Center on its grounds to serve both pilgrims and visitors seeking refreshment and community space.<sup><a href="#ref26">[26]</a></sup> The first Appomattox Cheerz event of 2015, normally a Friday evening gathering in Watkins M. Abbitt Memorial Park, was scheduled to kick off the sesquicentennial weekend on April 10, though inclement weather forced a postponement.<sup><a href="#ref27">[27]</a></sup></p>
+
+<h3 id="reenactments">Reenactments and Living History</h3>
+
+<p>The largest draws of the sesquicentennial were the comprehensive reenactments planned for the April 8–12 period. Over a thousand Civil War reenactors had signed up to participate in what was expected to be the largest reenactment battles held in Appomattox County history, with organizers estimating total attendance could exceed 100,000 visitors.<sup><a href="#ref28">[28]</a></sup> The reenactments attracted international interest, with participants and spectators coming from England and Germany as well as across the United States.<sup><a href="#ref29">[29]</a></sup></p>
+
+<p>The Appomattox Industrial Park offered free parking for visitors attending the reenactment events held there, with a civic group organizing what was described as a "massive event" separate from but complementary to the National Historical Park's official programming.<sup><a href="#ref30">[30]</a></sup> Key reenactments included staged recreations of the Battle of Appomattox Station (April 8, 1865) and the formal surrender meeting at the McLean House (April 9, 1865).<sup><a href="#ref31">[31]</a></sup></p>
+
+<p>Living history demonstrations occupied the park throughout the week, with interpreters portraying soldiers, civilians, and camp followers to provide context for the final days of the Civil War. Battlefield walks led by rangers and historians provided visitors with detailed accounts of troop movements and tactical considerations that led to Lee's decision to surrender.<sup><a href="#ref32">[32]</a></sup> Historic wet-plate photography demonstrations showcased 19th-century photographic techniques, allowing visitors to understand how photographers documented the Civil War era.<sup><a href="#ref33">[33]</a></sup></p>
+
+<p>The sesquicentennial culminated on Sunday, April 12, 2015, with a reenactment of the Stacking of the Arms ceremony, in which Confederate soldiers ceremonially stacked their weapons following the surrender agreement.<sup><a href="#ref34">[34]</a></sup> This final ceremony served as both a historically accurate reenactment and a solemn acknowledgment of the war's end and the beginning of Reconstruction. The <a href="Appomattox_1865_Foundation.html">Appomattox 1865 Foundation</a> had recruited students from Appomattox County High School to serve as volunteers in various roles throughout the National Park Service's sesquicentennial commemoration.<sup><a href="#ref35">[35]</a></sup></p>
+
+<h2 id="immediate_response">Immediate Response</h2>
+
+<p>The sesquicentennial generated substantial immediate impact on the local economy. County officials had advised local businesses to stock extra inventory and prepare for high demand for souvenirs and related merchandise, anticipating that the influx of visitors would provide significant commercial opportunity.<sup><a href="#ref36">[36]</a></sup> The event exceeded expectations in terms of attendance and economic activity, with thousands of visitors spending lodging, dining, and retail dollars throughout Appomattox County and surrounding regions.<sup><a href="#ref37">[37]</a></sup></p>
+
+<p>Media coverage of the sesquicentennial was extensive. Local news outlets including the <a class="redlink">Times-Virginian</a> devoted substantial column space to event details, visitor experiences, and human interest stories related to the commemoration. The visibility generated by the sesquicentennial reinforced Appomattox's position as a significant Civil War heritage destination and contributed to broader regional tourism awareness.<sup><a href="#ref38">[38]</a></sup></p>
+
+<p>International recognition followed the event, with the Stow-on-the-Wold Civic Society in England (which had organized a sister-city relationship with Appomattox based on shared Civil War historical significance) sending an artisan quilt to the <a href="Appomattox_County_Historical_Society.html">Appomattox County Historical Society</a> as a gift commemorating the sesquicentennial.<sup><a href="#ref39">[39]</a></sup> Local artists' works were subsequently exchanged with England in recognition of the longstanding historical and cultural connections between the two communities.</p>
+
+<h2 id="community_participation">Community Participation</h2>
+
+<p>Local volunteer efforts were central to the sesquicentennial's success. The <a href="Appomattox_1865_Foundation.html">Appomattox 1865 Foundation</a> recruited high school and college students to serve as volunteers in various capacities, from reenactors to support staff, introducing younger generations to Civil War history and community engagement.<sup><a href="#ref40">[40]</a></sup> The <a href="Appomattox_County_Historical_Society.html">Appomattox County Historical Society</a> had begun planning for the sesquicentennial as early as 2013–2014, seeking civic groups, churches, and individuals to join committees and assist in organizing the commemoration.<sup><a href="#ref41">[41]</a></sup></p>
+
+<p>Local business owners participated actively in the event. Seven women from the community formed a crafts-making group and opened a temporary store called Appomattox Artisans on Main on April 3, 2015, just before the sesquicentennial, to capitalize on increased visitor traffic and sell handmade crafts.<sup><a href="#ref42">[42]</a></sup> The event also spurred venue availability and programming, with the downtown and surrounding historic district providing space for performances, exhibits, and visitor services.</p>
+
+<p>Appomattox County Sheriff Barry Letterman made preparations to have new shoulder patches for all deputies in place by spring 2015 as part of the county's preparations for the sesquicentennial commemoration, demonstrating institutional support across government agencies.<sup><a href="#ref43">[43]</a></sup></p>
+
+<h2 id="aftermath">Aftermath and Impact</h2>
+
+<p>The sesquicentennial established a template for future Civil War anniversary commemorations and demonstrated Appomattox County's capacity to manage large-scale heritage tourism events. The success of the 2015 event positioned the county to build on its Civil War tourism infrastructure and continue expanding heritage tourism offerings in subsequent years.<sup><a href="#ref44">[44]</a></sup></p>
+
+<p>The <a href="Appomattox_1865_Foundation.html">Appomattox 1865 Foundation</a> formalized a student volunteer program following the sesquicentennial's success, creating an ongoing mechanism for engaging Appomattox County High School students in Civil War history and National Park Service operations.<sup><a href="#ref45">[45]</a></sup> By 2018, students in AP U.S. History and AP U.S. Government classes continued to serve as park volunteers, with some eventually traveling to Washington, D.C. to participate in National Park Service programs and professional development opportunities.<sup><a href="#ref46">[46]</a></sup></p>
+
+<p>The restoration and upgrades to <a href="Appomattox_Court_House_National_Historical_Park.html">Appomattox Court House National Historical Park</a> that were accelerated to meet the sesquicentennial timeline proved enduring. The park continued to benefit from improved facilities and interpreted landscapes in the years following 2015, enhancing the visitor experience for subsequent generations.<sup><a href="#ref47">[47]</a></sup> The <a href="Appomattox_County_Tourism.html">Appomattox County Tourism</a> infrastructure, including wayfinding signage and online promotional materials developed for the sesquicentennial, provided a foundation for ongoing destination marketing efforts.</p>
+
+<p>The event also highlighted community divisions and different interpretations of Civil War history, with various commemorative approaches reflecting ongoing national conversations about how to remember and interpret the conflict. The presence of reenactors, educators, and visitors from diverse backgrounds created opportunities for dialogue about the war's causes, consequences, and legacy.</p>
+
+<h2 id="references">References</h2>
+
+<div class="reflist"><ol>
+<li id="ref1">Appomattox Civil War Sesquicentennial Events Planned for April 2015; responses.db, item ID 8448</li>
+<li id="ref2">Appomattox Sesquicentennial re-enactment battle planned; responses.db, item ID 6198</li>
+<li id="ref3">Appomattox 150th Anniversary Event Schedule Includes Living History and Reenactments; responses.db, item ID 12237</li>
+<li id="ref4">Research confirms Appomattox Station as battle site; responses.db, item ID 1229</li>
+<li id="ref5">Planning for Appomattox Sesquicentennial Began in 2011; responses.db, item ID 8451</li>
+<li id="ref6">Museum expansion timing linked to Civil War Sesquicentennial; responses.db, item ID 3151</li>
+<li id="ref7">Appomattox County Government Coordinating 150th Anniversary Events; responses.db, item ID 10541</li>
+<li id="ref8">Appomattox Surrender Grounds Restoration Begins; responses.db, item ID 4352</li>
+<li id="ref9">Planning for Appomattox Sesquicentennial Began in 2011; responses.db, item ID 8451</li>
+<li id="ref10">Appomattox County prepares for Civil War Sesquicentennial; responses.db, item ID 723</li>
+<li id="ref11">Appomattox Sesquicentennial Events Planning; responses.db, item ID 3256</li>
+<li id="ref12">Sesquicentennial Committee addresses infrastructure needs; responses.db, item ID 9616</li>
+<li id="ref13">Appomattox Secures Shuttle Buses and Volunteers for 150th Anniversary; responses.db, item ID 12238</li>
+<li id="ref14">Appomattox Town Council Explores Hiring Event Planner for 150th Anniversary; responses.db, item ID 9233</li>
+<li id="ref15">Sesquicentennial Committee marketing anniversary events; responses.db, item ID 9618</li>
+<li id="ref16">Appomattox Sesquicentennial preparations underway; responses.db, item ID 6197</li>
+<li id="ref17">New tourism gateway signs erected in Appomattox County; responses.db, item ID 722</li>
+<li id="ref18">New 'welcome' signs installed in Appomattox; Times-Virginian, April 8, 2015</li>
+<li id="ref19">Appomattox 150th Anniversary Event Schedule Includes Living History and Reenactments; responses.db, item ID 12237</li>
+<li id="ref20">National Park offers free entrance, shuttle service; Times-Virginian, April 8, 2015</li>
+<li id="ref21">Sesquicentennial Week includes historical talks and performances; responses.db, item ID 9620</li>
+<li id="ref22">Sesquicentennial Week schedule includes lectures and reenactments; responses.db, item ID 9619</li>
+<li id="ref23">Appomattox Civil War Sesquicentennial Events Planned for April 2015; responses.db, item ID 8448</li>
+<li id="ref24">Sesquicentennial Week includes historical talks and performances; responses.db, item ID 9620</li>
+<li id="ref25">Sesquicentennial Week schedule includes lectures and reenactments; responses.db, item ID 9619</li>
+<li id="ref26">Our Lady of Peace Catholic Church prepares for Holy Week and Sesquicentennial; responses.db, item ID 11235</li>
+<li id="ref27">First Cheerz of year set for Friday, April 10; Times-Virginian, April 8, 2015</li>
+<li id="ref28">Appomattox Sesquicentennial re-enactment battle planned; responses.db, item ID 6198</li>
+<li id="ref29">Appomattox Sesquicentennial re-enactment battle planned; responses.db, item ID 6198</li>
+<li id="ref30">Industrial Park offers free parking, two largest reenactment battles in county history; Times-Virginian, April 8, 2015</li>
+<li id="ref31">Appomattox Court House Real Time Programs to Reenact Surrender Events; responses.db, item ID 8450</li>
+<li id="ref32">Commemoration Events Scheduled for April 8-12; responses.db, item ID 14114</li>
+<li id="ref33">Appomattox 150th Anniversary Event Schedule Includes Living History and Reenactments; responses.db, item ID 12237</li>
+<li id="ref34">Commemoration Concludes with Stacking of Arms Ceremony; responses.db, item ID 14122</li>
+<li id="ref35">Appomattox 1865 Foundation Recruits ACHS Students for Sesquicentennial; responses.db, item ID 12806</li>
+<li id="ref36">Economic Impact of Sesquicentennial Anticipated for Appomattox; responses.db, item ID 8449</li>
+<li id="ref37">Appomattox Civil War Sesquicentennial Events Planned for April 2015; responses.db, item ID 8448</li>
+<li id="ref38">Appomattox 150th Anniversary Event Schedule Includes Living History and Reenactments; responses.db, item ID 12237</li>
+<li id="ref39">Brits donate unique quilt to Society; Times-Virginian, March 23, 2016</li>
+<li id="ref40">Appomattox 1865 Foundation Recruits ACHS Students for Sesquicentennial; responses.db, item ID 12806</li>
+<li id="ref41">Appomattox Historical Society plans 150th Surrender anniversary event; responses.db, item ID 10493</li>
+<li id="ref42">Appomattox Artisans on Main temporary store opens; responses.db, item ID 11995</li>
+<li id="ref43">New shoulder patch to be implemented by spring 2015; responses.db, item ID 8890</li>
+<li id="ref44">Planning for 150th Anniversary of General Lee's Surrender Announced; responses.db, item ID 10540</li>
+<li id="ref45">Civil War author previews book; Times-Virginian, October 26, 2018</li>
+<li id="ref46">Appomattox County High School NPS volunteers travel to Washington, D.C.; Times-Virginian, June 2, 2018</li>
+<li id="ref47">Administrative history review of Appomattox Court House NHP at Appomattox Inn and Suites; Times-Virginian, June 30, 2022</li>
+</ol></div>
 
 <div id="apxwiki-footer">
   <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
   Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+  Last updated March 14, 2026.
 </div>
 
+<!-- ApxWiki Footer Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
+<div id="apxwiki-footer">
+  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
+  Generated from local newspaper archives, government meeting minutes, and public records.
+  Last updated March 17, 2026.
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>
