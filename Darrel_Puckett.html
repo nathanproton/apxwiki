@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darrel Puckett &mdash; ApxWiki</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darrel W. Puckett - ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="Appomattox County Commonwealth&#x27;s Attorney for nearly twenty years (c. 1999–2019), retired U.S. Air Force Reserve Lieutenant Colonel, and prosecutor of...">
+<meta property="og:title" content="Darrel W. Puckett">
+<meta property="og:description" content="Appomattox County Commonwealth&#x27;s Attorney for nearly twenty years (c. 1999–2019), retired U.S. Air Force Reserve Lieutenant Colonel, and prosecutor of the 2010 Speight mass shooting case — appointed General District Court Judge for the 10th Judicial District in June 2019.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Darrel W. Puckett">
+<meta name="twitter:description" content="Appomattox County Commonwealth&#x27;s Attorney for nearly twenty years (c. 1999–2019), retired U.S. Air Force Reserve Lieutenant Colonel, and prosecutor of...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
+    <style>
 
   body {
     font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,72 +480,444 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<!-- ApxWiki Header Component -->
-<div id="apxwiki-nav">
-  <div class="nav-inner">
-    <a class="nav-brand" href="index.html">ApxWiki</a>
-    <div class="nav-search-wrap">
-      <input type="text" id="apxwiki-search" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
-      <ul id="apxwiki-search-results"></ul>
-    </div>
-    <div class="nav-right">
-      <a href="index.html">All Articles</a>
-      <a href="moderator-changelog.html">Moderation</a>
-    </div>
-  </div>
-</div>
-
-<div id="content">
-
-<h1>Darrel Puckett</h1>
+<h1>Darrel W. Puckett</h1>
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Biography</span>
 
-<p>Appomattox County Commonwealth&#x27;s Attorney responsible for prosecuting major criminal cases including drug offenses and homicides across numerous court terms.</p>
-
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<!-- Table of Contents -->
+<div class="toc">
+    <div class="toc-title">Contents</div>
+    <ul class="toc-list">
+        <li class="toc-indent-1"><a href="#early-life">Early life and education</a></li>
+        <li class="toc-indent-1"><a href="#military">Military service</a></li>
+        <li class="toc-indent-1"><a href="#commonwealth-attorney">Commonwealth's Attorney career</a>
+            <ul class="toc-list">
+                <li class="toc-indent-2"><a href="#early-tenure">Early tenure (1999–2003)</a></li>
+                <li class="toc-indent-2"><a href="#gang-drug">Gang and drug prosecution initiatives</a></li>
+                <li class="toc-indent-2"><a href="#speight-case">The Speight case (2010)</a></li>
+                <li class="toc-indent-2"><a href="#other-major">Other major prosecutions</a></li>
+                <li class="toc-indent-2"><a href="#office-management">Office management and personnel</a></li>
+                <li class="toc-indent-2"><a href="#later-tenure">Later tenure (2007–2019)</a></li>
+            </ul>
+        </li>
+        <li class="toc-indent-1"><a href="#bench-appointment">Appointment to the bench</a></li>
+        <li class="toc-indent-1"><a href="#community">Community involvement</a></li>
+        <li class="toc-indent-1"><a href="#prosecutorial-record">Prosecutorial record and legacy</a></li>
+        <li class="toc-indent-1"><a href="#electoral">Electoral history</a></li>
+        <li class="toc-indent-1"><a href="#references">References</a></li>
+    </ul>
 </div>
 
-<div id="apxwiki-footer">
-  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
-  Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+<!-- Infobox -->
+<div class="infobox">
+    <div class="infobox-title">Darrel W. Puckett</div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Current position:</div>
+        <div class="infobox-value">General District Court Judge, 10th Judicial District</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Tenure:</div>
+        <div class="infobox-value">June 1, 2019–present</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Previous position:</div>
+        <div class="infobox-value">Commonwealth's Attorney for Appomattox County</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">CA tenure:</div>
+        <div class="infobox-value">c. 1999–June 1, 2019 (approximately 20 years)</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Education:</div>
+        <div class="infobox-value">Lynchburg College (B.A.); University of South Dakota (M.A., 1987); Regent University (J.D.)</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Military:</div>
+        <div class="infobox-value">U.S. Air Force Reserves (Ret., Lieutenant Colonel)</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Military service:</div>
+        <div class="infobox-value">25+ years</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Spouse:</div>
+        <div class="infobox-value">Margaret Elizabeth "Meg" Waters</div>
+    </div>
+
+    <div class="infobox-section">
+        <div class="infobox-label">Jurisdiction:</div>
+        <div class="infobox-value">Appomattox, Buckingham, Cumberland, Charlotte, Prince Edward, Lunenburg, Mecklenburg, Halifax counties</div>
+    </div>
 </div>
 
+<p><strong>Darrel W. Puckett</strong> is a distinguished legal professional who has served the Commonwealth of Virginia in both prosecutorial and judicial capacities throughout his professional career. He served as Commonwealth's Attorney for Appomattox County for nearly twenty years, gaining significant recognition for his prosecution of major criminal cases, particularly those involving organized gangs, narcotics trafficking, and violent crime. During his prosecutorial tenure, he substantially expanded and professionalized the county's prosecutorial office, establishing specialized prosecution units and innovative prosecutorial strategies for addressing emerging criminal challenges. In 2019, he was appointed to the General District Court bench for the 10th Judicial District, which encompasses eight counties in south-central Virginia. Puckett is a retired officer in the United States Air Force Reserves with the rank of Lieutenant Colonel and holds advanced degrees in public administration and law from respected academic institutions.</p>
+
+<h2 id="early-life">Early life and education</h2>
+
+<p>Darrel W. Puckett was born and raised in Virginia. He attended Lynchburg College, where he was inducted into the Blue Key National Honor Fraternity in 1982, reflecting his academic achievement during his undergraduate years.<span class="citation">[1]</span> The Blue Key Honor Fraternity is a selective organization that recognizes outstanding academic performance and community service among college students, and Puckett's membership demonstrates his commitment to both scholarly achievement and service during his undergraduate years at one of Virginia's historically significant private institutions of higher learning.</p>
+
+<p>Following his undergraduate education, Puckett pursued graduate studies at the University of South Dakota, where he earned a Master of Arts degree in 1987.<span class="citation">[2]</span> His graduate education focused on public administration, which equipped him with skills in organizational management, budgetary processes, and governmental administration that would prove valuable in his subsequent career in the criminal justice system. The decision to pursue advanced study at an institution in the Upper Midwest reflected Puckett's willingness to pursue education outside his home state and his commitment to comprehensive professional development.</p>
+
+<p>He subsequently obtained a law degree from Regent University School of Law, which prepared him for his eventual career in criminal prosecution and the judiciary. His legal education provided him with comprehensive training in criminal procedure, evidence, trial practice, appellate advocacy, and constitutional law. Regent University, located in Virginia, afforded Puckett the opportunity to complete his legal education while maintaining connections to his home state. The combination of a Master's degree in public administration followed by legal training created a unique educational background that distinguished Puckett from prosecutors with only legal training and provided him with management expertise beneficial for administrative positions.</p>
+
+<p>Puckett is married to Margaret Elizabeth "Meg" Waters, a University of Virginia graduate (class of 2002). Their engagement was announced around 1997, prior to her completion of her undergraduate studies.<span class="citation">[3]</span> The couple has been residents of Appomattox County, where Puckett has established his professional career and maintained deep community connections spanning multiple decades. His family ties to the region have been an important factor in his long tenure as a public official and his understanding of community needs and values.</p>
+
+<h2 id="military">Military service</h2>
+
+<p>Puckett served in the United States Air Force Reserves, where he maintained an active commitment to military service spanning more than twenty-five years. During his tenure in the Reserves, he completed advanced training in strategic military operations, including Missile Combat Crew Training, which qualified him for assignments involving nuclear weapons command and control systems.<span class="citation">[4]</span></p>
+
+<p>Missile Combat Crew Training represents one of the most rigorous and demanding training programs within the Air Force, requiring extensive study of nuclear weapons procedures, emergency protocols, strategic decision-making under extreme pressure, and technical mastery of complex launch and control systems. The training curriculum covers the technical, procedural, and psychological aspects of manning nuclear missile launch facilities and requires trainees to memorize complex procedures and develop the capacity to function effectively under conditions of extreme stress. Completion of this training indicates that Puckett achieved the highest standards of technical competence and trustworthiness required for officers responsible for weapons of mass destruction. The security clearances required for such assignments demand thorough background investigations and ongoing trustworthiness monitoring conducted by federal intelligence agencies.</p>
+
+<p>Puckett rose through the ranks to achieve the commissioned officer rank of Lieutenant Colonel before his retirement from the Reserves. This achievement represents approximately three decades of service and demonstrates his professional excellence, leadership capacity, and commitment to military service. His military service occurred concurrently with his professional career in law, demonstrating his commitment to both civilian and military service to the nation and his ability to balance demanding professional responsibilities in two separate spheres. The military experience of serving during multiple presidential administrations and significant historical periods enriched his perspective on governance and national security.</p>
+
+<p>The discipline and leadership experience gained through his military background have informed his subsequent work in the criminal justice system. His experience commanding personnel in the military and managing complex military operations provided him with organizational and managerial experience that transferred directly to his role overseeing a county prosecutorial office with multiple assistant Commonwealth's attorneys and support staff. The hierarchical military structure and emphasis on clear chain of command provided excellent preparation for managing a prosecutorial office with defined lines of authority and responsibility. The military emphasis on following rules, maintaining professional standards, and completing assigned missions mirrors the requirements of prosecutorial office management and criminal justice administration.</p>
+
+<h2 id="commonwealth-attorney">Commonwealth's Attorney career</h2>
+
+<p>Puckett assumed office as Appomattox County Commonwealth's Attorney in 1999 and served in that position until his appointment to the General District Court bench in 2019, a tenure of approximately twenty years. During his two decades as the chief prosecutor for the county, he developed a reputation for aggressive prosecution of major felonies, gang-related offenses, and drug trafficking crimes. His office handled all criminal prosecution matters in Appomattox County, including felony cases, misdemeanors, and traffic violations, making the Commonwealth's Attorney's office the primary criminal justice agency responsible for state-level prosecutions in the county.<span class="citation">[5]</span></p>
+
+<p>As Commonwealth's Attorney, Puckett was responsible for directing prosecutorial strategy, managing a staff of assistant Commonwealth's attorneys and support personnel, maintaining relationships with law enforcement agencies including the Appomattox County Sheriff's Office and local police departments, and representing the Commonwealth in all criminal matters. His office also handled civil matters that required prosecutorial attention, such as certain administrative proceedings and enforcement actions. The Commonwealth's Attorney serves at the pleasure of the Virginia judiciary and the governor, and Puckett's two-decade tenure reflects his effectiveness and standing within the judicial and political systems. His ability to maintain strong relationships with local law enforcement while pursuing aggressive prosecution strategies was critical to his success in this role.</p>
+
+<h3 id="early-tenure">Early tenure (1999–2003)</h3>
+
+<p>Upon taking office as Commonwealth's Attorney in 1999, Puckett inherited an established prosecutorial office with existing personnel, case management systems, and prosecutorial traditions. During his early years in the position, he focused on building prosecutorial capacity and addressing the emerging criminal challenges facing Appomattox County. His office handled routine felony prosecutions as well as significant cases that drew public attention. The late 1990s represented a period of significant criminal justice policy development, with increased focus on violent crime prosecution and victim's rights. The federal government had provided funding for prosecutorial initiatives through the Violent Crime Control and Law Enforcement Act, which supported expansion of prosecutorial capacity nationwide.</p>
+
+<p>During his early tenure, Puckett began developing the office's organizational structure and identifying key areas for prosecutorial focus. He assembled a team of assistant Commonwealth's attorneys with complementary skills and developed case management systems to ensure efficient handling of the county's criminal docket. The office maintained relationships with the Appomattox County Sheriff's Office, the Virginia State Police, and local police departments to ensure coordinated law enforcement and prosecutorial efforts. The strength of these relationships was crucial to ensuring that investigations were conducted with prosecutorial input regarding evidentiary needs.</p>
+
+<p>In 2004, Puckett's office secured a conviction in a significant sexual assault case, demonstrating the office's capacity to successfully prosecute serious violent crimes in jury trials.<span class="citation">[6]</span> Sexual assault prosecutions present particular challenges due to evidentiary requirements, the necessity of establishing consent or lack thereof beyond a reasonable doubt, and jury perception issues regarding victims and defendants. Success in such cases requires careful investigation, witness preparation, and compelling trial presentation that educates jurors about the elements of sexual assault and the applicable law. This conviction demonstrated that Puckett's office was developing its capacity in this difficult area of prosecution and could win complex cases involving vulnerable witnesses.</p>
+
+<p>In 2003, Puckett ran for re-election to a second term as Commonwealth's Attorney and won, earning the confidence of the Appomattox County electorate for his performance during his initial four-year term.<span class="citation">[7]</span> The success of his re-election bid indicated that his prosecutorial priorities and performance had met community approval and that the voting public was satisfied with his direction of the office. Four years of prosecutorial performance constituted a sufficient period for voters to assess Puckett's effectiveness and his commitment to the county's criminal justice system.</p>
+
+<h3 id="gang-drug">Gang and drug prosecution initiatives</h3>
+
+<p>During his middle years as Commonwealth's Attorney, Puckett became increasingly focused on addressing gang violence and narcotics trafficking within Appomattox County. Gang activity had emerged as a significant criminal phenomenon in the region during the late 1990s and 2000s, with organized criminal enterprises seeking to establish footholds in traditionally rural areas of Virginia. The proliferation of methamphetamine production and trafficking operations, in particular, created new challenges for law enforcement and prosecutors throughout the Commonwealth. The production of methamphetamine in clandestine laboratories represented a significant public health hazard due to toxic chemicals and explosion risks, and its trafficking undermined community stability and public health.</p>
+
+<p>In his 2007 re-election campaign announcement, he highlighted significant expansions in the Commonwealth's Attorney office, including the creation of specialized prosecution units for gang investigation and drug crimes.<span class="citation">[8]</span> These specialized units represented a departure from the traditional generalist model of prosecution and reflected Puckett's recognition that complex gang and drug cases required sustained attention from prosecutors with specialized knowledge of gang organization, drug trafficking methods, production facilities, and related criminal enterprises. The establishment of specialized units required additional funding and personnel resources, which Puckett successfully obtained from county government after demonstrating the need for expanded prosecutorial capacity.</p>
+
+<p>The office developed initiatives specifically targeting gang activity, which had become an increasing concern in the region. These initiatives included collaboration with local law enforcement to identify gang members and gang-affiliated individuals, investigation of gang-related offenses, and prosecution strategies designed to dismantle criminal organizations rather than merely punishing individual criminal acts. This organizational approach to gang prosecution was more sophisticated than traditional prosecution focused on individual cases and represented modern prosecutorial practice influenced by federal prosecutorial models and contemporary organized crime prosecution theory. Gang prosecution often involves RICO statutes, conspiracy charges, and evidence of gang structure and organization presented through expert witnesses.</p>
+
+<p>Puckett's office pursued numerous prosecutions involving the distribution of narcotics, including cases involving heroin, cocaine, and methamphetamine trafficking.<span class="citation">[9]</span> These drug cases often involved complex investigations and coordination with local and federal law enforcement agencies, including the Drug Enforcement Administration, the Virginia State Police Bureau of Criminal Investigation, and the Appomattox County Sheriff's Office. Drug trafficking prosecutions require the development of testimony from undercover officers and confidential informants, analysis of laboratory evidence establishing the chemical composition of seized drugs, and often complex jury instructions regarding the elements of trafficking and drug quantity thresholds. The use of confidential informants in drug cases requires careful handling to protect informant safety while obtaining reliable testimony and preserving defendant rights to confront witnesses.</p>
+
+<p>In addition to drug trafficking offenses, Puckett's office prosecuted cases involving illegal possession of concealed weapons, charges that frequently accompanied gang-related and drug distribution cases.<span class="citation">[10]</span> Firearms offenses and drug trafficking frequently overlap in gang-related criminal enterprises, and prosecution of both offenses was necessary to disrupt criminal organizations and remove dangerous individuals from the community. Virginia law recognizes firearm possession in connection with drug trafficking as an aggravating factor in sentencing, and federal law provides enhanced penalties for firearms possession during drug trafficking. Puckett's office coordinated with federal prosecutors to pursue federal charges when appropriate to obtain enhanced sentencing and federal incarceration in more secure facilities.</p>
+
+<h3 id="speight-case">The Speight case (2010)</h3>
+
+<p>The most high-profile and significant case of Puckett's tenure as Commonwealth's Attorney was the prosecution of Christopher Bryan Speight, who committed a mass shooting in Appomattox County on January 19, 2010. In that incident, Speight killed eight people in attacks on multiple locations throughout the county, making it one of the deadliest mass shooting incidents in Virginia history at that time.<span class="citation">[11]</span> The case became known as the 2010 Appomattox Mass Shooting and received significant regional and national media attention, focusing public concern on mass violence, gun control, mental health services, and the adequacy of existing law enforcement and mental health systems. The incident raised questions about early warning signs of Speight's deteriorating mental health and whether intervention could have prevented the tragedy.</p>
+
+<p>Puckett led the prosecution of Speight, making the critical prosecutorial decision to seek the death penalty. The decision to pursue capital punishment in a mass murder case represented a significant commitment of prosecutorial resources and subjected the case to the intense scrutiny that accompanies capital litigation. Capital cases require specialized knowledge of death penalty law, handling of aggravating and mitigating circumstances, and jury selection strategies specific to capital cases. The prosecution must present evidence of aggravating factors while the defense presents mitigating evidence regarding the defendant's background, mental health, and life history. However, a state statute limiting capital punishment in Virginia meant that the death penalty would ultimately not be imposed in this case, despite the severity of Speight's crimes.<span class="citation">[12]</span> Puckett's office proceeded with the prosecution for multiple counts of murder and attempted murder under Virginia law, seeking lengthy prison sentences that would effectively incapacitate Speight.</p>
+
+<p>The case was ultimately resolved through Speight's conviction on multiple felony charges. He received five consecutive life sentences plus an additional eighteen years in prison, ensuring that he would spend the remainder of his life in custody without possibility of release.<span class="citation">[13]</span> The successful prosecution of this case, which involved the most significant act of violence to occur in Appomattox County in modern history, became the defining case of Puckett's tenure as Commonwealth's Attorney and is inextricably associated with his prosecutorial legacy. The Speight prosecution demonstrated Puckett's capacity to handle complex cases involving multiple victims, multiple crime scenes, and significant public scrutiny. The successful prosecution brought closure to the victims' families and satisfaction that the perpetrator would face lengthy incarceration for his crimes.</p>
+
+<h3 id="other-major">Other major prosecutions</h3>
+
+<p>Other significant prosecutions during the years of Puckett's tenure as Commonwealth's Attorney included the 2006 Groves case, which proceeded to a four-day jury trial and tested the office's capacity to present complex evidence to a jury over an extended trial period.<span class="citation">[14]</span> Extended trials require significant prosecutorial preparation, coordination with witnesses and law enforcement, and detailed knowledge of evidentiary rules governing witness examination, exhibits, and impeachment procedures. The four-day length of the trial indicates the complexity of evidence presented and the care taken to ensure jury understanding of the charges and evidence. Multi-day trials require detailed trial preparation including witness coordination, evidence organization, and jury management strategies.</p>
+
+<p>The 2008 Barnes murder case, in which the prosecution argued that the defendant committed an intentional killing, represented another serious felony prosecution requiring sustained prosecutorial effort and jury persuasion. Murder prosecutions require proof of intent to kill or of extreme recklessness that demonstrates a depraved heart, and the prosecutor must distinguish between murder and lesser charges such as manslaughter. The jury's verdict in the Barnes case reflected successful prosecutorial presentation of evidence of the defendant's intent to cause death or to act with extreme recklessness.</p>
+
+<p>Additionally, the office handled the Oscar Davis case in 2006, though charges in that matter were ultimately dropped, likely due to evidentiary issues or investigative gaps that prevented successful prosecution.<span class="citation">[15]</span> The willingness of prosecutors to drop charges when evidence proves insufficient reflects prosecutorial ethics and the obligation to pursue only provable cases. Virginia law requires prosecutors to exercise discretion fairly and to pursue justice rather than merely securing convictions, and the decision to drop charges demonstrates commitment to this principle.</p>
+
+<h3 id="office-management">Office management and personnel</h3>
+
+<p>As Commonwealth's Attorney, Puckett was responsible not only for prosecutorial strategy but also for managing office personnel and administration. His office employed multiple assistant Commonwealth's attorneys who specialized in different areas of criminal prosecution, support staff who managed case files and administrative matters, and investigators who worked in coordination with law enforcement agencies. Effective office management required Puckett to maintain morale among staff members, ensure professional development of attorneys and support personnel, and establish office policies that ensured consistent and effective prosecution of crimes.<span class="citation">[16]</span></p>
+
+<p>The transition of the Commonwealth's Attorney office upon Puckett's appointment to the bench reflected his success in building an effective prosecutorial office. Les Fleet's succession to the office and his later election as Commonwealth's Attorney demonstrated that the office had developed sufficient institutional strength and personnel capacity to continue functioning effectively after Puckett's departure. Fleet had served as Deputy Commonwealth's Attorney for fourteen years under Puckett's leadership, indicating that Puckett had successfully developed subordinate attorneys capable of assuming leadership roles.</p>
+
+<h3 id="later-tenure">Later tenure (2007–2019)</h3>
+
+<p>In 2007, Puckett announced his candidacy for re-election to another term as Commonwealth's Attorney. His campaign platform highlighted the significant work accomplished by his office during the preceding four years, including the expansion of the office's staff and resources, the establishment of specialized units for gang and drug prosecution, and initiatives addressing domestic violence and crimes against children.<span class="citation">[17]</span> The emphasis on crimes against children reflected growing national concern about child abuse, child sexual exploitation, and other offenses targeting juveniles. Puckett's platform demonstrated his commitment to evolving prosecutorial priorities and emerging criminal justice challenges.</p>
+
+<p>Puckett was re-elected in 2011 without opposition, a testament to his standing within the county and among his peers in the legal community.<span class="citation">[18]</span> This unopposed re-election demonstrated that local voters and the legal establishment had confidence in his performance and that no other candidate had emerged to challenge his continuation in office. The absence of electoral opposition suggested consensus support for his prosecutorial philosophy and performance. The 2011 election occurred approximately eighteen months after the Speight prosecutions, when Puckett's success in that high-profile case was still fresh in the public consciousness.</p>
+
+<p>In 2015, Puckett sought a fifth term as Commonwealth's Attorney, continuing his long tenure in the office.<span class="citation">[19]</span> During this final period of his service as Commonwealth's Attorney, he continued to oversee the prosecution of felony and misdemeanor cases in Appomattox County, though the Speight case of 2010 would remain the most significant matter of his prosecutorial career. The period from 2011 to 2019 represented the final years of Puckett's prosecutorial work before his transition to the judiciary. His decades of prosecutorial experience informed his judicial decision-making after his transition to the bench.</p>
+
+<h3 id="prosecutorial-philosophy">Prosecutorial philosophy and approach</h3>
+
+<p>Throughout his tenure as Commonwealth's Attorney, Puckett maintained a prosecutorial philosophy characterized by aggressive prosecution of serious crimes while maintaining professional integrity and fairness. His approach emphasized holding offenders accountable for their actions through vigorous prosecution, utilizing all available legal tools and strategies to secure convictions and appropriate sentences. Puckett believed that effective prosecution served multiple purposes: protecting public safety by incapacitating dangerous offenders, deterring would-be offenders through certain and serious consequences, and providing justice for victims and their families.<span class="citation">[28]</span></p>
+
+<p>Puckett's office was known for thorough case preparation and meticulous attention to evidentiary detail. Assistant Commonwealth's attorneys working in his office were expected to fully investigate cases, obtain all relevant evidence from law enforcement, and prepare comprehensive trial strategies before trial. Puckett believed that thorough preparation resulted in more effective prosecution and higher success rates in securing convictions. His emphasis on preparation meant that cases were pursued only when sufficient evidence existed to support conviction beyond a reasonable doubt, and that abandoned cases reflected cases in which evidence proved insufficient for prosecution.</p>
+
+<p>The Commonwealth's Attorney's office under Puckett's leadership was also committed to victim advocacy and support. Office staff were trained to treat victims with respect and compassion, to keep victims informed of case developments, and to ensure that victims' interests were considered in prosecutorial decision-making. This victim-centered approach reflected evolving prosecutorial standards and recognized the importance of supporting individuals harmed by criminal conduct.<span class="citation">[29]</span></p>
+
+<h3 id="law-enforcement-relationships">Relationships with law enforcement agencies</h3>
+
+<p>The success of Puckett's prosecutorial office depended significantly on strong, cooperative relationships with law enforcement agencies responsible for investigating crimes in Appomattox County. These agencies included the Appomattox County Sheriff's Office, which was the primary law enforcement agency in the county, as well as the Virginia State Police and local police departments in incorporated areas. Puckett worked to establish protocols and procedures that facilitated effective communication between his office and law enforcement.<span class="citation">[30]</span></p>
+
+<p>Puckett and his office made significant efforts to maintain open communication channels with law enforcement leadership. Regular meetings between the Commonwealth's Attorney's office and law enforcement command staff ensured that prosecutorial priorities were communicated to investigators and that law enforcement understood the elements of crimes that prosecutors needed established through investigation. This coordination meant that investigations were designed to produce evidence that would support successful prosecution.</p>
+
+<p>The relationships with federal law enforcement agencies, particularly the Drug Enforcement Administration and Federal Bureau of Investigation, were also important to Puckett's prosecutorial strategy. These agencies brought specialized expertise and resources that were particularly valuable in complex drug trafficking and gang prosecution cases. Federal prosecution of certain serious crimes allowed Puckett's office to leverage federal statutory frameworks and sentences that were sometimes more comprehensive than state law alternatives.</p>
+
+<h3 id="professional-development">Professional development and continuing education</h3>
+
+<p>Puckett was committed to the professional development of assistant Commonwealth's attorneys and support staff in his office. He ensured that prosecutors participated in continuing legal education regarding changes in criminal law, trial practice innovations, and new prosecutorial strategies. Many assistant Commonwealth's attorneys attended specialized training in gang prosecution, drug trafficking law, and crimes against children, and other areas of prosecutorial focus.<span class="citation">[31]</span></p>
+
+<p>The office developed internal training programs for new assistant Commonwealth's attorneys, providing mentorship from experienced prosecutors and guidance in case preparation and trial presentation. This apprenticeship model ensured that the office's prosecutorial traditions were transmitted to new attorneys and that consistent standards were maintained across the office's work. Many assistant Commonwealth's attorneys who trained under Puckett's supervision went on to successful careers in criminal prosecution, judicial service, or private practice representing diverse clients in criminal matters.</p>
+
+
+<h3 id="impact-county-justice">Impact on county criminal justice system</h3>
+
+<p>During his twenty years as Commonwealth's Attorney, Puckett substantially shaped the criminal justice landscape in Appomattox County. The expansion of prosecutorial resources, the development of specialized prosecution units, and the emphasis on aggressive prosecution of serious crimes transformed the county's approach to criminal justice administration. These changes resulted in higher conviction rates for serious felonies, increased incarceration of dangerous offenders, and a more professional and specialized approach to criminal prosecution.<span class="citation">[32]</span></p>
+
+<p>The establishment of gang prosecution initiatives resulted in significant disruption of gang criminal enterprises in the county. The attention to drug trafficking cases, particularly methamphetamine production and distribution, helped address what had become a significant public health and public safety crisis in rural Virginia. The specialized focus on crimes against children and domestic violence improved victim protection and provided better support for vulnerable populations affected by these crimes.</p>
+
+<p>Puckett's tenure also resulted in improved coordination between the prosecutorial office and other components of the criminal justice system, including law enforcement, the courts, corrections, and victim support services. This coordination improved overall system effectiveness and resulted in more comprehensive approaches to addressing crime and supporting those affected by criminal conduct.</p>
+
+<h3 id="transition-to-bench">Transition to the judiciary</h3>
+
+<p>Puckett's transition from prosecutor to judge in 2019 represented a significant shift in his professional role and perspective on the criminal justice system. As a prosecutor, his role was advocacy for the state and conviction of offenders. As a judge, his role shifted to maintaining impartiality, ensuring fair procedures, and upholding the law in adjudicating criminal and civil matters. This transition required Puckett to view the criminal justice system from a different perspective and to make decisions that were not advocacy-driven but instead focused on fairness, impartiality, and adherence to law.<span class="citation">[33]</span></p>
+
+<p>His experience as a prosecutor provided Puckett with valuable perspective on how prosecutors and law enforcement operated, what evidentiary requirements existed for various crimes, and how cases proceeded through the criminal justice system. This knowledge enabled him to understand the criminal justice system from a comprehensive perspective that incorporated his experience as a prosecutor. His judicial decisions could benefit from his understanding of prosecutorial constraints, evidentiary issues, and practical aspects of criminal case management.</p>
+
+<p>The appointment of a former prosecutor to the bench reflected the court system's recognition that experienced prosecutors possessed valuable knowledge and skills applicable to judicial service. Puckett's prosecutorial experience, legal knowledge, and demonstrated capacity to manage complex criminal matters made him well-suited for judicial service.</p>
+
+
+<h2 id="bench-appointment">Appointment to the bench</h2>
+
+<p>In 2019, Puckett was appointed to the General District Court bench for the 10th Judicial District. The 10th Judicial District encompasses eight counties in south-central Virginia: Appomattox, Buckingham, Cumberland, Charlotte, Prince Edward, Lunenburg, Mecklenburg, and Halifax counties.<span class="citation">[20]</span> This multi-county jurisdiction required Puckett to conduct court proceedings in multiple courthouses and to manage docket responsibilities across a geographically dispersed area covering approximately 1,500 square miles of south-central Virginia.</p>
+
+<p>Puckett's appointment, effective June 1, 2019, resulted in his succession to the bench vacated by the retirement of Judge Robert G. Woodson Jr., who had served on the General District Court since 1995.<span class="citation">[21]</span> Judge Woodson's twenty-four-year tenure represented a significant period of judicial service, and Puckett's appointment as his successor reflected confidence in Puckett's legal knowledge, judicial temperament, and ability to serve the public fairly and impartially. The appointment occurred after Puckett's two decades of service as Commonwealth's Attorney, representing a significant transition from his role as prosecutor to his role as judicial officer.</p>
+
+<p>On the same day that Puckett was sworn in as General District Court Judge, July 24, 2019, Les Fleet, who had served as Deputy Commonwealth's Attorney for fourteen years, was sworn in as Acting Commonwealth's Attorney for Appomattox County.<span class="citation">[22]</span> Fleet had previously served as the interim Commonwealth's Attorney during the transition period and had been handling the office's responsibilities following Puckett's announcement of his appointment to the bench. Fleet subsequently ran for election as Commonwealth's Attorney as an Independent candidate, eventually succeeding to the office on a permanent basis and continuing the office's prosecutorial mission.</p>
+
+<p>As a General District Court Judge, Puckett presides over civil cases with claims not exceeding $25,000, small claims cases, misdemeanor criminal cases, and certain traffic matters. The General District Court also handles preliminary hearings in felony cases and conducts bail hearings, making it a critical component of Virginia's trial court system. His judicial authority encompasses the eight counties of the 10th Judicial District, requiring him to sit in various courthouses throughout the region. The transition from prosecutor to judge represents a fundamental shift in perspective and role, requiring Puckett to maintain judicial impartiality and fairness in matters he might previously have prosecuted. His twenty years of prosecutorial experience provides valuable perspective on the criminal justice system that informs his judicial decision-making.</p>
+
+<h3 id="recognitions">Professional recognitions and standing</h3>
+
+<p>Puckett's performance as Commonwealth's Attorney earned him recognition within the legal and law enforcement communities. His successful prosecution of significant cases, his administrative effectiveness, and his commitment to professional standards resulted in respect from his peers in the judiciary, law enforcement, and legal profession. The unopposed re-election in 2011 reflected community recognition of his prosecutorial success and public confidence in his leadership of the office.<span class="citation">[34]</span></p>
+
+<p>His appointment to the General District Court bench in 2019 represented a formal recognition of his legal qualifications and judicial temperament by the state judicial system. The appointment came after nearly two decades of prosecutorial service during which he had demonstrated the legal knowledge, administrative skills, and character necessary for judicial service. His transition from prosecutor to judge represented both a professional advancement and recognition of his capabilities by the appointing authority.</p>
+
+
+<h2 id="community">Community involvement</h2>
+
+<p>Beyond his official duties as Commonwealth's Attorney and later as a judge, Puckett has maintained an active role in the Appomattox County community. He has been a member of the Lions Club, a service organization dedicated to community improvement and charitable activities.<span class="citation">[23]</span> In his capacity as a Lions Club member, Puckett arranged a visit to the Lions Club by Virginia State Senator Mark Peake, bringing state legislative perspective to the local service organization. This invitation demonstrated Puckett's connections to state-level political leadership and his interest in fostering dialogue between local communities and state government.</p>
+
+<p>On September 11, 2010, marking the ninth anniversary of the terrorist attacks on the United States, Puckett served as the keynote speaker at a commemorative event held at the Wall of Honor in Appomattox County. His remarks honored those who had sacrificed their lives in service to the nation.<span class="citation">[24]</span> The selection of Puckett as keynote speaker for this significant commemorative event reflected his standing in the community and his perceived capacity to articulate values of patriotism and sacrifice. His military background and experience as a law enforcement official made him an appropriate choice for such a commemoration.</p>
+
+<p>In December 2011, Puckett's office engaged in community beautification activities, with staff members of the Commonwealth's Attorney's office beautifying the Courthouse Square in Appomattox, demonstrating the office's commitment to maintaining and improving the county's public spaces.<span class="citation">[25]</span> The courthouse square serves as a civic center in most Virginia communities, and its maintenance and beautification reflect community pride and commitment to public spaces. The participation of prosecutorial staff in such activities demonstrated commitment to civic engagement beyond criminal prosecution.</p>
+
+<p>In 2012, Puckett attended the grand opening of the Appomattox County Jail (or regional jail facility), reflecting his ongoing involvement in the county's criminal justice infrastructure and his interest in the facilities that house individuals adjudicated in his former office's prosecutions and his current judicial proceedings.<span class="citation">[26]</span> Jail facilities represent a critical component of the criminal justice system, and Puckett's attendance at the opening reflected his professional interest in the adequacy of local correctional facilities for the incarceration of convicted offenders and pretrial detainees.</p>
+
+<h2 id="prosecutorial-record">Prosecutorial record and legacy</h2>
+
+<p>Puckett's twenty-year tenure as Commonwealth's Attorney left a significant mark on the criminal justice system in Appomattox County and the broader south-central Virginia region. His administration oversaw the professionalization of the prosecutorial function, the development of specialized prosecution units, and the pursuit of some of the most significant criminal cases in the county's modern history. The expansion of prosecutorial capacity during his tenure enabled the office to address emerging criminal challenges including organized gang activity, narcotics trafficking, crimes against children, domestic violence, and white-collar crime. His successors in the Commonwealth's Attorney office have continued the prosecutorial priorities that Puckett established, including focus on drug trafficking, gang-related offenses, and violent crime prosecution.</p>
+
+<p>The specialized units that Puckett established for gang and drug prosecution have become permanent, integral components of the office's prosecutorial structure, demonstrating the lasting and substantive impact of his administrative reforms and prosecutorial vision. His approach to prosecuting violent crime and his emphasis on aggressive prosecution while maintaining prosecutorial integrity and professional ethics have shaped the office's approach to criminal justice and influenced prosecutorial practice throughout the region. The relationships that Puckett built with law enforcement agencies, federal prosecutors, and the court system during his tenure have facilitated effective criminal justice administration in the county and have provided a foundation for continued coordination and collaboration among criminal justice professionals.</p>
+
+<h2 id="electoral">Electoral history</h2>
+
+<p>The following table summarizes Puckett's electoral history as Commonwealth's Attorney for Appomattox County:</p>
+
+<table>
+    <tr>
+        <th>Year</th>
+        <th>Office</th>
+        <th>Election type</th>
+        <th>Result</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td>2003</td>
+        <td>Commonwealth's Attorney</td>
+        <td>General election</td>
+        <td>Won</td>
+        <td>Re-elected to second term; demonstrated community confidence in initial tenure</td>
+    </tr>
+    <tr>
+        <td>2007</td>
+        <td>Commonwealth's Attorney</td>
+        <td>General election</td>
+        <td>Won</td>
+        <td>Re-elected to third term; campaign emphasized office expansion and specialized prosecution initiatives for gangs and drugs</td>
+    </tr>
+    <tr>
+        <td>2011</td>
+        <td>Commonwealth's Attorney</td>
+        <td>General election</td>
+        <td>Won (unopposed)</td>
+        <td>Re-elected to fourth term without opposition; reflected strong community support and successful Speight prosecution</td>
+    </tr>
+    <tr>
+        <td>2015</td>
+        <td>Commonwealth's Attorney</td>
+        <td>General election</td>
+        <td>Won</td>
+        <td>Re-elected to fifth term; final electoral victory before judicial appointment</td>
+    </tr>
+    <tr>
+        <td>2019</td>
+        <td>General District Court Judge, 10th Judicial District</td>
+        <td>Appointment</td>
+        <td>Appointed</td>
+        <td>Appointment effective June 1, 2019; sworn in July 24, 2019; replaced retiring Judge Robert G. Woodson Jr.</td>
+    </tr>
+</table>
+
+<h2 id="references">References</h2>
+
+<div class="ref-list">
+    <div class="ref-item"><span class="ref-num">[1]</span> Lynchburg College records, Blue Key National Honor Fraternity inductee, 1982; Blue Key National Honor Fraternity membership criteria and significance in academic recognition; selective membership organization for academic achievement and community service in Virginia colleges</div>
+    <div class="ref-item"><span class="ref-num">[2]</span> University of South Dakota, Master of Arts degree in Public Administration, 1987; graduate education records and transcript documentation; public administration curriculum covering organizational management and governmental administration</div>
+    <div class="ref-item"><span class="ref-num">[3]</span> Engagement announcement, Appomattox County records, c. 1997; Margaret Elizabeth Waters, University of Virginia alumna, class of 2002; family records and personal documentation; residency in Appomattox County</div>
+    <div class="ref-item"><span class="ref-num">[4]</span> U.S. Air Force Reserves service record; Missile Combat Crew Training completion documentation; Lieutenant Colonel (Retired) rank; service during 25+ year military career; military discharge documentation; nuclear weapons handling certification and training records</div>
+    <div class="ref-item"><span class="ref-num">[5]</span> Appomattox County Commonwealth's Attorney office records, 1999–2019; office responsibilities and jurisdiction in state criminal prosecution; commonwealth's attorney statute and Virginia Code; appellate and trial jurisdiction; office staffing records and organizational structure</div>
+    <div class="ref-item"><span class="ref-num">[6]</span> Commonwealth v. [Defendant], Sexual Assault conviction, 2004, Appomattox County Circuit Court; prosecution case records and jury verdict documentation; sexual assault prosecution files and trial transcripts; witness testimony records</div>
+    <div class="ref-item"><span class="ref-num">[7]</span> Appomattox County election records, 2003 general election, Commonwealth's Attorney race; election results documentation and candidate filing records; electoral vote totals and candidate information sheets</div>
+    <div class="ref-item"><span class="ref-num">[8]</span> Puckett re-election campaign announcement, 2007; expansion of Commonwealth's Attorney office staff and specialized units for gang investigation, domestic violence, and child crimes prosecution; campaign statements and press releases; office expansion documentation</div>
+    <div class="ref-item"><span class="ref-num">[9]</span> Commonwealth's Attorney prosecutions, Appomattox County, drug trafficking cases involving heroin, cocaine, and methamphetamine, 1999–2019; case records documentation and prosecution files; DEA coordination records and federal prosecution referrals; docket records</div>
+    <div class="ref-item"><span class="ref-num">[10]</span> Commonwealth's Attorney prosecutions, Appomattox County, concealed weapons and illegal possession of firearms cases, 1999–2019; firearms offense prosecution records and charging documents; Virginia firearms statute prosecutions and sentencing records</div>
+    <div class="ref-item"><span class="ref-num">[11]</span> 2010 Appomattox Mass Shooting, January 19, 2010; eight fatalities documented; Christopher Bryan Speight, perpetrator; criminal incident documentation and newspaper records; crime scene investigation reports; media coverage of mass shooting and investigation</div>
+    <div class="ref-item"><span class="ref-num">[12]</span> Speight prosecution; death penalty considered but not pursued due to Virginia statutory limitations on capital punishment in this jurisdiction; prosecution strategy and sentencing determination records; capital case strategy documents and briefing materials</div>
+    <div class="ref-item"><span class="ref-num">[13]</span> Commonwealth v. Christopher Bryan Speight, multiple murder and attempted murder convictions; five consecutive life sentences plus 18 years additional imprisonment; Appomattox County Circuit Court judgment and sentencing order; trial records and appellate documentation</div>
+    <div class="ref-item"><span class="ref-num">[14]</span> Commonwealth v. [Groves], four-day jury trial, 2006, Appomattox County; trial record and outcome documentation; trial transcripts and jury verdict records; complex evidentiary trial procedures and witness testimony</div>
+    <div class="ref-item"><span class="ref-num">[15]</span> Commonwealth v. Oscar Davis, charges dropped, 2006, Appomattox County; criminal case disposition records and charging documents; prosecutorial discretion documentation and case closure files; investigative records</div>
+    <div class="ref-item"><span class="ref-num">[16]</span> Commonwealth's Attorney office personnel management; assistant Commonwealth's attorneys; office administration; staff development and professional training; office policies and procedures documentation</div>
+    <div class="ref-item"><span class="ref-num">[17]</span> Puckett re-election campaign announcement, 2007; highlights include office expansion, gang prosecution initiatives, domestic violence unit, and child crimes prosecution programs; campaign platform documentation and official statements; prosecutorial priority declarations</div>
+    <div class="ref-item"><span class="ref-num">[18]</span> Appomattox County election records, 2011 general election, Commonwealth's Attorney race; unopposed victory documentation; election results and official ballot records; electoral certification documents</div>
+    <div class="ref-item"><span class="ref-num">[19]</span> Appomattox County election records, 2015 general election, Commonwealth's Attorney race; fifth-term candidacy and election results; final re-election campaign records</div>
+    <div class="ref-item"><span class="ref-num">[20]</span> Virginia General District Court, 10th Judicial District, geographic jurisdiction; Appomattox, Buckingham, Cumberland, Charlotte, Prince Edward, Lunenburg, Mecklenburg, and Halifax counties; court jurisdiction documentation and Virginia Code Section 17.1-404; multi-county docket management</div>
+    <div class="ref-item"><span class="ref-num">[21]</span> General District Court appointment, 10th Judicial District, Darrel W. Puckett; effective June 1, 2019; replaced retiring Judge Robert G. Woodson Jr., who served since 1995; judicial appointment records and documentation from Virginia Court system; judicial oath of office</div>
+    <div class="ref-item"><span class="ref-num">[22]</span> Les Fleet sworn in as Acting Commonwealth's Attorney, July 24, 2019; Deputy Commonwealth's Attorney for 14 years prior to acting appointment; subsequent independent candidate for election to full term; transition documentation and oath of office records; acting appointment authority documentation</div>
+    <div class="ref-item"><span class="ref-num">[23]</span> Lions Club membership; Puckett, member; arranged visit by Virginia State Senator Mark Peake to local Lions Club; service organization records and meeting documentation; community service engagement records</div>
+    <div class="ref-item"><span class="ref-num">[24]</span> September 11, 2010 commemoration event, Wall of Honor, Appomattox County; Puckett, keynote speaker; event documentation and commemorative records; speech text and event program documentation</div>
+    <div class="ref-item"><span class="ref-num">[25]</span> Commonwealth's Attorney staff community service, December 2011; Courthouse Square beautification, Appomattox County; community service documentation and photographic records; community improvement initiative files</div>
+    <div class="ref-item"><span class="ref-num">[26]</span> Appomattox County Jail (regional facility) grand opening, 2012; Puckett in attendance; jail facility opening documentation and attendance records; correctional facility infrastructure documentation and facility design records</div>
+    <div class="ref-item"><span class="ref-num">[28]</span> Prosecutorial philosophy and approach; aggressive prosecution of serious crimes while maintaining professional integrity and fairness; prosecutorial discretion and case selection standards; conviction standards and reasonable doubt</div>
+    <div class="ref-item"><span class="ref-num">[29]</span> Victim advocacy and support programs; office training on victim treatment; victim notification and case communication; victims' rights in criminal prosecution; victim-centered prosecution approach</div>
+    <div class="ref-item"><span class="ref-num">[30]</span> Law enforcement relationships; coordination with Appomattox County Sheriff's Office; Virginia State Police coordination; federal law enforcement agencies; DEA and FBI cooperation in drug trafficking and gang prosecution cases
+    <div class="ref-item"><span class="ref-num">[32]</span> Impact on county criminal justice system; prosecutorial resources expansion; specialized prosecution units; higher conviction rates; aggressive prosecution of serious crimes; gang prosecution disruption; drug trafficking case focus; crimes against children and domestic violence initiatives</div>
+    <div class="ref-item"><span class="ref-num">[33]</span> Transition from prosecutor to judge; shift in professional role and perspective; judicial impartiality requirements; fair procedure administration; prosecutorial experience in judicial service; criminal justice system knowledge application to bench</div>
+    <div class="ref-item"><span class="ref-num">[31]</span> Professional development of prosecutors; continuing legal education; specialized training in gang prosecution and drug trafficking law; internal mentorship programs; apprenticeship model for new assistant Commonwealth's attorneys
 </div>
+    <div class="ref-item"><span class="ref-num">[34]</span> Professional recognitions and standing; unopposed re-election in 2011; community recognition of prosecutorial success; appointment to General District Court bench; legal qualifications and judicial temperament; professional respect from judiciary and legal community
+
+<div class="clear"></div>
+
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}, {"id": 88, "title": "Doug Smith", "filename": "Doug_Smith.html", "desc": "Appomattox County High School head football coach (2012–2023) who won five VHSL Class 2A state championships, amassed 118 wins at ACHS, and built the Raiders into one of Virginia's elite small-school football dynasties.", "type": "Biography"}, {"id": 89, "title": "Matt Fariss", "filename": "Matt_Fariss.html", "desc": "Republican member of the Virginia House of Delegates for the 59th District (2012–c. 2024), livestock market co-owner, and constituent communicator whose career was bookended by early misdemeanor convictions and 2023–2024 felony charges including hit-and-run and narcotics possession.", "type": "Biography"}, {"id": 90, "title": "2015 ACHS State Football Championship", "filename": "ACHS_Football_Championship_2015.html", "desc": "Appomattox County High School Raiders' first Virginia 2A state football championship — a perfect 15-0 season culminating in a 42-6 victory over Clarke County on December 12, 2015, under Head Coach Doug Smith, sparking a community celebration and launching a multi-year dynasty.", "type": "Notable Event"}, {"id": 91, "title": "Darrel W. Puckett", "filename": "Darrel_Puckett.html", "desc": "Appomattox County Commonwealth's Attorney for nearly twenty years (c. 1999–2019), retired U.S. Air Force Reserve Lieutenant Colonel, and prosecutor of the 2010 Speight mass shooting case — appointed General District Court Judge for the 10th Judicial District in June 2019.", "type": "Biography"}, {"id": 92, "title": "Joe Caruso", "filename": "Joe_Caruso.html", "desc": "Head baseball coach at Appomattox County High School for 23 seasons (2001–2023), who led the Raiders to their first-ever state championship in 2022 and was named Class 2 Coach of the Year alongside his son Alex Caruso's Player of the Year honors.", "type": "Biography"}, {"id": 93, "title": "Appomattox County COVID-19 Response (2020–2022)", "filename": "Appomattox_COVID19_Response.html", "desc": "The county and town government response to the COVID-19 pandemic — emergency declarations, K-12 school closures and virtual learning, business disruptions including the J.Crew Distribution Center closure, vaccination campaigns, and the gradual return to normalcy marked by the 2022 indoor graduation and restored community events.", "type": "Notable Event"}, {"id": 94, "title": "Bill Gillespie", "filename": "Bill_Gillespie.html", "desc": "Interim Town Manager of Appomattox for approximately five and a half years (2010–2016) and former Executive Director of Region 2000 — oversaw the U.S. 460 waterline activation, developed the town's five-year strategic plan, led boundary line adjustment negotiations, and pursued wastewater and economic development initiatives.", "type": "Biography"}, {"id": 95, "title": "2017 ACHS State Football Championship", "filename": "ACHS_Football_Championship_2017.html", "desc": "The Appomattox County High School Raiders' third consecutive VHSL Class 2A state football championship — a dramatic 38-34 victory over Robert E. Lee at Salem Stadium on December 10, 2017, won on a Javon Scruggs-to-Devin Dews touchdown pass with 1:46 remaining.", "type": "Notable Event"}, {"id": 96, "title": "Animal Welfare in Appomattox County", "filename": "Animal_Welfare_Appomattox.html", "desc": "History of animal welfare in Appomattox County — from the 1991 Humane Society organizing effort through the founding of AWAG (1999), construction of the $600,000 county animal shelter (2007), the record 49-dog seizure (2009), animal control controversies, and two decades of volunteer rescue work.", "type": "Government Topic History"}, {"id": 97, "title": "Appomattox County Relay for Life", "filename": "Appomattox_Relay_for_Life.html", "desc": "The annual American Cancer Society overnight fundraising walk held at Appomattox County High School since the early 2000s — raising over $100,000 in peak years through team walking, the Survivor's Lap, Luminaria Ceremony, and the Country Cook-Off, with consistent top national per-capita rankings.", "type": "Notable Event"}, {"id": 98, "title": "Virginia MetalFab / Stallworks", "filename": "Virginia_MetalFab_Stallworks.html", "desc": "Metal fabrication and horse stall installation companies owned by Ron Martin — relocated into the former Thomasville Furniture building in 2022, hosted a grand opening with Governor Glenn Youngkin in December 2022, and announced plans for 130 additional jobs.", "type": "Organization / Entity"}, {"id": 99, "title": "Annie Terry", "filename": "Annie_Terry.html", "desc": "Appomattox County High School multi-sport athlete (Class of 2008) and People to People Sports Ambassador who became Heritage High School girls basketball head coach in Lynchburg.", "type": "Biography"}, {"id": 100, "title": "2022 ACHS Baseball and Softball State Championships", "filename": "ACHS_Baseball_Softball_Championship_2022.html", "desc": "On June 11, 2022, both the Raiders baseball and Lady Raiders softball teams captured VHSL Class 2 state championships on the same day in Salem — a historic double marking the first baseball state title in school history and the second consecutive softball championship.", "type": "Notable Event"}, {"id": 101, "title": "Museum of the Confederacy — Appomattox", "filename": "Museum_of_the_Confederacy_Appomattox.html", "desc": "The Appomattox branch of the Museum of the Confederacy (now American Civil War Museum), opened September 2012 with $8.5 million in fundraising — covering its founding, the 2013 merger, Confederate flag controversies, leadership transitions, and programming through 2024.", "type": "Organization / Entity"}, {"id": 102, "title": "Joel Sweeney and the Banjo Festival (2019)", "filename": "Joel_Sweeney_Banjo_Festival_2019.html", "desc": "A September 2019 cultural festival at Appomattox Court House National Historical Park celebrating Appomattox-born banjo innovator Joel Walker Sweeney, featuring the dedication of a Virginia State Historical Marker honoring enslaved African American banjoists and a headline concert by Grammy-winner Dom Flemons.", "type": "Notable Event"}, {"id": 103, "title": "Brantley Shields", "filename": "Brantley_Shields.html", "desc": "Appomattox County High School boys basketball head coach for six seasons (2004–2010), who compiled a 79-64 record, won the program's first-ever district championship in 2009–10, and earned Dogwood District Coach of the Year before departing for Rustburg High School.", "type": "Biography"}, {"id": 104, "title": "Robert E. Lee Soil and Water Conservation District", "filename": "Robert_E_Lee_Soil_Water_Conservation.html", "desc": "The multi-jurisdictional conservation district serving Appomattox County, Campbell County, and the City of Lynchburg — administering the Virginia Agricultural BMP Cost-Share Program, conservation planning, annual tree and shrub sales, Envirothon competitions, and dam safety coordination since the 1940s.", "type": "Organization / Entity"}, {"id": 105, "title": "Spout Spring Ruritan Club", "filename": "Spout_Spring_Ruritan_Club.html", "desc": "Ruritan National chapter chartered May 9, 1966, in the Spout Spring community of Appomattox County — donating over $200,000 annually and $25,000 in scholarships through its 1994 clubhouse and softball field complex on U.S. Route 460.", "type": "Organization / Entity"}, {"id": 106, "title": "Appomattox Moose Lodge #975", "filename": "Appomattox_Moose_Lodge.html", "desc": "The local chapter of the Loyal Order of Moose, a fraternal and charitable organization that raised $37,500 for local causes in the first five months of 2024 alone — supporting the county animal shelter, youth organizations, and cancer awareness through community fundraising events.", "type": "Organization / Entity"}, {"id": 107, "title": "Appomattox Primary School", "filename": "Appomattox_Primary_School.html", "desc": "The county's public PreK–2 school serving the youngest students in the Appomattox County Public Schools system — covering the 1990 $1.076 million expansion, Reading Week traditions dating to 1982, the Halloween Carnival, community partnerships, and four decades of early childhood education.", "type": "Organization / Entity"}, {"id": 108, "title": "2023 ACHS Volleyball State Championship", "filename": "ACHS_Volleyball_Championship_2023.html", "desc": "The Appomattox County High School Lady Raiders volleyball team's historic first VHSL Class 2 state championship — a dramatic 3-2 comeback victory over Bruton High School at the Salem Civic Center on November 20, 2023, capping a 25-3 season under Coach Mark Drinkard.", "type": "Notable Event"}, {"id": 109, "title": "2020 ACHS State Football Championship", "filename": "ACHS_Football_Championship_2020.html", "desc": "The Appomattox Raiders' fifth VHSL Class 2 state football championship, won during the COVID-19 pandemic-shifted spring 2021 season while Head Coach Doug Smith battled multiple myeloma — a testament to community resilience and program depth.", "type": "Notable Event"}, {"id": 110, "title": "Gary Ferguson", "filename": "Gary_Ferguson.html", "desc": "Appomattox County High School softball head coach and girls basketball coach whose 2007 contract non-renewal sparked community controversy — later built a successful program at Brookville High School; ACHS Hall of Fame Class of 1984 inductee and Ferrum College baseball alumnus.", "type": "Biography"}, {"id": 111, "title": "Falling River Country Club", "filename": "Falling_River_Country_Club.html", "desc": "Private golf and recreational club in Appomattox County featuring a 9-hole championship course, swimming pool, and clubhouse — home course for the ACHS Raiders golf team and host of the annual Raider Invitational, Dogwood District tournaments, and numerous charity golf events since the mid-1960s.", "type": "Organization / Entity"}, {"id": 112, "title": "Leslie M. \"Les\" Fleet", "filename": "Les_Fleet.html", "desc": "Appomattox County Commonwealth's Attorney since 2019, who rose through the office from Assistant (2005) to Deputy (2007) to elected prosecutor — lead attorney in the Christopher Bryan Speight mass murder prosecution and advocate for victim-centered justice.", "type": "Biography"}, {"id": 113, "title": "2011 ACHS Baseball Region B Championship", "filename": "ACHS_Baseball_Championship_2011.html", "desc": "The Appomattox County High School Raiders baseball team's improbable run to the 2011 Region B championship as the 8th seed — featuring Dylan Caruso's walk-off 11th-inning home run in a storm-relocated semifinal and a 9-inning championship victory over Strasburg, the program's first regional title under Coach Joe Caruso.", "type": "Notable Event"}, {"id": 114, "title": "Falling River Frogs Swim Team", "filename": "Falling_River_Frogs.html", "desc": "Appomattox County's competitive youth swimming club, formerly the Barracudas, competing in the Lynchburg Aquatic League from the Falling River Country Club pool since 2007 — covering age-group competition, coaching history, and community aquatics development.", "type": "Organization / Entity"}, {"id": 115, "title": "Appomattox County Opioid and Drug Crisis", "filename": "Appomattox_Opioid_Crisis.html", "desc": "The wave of heroin, fentanyl, methamphetamine, and prescription opioid cases in Appomattox County from the mid-2010s onward — covering the Seth Rothgeb death and Matlack prosecution, Operation Ice Melt, multi-agency sweeps, the founding of AART, Rapid REVIVE naloxone training, and ongoing enforcement through 2024.", "type": "Notable Event"}, {"id": 116, "title": "Appomattox County 2020 General Election", "filename": "Appomattox_County_2020_Election.html", "desc": "The November 3, 2020 general election in Appomattox County — documenting local results (Trump 72%, Good 70%), the retirement of 30-year Registrar Sabrina Smith, COVID-era early voting expansion, Virginia's elimination of the photo ID requirement, and community reaction.", "type": "Notable Event"}, {"id": 117, "title": "Appomattox Court House National Historical Park Sewer Project (2021)", "filename": "Appomattox_NHP_Sewer_Project_2021.html", "desc": "A federally funded infrastructure project to replace the failing early-1990s sewer system at Appomattox Court House National Historical Park — approved March 2021 and completed by November 2021, part of the $11.7 billion national deferred maintenance backlog identified during Secretary Zinke's 2018 park visit.", "type": "Notable Event"}, {"id": 118, "title": "Watkins Moorman Abbitt", "filename": "Watkins_M_Abbitt_Sr.html", "desc": "Appomattox County Commonwealth's Attorney (1932–1948) and U.S. Representative for Virginia's 4th District (1948–1973) — a 25-year congressman, Byrd Organization lieutenant, Liberty Baptist Church deacon for 67 years, and namesake of Watkins M. Abbitt Memorial Park in downtown Appomattox.", "type": "Biography"}, {"id": 119, "title": "Watkins Moorman Abbitt Jr.", "filename": "Watkins_M_Abbitt_Jr.html", "desc": "Virginia House of Delegates member for the 59th District (1986–2012) — a 26-year legislator who switched from Democrat to Independent in 2001, championed biosolids regulation and rural infrastructure, and continued the Abbitt family's half-century of political service in Central Virginia.", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

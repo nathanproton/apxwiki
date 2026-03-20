@@ -1,0 +1,36 @@
+{
+  "_description": "Known false positives and safe findings from util_find_address.py. An agent or human reviewer can check incoming findings against this list by matching on (filename, matched_text) to skip already-reviewed results.",
+  "_updated": "2026-03-19",
+  "false_positives": [
+    {
+      "filename": "Annette_Bennett.html",
+      "matched_text": "8 Chairman Dr",
+      "pattern": "street_address",
+      "reason": "Not an address. Regex captured 'Region 8 Chairman Dr. Chip Jones' — '8' is a region number and 'Dr.' is an honorific, not 'Drive'."
+    },
+    {
+      "filename": "Darrel_Puckett.html",
+      "matched_text": "2019 \n General District Court",
+      "pattern": "street_address",
+      "reason": "Not an address. '2019' is a year in a timeline table row, and 'Court' is a judicial court, not a street type."
+    },
+    {
+      "filename": "John_Wilson.html",
+      "matched_text": "107 North Church Street",
+      "pattern": "street_address",
+      "reason": "Safe to publish. This is the 'Nebraska House,' a named historic property in downtown Appomattox — a matter of public/historical record, not a private residential address disclosure."
+    },
+    {
+      "filename": "Robert_G_Mitchell.html",
+      "matched_text": "171 Price Lane",
+      "pattern": "street_address",
+      "reason": "Safe to publish. This is the Board of Supervisors Meeting Room address (a public government building), appearing in a reference citation describing the meeting location."
+    },
+    {
+      "filename": "Geoffrey_Hubler.html",
+      "matched_text": "Route 635",
+      "pattern": "va_route",
+      "reason": "Safe to publish. A state route reference describing the location of the Appomattox Rescue Squad building — a public facility, not a personal address."
+    }
+  ]
+}

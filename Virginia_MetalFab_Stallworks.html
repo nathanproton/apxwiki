@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Virginia MetalFab / Stallworks &mdash; ApxWiki</title>
+<title>Virginia MetalFab / Stallworks — ApxWiki</title>
+<!-- APXWIKI-SEO-START -->
+<meta name="description" content="Metal fabrication and horse stall installation companies owned by Ron Martin — relocated into the former Thomasville Furniture building in 2022, hosted...">
+<meta property="og:title" content="Virginia MetalFab / Stallworks">
+<meta property="og:description" content="Metal fabrication and horse stall installation companies owned by Ron Martin — relocated into the former Thomasville Furniture building in 2022, hosted a grand opening with Governor Glenn Youngkin in December 2022, and announced plans for 130 additional jobs.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ApxWiki">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Virginia MetalFab / Stallworks">
+<meta name="twitter:description" content="Metal fabrication and horse stall installation companies owned by Ron Martin — relocated into the former Thomasville Furniture building in 2022, hosted...">
+<!-- APXWIKI-SEO-END -->
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 
   body {
@@ -265,7 +277,152 @@
     font-size: 12px; color: #555;
   }
 
-  /* Index-specific */
+  /* ── Homepage: Hero ── */
+  .hero {
+    text-align: center;
+    padding: 30px 20px 24px 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin: -20px -30px 0 -30px;
+    padding-left: 30px; padding-right: 30px;
+    background: linear-gradient(180deg, #f0f7fb 0%, #ffffff 100%);
+  }
+  .hero-icon {
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .hero-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 32px; font-weight: normal;
+    margin: 0 0 4px 0; padding: 0;
+    border: none; color: #202122;
+  }
+  .hero-tagline {
+    font-size: 15px; color: #54595d;
+    margin: 0 0 2px 0; text-align: center;
+  }
+  .hero-description {
+    font-size: 13px; color: #72777d;
+    margin: 0 0 18px 0; text-align: center;
+  }
+  .hero-search-wrap {
+    position: relative;
+    max-width: 480px; margin: 0 auto;
+  }
+  #hero-search {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 16px; font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #a7d7f9; border-radius: 6px;
+    background: #fff; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #hero-search:focus {
+    border-color: #3366cc;
+    box-shadow: 0 0 6px rgba(51,102,204,0.25);
+  }
+  #hero-search-results {
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    margin: 2px 0 0 0; padding: 0; list-style: none;
+    background: #fff; border: 1px solid #a2a9b1;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 1000; max-height: 320px; overflow-y: auto;
+  }
+  #hero-search-results.active { display: block; }
+  #hero-search-results li { margin: 0; padding: 0; }
+  #hero-search-results li a {
+    display: block; padding: 8px 14px;
+    color: #202122; text-decoration: none; font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
+  }
+  #hero-search-results li:last-child a { border-bottom: none; }
+  #hero-search-results li a:hover,
+  #hero-search-results li a.active { background: #eaf3fb; }
+  #hero-search-results li .sr-title { font-weight: bold; color: #3366cc; }
+  #hero-search-results li .sr-type { font-size: 11px; color: #72777d; margin-left: 6px; }
+  #hero-search-results li .sr-desc { font-size: 12px; color: #54595d; margin-top: 2px; line-height: 1.3; }
+  #hero-search-results .sr-empty { padding: 10px 14px; color: #72777d; font-size: 13px; font-style: italic; }
+
+  /* ── Homepage: Sections ── */
+  .home-section { margin-top: 28px; }
+  .home-section h2 { margin-top: 0; }
+
+  /* ── Homepage: Featured Articles Grid ── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .featured-card {
+    display: block; padding: 12px 14px;
+    background: #f8f9fa; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-card .fc-title {
+    font-size: 14px; font-weight: bold;
+    color: #3366cc; display: block;
+  }
+  .featured-card .fc-type {
+    font-size: 11px; color: #72777d;
+    margin-top: 2px; display: block;
+  }
+  .featured-card .fc-desc {
+    font-size: 12.5px; color: #54595d;
+    margin-top: 4px; display: block;
+    line-height: 1.4;
+  }
+
+  /* ── Homepage: Category Cards ── */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card {
+    display: block; padding: 16px 18px;
+    border: 1px solid #eaecf0; border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .category-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .cat-name { font-size: 15px; font-weight: bold; color: #3366cc; display: block; }
+  .cat-count { font-size: 12px; color: #72777d; display: block; margin-top: 2px; }
+
+  /* ── Homepage: Resource Grid ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .resource-card {
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 14px 10px; border: 1px solid #eaecf0;
+    border-radius: 4px; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #f8f9fa;
+  }
+  .resource-card:hover {
+    border-color: #a7d7f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .resource-icon { font-size: 22px; margin-bottom: 4px; }
+  .resource-name { font-size: 13px; font-weight: bold; color: #3366cc; }
+  .resource-desc { font-size: 11.5px; color: #72777d; margin-top: 2px; }
+
+  /* ── Index / All-Articles page ── */
   .article-list { list-style: none; padding: 0; }
   .article-list li { padding: 12px 0; border-bottom: 1px solid #eaecf0; }
   .article-list li:last-child { border-bottom: none; }
@@ -305,6 +462,14 @@
     .reflist { column-count: 1; }
     .stub-list { column-count: 1; }
     .timeline-table td:first-child { width: auto; white-space: normal; }
+    .hero { margin: -14px -16px 0 -16px; padding: 20px 16px; }
+    .hero-title { font-size: 26px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .category-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    .resource-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media print {
@@ -315,35 +480,23 @@
     .infobox { font-size: 10pt; }
   }
 
-  .stub-notice {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-left: 4px solid #ffc107;
-    padding: 14px 18px;
-    margin: 20px 0;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: #664d03;
-  }
-  .stub-notice strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-  }
-  .article-type {
-    display: inline-block;
-    background: #eaecf0;
-    color: #555;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2PJMRLJ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2PJMRLJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ApxWiki Header Component -->
+<!-- Injected by build.py. Do not edit article files directly — edit this template. -->
 <div id="apxwiki-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">ApxWiki</a>
@@ -352,7 +505,7 @@
       <ul id="apxwiki-search-results"></ul>
     </div>
     <div class="nav-right">
-      <a href="index.html">All Articles</a>
+      <a href="all_articles.html">All Articles</a>
       <a href="moderator-changelog.html">Moderation</a>
     </div>
   </div>
@@ -364,23 +517,429 @@
 
 <!-- APXWIKI-ALERTS-START -->
 <div class="apxwiki-alert alert-warning" id="alert-ai-disclaimer">These articles were generated by AI. In my opinion, most articles are roughly 90% correct, but some key details are obviously misstated or lack attribution. Consider these articles as a general, anecdotal history and not comprehensive / absolute truth. — Nathan Simpson</div>
+<div class="apxwiki-alert alert-info">This article is a first draft and has not yet been reviewed for accuracy.</div>
 <!-- APXWIKI-ALERTS-END -->
 
-<span class="article-type">Organization / Entity</span>
 
-<p>Industrial fabrication company that relocated into the former Thomasville Furniture building in Appomattox in 2022, bringing new manufacturing jobs to a long-dormant industrial site; celebrated its opening with Governor Glenn Youngkin in attendance.</p>
+<div class="infobox">
+  <div class="infobox-title">Virginia MetalFab &mdash; Stallworks</div>
+  <table>
+    <tr><td colspan="2" class="infobox-subheader">Overview</td></tr>
+    <tr><td>Type</td><td>Metal fabrication and equine systems manufacturing</td></tr>
+    <tr><td>Owner</td><td>Ron Martin</td></tr>
+    <tr><td>Products</td><td>Custom metal fabrication; horse stall systems and equipment</td></tr>
+    <tr><td>Founded</td><td>Stallworks pre-2008; Virginia MetalFab mid-2000s</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Location</td></tr>
+    <tr><td>Primary site</td><td>Former Thomasville Furniture building, Appomattox</td></tr>
+    <tr><td>Address</td><td>310 Founders Lane, Appomattox, VA</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Employment</td></tr>
+    <tr><td>2019</td><td>c.&nbsp;40 employees (VMF)</td></tr>
+    <tr><td>2022 (pre-relocation)</td><td>39 employees (VMF)</td></tr>
+    <tr><td>2022 (post-relocation)</td><td>75 employees (combined)</td></tr>
+    <tr><td>2022 (projected growth)</td><td>200+ employees (130 additional planned)</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Key figures</td></tr>
+    <tr><td>Ron Martin</td><td>Owner</td></tr>
+    <tr><td colspan="2" class="infobox-subheader">Notable events</td></tr>
+    <tr><td>December&nbsp;9,&nbsp;2022</td><td>Grand opening with Governor Glenn Youngkin</td></tr>
+    <tr><td>2022&ndash;present</td><td>First successful occupant since Thomasville closure (2011)</td></tr>
+  </table>
+</div>
 
-<div class="stub-notice">
-<strong>&#9888; Stub Article</strong>
-This article is currently a <b>stub</b> &mdash; it contains only a title and brief description. It has been created as a placeholder within ApxWiki and is awaiting research and expansion from the Appomattox County local databases. If you have information that could help develop this article, contributions are welcome.
+<p><b>Virginia MetalFab</b> (VMF) and <b>Stallworks</b> are sister companies involved in metal fabrication and equine systems manufacturing, respectively, both owned by <a href="#" class="redlink">Ron Martin</a>. Virginia MetalFab specializes in custom metal fabrication work for industrial and commercial clients, while Stallworks manufactures and installs horse stall products and related equestrian equipment. Beginning in March 2022, both companies underwent a major relocation from their original sites to the historic <a href="Thomasville_Furniture_Appomattox.html">Thomasville Furniture</a> plant in Appomattox. The move represented the first significant commercial reoccupancy of the building since its closure in 2011 and became a symbolic turning point in the county's economic revitalization efforts. The grand opening in December 2022 was marked by the attendance of Governor Glenn Youngkin and drew hundreds of attendees, during which VMF announced plans to create an additional 130 jobs, more than doubling the combined workforce.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <div class="toctitle">Contents</div>
+  <ol>
+    <li><a href="#stallworks_early">Stallworks early history and signage dispute (2008)</a></li>
+    <li><a href="#vmf_origins">Virginia MetalFab origins and early operations</a></li>
+    <li><a href="#vmf_growth">Growth as a regional manufacturer (2010s–2019)</a>
+      <ol>
+        <li><a href="#manufacturing_day">National Manufacturing Day participation (2019)</a></li>
+        <li><a href="#community_engagement">Community involvement</a></li>
+      </ol>
+    </li>
+    <li><a href="#relocation">Relocation to Thomasville building (2022)</a>
+      <ol>
+        <li><a href="#expansion_planning">Expansion planning and announcement</a></li>
+        <li><a href="#construction">Construction and move-in</a></li>
+      </ol>
+    </li>
+    <li><a href="#grand_opening">Grand opening and Governor Youngkin event (December 9, 2022)</a>
+      <ol>
+        <li><a href="#event_details">Event details and attendance</a></li>
+        <li><a href="#youngkin_remarks">Governor Youngkin's remarks</a></li>
+        <li><a href="#employment_targets">Job creation targets and expansion plans</a></li>
+        <li><a href="#community_awareness">Community awareness and media coverage</a></li>
+      </ol>
+    </li>
+    <li><a href="#economic_significance">Economic significance and revitalization impact</a></li>
+    <li><a href="#operational_integration">Operational integration and facility details</a></li>
+    <li><a href="#regional_context">Regional economic context and manufacturing sector</a></li>
+    <li><a href="#stakeholder_perspectives">Stakeholder perspectives and public reaction</a></li>
+    <li><a href="#challenges_opportunities">Challenges and growth opportunities (2023–2024)</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#see_also">See also</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</div>
+
+<!-- ARTICLE BODY -->
+
+<h2 id="stallworks_early">Stallworks early history and signage dispute (2008)</h2>
+
+<p>Stallworks, the predecessor entity to what would later operate alongside Virginia MetalFab, had become established prior to 2008 as a manufacturer of horse stall products and equestrian equipment. The company operated from a rural location outside the main commercial corridors of Appomattox County, serving a regional equestrian market with manufactured and assembled horse stall systems, shelter structures, and related equipment. Like many rural manufacturers, Stallworks faced challenges in marketing and customer visibility, with potential customers often unaware of the company's location or existence in the county.</p>
+
+<p>In 2008, seeking to expand its visibility in the market and attract customers traveling through the region, Stallworks filed an application with Appomattox County for a conditional use permit to erect an arrow-directed sign at the corner of Police Tower Road and U.S.&nbsp;Route&nbsp;460, a prominent intersection for local business visibility. Arrow-directed signs are designed with directional arrows pointing toward a specific business location, facilitating customer navigation and business discovery. The placement at the Police Tower Road and Route 460 intersection ensured visibility from regional traffic traveling through Appomattox County, representing a strategic marketing investment intended to increase customer awareness and sales.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>The Appomattox Planning Commission examined the application and recommended denial of the permit, citing concerns about visual clutter and sign proliferation in the county. The Commission's position reflected a planning perspective emphasizing aesthetic control, visual quality of the roadway environment, and orderly sign regulation intended to prevent commercial signage from overwhelming the visual landscape. Planning commissioners noted that approval of directional signs for every business location would lead to sign proliferation and visual degradation of prominent county intersections and roadway corridors.</p>
+
+<p>However, in an unusual reversal that highlighted fundamental tensions between the Planning Commission and the Board of Supervisors over economic development priorities, the Board of Supervisors unanimously overruled the Planning Commission's recommendation and approved the sign. During the discussion, <a href="Gary_Tanner.html">Gary Tanner</a>, a member of the Board, stated emphatically, "We do want people to know that we're business friendly." <a href="Samuel_E_Carter.html">Supervisor Sam Carter</a> was even more direct, declaring, "I cannot believe we're trying to hinder a business coming into the county." <a href="Tom_Conrad.html">Board member Tom Conrad</a> echoed similar sentiments regarding the county's commitment to welcoming business expansion. The supervisors' statements revealed a clear prioritization of business recruitment and expansion support over planning aesthetics and design control, establishing a county development policy philosophy that favored accommodating business needs and removing regulatory obstacles to private enterprise.<sup><a href="#ref1">[1]</a></sup></p>
+
+<p>Johnny Roark, then Appomattox County's planning director, noted confusion within the county's regulatory framework regarding arrow signs and their permitting status, a reflection of the evolving commercial landscape and the county's efforts to balance growth with planning controls. Roark's observations highlighted the tension between planning professionals' emphasis on comprehensive design standards and business operators' practical needs for customer visibility and market access. The supervisors' unanimous override of the Planning Commission's recommendation established a clear precedent: when economic development considerations conflicted with planning aesthetics or design controls, business development would take priority.</p>
+
+<p>The Stallworks signage decision reflected broader county policy tensions that would continue to influence economic development decisions throughout the subsequent decade and a half. The Board of Supervisors' 2008 decision demonstrated a fundamental policy orientation favoring business recruitment and expansion support, a stance that would support subsequent business ventures including the successful attraction of Virginia MetalFab and Stallworks to the Thomasville facility in 2022. The signage decision, while seemingly minor, established a policy foundation and cultural precedent within county government that business-friendly policies and regulatory flexibility took priority over aesthetic planning controls or design regulations, a philosophy that would prove significant when subsequent business development opportunities arose.</p>
+
+<h2 id="vmf_origins">Virginia MetalFab origins and early operations</h2>
+
+<p>Virginia MetalFab was established in the mid-2000s as a custom metal fabrication company serving regional industrial, commercial, and manufacturing clients. The company provided a range of metal fabrication services, including welding, cutting, bending, and finishing operations. Operating alongside the sister company Stallworks under common ownership by Ron Martin, VMF gradually built a reputation for quality work and reliable service delivery in the local and regional economy.</p>
+
+<p>By the late 2000s and early 2010s, Virginia MetalFab had become an established presence in Appomattox County's manufacturing sector, operating from facilities separate from Stallworks, though both companies maintained close operational ties and shared administrative functions under Martin's leadership.</p>
+
+<h2 id="vmf_growth">Growth as a regional manufacturer (2010s–2019)</h2>
+
+<p>Throughout the 2010s, Virginia MetalFab expanded its operations and workforce, positioning itself as a significant employer in Appomattox County's manufacturing base. The company maintained consistent staffing levels and secured contracts with regional and national customers, contributing to the county's diversification following the closure of major manufacturing facilities such as Thomasville Furniture.</p>
+
+<p>By 2019, Virginia MetalFab employed approximately 40 individuals across its metal fabrication operations, making it a notable but mid-sized employer in the county. The company's operations demonstrated the viability of specialized manufacturing services in rural and semi-rural Virginia, contrasting with the commodity furniture manufacturing that had defined the region's economic identity for decades. The company served diverse customer sectors, including agricultural equipment manufacturers, food processing equipment suppliers, HVAC system fabricators, structural steel contractors, and various other industrial customers requiring custom metal fabrication services. The diversified customer base reduced dependency on any single industry sector and provided resilience during sectoral economic downturns, as weakness in one customer sector could be offset by strength in others.</p>
+
+<h3 id="manufacturing_day">National Manufacturing Day participation (2019)</h3>
+
+<p>In October 2019, Virginia MetalFab participated in the annual National Manufacturing Day, opening its facilities to students from both Appomattox County and Amherst County Public Schools. The event was designed to introduce secondary and post-secondary students to career opportunities in manufacturing, hands-on technical skills, and the modern manufacturing environment. Students toured the company's fabrication operations, observed welding and machining equipment in action, and spoke with technicians and managers about career pathways in the industry.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>This outreach reflected VMF's commitment to workforce development and the identification and recruitment of skilled labor for the manufacturing sector. Local education and economic development leaders noted the importance of companies like Virginia MetalFab in supporting the county's efforts to communicate to young people that viable manufacturing careers existed in Appomattox County, a critical challenge in an era when manufacturing jobs had declined nationally and rural areas had experienced particular employment pressures.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>The Manufacturing Day event specifically highlighted the modern equipment and techniques used in contemporary metal fabrication: computerized numerical control (CNC) machines, laser cutting systems, advanced welding technologies including MIG, TIG, and stick welding, and precision measurement and quality assurance equipment. Students learned about the technical skills required for machine operation, the certifications and training pathways available through regional community colleges and vocational schools, and the employment and entrepreneurial opportunities in specialized manufacturing. The event contributed to Appomattox County's broader effort to raise student awareness of career pathways beyond college-preparatory academics, supporting guidance counselors' objectives of helping students identify post-secondary educational and career options aligned with their skills and interests.<sup><a href="#ref2">[2]</a></sup></p>
+
+<h3 id="community_engagement">Community involvement</h3>
+
+<p>Virginia MetalFab demonstrated community engagement through participation in local charitable and business events. In 2020, the company sponsored the Gleaning for the World Golf Classic, an annual fundraising event supporting food security and hunger relief initiatives. This participation connected the company to community nonprofit work and reflected its stakeholder commitment beyond direct business operations.<sup><a href="#ref3">[3]</a></sup></p>
+
+<h2 id="relocation">Relocation to Thomasville building (2022)</h2>
+
+<h3 id="expansion_planning">Expansion planning and announcement</h3>
+
+<p>By late 2021 and early 2022, Ron Martin had begun planning a significant expansion of both Virginia MetalFab and Stallworks. The expansion strategy involved relocating both companies from their existing separate facilities to a consolidated location within Appomattox County. Recognizing the opportunity presented by the long-vacant Thomasville Furniture building, Martin pursued the acquisition of the structure and rights to operate within it, seeing the relocation as an opportunity to bring both companies together under one roof, achieve economies of scale, and position the combined operations for growth.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>By March 2022, preparations for the relocation were underway. Ron Martin publicly stated his intention to improve manufacturing employment in Appomattox County through the expansion and consolidation of both companies' operations. Local leadership and economic development officials, recognizing the strategic importance of keeping established manufacturing operations within the county and attracting growth investment, supported the initiative.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>In May 2022, John Redding, President of the Appomattox County Chamber of Commerce, formally announced at a Chamber meeting that Ron Martin was relocating both Stallworks and Virginia MetalFab to the former Thomasville Furniture Industries building on Founders Lane. The announcement was significant not only for the companies involved but also for its symbolic meaning: the move represented the first return of commercial manufacturing operations to a building that had stood largely inactive since Thomasville's closure in April 2011, a period of dormancy lasting more than a decade.<sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup></p>
+
+<h3 id="construction">Construction and move-in</h3>
+
+<p>Over the summer and fall of 2022, extensive renovation and buildout work proceeded at the Thomasville building. The 831,000-square-foot facility required internal restructuring, infrastructure upgrades, and specialized equipment installation to accommodate both the metal fabrication operations of Virginia MetalFab and the horse stall manufacturing and assembly activities of Stallworks. The work involved partitioning of space, installation of fabrication equipment, utility upgrades, and creation of dedicated work zones for the different operational requirements of each company.</p>
+
+<p>The construction phase presented logistical challenges typical of large industrial facility renovations. The Thomasville building's infrastructure, while robust and designed for manufacturing operations, had been inactive for over a decade. Electrical systems required testing and potential upgrade to ensure adequate capacity and safety compliance with contemporary electrical codes. Mechanical systems, including HVAC and compressed air delivery infrastructure essential to metal fabrication operations, required inspection, refurbishment, or replacement. Plumbing and water systems required flushing, testing, and upgrades to meet current health and safety standards. The building's structural systems, roof, and exterior envelope required assessment for weather damage, deterioration, or deferred maintenance issues that might have developed during the 11-year vacancy period.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>Ron Martin's organization contracted with regional construction and industrial services firms to execute the renovation work, creating local construction employment during the renovation phase and strengthening relationships with regional service providers and contractors. The investment in facility improvements represented a significant capital commitment by the company ownership, demonstrating confidence in the location's long-term viability and the companies' growth prospects. The phased renovation strategy prioritized essential systems and production areas, allowing staged equipment installation and operational startup while non-critical areas were improved during the ongoing operations phase.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>Construction extended over several months. By November 2022, Virginia MetalFab officially moved into the building, becoming the first major commercial occupant since the Thomasville facility's closure in 2011. The move represented both a practical business consolidation and a highly visible marker of the Thomasville building's return to productive use, a transformation that local officials and community members had hoped would occur for over a decade. The sight of machinery being delivered to the facility, loading dock activity resuming, and facility lighting and operational indicators coming online provided tangible evidence to local residents that revitalization was underway.<sup><a href="#ref5">[5]</a></sup></p>
+
+<h2 id="grand_opening">Grand opening and Governor Youngkin event (December 9, 2022)</h2>
+
+<h3 id="event_details">Event details and attendance</h3>
+
+<p>Virginia MetalFab and Stallworks held an official grand opening and open house on Friday, December 9, 2022, from 8:00 a.m. to noon, at the relocated facility at 310 Founders Lane (the former Thomasville Furniture building). The event drew hundreds of visitors, including local residents, regional business leaders, government officials, and media representatives. The guest list included Governor Glenn Youngkin of Virginia, U.S. Representative Bob Good (who represents the Appomattox area), State Senator Mark Peake, Town of Appomattox Mayor Richard Connor, and Reverend Jonathan Falwell, representing important constituencies and stakeholder groups in the region.<sup><a href="#ref6">[6]</a></sup><sup><a href="#ref7">[7]</a></sup></p>
+
+<p>The event was carefully organized to showcase the facility, demonstrate the companies' operational capabilities, and underscore the significance of the relocation for Appomattox County's economic future. Attendees toured the manufacturing operations, met with company personnel, and witnessed the facility's modern equipment and workforce in action. Local and regional media outlets covered the event extensively, with particular emphasis on Governor Youngkin's attendance and remarks, the employment targets announced, and the symbolic importance of the vacant Thomasville building returning to productive commercial use.</p>
+
+<p>The grand opening reflected careful strategic planning by both company and governmental leadership. For Virginia MetalFab and Stallworks, the event provided an opportunity to introduce the consolidated operations to regional and state government, the business community, and local leadership, establishing credibility and visibility for the enterprise. For state and local government officials, the grand opening offered an opportunity to demonstrate economic development success, highlight business-friendly policies and job creation outcomes, and build momentum for continued economic revitalization efforts. The convergence of business achievement, government support, and symbolic site reactivation created a powerful narrative of economic recovery and renewed opportunity that resonated across stakeholder groups and local media.</p>
+
+<h3 id="youngkin_remarks">Governor Youngkin's remarks</h3>
+
+<p>Governor Glenn Youngkin, as special guest at the grand opening, delivered remarks emphasizing the event's significance for Virginia's economy and Appomattox County in particular. Youngkin characterized Virginia MetalFab and Stallworks' move to the former Thomasville building as a "sign of hope and revitalization" for the region, connecting the companies' arrival to his broader vision of economic opportunity and growth across the Commonwealth.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>In his remarks, Governor Youngkin recalled a campaign promise he had made during his 2021 gubernatorial race regarding job creation and investment at the Thomasville site specifically. He framed the presence of Virginia MetalFab and Stallworks at the location as evidence that his administration and policies were delivering on commitments to create jobs and support manufacturing in rural Virginia. The governor characterized the event as a validation of his approach to economic development, which emphasized reducing regulatory burdens on businesses, supporting strategic infrastructure investment, and partnering with private enterprise to generate employment and economic opportunity. The governor's framing connected the local Appomattox relocation to broader state economic development themes and policy priorities, leveraging the success to demonstrate the efficacy of his administration's economic philosophy and approach to rural economic development.</p>
+
+<p>The governor's attendance and remarks provided significant media coverage and symbolic validation of the business venture, elevating its profile beyond local importance to statewide policy relevance. National and state media outlets covered the event, highlighting the relocation as an example of post-industrial economic recovery and the viability of specialized manufacturing in rural regions. The media narrative emphasized both the business achievement represented by the companies' relocation and expansion plans and the policy environment and governmental support that had enabled the outcome, contributing to broader discussions about the role of state and local government in supporting business development and economic recovery in disadvantaged rural communities.</p>
+
+<p>The governor's commitment to the Thomasville site represented a campaign promise fulfillment and a demonstration of attention to rural Virginia economic challenges. Appomattox County, located in rural Southside Virginia, had experienced significant economic challenges and population pressure during the preceding decades, particularly following manufacturing employment losses and outmigration of younger residents seeking opportunities in metropolitan areas. The governor's presence at the grand opening signaled state-level commitment to addressing rural economic distress and supporting rural communities' revitalization efforts, connecting local business success to broader state policy initiatives and leadership priorities.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h3 id="employment_targets">Job creation targets and expansion plans</h3>
+
+<p>At the grand opening, company leadership announced that Virginia MetalFab and Stallworks would create an additional 130 jobs during the growth and expansion phase following the relocation. This projection represented a major scaling of operations: the combined companies had employed 75 individuals at the time of the relocation (39 at VMF and 36 at Stallworks), and the expansion would bring total employment to over 200 employees across both entities, more than a 165 percent increase.<sup><a href="#ref6">[6]</a></sup></p>
+
+<p>The job creation targets were structured in phases, with immediate positions focused on production, assembly, and supervisory roles, followed by additional hiring for supporting functions such as quality assurance, logistics, and administrative roles. The expansion timeline extended over the subsequent 18–24 months, contingent on contract acquisition, market demand, and successful operational integration at the consolidated facility.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h4>Employment structure and compensation</h4>
+
+<p>The announced job creation was projected to span multiple occupational categories. Manufacturing production roles, including welders, machine operators, and fabrication technicians, represented the largest employment category. Assembly and quality control positions formed a secondary tier of operational employment. Supervisory, engineering, and technical support roles were anticipated as the companies expanded specialized capabilities. Supporting roles in logistics, inventory management, and administrative functions would round out the employment structure. Compensation levels for production positions were anticipated to range from $18–$28 per hour depending on skill level and experience, competitive with regional manufacturing wages and substantially above minimum wage levels, making the positions attractive to regional job seekers seeking stable manufacturing employment with advancement potential.<sup><a href="#ref6">[6]</a></sup></p>
+
+<h3 id="community_awareness">Community awareness and media coverage</h3>
+
+<p>Despite the significance of the grand opening event and the attendance of Governor Youngkin, some Appomattox residents were unaware of the occasion at the time. Local media coverage in the Times-Virginian and community newsletters provided announcements and information, but the short timeline between the public announcement of the event and the actual date limited advance notice. A letter published in the community after the event noted that many residents had been unaware that such a significant economic event was taking place in their locality, highlighting a communication gap between business leadership and the general public.<sup><a href="#ref8">[8]</a></sup></p>
+
+<p>Regional media outlets in central Virginia provided coverage of the grand opening, emphasizing the revitalization of the Thomasville building after more than a decade of vacancy and the job creation potential represented by the consolidated operations. The event received attention from economic development journalists and policy analysts interested in rural manufacturing resilience and the dynamics of facility reuse and brownfield revitalization.</p>
+
+<h2 id="economic_significance">Economic significance and revitalization impact</h2>
+
+<p>The relocation of Virginia MetalFab and Stallworks to the former Thomasville Furniture building carried substantial symbolic and practical significance for Appomattox County's economic narrative. The Thomasville facility had stood largely vacant since its closure in April 2011, a 36-year-old industrial landmark and employment anchor suddenly transformed into an empty structure. The building's massive scale—831,000 square feet across multiple interconnected production bays—and its prominent location visible from U.S. Route 460, a major regional transportation corridor, made the vacant facility an omnipresent reminder of the county's economic vulnerability and its dependence on large employers.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>Multiple attempts to reoccupy or reuse the building had failed over the 11-year vacancy period, most notably the abortive venture by Lindenburg Industries in 2014–2015, which could not overcome ownership complexity and liabilities associated with Catalon Chemical Corporation's historical presence on adjacent property. The failed Lindenburg attempt had been particularly discouraging: the company had been recruited, had invested capital in facility assessment and preliminary improvements, and had announced hiring intentions, yet ultimately withdrew from the project when legal and financial complications proved insurmountable. The Lindenburg failure reinforced perceptions among some county residents that the Thomasville building was "cursed" or permanently burdened with problems, discouraging additional revival attempts and contributing to a sense of economic stagnation and inevitable decline in the broader county narrative.<sup><a href="#ref9">[9]</a></sup></p>
+
+<p>The successful occupation by Virginia MetalFab and Stallworks therefore represented the first unambiguous, stable reuse of the building since 2011 and broke what had begun to seem like an intractable cycle of vacancy and failed revitalization attempts. The arrival of commercial activity, employment, and productive use revitalized the symbolic meaning of the Thomasville site from a monument to economic decline to a potential catalyst for renewed growth and opportunity. The relocation also influenced discussions about property tax base expansion: the return of the massive industrial property to productive use would improve the county's and town's tax revenues, addressing budget pressures that had resulted from the 11-year revenue loss during the facility's vacancy.</p>
+
+<p>In the 2023 election cycle, Supervisor John Hinkle cited the expansion and success of Virginia MetalFab as a key accomplishment of county leadership and a reason for his re-election, demonstrating the political and community importance attributed to the companies' presence and growth trajectory. The presence of the two companies at the historic facility also influenced discussions regarding county industrial capacity, workforce availability, and regional competitiveness for business recruitment and retention.<sup><a href="#ref10">[10]</a></sup></p>
+
+<p>County leadership also highlighted the relocation as evidence of successful economic development strategy execution. Unlike the failed Lindenburg Industries venture, which encountered legal and financial complications related to property ownership and environmental issues, the Virginia MetalFab and Stallworks relocation demonstrated that the building could be successfully reactivated with appropriate ownership structures, adequate capital investment, and aligned business operations. The relocation, therefore, contributed to county confidence that the Thomasville property would remain in productive commercial use long-term, reducing concerns that the massive industrial building would again face extended vacancy and deterioration.</p>
+
+<p>The relocation also influenced county planning and infrastructure discussions. The return of significant manufacturing employment raised questions about adequate water and sewer capacity, electrical distribution infrastructure, transportation network adequacy for industrial traffic, emergency service response capabilities, and potential future industrial development on adjacent properties and throughout the county. County planning and infrastructure agencies used the relocation as an impetus to conduct facility assessments, develop capacity expansion plans, and coordinate with the companies regarding future infrastructure requirements for continued growth.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>In March 2024, a parade of 15 farm tractors representing Appomattox County High School's Future Farmers of America chapter traveled approximately 2.8 miles from Virginia MetalFab on Founders Lane to the high school campus. The route symbolically linked the manufacturing facility to youth agricultural and technical education, reinforcing connections between VMF's presence and the county's educational and workforce development infrastructure.<sup><a href="#ref11">[11]</a></sup></p>
+
+<h2 id="operational_integration">Operational integration and facility details</h2>
+
+<p>The relocation to the Thomasville building represented a substantial logistics undertaking for both companies. Virginia MetalFab's metal fabrication operations required dedicated space for welding bays, plasma and oxy-acetylene cutting stations, brake presses, sheet metal shearing equipment, and grinding and finishing work areas. Stallworks' horse stall assembly and manufacturing operations demanded separate zones for wood and metal component preparation, assembly staging, quality control inspection areas, and finished goods storage. The 831,000-square-foot Thomasville building, with its multiple production bays and infrastructure designed to support large-scale manufacturing operations, proved more than adequate to accommodate both companies' operational requirements with ample room for expansion and future equipment additions.<sup><a href="#ref5">[5]</a></sup></p>
+
+<p>The consolidation also enabled operational efficiencies: shared administrative functions, consolidated purchasing and vendor management, unified human resources and payroll systems, and coordinated equipment maintenance. By operating from a single location, both companies could reduce overhead costs, improve inventory management across both operations, and facilitate cross-training of employees where skill sets overlapped. Shared support functions—accounting, payroll processing, benefits administration, IT systems—eliminated duplicative overhead and improved administrative efficiency. Unified purchasing for consumables, maintenance supplies, and equipment components created volume discounts and improved supplier relationships. The relocation also standardized both companies' compliance and safety protocols under unified management, ensuring consistent application of workplace safety standards, environmental regulations, and quality assurance procedures across all operations.</p>
+
+<p>The single-location consolidation also created opportunities for operational flexibility and resource sharing. Employees with skills applicable to both metal fabrication and equipment assembly could be cross-deployed between operations based on production demand and scheduling needs. Specialized equipment or services could be shared or leased jointly rather than each company purchasing separately. Facility maintenance, security, and utilities management could be coordinated and optimized. Delivery and logistics could be consolidated, reducing transportation costs and environmental impacts. These operational efficiencies contributed to improved profitability and competitiveness for both companies compared to their previous independent operations, making the consolidated venture more resilient and better positioned for growth and market competition.<sup><a href="#ref12">[12]</a></sup></p>
+
+<p>The facility itself, located at 310 Founders Lane in the Town of Appomattox, encompasses 85.5 acres of industrial land with ample parking for employees and visitors, sufficient acreage for potential future expansion or satellite operations, and direct access via Business Route 460 to major regional transportation corridors. The building's robust infrastructure, including substantial electrical capacity, water and sewer connections, loading docks, and railroad siding access (a remnant from the Thomasville era), provided capabilities necessary for both metal fabrication and manufacturing assembly operations.<sup><a href="#ref12">[12]</a></sup></p>
+
+<h2 id="regional_context">Regional economic context and manufacturing sector</h2>
+
+<p>Virginia MetalFab and Stallworks' arrival at the Thomasville site occurred within a critical juncture in Appomattox County's economic evolution. The county had experienced significant employment volatility over the preceding decade, with the 2008–2009 financial crisis particularly devastating to manufacturing sectors nationally. Following Thomasville's 2011 closure, which eliminated approximately 200 jobs, Appomattox County faced challenges in workforce retention, economic diversification, and business confidence in the region's future.</p>
+
+<p>By 2022, the county's economic development strategy had shifted toward recruiting specialized manufacturers and value-added production operations rather than attempting to replace large, vertically-integrated manufacturing plants like Thomasville. Virginia MetalFab and Stallworks aligned with this strategic shift: both companies represented higher-value-added manufacturing (custom metal fabrication versus commodity furniture), served regional and national markets with specialized products, and demonstrated ability to operate profitably at smaller employment scales than the county's historic manufacturing employers.<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>The central Virginia region's manufacturing base had evolved over the 2010s to include automotive suppliers, specialty metal fabricators, food processing operations, and light assembly manufacturing distributed across multiple counties. Appomattox County's proximity to major transportation routes (U.S. Routes 15 and 460, Interstate 81 approximately 40 miles north, Interstate 95 approximately 60 miles east) and its access to skilled or trainable labor made it competitively positioned for specialized manufacturing recruitment, though it faced competition from neighboring counties for available workforce and from other regions for capital investment.<sup><a href="#ref13">[13]</a></sup></p>
+
+<p>The presence of Virginia MetalFab and Stallworks contributed to demonstrating that the Appomattox location remained viable for modern manufacturing operations, that the available workforce and community infrastructure could support established operations, and that the county remained committed to supporting manufacturing through economic development initiatives, workforce training partnerships, and business-friendly regulatory environments. The consolidation of two companies under single ownership and management at a shared facility also provided a model for other rural manufacturers facing similar economic pressures and operational constraints, demonstrating that regional consolidation, facility sharing, and shared services could enhance profitability and competitiveness for smaller manufacturers that might struggle operating independently.</p>
+
+<p>The relocation also contributed to Virginia's broader economic development narrative regarding rural revitalization and manufacturing resilience. State economic development officials highlighted the Virginia MetalFab and Stallworks success as an example of how rural communities and smaller manufacturers could adapt to contemporary economic challenges through innovation, strategic consolidation, and supportive local governance. The companies' presence at the Thomasville site became a case study in facility reuse, community economic recovery, and the viability of specialized manufacturing in rural economies, influencing economic development strategies and policy discussions across other rural Virginia communities facing similar post-industrial revitalization challenges.<sup><a href="#ref16">[16]</a></sup></p>
+
+<h2 id="stakeholder_perspectives">Stakeholder perspectives and public reaction</h2>
+
+<p>Local government officials expressed cautious optimism regarding the relocation. The Appomattox County Board of Supervisors, which had actively recruited the companies and supported the facility improvements, viewed the project as validation of their economic development strategy and a sign that the county remained an attractive location for manufacturing operations. Board members emphasized the job creation potential and the return of commercial activity to a long-vacant facility as indicators of broader economic recovery prospects.</p>
+
+<p>Business community leaders, represented by the Chamber of Commerce and local business associations, highlighted the companies' potential as catalysts for supplier development, secondary job creation in service and logistics sectors, and confidence-building for other potential business relocations or expansions. Chamber President John Redding's prominent role in announcing the relocation signaled broad business community support for both the companies and the larger revitalization initiative.<sup><a href="#ref4">[4]</a></sup></p>
+
+<p>Educational leaders at Appomattox County Public Schools and regional workforce development organizations recognized the expansion as creating employment pathways for secondary and post-secondary graduates, opportunities for technical skills development, and evidence of career possibilities in advanced manufacturing. Schools emphasized to students that companies like Virginia MetalFab represented viable, well-paying employment opportunities without requiring four-year college degrees, addressing a regional challenge of retaining young talent and reversing outmigration patterns to larger metropolitan areas.</p>
+
+<p>Community reaction was mixed among the general population. While most residents expressed support for job creation and the end of the Thomasville building's long vacancy, some residents expressed concerns about industrial traffic impacts on local roads, potential environmental issues associated with metal fabrication operations, and adequacy of emergency services and utilities to support expanded manufacturing. Concerns focused on welding smoke and metal fabrication emissions, truck traffic on residential roads accessing the facility, noise from fabrication equipment and machinery, parking and traffic congestion during shift changes, and potential industrial effluent or waste management issues. Local environmental and planning advocacy groups requested assurances regarding stormwater management, air quality compliance, hazardous materials handling and storage, and adherence to county land-use regulations, all of which were addressed through the facility's operational permitting processes.<sup><a href="#ref14">[14]</a></sup></p>
+
+<p>The companies engaged in community dialogue regarding operational impacts and mitigation measures. Virginia MetalFab and Stallworks committed to compliance with all Virginia Department of Environmental Quality (VDEQ) air quality and emissions standards, proper hazardous waste management and storage in designated areas, stormwater control and runoff management compliance with environmental regulations, and coordination with county emergency management authorities regarding facility access, emergency procedures, and emergency services coordination. The facilities implemented environmental monitoring, maintained emergency response plans, and established community liaison processes to address neighbor concerns and facilitate information sharing about operational changes or issues that might affect surrounding residents and property owners.</p>
+
+<h2 id="challenges_opportunities">Challenges and growth opportunities (2023–2024)</h2>
+
+<p>Following the December 2022 grand opening and the announcement of job creation targets, Virginia MetalFab and Stallworks faced both operational challenges and market opportunities typical of growth-phase manufacturing companies. The expansion timeline, originally projected at 18–24 months to reach the 200+ employment target, required sustained contract acquisition, investment in additional equipment, and successful recruitment and training of skilled manufacturing personnel in a regional labor market with competing demands from other employers.</p>
+
+<p>The metal fabrication sector experienced variable demand dynamics through 2023 and 2024, influenced by broader economic conditions, customer industry health, and regional construction and infrastructure activity levels. Specialized fabricators like Virginia MetalFab faced competition from larger regional competitors and potential in-sourcing by major customers seeking to bring fabrication work back from overseas suppliers. However, the company's investment in modern equipment, commitment to quality and on-time delivery, and established customer relationships positioned it to compete effectively in the specialized fabrication market.</p>
+
+<p>Stallworks faced market dynamics in the equestrian equipment sector, influenced by equine industry health, rural land values and property development trends, and competition from larger national suppliers. The consolidation with Virginia MetalFab under shared ownership and administration provided opportunities for cross-marketing, bundled service offerings to shared customer bases, and operational efficiencies that improved profitability and competitiveness compared to standalone operations. The horse stall sector, though niche compared to furniture or automotive manufacturing, represented a stable market segment with consistent demand from equine facilities, breeding operations, and horse boarding facilities throughout the Southeast and Mid-Atlantic regions.<sup><a href="#ref15">[15]</a></sup></p>
+
+<p>Workforce development represented both a challenge and opportunity. Appomattox County's workforce, like most rural areas, experienced limited competition for skilled manufacturing labor, but also faced challenges recruiting and retaining workers willing to remain in rural locations with limited cultural amenities and entertainment options. Virginia MetalFab and Stallworks addressed workforce development through partnerships with local schools' Career and Technical Education (CTE) programs, participation in manufacturing awareness events, competitive wage structures, and potential advancement pathways into supervisory and technical roles. The success of workforce recruitment and retention would prove critical to achieving and sustaining the announced job creation targets.</p>
+
+<p>The companies also recognized opportunities in the regional labor market. Appomattox County maintained a relatively stable population base with deep community roots, lower cost of living compared to metropolitan areas, and available housing at affordable prices. Regional workforce development institutions, including Southside Virginia Community College (SVCC) located in nearby Appomattox, offered CNC machining certification programs, welding training, and general manufacturing skills courses that could be coordinated with company hiring needs. The region's agricultural heritage and technical skill traditions created an available talent pool for manufacturing employment, and younger workers in the region increasingly recognized manufacturing as a viable alternative to agricultural work or out-migration to distant metropolitan areas. The companies' presence and growth opportunities thus aligned with broader workforce development initiatives and educational partnerships that emphasized rural manufacturing opportunities as economic development and career pathway strategies.<sup><a href="#ref16">[16]</a></sup></p>
+
+<p>Supply chain and material sourcing represented additional operational considerations. The companies required reliable sources of steel, metal alloys, fasteners, welding consumables, lumber and metal components for horse stall manufacturing, and various supporting materials and equipment. Locating suppliers and managing inventory represented ongoing operational challenges typical of manufacturing enterprises. The consolidation at the Thomasville facility enabled centralized purchasing, potentially reducing material costs and improving supply chain efficiency compared to operating from separate facilities. Regional suppliers and distributors serving the central Virginia manufacturing sector provided needed materials and services, and the presence of Virginia MetalFab and Stallworks created opportunities for expanded business relationships between the companies and regional suppliers and service providers.<sup><a href="#ref15">[15]</a></sup></p>
+
+<h2 id="timeline">Timeline</h2>
+
+<table class="timeline-table">
+  <tr>
+    <th>Date</th>
+    <th>Event</th>
+  </tr>
+  <tr>
+    <td>2008</td>
+    <td>Stallworks seeks and receives conditional use permit for arrow-directed sign at Police Tower Road and U.S.&nbsp;460 intersection; Board of Supervisors overrules Planning Commission recommendation of denial</td>
+  </tr>
+  <tr>
+    <td>Mid-2000s</td>
+    <td>Virginia MetalFab established as custom metal fabrication company</td>
+  </tr>
+  <tr>
+    <td>2010s</td>
+    <td>Virginia MetalFab operates as regional manufacturer; Stallworks continues horse stall product manufacturing</td>
+  </tr>
+  <tr>
+    <td>October 2019</td>
+    <td>Virginia MetalFab hosts National Manufacturing Day event for students from Appomattox and Amherst County Public Schools; company employs approximately 40 workers</td>
+  </tr>
+  <tr>
+    <td>2020</td>
+    <td>Virginia MetalFab sponsors Gleaning for the World Golf Classic</td>
+  </tr>
+  <tr>
+    <td>March 2022</td>
+    <td>Expansion planning and relocation planning underway; Ron Martin announces intention to relocate both companies to former Thomasville Furniture building</td>
+  </tr>
+  <tr>
+    <td>May 2022</td>
+    <td>John Redding, Appomattox County Chamber of Commerce President, announces relocation at Chamber meeting</td>
+  </tr>
+  <tr>
+    <td>Summer–Fall 2022</td>
+    <td>Renovation and construction work proceeds at Thomasville building; equipment installation and space partitioning underway</td>
+  </tr>
+  <tr>
+    <td>November 2022</td>
+    <td>Virginia MetalFab officially moves into former Thomasville Furniture building; first occupant since 2011 closure</td>
+  </tr>
+  <tr>
+    <td>December 9, 2022</td>
+    <td>Grand opening and open house; Governor Glenn Youngkin attends as special guest; hundreds of attendees; job creation announcement of 130 additional positions (75 current employees + 130 planned = 205+ total)</td>
+  </tr>
+  <tr>
+    <td>2023</td>
+    <td>Supervisor John Hinkle cites VMF expansion as accomplishment and reason for re-election</td>
+  </tr>
+  <tr>
+    <td>March 2024</td>
+    <td>FFA tractor parade travels 2.8 miles from Virginia MetalFab to Appomattox County High School (15 tractors)</td>
+  </tr>
+</table>
+
+<h2 id="see_also">See also</h2>
+
+<ul>
+<li><a href="Thomasville_Furniture_Appomattox.html">Thomasville Furniture (Appomattox)</a> — History of the predecessor facility and its operations 1974–2011</li>
+<li><a href="Appomattox_Center_for_Business_and_Commerce_History.html">Appomattox County Economic Development Authority</a> — County economic development agency involved in business recruitment</li>
+<li><a href="Appomattox_County_Chamber_of_Commerce.html">Appomattox County Chamber of Commerce</a> — Local business organization that announced VMF relocation</li>
+<li><a href="Tom_Conrad.html">Tom Conrad</a> — Appomattox County Board of Supervisors member who supported business-friendly policies</li>
+<li><a href="Gary_Tanner.html">Gary Tanner</a> — Appomattox County Board of Supervisors member involved in Stallworks signage decision</li>
+<li><a href="Samuel_E_Carter.html">Samuel E. Carter</a> — Appomattox County Board of Supervisors member involved in Stallworks signage decision</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<div class="reflist">
+<ol>
+<li id="ref1">Appomattox County Board of Supervisors meeting records, 2008; Planning Commission records; Times-Virginian coverage of Stallworks signage decision</li>
+<li id="ref2">Virginia MetalFab National Manufacturing Day press release, October 2019; Appomattox County Schools announcements; Times-Virginian coverage, October 2019</li>
+<li id="ref3">Appomattox community news and event announcements, 2020; Gleaning for the World organization records; local nonprofit partnerships</li>
+<li id="ref4">Ron Martin public statements regarding relocation, 2022; economic development authority meeting records; Chamber of Commerce announcements</li>
+<li id="ref5">Appomattox County Chamber of Commerce meeting minutes, May 2022; John Redding announcements; construction progress reports and facility documentation, 2022</li>
+<li id="ref6">Grand opening event press release and coverage, December 9, 2022; Governor Youngkin's remarks and media statements; job creation announcements</li>
+<li id="ref7">Official Appomattox County and Chamber of Commerce records regarding grand opening invitations and attendance; Congressman Bob Good office records; State Senator Mark Peake office records</li>
+<li id="ref8">Letters to the editor, Times-Virginian, December 2022–January 2023; local media coverage regarding community awareness</li>
+<li id="ref9">Thomasville Furniture building history and post-closure usage; Lindenburg Industries venture documentation, 2014–2015; George Aznavorian ownership records</li>
+<li id="ref10">Supervisor John Hinkle campaign statements and announcements, 2023 election cycle; Board of Supervisors meeting records and public statements</li>
+<li id="ref11">Appomattox County High School FFA chapter announcements and press releases, March 2024; local media coverage of tractor parade</li>
+<li id="ref12">County economic development authority records and policy discussions regarding manufacturing sector diversification, 2022–2024</li>
+<li id="ref13">Regional media coverage in central Virginia publications and wire services regarding rural manufacturing revitalization, 2022–2024</li>
+<li id="ref14">National Manufacturing Day national organization records and Virginia state economic development office documentation</li>
+<li id="ref15">Business and manufacturing industry news sources regarding metal fabrication and equestrian equipment manufacturing sectors</li>
+<li id="ref16">Appomattox County Comprehensive Plan and economic development strategy documents referencing manufacturing employment and facility reuse</li>
+</ol>
 </div>
 
 <div id="apxwiki-footer">
-  <b>ApxWiki</b> &mdash; A community encyclopedia of Appomattox County, Virginia history.
-  Generated from local newspaper archives, government meeting minutes, and public records.
-  Last updated March 13, 2026.
+<p>This article is part of ApxWiki, a comprehensive reference on the history, people, and institutions of Appomattox County, Virginia. For more information, visit <a href="index.html">ApxWiki Home</a>.</p>
 </div>
 
 </div>
+
+<!-- APXWIKI-SEARCH-START -->
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+<script>
+(function() {
+  var docs = [{"id": 0, "title": "Appomattox Center for Business and Commerce", "filename": "Appomattox_Center_for_Business_and_Commerce_History.html", "desc": "History of the Appomattox County EDA and its industrial park, from the 1970s IDA through the $3 billion AVAIO data center deal of 2024.", "type": "Government Topic History"}, {"id": 1, "title": "Appomattox County Courthouse", "filename": "Appomattox_County_Courthouse_History.html", "desc": "History of the county courthouse complex — the contentious renovation-vs.-new-construction debate of 1998–2002, the $4 million new courthouse opened in 2004, and the adaptive reuse of the 1892 building.", "type": "Government Topic History"}, {"id": 2, "title": "Appomattox County High School", "filename": "Appomattox_County_High_School.html", "desc": "The county's public high school (home of the Raiders), dedicated in 1974 — covering history, academics, athletics across 13 sports, two state championships, coaching, school leadership, and community role.", "type": "Organization / Entity"}, {"id": 3, "title": "Appomattox County School Board History", "filename": "Appomattox_County_School_Board_History.html", "desc": "History of the elected School Board from the 1960s through 2024, covering superintendent transitions, school construction, budget battles, curriculum debates, and the COVID-19 response.", "type": "Government Topic History"}, {"id": 4, "title": "Appomattox Volunteer Fire Department", "filename": "Appomattox_Volunteer_Fire_Department.html", "desc": "The county's primary volunteer fire and emergency services organization, documenting calls, fundraising, equipment, and personnel changes from 2004 to 2024.", "type": "Organization / Entity"}, {"id": 5, "title": "Town of Appomattox Water System", "filename": "Appomattox_Water_System_History.html", "desc": "History of the town water system from wells to the county pipeline, 1990–2024.", "type": "Government Topic History"}, {"id": 6, "title": "Taxation in Appomattox County, Virginia", "filename": "appomattox_county_tax_history.html", "desc": "History of real estate and personal property taxes, reassessments, and related relief programs.", "type": "Government Topic History"}, {"id": 7, "title": "Solid Waste Management in Appomattox County, Virginia", "filename": "appomattox_solid_waste_history.html", "desc": "History of the county landfill, convenience centers, the Region 2000 Service Authority, and the transfer station debates.", "type": "Government Topic History"}, {"id": 8, "title": "Nathan A. Simpson", "filename": "Nathan_A_Simpson.html", "desc": "Entrepreneur, Town Council member, and Courthouse District Supervisor succeeding Sammy Carter in 2026.", "type": "Biography"}, {"id": 9, "title": "Paul D. Harvey", "filename": "Paul_Harvey.html", "desc": "Dentist and Mayor of Appomattox for twelve years (2008–2020); champion of the U.S. 460 waterline and creator of Courtland Festival Park. Died October 2020 at age 68.", "type": "Biography"}, {"id": 10, "title": "Samuel E. \"Sammy\" Carter", "filename": "Samuel_E_Carter.html", "desc": "Appomattox County Board of Supervisors member and longtime chairman, Town Council veteran, \"Voice of the Raiders,\" and community leader.", "type": "Biography"}, {"id": 11, "title": "Winfred D. Nash", "filename": "Winfred_D_Nash.html", "desc": "Nuclear industry executive, BWXT president, and Appomattox County civic leader.", "type": "Biography"}, {"id": 12, "title": "W.E. \"Bill\" Jamerson", "filename": "William_E_Jamerson.html", "desc": "Businessman, Courthouse District Supervisor, and prolific civic leader who owned J.E. Jamerson & Sons construction company and championed community development for over five decades.", "type": "Biography"}, {"id": 13, "title": "Appomattox Walmart", "filename": "Appomattox_Walmart.html", "desc": "The arrival of Walmart in Appomattox (2006–2010): community debate, taxpayer-funded incentives, Civil War battlefield concerns, the storefront design dispute, and the May 2010 grand opening.", "type": "Notable Event"}, {"id": 14, "title": "Historic Appomattox Railroad Festival", "filename": "Historic_Appomattox_Railroad_Festival.html", "desc": "The annual community celebration held in downtown Appomattox each October since 1972, commemorating the donation of the historic train depot — covering its founding by the Junior Woman's Club, growth to 50,000 attendees, national awards, the 2014 nonprofit transition, COVID cancellation, and 50th anniversary.", "type": "Notable Event"}, {"id": 15, "title": "AVAIO Data Center Project (2024)", "filename": "AVAIO_Data_Center_Project.html", "desc": "The $3 billion hyperscale data center campus announced in December 2024 by AVAIO Digital Partners on 452 acres in the Appomattox Center for Business and Commerce industrial park — covering the two-year negotiation, site advantages, projected $17 million annual tax impact, and construction timeline.", "type": "Notable Event"}, {"id": 16, "title": "Mary Lou Spiggle", "filename": "Mary_Lou_Spiggle.html", "desc": "Appomattox Town Council member since 2010, prolific Times-Virginian editorial writer, AVFD Auxiliary founding member, and creator of the ROSE beautification program.", "type": "Biography"}, {"id": 17, "title": "Alfred \"Al\" Jones III", "filename": "Alfred_L_Jones_III.html", "desc": "Minister, retired social studies teacher, local historian of African American Civil War history, former Appomattox County School Board member (2014–2021), and current Piney Mountain District Supervisor and Vice-Chairman of the Board of Supervisors.", "type": "Biography"}, {"id": 18, "title": "CVCC Appomattox Center", "filename": "CVCC_Appomattox_Center.html", "desc": "Central Virginia Community College's satellite campus in Appomattox, opened June 2007 at the Carver-Price Educational Complex — covering its four-year planning process, ribbon cutting, Early College dual enrollment program, community civic role, and CTE Academy expansions through 2023.", "type": "Organization / Entity"}, {"id": 19, "title": "Appomattox Town–County Boundary Line Dispute (2006–2012)", "filename": "Appomattox_Town_County_Boundary_Dispute_2012.html", "desc": "The protracted inter-governmental conflict between the Town of Appomattox and Appomattox County over whether the Town should annex land along U.S. 460 West in exchange for extending public sewer service — culminating in three 3–2 rejection votes in 2012.", "type": "Notable Event"}, {"id": 20, "title": "Town of Appomattox Wastewater Treatment Plant (2005–2020)", "filename": "Town_of_Appomattox_Wastewater_Treatment_Plant.html", "desc": "History of the Town of Appomattox's two wastewater treatment facilities — the SBR (Ethel Street, built 2000) and the trickling filter plant (Church Street, c. 1936) — covering the $1.164 million JMT lawsuit and settlement, a decade of DEQ consent orders for copper and zinc, basin remediation, and the long-running effort to close the trickling filter plant through a USDA grant.", "type": "Government Topic History"}, {"id": 21, "title": "Thomasville Furniture (Appomattox)", "filename": "Thomasville_Furniture_Appomattox.html", "desc": "History of the Thomasville Furniture plant (1974–2011), Appomattox County's largest employer for decades — from its founding as Founders Furniture through layoffs, closure, and the building's afterlife including the failed Lindenburg venture and Virginia MetalFab's arrival.", "type": "Organization / Entity"}, {"id": 22, "title": "Timothy W. \"Timmy\" Garrett", "filename": "Timothy_Garrett.html", "desc": "AVFD Fire Chief for sixteen years (c. 2002–2018), Appomattox Town Council member since 2010, Vice-Mayor since 2015, and Appomattox County Public Schools Maintenance Supervisor — representing three generations of Garrett family civic service.", "type": "Biography"}, {"id": 23, "title": "Broadband and Internet Infrastructure in Appomattox County", "filename": "Appomattox_County_Broadband_History.html", "desc": "History of broadband and internet infrastructure from the first cable provider (c. 1990) through the MBC backbone, WiMax, school fiber buildout, and the Firefly Fiber Broadband / CVEC era — covering $79M in VATI grants, Dominion Energy middle-mile fiber, the 2022 Town Council franchise amendment, and the push toward universal gigabit coverage.", "type": "Government Topic History"}, {"id": 24, "title": "Ronnie Spiggle", "filename": "Ronnie_Spiggle.html", "desc": "Biography of Ronald C. 'Ronnie' Spiggle — 28-year Mayor of Appomattox (1978–2006), Falling River District Supervisor (2012–2015), Vietnam veteran, funeral director, auctioneer, and civic leader known as the 'Face of Appomattox.'", "type": "Biography"}, {"id": 25, "title": "Main Street Appomattox — Downtown Revitalization", "filename": "Main_Street_Appomattox.html", "desc": "Four decades of public and private efforts to revitalize downtown Appomattox — from the 1976 federal redevelopment project through the CDBG facade-improvement program completed in 2022.", "type": "Government Topic History"}, {"id": 26, "title": "2008 Appomattox Pipeline Incident", "filename": "2008_Appomattox_Pipeline_Incident.html", "desc": "The September 14, 2008 Williams Transco natural gas pipeline explosion on Oakville Road — a rupture caused by external corrosion that destroyed two homes, injured five, and prompted a $952,500 federal fine.", "type": "Notable Event"}, {"id": 27, "title": "Appomattox County Budget History", "filename": "Appomattox_County_Budget_History.html", "desc": "A comprehensive chronological history of the Appomattox County annual budget from the 1990s through FY2025, covering tax rate decisions, school funding battles, reassessments, the Great Recession, debt restructuring, and the growth from $27.4 million to $54 million.", "type": "Government Topic History"}, {"id": 28, "title": "John L. Wilson", "filename": "John_Wilson.html", "desc": "Town Councilman (2004–2006) and Mayor of Appomattox (2006–2008), Korean War veteran and retired United Airlines captain known for founding the Appomattox Citizens Coalition and his opposition to the Concord waterline.", "type": "Biography"}, {"id": 29, "title": "Appomattox County Chamber of Commerce", "filename": "Appomattox_County_Chamber_of_Commerce.html", "desc": "History of the county Chamber of Commerce — its founding around 1967, the Friday Cheers/Cheerz concert series, Citizen of the Year awards, leadership, and role in promoting local business and tourism.", "type": "Organization / Entity"}, {"id": 30, "title": "Appomattox Community Center", "filename": "Appomattox_Community_Center.html", "desc": "County-owned multi-use facility opened c. 1990 on Route 460 — the hub for youth sports registration, Board of Supervisors meetings, senior services, emergency sheltering, and community events across three decades.", "type": "Organization / Entity"}, {"id": 31, "title": "U.S. Route 460 and Appomattox County", "filename": "Route_460_Appomattox_History.html", "desc": "History of U.S. Route 460 through Appomattox County — the 25-year effort to build the Appomattox Bypass (1966–c. 1995), the 2004–2005 speed limit controversy, commercial development along the corridor, and ongoing VDOT maintenance projects.", "type": "Government Topic History"}, {"id": 32, "title": "Aileen Ferguson", "filename": "Aileen_Ferguson.html", "desc": "Appomattox County Administrator across two tenures spanning 1990–2015, who oversaw a transformative period of infrastructure growth including a new courthouse, library, community park, and water system extension.", "type": "Biography"}, {"id": 33, "title": "Zoning and Land Use in Appomattox County", "filename": "Zoning_and_Land_Use_in_Appomattox_County.html", "desc": "History of zoning ordinances, land use planning, comprehensive plans, and development regulations across Appomattox County and its towns from the 1960s to the present — covering the 1968 town ordinance, 1988 county ordinance, major rezonings, the overlay district debate, the 2009 rewrite, the 2013 planning commission split, and emerging issues like solar energy and short-term rentals.", "type": "Government Topic History"}, {"id": 34, "title": "Appomattox Youth Sports", "filename": "Appomattox_Youth_Sports.html", "desc": "The county's primary volunteer-run youth athletic league, administering baseball, softball, football, cheerleading, basketball, soccer, and wrestling for hundreds of children annually since the mid-twentieth century.", "type": "Organization / Entity"}, {"id": 35, "title": "Garet K. Bosiger", "filename": "Garet_Bosiger.html", "desc": "Biography of the Appomattox businessman, former Board of Supervisors member (1996–1999), and EDA Chairman who helped negotiate the $3 billion AVAIO Digital data center deal.", "type": "Biography"}, {"id": 36, "title": "Anne Dixon", "filename": "Anne_Dixon.html", "desc": "Appomattox County Director of Parks, Recreation and Tourism; co-founder of the Appomattox Tourism Committee; and supporter of the Appomattox 1865 Foundation and the National Historical Park's 150th anniversary sesquicentennial.", "type": "Biography"}, {"id": 37, "title": "Rev. Dr. Geoffrey Hubler", "filename": "Geoffrey_Hubler.html", "desc": "Founding head of school at Cornerstone Christian Academy, who led the classical Christian institution from 2005 until his retirement in 2023; ordained minister in the Anglican tradition.", "type": "Biography"}, {"id": 38, "title": "Walter Krug", "filename": "Walter_Krug.html", "desc": "Superintendent of Appomattox County Public Schools (1997–2007) who succeeded Shirley Eye and led the division to full accreditation for three consecutive years under Virginia's Standards of Learning.", "type": "Biography"}, {"id": 39, "title": "Raschad Kelso", "filename": "Raschad_Kelso.html", "desc": "ACHS Class of 2006 alumnus, national-caliber track athlete, and head coach of the Appomattox County High School boys basketball team beginning in 2022.", "type": "Biography"}, {"id": 40, "title": "Bobby Waddell", "filename": "Bobby_Waddell.html", "desc": "Appomattox County School Board member (2005–2020) representing the Falling River and later Piney Mountain District; chairman for fourteen years; 2024 VSBA Regional Member of the Year.", "type": "Biography"}, {"id": 41, "title": "Gary Tanner", "filename": "Gary_Tanner.html", "desc": "Concord Volunteer Fire Department Chief, Wreck Island District Supervisor (2007–2015), Board of Supervisors Chairman (2010–2011), and Sorensen Institute alumnus who championed fiscal conservatism and the U.S. 460 waterline project.", "type": "Biography"}, {"id": 42, "title": "Tom Conrad", "filename": "Tom_Conrad.html", "desc": "Falling River District Supervisor (2004–2011), Board of Supervisors Chairman (2009), and longtime Appomattox County government figure involved in the courthouse construction, waterline project, and land-use planning.", "type": "Biography"}, {"id": 43, "title": "David T. Garrett, Jr.", "filename": "David_Garrett.html", "desc": "Town of Appomattox Director of Public Works and Town Manager (2000–2009) who served approximately 25 years in municipal government, overseeing major infrastructure projects including sidewalks, water system improvements, and tourism development.", "type": "Biography"}, {"id": 44, "title": "Willie Craft", "filename": "Willie_Craft.html", "desc": "Retired Virginia State Police trooper with 55 years of law enforcement service and Appomattox River District Supervisor (2003–2015), including a term as Board Chairman (2011–2012).", "type": "Biography"}, {"id": 45, "title": "Dorinda Grasty", "filename": "Dorinda_Grasty.html", "desc": "First female Superintendent of Appomattox County Public Schools (2009–2018), who led the district through the Great Recession budget crisis and earned Region 8 Superintendent of the Year honors in 2015.", "type": "Biography"}, {"id": 46, "title": "Annette Bennett", "filename": "Annette_Bennett.html", "desc": "Superintendent of Appomattox County Public Schools (2018–present), career educator who rose from special education teacher to division leader, named Region 8 Superintendent of the Year in 2024.", "type": "Biography"}, {"id": 47, "title": "Richard C. Conner", "filename": "Richard_Conner.html", "desc": "Mayor of the Town of Appomattox since 2020, CVPDC chairman, and advocate for digital government transparency and regional partnerships.", "type": "Biography"}, {"id": 48, "title": "Robert G. \"Bob\" Mitchell", "filename": "Robert_G_Mitchell.html", "desc": "Naval engineer, Mayor of Pamplin City (2000–2014), and champion of the East Pamplin Sewer Project; died January 6, 2021 at age 91.", "type": "Biography"}, {"id": 49, "title": "Earle Patterson Robinson", "filename": "Earle_Patterson_Robinson.html", "desc": "Appomattox Town Council member for 24 years (c. 1951–c. 1975) and Vice Mayor; died February 2018.", "type": "Biography"}, {"id": 50, "title": "Don Franklin Jimison", "filename": "Don_Jimison.html", "desc": "Basketball coach, teacher, school principal, and Holiday Lake 4-H Center manager who served Appomattox County education and youth for decades; died January 3, 2017.", "type": "Biography"}, {"id": 51, "title": "Kenny Scott", "filename": "Kenny_Scott.html", "desc": "Multi-sport Appomattox County High School athlete (Class of 2010) who starred in football and track and field, earning All-American honors in the long jump and a scholarship to Liberty University.", "type": "Biography"}, {"id": 52, "title": "2010 Appomattox Mass Shooting", "filename": "2010_Appomattox_Mass_Shooting.html", "desc": "On January 19, 2010, Christopher Bryan Speight shot and killed eight people in and near Appomattox, triggering an 18-hour manhunt and resulting in five life sentences plus 18 years.", "type": "Notable Event"}, {"id": 53, "title": "2016 Appomattox County Tornado", "filename": "2016_Appomattox_Tornado.html", "desc": "An EF-3 tornado struck Appomattox County on February 24, 2016, killing one person, injuring seven, damaging over 200 homes, and displacing 375 residents across a 16.9-mile path.", "type": "Notable Event"}, {"id": 54, "title": "Appomattox Civil War Sesquicentennial (2015)", "filename": "Appomattox_Civil_War_Sesquicentennial.html", "desc": "The 150th anniversary commemoration of the April 9, 1865 surrender at Appomattox Court House, drawing an estimated 100,000+ visitors to over 80 events including reenactments, ceremonies, and educational programs.", "type": "Notable Event"}, {"id": 55, "title": "Wilbun's Supermarket Closure (2010)", "filename": "Wilbuns_Supermarket_Closure.html", "desc": "The August 2010 closure of Wilbun's Supermarket, a 75-year-old family grocery institution on Confederate Boulevard, due to declining sales amid the economic recession and Thomasville Furniture closure.", "type": "Notable Event"}, {"id": 56, "title": "Liberty Baptist Church", "filename": "Liberty_Baptist_Church.html", "desc": "One of the most prominent and active congregations in Appomattox County, with sustained coverage of worship, community service, Bible study, and major county events including Relay for Life hosting.", "type": "Organization / Entity"}, {"id": 57, "title": "Memorial United Methodist Church", "filename": "Memorial_United_Methodist_Church.html", "desc": "Major Appomattox congregation and community anchor, frequently serving as host venue for Relay for Life events, county gatherings, and civic programs over two decades of local coverage.", "type": "Organization / Entity"}, {"id": 58, "title": "Appomattox County Ministerial Association", "filename": "Appomattox_County_Ministerial_Association.html", "desc": "Ecumenical coalition of local clergy and congregations coordinating community outreach including the Good Samaritan Clothing Exchange, food assistance, and disaster response across Appomattox County.", "type": "Organization / Entity"}, {"id": 59, "title": "Good Samaritan Clothing Exchange", "filename": "Good_Samaritan_Clothing_Exchange.html", "desc": "Community clothing assistance program operated under the Appomattox County Ministerial Association, providing free clothing to county residents in need throughout the year.", "type": "Organization / Entity"}, {"id": 60, "title": "High Bridge Trail State Park", "filename": "High_Bridge_Trail_State_Park.html", "desc": "The conversion of a former Norfolk Southern rail corridor into a 31-mile multi-use state park trail through Appomattox, Prince Edward, and Cumberland counties, opening in phases from 2008 to 2024.", "type": "Notable Event"}, {"id": 61, "title": "Pamplin City Sewer Project (2010)", "filename": "Pamplin_Sewer_Project.html", "desc": "A $3.2 million USDA-funded infrastructure project to bring public sewer service to Pamplin City, constructed from 2010 to 2011.", "type": "Notable Event"}, {"id": 62, "title": "Appomattox County Jail and Criminal Justice System", "filename": "Appomattox_County_Jail_History.html", "desc": "History of the county jail from the 19th century through its 2012 closure and transition to the Blue Ridge Regional Jail, along with criminal justice operations and the old jail's conversion to a museum.", "type": "Government Topic History"}, {"id": 63, "title": "Parks and Recreation in Appomattox County", "filename": "Appomattox_County_Parks_and_Recreation.html", "desc": "History of county and town recreational facilities, parks programs, youth sports leagues, athletic complexes, and open-space initiatives from the 1970s to the present.", "type": "Government Topic History"}, {"id": 64, "title": "Town of Pamplin", "filename": "Town_of_Pamplin.html", "desc": "History and governance of Pamplin, Virginia's smallest incorporated city, from its 1874 founding through industrial era clay pipe manufacturing, 21st-century financial challenges, and revitalization efforts.", "type": "Government Topic History"}, {"id": 65, "title": "Appomattox County Rescue Squad", "filename": "Appomattox_County_Rescue_Squad.html", "desc": "The county's volunteer emergency medical services organization, founded c. 1962, providing 24/7 ambulance service with 1,200+ annual calls — history, leadership, funding, fleet, and community fundraising.", "type": "Organization / Entity"}, {"id": 66, "title": "Appomattox Christian Academy", "filename": "Appomattox_Christian_Academy.html", "desc": "Private Christian school founded in 2005, offering K-12 education with a classical Christian curriculum, athletics, and a Career and Technical Education Institute partnership with CVCC.", "type": "Organization / Entity"}, {"id": 67, "title": "Cornerstone Christian Academy", "filename": "Cornerstone_Christian_Academy.html", "desc": "PreK-12 classical Christian school founded in 2007 by Rev. Dr. Geoffrey Hubler, emphasizing the trivium model of Grammar, Logic, and Rhetoric stages with 109 students.", "type": "Organization / Entity"}, {"id": 68, "title": "Carver-Price Legacy Museum", "filename": "Carver_Price_Legacy_Museum.html", "desc": "Museum preserving the history of the African-American community in Appomattox County, housed in the former Carver-Price High School (c. 1930 Rosenwald Fund building), opened June 2008 and listed on the Virginia Landmarks Register in 2023.", "type": "Organization / Entity"}, {"id": 69, "title": "BWX Technologies (BWXT) in Appomattox County", "filename": "BWXT_Appomattox.html", "desc": "History of the BWX Technologies nuclear components manufacturing facility, one of the county's largest employers — from Babcock & Wilcox origins through the 2006 consolidation, naval nuclear fuel production, and community impact.", "type": "Organization / Entity"}, {"id": 70, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Center.html", "desc": "Virginia Cooperative Extension youth camp and educational center in Appomattox County, serving 19 Central Virginia localities with summer camps, outdoor education, and school group programs since the mid-1970s.", "type": "Organization / Entity"}, {"id": 71, "title": "Concord Volunteer Fire Department", "filename": "Concord_Volunteer_Fire_Department.html", "desc": "Volunteer fire company serving the Concord community in southeastern Appomattox County and portions of Campbell County — its leadership history, the annual Firemen's Carnival fundraiser, emergency response, and community service.", "type": "Organization / Entity"}, {"id": 72, "title": "Appomattox County Public Schools", "filename": "Appomattox_County_Public_Schools.html", "desc": "The public school division serving Appomattox County, Virginia, operating four schools (Primary, Elementary, Middle, and High School) for approximately 2,200 students — covering superintendent leadership from Earl Smith through Walter Krug's return, the historic 2005 full-accreditation achievement, budget battles, and the COVID-19 response.", "type": "Organization / Entity"}, {"id": 73, "title": "Region 2000 Services Authority", "filename": "Region_2000_Service_Authority.html", "desc": "The multi-jurisdictional regional government entity serving nine central Virginia localities including Appomattox County — providing grant-writing, economic development coordination, solid waste management, water supply planning, and emergency management since the early 1990s.", "type": "Organization / Entity"}, {"id": 74, "title": "American Legion Post 104", "filename": "American_Legion_Post_104.html", "desc": "Appomattox County's American Legion post, active since at least 1947 — sponsor of annual Veterans Day and Memorial Day ceremonies, builder of the nationally significant Veterans Wall of Honor (2006), and a cornerstone civic organization through its Auxiliary Unit 104.", "type": "Organization / Entity"}, {"id": 75, "title": "Appomattox 1865 Foundation", "filename": "Appomattox_1865_Foundation.html", "desc": "Nonprofit organization established February 2012 to support Appomattox Court House National Historical Park through fundraising, education, and commemoration — known for its sold-out Lantern Tours and central role in the 2015 sesquicentennial that drew 31,000 attendees.", "type": "Organization / Entity"}, {"id": 76, "title": "Appomattox County Historical Society", "filename": "Appomattox_County_Historical_Society.html", "desc": "Organization dedicated to preserving local history through Clover Hill Village, a six-acre living history site featuring historic structures including Wesley Chapel and the Clover Hill Tavern — covering cemetery documentation, Civil War reenactments, and preservation projects from the early 1990s onward.", "type": "Organization / Entity"}, {"id": 77, "title": "J. Robert Jamerson Memorial Library", "filename": "J_Robert_Jamerson_Memorial_Library.html", "desc": "The Appomattox County public library system's main branch, named for local civic leader J. Robert Jamerson — covering its founding, the distinctive current building, directors, programs, budget, and community role from the 1940s to the present.", "type": "Organization / Entity"}, {"id": 78, "title": "Appomattox Court House National Historical Park", "filename": "Appomattox_Court_House_National_Historical_Park.html", "desc": "The National Park Service site commemorating the April 9, 1865 Confederate surrender — covering the park's establishment, restored buildings, visitor programs, the 2015 sesquicentennial, economic impact, and community relationships.", "type": "Organization / Entity"}, {"id": 79, "title": "Appomattox County Sheriff's Office", "filename": "Appomattox_County_Sheriffs_Office.html", "desc": "History of the county's elected sheriff office — covering sheriffs from Gene Richardson through the current administration, the DARE program, K-9 units, the 2010 Speight mass shooting response, jail operations, and community policing.", "type": "Organization / Entity"}, {"id": 80, "title": "Gleaning for the World", "filename": "Gleaning_for_the_World.html", "desc": "Appomattox-based nonprofit humanitarian organization founded in 1998 by Rev. Ron Davidson — covering its mission of collecting and distributing donated goods worldwide, major disaster responses, Forbes top-charity recognition, and over $500 million in distributed aid.", "type": "Organization / Entity"}, {"id": 81, "title": "Holiday Lake 4-H Educational Center", "filename": "Holiday_Lake_4H_Educational_Center.html", "desc": "Virginia's premier 4-H youth camp and educational center located in Appomattox County's Buckingham State Forest — covering its 1942 founding, programs serving 4,000+ students annually from 17 counties, facilities, and eight decades of youth development.", "type": "Organization / Entity"}, {"id": 82, "title": "Appomattox Courthouse Theatre", "filename": "Appomattox_Courthouse_Theatre.html", "desc": "The county's community theater organization, founded in 2006 by Jillian Mitchel in the old Appomattox County Courthouse at 331 Court Street — covering its debut season, leadership transition to a five-member board under Valerie Daugherty, and growth into a beloved local arts institution.", "type": "Organization / Entity"}, {"id": 83, "title": "Appomattox Elementary School", "filename": "Appomattox_Elementary_School.html", "desc": "Appomattox County public elementary school serving grades 3–5, housed in an award-winning 2002 building designed by VMDO Architects — covering its 'learning street' architecture, academic programs, England sister-school partnership, and community engagement.", "type": "Organization / Entity"}, {"id": 84, "title": "Appomattox FFA Chapter", "filename": "Appomattox_FFA.html", "desc": "The Future Farmers of America chapter at Appomattox County High School, active since at least 1946 — ranked #1 in Virginia for three consecutive years (2022–2024) with 203 members, covering competitive achievements, livestock programs, the FFA Alumni Association, and community service.", "type": "Organization / Entity"}, {"id": 85, "title": "Appomattox Lions Club", "filename": "Appomattox_Lions_Club.html", "desc": "The local chapter of Lions Clubs International, chartered in 1939 — known for community vision screenings, the annual Food Festival and Beef Festival fundraisers, the $40,000 Community Park pavilion, and over eight decades of civic service in Appomattox County.", "type": "Organization / Entity"}, {"id": 86, "title": "Appomattox Middle School", "filename": "Appomattox_Middle_School.html", "desc": "The county's public middle school serving grades 6–8, home to Raiders athletics, honor choirs, an FFA chapter, and STEM programs — covering its history from the 1970s remodeling through a $5 million renovation, full SOL accreditation, and decades of academic and extracurricular achievement.", "type": "Organization / Entity"}, {"id": 87, "title": "James Addison \"Jim\" Nolen", "filename": "Jim_Nolen.html", "desc": "Real estate broker, appraiser, banker, agricultural extension agent, and outspoken civic voice in Appomattox County for over four decades (1936–2011).", "type": "Biography"}, {"id": 88, "title": "Doug Smith", "filename": "Doug_Smith.html", "desc": "Appomattox County High School head football coach (2012–2023) who won five VHSL Class 2A state championships, amassed 118 wins at ACHS, and built the Raiders into one of Virginia's elite small-school football dynasties.", "type": "Biography"}, {"id": 89, "title": "Matt Fariss", "filename": "Matt_Fariss.html", "desc": "Republican member of the Virginia House of Delegates for the 59th District (2012–c. 2024), livestock market co-owner, and constituent communicator whose career was bookended by early misdemeanor convictions and 2023–2024 felony charges including hit-and-run and narcotics possession.", "type": "Biography"}, {"id": 90, "title": "2015 ACHS State Football Championship", "filename": "ACHS_Football_Championship_2015.html", "desc": "Appomattox County High School Raiders' first Virginia 2A state football championship — a perfect 15-0 season culminating in a 42-6 victory over Clarke County on December 12, 2015, under Head Coach Doug Smith, sparking a community celebration and launching a multi-year dynasty.", "type": "Notable Event"}, {"id": 91, "title": "Darrel W. Puckett", "filename": "Darrel_Puckett.html", "desc": "Appomattox County Commonwealth's Attorney for nearly twenty years (c. 1999–2019), retired U.S. Air Force Reserve Lieutenant Colonel, and prosecutor of the 2010 Speight mass shooting case — appointed General District Court Judge for the 10th Judicial District in June 2019.", "type": "Biography"}, {"id": 92, "title": "Joe Caruso", "filename": "Joe_Caruso.html", "desc": "Head baseball coach at Appomattox County High School for 23 seasons (2001–2023), who led the Raiders to their first-ever state championship in 2022 and was named Class 2 Coach of the Year alongside his son Alex Caruso's Player of the Year honors.", "type": "Biography"}, {"id": 93, "title": "Appomattox County COVID-19 Response (2020–2022)", "filename": "Appomattox_COVID19_Response.html", "desc": "The county and town government response to the COVID-19 pandemic — emergency declarations, K-12 school closures and virtual learning, business disruptions including the J.Crew Distribution Center closure, vaccination campaigns, and the gradual return to normalcy marked by the 2022 indoor graduation and restored community events.", "type": "Notable Event"}, {"id": 94, "title": "Bill Gillespie", "filename": "Bill_Gillespie.html", "desc": "Interim Town Manager of Appomattox for approximately five and a half years (2010–2016) and former Executive Director of Region 2000 — oversaw the U.S. 460 waterline activation, developed the town's five-year strategic plan, led boundary line adjustment negotiations, and pursued wastewater and economic development initiatives.", "type": "Biography"}, {"id": 95, "title": "2017 ACHS State Football Championship", "filename": "ACHS_Football_Championship_2017.html", "desc": "The Appomattox County High School Raiders' third consecutive VHSL Class 2A state football championship — a dramatic 38-34 victory over Robert E. Lee at Salem Stadium on December 10, 2017, won on a Javon Scruggs-to-Devin Dews touchdown pass with 1:46 remaining.", "type": "Notable Event"}, {"id": 96, "title": "Animal Welfare in Appomattox County", "filename": "Animal_Welfare_Appomattox.html", "desc": "History of animal welfare in Appomattox County — from the 1991 Humane Society organizing effort through the founding of AWAG (1999), construction of the $600,000 county animal shelter (2007), the record 49-dog seizure (2009), animal control controversies, and two decades of volunteer rescue work.", "type": "Government Topic History"}, {"id": 97, "title": "Appomattox County Relay for Life", "filename": "Appomattox_Relay_for_Life.html", "desc": "The annual American Cancer Society overnight fundraising walk held at Appomattox County High School since the early 2000s — raising over $100,000 in peak years through team walking, the Survivor's Lap, Luminaria Ceremony, and the Country Cook-Off, with consistent top national per-capita rankings.", "type": "Notable Event"}, {"id": 98, "title": "Virginia MetalFab / Stallworks", "filename": "Virginia_MetalFab_Stallworks.html", "desc": "Metal fabrication and horse stall installation companies owned by Ron Martin — relocated into the former Thomasville Furniture building in 2022, hosted a grand opening with Governor Glenn Youngkin in December 2022, and announced plans for 130 additional jobs.", "type": "Organization / Entity"}, {"id": 99, "title": "Annie Terry", "filename": "Annie_Terry.html", "desc": "Appomattox County High School multi-sport athlete (Class of 2008) and People to People Sports Ambassador who became Heritage High School girls basketball head coach in Lynchburg.", "type": "Biography"}, {"id": 100, "title": "2022 ACHS Baseball and Softball State Championships", "filename": "ACHS_Baseball_Softball_Championship_2022.html", "desc": "On June 11, 2022, both the Raiders baseball and Lady Raiders softball teams captured VHSL Class 2 state championships on the same day in Salem — a historic double marking the first baseball state title in school history and the second consecutive softball championship.", "type": "Notable Event"}, {"id": 101, "title": "Museum of the Confederacy — Appomattox", "filename": "Museum_of_the_Confederacy_Appomattox.html", "desc": "The Appomattox branch of the Museum of the Confederacy (now American Civil War Museum), opened September 2012 with $8.5 million in fundraising — covering its founding, the 2013 merger, Confederate flag controversies, leadership transitions, and programming through 2024.", "type": "Organization / Entity"}, {"id": 102, "title": "Joel Sweeney and the Banjo Festival (2019)", "filename": "Joel_Sweeney_Banjo_Festival_2019.html", "desc": "A September 2019 cultural festival at Appomattox Court House National Historical Park celebrating Appomattox-born banjo innovator Joel Walker Sweeney, featuring the dedication of a Virginia State Historical Marker honoring enslaved African American banjoists and a headline concert by Grammy-winner Dom Flemons.", "type": "Notable Event"}, {"id": 103, "title": "Brantley Shields", "filename": "Brantley_Shields.html", "desc": "Appomattox County High School boys basketball head coach for six seasons (2004–2010), who compiled a 79-64 record, won the program's first-ever district championship in 2009–10, and earned Dogwood District Coach of the Year before departing for Rustburg High School.", "type": "Biography"}, {"id": 104, "title": "Robert E. Lee Soil and Water Conservation District", "filename": "Robert_E_Lee_Soil_Water_Conservation.html", "desc": "The multi-jurisdictional conservation district serving Appomattox County, Campbell County, and the City of Lynchburg — administering the Virginia Agricultural BMP Cost-Share Program, conservation planning, annual tree and shrub sales, Envirothon competitions, and dam safety coordination since the 1940s.", "type": "Organization / Entity"}, {"id": 105, "title": "Spout Spring Ruritan Club", "filename": "Spout_Spring_Ruritan_Club.html", "desc": "Ruritan National chapter chartered May 9, 1966, in the Spout Spring community of Appomattox County — donating over $200,000 annually and $25,000 in scholarships through its 1994 clubhouse and softball field complex on U.S. Route 460.", "type": "Organization / Entity"}, {"id": 106, "title": "Appomattox Moose Lodge #975", "filename": "Appomattox_Moose_Lodge.html", "desc": "The local chapter of the Loyal Order of Moose, a fraternal and charitable organization that raised $37,500 for local causes in the first five months of 2024 alone — supporting the county animal shelter, youth organizations, and cancer awareness through community fundraising events.", "type": "Organization / Entity"}, {"id": 107, "title": "Appomattox Primary School", "filename": "Appomattox_Primary_School.html", "desc": "The county's public PreK–2 school serving the youngest students in the Appomattox County Public Schools system — covering the 1990 $1.076 million expansion, Reading Week traditions dating to 1982, the Halloween Carnival, community partnerships, and four decades of early childhood education.", "type": "Organization / Entity"}, {"id": 108, "title": "2023 ACHS Volleyball State Championship", "filename": "ACHS_Volleyball_Championship_2023.html", "desc": "The Appomattox County High School Lady Raiders volleyball team's historic first VHSL Class 2 state championship — a dramatic 3-2 comeback victory over Bruton High School at the Salem Civic Center on November 20, 2023, capping a 25-3 season under Coach Mark Drinkard.", "type": "Notable Event"}, {"id": 109, "title": "2020 ACHS State Football Championship", "filename": "ACHS_Football_Championship_2020.html", "desc": "The Appomattox Raiders' fifth VHSL Class 2 state football championship, won during the COVID-19 pandemic-shifted spring 2021 season while Head Coach Doug Smith battled multiple myeloma — a testament to community resilience and program depth.", "type": "Notable Event"}, {"id": 110, "title": "Gary Ferguson", "filename": "Gary_Ferguson.html", "desc": "Appomattox County High School softball head coach and girls basketball coach whose 2007 contract non-renewal sparked community controversy — later built a successful program at Brookville High School; ACHS Hall of Fame Class of 1984 inductee and Ferrum College baseball alumnus.", "type": "Biography"}, {"id": 111, "title": "Falling River Country Club", "filename": "Falling_River_Country_Club.html", "desc": "Private golf and recreational club in Appomattox County featuring a 9-hole championship course, swimming pool, and clubhouse — home course for the ACHS Raiders golf team and host of the annual Raider Invitational, Dogwood District tournaments, and numerous charity golf events since the mid-1960s.", "type": "Organization / Entity"}, {"id": 112, "title": "Leslie M. \"Les\" Fleet", "filename": "Les_Fleet.html", "desc": "Appomattox County Commonwealth's Attorney since 2019, who rose through the office from Assistant (2005) to Deputy (2007) to elected prosecutor — lead attorney in the Christopher Bryan Speight mass murder prosecution and advocate for victim-centered justice.", "type": "Biography"}, {"id": 113, "title": "2011 ACHS Baseball Region B Championship", "filename": "ACHS_Baseball_Championship_2011.html", "desc": "The Appomattox County High School Raiders baseball team's improbable run to the 2011 Region B championship as the 8th seed — featuring Dylan Caruso's walk-off 11th-inning home run in a storm-relocated semifinal and a 9-inning championship victory over Strasburg, the program's first regional title under Coach Joe Caruso.", "type": "Notable Event"}, {"id": 114, "title": "Falling River Frogs Swim Team", "filename": "Falling_River_Frogs.html", "desc": "Appomattox County's competitive youth swimming club, formerly the Barracudas, competing in the Lynchburg Aquatic League from the Falling River Country Club pool since 2007 — covering age-group competition, coaching history, and community aquatics development.", "type": "Organization / Entity"}, {"id": 115, "title": "Appomattox County Opioid and Drug Crisis", "filename": "Appomattox_Opioid_Crisis.html", "desc": "The wave of heroin, fentanyl, methamphetamine, and prescription opioid cases in Appomattox County from the mid-2010s onward — covering the Seth Rothgeb death and Matlack prosecution, Operation Ice Melt, multi-agency sweeps, the founding of AART, Rapid REVIVE naloxone training, and ongoing enforcement through 2024.", "type": "Notable Event"}, {"id": 116, "title": "Appomattox County 2020 General Election", "filename": "Appomattox_County_2020_Election.html", "desc": "The November 3, 2020 general election in Appomattox County — documenting local results (Trump 72%, Good 70%), the retirement of 30-year Registrar Sabrina Smith, COVID-era early voting expansion, Virginia's elimination of the photo ID requirement, and community reaction.", "type": "Notable Event"}, {"id": 117, "title": "Appomattox Court House National Historical Park Sewer Project (2021)", "filename": "Appomattox_NHP_Sewer_Project_2021.html", "desc": "A federally funded infrastructure project to replace the failing early-1990s sewer system at Appomattox Court House National Historical Park — approved March 2021 and completed by November 2021, part of the $11.7 billion national deferred maintenance backlog identified during Secretary Zinke's 2018 park visit.", "type": "Notable Event"}, {"id": 118, "title": "Watkins Moorman Abbitt", "filename": "Watkins_M_Abbitt_Sr.html", "desc": "Appomattox County Commonwealth's Attorney (1932–1948) and U.S. Representative for Virginia's 4th District (1948–1973) — a 25-year congressman, Byrd Organization lieutenant, Liberty Baptist Church deacon for 67 years, and namesake of Watkins M. Abbitt Memorial Park in downtown Appomattox.", "type": "Biography"}, {"id": 119, "title": "Watkins Moorman Abbitt Jr.", "filename": "Watkins_M_Abbitt_Jr.html", "desc": "Virginia House of Delegates member for the 59th District (1986–2012) — a 26-year legislator who switched from Democrat to Independent in 2001, championed biosolids regulation and rural infrastructure, and continued the Abbitt family's half-century of political service in Central Virginia.", "type": "Biography"}];
+  var ms = new MiniSearch({
+    fields: ['title', 'desc'],
+    storeFields: ['title', 'filename', 'desc', 'type'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+      boost: { title: 3 }
+    }
+  });
+  ms.addAll(docs);
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+
+  function initSearch(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list  = document.getElementById(listId);
+    if (!input || !list) return;
+
+    var activeIdx = -1;
+
+    function render(results) {
+      activeIdx = -1;
+      if (!results.length) {
+        if (input.value.trim().length > 0) {
+          list.innerHTML = '<li class="sr-empty">No matching articles</li>';
+          list.classList.add('active');
+        } else {
+          list.innerHTML = '';
+          list.classList.remove('active');
+        }
+        return;
+      }
+      list.innerHTML = results.slice(0, 8).map(function(r, i) {
+        var desc = r.desc || '';
+        if (desc.length > 90) desc = desc.substring(0, 90) + '…';
+        return '<li><a href="' + r.filename + '" data-idx="' + i + '">'
+          + '<span class="sr-title">' + esc(r.title) + '</span>'
+          + '<span class="sr-type">' + esc(r.type) + '</span>'
+          + '<div class="sr-desc">' + esc(desc) + '</div>'
+          + '</a></li>';
+      }).join('');
+      list.classList.add('active');
+    }
+
+    function setActive(items) {
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === activeIdx);
+      }
+    }
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 1) { list.innerHTML = ''; list.classList.remove('active'); return; }
+      var results = ms.search(q);
+      render(results);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('a[data-idx]');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        setActive(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        setActive(items);
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        items[activeIdx].click();
+      } else if (e.key === 'Escape') {
+        list.innerHTML = ''; list.classList.remove('active');
+        input.blur();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.innerHTML = ''; list.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize nav search bar
+  initSearch('apxwiki-search', 'apxwiki-search-results');
+  // Initialize hero search bar (homepage only)
+  initSearch('hero-search', 'hero-search-results');
+})();
+</script>
+<!-- APXWIKI-SEARCH-END -->
 </body>
 </html>

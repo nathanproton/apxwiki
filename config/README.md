@@ -121,9 +121,10 @@ Category keys and their display labels (from `site.json`):
 
 When you create a new article HTML file:
 
-1. Remove (or leave) the stub entry from the `stubs` array — build.py will show a checkmark next to any stub whose filename matches a published page.
-2. Add a full entry to the `pages` array with `"status": "published"` and all required fields.
+1. Add a full entry to the `pages` array with `"status": "published"` and all required fields.
+2. Run `build.py --cleanup-stubs` to remove the completed stub from the `stubs` array. Do not leave completed stubs in pages.json.
 3. Run `build.py --update-lengths` to set the correct `content_length`.
+4. Run `build.py --qc` to verify the new article passes all quality checks.
 
 ---
 
@@ -216,9 +217,31 @@ The build script reads all config files and templates, then generates/updates HT
 | `python3 config/build.py` | Full rebuild: regenerate index.html and update nav/alerts/footer/CSS on all published articles |
 | `python3 config/build.py --index-only` | Rebuild only index.html (skip article updates) |
 | `python3 config/build.py --update-lengths` | Recalculate `content_length` for each published page and save to pages.json |
+| `python3 config/build.py --qc` | Run quality-control checks across all articles (read-only; no files are modified) |
+| `python3 config/build.py --cleanup-stubs` | Remove completed stubs from pages.json (stubs whose filename matches a published page) |
 | `python3 config/build.py --dry-run` | Preview what would change without writing any files |
 
 Flags can be combined: `python3 config/build.py --update-lengths --dry-run`
+
+### Quality-control checks (--qc)
+
+The `--qc` flag runs a battery of read-only checks and prints a structured report. It does not modify any files. The checks are:
+
+1. **Registry integrity** — finds HTML article files on disk that are not registered in the `pages` array of pages.json (orphan files) and notes whether they have a stub entry.
+2. **Ghost entries** — finds pages.json entries whose corresponding HTML file does not exist on disk.
+3. **Structural markers** — verifies every published article contains all required elements: `<div id="content">`, `.infobox`, `.toc`, `.reflist`, `<h1>`, `apxwiki-nav`, `apxwiki-footer`, and the `<!-- APXWIKI-ALERTS-START -->` / `<!-- APXWIKI-ALERTS-END -->` comment markers.
+4. **Citation integrity** — checks that every inline `href="#refN"` citation has a matching `id="refN"` in the reference list, and that every reference list entry is cited at least once inline.
+5. **Duplicate ref IDs** — catches the same `id="refN"` appearing more than once in an article.
+6. **TOC-to-heading sync** — verifies that every link inside the `.toc` block points to a real `<h2>` or `<h3>` heading ID in the article.
+7. **Stubs cleanup report** — lists completed stubs (stubs whose filename matches a published page) that should be removed, and flags stubs whose HTML file exists on disk but isn't registered as published.
+8. **Cross-link validation** — finds internal `<a href="SomeArticle.html">` links that point to filenames that don't exist on disk.
+9. **SEO meta tags** — checks for `<meta name="description">` and `property="og:title"` tags (these are injected by the build, so missing tags indicate the article hasn't been built yet).
+
+Run `--qc` after every new article or batch of changes to catch issues early.
+
+### Stub cleanup (--cleanup-stubs)
+
+The `--cleanup-stubs` flag automatically removes stubs from pages.json whose filename matches a published page in the `pages` array. It prints what was removed and how many genuine stubs remain. Combine with `--dry-run` to preview without modifying pages.json.
 
 ### What the build does to each article
 
@@ -255,8 +278,10 @@ The CSS includes styles for: layout, typography, nav bar, alerts (all four types
 2. Place the file in the `apxwiki/` root directory.
 3. Add a published entry to `pages.json` → `pages` array with all required fields.
 4. Optionally add per-page alerts if the article needs any.
-5. Run: `cd apxwiki && python3 config/build.py --update-lengths`
-6. The build will inject the nav, alerts, footer, and CSS into the new article and regenerate index.html with the new listing.
+5. If the article was previously a stub, run: `cd apxwiki && python3 config/build.py --cleanup-stubs`
+6. Run: `cd apxwiki && python3 config/build.py --update-lengths`
+7. The build will inject the nav, alerts, footer, and CSS into the new article and regenerate index.html with the new listing.
+8. Run: `cd apxwiki && python3 config/build.py --qc` to verify the article passes all quality checks.
 
 ### Updating site-wide configuration
 
